@@ -13,6 +13,9 @@ import '/flutter_flow/form_field_controller.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
+import 'package:provider/provider.dart';
 import 'package:text_search/text_search.dart';
 import 'a10geren_cartoes_model.dart';
 export 'a10geren_cartoes_model.dart';
@@ -21,7 +24,7 @@ class A10gerenCartoesWidget extends StatefulWidget {
   const A10gerenCartoesWidget({
     super.key,
     String? telas,
-  }) : telas = telas ?? 'vazio';
+  }) : this.telas = telas ?? 'vazio';
 
   final String telas;
 
@@ -145,7 +148,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                         wrapWithModel(
                           model: _model.menuSuperiorModel,
                           updateCallback: () => setState(() {}),
-                          child: const MenuSuperiorWidget(),
+                          child: MenuSuperiorWidget(),
                         ),
                       if (responsiveVisibility(
                         context: context,
@@ -155,7 +158,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                         wrapWithModel(
                           model: _model.menuSuperiorCelularModel,
                           updateCallback: () => setState(() {}),
-                          child: const MenuSuperiorCelularWidget(),
+                          child: MenuSuperiorCelularWidget(),
                         ),
                     ],
                   ),
@@ -171,9 +174,9 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                           wrapWithModel(
                             model: _model.menuLateralModel,
                             updateCallback: () => setState(() {}),
-                            child: const MenuLateralWidget(),
+                            child: MenuLateralWidget(),
                           ),
-                        if (widget.telas == 'addcarteiraidentidade')
+                        if (widget!.telas == 'addcarteiraidentidade')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.75,
                             height: double.infinity,
@@ -185,7 +188,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                               ),
                             ),
                             child: Padding(
-                              padding: const EdgeInsets.all(20.0),
+                              padding: EdgeInsets.all(20.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
@@ -193,7 +196,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                     child: Column(
                                       children: [
                                         Align(
-                                          alignment: const Alignment(-1.0, 0),
+                                          alignment: Alignment(-1.0, 0),
                                           child: TabBar(
                                             isScrollable: true,
                                             labelColor:
@@ -210,13 +213,13 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                       fontSize: 18.0,
                                                       letterSpacing: 0.0,
                                                     ),
-                                            unselectedLabelStyle: const TextStyle(),
+                                            unselectedLabelStyle: TextStyle(),
                                             indicatorColor:
                                                 FlutterFlowTheme.of(context)
                                                     .tertiary,
                                             indicatorWeight: 1.0,
-                                            padding: const EdgeInsets.all(4.0),
-                                            tabs: const [
+                                            padding: EdgeInsets.all(4.0),
+                                            tabs: [
                                               Row(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
@@ -300,10 +303,10 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                       snapshot.data!;
 
                                                   return Container(
-                                                    decoration: const BoxDecoration(),
+                                                    decoration: BoxDecoration(),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsets.all(20.0),
+                                                          EdgeInsets.all(20.0),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -329,7 +332,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                 ),
                                                                 child: Padding(
                                                                   padding:
-                                                                      const EdgeInsets
+                                                                      EdgeInsets
                                                                           .all(
                                                                               6.0),
                                                                   child: Row(
@@ -457,7 +460,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                               'IconButton pressed ...');
                                                                         },
                                                                       ),
-                                                                    ].divide(const SizedBox(
+                                                                    ].divide(SizedBox(
                                                                         width:
                                                                             10.0)),
                                                                   ),
@@ -466,9 +469,9 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                               Container(
                                                                 width: 270.0,
                                                                 decoration:
-                                                                    const BoxDecoration(),
+                                                                    BoxDecoration(),
                                                                 child: Padding(
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -478,7 +481,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                       Autocomplete<
                                                                           String>(
                                                                     initialValue:
-                                                                        const TextEditingValue(),
+                                                                        TextEditingValue(),
                                                                     optionsBuilder:
                                                                         (textEditingValue) {
                                                                       if (textEditingValue
@@ -520,7 +523,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                         textHighlightStyle:
-                                                                            const TextStyle(),
+                                                                            TextStyle(),
                                                                         elevation:
                                                                             4.0,
                                                                         optionBackgroundColor:
@@ -566,29 +569,31 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                             (_) =>
                                                                                 EasyDebounce.debounce(
                                                                           '_model.textController1',
-                                                                          const Duration(
+                                                                          Duration(
                                                                               milliseconds: 2000),
                                                                           () async {
-                                                                            if (_model.textController1.text != '') {
+                                                                            if (_model.textController1.text != null &&
+                                                                                _model.textController1.text != '') {
                                                                               safeSetState(() {
                                                                                 _model.simpleSearchResults1 = TextSearch(
                                                                                   containerInventarioProdutosRecordList
                                                                                       .map(
                                                                                         (record) => TextSearchItem.fromTerms(record, [
-                                                                                          record.produtoCategoria,
-                                                                                          record.nomeProduto,
-                                                                                          record.produtoCodigo,
-                                                                                          record.filial
+                                                                                          record.produtoCategoria!,
+                                                                                          record.nomeProduto!,
+                                                                                          record.produtoCodigo!,
+                                                                                          record.filial!
                                                                                         ]),
                                                                                       )
                                                                                       .toList(),
                                                                                 ).search(_model.textController1.text).map((r) => r.object).take(20).toList();
+                                                                                ;
                                                                               });
                                                                             } else {
                                                                               context.goNamed(
                                                                                 'A01escola',
                                                                                 extra: <String, dynamic>{
-                                                                                  kTransitionInfoKey: const TransitionInfo(
+                                                                                  kTransitionInfoKey: TransitionInfo(
                                                                                     hasTransition: true,
                                                                                     transitionType: PageTransitionType.fade,
                                                                                     duration: Duration(milliseconds: 0),
@@ -680,7 +685,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                           Expanded(
                                                             child: Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           10.0,
@@ -858,7 +863,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                                 true,
                                                                             child:
                                                                                 Align(
-                                                                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                              alignment: AlignmentDirectional(-1.0, 0.0),
                                                                               child: Text(
                                                                                 'Ação',
                                                                                 style: FlutterFlowTheme.of(context).labelLarge.override(
@@ -876,7 +881,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                               selected,
                                                                               onSelectChanged) =>
                                                                           DataRow(
-                                                                        color: WidgetStateProperty
+                                                                        color: MaterialStateProperty
                                                                             .all(
                                                                           produtosListIndex % 2 == 0
                                                                               ? FlutterFlowTheme.of(context).secondaryBackground
@@ -922,7 +927,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                                 ),
                                                                           ),
                                                                           Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 5.0,
                                                                                 5.0,
                                                                                 5.0,
@@ -979,15 +984,15 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                                         context: context,
                                                                                         builder: (alertDialogContext) {
                                                                                           return AlertDialog(
-                                                                                            title: const Text('Deseja deletar essa filial?'),
+                                                                                            title: Text('Deseja deletar essa filial?'),
                                                                                             actions: [
                                                                                               TextButton(
                                                                                                 onPressed: () => Navigator.pop(alertDialogContext, false),
-                                                                                                child: const Text('Não, cancelar'),
+                                                                                                child: Text('Não, cancelar'),
                                                                                               ),
                                                                                               TextButton(
                                                                                                 onPressed: () => Navigator.pop(alertDialogContext, true),
-                                                                                                child: const Text('Sim, deletar Filial'),
+                                                                                                child: Text('Sim, deletar Filial'),
                                                                                               ),
                                                                                             ],
                                                                                           );
@@ -1000,7 +1005,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                                     context.goNamed(
                                                                                       'A01escola',
                                                                                       extra: <String, dynamic>{
-                                                                                        kTransitionInfoKey: const TransitionInfo(
+                                                                                        kTransitionInfoKey: TransitionInfo(
                                                                                           hasTransition: true,
                                                                                           transitionType: PageTransitionType.fade,
                                                                                           duration: Duration(milliseconds: 0),
@@ -1010,7 +1015,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                                   }
                                                                                 },
                                                                               ),
-                                                                            ].divide(const SizedBox(width: 10.0)),
+                                                                            ].divide(SizedBox(width: 10.0)),
                                                                           ),
                                                                         ]
                                                                             .map((c) =>
@@ -1084,10 +1089,10 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                 autovalidateMode:
                                                     AutovalidateMode.disabled,
                                                 child: Container(
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 20.0,
                                                                 0.0, 50.0),
                                                     child:
@@ -1101,7 +1106,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -1135,7 +1140,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -1160,14 +1165,14 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .filialValueController1 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: const [
+                                                                      options: [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -1209,7 +1214,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -1225,7 +1230,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -1237,7 +1242,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -1271,7 +1276,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -1296,7 +1301,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         TextFormField(
                                                                       controller:
@@ -1394,7 +1399,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -1406,7 +1411,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -1440,7 +1445,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -1465,14 +1470,14 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .produtoscategoriValueController1 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: const [
+                                                                      options: [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -1514,7 +1519,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -1530,7 +1535,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -1542,7 +1547,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -1576,7 +1581,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -1603,10 +1608,10 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                       width:
                                                                           357.0,
                                                                       decoration:
-                                                                          const BoxDecoration(),
+                                                                          BoxDecoration(),
                                                                       child:
                                                                           Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             8.0,
@@ -1690,10 +1695,10 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                 Container(
                                                                   width: 357.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child:
                                                                       Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -1801,7 +1806,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -1811,7 +1816,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                   '')
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           20.0,
                                                                           0.0,
@@ -1845,7 +1850,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                               ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
                                                                               6.0,
                                                                               0.0,
                                                                               0.0,
@@ -1869,14 +1874,14 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                       width:
                                                                           550.0,
                                                                       decoration:
-                                                                          const BoxDecoration(),
+                                                                          BoxDecoration(),
                                                                       child: FlutterFlowDropDown<
                                                                           String>(
                                                                         controller: _model
                                                                             .categoriaValueController1 ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: const [
+                                                                        options: [
                                                                           'Option 1'
                                                                         ],
                                                                         onChanged:
@@ -1913,7 +1918,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                             2.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -1929,7 +1934,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                ].divide(const SizedBox(
+                                                                ].divide(SizedBox(
                                                                     width:
                                                                         20.0)),
                                                               ),
@@ -1942,7 +1947,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -1976,7 +1981,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -1998,7 +2003,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                   width: 357.0,
                                                                   height: 50.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child:
                                                                       FlutterFlowDropDown<
                                                                           String>(
@@ -2006,7 +2011,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                         .dropDownValueController1 ??= FormFieldController<
                                                                             String>(
                                                                         null),
-                                                                    options: const <String>[],
+                                                                    options: <String>[],
                                                                     onChanged: (val) =>
                                                                         setState(() =>
                                                                             _model.dropDownValue1 =
@@ -2047,7 +2052,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                         2.0,
                                                                     borderRadius:
                                                                         8.0,
-                                                                    margin: const EdgeInsetsDirectional
+                                                                    margin: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             16.0,
                                                                             4.0,
@@ -2066,10 +2071,10 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                 Container(
                                                                   width: 357.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child:
                                                                       Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -2177,7 +2182,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -2187,7 +2192,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                   '')
                                                             Container(
                                                               decoration:
-                                                                  const BoxDecoration(),
+                                                                  BoxDecoration(),
                                                             ),
                                                           Divider(
                                                             thickness: 1.0,
@@ -2197,7 +2202,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -2240,7 +2245,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Stack(
                                                                       children: [
@@ -2317,12 +2322,12 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                           ],
                                                                         ),
                                                                         Align(
-                                                                          alignment: const AlignmentDirectional(
+                                                                          alignment: AlignmentDirectional(
                                                                               1.0,
                                                                               0.0),
                                                                           child:
                                                                               Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 5.2,
                                                                                 15.0,
@@ -2333,14 +2338,14 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                                 print('ButtonAssinat pressed ...');
                                                                               },
                                                                               text: 'Selecione o arquivo',
-                                                                              icon: const Icon(
+                                                                              icon: Icon(
                                                                                 Icons.upload_rounded,
                                                                                 size: 15.0,
                                                                               ),
                                                                               options: FFButtonOptions(
                                                                                 height: 40.0,
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                 color: FlutterFlowTheme.of(context).primary,
                                                                                 textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                       fontFamily: 'Manrope',
@@ -2348,7 +2353,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                                 elevation: 3.0,
-                                                                                borderSide: const BorderSide(
+                                                                                borderSide: BorderSide(
                                                                                   color: Colors.transparent,
                                                                                   width: 1.0,
                                                                                 ),
@@ -2361,7 +2366,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -2373,7 +2378,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -2416,7 +2421,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Stack(
                                                                       children: [
@@ -2493,12 +2498,12 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                           ],
                                                                         ),
                                                                         Align(
-                                                                          alignment: const AlignmentDirectional(
+                                                                          alignment: AlignmentDirectional(
                                                                               1.0,
                                                                               0.0),
                                                                           child:
                                                                               Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 5.2,
                                                                                 15.0,
@@ -2509,14 +2514,14 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                                 print('ButtonLogo pressed ...');
                                                                               },
                                                                               text: 'Selecione o arquivo',
-                                                                              icon: const Icon(
+                                                                              icon: Icon(
                                                                                 Icons.upload_rounded,
                                                                                 size: 15.0,
                                                                               ),
                                                                               options: FFButtonOptions(
                                                                                 height: 40.0,
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                 color: FlutterFlowTheme.of(context).primary,
                                                                                 textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                       fontFamily: 'Manrope',
@@ -2524,7 +2529,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                                 elevation: 3.0,
-                                                                                borderSide: const BorderSide(
+                                                                                borderSide: BorderSide(
                                                                                   color: Colors.transparent,
                                                                                   width: 1.0,
                                                                                 ),
@@ -2537,7 +2542,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -2549,7 +2554,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -2592,7 +2597,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Stack(
                                                                       children: [
@@ -2669,12 +2674,12 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                           ],
                                                                         ),
                                                                         Align(
-                                                                          alignment: const AlignmentDirectional(
+                                                                          alignment: AlignmentDirectional(
                                                                               1.0,
                                                                               0.0),
                                                                           child:
                                                                               Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 5.2,
                                                                                 15.0,
@@ -2685,14 +2690,14 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                                 print('ButtonFundo pressed ...');
                                                                               },
                                                                               text: 'Selecione o arquivo',
-                                                                              icon: const Icon(
+                                                                              icon: Icon(
                                                                                 Icons.upload_rounded,
                                                                                 size: 15.0,
                                                                               ),
                                                                               options: FFButtonOptions(
                                                                                 height: 40.0,
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                 color: FlutterFlowTheme.of(context).primary,
                                                                                 textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                       fontFamily: 'Manrope',
@@ -2700,7 +2705,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                                 elevation: 3.0,
-                                                                                borderSide: const BorderSide(
+                                                                                borderSide: BorderSide(
                                                                                   color: Colors.transparent,
                                                                                   width: 1.0,
                                                                                 ),
@@ -2713,7 +2718,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -2725,7 +2730,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -2759,7 +2764,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -2784,7 +2789,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         TextFormField(
                                                                       controller:
@@ -2887,13 +2892,13 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         50.0,
                                                                         10.0,
@@ -2921,16 +2926,16 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     builder:
                                                                         (alertDialogContext) {
                                                                       return AlertDialog(
-                                                                        title: const Text(
+                                                                        title: Text(
                                                                             'Campo Obrigatório'),
                                                                         content:
-                                                                            const Text('É necessário adicionar uma filial!'),
+                                                                            Text('É necessário adicionar uma filial!'),
                                                                         actions: [
                                                                           TextButton(
                                                                             onPressed: () =>
                                                                                 Navigator.pop(alertDialogContext),
                                                                             child:
-                                                                                const Text('Ok'),
+                                                                                Text('Ok'),
                                                                           ),
                                                                         ],
                                                                       );
@@ -2947,14 +2952,14 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     builder:
                                                                         (alertDialogContext) {
                                                                       return AlertDialog(
-                                                                        title: const Text(
+                                                                        title: Text(
                                                                             'Campo Obrigatório'),
                                                                         actions: [
                                                                           TextButton(
                                                                             onPressed: () =>
                                                                                 Navigator.pop(alertDialogContext),
                                                                             child:
-                                                                                const Text('Ok'),
+                                                                                Text('Ok'),
                                                                           ),
                                                                         ],
                                                                       );
@@ -2965,7 +2970,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                               },
                                                               text:
                                                                   'Adicionar identidade',
-                                                              icon: const Icon(
+                                                              icon: Icon(
                                                                 Icons.add,
                                                                 size: 20.0,
                                                               ),
@@ -2973,14 +2978,14 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                   FFButtonOptions(
                                                                 width: 250.0,
                                                                 height: 50.0,
-                                                                padding: const EdgeInsetsDirectional
+                                                                padding: EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                                 iconPadding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -3007,7 +3012,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     ),
                                                                 elevation: 3.0,
                                                                 borderSide:
-                                                                    const BorderSide(
+                                                                    BorderSide(
                                                                   color: Colors
                                                                       .transparent,
                                                                   width: 1.0,
@@ -3019,7 +3024,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(const SizedBox(
+                                                        ].divide(SizedBox(
                                                             height: 5.0)),
                                                       ),
                                                     ),
@@ -3036,7 +3041,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                               ),
                             ),
                           ),
-                        if (widget.telas == 'listaEstudante')
+                        if (widget!.telas == 'listaEstudante')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -3045,7 +3050,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: const EdgeInsets.all(20.0),
+                              padding: EdgeInsets.all(20.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
@@ -3069,10 +3074,10 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   -1.0, 0.0),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         12.0, 10.0, 0.0, 0.0),
                                                 child: Text(
@@ -3099,7 +3104,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   10.0, 10.0, 10.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -3110,7 +3115,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                 flex: 3,
                                                 child: Container(
                                                   width: 550.0,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -3120,7 +3125,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -3152,13 +3157,13 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -3171,7 +3176,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                   .calssAcademicoValueController1 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: const ['option 1'],
+                                                          options: ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.calssAcademicoValue1 =
@@ -3209,7 +3214,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -3229,7 +3234,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                 flex: 3,
                                                 child: Container(
                                                   width: 550.0,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -3239,7 +3244,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -3271,7 +3276,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                       ),
@@ -3281,7 +3286,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                 .secaoAcademicoValueController1 ??=
                                                             FormFieldController<
                                                                 String>(null),
-                                                        options: const ['option 1'],
+                                                        options: ['option 1'],
                                                         onChanged: (val) =>
                                                             setState(() => _model
                                                                     .secaoAcademicoValue1 =
@@ -3319,7 +3324,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                         borderWidth: 2.0,
                                                         borderRadius: 8.0,
                                                         margin:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     4.0,
@@ -3338,7 +3343,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                 flex: 3,
                                                 child: Container(
                                                   width: 550.0,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -3348,7 +3353,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -3380,7 +3385,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                       ),
@@ -3390,7 +3395,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                 .categpriaAcademicoValueController1 ??=
                                                             FormFieldController<
                                                                 String>(null),
-                                                        options: const ['option 1'],
+                                                        options: ['option 1'],
                                                         onChanged: (val) =>
                                                             setState(() => _model
                                                                     .categpriaAcademicoValue1 =
@@ -3428,7 +3433,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                         borderWidth: 2.0,
                                                         borderRadius: 8.0,
                                                         margin:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     4.0,
@@ -3447,7 +3452,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                 flex: 3,
                                                 child: Container(
                                                   width: 550.0,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -3457,7 +3462,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -3489,7 +3494,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                       ),
@@ -3499,7 +3504,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                 .secaoAcademicoValueController2 ??=
                                                             FormFieldController<
                                                                 String>(null),
-                                                        options: const ['option 1'],
+                                                        options: ['option 1'],
                                                         onChanged: (val) =>
                                                             setState(() => _model
                                                                     .secaoAcademicoValue2 =
@@ -3537,7 +3542,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                         borderWidth: 2.0,
                                                         borderRadius: 8.0,
                                                         margin:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     4.0,
@@ -3552,12 +3557,12 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                   ),
                                                 ),
                                               ),
-                                            ].divide(const SizedBox(width: 20.0)),
+                                            ].divide(SizedBox(width: 20.0)),
                                           ),
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 15.0, 15.0, 10.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -3569,7 +3574,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                   print('Button pressed ...');
                                                 },
                                                 text: 'Filtro',
-                                                icon: const Icon(
+                                                icon: Icon(
                                                   Icons.filter_alt,
                                                   color: Colors.white,
                                                   size: 15.0,
@@ -3577,11 +3582,11 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                 options: FFButtonOptions(
                                                   width: 150.0,
                                                   height: 40.0,
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           24.0, 0.0, 24.0, 0.0),
                                                   iconPadding:
-                                                      const EdgeInsetsDirectional
+                                                      EdgeInsetsDirectional
                                                           .fromSTEB(0.0, 0.0,
                                                               0.0, 0.0),
                                                   color: FlutterFlowTheme.of(
@@ -3596,7 +3601,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                         letterSpacing: 0.0,
                                                       ),
                                                   elevation: 3.0,
-                                                  borderSide: const BorderSide(
+                                                  borderSide: BorderSide(
                                                     color: Colors.transparent,
                                                     width: 1.0,
                                                   ),
@@ -3613,7 +3618,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                   ),
                                   Expanded(
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -3666,7 +3671,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -3683,11 +3688,11 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          const AlignmentDirectional(
+                                                          AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -3714,7 +3719,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                     Flexible(
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     10.0,
@@ -3733,7 +3738,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     'ButtonGerar pressed ...');
                                                               },
                                                               text: 'Gerar',
-                                                              icon: const Icon(
+                                                              icon: Icon(
                                                                 Icons
                                                                     .print_sharp,
                                                                 size: 18.0,
@@ -3741,14 +3746,14 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                               options:
                                                                   FFButtonOptions(
                                                                 height: 30.0,
-                                                                padding: const EdgeInsetsDirectional
+                                                                padding: EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                                 iconPadding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -3770,7 +3775,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     ),
                                                                 elevation: 3.0,
                                                                 borderSide:
-                                                                    const BorderSide(
+                                                                    BorderSide(
                                                                   color: Colors
                                                                       .transparent,
                                                                   width: 1.0,
@@ -3794,7 +3799,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 0.0, 10.0),
                                                   child: Row(
@@ -3803,7 +3808,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -3825,11 +3830,11 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                             children: [
                                                               Align(
                                                                 alignment:
-                                                                    const AlignmentDirectional(
+                                                                    AlignmentDirectional(
                                                                         -1.0,
                                                                         0.0),
                                                                 child: Padding(
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           10.0,
@@ -3855,7 +3860,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             8.0,
@@ -3953,7 +3958,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                             context)
                                                                         .primaryBackground,
                                                                     contentPadding:
-                                                                        const EdgeInsetsDirectional.fromSTEB(
+                                                                        EdgeInsetsDirectional.fromSTEB(
                                                                             10.0,
                                                                             16.0,
                                                                             10.0,
@@ -3995,12 +4000,12 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                           children: [
                                                             Align(
                                                               alignment:
-                                                                  const AlignmentDirectional(
+                                                                  AlignmentDirectional(
                                                                       -1.0,
                                                                       0.0),
                                                               child: Padding(
                                                                 padding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             10.0,
@@ -4026,7 +4031,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           8.0,
@@ -4126,7 +4131,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                           context)
                                                                       .primaryBackground,
                                                                   contentPadding:
-                                                                      const EdgeInsetsDirectional.fromSTEB(
+                                                                      EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           16.0,
                                                                           10.0,
@@ -4153,7 +4158,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        const SizedBox(width: 10.0)),
+                                                        SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Expanded(
@@ -4329,7 +4334,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                           onSelectChanged:
                                                               onSelectChanged,
                                                           color:
-                                                              WidgetStateProperty
+                                                              MaterialStateProperty
                                                                   .all(
                                                             produtosListIndex %
                                                                         2 ==
@@ -4478,11 +4483,11 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                         checkboxSelectedFillColor:
                                                             Colors.transparent,
                                                         checkboxCheckColor:
-                                                            const Color(0x8A000000),
+                                                            Color(0x8A000000),
                                                         checkboxUnselectedBorderColor:
-                                                            const Color(0x8A000000),
+                                                            Color(0x8A000000),
                                                         checkboxSelectedBorderColor:
-                                                            const Color(0x8A000000),
+                                                            Color(0x8A000000),
                                                       );
                                                     },
                                                   ),
@@ -4498,7 +4503,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                               ),
                             ),
                           ),
-                        if (widget.telas == 'listafuncionario')
+                        if (widget!.telas == 'listafuncionario')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -4507,7 +4512,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: const EdgeInsets.all(20.0),
+                              padding: EdgeInsets.all(20.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
@@ -4531,10 +4536,10 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   -1.0, 0.0),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         10.0, 10.0, 0.0, 0.0),
                                                 child: Text(
@@ -4561,7 +4566,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   10.0, 10.0, 10.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -4572,7 +4577,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                 flex: 3,
                                                 child: Container(
                                                   width: 550.0,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -4582,7 +4587,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -4614,13 +4619,13 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -4633,7 +4638,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                   .calssAcademicoValueController2 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: const ['option 1'],
+                                                          options: ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.calssAcademicoValue2 =
@@ -4671,7 +4676,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -4691,7 +4696,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                 flex: 3,
                                                 child: Container(
                                                   width: 550.0,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -4701,7 +4706,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -4733,7 +4738,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                       ),
@@ -4743,7 +4748,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                 .secaoAcademicoValueController3 ??=
                                                             FormFieldController<
                                                                 String>(null),
-                                                        options: const ['option 1'],
+                                                        options: ['option 1'],
                                                         onChanged: (val) =>
                                                             setState(() => _model
                                                                     .secaoAcademicoValue3 =
@@ -4781,7 +4786,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                         borderWidth: 2.0,
                                                         borderRadius: 8.0,
                                                         margin:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     4.0,
@@ -4800,7 +4805,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                 flex: 3,
                                                 child: Container(
                                                   width: 550.0,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -4810,7 +4815,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -4842,7 +4847,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                       ),
@@ -4852,7 +4857,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                 .categpriaAcademicoValueController2 ??=
                                                             FormFieldController<
                                                                 String>(null),
-                                                        options: const ['option 1'],
+                                                        options: ['option 1'],
                                                         onChanged: (val) =>
                                                             setState(() => _model
                                                                     .categpriaAcademicoValue2 =
@@ -4890,7 +4895,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                         borderWidth: 2.0,
                                                         borderRadius: 8.0,
                                                         margin:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     4.0,
@@ -4905,12 +4910,12 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                   ),
                                                 ),
                                               ),
-                                            ].divide(const SizedBox(width: 20.0)),
+                                            ].divide(SizedBox(width: 20.0)),
                                           ),
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 15.0, 15.0, 10.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -4922,7 +4927,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                   print('Button pressed ...');
                                                 },
                                                 text: 'Filtro',
-                                                icon: const Icon(
+                                                icon: Icon(
                                                   Icons.filter_alt,
                                                   color: Colors.white,
                                                   size: 15.0,
@@ -4930,11 +4935,11 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                 options: FFButtonOptions(
                                                   width: 150.0,
                                                   height: 40.0,
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           24.0, 0.0, 24.0, 0.0),
                                                   iconPadding:
-                                                      const EdgeInsetsDirectional
+                                                      EdgeInsetsDirectional
                                                           .fromSTEB(0.0, 0.0,
                                                               0.0, 0.0),
                                                   color: FlutterFlowTheme.of(
@@ -4949,7 +4954,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                         letterSpacing: 0.0,
                                                       ),
                                                   elevation: 3.0,
-                                                  borderSide: const BorderSide(
+                                                  borderSide: BorderSide(
                                                     color: Colors.transparent,
                                                     width: 1.0,
                                                   ),
@@ -4968,7 +4973,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                               ),
                             ),
                           ),
-                        if (widget.telas == 'addcartaoAdmissao')
+                        if (widget!.telas == 'addcartaoAdmissao')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -4980,7 +4985,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                               ),
                             ),
                             child: Padding(
-                              padding: const EdgeInsets.all(20.0),
+                              padding: EdgeInsets.all(20.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
@@ -4988,7 +4993,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                     child: Column(
                                       children: [
                                         Align(
-                                          alignment: const Alignment(-1.0, 0),
+                                          alignment: Alignment(-1.0, 0),
                                           child: TabBar(
                                             isScrollable: true,
                                             labelColor:
@@ -5005,13 +5010,13 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                       fontSize: 18.0,
                                                       letterSpacing: 0.0,
                                                     ),
-                                            unselectedLabelStyle: const TextStyle(),
+                                            unselectedLabelStyle: TextStyle(),
                                             indicatorColor:
                                                 FlutterFlowTheme.of(context)
                                                     .tertiary,
                                             indicatorWeight: 1.0,
-                                            padding: const EdgeInsets.all(4.0),
-                                            tabs: const [
+                                            padding: EdgeInsets.all(4.0),
+                                            tabs: [
                                               Row(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
@@ -5095,10 +5100,10 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                       snapshot.data!;
 
                                                   return Container(
-                                                    decoration: const BoxDecoration(),
+                                                    decoration: BoxDecoration(),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsets.all(20.0),
+                                                          EdgeInsets.all(20.0),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -5124,7 +5129,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                 ),
                                                                 child: Padding(
                                                                   padding:
-                                                                      const EdgeInsets
+                                                                      EdgeInsets
                                                                           .all(
                                                                               6.0),
                                                                   child: Row(
@@ -5252,7 +5257,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                               'IconButton pressed ...');
                                                                         },
                                                                       ),
-                                                                    ].divide(const SizedBox(
+                                                                    ].divide(SizedBox(
                                                                         width:
                                                                             10.0)),
                                                                   ),
@@ -5261,9 +5266,9 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                               Container(
                                                                 width: 270.0,
                                                                 decoration:
-                                                                    const BoxDecoration(),
+                                                                    BoxDecoration(),
                                                                 child: Padding(
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -5273,7 +5278,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                       Autocomplete<
                                                                           String>(
                                                                     initialValue:
-                                                                        const TextEditingValue(),
+                                                                        TextEditingValue(),
                                                                     optionsBuilder:
                                                                         (textEditingValue) {
                                                                       if (textEditingValue
@@ -5315,7 +5320,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                         textHighlightStyle:
-                                                                            const TextStyle(),
+                                                                            TextStyle(),
                                                                         elevation:
                                                                             4.0,
                                                                         optionBackgroundColor:
@@ -5361,29 +5366,31 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                             (_) =>
                                                                                 EasyDebounce.debounce(
                                                                           '_model.textController12',
-                                                                          const Duration(
+                                                                          Duration(
                                                                               milliseconds: 2000),
                                                                           () async {
-                                                                            if (_model.textController12.text != '') {
+                                                                            if (_model.textController12.text != null &&
+                                                                                _model.textController12.text != '') {
                                                                               safeSetState(() {
                                                                                 _model.simpleSearchResults2 = TextSearch(
                                                                                   containerInventarioProdutosRecordList
                                                                                       .map(
                                                                                         (record) => TextSearchItem.fromTerms(record, [
-                                                                                          record.produtoCategoria,
-                                                                                          record.nomeProduto,
-                                                                                          record.produtoCodigo,
-                                                                                          record.filial
+                                                                                          record.produtoCategoria!,
+                                                                                          record.nomeProduto!,
+                                                                                          record.produtoCodigo!,
+                                                                                          record.filial!
                                                                                         ]),
                                                                                       )
                                                                                       .toList(),
                                                                                 ).search(_model.textController12.text).map((r) => r.object).take(20).toList();
+                                                                                ;
                                                                               });
                                                                             } else {
                                                                               context.goNamed(
                                                                                 'A01escola',
                                                                                 extra: <String, dynamic>{
-                                                                                  kTransitionInfoKey: const TransitionInfo(
+                                                                                  kTransitionInfoKey: TransitionInfo(
                                                                                     hasTransition: true,
                                                                                     transitionType: PageTransitionType.fade,
                                                                                     duration: Duration(milliseconds: 0),
@@ -5475,7 +5482,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                           Expanded(
                                                             child: Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           10.0,
@@ -5653,7 +5660,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                                 true,
                                                                             child:
                                                                                 Align(
-                                                                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                              alignment: AlignmentDirectional(-1.0, 0.0),
                                                                               child: Text(
                                                                                 'Ação',
                                                                                 style: FlutterFlowTheme.of(context).labelLarge.override(
@@ -5671,7 +5678,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                               selected,
                                                                               onSelectChanged) =>
                                                                           DataRow(
-                                                                        color: WidgetStateProperty
+                                                                        color: MaterialStateProperty
                                                                             .all(
                                                                           produtosListIndex % 2 == 0
                                                                               ? FlutterFlowTheme.of(context).secondaryBackground
@@ -5717,7 +5724,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                                 ),
                                                                           ),
                                                                           Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 5.0,
                                                                                 5.0,
                                                                                 5.0,
@@ -5774,15 +5781,15 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                                         context: context,
                                                                                         builder: (alertDialogContext) {
                                                                                           return AlertDialog(
-                                                                                            title: const Text('Deseja deletar essa filial?'),
+                                                                                            title: Text('Deseja deletar essa filial?'),
                                                                                             actions: [
                                                                                               TextButton(
                                                                                                 onPressed: () => Navigator.pop(alertDialogContext, false),
-                                                                                                child: const Text('Não, cancelar'),
+                                                                                                child: Text('Não, cancelar'),
                                                                                               ),
                                                                                               TextButton(
                                                                                                 onPressed: () => Navigator.pop(alertDialogContext, true),
-                                                                                                child: const Text('Sim, deletar Filial'),
+                                                                                                child: Text('Sim, deletar Filial'),
                                                                                               ),
                                                                                             ],
                                                                                           );
@@ -5795,7 +5802,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                                     context.goNamed(
                                                                                       'A01escola',
                                                                                       extra: <String, dynamic>{
-                                                                                        kTransitionInfoKey: const TransitionInfo(
+                                                                                        kTransitionInfoKey: TransitionInfo(
                                                                                           hasTransition: true,
                                                                                           transitionType: PageTransitionType.fade,
                                                                                           duration: Duration(milliseconds: 0),
@@ -5805,7 +5812,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                                   }
                                                                                 },
                                                                               ),
-                                                                            ].divide(const SizedBox(width: 10.0)),
+                                                                            ].divide(SizedBox(width: 10.0)),
                                                                           ),
                                                                         ]
                                                                             .map((c) =>
@@ -5879,10 +5886,10 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                 autovalidateMode:
                                                     AutovalidateMode.disabled,
                                                 child: Container(
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 20.0,
                                                                 0.0, 50.0),
                                                     child:
@@ -5896,7 +5903,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -5930,7 +5937,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -5955,14 +5962,14 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .filialValueController2 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: const [
+                                                                      options: [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -6004,7 +6011,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -6020,7 +6027,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -6032,7 +6039,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -6066,7 +6073,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -6091,7 +6098,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         TextFormField(
                                                                       controller:
@@ -6189,7 +6196,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -6201,7 +6208,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -6235,7 +6242,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -6260,14 +6267,14 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .produtoscategoriValueController2 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: const [
+                                                                      options: [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -6309,7 +6316,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -6325,7 +6332,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -6337,7 +6344,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -6371,7 +6378,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -6392,10 +6399,10 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                 Container(
                                                                   width: 357.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child:
                                                                       Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -6506,10 +6513,10 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                 Container(
                                                                   width: 357.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child:
                                                                       Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -6617,7 +6624,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -6627,7 +6634,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                   '')
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           20.0,
                                                                           0.0,
@@ -6661,7 +6668,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                               ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
                                                                               6.0,
                                                                               0.0,
                                                                               0.0,
@@ -6685,14 +6692,14 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                       width:
                                                                           550.0,
                                                                       decoration:
-                                                                          const BoxDecoration(),
+                                                                          BoxDecoration(),
                                                                       child: FlutterFlowDropDown<
                                                                           String>(
                                                                         controller: _model
                                                                             .categoriaValueController2 ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: const [
+                                                                        options: [
                                                                           'Option 1'
                                                                         ],
                                                                         onChanged:
@@ -6729,7 +6736,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                             2.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -6745,7 +6752,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                ].divide(const SizedBox(
+                                                                ].divide(SizedBox(
                                                                     width:
                                                                         20.0)),
                                                               ),
@@ -6758,7 +6765,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -6792,7 +6799,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -6814,7 +6821,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                   width: 357.0,
                                                                   height: 50.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child:
                                                                       FlutterFlowDropDown<
                                                                           String>(
@@ -6822,7 +6829,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                         .dropDownValueController2 ??= FormFieldController<
                                                                             String>(
                                                                         null),
-                                                                    options: const <String>[],
+                                                                    options: <String>[],
                                                                     onChanged: (val) =>
                                                                         setState(() =>
                                                                             _model.dropDownValue2 =
@@ -6863,7 +6870,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                         2.0,
                                                                     borderRadius:
                                                                         8.0,
-                                                                    margin: const EdgeInsetsDirectional
+                                                                    margin: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             16.0,
                                                                             4.0,
@@ -6882,10 +6889,10 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                 Container(
                                                                   width: 357.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child:
                                                                       Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -6993,7 +7000,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -7003,7 +7010,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                   '')
                                                             Container(
                                                               decoration:
-                                                                  const BoxDecoration(),
+                                                                  BoxDecoration(),
                                                             ),
                                                           Divider(
                                                             thickness: 1.0,
@@ -7013,7 +7020,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -7056,7 +7063,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Stack(
                                                                       children: [
@@ -7133,12 +7140,12 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                           ],
                                                                         ),
                                                                         Align(
-                                                                          alignment: const AlignmentDirectional(
+                                                                          alignment: AlignmentDirectional(
                                                                               1.0,
                                                                               0.0),
                                                                           child:
                                                                               Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 5.2,
                                                                                 15.0,
@@ -7149,14 +7156,14 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                                 print('ButtonAssinat pressed ...');
                                                                               },
                                                                               text: 'Selecione o arquivo',
-                                                                              icon: const Icon(
+                                                                              icon: Icon(
                                                                                 Icons.upload_rounded,
                                                                                 size: 15.0,
                                                                               ),
                                                                               options: FFButtonOptions(
                                                                                 height: 40.0,
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                 color: FlutterFlowTheme.of(context).primary,
                                                                                 textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                       fontFamily: 'Manrope',
@@ -7164,7 +7171,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                                 elevation: 3.0,
-                                                                                borderSide: const BorderSide(
+                                                                                borderSide: BorderSide(
                                                                                   color: Colors.transparent,
                                                                                   width: 1.0,
                                                                                 ),
@@ -7177,7 +7184,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -7189,7 +7196,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -7232,7 +7239,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Stack(
                                                                       children: [
@@ -7309,12 +7316,12 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                           ],
                                                                         ),
                                                                         Align(
-                                                                          alignment: const AlignmentDirectional(
+                                                                          alignment: AlignmentDirectional(
                                                                               1.0,
                                                                               0.0),
                                                                           child:
                                                                               Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 5.2,
                                                                                 15.0,
@@ -7325,14 +7332,14 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                                 print('ButtonLogo pressed ...');
                                                                               },
                                                                               text: 'Selecione o arquivo',
-                                                                              icon: const Icon(
+                                                                              icon: Icon(
                                                                                 Icons.upload_rounded,
                                                                                 size: 15.0,
                                                                               ),
                                                                               options: FFButtonOptions(
                                                                                 height: 40.0,
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                 color: FlutterFlowTheme.of(context).primary,
                                                                                 textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                       fontFamily: 'Manrope',
@@ -7340,7 +7347,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                                 elevation: 3.0,
-                                                                                borderSide: const BorderSide(
+                                                                                borderSide: BorderSide(
                                                                                   color: Colors.transparent,
                                                                                   width: 1.0,
                                                                                 ),
@@ -7353,7 +7360,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -7365,7 +7372,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -7408,7 +7415,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Stack(
                                                                       children: [
@@ -7485,12 +7492,12 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                           ],
                                                                         ),
                                                                         Align(
-                                                                          alignment: const AlignmentDirectional(
+                                                                          alignment: AlignmentDirectional(
                                                                               1.0,
                                                                               0.0),
                                                                           child:
                                                                               Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 5.2,
                                                                                 15.0,
@@ -7501,14 +7508,14 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                                 print('ButtonFundo pressed ...');
                                                                               },
                                                                               text: 'Selecione o arquivo',
-                                                                              icon: const Icon(
+                                                                              icon: Icon(
                                                                                 Icons.upload_rounded,
                                                                                 size: 15.0,
                                                                               ),
                                                                               options: FFButtonOptions(
                                                                                 height: 40.0,
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                 color: FlutterFlowTheme.of(context).primary,
                                                                                 textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                       fontFamily: 'Manrope',
@@ -7516,7 +7523,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                                 elevation: 3.0,
-                                                                                borderSide: const BorderSide(
+                                                                                borderSide: BorderSide(
                                                                                   color: Colors.transparent,
                                                                                   width: 1.0,
                                                                                 ),
@@ -7529,7 +7536,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -7541,7 +7548,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -7575,7 +7582,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -7600,7 +7607,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         TextFormField(
                                                                       controller:
@@ -7703,13 +7710,13 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         50.0,
                                                                         10.0,
@@ -7737,16 +7744,16 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     builder:
                                                                         (alertDialogContext) {
                                                                       return AlertDialog(
-                                                                        title: const Text(
+                                                                        title: Text(
                                                                             'Campo Obrigatório'),
                                                                         content:
-                                                                            const Text('É necessário adicionar uma filial!'),
+                                                                            Text('É necessário adicionar uma filial!'),
                                                                         actions: [
                                                                           TextButton(
                                                                             onPressed: () =>
                                                                                 Navigator.pop(alertDialogContext),
                                                                             child:
-                                                                                const Text('Ok'),
+                                                                                Text('Ok'),
                                                                           ),
                                                                         ],
                                                                       );
@@ -7763,14 +7770,14 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     builder:
                                                                         (alertDialogContext) {
                                                                       return AlertDialog(
-                                                                        title: const Text(
+                                                                        title: Text(
                                                                             'Campo Obrigatório'),
                                                                         actions: [
                                                                           TextButton(
                                                                             onPressed: () =>
                                                                                 Navigator.pop(alertDialogContext),
                                                                             child:
-                                                                                const Text('Ok'),
+                                                                                Text('Ok'),
                                                                           ),
                                                                         ],
                                                                       );
@@ -7781,7 +7788,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                               },
                                                               text:
                                                                   'Adicionar cartão',
-                                                              icon: const Icon(
+                                                              icon: Icon(
                                                                 Icons.add,
                                                                 size: 20.0,
                                                               ),
@@ -7789,14 +7796,14 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                   FFButtonOptions(
                                                                 width: 250.0,
                                                                 height: 50.0,
-                                                                padding: const EdgeInsetsDirectional
+                                                                padding: EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                                 iconPadding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -7823,7 +7830,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                     ),
                                                                 elevation: 3.0,
                                                                 borderSide:
-                                                                    const BorderSide(
+                                                                    BorderSide(
                                                                   color: Colors
                                                                       .transparent,
                                                                   width: 1.0,
@@ -7835,7 +7842,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(const SizedBox(
+                                                        ].divide(SizedBox(
                                                             height: 5.0)),
                                                       ),
                                                     ),
@@ -7852,7 +7859,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                               ),
                             ),
                           ),
-                        if (widget.telas == 'ListacartaoAdmissao')
+                        if (widget!.telas == 'ListacartaoAdmissao')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -7861,7 +7868,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: const EdgeInsets.all(20.0),
+                              padding: EdgeInsets.all(20.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
@@ -7885,10 +7892,10 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   -1.0, 0.0),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         10.0, 10.0, 0.0, 0.0),
                                                 child: Text(
@@ -7915,7 +7922,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   10.0, 10.0, 10.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -7926,7 +7933,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                 flex: 3,
                                                 child: Container(
                                                   width: 550.0,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -7936,7 +7943,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -7968,13 +7975,13 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -7987,7 +7994,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                   .calssAcademicoValueController3 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: const ['option 1'],
+                                                          options: ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.calssAcademicoValue3 =
@@ -8025,7 +8032,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -8045,7 +8052,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                 flex: 3,
                                                 child: Container(
                                                   width: 550.0,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -8055,7 +8062,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -8087,7 +8094,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                       ),
@@ -8097,7 +8104,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                 .secaoAcademicoValueController4 ??=
                                                             FormFieldController<
                                                                 String>(null),
-                                                        options: const ['option 1'],
+                                                        options: ['option 1'],
                                                         onChanged: (val) =>
                                                             setState(() => _model
                                                                     .secaoAcademicoValue4 =
@@ -8135,7 +8142,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                         borderWidth: 2.0,
                                                         borderRadius: 8.0,
                                                         margin:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     4.0,
@@ -8154,7 +8161,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                 flex: 3,
                                                 child: Container(
                                                   width: 550.0,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -8164,7 +8171,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -8196,7 +8203,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                       ),
@@ -8206,7 +8213,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                 .categpriaAcademicoValueController3 ??=
                                                             FormFieldController<
                                                                 String>(null),
-                                                        options: const ['option 1'],
+                                                        options: ['option 1'],
                                                         onChanged: (val) =>
                                                             setState(() => _model
                                                                     .categpriaAcademicoValue3 =
@@ -8244,7 +8251,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                         borderWidth: 2.0,
                                                         borderRadius: 8.0,
                                                         margin:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     4.0,
@@ -8263,7 +8270,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                 flex: 3,
                                                 child: Container(
                                                   width: 550.0,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -8273,7 +8280,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -8305,7 +8312,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                       ),
@@ -8315,7 +8322,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                 .secaoAcademicoValueController5 ??=
                                                             FormFieldController<
                                                                 String>(null),
-                                                        options: const ['option 1'],
+                                                        options: ['option 1'],
                                                         onChanged: (val) =>
                                                             setState(() => _model
                                                                     .secaoAcademicoValue5 =
@@ -8353,7 +8360,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                         borderWidth: 2.0,
                                                         borderRadius: 8.0,
                                                         margin:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     4.0,
@@ -8372,7 +8379,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                 flex: 3,
                                                 child: Container(
                                                   width: 550.0,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -8382,7 +8389,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -8414,7 +8421,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                       ),
@@ -8424,7 +8431,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                                 .secaoAcademicoValueController6 ??=
                                                             FormFieldController<
                                                                 String>(null),
-                                                        options: const ['option 1'],
+                                                        options: ['option 1'],
                                                         onChanged: (val) =>
                                                             setState(() => _model
                                                                     .secaoAcademicoValue6 =
@@ -8462,7 +8469,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                         borderWidth: 2.0,
                                                         borderRadius: 8.0,
                                                         margin:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     4.0,
@@ -8477,12 +8484,12 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                   ),
                                                 ),
                                               ),
-                                            ].divide(const SizedBox(width: 20.0)),
+                                            ].divide(SizedBox(width: 20.0)),
                                           ),
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 15.0, 15.0, 10.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -8494,7 +8501,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                   print('Button pressed ...');
                                                 },
                                                 text: 'Filtro',
-                                                icon: const Icon(
+                                                icon: Icon(
                                                   Icons.filter_alt,
                                                   color: Colors.white,
                                                   size: 15.0,
@@ -8502,11 +8509,11 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                 options: FFButtonOptions(
                                                   width: 150.0,
                                                   height: 40.0,
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           24.0, 0.0, 24.0, 0.0),
                                                   iconPadding:
-                                                      const EdgeInsetsDirectional
+                                                      EdgeInsetsDirectional
                                                           .fromSTEB(0.0, 0.0,
                                                               0.0, 0.0),
                                                   color: FlutterFlowTheme.of(
@@ -8521,7 +8528,7 @@ class _A10gerenCartoesWidgetState extends State<A10gerenCartoesWidget>
                                                         letterSpacing: 0.0,
                                                       ),
                                                   elevation: 3.0,
-                                                  borderSide: const BorderSide(
+                                                  borderSide: BorderSide(
                                                     color: Colors.transparent,
                                                     width: 1.0,
                                                   ),

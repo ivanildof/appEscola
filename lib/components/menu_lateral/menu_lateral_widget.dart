@@ -2,9 +2,12 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'menu_lateral_model.dart';
 export 'menu_lateral_model.dart';
@@ -41,8 +44,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-44.99999999999999, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-44.99999999999999, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -53,8 +56,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-44.99999999999999, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-44.99999999999999, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -65,8 +68,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-44.99999999999999, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-44.99999999999999, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -77,8 +80,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-44.99999999999999, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-44.99999999999999, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -89,8 +92,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, -22.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, -22.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -101,8 +104,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-44.99999999999999, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-44.99999999999999, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -113,8 +116,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-44.99999999999999, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-44.99999999999999, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -125,8 +128,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-44.99999999999999, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-44.99999999999999, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -137,8 +140,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-44.99999999999999, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-44.99999999999999, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -149,8 +152,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-44.99999999999999, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-44.99999999999999, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -161,8 +164,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-44.99999999999999, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-44.99999999999999, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -173,8 +176,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-44.99999999999999, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-44.99999999999999, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -185,8 +188,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-44.99999999999999, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-44.99999999999999, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -197,8 +200,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-44.99999999999999, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-44.99999999999999, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -209,8 +212,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-44.99999999999999, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-44.99999999999999, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -221,8 +224,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-44.99999999999999, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-44.99999999999999, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -233,8 +236,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-44.99999999999999, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-44.99999999999999, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -245,8 +248,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-44.99999999999999, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-44.99999999999999, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -257,8 +260,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-44.99999999999999, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-44.99999999999999, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -269,8 +272,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-44.99999999999999, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-44.99999999999999, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -281,8 +284,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-44.99999999999999, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-44.99999999999999, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -293,8 +296,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-44.99999999999999, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-44.99999999999999, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -305,8 +308,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-44.99999999999999, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-44.99999999999999, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -317,8 +320,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-44.99999999999999, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-44.99999999999999, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -329,8 +332,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-44.99999999999999, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-44.99999999999999, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -341,8 +344,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-44.99999999999999, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-44.99999999999999, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -353,8 +356,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-44.99999999999999, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-44.99999999999999, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -365,8 +368,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-44.99999999999999, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-44.99999999999999, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -377,8 +380,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-44.99999999999999, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-44.99999999999999, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -389,8 +392,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-44.99999999999999, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-44.99999999999999, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -401,8 +404,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-44.99999999999999, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-44.99999999999999, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -413,8 +416,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-44.99999999999999, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-44.99999999999999, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -425,8 +428,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-44.99999999999999, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-44.99999999999999, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -437,8 +440,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-44.99999999999999, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-44.99999999999999, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -449,8 +452,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-44.99999999999999, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-44.99999999999999, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -461,8 +464,8 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-44.99999999999999, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-44.99999999999999, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -495,12 +498,6 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             MouseRegion(
               opaque: false,
               cursor: MouseCursor.defer ?? MouseCursor.defer,
-              onEnter: ((event) async {
-                setState(() => _model.mousePainelHovered = true);
-              }),
-              onExit: ((event) async {
-                setState(() => _model.mousePainelHovered = false);
-              }),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -513,7 +510,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: _model.mousePainelHovered
+                    color: _model.mousePainelHovered!
                         ? FlutterFlowTheme.of(context).alternate
                         : FlutterFlowTheme.of(context).secondaryBackground,
                     border: Border.all(
@@ -523,13 +520,13 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 10.0, 10.0, 10.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -552,7 +549,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 },
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     6.0, 0.0, 0.0, 0.0),
                                 child: Text(
                                   'Painel',
@@ -603,6 +600,12 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                 ),
               ),
+              onEnter: ((event) async {
+                setState(() => _model.mousePainelHovered = true);
+              }),
+              onExit: ((event) async {
+                setState(() => _model.mousePainelHovered = false);
+              }),
             ),
             if (FFAppState().menuOption == 'painel')
               Container(
@@ -615,7 +618,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -657,7 +660,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -699,7 +702,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -741,7 +744,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -782,21 +785,15 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                       ),
                     ),
                   ]
-                      .divide(const SizedBox(height: 10.0))
-                      .addToStart(const SizedBox(height: 10.0))
-                      .addToEnd(const SizedBox(height: 10.0)),
+                      .divide(SizedBox(height: 10.0))
+                      .addToStart(SizedBox(height: 10.0))
+                      .addToEnd(SizedBox(height: 10.0)),
                 ).animateOnPageLoad(
                     animationsMap['columnOnPageLoadAnimation1']!),
               ),
             MouseRegion(
               opaque: false,
               cursor: MouseCursor.defer ?? MouseCursor.defer,
-              onEnter: ((event) async {
-                setState(() => _model.mouseESCOLAHovered = true);
-              }),
-              onExit: ((event) async {
-                setState(() => _model.mouseESCOLAHovered = false);
-              }),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -819,7 +816,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: _model.mouseESCOLAHovered
+                    color: _model.mouseESCOLAHovered!
                         ? FlutterFlowTheme.of(context).alternate
                         : FlutterFlowTheme.of(context).secondaryBackground,
                     border: Border.all(
@@ -829,13 +826,13 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 10.0, 10.0, 10.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -858,7 +855,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 },
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     6.0, 0.0, 0.0, 0.0),
                                 child: Text(
                                   'Escola',
@@ -882,16 +879,16 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                 ),
               ),
+              onEnter: ((event) async {
+                setState(() => _model.mouseESCOLAHovered = true);
+              }),
+              onExit: ((event) async {
+                setState(() => _model.mouseESCOLAHovered = false);
+              }),
             ),
             MouseRegion(
               opaque: false,
               cursor: MouseCursor.defer ?? MouseCursor.defer,
-              onEnter: ((event) async {
-                setState(() => _model.mouseINVENTARIOHovered = true);
-              }),
-              onExit: ((event) async {
-                setState(() => _model.mouseINVENTARIOHovered = false);
-              }),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -904,7 +901,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: _model.mouseINVENTARIOHovered
+                    color: _model.mouseINVENTARIOHovered!
                         ? FlutterFlowTheme.of(context).alternate
                         : FlutterFlowTheme.of(context).secondaryBackground,
                     border: Border.all(
@@ -914,13 +911,13 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 10.0, 10.0, 10.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -943,7 +940,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 },
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     6.0, 0.0, 0.0, 0.0),
                                 child: Text(
                                   'Inventário',
@@ -994,6 +991,12 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                 ),
               ),
+              onEnter: ((event) async {
+                setState(() => _model.mouseINVENTARIOHovered = true);
+              }),
+              onExit: ((event) async {
+                setState(() => _model.mouseINVENTARIOHovered = false);
+              }),
             ),
             if (FFAppState().menuOption == 'inventario')
               Container(
@@ -1006,7 +1009,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -1048,7 +1051,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -1090,7 +1093,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -1132,7 +1135,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -1174,7 +1177,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -1216,7 +1219,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -1258,7 +1261,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -1300,7 +1303,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -1341,21 +1344,15 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                       ),
                     ),
                   ]
-                      .divide(const SizedBox(height: 10.0))
-                      .addToStart(const SizedBox(height: 10.0))
-                      .addToEnd(const SizedBox(height: 10.0)),
+                      .divide(SizedBox(height: 10.0))
+                      .addToStart(SizedBox(height: 10.0))
+                      .addToEnd(SizedBox(height: 10.0)),
                 ).animateOnPageLoad(
                     animationsMap['columnOnPageLoadAnimation2']!),
               ),
             MouseRegion(
               opaque: false,
               cursor: MouseCursor.defer ?? MouseCursor.defer,
-              onEnter: ((event) async {
-                setState(() => _model.recepcaomouseHovered = true);
-              }),
-              onExit: ((event) async {
-                setState(() => _model.recepcaomouseHovered = false);
-              }),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -1368,7 +1365,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: _model.recepcaomouseHovered
+                    color: _model.recepcaomouseHovered!
                         ? FlutterFlowTheme.of(context).alternate
                         : FlutterFlowTheme.of(context).secondaryBackground,
                     border: Border.all(
@@ -1378,13 +1375,13 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 10.0, 10.0, 10.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -1407,7 +1404,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 },
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     6.0, 0.0, 0.0, 0.0),
                                 child: Text(
                                   'Recepção',
@@ -1458,6 +1455,12 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                 ),
               ),
+              onEnter: ((event) async {
+                setState(() => _model.recepcaomouseHovered = true);
+              }),
+              onExit: ((event) async {
+                setState(() => _model.recepcaomouseHovered = false);
+              }),
             ),
             if (FFAppState().menuOption == 'recepcao')
               Container(
@@ -1470,7 +1473,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -1512,7 +1515,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -1554,7 +1557,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -1596,7 +1599,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -1638,7 +1641,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -1680,7 +1683,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -1721,21 +1724,15 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                       ),
                     ),
                   ]
-                      .divide(const SizedBox(height: 10.0))
-                      .addToStart(const SizedBox(height: 10.0))
-                      .addToEnd(const SizedBox(height: 10.0)),
+                      .divide(SizedBox(height: 10.0))
+                      .addToStart(SizedBox(height: 10.0))
+                      .addToEnd(SizedBox(height: 10.0)),
                 ).animateOnPageLoad(
                     animationsMap['columnOnPageLoadAnimation3']!),
               ),
             MouseRegion(
               opaque: false,
               cursor: MouseCursor.defer ?? MouseCursor.defer,
-              onEnter: ((event) async {
-                setState(() => _model.mouseadmissaoHovered = true);
-              }),
-              onExit: ((event) async {
-                setState(() => _model.mouseadmissaoHovered = false);
-              }),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -1748,7 +1745,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: _model.mouseadmissaoHovered
+                    color: _model.mouseadmissaoHovered!
                         ? FlutterFlowTheme.of(context).alternate
                         : FlutterFlowTheme.of(context).secondaryBackground,
                     border: Border.all(
@@ -1758,13 +1755,13 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 10.0, 10.0, 10.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -1787,7 +1784,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 },
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     6.0, 0.0, 0.0, 0.0),
                                 child: Text(
                                   'Detalhes do Aluno',
@@ -1838,6 +1835,12 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                 ),
               ),
+              onEnter: ((event) async {
+                setState(() => _model.mouseadmissaoHovered = true);
+              }),
+              onExit: ((event) async {
+                setState(() => _model.mouseadmissaoHovered = false);
+              }),
             ),
             if (FFAppState().menuOption == 'Aluno')
               Container(
@@ -1850,7 +1853,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -1892,7 +1895,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -1934,7 +1937,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -1976,7 +1979,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -2017,21 +2020,15 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                       ),
                     ),
                   ]
-                      .divide(const SizedBox(height: 10.0))
-                      .addToStart(const SizedBox(height: 10.0))
-                      .addToEnd(const SizedBox(height: 10.0)),
+                      .divide(SizedBox(height: 10.0))
+                      .addToStart(SizedBox(height: 10.0))
+                      .addToEnd(SizedBox(height: 10.0)),
                 ).animateOnPageLoad(
                     animationsMap['columnOnPageLoadAnimation4']!),
               ),
             MouseRegion(
               opaque: false,
               cursor: MouseCursor.defer ?? MouseCursor.defer,
-              onEnter: ((event) async {
-                setState(() => _model.mousepaisHovered = true);
-              }),
-              onExit: ((event) async {
-                setState(() => _model.mousepaisHovered = false);
-              }),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -2044,7 +2041,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: _model.mousepaisHovered
+                    color: _model.mousepaisHovered!
                         ? FlutterFlowTheme.of(context).alternate
                         : FlutterFlowTheme.of(context).secondaryBackground,
                     border: Border.all(
@@ -2054,13 +2051,13 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 10.0, 10.0, 10.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -2083,7 +2080,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 },
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     6.0, 0.0, 0.0, 0.0),
                                 child: Text(
                                   'Pais / Responsavel',
@@ -2134,6 +2131,12 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                 ),
               ),
+              onEnter: ((event) async {
+                setState(() => _model.mousepaisHovered = true);
+              }),
+              onExit: ((event) async {
+                setState(() => _model.mousepaisHovered = false);
+              }),
             ),
             if (FFAppState().menuOption == 'pais')
               Container(
@@ -2148,7 +2151,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               30.0, 0.0, 0.0, 0.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -2190,7 +2193,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               30.0, 0.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -2215,9 +2218,9 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                           ),
                         ),
                       ]
-                          .divide(const SizedBox(height: 10.0))
-                          .addToStart(const SizedBox(height: 10.0))
-                          .addToEnd(const SizedBox(height: 10.0)),
+                          .divide(SizedBox(height: 10.0))
+                          .addToStart(SizedBox(height: 10.0))
+                          .addToEnd(SizedBox(height: 10.0)),
                     ),
                   ],
                 ).animateOnPageLoad(
@@ -2226,12 +2229,6 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             MouseRegion(
               opaque: false,
               cursor: MouseCursor.defer ?? MouseCursor.defer,
-              onEnter: ((event) async {
-                setState(() => _model.mousefuncionarioHovered = true);
-              }),
-              onExit: ((event) async {
-                setState(() => _model.mousefuncionarioHovered = false);
-              }),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -2244,7 +2241,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: _model.mousefuncionarioHovered
+                    color: _model.mousefuncionarioHovered!
                         ? FlutterFlowTheme.of(context).alternate
                         : FlutterFlowTheme.of(context).secondaryBackground,
                     border: Border.all(
@@ -2254,13 +2251,13 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 10.0, 10.0, 10.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -2283,7 +2280,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 },
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     6.0, 0.0, 0.0, 0.0),
                                 child: Text(
                                   'Funcionários',
@@ -2334,6 +2331,12 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                 ),
               ),
+              onEnter: ((event) async {
+                setState(() => _model.mousefuncionarioHovered = true);
+              }),
+              onExit: ((event) async {
+                setState(() => _model.mousefuncionarioHovered = false);
+              }),
             ),
             if (FFAppState().menuOption == 'funcionario')
               Container(
@@ -2346,7 +2349,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -2388,7 +2391,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -2430,7 +2433,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -2472,7 +2475,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -2514,7 +2517,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -2555,21 +2558,15 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                       ),
                     ),
                   ]
-                      .divide(const SizedBox(height: 10.0))
-                      .addToStart(const SizedBox(height: 10.0))
-                      .addToEnd(const SizedBox(height: 10.0)),
+                      .divide(SizedBox(height: 10.0))
+                      .addToStart(SizedBox(height: 10.0))
+                      .addToEnd(SizedBox(height: 10.0)),
                 ).animateOnPageLoad(
                     animationsMap['columnOnPageLoadAnimation6']!),
               ),
             MouseRegion(
               opaque: false,
               cursor: MouseCursor.defer ?? MouseCursor.defer,
-              onEnter: ((event) async {
-                setState(() => _model.mousecartoesHovered = true);
-              }),
-              onExit: ((event) async {
-                setState(() => _model.mousecartoesHovered = false);
-              }),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -2582,7 +2579,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: _model.mousecartoesHovered
+                    color: _model.mousecartoesHovered!
                         ? FlutterFlowTheme.of(context).alternate
                         : FlutterFlowTheme.of(context).secondaryBackground,
                     border: Border.all(
@@ -2592,13 +2589,13 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 13.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 13.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 10.0, 10.0, 10.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -2621,7 +2618,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 },
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     6.0, 0.0, 0.0, 0.0),
                                 child: Text(
                                   'Geren. de cartões',
@@ -2672,6 +2669,12 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                 ),
               ),
+              onEnter: ((event) async {
+                setState(() => _model.mousecartoesHovered = true);
+              }),
+              onExit: ((event) async {
+                setState(() => _model.mousecartoesHovered = false);
+              }),
             ),
             if (FFAppState().menuOption == 'cartoes')
               Container(
@@ -2684,10 +2687,10 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Align(
-                      alignment: const AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.0, 0.0),
                       child: Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                         child: InkWell(
                           splashColor: Colors.transparent,
                           focusColor: Colors.transparent,
@@ -2733,7 +2736,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -2778,7 +2781,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -2822,10 +2825,10 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                       ),
                     ),
                     Align(
-                      alignment: const AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.0, 0.0),
                       child: Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                         child: InkWell(
                           splashColor: Colors.transparent,
                           focusColor: Colors.transparent,
@@ -2870,10 +2873,10 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                       ),
                     ),
                     Align(
-                      alignment: const AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.0, 0.0),
                       child: Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                         child: InkWell(
                           splashColor: Colors.transparent,
                           focusColor: Colors.transparent,
@@ -2918,21 +2921,15 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                       ),
                     ),
                   ]
-                      .divide(const SizedBox(height: 10.0))
-                      .addToStart(const SizedBox(height: 10.0))
-                      .addToEnd(const SizedBox(height: 10.0)),
+                      .divide(SizedBox(height: 10.0))
+                      .addToStart(SizedBox(height: 10.0))
+                      .addToEnd(SizedBox(height: 10.0)),
                 ).animateOnPageLoad(
                     animationsMap['columnOnPageLoadAnimation7']!),
               ),
             MouseRegion(
               opaque: false,
               cursor: MouseCursor.defer ?? MouseCursor.defer,
-              onEnter: ((event) async {
-                setState(() => _model.mousecertificadoHovered = true);
-              }),
-              onExit: ((event) async {
-                setState(() => _model.mousecertificadoHovered = false);
-              }),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -2945,7 +2942,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: _model.mousecertificadoHovered
+                    color: _model.mousecertificadoHovered!
                         ? FlutterFlowTheme.of(context).alternate
                         : FlutterFlowTheme.of(context).secondaryBackground,
                     border: Border.all(
@@ -2955,13 +2952,13 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 13.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 13.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 10.0, 10.0, 10.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -2984,7 +2981,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 },
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     6.0, 0.0, 0.0, 0.0),
                                 child: Text(
                                   'Certificado',
@@ -3035,6 +3032,12 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                 ),
               ),
+              onEnter: ((event) async {
+                setState(() => _model.mousecertificadoHovered = true);
+              }),
+              onExit: ((event) async {
+                setState(() => _model.mousecertificadoHovered = false);
+              }),
             ),
             if (FFAppState().menuOption == 'certificado')
               Container(
@@ -3047,7 +3050,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -3089,7 +3092,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -3131,7 +3134,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -3172,21 +3175,15 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                       ),
                     ),
                   ]
-                      .divide(const SizedBox(height: 10.0))
-                      .addToStart(const SizedBox(height: 10.0))
-                      .addToEnd(const SizedBox(height: 10.0)),
+                      .divide(SizedBox(height: 10.0))
+                      .addToStart(SizedBox(height: 10.0))
+                      .addToEnd(SizedBox(height: 10.0)),
                 ).animateOnPageLoad(
                     animationsMap['columnOnPageLoadAnimation8']!),
               ),
             MouseRegion(
               opaque: false,
               cursor: MouseCursor.defer ?? MouseCursor.defer,
-              onEnter: ((event) async {
-                setState(() => _model.mouserechumanosHovered = true);
-              }),
-              onExit: ((event) async {
-                setState(() => _model.mouserechumanosHovered = false);
-              }),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -3199,7 +3196,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: _model.mouserechumanosHovered
+                    color: _model.mouserechumanosHovered!
                         ? FlutterFlowTheme.of(context).alternate
                         : FlutterFlowTheme.of(context).secondaryBackground,
                     border: Border.all(
@@ -3209,13 +3206,13 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 13.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 13.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 10.0, 10.0, 10.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -3238,7 +3235,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 },
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     6.0, 0.0, 0.0, 0.0),
                                 child: Text(
                                   'Recursos humanos',
@@ -3289,6 +3286,12 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                 ),
               ),
+              onEnter: ((event) async {
+                setState(() => _model.mouserechumanosHovered = true);
+              }),
+              onExit: ((event) async {
+                setState(() => _model.mouserechumanosHovered = false);
+              }),
             ),
             if (FFAppState().menuOption == 'rechumanos')
               Container(
@@ -3303,7 +3306,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               30.0, 0.0, 10.0, 0.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -3328,7 +3331,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                       size: 20.0,
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           6.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         'Folha de salário',
@@ -3370,7 +3373,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     35.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -3413,7 +3416,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     35.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -3456,7 +3459,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     35.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -3498,13 +3501,13 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                   ),
                                 ),
                               ),
-                            ].divide(const SizedBox(height: 6.0)),
+                            ].divide(SizedBox(height: 6.0)),
                           ).animateOnPageLoad(
                               animationsMap['columnOnPageLoadAnimation10']!),
                       ]
-                          .divide(const SizedBox(height: 10.0))
-                          .addToStart(const SizedBox(height: 10.0))
-                          .addToEnd(const SizedBox(height: 10.0)),
+                          .divide(SizedBox(height: 10.0))
+                          .addToStart(SizedBox(height: 10.0))
+                          .addToEnd(SizedBox(height: 10.0)),
                     ),
                   ],
                 ).animateOnPageLoad(
@@ -3513,12 +3516,6 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             MouseRegion(
               opaque: false,
               cursor: MouseCursor.defer ?? MouseCursor.defer,
-              onEnter: ((event) async {
-                setState(() => _model.mouseacademicoHovered = true);
-              }),
-              onExit: ((event) async {
-                setState(() => _model.mouseacademicoHovered = false);
-              }),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -3531,7 +3528,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: _model.mouseacademicoHovered
+                    color: _model.mouseacademicoHovered!
                         ? FlutterFlowTheme.of(context).alternate
                         : FlutterFlowTheme.of(context).secondaryBackground,
                     border: Border.all(
@@ -3541,13 +3538,13 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 13.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 13.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 10.0, 10.0, 10.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -3570,7 +3567,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 },
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     6.0, 0.0, 0.0, 0.0),
                                 child: Text(
                                   'Acadêmico',
@@ -3621,6 +3618,12 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                 ),
               ),
+              onEnter: ((event) async {
+                setState(() => _model.mouseacademicoHovered = true);
+              }),
+              onExit: ((event) async {
+                setState(() => _model.mouseacademicoHovered = false);
+              }),
             ),
             if (FFAppState().menuOption == 'academico')
               Container(
@@ -3635,7 +3638,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               30.0, 0.0, 10.0, 0.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -3660,7 +3663,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                       size: 20.0,
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           6.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         'Classe & Seção',
@@ -3711,7 +3714,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -3735,7 +3738,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             6.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Controle de classes',
@@ -3753,7 +3756,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -3777,7 +3780,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             6.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Atribuir professor de turma',
@@ -3794,20 +3797,20 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                   ),
                                 ),
                               ),
-                            ].divide(const SizedBox(height: 6.0)),
+                            ].divide(SizedBox(height: 6.0)),
                           ).animateOnPageLoad(
                               animationsMap['columnOnPageLoadAnimation12']!),
                       ]
-                          .divide(const SizedBox(height: 10.0))
-                          .addToStart(const SizedBox(height: 10.0))
-                          .addToEnd(const SizedBox(height: 10.0)),
+                          .divide(SizedBox(height: 10.0))
+                          .addToStart(SizedBox(height: 10.0))
+                          .addToEnd(SizedBox(height: 10.0)),
                     ).animateOnPageLoad(
                         animationsMap['columnOnPageLoadAnimation11']!),
                     Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               30.0, 0.0, 10.0, 0.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -3832,7 +3835,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                       size: 20.0,
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           6.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         'Matéria',
@@ -3883,7 +3886,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -3907,7 +3910,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             6.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Matéria',
@@ -3925,7 +3928,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -3949,7 +3952,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             6.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Atribuição de classe',
@@ -3966,13 +3969,13 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                   ),
                                 ),
                               ),
-                            ].divide(const SizedBox(height: 6.0)),
+                            ].divide(SizedBox(height: 6.0)),
                           ).animateOnPageLoad(
                               animationsMap['columnOnPageLoadAnimation14']!),
                       ]
-                          .divide(const SizedBox(height: 10.0))
-                          .addToStart(const SizedBox(height: 10.0))
-                          .addToEnd(const SizedBox(height: 10.0)),
+                          .divide(SizedBox(height: 10.0))
+                          .addToStart(SizedBox(height: 10.0))
+                          .addToEnd(SizedBox(height: 10.0)),
                     ).animateOnPageLoad(
                         animationsMap['columnOnPageLoadAnimation13']!),
                   ],
@@ -3981,12 +3984,6 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             MouseRegion(
               opaque: false,
               cursor: MouseCursor.defer ?? MouseCursor.defer,
-              onEnter: ((event) async {
-                setState(() => _model.mouseaovivoHovered = true);
-              }),
-              onExit: ((event) async {
-                setState(() => _model.mouseaovivoHovered = false);
-              }),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -3999,7 +3996,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: _model.mouseaovivoHovered
+                    color: _model.mouseaovivoHovered!
                         ? FlutterFlowTheme.of(context).alternate
                         : FlutterFlowTheme.of(context).secondaryBackground,
                     border: Border.all(
@@ -4009,13 +4006,13 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 13.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 13.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 10.0, 10.0, 10.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -4038,7 +4035,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 },
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     6.0, 0.0, 0.0, 0.0),
                                 child: Text(
                                   'Salas de aula ao vivo',
@@ -4089,6 +4086,12 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                 ),
               ),
+              onEnter: ((event) async {
+                setState(() => _model.mouseaovivoHovered = true);
+              }),
+              onExit: ((event) async {
+                setState(() => _model.mouseaovivoHovered = false);
+              }),
             ),
             if (FFAppState().menuOption == 'salaaovivo')
               Container(
@@ -4101,7 +4104,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -4143,7 +4146,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -4184,21 +4187,15 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                       ),
                     ),
                   ]
-                      .divide(const SizedBox(height: 10.0))
-                      .addToStart(const SizedBox(height: 10.0))
-                      .addToEnd(const SizedBox(height: 10.0)),
+                      .divide(SizedBox(height: 10.0))
+                      .addToStart(SizedBox(height: 10.0))
+                      .addToEnd(SizedBox(height: 10.0)),
                 ).animateOnPageLoad(
                     animationsMap['columnOnPageLoadAnimation15']!),
               ),
             MouseRegion(
               opaque: false,
               cursor: MouseCursor.defer ?? MouseCursor.defer,
-              onEnter: ((event) async {
-                setState(() => _model.mousetrabalhocasaHovered = true);
-              }),
-              onExit: ((event) async {
-                setState(() => _model.mousetrabalhocasaHovered = false);
-              }),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -4211,7 +4208,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: _model.mousetrabalhocasaHovered
+                    color: _model.mousetrabalhocasaHovered!
                         ? FlutterFlowTheme.of(context).alternate
                         : FlutterFlowTheme.of(context).secondaryBackground,
                     border: Border.all(
@@ -4221,13 +4218,13 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 13.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 13.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 10.0, 10.0, 10.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -4250,7 +4247,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 },
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     6.0, 0.0, 0.0, 0.0),
                                 child: Text(
                                   'Trabalho de casa',
@@ -4301,6 +4298,12 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                 ),
               ),
+              onEnter: ((event) async {
+                setState(() => _model.mousetrabalhocasaHovered = true);
+              }),
+              onExit: ((event) async {
+                setState(() => _model.mousetrabalhocasaHovered = false);
+              }),
             ),
             if (FFAppState().menuOption == 'trabalhocasa')
               Container(
@@ -4313,7 +4316,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -4338,7 +4341,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -4362,21 +4365,15 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                       ),
                     ),
                   ]
-                      .divide(const SizedBox(height: 10.0))
-                      .addToStart(const SizedBox(height: 10.0))
-                      .addToEnd(const SizedBox(height: 10.0)),
+                      .divide(SizedBox(height: 10.0))
+                      .addToStart(SizedBox(height: 10.0))
+                      .addToEnd(SizedBox(height: 10.0)),
                 ).animateOnPageLoad(
                     animationsMap['columnOnPageLoadAnimation16']!),
               ),
             MouseRegion(
               opaque: false,
               cursor: MouseCursor.defer ?? MouseCursor.defer,
-              onEnter: ((event) async {
-                setState(() => _model.mouseexameHovered = true);
-              }),
-              onExit: ((event) async {
-                setState(() => _model.mouseexameHovered = false);
-              }),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -4389,7 +4386,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: _model.mouseexameHovered
+                    color: _model.mouseexameHovered!
                         ? FlutterFlowTheme.of(context).alternate
                         : FlutterFlowTheme.of(context).secondaryBackground,
                     border: Border.all(
@@ -4399,13 +4396,13 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 13.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 13.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 10.0, 10.0, 10.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -4428,7 +4425,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 },
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     6.0, 0.0, 0.0, 0.0),
                                 child: Text(
                                   'Mestre do Exame',
@@ -4479,6 +4476,12 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                 ),
               ),
+              onEnter: ((event) async {
+                setState(() => _model.mouseexameHovered = true);
+              }),
+              onExit: ((event) async {
+                setState(() => _model.mouseexameHovered = false);
+              }),
             ),
             if (FFAppState().menuOption == 'exame')
               Container(
@@ -4493,7 +4496,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               30.0, 0.0, 10.0, 0.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -4518,7 +4521,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                       size: 20.0,
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           6.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         'Exame',
@@ -4569,7 +4572,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -4593,7 +4596,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             6.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Prazo do exame',
@@ -4611,7 +4614,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -4635,7 +4638,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             6.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Sala de exames',
@@ -4653,7 +4656,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -4677,7 +4680,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             6.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Distribuição de notas',
@@ -4695,7 +4698,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -4719,7 +4722,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             6.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Lista de exame',
@@ -4737,7 +4740,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -4745,7 +4748,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           6.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         'Folha de avaliação modelo',
@@ -4761,19 +4764,19 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                   ],
                                 ),
                               ),
-                            ].divide(const SizedBox(height: 6.0)),
+                            ].divide(SizedBox(height: 6.0)),
                           ).animateOnPageLoad(
                               animationsMap['columnOnPageLoadAnimation18']!),
                       ]
-                          .divide(const SizedBox(height: 10.0))
-                          .addToStart(const SizedBox(height: 10.0))
-                          .addToEnd(const SizedBox(height: 10.0)),
+                          .divide(SizedBox(height: 10.0))
+                          .addToStart(SizedBox(height: 10.0))
+                          .addToEnd(SizedBox(height: 10.0)),
                     ),
                     Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               30.0, 0.0, 10.0, 0.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -4798,7 +4801,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                       size: 20.0,
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           6.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         'Nota',
@@ -4849,7 +4852,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -4873,7 +4876,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             6.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Nota Entradas',
@@ -4891,7 +4894,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -4915,7 +4918,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             6.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Posição de classe',
@@ -4933,7 +4936,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -4957,7 +4960,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             6.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           'Escala de notas',
@@ -4974,13 +4977,13 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                   ),
                                 ),
                               ),
-                            ].divide(const SizedBox(height: 6.0)),
+                            ].divide(SizedBox(height: 6.0)),
                           ).animateOnPageLoad(
                               animationsMap['columnOnPageLoadAnimation19']!),
                       ]
-                          .divide(const SizedBox(height: 10.0))
-                          .addToStart(const SizedBox(height: 10.0))
-                          .addToEnd(const SizedBox(height: 10.0)),
+                          .divide(SizedBox(height: 10.0))
+                          .addToStart(SizedBox(height: 10.0))
+                          .addToEnd(SizedBox(height: 10.0)),
                     ),
                   ],
                 ).animateOnPageLoad(
@@ -4989,12 +4992,6 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             MouseRegion(
               opaque: false,
               cursor: MouseCursor.defer ?? MouseCursor.defer,
-              onEnter: ((event) async {
-                setState(() => _model.mousecomparecimentoHovered = true);
-              }),
-              onExit: ((event) async {
-                setState(() => _model.mousecomparecimentoHovered = false);
-              }),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -5007,7 +5004,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: _model.mousecomparecimentoHovered
+                    color: _model.mousecomparecimentoHovered!
                         ? FlutterFlowTheme.of(context).alternate
                         : FlutterFlowTheme.of(context).secondaryBackground,
                     border: Border.all(
@@ -5017,13 +5014,13 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 13.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 13.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 10.0, 10.0, 10.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -5046,7 +5043,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 },
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     6.0, 0.0, 0.0, 0.0),
                                 child: Text(
                                   'Comparecimento',
@@ -5097,6 +5094,12 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                 ),
               ),
+              onEnter: ((event) async {
+                setState(() => _model.mousecomparecimentoHovered = true);
+              }),
+              onExit: ((event) async {
+                setState(() => _model.mousecomparecimentoHovered = false);
+              }),
             ),
             if (FFAppState().menuOption == 'comparecimento')
               Container(
@@ -5109,7 +5112,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -5151,7 +5154,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -5193,7 +5196,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -5235,7 +5238,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -5276,21 +5279,15 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                       ),
                     ),
                   ]
-                      .divide(const SizedBox(height: 10.0))
-                      .addToStart(const SizedBox(height: 10.0))
-                      .addToEnd(const SizedBox(height: 10.0)),
+                      .divide(SizedBox(height: 10.0))
+                      .addToStart(SizedBox(height: 10.0))
+                      .addToEnd(SizedBox(height: 10.0)),
                 ).animateOnPageLoad(
                     animationsMap['columnOnPageLoadAnimation20']!),
               ),
             MouseRegion(
               opaque: false,
               cursor: MouseCursor.defer ?? MouseCursor.defer,
-              onEnter: ((event) async {
-                setState(() => _model.mousebibliotecaHovered = true);
-              }),
-              onExit: ((event) async {
-                setState(() => _model.mousebibliotecaHovered = false);
-              }),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -5303,7 +5300,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: _model.mousebibliotecaHovered
+                    color: _model.mousebibliotecaHovered!
                         ? FlutterFlowTheme.of(context).alternate
                         : FlutterFlowTheme.of(context).secondaryBackground,
                     border: Border.all(
@@ -5313,13 +5310,13 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 13.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 13.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 10.0, 10.0, 10.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -5342,7 +5339,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 },
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     6.0, 0.0, 0.0, 0.0),
                                 child: Text(
                                   'Biblioteca',
@@ -5393,6 +5390,12 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                 ),
               ),
+              onEnter: ((event) async {
+                setState(() => _model.mousebibliotecaHovered = true);
+              }),
+              onExit: ((event) async {
+                setState(() => _model.mousebibliotecaHovered = false);
+              }),
             ),
             if (FFAppState().menuOption == 'biblioteca')
               Container(
@@ -5405,7 +5408,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -5447,7 +5450,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -5489,7 +5492,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -5531,7 +5534,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -5572,21 +5575,15 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                       ),
                     ),
                   ]
-                      .divide(const SizedBox(height: 10.0))
-                      .addToStart(const SizedBox(height: 10.0))
-                      .addToEnd(const SizedBox(height: 10.0)),
+                      .divide(SizedBox(height: 10.0))
+                      .addToStart(SizedBox(height: 10.0))
+                      .addToEnd(SizedBox(height: 10.0)),
                 ).animateOnPageLoad(
                     animationsMap['columnOnPageLoadAnimation21']!),
               ),
             MouseRegion(
               opaque: false,
               cursor: MouseCursor.defer ?? MouseCursor.defer,
-              onEnter: ((event) async {
-                setState(() => _model.mousenoticiasHovered = true);
-              }),
-              onExit: ((event) async {
-                setState(() => _model.mousenoticiasHovered = false);
-              }),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -5599,7 +5596,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: _model.mousenoticiasHovered
+                    color: _model.mousenoticiasHovered!
                         ? FlutterFlowTheme.of(context).alternate
                         : FlutterFlowTheme.of(context).secondaryBackground,
                     border: Border.all(
@@ -5609,13 +5606,13 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 13.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 13.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 10.0, 10.0, 10.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -5638,7 +5635,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 },
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     6.0, 0.0, 0.0, 0.0),
                                 child: Text(
                                   'Quadro de notícias',
@@ -5689,6 +5686,12 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                 ),
               ),
+              onEnter: ((event) async {
+                setState(() => _model.mousenoticiasHovered = true);
+              }),
+              onExit: ((event) async {
+                setState(() => _model.mousenoticiasHovered = false);
+              }),
             ),
             if (FFAppState().menuOption == 'noticia')
               Container(
@@ -5701,7 +5704,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -5743,7 +5746,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -5785,7 +5788,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -5843,21 +5846,15 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                       ),
                     ),
                   ]
-                      .divide(const SizedBox(height: 10.0))
-                      .addToStart(const SizedBox(height: 10.0))
-                      .addToEnd(const SizedBox(height: 10.0)),
+                      .divide(SizedBox(height: 10.0))
+                      .addToStart(SizedBox(height: 10.0))
+                      .addToEnd(SizedBox(height: 10.0)),
                 ).animateOnPageLoad(
                     animationsMap['columnOnPageLoadAnimation22']!),
               ),
             MouseRegion(
               opaque: false,
               cursor: MouseCursor.defer ?? MouseCursor.defer,
-              onEnter: ((event) async {
-                setState(() => _model.mousesmsemailHovered = true);
-              }),
-              onExit: ((event) async {
-                setState(() => _model.mousesmsemailHovered = false);
-              }),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -5870,7 +5867,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: _model.mousesmsemailHovered
+                    color: _model.mousesmsemailHovered!
                         ? FlutterFlowTheme.of(context).alternate
                         : FlutterFlowTheme.of(context).secondaryBackground,
                     border: Border.all(
@@ -5880,13 +5877,13 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 13.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 13.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 10.0, 10.0, 10.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -5909,7 +5906,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 },
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     6.0, 0.0, 0.0, 0.0),
                                 child: Text(
                                   'SMS e E-mail ',
@@ -5960,6 +5957,12 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                 ),
               ),
+              onEnter: ((event) async {
+                setState(() => _model.mousesmsemailHovered = true);
+              }),
+              onExit: ((event) async {
+                setState(() => _model.mousesmsemailHovered = false);
+              }),
             ),
             if (FFAppState().menuOption == 'smsemail')
               Container(
@@ -5972,7 +5975,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -6014,7 +6017,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -6056,7 +6059,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -6098,7 +6101,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -6139,21 +6142,15 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                       ),
                     ),
                   ]
-                      .divide(const SizedBox(height: 10.0))
-                      .addToStart(const SizedBox(height: 10.0))
-                      .addToEnd(const SizedBox(height: 10.0)),
+                      .divide(SizedBox(height: 10.0))
+                      .addToStart(SizedBox(height: 10.0))
+                      .addToEnd(SizedBox(height: 10.0)),
                 ).animateOnPageLoad(
                     animationsMap['columnOnPageLoadAnimation23']!),
               ),
             MouseRegion(
               opaque: false,
               cursor: MouseCursor.defer ?? MouseCursor.defer,
-              onEnter: ((event) async {
-                setState(() => _model.mousecontabiliestudantHovered = true);
-              }),
-              onExit: ((event) async {
-                setState(() => _model.mousecontabiliestudantHovered = false);
-              }),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -6166,7 +6163,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: _model.mousecontabiliestudantHovered
+                    color: _model.mousecontabiliestudantHovered!
                         ? FlutterFlowTheme.of(context).alternate
                         : FlutterFlowTheme.of(context).secondaryBackground,
                     border: Border.all(
@@ -6176,13 +6173,13 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 13.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 13.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 10.0, 10.0, 10.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -6205,7 +6202,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 },
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     6.0, 0.0, 0.0, 0.0),
                                 child: Text(
                                   'Contabilidade Estud.',
@@ -6256,6 +6253,12 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                 ),
               ),
+              onEnter: ((event) async {
+                setState(() => _model.mousecontabiliestudantHovered = true);
+              }),
+              onExit: ((event) async {
+                setState(() => _model.mousecontabiliestudantHovered = false);
+              }),
             ),
             if (FFAppState().menuOption == 'contabiliestudant')
               Container(
@@ -6270,7 +6273,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               30.0, 0.0, 10.0, 0.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -6295,7 +6298,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                       size: 20.0,
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           6.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         'Pagamentos off-line',
@@ -6350,7 +6353,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         40.0, 0.0, 10.0, 0.0),
                                     child: InkWell(
                                       splashColor: Colors.transparent,
@@ -6394,7 +6397,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         40.0, 0.0, 10.0, 0.0),
                                     child: InkWell(
                                       splashColor: Colors.transparent,
@@ -6437,13 +6440,13 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                       ),
                                     ),
                                   ),
-                                ].divide(const SizedBox(height: 6.0)),
+                                ].divide(SizedBox(height: 6.0)),
                               ),
                             Column(
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       30.0, 0.0, 0.0, 0.0),
                                   child: InkWell(
                                     splashColor: Colors.transparent,
@@ -6487,7 +6490,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       30.0, 0.0, 0.0, 0.0),
                                   child: InkWell(
                                     splashColor: Colors.transparent,
@@ -6531,7 +6534,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       30.0, 0.0, 0.0, 0.0),
                                   child: InkWell(
                                     splashColor: Colors.transparent,
@@ -6575,7 +6578,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       30.0, 0.0, 0.0, 0.0),
                                   child: InkWell(
                                     splashColor: Colors.transparent,
@@ -6619,7 +6622,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       30.0, 0.0, 0.0, 0.0),
                                   child: InkWell(
                                     splashColor: Colors.transparent,
@@ -6663,7 +6666,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       30.0, 0.0, 0.0, 0.0),
                                   child: InkWell(
                                     splashColor: Colors.transparent,
@@ -6707,7 +6710,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       30.0, 0.0, 0.0, 0.0),
                                   child: InkWell(
                                     splashColor: Colors.transparent,
@@ -6751,18 +6754,18 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                   ),
                                 ),
                               ]
-                                  .divide(const SizedBox(height: 10.0))
-                                  .addToStart(const SizedBox(height: 10.0))
-                                  .addToEnd(const SizedBox(height: 10.0)),
+                                  .divide(SizedBox(height: 10.0))
+                                  .addToStart(SizedBox(height: 10.0))
+                                  .addToEnd(SizedBox(height: 10.0)),
                             ).animateOnPageLoad(
                                 animationsMap['columnOnPageLoadAnimation26']!),
-                          ].divide(const SizedBox(height: 6.0)),
+                          ].divide(SizedBox(height: 6.0)),
                         ).animateOnPageLoad(
                             animationsMap['columnOnPageLoadAnimation25']!),
                       ]
-                          .divide(const SizedBox(height: 10.0))
-                          .addToStart(const SizedBox(height: 10.0))
-                          .addToEnd(const SizedBox(height: 10.0)),
+                          .divide(SizedBox(height: 10.0))
+                          .addToStart(SizedBox(height: 10.0))
+                          .addToEnd(SizedBox(height: 10.0)),
                     ),
                   ],
                 ).animateOnPageLoad(
@@ -6771,12 +6774,6 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             MouseRegion(
               opaque: false,
               cursor: MouseCursor.defer ?? MouseCursor.defer,
-              onEnter: ((event) async {
-                setState(() => _model.mousecontabilidadeHovered = true);
-              }),
-              onExit: ((event) async {
-                setState(() => _model.mousecontabilidadeHovered = false);
-              }),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -6789,7 +6786,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: _model.mousecontabilidadeHovered
+                    color: _model.mousecontabilidadeHovered!
                         ? FlutterFlowTheme.of(context).alternate
                         : FlutterFlowTheme.of(context).secondaryBackground,
                     border: Border.all(
@@ -6799,13 +6796,13 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 13.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 13.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 10.0, 10.0, 10.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -6828,7 +6825,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 },
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     6.0, 0.0, 0.0, 0.0),
                                 child: Text(
                                   'Contabilidade',
@@ -6879,6 +6876,12 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                 ),
               ),
+              onEnter: ((event) async {
+                setState(() => _model.mousecontabilidadeHovered = true);
+              }),
+              onExit: ((event) async {
+                setState(() => _model.mousecontabilidadeHovered = false);
+              }),
             ),
             if (FFAppState().menuOption == 'contabiliescrita')
               Container(
@@ -6891,7 +6894,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -6933,7 +6936,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -6975,7 +6978,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -7017,7 +7020,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -7059,7 +7062,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -7100,21 +7103,15 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                       ),
                     ),
                   ]
-                      .divide(const SizedBox(height: 10.0))
-                      .addToStart(const SizedBox(height: 10.0))
-                      .addToEnd(const SizedBox(height: 10.0)),
+                      .divide(SizedBox(height: 10.0))
+                      .addToStart(SizedBox(height: 10.0))
+                      .addToEnd(SizedBox(height: 10.0)),
                 ).animateOnPageLoad(
                     animationsMap['columnOnPageLoadAnimation27']!),
               ),
             MouseRegion(
               opaque: false,
               cursor: MouseCursor.defer ?? MouseCursor.defer,
-              onEnter: ((event) async {
-                setState(() => _model.mousemensagemHovered = true);
-              }),
-              onExit: ((event) async {
-                setState(() => _model.mousemensagemHovered = false);
-              }),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -7129,7 +7126,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: _model.mousemensagemHovered
+                    color: _model.mousemensagemHovered!
                         ? FlutterFlowTheme.of(context).alternate
                         : FlutterFlowTheme.of(context).secondaryBackground,
                     border: Border.all(
@@ -7142,13 +7139,13 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     children: [
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   20.0, 10.0, 10.0, 10.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -7172,7 +7169,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                     },
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         6.0, 0.0, 0.0, 0.0),
                                     child: Text(
                                       'Mensagem',
@@ -7198,16 +7195,16 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                 ),
               ),
+              onEnter: ((event) async {
+                setState(() => _model.mousemensagemHovered = true);
+              }),
+              onExit: ((event) async {
+                setState(() => _model.mousemensagemHovered = false);
+              }),
             ),
             MouseRegion(
               opaque: false,
               cursor: MouseCursor.defer ?? MouseCursor.defer,
-              onEnter: ((event) async {
-                setState(() => _model.mouserelatorioHovered = true);
-              }),
-              onExit: ((event) async {
-                setState(() => _model.mouserelatorioHovered = false);
-              }),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -7220,7 +7217,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: _model.mouserelatorioHovered
+                    color: _model.mouserelatorioHovered!
                         ? FlutterFlowTheme.of(context).alternate
                         : FlutterFlowTheme.of(context).secondaryBackground,
                     border: Border.all(
@@ -7230,13 +7227,13 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 13.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 13.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 10.0, 10.0, 10.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -7259,7 +7256,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 },
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     6.0, 0.0, 0.0, 0.0),
                                 child: Text(
                                   'Relatórios',
@@ -7310,6 +7307,12 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                 ),
               ),
+              onEnter: ((event) async {
+                setState(() => _model.mouserelatorioHovered = true);
+              }),
+              onExit: ((event) async {
+                setState(() => _model.mouserelatorioHovered = false);
+              }),
             ),
             if (FFAppState().menuOption == 'relatorio')
               Container(
@@ -7324,7 +7327,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               30.0, 0.0, 10.0, 0.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -7349,7 +7352,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                       size: 20.0,
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           6.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         'Estudantes',
@@ -7400,7 +7403,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -7443,7 +7446,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -7486,7 +7489,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -7528,19 +7531,19 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                   ),
                                 ),
                               ),
-                            ].divide(const SizedBox(height: 6.0)),
+                            ].divide(SizedBox(height: 6.0)),
                           ).animateOnPageLoad(
                               animationsMap['columnOnPageLoadAnimation29']!),
                       ]
-                          .divide(const SizedBox(height: 10.0))
-                          .addToStart(const SizedBox(height: 10.0))
-                          .addToEnd(const SizedBox(height: 10.0)),
+                          .divide(SizedBox(height: 10.0))
+                          .addToStart(SizedBox(height: 10.0))
+                          .addToEnd(SizedBox(height: 10.0)),
                     ),
                     Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               30.0, 0.0, 10.0, 0.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -7565,7 +7568,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                       size: 20.0,
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           6.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         'Taxas estudantis',
@@ -7616,7 +7619,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -7659,7 +7662,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -7702,7 +7705,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -7745,7 +7748,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -7787,19 +7790,19 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                   ),
                                 ),
                               ),
-                            ].divide(const SizedBox(height: 6.0)),
+                            ].divide(SizedBox(height: 6.0)),
                           ).animateOnPageLoad(
                               animationsMap['columnOnPageLoadAnimation30']!),
                       ]
-                          .divide(const SizedBox(height: 10.0))
-                          .addToStart(const SizedBox(height: 10.0))
-                          .addToEnd(const SizedBox(height: 10.0)),
+                          .divide(SizedBox(height: 10.0))
+                          .addToStart(SizedBox(height: 10.0))
+                          .addToEnd(SizedBox(height: 10.0)),
                     ),
                     Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               30.0, 0.0, 10.0, 0.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -7824,7 +7827,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                       size: 20.0,
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           6.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         'Relatório Financeiro',
@@ -7875,7 +7878,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -7918,7 +7921,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -7961,7 +7964,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -8004,7 +8007,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -8047,7 +8050,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -8090,7 +8093,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -8132,19 +8135,19 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                   ),
                                 ),
                               ),
-                            ].divide(const SizedBox(height: 6.0)),
+                            ].divide(SizedBox(height: 6.0)),
                           ).animateOnPageLoad(
                               animationsMap['columnOnPageLoadAnimation31']!),
                       ]
-                          .divide(const SizedBox(height: 10.0))
-                          .addToStart(const SizedBox(height: 10.0))
-                          .addToEnd(const SizedBox(height: 10.0)),
+                          .divide(SizedBox(height: 10.0))
+                          .addToStart(SizedBox(height: 10.0))
+                          .addToEnd(SizedBox(height: 10.0)),
                     ),
                     Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               30.0, 0.0, 10.0, 0.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -8169,7 +8172,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                       size: 20.0,
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           6.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         'Relatório de presença',
@@ -8220,7 +8223,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -8263,7 +8266,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -8306,7 +8309,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -8349,7 +8352,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -8392,7 +8395,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -8435,7 +8438,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -8477,19 +8480,19 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                   ),
                                 ),
                               ),
-                            ].divide(const SizedBox(height: 6.0)),
+                            ].divide(SizedBox(height: 6.0)),
                           ).animateOnPageLoad(
                               animationsMap['columnOnPageLoadAnimation32']!),
                       ]
-                          .divide(const SizedBox(height: 10.0))
-                          .addToStart(const SizedBox(height: 10.0))
-                          .addToEnd(const SizedBox(height: 10.0)),
+                          .divide(SizedBox(height: 10.0))
+                          .addToStart(SizedBox(height: 10.0))
+                          .addToEnd(SizedBox(height: 10.0)),
                     ),
                     Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               30.0, 0.0, 10.0, 0.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -8514,7 +8517,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                       size: 20.0,
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           6.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         'Recursos humano',
@@ -8565,7 +8568,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -8608,7 +8611,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -8650,19 +8653,19 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                   ),
                                 ),
                               ),
-                            ].divide(const SizedBox(height: 6.0)),
+                            ].divide(SizedBox(height: 6.0)),
                           ).animateOnPageLoad(
                               animationsMap['columnOnPageLoadAnimation33']!),
                       ]
-                          .divide(const SizedBox(height: 10.0))
-                          .addToStart(const SizedBox(height: 10.0))
-                          .addToEnd(const SizedBox(height: 10.0)),
+                          .divide(SizedBox(height: 10.0))
+                          .addToStart(SizedBox(height: 10.0))
+                          .addToEnd(SizedBox(height: 10.0)),
                     ),
                     Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               30.0, 0.0, 10.0, 0.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -8687,7 +8690,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                       size: 20.0,
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           6.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         'Exame',
@@ -8738,7 +8741,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -8764,7 +8767,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -8790,7 +8793,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -8815,19 +8818,19 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                   ],
                                 ),
                               ),
-                            ].divide(const SizedBox(height: 6.0)),
+                            ].divide(SizedBox(height: 6.0)),
                           ).animateOnPageLoad(
                               animationsMap['columnOnPageLoadAnimation34']!),
                       ]
-                          .divide(const SizedBox(height: 10.0))
-                          .addToStart(const SizedBox(height: 10.0))
-                          .addToEnd(const SizedBox(height: 10.0)),
+                          .divide(SizedBox(height: 10.0))
+                          .addToStart(SizedBox(height: 10.0))
+                          .addToEnd(SizedBox(height: 10.0)),
                     ),
                     Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               30.0, 0.0, 10.0, 0.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -8852,7 +8855,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                       size: 20.0,
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           6.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         'Inventario',
@@ -8904,7 +8907,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -8947,7 +8950,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -8990,7 +8993,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -9033,7 +9036,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 10.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -9075,13 +9078,13 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                   ),
                                 ),
                               ),
-                            ].divide(const SizedBox(height: 6.0)),
+                            ].divide(SizedBox(height: 6.0)),
                           ).animateOnPageLoad(
                               animationsMap['columnOnPageLoadAnimation35']!),
                       ]
-                          .divide(const SizedBox(height: 10.0))
-                          .addToStart(const SizedBox(height: 10.0))
-                          .addToEnd(const SizedBox(height: 10.0)),
+                          .divide(SizedBox(height: 10.0))
+                          .addToStart(SizedBox(height: 10.0))
+                          .addToEnd(SizedBox(height: 10.0)),
                     ),
                   ],
                 ).animateOnPageLoad(
@@ -9090,12 +9093,6 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
             MouseRegion(
               opaque: false,
               cursor: MouseCursor.defer ?? MouseCursor.defer,
-              onEnter: ((event) async {
-                setState(() => _model.mousedefinicaoHovered = true);
-              }),
-              onExit: ((event) async {
-                setState(() => _model.mousedefinicaoHovered = false);
-              }),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -9119,13 +9116,13 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                     children: [
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 13.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 13.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   20.0, 10.0, 10.0, 10.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -9149,7 +9146,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                     },
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         6.0, 0.0, 0.0, 0.0),
                                     child: Text(
                                       'Definições',
@@ -9209,7 +9206,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     30.0, 0.0, 0.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -9235,7 +9232,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     30.0, 0.0, 0.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -9261,7 +9258,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     30.0, 0.0, 0.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -9287,7 +9284,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     30.0, 0.0, 0.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -9313,7 +9310,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     30.0, 0.0, 0.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -9339,7 +9336,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     30.0, 0.0, 0.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -9365,7 +9362,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     30.0, 0.0, 0.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -9391,7 +9388,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     30.0, 0.0, 0.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -9417,7 +9414,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     30.0, 0.0, 0.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -9443,7 +9440,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     30.0, 0.0, 0.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -9469,7 +9466,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     30.0, 0.0, 0.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -9495,7 +9492,7 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     30.0, 0.0, 0.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -9521,9 +9518,9 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                                 ),
                               ),
                             ]
-                                .divide(const SizedBox(height: 10.0))
-                                .addToStart(const SizedBox(height: 10.0))
-                                .addToEnd(const SizedBox(height: 10.0)),
+                                .divide(SizedBox(height: 10.0))
+                                .addToStart(SizedBox(height: 10.0))
+                                .addToEnd(SizedBox(height: 10.0)),
                           ).animateOnPageLoad(
                               animationsMap['columnOnPageLoadAnimation36']!),
                         ),
@@ -9531,6 +9528,12 @@ class _MenuLateralWidgetState extends State<MenuLateralWidget>
                   ),
                 ),
               ),
+              onEnter: ((event) async {
+                setState(() => _model.mousedefinicaoHovered = true);
+              }),
+              onExit: ((event) async {
+                setState(() => _model.mousedefinicaoHovered = false);
+              }),
             ),
           ],
         ),

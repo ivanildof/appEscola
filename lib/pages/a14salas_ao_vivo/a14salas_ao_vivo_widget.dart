@@ -12,6 +12,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'a14salas_ao_vivo_model.dart';
 export 'a14salas_ao_vivo_model.dart';
@@ -20,7 +21,7 @@ class A14salasAoVivoWidget extends StatefulWidget {
   const A14salasAoVivoWidget({
     super.key,
     String? telas,
-  }) : telas = telas ?? 'vazio';
+  }) : this.telas = telas ?? 'vazio';
 
   final String telas;
 
@@ -108,7 +109,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                         wrapWithModel(
                           model: _model.menuSuperiorModel,
                           updateCallback: () => setState(() {}),
-                          child: const MenuSuperiorWidget(),
+                          child: MenuSuperiorWidget(),
                         ),
                       if (responsiveVisibility(
                         context: context,
@@ -118,7 +119,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                         wrapWithModel(
                           model: _model.menuSuperiorCelularModel,
                           updateCallback: () => setState(() {}),
-                          child: const MenuSuperiorCelularWidget(),
+                          child: MenuSuperiorCelularWidget(),
                         ),
                     ],
                   ),
@@ -129,9 +130,9 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                         wrapWithModel(
                           model: _model.menuLateralModel,
                           updateCallback: () => setState(() {}),
-                          child: const MenuLateralWidget(),
+                          child: MenuLateralWidget(),
                         ),
-                        if (widget.telas == 'AddAulaAoVivo')
+                        if (widget!.telas == 'AddAulaAoVivo')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -143,7 +144,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                               ),
                             ),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   5.0, 20.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -152,7 +153,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                     child: Column(
                                       children: [
                                         Align(
-                                          alignment: const Alignment(-1.0, 0),
+                                          alignment: Alignment(-1.0, 0),
                                           child: TabBar(
                                             isScrollable: true,
                                             labelColor:
@@ -169,13 +170,13 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                       fontSize: 18.0,
                                                       letterSpacing: 0.0,
                                                     ),
-                                            unselectedLabelStyle: const TextStyle(),
+                                            unselectedLabelStyle: TextStyle(),
                                             indicatorColor:
                                                 FlutterFlowTheme.of(context)
                                                     .tertiary,
                                             indicatorWeight: 1.0,
-                                            padding: const EdgeInsets.all(4.0),
-                                            tabs: const [
+                                            padding: EdgeInsets.all(4.0),
+                                            tabs: [
                                               Row(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
@@ -257,10 +258,10 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                       snapshot.data!;
 
                                                   return Container(
-                                                    decoration: const BoxDecoration(),
+                                                    decoration: BoxDecoration(),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsets.all(20.0),
+                                                          EdgeInsets.all(20.0),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -287,7 +288,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                 ),
                                                                 child: Padding(
                                                                   padding:
-                                                                      const EdgeInsets
+                                                                      EdgeInsets
                                                                           .all(
                                                                               6.0),
                                                                   child: Row(
@@ -415,7 +416,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                               'IconButton pressed ...');
                                                                         },
                                                                       ),
-                                                                    ].divide(const SizedBox(
+                                                                    ].divide(SizedBox(
                                                                         width:
                                                                             10.0)),
                                                                   ),
@@ -424,9 +425,9 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                               Container(
                                                                 width: 300.0,
                                                                 decoration:
-                                                                    const BoxDecoration(),
+                                                                    BoxDecoration(),
                                                                 child: Padding(
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -436,7 +437,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                       Autocomplete<
                                                                           String>(
                                                                     initialValue:
-                                                                        const TextEditingValue(),
+                                                                        TextEditingValue(),
                                                                     optionsBuilder:
                                                                         (textEditingValue) {
                                                                       if (textEditingValue
@@ -478,7 +479,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                         textHighlightStyle:
-                                                                            const TextStyle(),
+                                                                            TextStyle(),
                                                                         elevation:
                                                                             4.0,
                                                                         optionBackgroundColor:
@@ -604,7 +605,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                           Expanded(
                                                             child: Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           10.0,
@@ -627,7 +628,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                 ),
                                                                 child: Align(
                                                                   alignment:
-                                                                      const AlignmentDirectional(
+                                                                      AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   child:
@@ -842,7 +843,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                                 onSelectChanged) =>
                                                                             DataRow(
                                                                           color:
-                                                                              WidgetStateProperty.all(
+                                                                              MaterialStateProperty.all(
                                                                             produtosListIndex % 2 == 0
                                                                                 ? FlutterFlowTheme.of(context).secondaryBackground
                                                                                 : FlutterFlowTheme.of(context).primaryBackground,
@@ -925,20 +926,20 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                                     width: double.infinity,
                                                                                     height: 30.0,
                                                                                     decoration: BoxDecoration(
-                                                                                      color: const Color(0xFFACF09F),
+                                                                                      color: Color(0xFFACF09F),
                                                                                       borderRadius: BorderRadius.circular(8.0),
                                                                                       border: Border.all(
-                                                                                        color: const Color(0xFF198105),
+                                                                                        color: Color(0xFF198105),
                                                                                       ),
                                                                                     ),
                                                                                     child: Align(
-                                                                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                      alignment: AlignmentDirectional(0.0, 0.0),
                                                                                       child: Text(
                                                                                         'Ao vivo',
                                                                                         textAlign: TextAlign.center,
                                                                                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                               fontFamily: 'Manrope',
-                                                                                              color: const Color(0xFF198105),
+                                                                                              color: Color(0xFF198105),
                                                                                               fontSize: 16.0,
                                                                                               letterSpacing: 0.0,
                                                                                             ),
@@ -949,14 +950,14 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                                   width: double.infinity,
                                                                                   height: 30.0,
                                                                                   decoration: BoxDecoration(
-                                                                                    color: const Color(0xFF9FCFFB),
+                                                                                    color: Color(0xFF9FCFFB),
                                                                                     borderRadius: BorderRadius.circular(8.0),
                                                                                     border: Border.all(
                                                                                       color: FlutterFlowTheme.of(context).secondary,
                                                                                     ),
                                                                                   ),
                                                                                   child: Align(
-                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
                                                                                     child: Text(
                                                                                       'Esperando',
                                                                                       textAlign: TextAlign.center,
@@ -983,7 +984,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                                     shape: BoxShape.circle,
                                                                                   ),
                                                                                   child: Align(
-                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
                                                                                     child: Icon(
                                                                                       Icons.remove_red_eye,
                                                                                       color: FlutterFlowTheme.of(context).primaryText,
@@ -994,12 +995,12 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                                 Container(
                                                                                   width: 30.0,
                                                                                   height: 30.0,
-                                                                                  decoration: const BoxDecoration(
+                                                                                  decoration: BoxDecoration(
                                                                                     color: Color(0xFFE30909),
                                                                                     shape: BoxShape.circle,
                                                                                   ),
                                                                                   child: Align(
-                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
                                                                                     child: Icon(
                                                                                       Icons.delete_rounded,
                                                                                       color: FlutterFlowTheme.of(context).info,
@@ -1007,7 +1008,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                                     ),
                                                                                   ),
                                                                                 ),
-                                                                              ].divide(const SizedBox(width: 8.0)),
+                                                                              ].divide(SizedBox(width: 8.0)),
                                                                             ),
                                                                           ].map((c) => DataCell(c)).toList(),
                                                                         ),
@@ -1075,10 +1076,10 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                 autovalidateMode:
                                                     AutovalidateMode.disabled,
                                                 child: Container(
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 20.0,
                                                                 0.0, 50.0),
                                                     child:
@@ -1092,7 +1093,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -1126,7 +1127,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -1151,14 +1152,14 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .filialValueController1 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: const [
+                                                                      options: [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -1200,7 +1201,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -1216,7 +1217,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -1228,7 +1229,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -1262,7 +1263,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -1287,10 +1288,10 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           8.0,
@@ -1378,7 +1379,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -1390,7 +1391,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -1424,7 +1425,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -1449,14 +1450,14 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .filialValueController2 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: const [
+                                                                      options: [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -1498,7 +1499,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -1514,7 +1515,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -1526,7 +1527,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -1560,7 +1561,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -1585,7 +1586,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
@@ -1595,7 +1596,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                         _model.filialValue3 ??=
                                                                             'Google Meet',
                                                                       ),
-                                                                      options: const [
+                                                                      options: [
                                                                         'Google Meet'
                                                                       ],
                                                                       onChanged:
@@ -1637,7 +1638,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -1653,13 +1654,13 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -1693,7 +1694,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -1718,10 +1719,10 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           8.0,
@@ -1809,7 +1810,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -1821,7 +1822,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -1855,7 +1856,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -1880,7 +1881,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child: Row(
                                                                       mainAxisSize:
                                                                           MainAxisSize
@@ -1896,7 +1897,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                             color:
                                                                                 FlutterFlowTheme.of(context).primaryBackground,
                                                                             borderRadius:
-                                                                                const BorderRadius.only(
+                                                                                BorderRadius.only(
                                                                               bottomLeft: Radius.circular(8.0),
                                                                               bottomRight: Radius.circular(0.0),
                                                                               topLeft: Radius.circular(8.0),
@@ -1920,7 +1921,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                         Expanded(
                                                                           child:
                                                                               Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 8.0,
@@ -1947,7 +1948,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                                     color: FlutterFlowTheme.of(context).alternate,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: const BorderRadius.only(
+                                                                                  borderRadius: BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -1959,7 +1960,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                                     color: FlutterFlowTheme.of(context).primary,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: const BorderRadius.only(
+                                                                                  borderRadius: BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -1971,7 +1972,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                                     color: FlutterFlowTheme.of(context).error,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: const BorderRadius.only(
+                                                                                  borderRadius: BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -1983,7 +1984,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                                     color: FlutterFlowTheme.of(context).error,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: const BorderRadius.only(
+                                                                                  borderRadius: BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -2005,13 +2006,13 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -2048,7 +2049,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                           ),
                                                                     ),
                                                                     Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           6.0,
                                                                           0.0,
                                                                           0.0,
@@ -2071,7 +2072,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                     width:
                                                                         350.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child: Row(
                                                                       mainAxisSize:
                                                                           MainAxisSize
@@ -2087,7 +2088,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                             color:
                                                                                 FlutterFlowTheme.of(context).primaryBackground,
                                                                             borderRadius:
-                                                                                const BorderRadius.only(
+                                                                                BorderRadius.only(
                                                                               bottomLeft: Radius.circular(8.0),
                                                                               bottomRight: Radius.circular(0.0),
                                                                               topLeft: Radius.circular(8.0),
@@ -2111,7 +2112,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                         Expanded(
                                                                           child:
                                                                               Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 8.0,
@@ -2138,7 +2139,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                                     color: FlutterFlowTheme.of(context).alternate,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: const BorderRadius.only(
+                                                                                  borderRadius: BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -2150,7 +2151,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                                     color: FlutterFlowTheme.of(context).primary,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: const BorderRadius.only(
+                                                                                  borderRadius: BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -2162,7 +2163,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                                     color: FlutterFlowTheme.of(context).error,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: const BorderRadius.only(
+                                                                                  borderRadius: BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -2174,7 +2175,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                                     color: FlutterFlowTheme.of(context).error,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: const BorderRadius.only(
+                                                                                  borderRadius: BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -2202,7 +2203,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                     width:
                                                                         350.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child: Row(
                                                                       mainAxisSize:
                                                                           MainAxisSize
@@ -2218,7 +2219,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                             color:
                                                                                 FlutterFlowTheme.of(context).primaryBackground,
                                                                             borderRadius:
-                                                                                const BorderRadius.only(
+                                                                                BorderRadius.only(
                                                                               bottomLeft: Radius.circular(8.0),
                                                                               bottomRight: Radius.circular(0.0),
                                                                               topLeft: Radius.circular(8.0),
@@ -2242,7 +2243,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                         Expanded(
                                                                           child:
                                                                               Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 8.0,
@@ -2269,7 +2270,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                                     color: FlutterFlowTheme.of(context).alternate,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: const BorderRadius.only(
+                                                                                  borderRadius: BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -2281,7 +2282,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                                     color: FlutterFlowTheme.of(context).primary,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: const BorderRadius.only(
+                                                                                  borderRadius: BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -2293,7 +2294,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                                     color: FlutterFlowTheme.of(context).error,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: const BorderRadius.only(
+                                                                                  borderRadius: BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -2305,7 +2306,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                                     color: FlutterFlowTheme.of(context).error,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: const BorderRadius.only(
+                                                                                  borderRadius: BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -2327,7 +2328,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -2339,7 +2340,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -2382,10 +2383,10 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                     width:
                                                                         600.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           8.0,
@@ -2475,7 +2476,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -2487,7 +2488,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -2508,7 +2509,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                     width:
                                                                         600.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child: Row(
                                                                       mainAxisSize:
                                                                           MainAxisSize
@@ -2561,18 +2562,18 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                                 letterSpacing: 0.0,
                                                                               ),
                                                                         ),
-                                                                      ].divide(const SizedBox(
+                                                                      ].divide(SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
@@ -2587,7 +2588,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                       .end,
                                                               children: [
                                                                 Padding(
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           10.0,
@@ -2614,12 +2615,12 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                           builder:
                                                                               (alertDialogContext) {
                                                                             return AlertDialog(
-                                                                              title: const Text('Campo Obrigatório'),
-                                                                              content: const Text('É necessário adicionar uma filial!'),
+                                                                              title: Text('Campo Obrigatório'),
+                                                                              content: Text('É necessário adicionar uma filial!'),
                                                                               actions: [
                                                                                 TextButton(
                                                                                   onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                  child: const Text('Ok'),
+                                                                                  child: Text('Ok'),
                                                                                 ),
                                                                               ],
                                                                             );
@@ -2630,7 +2631,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                     },
                                                                     text:
                                                                         'Adicionar',
-                                                                    icon: const Icon(
+                                                                    icon: Icon(
                                                                       Icons.add,
                                                                       size:
                                                                           20.0,
@@ -2641,12 +2642,12 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                           250.0,
                                                                       height:
                                                                           40.0,
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           24.0,
                                                                           0.0,
                                                                           24.0,
                                                                           0.0),
-                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
@@ -2672,7 +2673,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                       elevation:
                                                                           3.0,
                                                                       borderSide:
-                                                                          const BorderSide(
+                                                                          BorderSide(
                                                                         color: Colors
                                                                             .transparent,
                                                                         width:
@@ -2687,7 +2688,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                               ],
                                                             ),
                                                           ),
-                                                        ].divide(const SizedBox(
+                                                        ].divide(SizedBox(
                                                             height: 10.0)),
                                                       ),
                                                     ),
@@ -2704,7 +2705,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                               ),
                             ),
                           ),
-                        if (widget.telas == 'corpoProfeClasse')
+                        if (widget!.telas == 'corpoProfeClasse')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -2713,7 +2714,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: const EdgeInsets.all(20.0),
+                              padding: EdgeInsets.all(20.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
@@ -2741,7 +2742,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         10.0, 10.0, 0.0, 0.0),
                                                 child: Icon(
@@ -2753,10 +2754,10 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                 ),
                                               ),
                                               Align(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     -1.0, 0.0),
                                                 child: Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 10.0, 0.0, 0.0),
                                                   child: Text(
@@ -2783,7 +2784,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                           ),
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -2794,7 +2795,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: const BoxDecoration(),
+                                                    decoration: BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -2804,7 +2805,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -2837,13 +2838,13 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(const SizedBox(
+                                                            ].divide(SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -2857,7 +2858,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                 FormFieldController<
                                                                         String>(
                                                                     null),
-                                                            options: const [
+                                                            options: [
                                                               'option 1'
                                                             ],
                                                             onChanged: (val) =>
@@ -2897,7 +2898,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                             borderWidth: 2.0,
                                                             borderRadius: 8.0,
                                                             margin:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         4.0,
@@ -2919,7 +2920,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: const BoxDecoration(),
+                                                    decoration: BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -2929,7 +2930,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -2962,7 +2963,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(const SizedBox(
+                                                            ].divide(SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -2972,7 +2973,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                   .secaoAcademicoValueController ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: const ['option 1'],
+                                                          options: ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.secaoAcademicoValue =
@@ -3010,7 +3011,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -3029,7 +3030,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: const BoxDecoration(),
+                                                    decoration: BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -3039,7 +3040,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -3064,7 +3065,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                           0.0,
                                                                     ),
                                                               ),
-                                                            ].divide(const SizedBox(
+                                                            ].divide(SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -3074,7 +3075,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                   .categpriaAcademicoValueController1 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: const ['option 1'],
+                                                          options: ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.categpriaAcademicoValue1 =
@@ -3112,7 +3113,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -3131,7 +3132,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: const BoxDecoration(),
+                                                    decoration: BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -3141,7 +3142,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -3166,7 +3167,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                           0.0,
                                                                     ),
                                                               ),
-                                                            ].divide(const SizedBox(
+                                                            ].divide(SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -3176,7 +3177,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                   .categpriaAcademicoValueController2 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: const ['option 1'],
+                                                          options: ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.categpriaAcademicoValue2 =
@@ -3214,7 +3215,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -3229,12 +3230,12 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(const SizedBox(width: 20.0)),
+                                              ].divide(SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -3245,7 +3246,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: const BoxDecoration(),
+                                                    decoration: BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -3255,7 +3256,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -3288,7 +3289,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(const SizedBox(
+                                                            ].divide(SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -3298,7 +3299,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -3307,7 +3308,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                               child: Container(
                                                                 width: 340.0,
                                                                 decoration:
-                                                                    const BoxDecoration(),
+                                                                    BoxDecoration(),
                                                                 child: Row(
                                                                   mainAxisSize:
                                                                       MainAxisSize
@@ -3323,7 +3324,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                         color: FlutterFlowTheme.of(context)
                                                                             .primaryBackground,
                                                                         borderRadius:
-                                                                            const BorderRadius.only(
+                                                                            BorderRadius.only(
                                                                           bottomLeft:
                                                                               Radius.circular(8.0),
                                                                           bottomRight:
@@ -3354,7 +3355,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                     Expanded(
                                                                       child:
                                                                           Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             8.0,
@@ -3389,7 +3390,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                                 color: FlutterFlowTheme.of(context).alternate,
                                                                                 width: 2.0,
                                                                               ),
-                                                                              borderRadius: const BorderRadius.only(
+                                                                              borderRadius: BorderRadius.only(
                                                                                 bottomLeft: Radius.circular(0.0),
                                                                                 bottomRight: Radius.circular(8.0),
                                                                                 topLeft: Radius.circular(0.0),
@@ -3402,7 +3403,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                                 color: FlutterFlowTheme.of(context).primary,
                                                                                 width: 2.0,
                                                                               ),
-                                                                              borderRadius: const BorderRadius.only(
+                                                                              borderRadius: BorderRadius.only(
                                                                                 bottomLeft: Radius.circular(0.0),
                                                                                 bottomRight: Radius.circular(8.0),
                                                                                 topLeft: Radius.circular(0.0),
@@ -3415,7 +3416,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                                 color: FlutterFlowTheme.of(context).error,
                                                                                 width: 2.0,
                                                                               ),
-                                                                              borderRadius: const BorderRadius.only(
+                                                                              borderRadius: BorderRadius.only(
                                                                                 bottomLeft: Radius.circular(0.0),
                                                                                 bottomRight: Radius.circular(8.0),
                                                                                 topLeft: Radius.circular(0.0),
@@ -3428,7 +3429,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                                 color: FlutterFlowTheme.of(context).error,
                                                                                 width: 2.0,
                                                                               ),
-                                                                              borderRadius: const BorderRadius.only(
+                                                                              borderRadius: BorderRadius.only(
                                                                                 bottomLeft: Radius.circular(0.0),
                                                                                 bottomRight: Radius.circular(8.0),
                                                                                 topLeft: Radius.circular(0.0),
@@ -3455,19 +3456,19 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                 ),
                                                               ),
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 20.0)),
                                                         ),
                                                       ],
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(const SizedBox(width: 20.0)),
+                                              ].divide(SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 15.0, 15.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -3480,7 +3481,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                         'ButtonFiltrar pressed ...');
                                                   },
                                                   text: 'Filtro',
-                                                  icon: const Icon(
+                                                  icon: Icon(
                                                     Icons.filter_alt,
                                                     color: Colors.white,
                                                     size: 15.0,
@@ -3489,11 +3490,11 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                     width: 150.0,
                                                     height: 40.0,
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(24.0, 0.0,
                                                                 24.0, 0.0),
                                                     iconPadding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -3508,7 +3509,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                           letterSpacing: 0.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: const BorderSide(
+                                                    borderSide: BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -3526,7 +3527,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                   ),
                                   Expanded(
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -3579,7 +3580,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -3596,11 +3597,11 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          const AlignmentDirectional(
+                                                          AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -3634,7 +3635,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         10.0,
@@ -3643,10 +3644,10 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                             child: Container(
                                                               width: 300.0,
                                                               decoration:
-                                                                  const BoxDecoration(),
+                                                                  BoxDecoration(),
                                                               child: Padding(
                                                                 padding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -3656,7 +3657,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                     Autocomplete<
                                                                         String>(
                                                                   initialValue:
-                                                                      const TextEditingValue(),
+                                                                      TextEditingValue(),
                                                                   optionsBuilder:
                                                                       (textEditingValue) {
                                                                     if (textEditingValue
@@ -3705,7 +3706,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                                 0.0,
                                                                           ),
                                                                       textHighlightStyle:
-                                                                          const TextStyle(),
+                                                                          TextStyle(),
                                                                       elevation:
                                                                           4.0,
                                                                       optionBackgroundColor:
@@ -3855,7 +3856,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                 Expanded(
                                                   child: Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: Builder(
                                                       builder: (context) {
@@ -4145,7 +4146,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                       onSelectChanged) =>
                                                                   DataRow(
                                                             color:
-                                                                WidgetStateProperty
+                                                                MaterialStateProperty
                                                                     .all(
                                                               produtosListIndex %
                                                                           2 ==
@@ -4311,19 +4312,19 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                           30.0,
                                                                       decoration:
                                                                           BoxDecoration(
-                                                                        color: const Color(
+                                                                        color: Color(
                                                                             0xFFACF09F),
                                                                         borderRadius:
                                                                             BorderRadius.circular(8.0),
                                                                         border:
                                                                             Border.all(
                                                                           color:
-                                                                              const Color(0xFF198105),
+                                                                              Color(0xFF198105),
                                                                         ),
                                                                       ),
                                                                       child:
                                                                           Align(
-                                                                        alignment: const AlignmentDirectional(
+                                                                        alignment: AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                         child:
@@ -4335,7 +4336,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                               .bodyMedium
                                                                               .override(
                                                                                 fontFamily: 'Manrope',
-                                                                                color: const Color(0xFF198105),
+                                                                                color: Color(0xFF198105),
                                                                                 fontSize: 16.0,
                                                                                 letterSpacing: 0.0,
                                                                               ),
@@ -4349,7 +4350,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                         30.0,
                                                                     decoration:
                                                                         BoxDecoration(
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFF9FCFFB),
                                                                       borderRadius:
                                                                           BorderRadius.circular(
@@ -4364,7 +4365,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                     child:
                                                                         Align(
                                                                       alignment:
-                                                                          const AlignmentDirectional(
+                                                                          AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                       child:
@@ -4408,7 +4409,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                     child:
                                                                         Align(
                                                                       alignment:
-                                                                          const AlignmentDirectional(
+                                                                          AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                       child:
@@ -4422,7 +4423,7 @@ class _A14salasAoVivoWidgetState extends State<A14salasAoVivoWidget>
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                ].divide(const SizedBox(
+                                                                ].divide(SizedBox(
                                                                     width:
                                                                         10.0)),
                                                               ),

@@ -1,12 +1,25 @@
 import '/backend/backend.dart';
+import '/components/dinamic_textfild/dinamic_textfild_widget.dart';
 import '/components/menu_lateral/menu_lateral_widget.dart';
 import '/components/menu_superior/menu_superior_widget.dart';
 import '/components/menu_superior_celular/menu_superior_celular_widget.dart';
+import '/components/selcao/selcao_widget.dart';
+import '/components/selecao_check/selecao_check_widget.dart';
+import '/flutter_flow/flutter_flow_autocomplete_options_list.dart';
 import '/flutter_flow/flutter_flow_data_table.dart';
+import '/flutter_flow/flutter_flow_drop_down.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'a17mestredo_exame_widget.dart' show A17mestredoExameWidget;
+import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+import 'package:text_search/text_search.dart';
 
 class A17mestredoExameModel extends FlutterFlowModel<A17mestredoExameWidget> {
   ///  State fields for stateful widgets in this page.

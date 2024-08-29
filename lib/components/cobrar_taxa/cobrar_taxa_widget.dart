@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'cobrar_taxa_model.dart';
 export 'cobrar_taxa_model.dart';
@@ -65,7 +66,7 @@ class _CobrarTaxaWidgetState extends State<CobrarTaxaWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 0.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 0.0, 0.0),
                   child: Icon(
                     Icons.attach_money_rounded,
                     color: FlutterFlowTheme.of(context).tertiary,
@@ -73,10 +74,10 @@ class _CobrarTaxaWidgetState extends State<CobrarTaxaWidget> {
                   ),
                 ),
                 Align(
-                  alignment: const AlignmentDirectional(-1.0, 0.0),
+                  alignment: AlignmentDirectional(-1.0, 0.0),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 0.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 0.0, 0.0),
                     child: Text(
                       'Cobrar Taxa',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -95,7 +96,7 @@ class _CobrarTaxaWidgetState extends State<CobrarTaxaWidget> {
               color: FlutterFlowTheme.of(context).tertiary,
             ),
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 0.0),
+              padding: EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -109,7 +110,7 @@ class _CobrarTaxaWidgetState extends State<CobrarTaxaWidget> {
                       ),
                       child: Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
                         child: Builder(
                           builder: (context) {
                             final list = FFAppState().eventos.toList();
@@ -123,7 +124,7 @@ class _CobrarTaxaWidgetState extends State<CobrarTaxaWidget> {
                                     softWrap: true,
                                     child: Align(
                                       alignment:
-                                          const AlignmentDirectional(-1.0, 0.0),
+                                          AlignmentDirectional(-1.0, 0.0),
                                       child: Text(
                                         'Tipo de taxa',
                                         style: FlutterFlowTheme.of(context)
@@ -145,7 +146,7 @@ class _CobrarTaxaWidgetState extends State<CobrarTaxaWidget> {
                                     softWrap: true,
                                     child: Align(
                                       alignment:
-                                          const AlignmentDirectional(-1.0, 0.0),
+                                          AlignmentDirectional(-1.0, 0.0),
                                       child: Text(
                                         'Encontro',
                                         style: FlutterFlowTheme.of(context)
@@ -246,7 +247,7 @@ class _CobrarTaxaWidgetState extends State<CobrarTaxaWidget> {
                               dataRowBuilder: (listItem, listIndex, selected,
                                       onSelectChanged) =>
                                   DataRow(
-                                color: WidgetStateProperty.all(
+                                color: MaterialStateProperty.all(
                                   listIndex % 2 == 0
                                       ? FlutterFlowTheme.of(context)
                                           .secondaryBackground
@@ -313,11 +314,11 @@ class _CobrarTaxaWidgetState extends State<CobrarTaxaWidget> {
                       ),
                     ),
                   ),
-                ].divide(const SizedBox(width: 20.0)),
+                ].divide(SizedBox(width: 20.0)),
               ),
             ),
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 15.0, 10.0),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 15.0, 10.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -327,7 +328,7 @@ class _CobrarTaxaWidgetState extends State<CobrarTaxaWidget> {
                       print('ButtonFiltrar pressed ...');
                     },
                     text: 'Pagar Taxa',
-                    icon: const Icon(
+                    icon: Icon(
                       Icons.attach_money_outlined,
                       color: Colors.white,
                       size: 25.0,
@@ -336,9 +337,9 @@ class _CobrarTaxaWidgetState extends State<CobrarTaxaWidget> {
                       width: 200.0,
                       height: 40.0,
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                       iconPadding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).primary,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
@@ -348,7 +349,7 @@ class _CobrarTaxaWidgetState extends State<CobrarTaxaWidget> {
                                 letterSpacing: 0.0,
                               ),
                       elevation: 3.0,
-                      borderSide: const BorderSide(
+                      borderSide: BorderSide(
                         color: Colors.transparent,
                         width: 1.0,
                       ),

@@ -2,6 +2,8 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'folder_model.dart';
 export 'folder_model.dart';
 
@@ -39,25 +41,25 @@ class _FolderWidgetState extends State<FolderWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+      padding: EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
       child: Container(
         width: double.infinity,
         height: 50.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).primaryBackground,
           border: Border.all(
-            color: const Color(0xFFC4CEDB),
+            color: Color(0xFFC4CEDB),
           ),
         ),
         child: Align(
-          alignment: const AlignmentDirectional(0.0, 0.0),
+          alignment: AlignmentDirectional(0.0, 0.0),
           child: Row(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Align(
-                alignment: const AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.0, 0.0),
                 child: Text(
                   'Copyright © Gestão escolar | Todos os direitos reservados. Desenvolvido por',
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -69,7 +71,7 @@ class _FolderWidgetState extends State<FolderWidget> {
                 ),
               ),
               Align(
-                alignment: const AlignmentDirectional(-1.0, 0.0),
+                alignment: AlignmentDirectional(-1.0, 0.0),
                 child: InkWell(
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,

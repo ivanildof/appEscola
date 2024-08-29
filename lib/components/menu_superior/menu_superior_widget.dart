@@ -3,6 +3,8 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'menu_superior_model.dart';
 export 'menu_superior_model.dart';
 
@@ -65,7 +67,7 @@ class _MenuSuperiorWidgetState extends State<MenuSuperiorWidget> {
                 ),
               ),
               child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -144,7 +146,7 @@ class _MenuSuperiorWidgetState extends State<MenuSuperiorWidget> {
                                 .secondaryBackground,
                           ),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 8.0, 0.0, 8.0, 0.0),
                             child: TextFormField(
                               controller: _model.textController,
@@ -198,7 +200,7 @@ class _MenuSuperiorWidgetState extends State<MenuSuperiorWidget> {
                                 filled: true,
                                 fillColor:
                                     FlutterFlowTheme.of(context).alternate,
-                                prefixIcon: const Icon(
+                                prefixIcon: Icon(
                                   Icons.search,
                                 ),
                               ),
@@ -213,7 +215,7 @@ class _MenuSuperiorWidgetState extends State<MenuSuperiorWidget> {
                             ),
                           ),
                         ),
-                      ].divide(const SizedBox(width: 20.0)),
+                      ].divide(SizedBox(width: 20.0)),
                     ),
                     Row(
                       mainAxisSize: MainAxisSize.max,
@@ -298,7 +300,7 @@ class _MenuSuperiorWidgetState extends State<MenuSuperiorWidget> {
                             ),
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.all(2.0),
+                            padding: EdgeInsets.all(2.0),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(100.0),
                               child: Image.network(
@@ -308,7 +310,7 @@ class _MenuSuperiorWidgetState extends State<MenuSuperiorWidget> {
                             ),
                           ),
                         ),
-                      ].divide(const SizedBox(width: 20.0)),
+                      ].divide(SizedBox(width: 20.0)),
                     ),
                   ],
                 ),
@@ -320,13 +322,13 @@ class _MenuSuperiorWidgetState extends State<MenuSuperiorWidget> {
                 color: FlutterFlowTheme.of(context).secondaryBackground,
               ),
               child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
                       child: Text(
                         'Menu',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -367,7 +369,7 @@ class _MenuSuperiorWidgetState extends State<MenuSuperiorWidget> {
                           context.goNamed(
                             'A01painelFiliais',
                             extra: <String, dynamic>{
-                              kTransitionInfoKey: const TransitionInfo(
+                              kTransitionInfoKey: TransitionInfo(
                                 hasTransition: true,
                                 transitionType: PageTransitionType.fade,
                               ),
@@ -378,7 +380,7 @@ class _MenuSuperiorWidgetState extends State<MenuSuperiorWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                       child: Text(
                         'Seção Nome',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(

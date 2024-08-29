@@ -1,12 +1,20 @@
 import '/backend/backend.dart';
+import '/components/comparacimento_radiobutton/comparacimento_radiobutton_widget.dart';
+import '/components/dinamic_textfild/dinamic_textfild_widget.dart';
 import '/components/menu_lateral/menu_lateral_widget.dart';
 import '/components/menu_superior/menu_superior_widget.dart';
 import '/components/menu_superior_celular/menu_superior_celular_widget.dart';
 import '/flutter_flow/flutter_flow_data_table.dart';
+import '/flutter_flow/flutter_flow_drop_down.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'a19comparecimento_widget.dart' show A19comparecimentoWidget;
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class A19comparecimentoModel extends FlutterFlowModel<A19comparecimentoWidget> {
   ///  State fields for stateful widgets in this page.

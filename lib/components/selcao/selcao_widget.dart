@@ -1,6 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'selcao_model.dart';
 export 'selcao_model.dart';
 
@@ -41,7 +43,7 @@ class _SelcaoWidgetState extends State<SelcaoWidget> {
     return Switch.adaptive(
       value: _model.switchValue!,
       onChanged: (newValue) async {
-        setState(() => _model.switchValue = newValue);
+        setState(() => _model.switchValue = newValue!);
       },
       activeColor: FlutterFlowTheme.of(context).primary,
       activeTrackColor: FlutterFlowTheme.of(context).accent1,

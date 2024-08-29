@@ -2,12 +2,22 @@ import '/backend/backend.dart';
 import '/components/menu_lateral/menu_lateral_widget.dart';
 import '/components/menu_superior/menu_superior_widget.dart';
 import '/components/menu_superior_celular/menu_superior_celular_widget.dart';
+import '/flutter_flow/flutter_flow_autocomplete_options_list.dart';
 import '/flutter_flow/flutter_flow_data_table.dart';
+import '/flutter_flow/flutter_flow_drop_down.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'a10geren_cartoes_widget.dart' show A10gerenCartoesWidget;
+import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
+import 'package:provider/provider.dart';
+import 'package:text_search/text_search.dart';
 
 class A10gerenCartoesModel extends FlutterFlowModel<A10gerenCartoesWidget> {
   ///  State fields for stateful widgets in this page.

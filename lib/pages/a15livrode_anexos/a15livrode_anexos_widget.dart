@@ -3,7 +3,10 @@ import '/components/menu_superior/menu_superior_widget.dart';
 import '/components/menu_superior_celular/menu_superior_celular_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'a15livrode_anexos_model.dart';
 export 'a15livrode_anexos_model.dart';
 
@@ -66,7 +69,7 @@ class _A15livrodeAnexosWidgetState extends State<A15livrodeAnexosWidget> {
                         wrapWithModel(
                           model: _model.menuSuperiorModel,
                           updateCallback: () => setState(() {}),
-                          child: const MenuSuperiorWidget(),
+                          child: MenuSuperiorWidget(),
                         ),
                       if (responsiveVisibility(
                         context: context,
@@ -76,7 +79,7 @@ class _A15livrodeAnexosWidgetState extends State<A15livrodeAnexosWidget> {
                         wrapWithModel(
                           model: _model.menuSuperiorCelularModel,
                           updateCallback: () => setState(() {}),
-                          child: const MenuSuperiorCelularWidget(),
+                          child: MenuSuperiorCelularWidget(),
                         ),
                     ],
                   ),
@@ -87,7 +90,7 @@ class _A15livrodeAnexosWidgetState extends State<A15livrodeAnexosWidget> {
                         wrapWithModel(
                           model: _model.menuLateralModel,
                           updateCallback: () => setState(() {}),
-                          child: const MenuLateralWidget(),
+                          child: MenuLateralWidget(),
                         ),
                         Container(
                           width: MediaQuery.sizeOf(context).width * 0.75,
@@ -100,7 +103,7 @@ class _A15livrodeAnexosWidgetState extends State<A15livrodeAnexosWidget> {
                             ),
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.all(20.0),
+                            padding: EdgeInsets.all(20.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               children: [

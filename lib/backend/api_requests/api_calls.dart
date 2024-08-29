@@ -1,4 +1,6 @@
 import 'dart:convert';
+import 'dart:typed_data';
+import '../schema/structs/index.dart';
 
 import 'package:flutter/foundation.dart';
 
@@ -15,7 +17,7 @@ class BuscarCEPCall {
   }) async {
     return ApiManager.instance.makeApiCall(
       callName: 'buscarCEP',
-      apiUrl: 'https://viacep.com.br/ws/$cep/json/',
+      apiUrl: 'https://viacep.com.br/ws/${cep}/json/',
       callType: ApiCallType.GET,
       headers: {},
       params: {},

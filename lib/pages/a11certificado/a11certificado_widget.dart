@@ -13,6 +13,9 @@ import '/flutter_flow/form_field_controller.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
+import 'package:provider/provider.dart';
 import 'package:text_search/text_search.dart';
 import 'a11certificado_model.dart';
 export 'a11certificado_model.dart';
@@ -21,7 +24,7 @@ class A11certificadoWidget extends StatefulWidget {
   const A11certificadoWidget({
     super.key,
     String? telas,
-  }) : telas = telas ?? 'vazio';
+  }) : this.telas = telas ?? 'vazio';
 
   final String telas;
 
@@ -126,7 +129,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                         wrapWithModel(
                           model: _model.menuSuperiorModel,
                           updateCallback: () => setState(() {}),
-                          child: const MenuSuperiorWidget(),
+                          child: MenuSuperiorWidget(),
                         ),
                       if (responsiveVisibility(
                         context: context,
@@ -136,7 +139,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                         wrapWithModel(
                           model: _model.menuSuperiorCelularModel,
                           updateCallback: () => setState(() {}),
-                          child: const MenuSuperiorCelularWidget(),
+                          child: MenuSuperiorCelularWidget(),
                         ),
                     ],
                   ),
@@ -152,9 +155,9 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                           wrapWithModel(
                             model: _model.menuLateralModel,
                             updateCallback: () => setState(() {}),
-                            child: const MenuLateralWidget(),
+                            child: MenuLateralWidget(),
                           ),
-                        if (widget.telas == 'addCertificado')
+                        if (widget!.telas == 'addCertificado')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.75,
                             height: double.infinity,
@@ -166,7 +169,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                               ),
                             ),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 20.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -175,7 +178,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                     child: Column(
                                       children: [
                                         Align(
-                                          alignment: const Alignment(-1.0, 0),
+                                          alignment: Alignment(-1.0, 0),
                                           child: TabBar(
                                             isScrollable: true,
                                             labelColor:
@@ -192,13 +195,13 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                       fontSize: 18.0,
                                                       letterSpacing: 0.0,
                                                     ),
-                                            unselectedLabelStyle: const TextStyle(),
+                                            unselectedLabelStyle: TextStyle(),
                                             indicatorColor:
                                                 FlutterFlowTheme.of(context)
                                                     .tertiary,
                                             indicatorWeight: 1.0,
-                                            padding: const EdgeInsets.all(4.0),
-                                            tabs: const [
+                                            padding: EdgeInsets.all(4.0),
+                                            tabs: [
                                               Row(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
@@ -279,10 +282,10 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                       snapshot.data!;
 
                                                   return Container(
-                                                    decoration: const BoxDecoration(),
+                                                    decoration: BoxDecoration(),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsets.all(20.0),
+                                                          EdgeInsets.all(20.0),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -309,7 +312,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                 ),
                                                                 child: Padding(
                                                                   padding:
-                                                                      const EdgeInsets
+                                                                      EdgeInsets
                                                                           .all(
                                                                               6.0),
                                                                   child: Row(
@@ -437,7 +440,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                               'IconButton pressed ...');
                                                                         },
                                                                       ),
-                                                                    ].divide(const SizedBox(
+                                                                    ].divide(SizedBox(
                                                                         width:
                                                                             10.0)),
                                                                   ),
@@ -446,9 +449,9 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                               Container(
                                                                 width: 300.0,
                                                                 decoration:
-                                                                    const BoxDecoration(),
+                                                                    BoxDecoration(),
                                                                 child: Padding(
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -458,7 +461,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                       Autocomplete<
                                                                           String>(
                                                                     initialValue:
-                                                                        const TextEditingValue(),
+                                                                        TextEditingValue(),
                                                                     optionsBuilder:
                                                                         (textEditingValue) {
                                                                       if (textEditingValue
@@ -500,7 +503,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                         textHighlightStyle:
-                                                                            const TextStyle(),
+                                                                            TextStyle(),
                                                                         elevation:
                                                                             4.0,
                                                                         optionBackgroundColor:
@@ -546,29 +549,31 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                             (_) =>
                                                                                 EasyDebounce.debounce(
                                                                           '_model.textController1',
-                                                                          const Duration(
+                                                                          Duration(
                                                                               milliseconds: 2000),
                                                                           () async {
-                                                                            if (_model.textController1.text != '') {
+                                                                            if (_model.textController1.text != null &&
+                                                                                _model.textController1.text != '') {
                                                                               safeSetState(() {
                                                                                 _model.simpleSearchResults = TextSearch(
                                                                                   containerInventarioProdutosRecordList
                                                                                       .map(
                                                                                         (record) => TextSearchItem.fromTerms(record, [
-                                                                                          record.produtoCategoria,
-                                                                                          record.nomeProduto,
-                                                                                          record.produtoCodigo,
-                                                                                          record.filial
+                                                                                          record.produtoCategoria!,
+                                                                                          record.nomeProduto!,
+                                                                                          record.produtoCodigo!,
+                                                                                          record.filial!
                                                                                         ]),
                                                                                       )
                                                                                       .toList(),
                                                                                 ).search(_model.textController1.text).map((r) => r.object).take(20).toList();
+                                                                                ;
                                                                               });
                                                                             } else {
                                                                               context.goNamed(
                                                                                 'A01escola',
                                                                                 extra: <String, dynamic>{
-                                                                                  kTransitionInfoKey: const TransitionInfo(
+                                                                                  kTransitionInfoKey: TransitionInfo(
                                                                                     hasTransition: true,
                                                                                     transitionType: PageTransitionType.fade,
                                                                                     duration: Duration(milliseconds: 0),
@@ -662,7 +667,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                           Expanded(
                                                             child: Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           10.0,
@@ -840,7 +845,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                                 true,
                                                                             child:
                                                                                 Align(
-                                                                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                              alignment: AlignmentDirectional(-1.0, 0.0),
                                                                               child: Text(
                                                                                 'Ação',
                                                                                 style: FlutterFlowTheme.of(context).labelLarge.override(
@@ -858,7 +863,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                               selected,
                                                                               onSelectChanged) =>
                                                                           DataRow(
-                                                                        color: WidgetStateProperty
+                                                                        color: MaterialStateProperty
                                                                             .all(
                                                                           produtosListIndex % 2 == 0
                                                                               ? FlutterFlowTheme.of(context).secondaryBackground
@@ -904,7 +909,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                                 ),
                                                                           ),
                                                                           Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 5.0,
                                                                                 5.0,
                                                                                 5.0,
@@ -942,7 +947,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
                                                                                   child: Icon(
                                                                                     Icons.edit_square,
                                                                                     color: FlutterFlowTheme.of(context).primaryText,
@@ -953,12 +958,12 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                               Container(
                                                                                 width: 35.0,
                                                                                 height: 35.0,
-                                                                                decoration: const BoxDecoration(
+                                                                                decoration: BoxDecoration(
                                                                                   color: Color(0xFFE30909),
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
                                                                                   child: Icon(
                                                                                     Icons.delete_rounded,
                                                                                     color: FlutterFlowTheme.of(context).info,
@@ -966,7 +971,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                                   ),
                                                                                 ),
                                                                               ),
-                                                                            ].divide(const SizedBox(width: 10.0)),
+                                                                            ].divide(SizedBox(width: 10.0)),
                                                                           ),
                                                                         ]
                                                                             .map((c) =>
@@ -1040,10 +1045,10 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                 autovalidateMode:
                                                     AutovalidateMode.disabled,
                                                 child: Container(
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 20.0,
                                                                 0.0, 50.0),
                                                     child:
@@ -1057,7 +1062,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -1091,7 +1096,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -1116,14 +1121,14 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .filialValueController ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: const [
+                                                                      options: [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -1165,7 +1170,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -1181,7 +1186,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -1193,7 +1198,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -1227,7 +1232,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -1354,7 +1359,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -1366,7 +1371,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -1400,7 +1405,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -1425,14 +1430,14 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .produtoscategoriValueController ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: const [
+                                                                      options: [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -1474,7 +1479,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -1490,7 +1495,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -1502,7 +1507,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -1536,7 +1541,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -1563,10 +1568,10 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                       width:
                                                                           357.0,
                                                                       decoration:
-                                                                          const BoxDecoration(),
+                                                                          BoxDecoration(),
                                                                       child:
                                                                           Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             8.0,
@@ -1650,10 +1655,10 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                 Container(
                                                                   width: 357.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child:
                                                                       Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -1761,7 +1766,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -1771,7 +1776,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                   '')
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           20.0,
                                                                           0.0,
@@ -1805,7 +1810,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                               ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
                                                                               6.0,
                                                                               0.0,
                                                                               0.0,
@@ -1829,14 +1834,14 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                       width:
                                                                           550.0,
                                                                       decoration:
-                                                                          const BoxDecoration(),
+                                                                          BoxDecoration(),
                                                                       child: FlutterFlowDropDown<
                                                                           String>(
                                                                         controller: _model
                                                                             .categoriaValueController ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: const [
+                                                                        options: [
                                                                           'Option 1'
                                                                         ],
                                                                         onChanged:
@@ -1873,7 +1878,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                             2.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -1889,7 +1894,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                ].divide(const SizedBox(
+                                                                ].divide(SizedBox(
                                                                     width:
                                                                         20.0)),
                                                               ),
@@ -1902,7 +1907,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -1936,7 +1941,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -1958,7 +1963,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                   width: 357.0,
                                                                   height: 50.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child:
                                                                       FlutterFlowDropDown<
                                                                           String>(
@@ -1966,7 +1971,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                         .dropDownValueController ??= FormFieldController<
                                                                             String>(
                                                                         null),
-                                                                    options: const <String>[],
+                                                                    options: <String>[],
                                                                     onChanged: (val) =>
                                                                         setState(() =>
                                                                             _model.dropDownValue =
@@ -2007,7 +2012,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                         2.0,
                                                                     borderRadius:
                                                                         8.0,
-                                                                    margin: const EdgeInsetsDirectional
+                                                                    margin: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             16.0,
                                                                             4.0,
@@ -2026,10 +2031,10 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                 Container(
                                                                   width: 357.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child:
                                                                       Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -2137,7 +2142,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -2153,11 +2158,11 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                   '')
                                                             Container(
                                                               decoration:
-                                                                  const BoxDecoration(),
+                                                                  BoxDecoration(),
                                                             ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -2191,7 +2196,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -2218,10 +2223,10 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                       width:
                                                                           357.0,
                                                                       decoration:
-                                                                          const BoxDecoration(),
+                                                                          BoxDecoration(),
                                                                       child:
                                                                           Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             8.0,
@@ -2305,10 +2310,10 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                 Container(
                                                                   width: 357.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child:
                                                                       Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -2416,13 +2421,13 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         5.0,
@@ -2436,7 +2441,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                   MainAxisAlignment
                                                                       .start,
                                                               children: [
-                                                                const Flexible(
+                                                                Flexible(
                                                                   child: Row(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -2456,10 +2461,10 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                       width:
                                                                           357.0,
                                                                       decoration:
-                                                                          const BoxDecoration(),
+                                                                          BoxDecoration(),
                                                                       child:
                                                                           Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             8.0,
@@ -2543,10 +2548,10 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                 Container(
                                                                   width: 357.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child:
                                                                       Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -2654,7 +2659,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -2666,7 +2671,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -2709,7 +2714,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Stack(
                                                                       children: [
@@ -2786,12 +2791,12 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                           ],
                                                                         ),
                                                                         Align(
-                                                                          alignment: const AlignmentDirectional(
+                                                                          alignment: AlignmentDirectional(
                                                                               1.0,
                                                                               0.0),
                                                                           child:
                                                                               Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 5.2,
                                                                                 15.0,
@@ -2802,14 +2807,14 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                                 print('ButtonAssinat pressed ...');
                                                                               },
                                                                               text: 'Selecione o arquivo',
-                                                                              icon: const Icon(
+                                                                              icon: Icon(
                                                                                 Icons.upload_rounded,
                                                                                 size: 15.0,
                                                                               ),
                                                                               options: FFButtonOptions(
                                                                                 height: 40.0,
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                 color: FlutterFlowTheme.of(context).primary,
                                                                                 textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                       fontFamily: 'Manrope',
@@ -2817,7 +2822,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                                 elevation: 3.0,
-                                                                                borderSide: const BorderSide(
+                                                                                borderSide: BorderSide(
                                                                                   color: Colors.transparent,
                                                                                   width: 1.0,
                                                                                 ),
@@ -2830,7 +2835,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -2842,7 +2847,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -2885,7 +2890,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Stack(
                                                                       children: [
@@ -2962,12 +2967,12 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                           ],
                                                                         ),
                                                                         Align(
-                                                                          alignment: const AlignmentDirectional(
+                                                                          alignment: AlignmentDirectional(
                                                                               1.0,
                                                                               0.0),
                                                                           child:
                                                                               Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 5.2,
                                                                                 15.0,
@@ -2978,14 +2983,14 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                                 print('ButtonLogo pressed ...');
                                                                               },
                                                                               text: 'Selecione o arquivo',
-                                                                              icon: const Icon(
+                                                                              icon: Icon(
                                                                                 Icons.upload_rounded,
                                                                                 size: 15.0,
                                                                               ),
                                                                               options: FFButtonOptions(
                                                                                 height: 40.0,
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                 color: FlutterFlowTheme.of(context).primary,
                                                                                 textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                       fontFamily: 'Manrope',
@@ -2993,7 +2998,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                                 elevation: 3.0,
-                                                                                borderSide: const BorderSide(
+                                                                                borderSide: BorderSide(
                                                                                   color: Colors.transparent,
                                                                                   width: 1.0,
                                                                                 ),
@@ -3006,7 +3011,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -3018,7 +3023,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -3061,7 +3066,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Stack(
                                                                       children: [
@@ -3138,12 +3143,12 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                           ],
                                                                         ),
                                                                         Align(
-                                                                          alignment: const AlignmentDirectional(
+                                                                          alignment: AlignmentDirectional(
                                                                               1.0,
                                                                               0.0),
                                                                           child:
                                                                               Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 5.2,
                                                                                 15.0,
@@ -3154,14 +3159,14 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                                 print('ButtonFundo pressed ...');
                                                                               },
                                                                               text: 'Selecione o arquivo',
-                                                                              icon: const Icon(
+                                                                              icon: Icon(
                                                                                 Icons.upload_rounded,
                                                                                 size: 15.0,
                                                                               ),
                                                                               options: FFButtonOptions(
                                                                                 height: 40.0,
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                 color: FlutterFlowTheme.of(context).primary,
                                                                                 textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                       fontFamily: 'Manrope',
@@ -3169,7 +3174,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                                 elevation: 3.0,
-                                                                                borderSide: const BorderSide(
+                                                                                borderSide: BorderSide(
                                                                                   color: Colors.transparent,
                                                                                   width: 1.0,
                                                                                 ),
@@ -3182,7 +3187,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -3194,7 +3199,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -3228,7 +3233,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -3253,7 +3258,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         TextFormField(
                                                                       controller:
@@ -3356,13 +3361,13 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         50.0,
                                                                         10.0,
@@ -3384,7 +3389,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                               },
                                                               text:
                                                                   'Adicionar Certificado',
-                                                              icon: const Icon(
+                                                              icon: Icon(
                                                                 Icons.add,
                                                                 size: 20.0,
                                                               ),
@@ -3392,14 +3397,14 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                   FFButtonOptions(
                                                                 width: 250.0,
                                                                 height: 40.0,
-                                                                padding: const EdgeInsetsDirectional
+                                                                padding: EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                                 iconPadding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -3426,7 +3431,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                     ),
                                                                 elevation: 3.0,
                                                                 borderSide:
-                                                                    const BorderSide(
+                                                                    BorderSide(
                                                                   color: Colors
                                                                       .transparent,
                                                                   width: 1.0,
@@ -3438,7 +3443,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(const SizedBox(
+                                                        ].divide(SizedBox(
                                                             height: 5.0)),
                                                       ),
                                                     ),
@@ -3455,7 +3460,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                               ),
                             ),
                           ),
-                        if (widget.telas == 'listEstudante')
+                        if (widget!.telas == 'listEstudante')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -3464,7 +3469,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: const EdgeInsets.all(20.0),
+                              padding: EdgeInsets.all(20.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
@@ -3488,10 +3493,10 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   -1.0, 0.0),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         12.0, 10.0, 0.0, 0.0),
                                                 child: Text(
@@ -3518,7 +3523,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   10.0, 10.0, 10.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -3529,7 +3534,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                 flex: 3,
                                                 child: Container(
                                                   width: 550.0,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -3539,7 +3544,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -3571,13 +3576,13 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -3590,7 +3595,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                   .calssAcademicoValueController1 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: const ['option 1'],
+                                                          options: ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.calssAcademicoValue1 =
@@ -3628,7 +3633,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -3648,7 +3653,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                 flex: 3,
                                                 child: Container(
                                                   width: 550.0,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -3658,7 +3663,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -3690,7 +3695,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                       ),
@@ -3700,7 +3705,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                 .secaoAcademicoValueController1 ??=
                                                             FormFieldController<
                                                                 String>(null),
-                                                        options: const ['option 1'],
+                                                        options: ['option 1'],
                                                         onChanged: (val) =>
                                                             setState(() => _model
                                                                     .secaoAcademicoValue1 =
@@ -3738,7 +3743,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                         borderWidth: 2.0,
                                                         borderRadius: 8.0,
                                                         margin:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     4.0,
@@ -3757,7 +3762,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                 flex: 3,
                                                 child: Container(
                                                   width: 550.0,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -3767,7 +3772,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -3799,7 +3804,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                       ),
@@ -3809,7 +3814,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                 .categpriaAcademicoValueController ??=
                                                             FormFieldController<
                                                                 String>(null),
-                                                        options: const ['option 1'],
+                                                        options: ['option 1'],
                                                         onChanged: (val) =>
                                                             setState(() => _model
                                                                     .categpriaAcademicoValue =
@@ -3847,7 +3852,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                         borderWidth: 2.0,
                                                         borderRadius: 8.0,
                                                         margin:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     4.0,
@@ -3866,7 +3871,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                 flex: 3,
                                                 child: Container(
                                                   width: 550.0,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -3876,7 +3881,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -3908,7 +3913,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                       ),
@@ -3918,7 +3923,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                 .secaoAcademicoValueController2 ??=
                                                             FormFieldController<
                                                                 String>(null),
-                                                        options: const ['option 1'],
+                                                        options: ['option 1'],
                                                         onChanged: (val) =>
                                                             setState(() => _model
                                                                     .secaoAcademicoValue2 =
@@ -3956,7 +3961,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                         borderWidth: 2.0,
                                                         borderRadius: 8.0,
                                                         margin:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     4.0,
@@ -3971,12 +3976,12 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                   ),
                                                 ),
                                               ),
-                                            ].divide(const SizedBox(width: 20.0)),
+                                            ].divide(SizedBox(width: 20.0)),
                                           ),
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 15.0, 15.0, 10.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -3988,7 +3993,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                   print('Button pressed ...');
                                                 },
                                                 text: 'Filtro',
-                                                icon: const Icon(
+                                                icon: Icon(
                                                   Icons.filter_alt,
                                                   color: Colors.white,
                                                   size: 15.0,
@@ -3996,11 +4001,11 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                 options: FFButtonOptions(
                                                   width: 150.0,
                                                   height: 40.0,
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           24.0, 0.0, 24.0, 0.0),
                                                   iconPadding:
-                                                      const EdgeInsetsDirectional
+                                                      EdgeInsetsDirectional
                                                           .fromSTEB(0.0, 0.0,
                                                               0.0, 0.0),
                                                   color: FlutterFlowTheme.of(
@@ -4015,7 +4020,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                         letterSpacing: 0.0,
                                                       ),
                                                   elevation: 3.0,
-                                                  borderSide: const BorderSide(
+                                                  borderSide: BorderSide(
                                                     color: Colors.transparent,
                                                     width: 1.0,
                                                   ),
@@ -4032,7 +4037,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                   ),
                                   Expanded(
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -4085,7 +4090,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -4102,11 +4107,11 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          const AlignmentDirectional(
+                                                          AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -4133,7 +4138,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                     Flexible(
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     10.0,
@@ -4152,7 +4157,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                     'ButtonGerar pressed ...');
                                                               },
                                                               text: 'Gerar',
-                                                              icon: const Icon(
+                                                              icon: Icon(
                                                                 Icons
                                                                     .print_sharp,
                                                                 size: 18.0,
@@ -4160,14 +4165,14 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                               options:
                                                                   FFButtonOptions(
                                                                 height: 30.0,
-                                                                padding: const EdgeInsetsDirectional
+                                                                padding: EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                                 iconPadding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -4189,7 +4194,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                     ),
                                                                 elevation: 3.0,
                                                                 borderSide:
-                                                                    const BorderSide(
+                                                                    BorderSide(
                                                                   color: Colors
                                                                       .transparent,
                                                                   width: 1.0,
@@ -4213,7 +4218,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 0.0, 10.0),
                                                   child: Row(
@@ -4222,7 +4227,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -4244,11 +4249,11 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                             children: [
                                                               Align(
                                                                 alignment:
-                                                                    const AlignmentDirectional(
+                                                                    AlignmentDirectional(
                                                                         -1.0,
                                                                         0.0),
                                                                 child: Padding(
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           10.0,
@@ -4274,7 +4279,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             8.0,
@@ -4372,7 +4377,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                             context)
                                                                         .primaryBackground,
                                                                     contentPadding:
-                                                                        const EdgeInsetsDirectional.fromSTEB(
+                                                                        EdgeInsetsDirectional.fromSTEB(
                                                                             10.0,
                                                                             16.0,
                                                                             10.0,
@@ -4400,7 +4405,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        const SizedBox(width: 10.0)),
+                                                        SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Expanded(
@@ -4576,7 +4581,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                           onSelectChanged:
                                                               onSelectChanged,
                                                           color:
-                                                              WidgetStateProperty
+                                                              MaterialStateProperty
                                                                   .all(
                                                             produtosListIndex %
                                                                         2 ==
@@ -4725,11 +4730,11 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                         checkboxSelectedFillColor:
                                                             Colors.transparent,
                                                         checkboxCheckColor:
-                                                            const Color(0x8A000000),
+                                                            Color(0x8A000000),
                                                         checkboxUnselectedBorderColor:
-                                                            const Color(0x8A000000),
+                                                            Color(0x8A000000),
                                                         checkboxSelectedBorderColor:
-                                                            const Color(0x8A000000),
+                                                            Color(0x8A000000),
                                                       );
                                                     },
                                                   ),
@@ -4745,7 +4750,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                               ),
                             ),
                           ),
-                        if (widget.telas == 'listEstudante')
+                        if (widget!.telas == 'listEstudante')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -4754,7 +4759,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: const EdgeInsets.all(20.0),
+                              padding: EdgeInsets.all(20.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
@@ -4778,10 +4783,10 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   -1.0, 0.0),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         12.0, 10.0, 0.0, 0.0),
                                                 child: Text(
@@ -4808,7 +4813,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   10.0, 10.0, 10.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -4819,7 +4824,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                 flex: 3,
                                                 child: Container(
                                                   width: 550.0,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -4829,7 +4834,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -4861,13 +4866,13 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -4880,7 +4885,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                   .calssAcademicoValueController2 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: const ['option 1'],
+                                                          options: ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.calssAcademicoValue2 =
@@ -4918,7 +4923,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -4938,7 +4943,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                 flex: 3,
                                                 child: Container(
                                                   width: 550.0,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -4948,7 +4953,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -4980,7 +4985,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                       ),
@@ -4990,7 +4995,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                 .secaoAcademicoValueController3 ??=
                                                             FormFieldController<
                                                                 String>(null),
-                                                        options: const ['option 1'],
+                                                        options: ['option 1'],
                                                         onChanged: (val) =>
                                                             setState(() => _model
                                                                     .secaoAcademicoValue3 =
@@ -5028,7 +5033,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                         borderWidth: 2.0,
                                                         borderRadius: 8.0,
                                                         margin:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     4.0,
@@ -5047,7 +5052,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                 flex: 3,
                                                 child: Container(
                                                   width: 550.0,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -5057,7 +5062,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -5089,7 +5094,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                       ),
@@ -5099,7 +5104,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                 .secaoAcademicoValueController4 ??=
                                                             FormFieldController<
                                                                 String>(null),
-                                                        options: const ['option 1'],
+                                                        options: ['option 1'],
                                                         onChanged: (val) =>
                                                             setState(() => _model
                                                                     .secaoAcademicoValue4 =
@@ -5137,7 +5142,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                         borderWidth: 2.0,
                                                         borderRadius: 8.0,
                                                         margin:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     4.0,
@@ -5152,12 +5157,12 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                   ),
                                                 ),
                                               ),
-                                            ].divide(const SizedBox(width: 20.0)),
+                                            ].divide(SizedBox(width: 20.0)),
                                           ),
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 15.0, 15.0, 10.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -5169,7 +5174,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                   print('Button pressed ...');
                                                 },
                                                 text: 'Filtro',
-                                                icon: const Icon(
+                                                icon: Icon(
                                                   Icons.filter_alt,
                                                   color: Colors.white,
                                                   size: 15.0,
@@ -5177,11 +5182,11 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                 options: FFButtonOptions(
                                                   width: 150.0,
                                                   height: 40.0,
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           24.0, 0.0, 24.0, 0.0),
                                                   iconPadding:
-                                                      const EdgeInsetsDirectional
+                                                      EdgeInsetsDirectional
                                                           .fromSTEB(0.0, 0.0,
                                                               0.0, 0.0),
                                                   color: FlutterFlowTheme.of(
@@ -5196,7 +5201,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                         letterSpacing: 0.0,
                                                       ),
                                                   elevation: 3.0,
-                                                  borderSide: const BorderSide(
+                                                  borderSide: BorderSide(
                                                     color: Colors.transparent,
                                                     width: 1.0,
                                                   ),
@@ -5213,7 +5218,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                   ),
                                   Expanded(
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -5266,7 +5271,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -5283,11 +5288,11 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          const AlignmentDirectional(
+                                                          AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -5314,7 +5319,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                     Flexible(
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     10.0,
@@ -5333,7 +5338,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                     'ButtonGerar pressed ...');
                                                               },
                                                               text: 'Gerar',
-                                                              icon: const Icon(
+                                                              icon: Icon(
                                                                 Icons
                                                                     .print_sharp,
                                                                 size: 18.0,
@@ -5341,14 +5346,14 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                               options:
                                                                   FFButtonOptions(
                                                                 height: 30.0,
-                                                                padding: const EdgeInsetsDirectional
+                                                                padding: EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                                 iconPadding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -5370,7 +5375,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                     ),
                                                                 elevation: 3.0,
                                                                 borderSide:
-                                                                    const BorderSide(
+                                                                    BorderSide(
                                                                   color: Colors
                                                                       .transparent,
                                                                   width: 1.0,
@@ -5394,7 +5399,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 0.0, 10.0),
                                                   child: Row(
@@ -5403,7 +5408,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -5425,11 +5430,11 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                             children: [
                                                               Align(
                                                                 alignment:
-                                                                    const AlignmentDirectional(
+                                                                    AlignmentDirectional(
                                                                         -1.0,
                                                                         0.0),
                                                                 child: Padding(
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           10.0,
@@ -5455,7 +5460,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             8.0,
@@ -5553,7 +5558,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                                             context)
                                                                         .primaryBackground,
                                                                     contentPadding:
-                                                                        const EdgeInsetsDirectional.fromSTEB(
+                                                                        EdgeInsetsDirectional.fromSTEB(
                                                                             10.0,
                                                                             16.0,
                                                                             10.0,
@@ -5581,7 +5586,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        const SizedBox(width: 10.0)),
+                                                        SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Expanded(
@@ -5757,7 +5762,7 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                           onSelectChanged:
                                                               onSelectChanged,
                                                           color:
-                                                              WidgetStateProperty
+                                                              MaterialStateProperty
                                                                   .all(
                                                             produtosListIndex %
                                                                         2 ==
@@ -5906,11 +5911,11 @@ class _A11certificadoWidgetState extends State<A11certificadoWidget>
                                                         checkboxSelectedFillColor:
                                                             Colors.transparent,
                                                         checkboxCheckColor:
-                                                            const Color(0x8A000000),
+                                                            Color(0x8A000000),
                                                         checkboxUnselectedBorderColor:
-                                                            const Color(0x8A000000),
+                                                            Color(0x8A000000),
                                                         checkboxSelectedBorderColor:
-                                                            const Color(0x8A000000),
+                                                            Color(0x8A000000),
                                                       );
                                                     },
                                                   ),

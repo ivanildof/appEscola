@@ -1,9 +1,13 @@
 import '/components/menu_lateral/menu_lateral_widget.dart';
 import '/components/menu_superior/menu_superior_widget.dart';
 import '/components/menu_superior_celular/menu_superior_celular_widget.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'a16trabalhode_casa_widget.dart' show A16trabalhodeCasaWidget;
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class A16trabalhodeCasaModel extends FlutterFlowModel<A16trabalhodeCasaWidget> {
   ///  State fields for stateful widgets in this page.

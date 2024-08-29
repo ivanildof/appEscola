@@ -11,6 +11,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'a26mensagem_model.dart';
 export 'a26mensagem_model.dart';
@@ -89,7 +90,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                         wrapWithModel(
                           model: _model.menuSuperiorModel,
                           updateCallback: () => setState(() {}),
-                          child: const MenuSuperiorWidget(),
+                          child: MenuSuperiorWidget(),
                         ),
                       if (responsiveVisibility(
                         context: context,
@@ -99,7 +100,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                         wrapWithModel(
                           model: _model.menuSuperiorCelularModel,
                           updateCallback: () => setState(() {}),
-                          child: const MenuSuperiorCelularWidget(),
+                          child: MenuSuperiorCelularWidget(),
                         ),
                     ],
                   ),
@@ -111,10 +112,10 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                           model: _model.menuLateralModel,
                           updateCallback: () => setState(() {}),
                           updateOnChange: true,
-                          child: const MenuLateralWidget(),
+                          child: MenuLateralWidget(),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -126,7 +127,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                               ),
                             ),
                             child: Padding(
-                              padding: const EdgeInsets.all(20.0),
+                              padding: EdgeInsets.all(20.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
@@ -156,7 +157,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                           autovalidateMode:
                                               AutovalidateMode.disabled,
                                           child: Padding(
-                                            padding: const EdgeInsets.all(10.0),
+                                            padding: EdgeInsets.all(10.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
@@ -166,7 +167,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -202,7 +203,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           20.0, 5.0, 20.0, 0.0),
                                                   child: Column(
@@ -250,7 +251,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                                         0.0,
                                                                   ),
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 5.0)),
                                                         ),
                                                       ),
@@ -298,7 +299,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                                         0.0,
                                                                   ),
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 5.0)),
                                                         ),
                                                       ),
@@ -347,7 +348,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                                         0.0,
                                                                   ),
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 5.0)),
                                                         ),
                                                       ),
@@ -396,7 +397,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                                         0.0,
                                                                   ),
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 5.0)),
                                                         ),
                                                       ),
@@ -406,7 +407,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                         decoration:
                                                             BoxDecoration(
                                                           color:
-                                                              const Color(0xFFF24348),
+                                                              Color(0xFFF24348),
                                                           borderRadius:
                                                               BorderRadius
                                                                   .circular(
@@ -443,12 +444,12 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                                         0.0,
                                                                   ),
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 5.0)),
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        const SizedBox(height: 15.0)),
+                                                        SizedBox(height: 15.0)),
                                                   ),
                                                 ),
                                               ],
@@ -507,14 +508,14 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                   ),
                                                 ),
                                                 child: Padding(
-                                                  padding: const EdgeInsets.all(10.0),
+                                                  padding: EdgeInsets.all(10.0),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.min,
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -533,7 +534,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           6.0,
                                                                           0.0,
@@ -568,7 +569,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                                     height:
                                                                         38.0,
                                                                     decoration:
-                                                                        const BoxDecoration(
+                                                                        BoxDecoration(
                                                                       color: Color(
                                                                           0xFFF60F18),
                                                                       shape: BoxShape
@@ -577,7 +578,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                                     child:
                                                                         Align(
                                                                       alignment:
-                                                                          const AlignmentDirectional(
+                                                                          AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                       child:
@@ -606,7 +607,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     9.0,
                                                                     5.0,
@@ -633,7 +634,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                               ),
                                                               child: Padding(
                                                                 padding:
-                                                                    const EdgeInsets
+                                                                    EdgeInsets
                                                                         .all(
                                                                             6.0),
                                                                 child: Row(
@@ -766,7 +767,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                                             'IconButton pressed ...');
                                                                       },
                                                                     ),
-                                                                  ].divide(const SizedBox(
+                                                                  ].divide(SizedBox(
                                                                       width:
                                                                           10.0)),
                                                                 ),
@@ -775,10 +776,10 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                             Container(
                                                               width: 250.0,
                                                               decoration:
-                                                                  const BoxDecoration(),
+                                                                  BoxDecoration(),
                                                               child: Padding(
                                                                 padding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -1019,7 +1020,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                                 onSelectChanged:
                                                                     onSelectChanged,
                                                                 color:
-                                                                    WidgetStateProperty
+                                                                    MaterialStateProperty
                                                                         .all(
                                                                   categoriaListIndex %
                                                                               2 ==
@@ -1147,13 +1148,13 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                                   Colors
                                                                       .transparent,
                                                               checkboxCheckColor:
-                                                                  const Color(
+                                                                  Color(
                                                                       0x8A000000),
                                                               checkboxUnselectedBorderColor:
-                                                                  const Color(
+                                                                  Color(
                                                                       0x8A000000),
                                                               checkboxSelectedBorderColor:
-                                                                  const Color(
+                                                                  Color(
                                                                       0x8A000000),
                                                             );
                                                           },
@@ -1217,14 +1218,14 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                   ),
                                                 ),
                                                 child: Padding(
-                                                  padding: const EdgeInsets.all(12.0),
+                                                  padding: EdgeInsets.all(12.0),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.min,
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -1244,7 +1245,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           6.0,
                                                                           0.0,
@@ -1279,7 +1280,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                                     height:
                                                                         40.0,
                                                                     decoration:
-                                                                        const BoxDecoration(
+                                                                        BoxDecoration(
                                                                       color: Color(
                                                                           0xFFF60F18),
                                                                       shape: BoxShape
@@ -1288,7 +1289,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                                     child:
                                                                         Align(
                                                                       alignment:
-                                                                          const AlignmentDirectional(
+                                                                          AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                       child:
@@ -1317,7 +1318,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     9.0,
                                                                     5.0,
@@ -1344,7 +1345,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                               ),
                                                               child: Padding(
                                                                 padding:
-                                                                    const EdgeInsets
+                                                                    EdgeInsets
                                                                         .all(
                                                                             6.0),
                                                                 child: Row(
@@ -1477,7 +1478,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                                             'IconButton pressed ...');
                                                                       },
                                                                     ),
-                                                                  ].divide(const SizedBox(
+                                                                  ].divide(SizedBox(
                                                                       width:
                                                                           10.0)),
                                                                 ),
@@ -1486,10 +1487,10 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                             Container(
                                                               width: 250.0,
                                                               decoration:
-                                                                  const BoxDecoration(),
+                                                                  BoxDecoration(),
                                                               child: Padding(
                                                                 padding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -1730,7 +1731,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                                 onSelectChanged:
                                                                     onSelectChanged,
                                                                 color:
-                                                                    WidgetStateProperty
+                                                                    MaterialStateProperty
                                                                         .all(
                                                                   categoriaListIndex %
                                                                               2 ==
@@ -1858,13 +1859,13 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                                   Colors
                                                                       .transparent,
                                                               checkboxCheckColor:
-                                                                  const Color(
+                                                                  Color(
                                                                       0x8A000000),
                                                               checkboxUnselectedBorderColor:
-                                                                  const Color(
+                                                                  Color(
                                                                       0x8A000000),
                                                               checkboxSelectedBorderColor:
-                                                                  const Color(
+                                                                  Color(
                                                                       0x8A000000),
                                                             );
                                                           },
@@ -1928,14 +1929,14 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                   ),
                                                 ),
                                                 child: Padding(
-                                                  padding: const EdgeInsets.all(12.0),
+                                                  padding: EdgeInsets.all(12.0),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.min,
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -1955,7 +1956,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           6.0,
                                                                           0.0,
@@ -1990,7 +1991,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                                     height:
                                                                         38.0,
                                                                     decoration:
-                                                                        const BoxDecoration(
+                                                                        BoxDecoration(
                                                                       color: Color(
                                                                           0xFFF60F18),
                                                                       shape: BoxShape
@@ -1999,7 +2000,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                                     child:
                                                                         Align(
                                                                       alignment:
-                                                                          const AlignmentDirectional(
+                                                                          AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                       child:
@@ -2028,7 +2029,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     9.0,
                                                                     5.0,
@@ -2055,7 +2056,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                               ),
                                                               child: Padding(
                                                                 padding:
-                                                                    const EdgeInsets
+                                                                    EdgeInsets
                                                                         .all(
                                                                             6.0),
                                                                 child: Row(
@@ -2188,7 +2189,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                                             'IconButton pressed ...');
                                                                       },
                                                                     ),
-                                                                  ].divide(const SizedBox(
+                                                                  ].divide(SizedBox(
                                                                       width:
                                                                           10.0)),
                                                                 ),
@@ -2197,10 +2198,10 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                             Container(
                                                               width: 250.0,
                                                               decoration:
-                                                                  const BoxDecoration(),
+                                                                  BoxDecoration(),
                                                               child: Padding(
                                                                 padding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -2441,7 +2442,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                                 onSelectChanged:
                                                                     onSelectChanged,
                                                                 color:
-                                                                    WidgetStateProperty
+                                                                    MaterialStateProperty
                                                                         .all(
                                                                   categoriaListIndex %
                                                                               2 ==
@@ -2569,13 +2570,13 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                                   Colors
                                                                       .transparent,
                                                               checkboxCheckColor:
-                                                                  const Color(
+                                                                  Color(
                                                                       0x8A000000),
                                                               checkboxUnselectedBorderColor:
-                                                                  const Color(
+                                                                  Color(
                                                                       0x8A000000),
                                                               checkboxSelectedBorderColor:
-                                                                  const Color(
+                                                                  Color(
                                                                       0x8A000000),
                                                             );
                                                           },
@@ -2639,14 +2640,14 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                   ),
                                                 ),
                                                 child: Padding(
-                                                  padding: const EdgeInsets.all(12.0),
+                                                  padding: EdgeInsets.all(12.0),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.min,
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -2656,7 +2657,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                           mainAxisSize:
                                                               MainAxisSize.max,
                                                           children: [
-                                                            const Icon(
+                                                            Icon(
                                                               Icons
                                                                   .delete_rounded,
                                                               color: Color(
@@ -2665,7 +2666,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           6.0,
                                                                           0.0,
@@ -2700,7 +2701,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                                     height:
                                                                         38.0,
                                                                     decoration:
-                                                                        const BoxDecoration(
+                                                                        BoxDecoration(
                                                                       color: Color(
                                                                           0xFFADAEAE),
                                                                       shape: BoxShape
@@ -2709,7 +2710,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                                     child:
                                                                         Align(
                                                                       alignment:
-                                                                          const AlignmentDirectional(
+                                                                          AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                       child:
@@ -2728,7 +2729,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                                     height:
                                                                         38.0,
                                                                     decoration:
-                                                                        const BoxDecoration(
+                                                                        BoxDecoration(
                                                                       color: Color(
                                                                           0xFFF60F18),
                                                                       shape: BoxShape
@@ -2737,7 +2738,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                                     child:
                                                                         Align(
                                                                       alignment:
-                                                                          const AlignmentDirectional(
+                                                                          AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                       child:
@@ -2751,7 +2752,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                ].divide(const SizedBox(
+                                                                ].divide(SizedBox(
                                                                     width:
                                                                         10.0)),
                                                               ),
@@ -2768,7 +2769,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     9.0,
                                                                     5.0,
@@ -2795,7 +2796,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                               ),
                                                               child: Padding(
                                                                 padding:
-                                                                    const EdgeInsets
+                                                                    EdgeInsets
                                                                         .all(
                                                                             6.0),
                                                                 child: Row(
@@ -2928,7 +2929,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                                             'IconButton pressed ...');
                                                                       },
                                                                     ),
-                                                                  ].divide(const SizedBox(
+                                                                  ].divide(SizedBox(
                                                                       width:
                                                                           10.0)),
                                                                 ),
@@ -2937,10 +2938,10 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                             Container(
                                                               width: 250.0,
                                                               decoration:
-                                                                  const BoxDecoration(),
+                                                                  BoxDecoration(),
                                                               child: Padding(
                                                                 padding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -3181,7 +3182,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                                 onSelectChanged:
                                                                     onSelectChanged,
                                                                 color:
-                                                                    WidgetStateProperty
+                                                                    MaterialStateProperty
                                                                         .all(
                                                                   categoriaListIndex %
                                                                               2 ==
@@ -3309,13 +3310,13 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                                   Colors
                                                                       .transparent,
                                                               checkboxCheckColor:
-                                                                  const Color(
+                                                                  Color(
                                                                       0x8A000000),
                                                               checkboxUnselectedBorderColor:
-                                                                  const Color(
+                                                                  Color(
                                                                       0x8A000000),
                                                               checkboxSelectedBorderColor:
-                                                                  const Color(
+                                                                  Color(
                                                                       0x8A000000),
                                                             );
                                                           },
@@ -3349,13 +3350,13 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                               ),
                                             ),
                                             child: Padding(
-                                              padding: const EdgeInsets.all(10.0),
+                                              padding: EdgeInsets.all(10.0),
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.min,
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 8.0, 0.0),
                                                     child: Row(
@@ -3371,7 +3372,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       6.0,
                                                                       0.0,
@@ -3405,7 +3406,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                                 width: 38.0,
                                                                 height: 38.0,
                                                                 decoration:
-                                                                    const BoxDecoration(
+                                                                    BoxDecoration(
                                                                   color: Color(
                                                                       0xFFF60F18),
                                                                   shape: BoxShape
@@ -3413,7 +3414,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                                 ),
                                                                 child: Align(
                                                                   alignment:
-                                                                      const AlignmentDirectional(
+                                                                      AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   child: Icon(
@@ -3440,7 +3441,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 20.0, 0.0),
                                                     child: Row(
@@ -3475,7 +3476,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             6.0,
                                                                             0.0,
@@ -3498,7 +3499,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                           child: Container(
                                                             width: 550.0,
                                                             decoration:
-                                                                const BoxDecoration(),
+                                                                BoxDecoration(),
                                                             child:
                                                                 FlutterFlowDropDown<
                                                                     String>(
@@ -3507,7 +3508,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                                   FormFieldController<
                                                                           String>(
                                                                       null),
-                                                              options: const [
+                                                              options: [
                                                                 'Option 1'
                                                               ],
                                                               onChanged: (val) =>
@@ -3547,7 +3548,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                               borderWidth: 2.0,
                                                               borderRadius: 8.0,
                                                               margin:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           4.0,
@@ -3564,7 +3565,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                             ),
                                                           ),
                                                         ),
-                                                      ].divide(const SizedBox(
+                                                      ].divide(SizedBox(
                                                           width: 20.0)),
                                                     ),
                                                   ),
@@ -3576,7 +3577,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 20.0, 0.0),
                                                     child: Row(
@@ -3611,7 +3612,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             6.0,
                                                                             0.0,
@@ -3634,7 +3635,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                           child: Container(
                                                             width: 550.0,
                                                             decoration:
-                                                                const BoxDecoration(),
+                                                                BoxDecoration(),
                                                             child:
                                                                 FlutterFlowDropDown<
                                                                     String>(
@@ -3643,7 +3644,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                                   FormFieldController<
                                                                           String>(
                                                                       null),
-                                                              options: const [
+                                                              options: [
                                                                 'Option 1'
                                                               ],
                                                               onChanged: (val) =>
@@ -3683,7 +3684,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                               borderWidth: 2.0,
                                                               borderRadius: 8.0,
                                                               margin:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           4.0,
@@ -3700,7 +3701,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                             ),
                                                           ),
                                                         ),
-                                                      ].divide(const SizedBox(
+                                                      ].divide(SizedBox(
                                                           width: 20.0)),
                                                     ),
                                                   ),
@@ -3712,7 +3713,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 20.0, 0.0),
                                                     child: Row(
@@ -3747,7 +3748,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             6.0,
                                                                             0.0,
@@ -3770,7 +3771,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                           child: Container(
                                                             width: 550.0,
                                                             decoration:
-                                                                const BoxDecoration(),
+                                                                BoxDecoration(),
                                                             child:
                                                                 TextFormField(
                                                               controller: _model
@@ -3877,7 +3878,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                             ),
                                                           ),
                                                         ),
-                                                      ].divide(const SizedBox(
+                                                      ].divide(SizedBox(
                                                           width: 20.0)),
                                                     ),
                                                   ),
@@ -3889,7 +3890,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 20.0, 0.0),
                                                     child: Row(
@@ -3933,7 +3934,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                           child: Container(
                                                             width: 600.0,
                                                             decoration:
-                                                                const BoxDecoration(),
+                                                                BoxDecoration(),
                                                             child:
                                                                 TextFormField(
                                                               controller: _model
@@ -4041,13 +4042,13 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                             ),
                                                           ),
                                                         ),
-                                                      ].divide(const SizedBox(
+                                                      ].divide(SizedBox(
                                                           width: 20.0)),
                                                     ),
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 10.0, 0.0),
                                                     child: Row(
@@ -4058,7 +4059,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       15.0,
@@ -4070,7 +4071,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                                   'Button pressed ...');
                                                             },
                                                             text: 'Enviar',
-                                                            icon: const FaIcon(
+                                                            icon: FaIcon(
                                                               FontAwesomeIcons
                                                                   .paperPlane,
                                                               size: 20.0,
@@ -4080,14 +4081,14 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                               width: 200.0,
                                                               height: 40.0,
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           24.0,
                                                                           0.0,
                                                                           24.0,
                                                                           0.0),
                                                               iconPadding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -4114,7 +4115,7 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                                       ),
                                                               elevation: 3.0,
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Colors
                                                                     .transparent,
                                                                 width: 1.0,
@@ -4129,12 +4130,12 @@ class _A26mensagemWidgetState extends State<A26mensagemWidget> {
                                                       ],
                                                     ),
                                                   ),
-                                                ].divide(const SizedBox(height: 5.0)),
+                                                ].divide(SizedBox(height: 5.0)),
                                               ),
                                             ),
                                           ),
                                         ),
-                                    ].divide(const SizedBox(width: 10.0)),
+                                    ].divide(SizedBox(width: 10.0)),
                                   ),
                                 ],
                               ),

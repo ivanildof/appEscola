@@ -11,8 +11,11 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:easy_debounce/easy_debounce.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'package:text_search/text_search.dart';
 import 'a05_recepcao_model.dart';
 export 'a05_recepcao_model.dart';
@@ -21,7 +24,7 @@ class A05RecepcaoWidget extends StatefulWidget {
   const A05RecepcaoWidget({
     super.key,
     String? telas,
-  }) : telas = telas ?? 'vazio';
+  }) : this.telas = telas ?? 'vazio';
 
   final String telas;
 
@@ -222,7 +225,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                         wrapWithModel(
                           model: _model.menuSuperiorModel,
                           updateCallback: () => setState(() {}),
-                          child: const MenuSuperiorWidget(),
+                          child: MenuSuperiorWidget(),
                         ),
                       if (responsiveVisibility(
                         context: context,
@@ -232,7 +235,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                         wrapWithModel(
                           model: _model.menuSuperiorCelularModel,
                           updateCallback: () => setState(() {}),
-                          child: const MenuSuperiorCelularWidget(),
+                          child: MenuSuperiorCelularWidget(),
                         ),
                     ],
                   ),
@@ -243,9 +246,9 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                         wrapWithModel(
                           model: _model.menuLateralModel,
                           updateCallback: () => setState(() {}),
-                          child: const MenuLateralWidget(),
+                          child: MenuLateralWidget(),
                         ),
-                        if (widget.telas == 'consultaAdmissao')
+                        if (widget!.telas == 'consultaAdmissao')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.75,
                             height: double.infinity,
@@ -257,7 +260,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                               ),
                             ),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 20.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -266,7 +269,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                     child: Column(
                                       children: [
                                         Align(
-                                          alignment: const Alignment(-1.0, 0),
+                                          alignment: Alignment(-1.0, 0),
                                           child: TabBar(
                                             isScrollable: true,
                                             labelColor:
@@ -283,13 +286,13 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                       fontSize: 20.0,
                                                       letterSpacing: 0.0,
                                                     ),
-                                            unselectedLabelStyle: const TextStyle(),
+                                            unselectedLabelStyle: TextStyle(),
                                             indicatorColor:
                                                 FlutterFlowTheme.of(context)
                                                     .tertiary,
                                             indicatorWeight: 1.0,
-                                            padding: const EdgeInsets.all(4.0),
-                                            tabs: const [
+                                            padding: EdgeInsets.all(4.0),
+                                            tabs: [
                                               Row(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
@@ -373,10 +376,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                       snapshot.data!;
 
                                                   return Container(
-                                                    decoration: const BoxDecoration(),
+                                                    decoration: BoxDecoration(),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsets.all(20.0),
+                                                          EdgeInsets.all(20.0),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -402,7 +405,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                 ),
                                                                 child: Padding(
                                                                   padding:
-                                                                      const EdgeInsets
+                                                                      EdgeInsets
                                                                           .all(
                                                                               6.0),
                                                                   child: Row(
@@ -530,7 +533,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               'IconButton pressed ...');
                                                                         },
                                                                       ),
-                                                                    ].divide(const SizedBox(
+                                                                    ].divide(SizedBox(
                                                                         width:
                                                                             10.0)),
                                                                   ),
@@ -539,9 +542,9 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                               Container(
                                                                 width: 250.0,
                                                                 decoration:
-                                                                    const BoxDecoration(),
+                                                                    BoxDecoration(),
                                                                 child: Padding(
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -551,7 +554,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                       Autocomplete<
                                                                           String>(
                                                                     initialValue:
-                                                                        const TextEditingValue(),
+                                                                        TextEditingValue(),
                                                                     optionsBuilder:
                                                                         (textEditingValue) {
                                                                       if (textEditingValue
@@ -593,7 +596,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                         textHighlightStyle:
-                                                                            const TextStyle(),
+                                                                            TextStyle(),
                                                                         elevation:
                                                                             4.0,
                                                                         optionBackgroundColor:
@@ -639,29 +642,31 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             (_) =>
                                                                                 EasyDebounce.debounce(
                                                                           '_model.textController1',
-                                                                          const Duration(
+                                                                          Duration(
                                                                               milliseconds: 2000),
                                                                           () async {
-                                                                            if (_model.textController1.text != '') {
+                                                                            if (_model.textController1.text != null &&
+                                                                                _model.textController1.text != '') {
                                                                               safeSetState(() {
                                                                                 _model.simpleSearchResults1 = TextSearch(
                                                                                   containerInventarioProdutosRecordList
                                                                                       .map(
                                                                                         (record) => TextSearchItem.fromTerms(record, [
-                                                                                          record.produtoCategoria,
-                                                                                          record.nomeProduto,
-                                                                                          record.produtoCodigo,
-                                                                                          record.filial
+                                                                                          record.produtoCategoria!,
+                                                                                          record.nomeProduto!,
+                                                                                          record.produtoCodigo!,
+                                                                                          record.filial!
                                                                                         ]),
                                                                                       )
                                                                                       .toList(),
                                                                                 ).search(_model.textController1.text).map((r) => r.object).take(20).toList();
+                                                                                ;
                                                                               });
                                                                             } else {
                                                                               context.goNamed(
                                                                                 'A01escola',
                                                                                 extra: <String, dynamic>{
-                                                                                  kTransitionInfoKey: const TransitionInfo(
+                                                                                  kTransitionInfoKey: TransitionInfo(
                                                                                     hasTransition: true,
                                                                                     transitionType: PageTransitionType.fade,
                                                                                     duration: Duration(milliseconds: 0),
@@ -736,7 +741,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                           filled:
                                                                               true,
                                                                           prefixIcon:
-                                                                              const Icon(
+                                                                              Icon(
                                                                             Icons.search_sharp,
                                                                           ),
                                                                         ),
@@ -759,7 +764,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           Expanded(
                                                             child: Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           10.0,
@@ -970,7 +975,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               selected,
                                                                               onSelectChanged) =>
                                                                           DataRow(
-                                                                        color: WidgetStateProperty
+                                                                        color: MaterialStateProperty
                                                                             .all(
                                                                           produtosListIndex % 2 == 0
                                                                               ? FlutterFlowTheme.of(context).secondaryBackground
@@ -1070,15 +1075,15 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                         context: context,
                                                                                         builder: (alertDialogContext) {
                                                                                           return AlertDialog(
-                                                                                            title: const Text('Deseja deletar essa filial?'),
+                                                                                            title: Text('Deseja deletar essa filial?'),
                                                                                             actions: [
                                                                                               TextButton(
                                                                                                 onPressed: () => Navigator.pop(alertDialogContext, false),
-                                                                                                child: const Text('Não, cancelar'),
+                                                                                                child: Text('Não, cancelar'),
                                                                                               ),
                                                                                               TextButton(
                                                                                                 onPressed: () => Navigator.pop(alertDialogContext, true),
-                                                                                                child: const Text('Sim, deletar Filial'),
+                                                                                                child: Text('Sim, deletar Filial'),
                                                                                               ),
                                                                                             ],
                                                                                           );
@@ -1091,7 +1096,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                     context.goNamed(
                                                                                       'A01escola',
                                                                                       extra: <String, dynamic>{
-                                                                                        kTransitionInfoKey: const TransitionInfo(
+                                                                                        kTransitionInfoKey: TransitionInfo(
                                                                                           hasTransition: true,
                                                                                           transitionType: PageTransitionType.fade,
                                                                                           duration: Duration(milliseconds: 0),
@@ -1101,7 +1106,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                   }
                                                                                 },
                                                                               ),
-                                                                            ].divide(const SizedBox(width: 10.0)),
+                                                                            ].divide(SizedBox(width: 10.0)),
                                                                           ),
                                                                         ]
                                                                             .map((c) =>
@@ -1175,10 +1180,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                 autovalidateMode:
                                                     AutovalidateMode.disabled,
                                                 child: Container(
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 20.0,
                                                                 0.0, 50.0),
                                                     child:
@@ -1192,7 +1197,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -1226,7 +1231,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -1251,10 +1256,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           0.0,
                                                                           0.0,
@@ -1265,7 +1270,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             .filialAdmissaoValueController ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: const [
+                                                                        options: [
                                                                           'Option 1'
                                                                         ],
                                                                         onChanged:
@@ -1302,7 +1307,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             2.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -1319,7 +1324,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -1331,7 +1336,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -1365,7 +1370,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -1390,10 +1395,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -1481,7 +1486,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -1497,7 +1502,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                   '')
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           20.0,
                                                                           0.0,
@@ -1531,7 +1536,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
                                                                               6.0,
                                                                               0.0,
                                                                               0.0,
@@ -1555,10 +1560,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                       width:
                                                                           550.0,
                                                                       decoration:
-                                                                          const BoxDecoration(),
+                                                                          BoxDecoration(),
                                                                       child:
                                                                           Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             10.0,
                                                                             0.0,
                                                                             0.0,
@@ -1567,7 +1572,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             String>(
                                                                           controller: _model.generoAdmissaoValueController ??=
                                                                               FormFieldController<String>(null),
-                                                                          options: const [
+                                                                          options: [
                                                                             'Masculino',
                                                                             'Feminino'
                                                                           ],
@@ -1603,7 +1608,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               2.0,
                                                                           borderRadius:
                                                                               8.0,
-                                                                          margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                          margin: EdgeInsetsDirectional.fromSTEB(
                                                                               16.0,
                                                                               4.0,
                                                                               16.0,
@@ -1620,7 +1625,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                ].divide(const SizedBox(
+                                                                ].divide(SizedBox(
                                                                     width:
                                                                         20.0)),
                                                               ),
@@ -1637,7 +1642,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                             ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -1671,7 +1676,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -1693,7 +1698,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                   flex: 3,
                                                                   child:
                                                                       Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -1716,7 +1721,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                       onTap:
                                                                           () async {
                                                                         // compra
-                                                                        final datePicked1Date =
+                                                                        final _datePicked1Date =
                                                                             await showDatePicker(
                                                                           context:
                                                                               context,
@@ -1749,15 +1754,15 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                           },
                                                                         );
 
-                                                                        if (datePicked1Date !=
+                                                                        if (_datePicked1Date !=
                                                                             null) {
                                                                           safeSetState(
                                                                               () {
                                                                             _model.datePicked1 =
                                                                                 DateTime(
-                                                                              datePicked1Date.year,
-                                                                              datePicked1Date.month,
-                                                                              datePicked1Date.day,
+                                                                              _datePicked1Date.year,
+                                                                              _datePicked1Date.month,
+                                                                              _datePicked1Date.day,
                                                                             );
                                                                           });
                                                                         }
@@ -1777,12 +1782,12 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                         ),
                                                                         child:
                                                                             Align(
-                                                                          alignment: const AlignmentDirectional(
+                                                                          alignment: AlignmentDirectional(
                                                                               -1.0,
                                                                               0.0),
                                                                           child:
                                                                               Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 10.0,
                                                                                 0.0,
                                                                                 0.0,
@@ -1813,7 +1818,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -1829,7 +1834,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                             ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -1863,7 +1868,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -1888,10 +1893,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -1983,7 +1988,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -1993,7 +1998,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                   '')
                                                             Container(
                                                               decoration:
-                                                                  const BoxDecoration(),
+                                                                  BoxDecoration(),
                                                             ),
                                                           if (_model.filialAdmissaoValue !=
                                                                   null &&
@@ -2007,7 +2012,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                             ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -2041,7 +2046,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -2066,10 +2071,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -2161,7 +2166,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -2173,7 +2178,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -2207,7 +2212,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -2232,10 +2237,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -2327,13 +2332,13 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -2367,7 +2372,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -2392,10 +2397,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -2487,7 +2492,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -2499,7 +2504,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -2542,10 +2547,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -2637,7 +2642,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -2649,7 +2654,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -2692,10 +2697,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -2787,7 +2792,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -2799,7 +2804,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -2833,7 +2838,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -2858,10 +2863,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -2953,7 +2958,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -2965,7 +2970,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -2999,7 +3004,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -3024,10 +3029,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           0.0,
                                                                           0.0,
@@ -3038,7 +3043,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             .atribuidoAdmissaoValueController ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: const [
+                                                                        options: [
                                                                           'Option 1'
                                                                         ],
                                                                         onChanged:
@@ -3075,7 +3080,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             2.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -3092,7 +3097,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -3104,7 +3109,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -3138,7 +3143,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -3163,10 +3168,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           0.0,
                                                                           0.0,
@@ -3177,7 +3182,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             .referenciaAdmissaoValueController ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: const [
+                                                                        options: [
                                                                           'Option 1'
                                                                         ],
                                                                         onChanged:
@@ -3214,7 +3219,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             2.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -3231,7 +3236,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -3243,7 +3248,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -3277,7 +3282,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -3302,10 +3307,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           0.0,
                                                                           0.0,
@@ -3316,7 +3321,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             .respostaAdmissaoValueController ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: const [
+                                                                        options: [
                                                                           'Option 1'
                                                                         ],
                                                                         onChanged:
@@ -3353,7 +3358,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             2.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -3370,7 +3375,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -3382,7 +3387,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -3425,10 +3430,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -3522,7 +3527,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -3534,7 +3539,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -3577,10 +3582,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -3674,7 +3679,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -3686,7 +3691,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -3720,7 +3725,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -3742,7 +3747,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                   flex: 3,
                                                                   child:
                                                                       Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -3765,7 +3770,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                       onTap:
                                                                           () async {
                                                                         // compra
-                                                                        final datePicked2Date =
+                                                                        final _datePicked2Date =
                                                                             await showDatePicker(
                                                                           context:
                                                                               context,
@@ -3798,15 +3803,15 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                           },
                                                                         );
 
-                                                                        if (datePicked2Date !=
+                                                                        if (_datePicked2Date !=
                                                                             null) {
                                                                           safeSetState(
                                                                               () {
                                                                             _model.datePicked2 =
                                                                                 DateTime(
-                                                                              datePicked2Date.year,
-                                                                              datePicked2Date.month,
-                                                                              datePicked2Date.day,
+                                                                              _datePicked2Date.year,
+                                                                              _datePicked2Date.month,
+                                                                              _datePicked2Date.day,
                                                                             );
                                                                           });
                                                                         }
@@ -3826,12 +3831,12 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                         ),
                                                                         child:
                                                                             Align(
-                                                                          alignment: const AlignmentDirectional(
+                                                                          alignment: AlignmentDirectional(
                                                                               -1.0,
                                                                               0.0),
                                                                           child:
                                                                               Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 10.0,
                                                                                 0.0,
                                                                                 0.0,
@@ -3862,7 +3867,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -3874,7 +3879,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -3908,7 +3913,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -3933,10 +3938,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           0.0,
                                                                           0.0,
@@ -3947,7 +3952,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             .classeInscricaoAdmissaoValueController ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: const [
+                                                                        options: [
                                                                           'Option 1'
                                                                         ],
                                                                         onChanged:
@@ -3984,7 +3989,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             2.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -4001,13 +4006,13 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         50.0,
                                                                         10.0,
@@ -4020,7 +4025,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     'Button pressed ...');
                                                               },
                                                               text: 'Adicionar',
-                                                              icon: const Icon(
+                                                              icon: Icon(
                                                                 Icons.add,
                                                                 size: 20.0,
                                                               ),
@@ -4028,14 +4033,14 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                   FFButtonOptions(
                                                                 width: 250.0,
                                                                 height: 50.0,
-                                                                padding: const EdgeInsetsDirectional
+                                                                padding: EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                                 iconPadding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -4062,7 +4067,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                 elevation: 3.0,
                                                                 borderSide:
-                                                                    const BorderSide(
+                                                                    BorderSide(
                                                                   color: Colors
                                                                       .transparent,
                                                                   width: 1.0,
@@ -4074,7 +4079,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(const SizedBox(
+                                                        ].divide(SizedBox(
                                                             height: 10.0)),
                                                       ),
                                                     ),
@@ -4091,7 +4096,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                               ),
                             ),
                           ),
-                        if (widget.telas == 'RegistroPostal')
+                        if (widget!.telas == 'RegistroPostal')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.75,
                             height: double.infinity,
@@ -4103,7 +4108,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                               ),
                             ),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 20.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -4112,7 +4117,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                     child: Column(
                                       children: [
                                         Align(
-                                          alignment: const Alignment(-1.0, 0),
+                                          alignment: Alignment(-1.0, 0),
                                           child: TabBar(
                                             isScrollable: true,
                                             labelColor:
@@ -4129,13 +4134,13 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                       fontSize: 20.0,
                                                       letterSpacing: 0.0,
                                                     ),
-                                            unselectedLabelStyle: const TextStyle(),
+                                            unselectedLabelStyle: TextStyle(),
                                             indicatorColor:
                                                 FlutterFlowTheme.of(context)
                                                     .tertiary,
                                             indicatorWeight: 1.0,
-                                            padding: const EdgeInsets.all(4.0),
-                                            tabs: const [
+                                            padding: EdgeInsets.all(4.0),
+                                            tabs: [
                                               Row(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
@@ -4219,10 +4224,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                       snapshot.data!;
 
                                                   return Container(
-                                                    decoration: const BoxDecoration(),
+                                                    decoration: BoxDecoration(),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsets.all(20.0),
+                                                          EdgeInsets.all(20.0),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -4248,7 +4253,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                 ),
                                                                 child: Padding(
                                                                   padding:
-                                                                      const EdgeInsets
+                                                                      EdgeInsets
                                                                           .all(
                                                                               6.0),
                                                                   child: Row(
@@ -4376,7 +4381,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               'IconButton pressed ...');
                                                                         },
                                                                       ),
-                                                                    ].divide(const SizedBox(
+                                                                    ].divide(SizedBox(
                                                                         width:
                                                                             10.0)),
                                                                   ),
@@ -4385,9 +4390,9 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                               Container(
                                                                 width: 250.0,
                                                                 decoration:
-                                                                    const BoxDecoration(),
+                                                                    BoxDecoration(),
                                                                 child: Padding(
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -4397,7 +4402,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                       Autocomplete<
                                                                           String>(
                                                                     initialValue:
-                                                                        const TextEditingValue(),
+                                                                        TextEditingValue(),
                                                                     optionsBuilder:
                                                                         (textEditingValue) {
                                                                       if (textEditingValue
@@ -4439,7 +4444,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                         textHighlightStyle:
-                                                                            const TextStyle(),
+                                                                            TextStyle(),
                                                                         elevation:
                                                                             4.0,
                                                                         optionBackgroundColor:
@@ -4485,29 +4490,31 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             (_) =>
                                                                                 EasyDebounce.debounce(
                                                                           '_model.textController12',
-                                                                          const Duration(
+                                                                          Duration(
                                                                               milliseconds: 2000),
                                                                           () async {
-                                                                            if (_model.textController12.text != '') {
+                                                                            if (_model.textController12.text != null &&
+                                                                                _model.textController12.text != '') {
                                                                               safeSetState(() {
                                                                                 _model.simpleSearchResults2 = TextSearch(
                                                                                   containerInventarioProdutosRecordList
                                                                                       .map(
                                                                                         (record) => TextSearchItem.fromTerms(record, [
-                                                                                          record.produtoCategoria,
-                                                                                          record.nomeProduto,
-                                                                                          record.produtoCodigo,
-                                                                                          record.filial
+                                                                                          record.produtoCategoria!,
+                                                                                          record.nomeProduto!,
+                                                                                          record.produtoCodigo!,
+                                                                                          record.filial!
                                                                                         ]),
                                                                                       )
                                                                                       .toList(),
                                                                                 ).search(_model.textController12.text).map((r) => r.object).take(20).toList();
+                                                                                ;
                                                                               });
                                                                             } else {
                                                                               context.goNamed(
                                                                                 'A01escola',
                                                                                 extra: <String, dynamic>{
-                                                                                  kTransitionInfoKey: const TransitionInfo(
+                                                                                  kTransitionInfoKey: TransitionInfo(
                                                                                     hasTransition: true,
                                                                                     transitionType: PageTransitionType.fade,
                                                                                     duration: Duration(milliseconds: 0),
@@ -4582,7 +4589,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                           filled:
                                                                               true,
                                                                           prefixIcon:
-                                                                              const Icon(
+                                                                              Icon(
                                                                             Icons.search_sharp,
                                                                           ),
                                                                         ),
@@ -4605,7 +4612,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           Expanded(
                                                             child: Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           10.0,
@@ -4797,7 +4804,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               selected,
                                                                               onSelectChanged) =>
                                                                           DataRow(
-                                                                        color: WidgetStateProperty
+                                                                        color: MaterialStateProperty
                                                                             .all(
                                                                           produtosListIndex % 2 == 0
                                                                               ? FlutterFlowTheme.of(context).secondaryBackground
@@ -4890,15 +4897,15 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                         context: context,
                                                                                         builder: (alertDialogContext) {
                                                                                           return AlertDialog(
-                                                                                            title: const Text('Deseja deletar essa filial?'),
+                                                                                            title: Text('Deseja deletar essa filial?'),
                                                                                             actions: [
                                                                                               TextButton(
                                                                                                 onPressed: () => Navigator.pop(alertDialogContext, false),
-                                                                                                child: const Text('Não, cancelar'),
+                                                                                                child: Text('Não, cancelar'),
                                                                                               ),
                                                                                               TextButton(
                                                                                                 onPressed: () => Navigator.pop(alertDialogContext, true),
-                                                                                                child: const Text('Sim, deletar Filial'),
+                                                                                                child: Text('Sim, deletar Filial'),
                                                                                               ),
                                                                                             ],
                                                                                           );
@@ -4911,7 +4918,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                     context.goNamed(
                                                                                       'A01escola',
                                                                                       extra: <String, dynamic>{
-                                                                                        kTransitionInfoKey: const TransitionInfo(
+                                                                                        kTransitionInfoKey: TransitionInfo(
                                                                                           hasTransition: true,
                                                                                           transitionType: PageTransitionType.fade,
                                                                                           duration: Duration(milliseconds: 0),
@@ -4921,7 +4928,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                   }
                                                                                 },
                                                                               ),
-                                                                            ].divide(const SizedBox(width: 10.0)),
+                                                                            ].divide(SizedBox(width: 10.0)),
                                                                           ),
                                                                         ]
                                                                             .map((c) =>
@@ -4995,10 +5002,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                 autovalidateMode:
                                                     AutovalidateMode.disabled,
                                                 child: Container(
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 20.0,
                                                                 0.0, 50.0),
                                                     child:
@@ -5012,7 +5019,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -5046,7 +5053,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -5071,10 +5078,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           0.0,
                                                                           0.0,
@@ -5085,7 +5092,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             .filialPostalValueController ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: const [
+                                                                        options: [
                                                                           'Option 1'
                                                                         ],
                                                                         onChanged:
@@ -5122,7 +5129,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             2.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -5139,7 +5146,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -5151,7 +5158,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -5185,7 +5192,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -5210,10 +5217,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           0.0,
                                                                           0.0,
@@ -5224,7 +5231,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             .tipoPostalValueController ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: const [
+                                                                        options: [
                                                                           'Despacho',
                                                                           'receber'
                                                                         ],
@@ -5262,7 +5269,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             2.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -5279,7 +5286,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -5291,7 +5298,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -5325,7 +5332,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -5350,10 +5357,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -5441,7 +5448,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -5457,7 +5464,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                             ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -5491,7 +5498,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -5516,10 +5523,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -5611,7 +5618,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -5627,7 +5634,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                             ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -5661,7 +5668,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -5686,10 +5693,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -5781,7 +5788,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -5791,7 +5798,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                   '')
                                                             Container(
                                                               decoration:
-                                                                  const BoxDecoration(),
+                                                                  BoxDecoration(),
                                                             ),
                                                           if (_model.filialPostalValue !=
                                                                   null &&
@@ -5805,7 +5812,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                             ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -5842,7 +5849,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -5867,10 +5874,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -5964,7 +5971,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -5976,7 +5983,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -6019,10 +6026,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -6116,7 +6123,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -6128,7 +6135,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -6162,7 +6169,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -6184,7 +6191,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                   flex: 3,
                                                                   child:
                                                                       Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -6207,7 +6214,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                       onTap:
                                                                           () async {
                                                                         // compra
-                                                                        final datePicked3Date =
+                                                                        final _datePicked3Date =
                                                                             await showDatePicker(
                                                                           context:
                                                                               context,
@@ -6240,15 +6247,15 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                           },
                                                                         );
 
-                                                                        if (datePicked3Date !=
+                                                                        if (_datePicked3Date !=
                                                                             null) {
                                                                           safeSetState(
                                                                               () {
                                                                             _model.datePicked3 =
                                                                                 DateTime(
-                                                                              datePicked3Date.year,
-                                                                              datePicked3Date.month,
-                                                                              datePicked3Date.day,
+                                                                              _datePicked3Date.year,
+                                                                              _datePicked3Date.month,
+                                                                              _datePicked3Date.day,
                                                                             );
                                                                           });
                                                                         }
@@ -6268,12 +6275,12 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                         ),
                                                                         child:
                                                                             Align(
-                                                                          alignment: const AlignmentDirectional(
+                                                                          alignment: AlignmentDirectional(
                                                                               -1.0,
                                                                               0.0),
                                                                           child:
                                                                               Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 10.0,
                                                                                 0.0,
                                                                                 0.0,
@@ -6304,7 +6311,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -6316,7 +6323,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -6350,7 +6357,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -6375,12 +6382,12 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Stack(
                                                                       children: [
                                                                         Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
                                                                               8.0,
                                                                               0.0,
                                                                               8.0,
@@ -6448,12 +6455,12 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                           ),
                                                                         ),
                                                                         Align(
-                                                                          alignment: const AlignmentDirectional(
+                                                                          alignment: AlignmentDirectional(
                                                                               1.0,
                                                                               0.0),
                                                                           child:
                                                                               Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 10.0,
@@ -6464,14 +6471,14 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                 print('Button pressed ...');
                                                                               },
                                                                               text: 'Selecionar Arquivo',
-                                                                              icon: const Icon(
+                                                                              icon: Icon(
                                                                                 Icons.upload_sharp,
                                                                                 size: 15.0,
                                                                               ),
                                                                               options: FFButtonOptions(
                                                                                 height: 40.0,
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                 color: FlutterFlowTheme.of(context).primary,
                                                                                 textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                       fontFamily: 'Manrope',
@@ -6479,7 +6486,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                                 elevation: 3.0,
-                                                                                borderSide: const BorderSide(
+                                                                                borderSide: BorderSide(
                                                                                   color: Colors.transparent,
                                                                                   width: 1.0,
                                                                                 ),
@@ -6492,7 +6499,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -6504,7 +6511,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -6538,7 +6545,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -6565,9 +6572,9 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     height:
                                                                         50.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     alignment:
-                                                                        const AlignmentDirectional(
+                                                                        AlignmentDirectional(
                                                                             -1.0,
                                                                             0.0),
                                                                     child: Switch
@@ -6578,7 +6585,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                           (newValue) async {
                                                                         setState(() =>
                                                                             _model.confidencialPostalValue =
-                                                                                newValue);
+                                                                                newValue!);
                                                                       },
                                                                       activeColor:
                                                                           FlutterFlowTheme.of(context)
@@ -6595,7 +6602,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -6607,7 +6614,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         50.0,
                                                                         10.0,
@@ -6620,7 +6627,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     'Button pressed ...');
                                                               },
                                                               text: 'Adicionar',
-                                                              icon: const Icon(
+                                                              icon: Icon(
                                                                 Icons.add,
                                                                 size: 20.0,
                                                               ),
@@ -6628,14 +6635,14 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                   FFButtonOptions(
                                                                 width: 250.0,
                                                                 height: 50.0,
-                                                                padding: const EdgeInsetsDirectional
+                                                                padding: EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                                 iconPadding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -6662,7 +6669,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                 elevation: 3.0,
                                                                 borderSide:
-                                                                    const BorderSide(
+                                                                    BorderSide(
                                                                   color: Colors
                                                                       .transparent,
                                                                   width: 1.0,
@@ -6674,7 +6681,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(const SizedBox(
+                                                        ].divide(SizedBox(
                                                             height: 10.0)),
                                                       ),
                                                     ),
@@ -6691,7 +6698,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                               ),
                             ),
                           ),
-                        if (widget.telas == 'RegistroChamadas')
+                        if (widget!.telas == 'RegistroChamadas')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.75,
                             height: double.infinity,
@@ -6703,7 +6710,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                               ),
                             ),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 20.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -6712,7 +6719,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                     child: Column(
                                       children: [
                                         Align(
-                                          alignment: const Alignment(-1.0, 0),
+                                          alignment: Alignment(-1.0, 0),
                                           child: TabBar(
                                             isScrollable: true,
                                             labelColor:
@@ -6729,13 +6736,13 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                       fontSize: 20.0,
                                                       letterSpacing: 0.0,
                                                     ),
-                                            unselectedLabelStyle: const TextStyle(),
+                                            unselectedLabelStyle: TextStyle(),
                                             indicatorColor:
                                                 FlutterFlowTheme.of(context)
                                                     .tertiary,
                                             indicatorWeight: 1.0,
-                                            padding: const EdgeInsets.all(4.0),
-                                            tabs: const [
+                                            padding: EdgeInsets.all(4.0),
+                                            tabs: [
                                               Row(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
@@ -6819,10 +6826,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                       snapshot.data!;
 
                                                   return Container(
-                                                    decoration: const BoxDecoration(),
+                                                    decoration: BoxDecoration(),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsets.all(20.0),
+                                                          EdgeInsets.all(20.0),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -6848,7 +6855,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                 ),
                                                                 child: Padding(
                                                                   padding:
-                                                                      const EdgeInsets
+                                                                      EdgeInsets
                                                                           .all(
                                                                               6.0),
                                                                   child: Row(
@@ -6976,7 +6983,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               'IconButton pressed ...');
                                                                         },
                                                                       ),
-                                                                    ].divide(const SizedBox(
+                                                                    ].divide(SizedBox(
                                                                         width:
                                                                             10.0)),
                                                                   ),
@@ -6985,9 +6992,9 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                               Container(
                                                                 width: 250.0,
                                                                 decoration:
-                                                                    const BoxDecoration(),
+                                                                    BoxDecoration(),
                                                                 child: Padding(
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -6997,7 +7004,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                       Autocomplete<
                                                                           String>(
                                                                     initialValue:
-                                                                        const TextEditingValue(),
+                                                                        TextEditingValue(),
                                                                     optionsBuilder:
                                                                         (textEditingValue) {
                                                                       if (textEditingValue
@@ -7039,7 +7046,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                         textHighlightStyle:
-                                                                            const TextStyle(),
+                                                                            TextStyle(),
                                                                         elevation:
                                                                             4.0,
                                                                         optionBackgroundColor:
@@ -7085,29 +7092,31 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             (_) =>
                                                                                 EasyDebounce.debounce(
                                                                           '_model.textController19',
-                                                                          const Duration(
+                                                                          Duration(
                                                                               milliseconds: 2000),
                                                                           () async {
-                                                                            if (_model.textController19.text != '') {
+                                                                            if (_model.textController19.text != null &&
+                                                                                _model.textController19.text != '') {
                                                                               safeSetState(() {
                                                                                 _model.simpleSearchResults3 = TextSearch(
                                                                                   containerInventarioProdutosRecordList
                                                                                       .map(
                                                                                         (record) => TextSearchItem.fromTerms(record, [
-                                                                                          record.produtoCategoria,
-                                                                                          record.nomeProduto,
-                                                                                          record.produtoCodigo,
-                                                                                          record.filial
+                                                                                          record.produtoCategoria!,
+                                                                                          record.nomeProduto!,
+                                                                                          record.produtoCodigo!,
+                                                                                          record.filial!
                                                                                         ]),
                                                                                       )
                                                                                       .toList(),
                                                                                 ).search(_model.textController19.text).map((r) => r.object).take(20).toList();
+                                                                                ;
                                                                               });
                                                                             } else {
                                                                               context.goNamed(
                                                                                 'A01escola',
                                                                                 extra: <String, dynamic>{
-                                                                                  kTransitionInfoKey: const TransitionInfo(
+                                                                                  kTransitionInfoKey: TransitionInfo(
                                                                                     hasTransition: true,
                                                                                     transitionType: PageTransitionType.fade,
                                                                                     duration: Duration(milliseconds: 0),
@@ -7182,7 +7191,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                           filled:
                                                                               true,
                                                                           prefixIcon:
-                                                                              const Icon(
+                                                                              Icon(
                                                                             Icons.search_sharp,
                                                                           ),
                                                                         ),
@@ -7205,7 +7214,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           Expanded(
                                                             child: Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           10.0,
@@ -7447,7 +7456,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               selected,
                                                                               onSelectChanged) =>
                                                                           DataRow(
-                                                                        color: WidgetStateProperty
+                                                                        color: MaterialStateProperty
                                                                             .all(
                                                                           produtosListIndex % 2 == 0
                                                                               ? FlutterFlowTheme.of(context).secondaryBackground
@@ -7561,15 +7570,15 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                         context: context,
                                                                                         builder: (alertDialogContext) {
                                                                                           return AlertDialog(
-                                                                                            title: const Text('Deseja deletar essa filial?'),
+                                                                                            title: Text('Deseja deletar essa filial?'),
                                                                                             actions: [
                                                                                               TextButton(
                                                                                                 onPressed: () => Navigator.pop(alertDialogContext, false),
-                                                                                                child: const Text('Não, cancelar'),
+                                                                                                child: Text('Não, cancelar'),
                                                                                               ),
                                                                                               TextButton(
                                                                                                 onPressed: () => Navigator.pop(alertDialogContext, true),
-                                                                                                child: const Text('Sim, deletar Filial'),
+                                                                                                child: Text('Sim, deletar Filial'),
                                                                                               ),
                                                                                             ],
                                                                                           );
@@ -7582,7 +7591,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                     context.goNamed(
                                                                                       'A01escola',
                                                                                       extra: <String, dynamic>{
-                                                                                        kTransitionInfoKey: const TransitionInfo(
+                                                                                        kTransitionInfoKey: TransitionInfo(
                                                                                           hasTransition: true,
                                                                                           transitionType: PageTransitionType.fade,
                                                                                           duration: Duration(milliseconds: 0),
@@ -7592,7 +7601,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                   }
                                                                                 },
                                                                               ),
-                                                                            ].divide(const SizedBox(width: 10.0)),
+                                                                            ].divide(SizedBox(width: 10.0)),
                                                                           ),
                                                                         ]
                                                                             .map((c) =>
@@ -7666,10 +7675,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                 autovalidateMode:
                                                     AutovalidateMode.disabled,
                                                 child: Container(
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 20.0,
                                                                 0.0, 50.0),
                                                     child:
@@ -7683,7 +7692,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -7717,7 +7726,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -7742,10 +7751,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           0.0,
                                                                           0.0,
@@ -7756,7 +7765,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             .filialChamadasValueController ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: const [
+                                                                        options: [
                                                                           'Option 1'
                                                                         ],
                                                                         onChanged:
@@ -7793,7 +7802,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             2.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -7810,7 +7819,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -7822,7 +7831,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -7856,7 +7865,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -7881,10 +7890,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           0.0,
                                                                           0.0,
@@ -7895,7 +7904,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             .tipoChamadaValueController ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: const [
+                                                                        options: [
                                                                           'extrovertida',
                                                                           'entrada'
                                                                         ],
@@ -7933,7 +7942,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             2.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -7950,7 +7959,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -7962,7 +7971,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -7996,7 +8005,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -8021,10 +8030,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           0.0,
                                                                           0.0,
@@ -8035,7 +8044,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             .propositoChamadasValueController ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: const [
+                                                                        options: [
                                                                           'opção 1'
                                                                         ],
                                                                         onChanged:
@@ -8072,7 +8081,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             2.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -8089,7 +8098,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -8101,7 +8110,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -8135,7 +8144,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -8160,10 +8169,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -8251,7 +8260,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -8267,7 +8276,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                             ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -8301,7 +8310,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -8326,10 +8335,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -8421,7 +8430,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -8437,7 +8446,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                             ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -8471,7 +8480,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -8493,7 +8502,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                   flex: 3,
                                                                   child:
                                                                       Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -8516,7 +8525,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                       onTap:
                                                                           () async {
                                                                         // compra
-                                                                        final datePicked4Date =
+                                                                        final _datePicked4Date =
                                                                             await showDatePicker(
                                                                           context:
                                                                               context,
@@ -8550,10 +8559,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                         );
 
                                                                         TimeOfDay?
-                                                                            datePicked4Time;
-                                                                        if (datePicked4Date !=
+                                                                            _datePicked4Time;
+                                                                        if (_datePicked4Date !=
                                                                             null) {
-                                                                          datePicked4Time =
+                                                                          _datePicked4Time =
                                                                               await showTimePicker(
                                                                             context:
                                                                                 context,
@@ -8583,19 +8592,19 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                           );
                                                                         }
 
-                                                                        if (datePicked4Date !=
+                                                                        if (_datePicked4Date !=
                                                                                 null &&
-                                                                            datePicked4Time !=
+                                                                            _datePicked4Time !=
                                                                                 null) {
                                                                           safeSetState(
                                                                               () {
                                                                             _model.datePicked4 =
                                                                                 DateTime(
-                                                                              datePicked4Date.year,
-                                                                              datePicked4Date.month,
-                                                                              datePicked4Date.day,
-                                                                              datePicked4Time!.hour,
-                                                                              datePicked4Time.minute,
+                                                                              _datePicked4Date.year,
+                                                                              _datePicked4Date.month,
+                                                                              _datePicked4Date.day,
+                                                                              _datePicked4Time!.hour,
+                                                                              _datePicked4Time.minute,
                                                                             );
                                                                           });
                                                                         }
@@ -8615,12 +8624,12 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                         ),
                                                                         child:
                                                                             Align(
-                                                                          alignment: const AlignmentDirectional(
+                                                                          alignment: AlignmentDirectional(
                                                                               -1.0,
                                                                               0.0),
                                                                           child:
                                                                               Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 10.0,
                                                                                 0.0,
                                                                                 0.0,
@@ -8651,7 +8660,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -8661,7 +8670,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                   '')
                                                             Container(
                                                               decoration:
-                                                                  const BoxDecoration(),
+                                                                  BoxDecoration(),
                                                             ),
                                                           if (_model.filialChamadasValue !=
                                                                   null &&
@@ -8675,7 +8684,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                             ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -8709,7 +8718,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -8731,7 +8740,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                   flex: 3,
                                                                   child:
                                                                       Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -8754,7 +8763,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                       onTap:
                                                                           () async {
                                                                         // compra
-                                                                        final datePicked5Date =
+                                                                        final _datePicked5Date =
                                                                             await showDatePicker(
                                                                           context:
                                                                               context,
@@ -8787,15 +8796,15 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                           },
                                                                         );
 
-                                                                        if (datePicked5Date !=
+                                                                        if (_datePicked5Date !=
                                                                             null) {
                                                                           safeSetState(
                                                                               () {
                                                                             _model.datePicked5 =
                                                                                 DateTime(
-                                                                              datePicked5Date.year,
-                                                                              datePicked5Date.month,
-                                                                              datePicked5Date.day,
+                                                                              _datePicked5Date.year,
+                                                                              _datePicked5Date.month,
+                                                                              _datePicked5Date.day,
                                                                             );
                                                                           });
                                                                         }
@@ -8815,12 +8824,12 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                         ),
                                                                         child:
                                                                             Align(
-                                                                          alignment: const AlignmentDirectional(
+                                                                          alignment: AlignmentDirectional(
                                                                               -1.0,
                                                                               0.0),
                                                                           child:
                                                                               Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 10.0,
                                                                                 0.0,
                                                                                 0.0,
@@ -8851,7 +8860,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -8863,7 +8872,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -8906,10 +8915,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -9003,7 +9012,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -9015,7 +9024,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         50.0,
                                                                         10.0,
@@ -9028,7 +9037,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     'Button pressed ...');
                                                               },
                                                               text: 'Adicionar',
-                                                              icon: const Icon(
+                                                              icon: Icon(
                                                                 Icons.add,
                                                                 size: 20.0,
                                                               ),
@@ -9036,14 +9045,14 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                   FFButtonOptions(
                                                                 width: 250.0,
                                                                 height: 50.0,
-                                                                padding: const EdgeInsetsDirectional
+                                                                padding: EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                                 iconPadding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -9070,7 +9079,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                 elevation: 3.0,
                                                                 borderSide:
-                                                                    const BorderSide(
+                                                                    BorderSide(
                                                                   color: Colors
                                                                       .transparent,
                                                                   width: 1.0,
@@ -9082,7 +9091,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(const SizedBox(
+                                                        ].divide(SizedBox(
                                                             height: 10.0)),
                                                       ),
                                                     ),
@@ -9099,7 +9108,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                               ),
                             ),
                           ),
-                        if (widget.telas == 'RegistroVisitas')
+                        if (widget!.telas == 'RegistroVisitas')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.75,
                             height: double.infinity,
@@ -9111,7 +9120,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                               ),
                             ),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 20.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -9120,7 +9129,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                     child: Column(
                                       children: [
                                         Align(
-                                          alignment: const Alignment(-1.0, 0),
+                                          alignment: Alignment(-1.0, 0),
                                           child: TabBar(
                                             isScrollable: true,
                                             labelColor:
@@ -9137,13 +9146,13 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                       fontSize: 20.0,
                                                       letterSpacing: 0.0,
                                                     ),
-                                            unselectedLabelStyle: const TextStyle(),
+                                            unselectedLabelStyle: TextStyle(),
                                             indicatorColor:
                                                 FlutterFlowTheme.of(context)
                                                     .tertiary,
                                             indicatorWeight: 1.0,
-                                            padding: const EdgeInsets.all(4.0),
-                                            tabs: const [
+                                            padding: EdgeInsets.all(4.0),
+                                            tabs: [
                                               Row(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
@@ -9225,10 +9234,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                       snapshot.data!;
 
                                                   return Container(
-                                                    decoration: const BoxDecoration(),
+                                                    decoration: BoxDecoration(),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsets.all(20.0),
+                                                          EdgeInsets.all(20.0),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -9254,7 +9263,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                 ),
                                                                 child: Padding(
                                                                   padding:
-                                                                      const EdgeInsets
+                                                                      EdgeInsets
                                                                           .all(
                                                                               6.0),
                                                                   child: Row(
@@ -9382,7 +9391,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               'IconButton pressed ...');
                                                                         },
                                                                       ),
-                                                                    ].divide(const SizedBox(
+                                                                    ].divide(SizedBox(
                                                                         width:
                                                                             10.0)),
                                                                   ),
@@ -9391,9 +9400,9 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                               Container(
                                                                 width: 250.0,
                                                                 decoration:
-                                                                    const BoxDecoration(),
+                                                                    BoxDecoration(),
                                                                 child: Padding(
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -9403,7 +9412,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                       Autocomplete<
                                                                           String>(
                                                                     initialValue:
-                                                                        const TextEditingValue(),
+                                                                        TextEditingValue(),
                                                                     optionsBuilder:
                                                                         (textEditingValue) {
                                                                       if (textEditingValue
@@ -9445,7 +9454,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                         textHighlightStyle:
-                                                                            const TextStyle(),
+                                                                            TextStyle(),
                                                                         elevation:
                                                                             4.0,
                                                                         optionBackgroundColor:
@@ -9491,29 +9500,31 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             (_) =>
                                                                                 EasyDebounce.debounce(
                                                                           '_model.textController23',
-                                                                          const Duration(
+                                                                          Duration(
                                                                               milliseconds: 2000),
                                                                           () async {
-                                                                            if (_model.textController23.text != '') {
+                                                                            if (_model.textController23.text != null &&
+                                                                                _model.textController23.text != '') {
                                                                               safeSetState(() {
                                                                                 _model.simpleSearchResults4 = TextSearch(
                                                                                   containerInventarioProdutosRecordList
                                                                                       .map(
                                                                                         (record) => TextSearchItem.fromTerms(record, [
-                                                                                          record.produtoCategoria,
-                                                                                          record.nomeProduto,
-                                                                                          record.produtoCodigo,
-                                                                                          record.filial
+                                                                                          record.produtoCategoria!,
+                                                                                          record.nomeProduto!,
+                                                                                          record.produtoCodigo!,
+                                                                                          record.filial!
                                                                                         ]),
                                                                                       )
                                                                                       .toList(),
                                                                                 ).search(_model.textController23.text).map((r) => r.object).take(20).toList();
+                                                                                ;
                                                                               });
                                                                             } else {
                                                                               context.goNamed(
                                                                                 'A01escola',
                                                                                 extra: <String, dynamic>{
-                                                                                  kTransitionInfoKey: const TransitionInfo(
+                                                                                  kTransitionInfoKey: TransitionInfo(
                                                                                     hasTransition: true,
                                                                                     transitionType: PageTransitionType.fade,
                                                                                     duration: Duration(milliseconds: 0),
@@ -9607,7 +9618,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           Expanded(
                                                             child: Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           10.0,
@@ -9849,7 +9860,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               selected,
                                                                               onSelectChanged) =>
                                                                           DataRow(
-                                                                        color: WidgetStateProperty
+                                                                        color: MaterialStateProperty
                                                                             .all(
                                                                           produtosListIndex % 2 == 0
                                                                               ? FlutterFlowTheme.of(context).secondaryBackground
@@ -9963,15 +9974,15 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                         context: context,
                                                                                         builder: (alertDialogContext) {
                                                                                           return AlertDialog(
-                                                                                            title: const Text('Deseja deletar essa filial?'),
+                                                                                            title: Text('Deseja deletar essa filial?'),
                                                                                             actions: [
                                                                                               TextButton(
                                                                                                 onPressed: () => Navigator.pop(alertDialogContext, false),
-                                                                                                child: const Text('Não, cancelar'),
+                                                                                                child: Text('Não, cancelar'),
                                                                                               ),
                                                                                               TextButton(
                                                                                                 onPressed: () => Navigator.pop(alertDialogContext, true),
-                                                                                                child: const Text('Sim, deletar Filial'),
+                                                                                                child: Text('Sim, deletar Filial'),
                                                                                               ),
                                                                                             ],
                                                                                           );
@@ -9984,7 +9995,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                     context.goNamed(
                                                                                       'A01escola',
                                                                                       extra: <String, dynamic>{
-                                                                                        kTransitionInfoKey: const TransitionInfo(
+                                                                                        kTransitionInfoKey: TransitionInfo(
                                                                                           hasTransition: true,
                                                                                           transitionType: PageTransitionType.fade,
                                                                                           duration: Duration(milliseconds: 0),
@@ -9994,7 +10005,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                   }
                                                                                 },
                                                                               ),
-                                                                            ].divide(const SizedBox(width: 10.0)),
+                                                                            ].divide(SizedBox(width: 10.0)),
                                                                           ),
                                                                         ]
                                                                             .map((c) =>
@@ -10068,10 +10079,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                 autovalidateMode:
                                                     AutovalidateMode.disabled,
                                                 child: Container(
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 20.0,
                                                                 0.0, 50.0),
                                                     child:
@@ -10085,7 +10096,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -10119,7 +10130,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -10144,10 +10155,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           0.0,
                                                                           0.0,
@@ -10158,7 +10169,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             .filialVisitaValueController1 ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: const [
+                                                                        options: [
                                                                           'Option 1'
                                                                         ],
                                                                         onChanged:
@@ -10195,7 +10206,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             2.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -10212,7 +10223,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -10224,7 +10235,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -10258,7 +10269,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -10283,10 +10294,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           0.0,
                                                                           0.0,
@@ -10297,7 +10308,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             .obejtivoVisitaValueController1 ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: const [
+                                                                        options: [
                                                                           'extrovertida',
                                                                           'entrada'
                                                                         ],
@@ -10335,7 +10346,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             2.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -10352,7 +10363,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -10364,7 +10375,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -10398,7 +10409,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -10423,10 +10434,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -10514,7 +10525,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -10530,7 +10541,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                             ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -10564,7 +10575,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -10589,10 +10600,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -10684,7 +10695,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -10704,11 +10715,11 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                   '')
                                                             Container(
                                                               decoration:
-                                                                  const BoxDecoration(),
+                                                                  BoxDecoration(),
                                                             ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -10742,7 +10753,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -10764,7 +10775,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                   flex: 3,
                                                                   child:
                                                                       Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -10787,7 +10798,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                       onTap:
                                                                           () async {
                                                                         // compra
-                                                                        final datePicked6Date =
+                                                                        final _datePicked6Date =
                                                                             await showDatePicker(
                                                                           context:
                                                                               context,
@@ -10820,15 +10831,15 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                           },
                                                                         );
 
-                                                                        if (datePicked6Date !=
+                                                                        if (_datePicked6Date !=
                                                                             null) {
                                                                           safeSetState(
                                                                               () {
                                                                             _model.datePicked6 =
                                                                                 DateTime(
-                                                                              datePicked6Date.year,
-                                                                              datePicked6Date.month,
-                                                                              datePicked6Date.day,
+                                                                              _datePicked6Date.year,
+                                                                              _datePicked6Date.month,
+                                                                              _datePicked6Date.day,
                                                                             );
                                                                           });
                                                                         }
@@ -10848,12 +10859,12 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                         ),
                                                                         child:
                                                                             Align(
-                                                                          alignment: const AlignmentDirectional(
+                                                                          alignment: AlignmentDirectional(
                                                                               -1.0,
                                                                               0.0),
                                                                           child:
                                                                               Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 10.0,
                                                                                 0.0,
                                                                                 0.0,
@@ -10884,13 +10895,13 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -10924,7 +10935,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -10946,7 +10957,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                   flex: 3,
                                                                   child:
                                                                       Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -10970,7 +10981,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                           () async {
                                                                         // compra
 
-                                                                        final datePicked7Time =
+                                                                        final _datePicked7Time =
                                                                             await showTimePicker(
                                                                           context:
                                                                               context,
@@ -10998,7 +11009,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             );
                                                                           },
                                                                         );
-                                                                        if (datePicked7Time !=
+                                                                        if (_datePicked7Time !=
                                                                             null) {
                                                                           safeSetState(
                                                                               () {
@@ -11007,8 +11018,8 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               getCurrentTimestamp.year,
                                                                               getCurrentTimestamp.month,
                                                                               getCurrentTimestamp.day,
-                                                                              datePicked7Time.hour,
-                                                                              datePicked7Time.minute,
+                                                                              _datePicked7Time.hour,
+                                                                              _datePicked7Time.minute,
                                                                             );
                                                                           });
                                                                         }
@@ -11028,12 +11039,12 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                         ),
                                                                         child:
                                                                             Align(
-                                                                          alignment: const AlignmentDirectional(
+                                                                          alignment: AlignmentDirectional(
                                                                               -1.0,
                                                                               0.0),
                                                                           child:
                                                                               Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 10.0,
                                                                                 0.0,
                                                                                 0.0,
@@ -11064,13 +11075,13 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -11104,7 +11115,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -11126,7 +11137,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                   flex: 3,
                                                                   child:
                                                                       Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -11150,7 +11161,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                           () async {
                                                                         // compra
 
-                                                                        final datePicked8Time =
+                                                                        final _datePicked8Time =
                                                                             await showTimePicker(
                                                                           context:
                                                                               context,
@@ -11178,7 +11189,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             );
                                                                           },
                                                                         );
-                                                                        if (datePicked8Time !=
+                                                                        if (_datePicked8Time !=
                                                                             null) {
                                                                           safeSetState(
                                                                               () {
@@ -11187,8 +11198,8 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               getCurrentTimestamp.year,
                                                                               getCurrentTimestamp.month,
                                                                               getCurrentTimestamp.day,
-                                                                              datePicked8Time.hour,
-                                                                              datePicked8Time.minute,
+                                                                              _datePicked8Time.hour,
+                                                                              _datePicked8Time.minute,
                                                                             );
                                                                           });
                                                                         }
@@ -11208,12 +11219,12 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                         ),
                                                                         child:
                                                                             Align(
-                                                                          alignment: const AlignmentDirectional(
+                                                                          alignment: AlignmentDirectional(
                                                                               -1.0,
                                                                               0.0),
                                                                           child:
                                                                               Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 10.0,
                                                                                 0.0,
                                                                                 0.0,
@@ -11244,7 +11255,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -11260,7 +11271,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                             ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -11294,7 +11305,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -11319,10 +11330,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -11414,7 +11425,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -11426,7 +11437,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -11460,7 +11471,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -11485,10 +11496,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -11580,7 +11591,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -11592,7 +11603,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -11626,7 +11637,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -11651,10 +11662,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -11746,7 +11757,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -11758,7 +11769,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -11801,10 +11812,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -11898,7 +11909,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -11910,7 +11921,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         50.0,
                                                                         10.0,
@@ -11923,7 +11934,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     'Button pressed ...');
                                                               },
                                                               text: 'Adicionar',
-                                                              icon: const Icon(
+                                                              icon: Icon(
                                                                 Icons.add,
                                                                 size: 20.0,
                                                               ),
@@ -11931,14 +11942,14 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                   FFButtonOptions(
                                                                 width: 250.0,
                                                                 height: 50.0,
-                                                                padding: const EdgeInsetsDirectional
+                                                                padding: EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                                 iconPadding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -11965,7 +11976,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                 elevation: 3.0,
                                                                 borderSide:
-                                                                    const BorderSide(
+                                                                    BorderSide(
                                                                   color: Colors
                                                                       .transparent,
                                                                   width: 1.0,
@@ -11977,7 +11988,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(const SizedBox(
+                                                        ].divide(SizedBox(
                                                             height: 10.0)),
                                                       ),
                                                     ),
@@ -11994,7 +12005,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                               ),
                             ),
                           ),
-                        if (widget.telas == 'reclamacoes')
+                        if (widget!.telas == 'reclamacoes')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.75,
                             height: double.infinity,
@@ -12006,7 +12017,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                               ),
                             ),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 20.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -12015,7 +12026,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                     child: Column(
                                       children: [
                                         Align(
-                                          alignment: const Alignment(-1.0, 0),
+                                          alignment: Alignment(-1.0, 0),
                                           child: TabBar(
                                             isScrollable: true,
                                             labelColor:
@@ -12032,13 +12043,13 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                       fontSize: 20.0,
                                                       letterSpacing: 0.0,
                                                     ),
-                                            unselectedLabelStyle: const TextStyle(),
+                                            unselectedLabelStyle: TextStyle(),
                                             indicatorColor:
                                                 FlutterFlowTheme.of(context)
                                                     .tertiary,
                                             indicatorWeight: 1.0,
-                                            padding: const EdgeInsets.all(4.0),
-                                            tabs: const [
+                                            padding: EdgeInsets.all(4.0),
+                                            tabs: [
                                               Row(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
@@ -12122,10 +12133,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                       snapshot.data!;
 
                                                   return Container(
-                                                    decoration: const BoxDecoration(),
+                                                    decoration: BoxDecoration(),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsets.all(20.0),
+                                                          EdgeInsets.all(20.0),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -12151,7 +12162,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                 ),
                                                                 child: Padding(
                                                                   padding:
-                                                                      const EdgeInsets
+                                                                      EdgeInsets
                                                                           .all(
                                                                               6.0),
                                                                   child: Row(
@@ -12279,7 +12290,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               'IconButton pressed ...');
                                                                         },
                                                                       ),
-                                                                    ].divide(const SizedBox(
+                                                                    ].divide(SizedBox(
                                                                         width:
                                                                             10.0)),
                                                                   ),
@@ -12288,9 +12299,9 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                               Container(
                                                                 width: 250.0,
                                                                 decoration:
-                                                                    const BoxDecoration(),
+                                                                    BoxDecoration(),
                                                                 child: Padding(
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -12300,7 +12311,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                       Autocomplete<
                                                                           String>(
                                                                     initialValue:
-                                                                        const TextEditingValue(),
+                                                                        TextEditingValue(),
                                                                     optionsBuilder:
                                                                         (textEditingValue) {
                                                                       if (textEditingValue
@@ -12342,7 +12353,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                         textHighlightStyle:
-                                                                            const TextStyle(),
+                                                                            TextStyle(),
                                                                         elevation:
                                                                             4.0,
                                                                         optionBackgroundColor:
@@ -12388,29 +12399,31 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             (_) =>
                                                                                 EasyDebounce.debounce(
                                                                           '_model.textController30',
-                                                                          const Duration(
+                                                                          Duration(
                                                                               milliseconds: 2000),
                                                                           () async {
-                                                                            if (_model.textController30.text != '') {
+                                                                            if (_model.textController30.text != null &&
+                                                                                _model.textController30.text != '') {
                                                                               safeSetState(() {
                                                                                 _model.simpleSearchResults5 = TextSearch(
                                                                                   containerInventarioProdutosRecordList
                                                                                       .map(
                                                                                         (record) => TextSearchItem.fromTerms(record, [
-                                                                                          record.produtoCategoria,
-                                                                                          record.nomeProduto,
-                                                                                          record.produtoCodigo,
-                                                                                          record.filial
+                                                                                          record.produtoCategoria!,
+                                                                                          record.nomeProduto!,
+                                                                                          record.produtoCodigo!,
+                                                                                          record.filial!
                                                                                         ]),
                                                                                       )
                                                                                       .toList(),
                                                                                 ).search(_model.textController30.text).map((r) => r.object).take(20).toList();
+                                                                                ;
                                                                               });
                                                                             } else {
                                                                               context.goNamed(
                                                                                 'A01escola',
                                                                                 extra: <String, dynamic>{
-                                                                                  kTransitionInfoKey: const TransitionInfo(
+                                                                                  kTransitionInfoKey: TransitionInfo(
                                                                                     hasTransition: true,
                                                                                     transitionType: PageTransitionType.fade,
                                                                                     duration: Duration(milliseconds: 0),
@@ -12504,7 +12517,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           Expanded(
                                                             child: Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           10.0,
@@ -12712,7 +12725,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               selected,
                                                                               onSelectChanged) =>
                                                                           DataRow(
-                                                                        color: WidgetStateProperty
+                                                                        color: MaterialStateProperty
                                                                             .all(
                                                                           produtosListIndex % 2 == 0
                                                                               ? FlutterFlowTheme.of(context).secondaryBackground
@@ -12812,15 +12825,15 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                         context: context,
                                                                                         builder: (alertDialogContext) {
                                                                                           return AlertDialog(
-                                                                                            title: const Text('Deseja deletar essa filial?'),
+                                                                                            title: Text('Deseja deletar essa filial?'),
                                                                                             actions: [
                                                                                               TextButton(
                                                                                                 onPressed: () => Navigator.pop(alertDialogContext, false),
-                                                                                                child: const Text('Não, cancelar'),
+                                                                                                child: Text('Não, cancelar'),
                                                                                               ),
                                                                                               TextButton(
                                                                                                 onPressed: () => Navigator.pop(alertDialogContext, true),
-                                                                                                child: const Text('Sim, deletar Filial'),
+                                                                                                child: Text('Sim, deletar Filial'),
                                                                                               ),
                                                                                             ],
                                                                                           );
@@ -12833,7 +12846,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                     context.goNamed(
                                                                                       'A01escola',
                                                                                       extra: <String, dynamic>{
-                                                                                        kTransitionInfoKey: const TransitionInfo(
+                                                                                        kTransitionInfoKey: TransitionInfo(
                                                                                           hasTransition: true,
                                                                                           transitionType: PageTransitionType.fade,
                                                                                           duration: Duration(milliseconds: 0),
@@ -12843,7 +12856,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                   }
                                                                                 },
                                                                               ),
-                                                                            ].divide(const SizedBox(width: 10.0)),
+                                                                            ].divide(SizedBox(width: 10.0)),
                                                                           ),
                                                                         ]
                                                                             .map((c) =>
@@ -12917,10 +12930,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                 autovalidateMode:
                                                     AutovalidateMode.disabled,
                                                 child: Container(
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 20.0,
                                                                 0.0, 50.0),
                                                     child:
@@ -12934,7 +12947,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -12968,7 +12981,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -12993,10 +13006,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           0.0,
                                                                           0.0,
@@ -13007,7 +13020,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             .filialVisitaValueController2 ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: const [
+                                                                        options: [
                                                                           'Option 1'
                                                                         ],
                                                                         onChanged:
@@ -13044,7 +13057,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             2.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -13061,7 +13074,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -13073,7 +13086,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -13107,7 +13120,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -13132,10 +13145,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           0.0,
                                                                           0.0,
@@ -13146,7 +13159,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             .obejtivoVisitaValueController2 ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: const [
+                                                                        options: [
                                                                           'extrovertida',
                                                                           'entrada'
                                                                         ],
@@ -13182,7 +13195,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             2.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -13199,7 +13212,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -13211,7 +13224,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -13245,7 +13258,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -13270,10 +13283,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           0.0,
                                                                           0.0,
@@ -13284,7 +13297,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             .obejtivoVisitaValueController3 ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: const [
+                                                                        options: [
                                                                           'extrovertida',
                                                                           'entrada'
                                                                         ],
@@ -13320,7 +13333,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             2.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -13337,7 +13350,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -13349,7 +13362,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -13383,7 +13396,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -13408,10 +13421,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -13499,7 +13512,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -13515,7 +13528,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                             ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -13549,7 +13562,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -13574,10 +13587,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -13669,7 +13682,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -13689,11 +13702,11 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                   '')
                                                             Container(
                                                               decoration:
-                                                                  const BoxDecoration(),
+                                                                  BoxDecoration(),
                                                             ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -13736,10 +13749,10 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -13833,7 +13846,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -13849,7 +13862,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                             ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -13883,7 +13896,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -13905,7 +13918,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                   flex: 3,
                                                                   child:
                                                                       Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -13928,7 +13941,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                       onTap:
                                                                           () async {
                                                                         // compra
-                                                                        final datePicked9Date =
+                                                                        final _datePicked9Date =
                                                                             await showDatePicker(
                                                                           context:
                                                                               context,
@@ -13961,15 +13974,15 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                           },
                                                                         );
 
-                                                                        if (datePicked9Date !=
+                                                                        if (_datePicked9Date !=
                                                                             null) {
                                                                           safeSetState(
                                                                               () {
                                                                             _model.datePicked9 =
                                                                                 DateTime(
-                                                                              datePicked9Date.year,
-                                                                              datePicked9Date.month,
-                                                                              datePicked9Date.day,
+                                                                              _datePicked9Date.year,
+                                                                              _datePicked9Date.month,
+                                                                              _datePicked9Date.day,
                                                                             );
                                                                           });
                                                                         }
@@ -13989,12 +14002,12 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                         ),
                                                                         child:
                                                                             Align(
-                                                                          alignment: const AlignmentDirectional(
+                                                                          alignment: AlignmentDirectional(
                                                                               -1.0,
                                                                               0.0),
                                                                           child:
                                                                               Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 10.0,
                                                                                 0.0,
                                                                                 0.0,
@@ -14025,7 +14038,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -14037,7 +14050,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -14071,7 +14084,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -14096,12 +14109,12 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Stack(
                                                                       children: [
                                                                         Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
                                                                               8.0,
                                                                               0.0,
                                                                               8.0,
@@ -14169,12 +14182,12 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                           ),
                                                                         ),
                                                                         Align(
-                                                                          alignment: const AlignmentDirectional(
+                                                                          alignment: AlignmentDirectional(
                                                                               1.0,
                                                                               0.0),
                                                                           child:
                                                                               Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 10.0,
@@ -14185,14 +14198,14 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                 print('Button pressed ...');
                                                                               },
                                                                               text: 'Selecionar Arquivo',
-                                                                              icon: const Icon(
+                                                                              icon: Icon(
                                                                                 Icons.upload_sharp,
                                                                                 size: 15.0,
                                                                               ),
                                                                               options: FFButtonOptions(
                                                                                 height: 40.0,
-                                                                                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                 color: FlutterFlowTheme.of(context).primary,
                                                                                 textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                       fontFamily: 'Manrope',
@@ -14200,7 +14213,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                                 elevation: 3.0,
-                                                                                borderSide: const BorderSide(
+                                                                                borderSide: BorderSide(
                                                                                   color: Colors.transparent,
                                                                                   width: 1.0,
                                                                                 ),
@@ -14213,7 +14226,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -14225,7 +14238,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         50.0,
                                                                         10.0,
@@ -14238,7 +14251,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     'Button pressed ...');
                                                               },
                                                               text: 'Adicionar',
-                                                              icon: const Icon(
+                                                              icon: Icon(
                                                                 Icons.add,
                                                                 size: 20.0,
                                                               ),
@@ -14246,14 +14259,14 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                   FFButtonOptions(
                                                                 width: 250.0,
                                                                 height: 50.0,
-                                                                padding: const EdgeInsetsDirectional
+                                                                padding: EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                                 iconPadding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -14280,7 +14293,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     ),
                                                                 elevation: 3.0,
                                                                 borderSide:
-                                                                    const BorderSide(
+                                                                    BorderSide(
                                                                   color: Colors
                                                                       .transparent,
                                                                   width: 1.0,
@@ -14292,7 +14305,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(const SizedBox(
+                                                        ].divide(SizedBox(
                                                             height: 10.0)),
                                                       ),
                                                     ),
@@ -14309,7 +14322,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                               ),
                             ),
                           ),
-                        if (widget.telas == 'configRecepcao')
+                        if (widget!.telas == 'configRecepcao')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.75,
                             height: double.infinity,
@@ -14321,7 +14334,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                               ),
                             ),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 20.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -14330,7 +14343,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                     child: Column(
                                       children: [
                                         Align(
-                                          alignment: const Alignment(-1.0, 0),
+                                          alignment: Alignment(-1.0, 0),
                                           child: TabBar(
                                             isScrollable: true,
                                             labelColor:
@@ -14347,13 +14360,13 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                       fontSize: 18.0,
                                                       letterSpacing: 0.0,
                                                     ),
-                                            unselectedLabelStyle: const TextStyle(),
+                                            unselectedLabelStyle: TextStyle(),
                                             indicatorColor:
                                                 FlutterFlowTheme.of(context)
                                                     .tertiary,
                                             indicatorWeight: 1.0,
-                                            padding: const EdgeInsets.all(4.0),
-                                            tabs: const [
+                                            padding: EdgeInsets.all(4.0),
+                                            tabs: [
                                               Row(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
@@ -14485,7 +14498,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                   ),
                                                 ),
                                                 child: Padding(
-                                                  padding: const EdgeInsets.all(20.0),
+                                                  padding: EdgeInsets.all(20.0),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -14530,7 +14543,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                         .disabled,
                                                                 child: Padding(
                                                                   padding:
-                                                                      const EdgeInsets
+                                                                      EdgeInsets
                                                                           .all(
                                                                               10.0),
                                                                   child: Column(
@@ -14558,7 +14571,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                   letterSpacing: 0.0,
                                                                                 ),
                                                                           ),
-                                                                        ].divide(const SizedBox(width: 6.0)),
+                                                                        ].divide(SizedBox(width: 6.0)),
                                                                       ),
                                                                       Divider(
                                                                         thickness:
@@ -14567,7 +14580,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             .tertiary,
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             16.0,
                                                                             0.0,
@@ -14578,7 +14591,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               MainAxisSize.max,
                                                                           children: [
                                                                             Align(
-                                                                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                              alignment: AlignmentDirectional(-1.0, 0.0),
                                                                               child: Text(
                                                                                 'Filial',
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -14588,7 +14601,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                              padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                               child: FaIcon(
                                                                                 FontAwesomeIcons.asterisk,
                                                                                 color: FlutterFlowTheme.of(context).error,
@@ -14599,7 +14612,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                         ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             6.0,
                                                                             0.0,
@@ -14608,7 +14621,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             String>(
                                                                           controller: _model.filalReferenciaValueController ??=
                                                                               FormFieldController<String>(null),
-                                                                          options: const [
+                                                                          options: [
                                                                             'Option 1'
                                                                           ],
                                                                           onChanged: (val) =>
@@ -14641,7 +14654,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               2.0,
                                                                           borderRadius:
                                                                               8.0,
-                                                                          margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                          margin: EdgeInsetsDirectional.fromSTEB(
                                                                               16.0,
                                                                               4.0,
                                                                               16.0,
@@ -14657,7 +14670,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                         ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             16.0,
                                                                             0.0,
@@ -14668,7 +14681,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               MainAxisSize.max,
                                                                           children: [
                                                                             Align(
-                                                                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                              alignment: AlignmentDirectional(-1.0, 0.0),
                                                                               child: Text(
                                                                                 'Nome',
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -14678,7 +14691,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                              padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                               child: FaIcon(
                                                                                 FontAwesomeIcons.asterisk,
                                                                                 color: FlutterFlowTheme.of(context).error,
@@ -14689,7 +14702,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                         ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             6.0,
                                                                             0.0,
@@ -14764,12 +14777,12 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                         ),
                                                                       ),
                                                                       Align(
-                                                                        alignment: const AlignmentDirectional(
+                                                                        alignment: AlignmentDirectional(
                                                                             1.0,
                                                                             0.0),
                                                                         child:
                                                                             Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               20.0,
                                                                               0.0,
@@ -14783,15 +14796,15 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             text:
                                                                                 'Adicionar',
                                                                             icon:
-                                                                                const Icon(
+                                                                                Icon(
                                                                               Icons.add,
                                                                               size: 15.0,
                                                                             ),
                                                                             options:
                                                                                 FFButtonOptions(
                                                                               height: 40.0,
-                                                                              padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                              padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                               color: FlutterFlowTheme.of(context).secondary,
                                                                               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                     fontFamily: 'Manrope',
@@ -14799,7 +14812,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                     letterSpacing: 0.0,
                                                                                   ),
                                                                               elevation: 3.0,
-                                                                              borderSide: const BorderSide(
+                                                                              borderSide: BorderSide(
                                                                                 color: Colors.transparent,
                                                                                 width: 1.0,
                                                                               ),
@@ -14872,7 +14885,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     child:
                                                                         Padding(
                                                                       padding:
-                                                                          const EdgeInsets.all(
+                                                                          EdgeInsets.all(
                                                                               10.0),
                                                                       child:
                                                                           Column(
@@ -14897,7 +14910,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                               ),
-                                                                            ].divide(const SizedBox(width: 6.0)),
+                                                                            ].divide(SizedBox(width: 6.0)),
                                                                           ),
                                                                           Divider(
                                                                             thickness:
@@ -14980,7 +14993,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                     ),
                                                                                   ],
                                                                                   dataRowBuilder: (categoriaListItem, categoriaListIndex, selected, onSelectChanged) => DataRow(
-                                                                                    color: WidgetStateProperty.all(
+                                                                                    color: MaterialStateProperty.all(
                                                                                       categoriaListIndex % 2 == 0 ? FlutterFlowTheme.of(context).secondaryBackground : FlutterFlowTheme.of(context).primaryBackground,
                                                                                     ),
                                                                                     cells: [
@@ -15036,7 +15049,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                               print('IconButton pressed ...');
                                                                                             },
                                                                                           ),
-                                                                                        ].divide(const SizedBox(width: 10.0)),
+                                                                                        ].divide(SizedBox(width: 10.0)),
                                                                                       ),
                                                                                     ].map((c) => DataCell(c)).toList(),
                                                                                   ),
@@ -15075,7 +15088,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                 },
                                                               ),
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 10.0)),
                                                         ),
                                                       ),
@@ -15100,7 +15113,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                   ),
                                                 ),
                                                 child: Padding(
-                                                  padding: const EdgeInsets.all(20.0),
+                                                  padding: EdgeInsets.all(20.0),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -15145,7 +15158,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                         .disabled,
                                                                 child: Padding(
                                                                   padding:
-                                                                      const EdgeInsets
+                                                                      EdgeInsets
                                                                           .all(
                                                                               10.0),
                                                                   child: Column(
@@ -15173,7 +15186,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                   letterSpacing: 0.0,
                                                                                 ),
                                                                           ),
-                                                                        ].divide(const SizedBox(width: 6.0)),
+                                                                        ].divide(SizedBox(width: 6.0)),
                                                                       ),
                                                                       Divider(
                                                                         thickness:
@@ -15182,7 +15195,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             .tertiary,
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             16.0,
                                                                             0.0,
@@ -15193,7 +15206,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               MainAxisSize.max,
                                                                           children: [
                                                                             Align(
-                                                                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                              alignment: AlignmentDirectional(-1.0, 0.0),
                                                                               child: Text(
                                                                                 'Filial',
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -15203,7 +15216,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                              padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                               child: FaIcon(
                                                                                 FontAwesomeIcons.asterisk,
                                                                                 color: FlutterFlowTheme.of(context).error,
@@ -15214,7 +15227,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                         ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             6.0,
                                                                             0.0,
@@ -15223,7 +15236,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             String>(
                                                                           controller: _model.filalRespostaValueController ??=
                                                                               FormFieldController<String>(null),
-                                                                          options: const [
+                                                                          options: [
                                                                             'Option 1'
                                                                           ],
                                                                           onChanged: (val) =>
@@ -15256,7 +15269,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               2.0,
                                                                           borderRadius:
                                                                               8.0,
-                                                                          margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                          margin: EdgeInsetsDirectional.fromSTEB(
                                                                               16.0,
                                                                               4.0,
                                                                               16.0,
@@ -15272,7 +15285,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                         ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             16.0,
                                                                             0.0,
@@ -15283,7 +15296,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               MainAxisSize.max,
                                                                           children: [
                                                                             Align(
-                                                                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                              alignment: AlignmentDirectional(-1.0, 0.0),
                                                                               child: Text(
                                                                                 'Nome',
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -15293,7 +15306,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                              padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                               child: FaIcon(
                                                                                 FontAwesomeIcons.asterisk,
                                                                                 color: FlutterFlowTheme.of(context).error,
@@ -15304,7 +15317,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                         ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             6.0,
                                                                             0.0,
@@ -15379,12 +15392,12 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                         ),
                                                                       ),
                                                                       Align(
-                                                                        alignment: const AlignmentDirectional(
+                                                                        alignment: AlignmentDirectional(
                                                                             1.0,
                                                                             0.0),
                                                                         child:
                                                                             Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               20.0,
                                                                               0.0,
@@ -15398,15 +15411,15 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             text:
                                                                                 'Adicionar',
                                                                             icon:
-                                                                                const Icon(
+                                                                                Icon(
                                                                               Icons.add,
                                                                               size: 15.0,
                                                                             ),
                                                                             options:
                                                                                 FFButtonOptions(
                                                                               height: 40.0,
-                                                                              padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                              padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                               color: FlutterFlowTheme.of(context).secondary,
                                                                               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                     fontFamily: 'Manrope',
@@ -15414,7 +15427,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                     letterSpacing: 0.0,
                                                                                   ),
                                                                               elevation: 3.0,
-                                                                              borderSide: const BorderSide(
+                                                                              borderSide: BorderSide(
                                                                                 color: Colors.transparent,
                                                                                 width: 1.0,
                                                                               ),
@@ -15487,7 +15500,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     child:
                                                                         Padding(
                                                                       padding:
-                                                                          const EdgeInsets.all(
+                                                                          EdgeInsets.all(
                                                                               10.0),
                                                                       child:
                                                                           Column(
@@ -15512,7 +15525,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                               ),
-                                                                            ].divide(const SizedBox(width: 6.0)),
+                                                                            ].divide(SizedBox(width: 6.0)),
                                                                           ),
                                                                           Divider(
                                                                             thickness:
@@ -15595,7 +15608,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                     ),
                                                                                   ],
                                                                                   dataRowBuilder: (categoriaListItem, categoriaListIndex, selected, onSelectChanged) => DataRow(
-                                                                                    color: WidgetStateProperty.all(
+                                                                                    color: MaterialStateProperty.all(
                                                                                       categoriaListIndex % 2 == 0 ? FlutterFlowTheme.of(context).secondaryBackground : FlutterFlowTheme.of(context).primaryBackground,
                                                                                     ),
                                                                                     cells: [
@@ -15651,7 +15664,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                               print('IconButton pressed ...');
                                                                                             },
                                                                                           ),
-                                                                                        ].divide(const SizedBox(width: 10.0)),
+                                                                                        ].divide(SizedBox(width: 10.0)),
                                                                                       ),
                                                                                     ].map((c) => DataCell(c)).toList(),
                                                                                   ),
@@ -15690,7 +15703,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                 },
                                                               ),
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 10.0)),
                                                         ),
                                                       ),
@@ -15715,7 +15728,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                   ),
                                                 ),
                                                 child: Padding(
-                                                  padding: const EdgeInsets.all(20.0),
+                                                  padding: EdgeInsets.all(20.0),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -15760,7 +15773,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                         .disabled,
                                                                 child: Padding(
                                                                   padding:
-                                                                      const EdgeInsets
+                                                                      EdgeInsets
                                                                           .all(
                                                                               10.0),
                                                                   child: Column(
@@ -15788,7 +15801,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                   letterSpacing: 0.0,
                                                                                 ),
                                                                           ),
-                                                                        ].divide(const SizedBox(width: 6.0)),
+                                                                        ].divide(SizedBox(width: 6.0)),
                                                                       ),
                                                                       Divider(
                                                                         thickness:
@@ -15797,7 +15810,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             .tertiary,
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             16.0,
                                                                             0.0,
@@ -15808,7 +15821,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               MainAxisSize.max,
                                                                           children: [
                                                                             Align(
-                                                                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                              alignment: AlignmentDirectional(-1.0, 0.0),
                                                                               child: Text(
                                                                                 'Filial',
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -15818,7 +15831,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                              padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                               child: FaIcon(
                                                                                 FontAwesomeIcons.asterisk,
                                                                                 color: FlutterFlowTheme.of(context).error,
@@ -15829,7 +15842,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                         ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             6.0,
                                                                             0.0,
@@ -15838,7 +15851,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             String>(
                                                                           controller: _model.filalChamadaValueController ??=
                                                                               FormFieldController<String>(null),
-                                                                          options: const [
+                                                                          options: [
                                                                             'Option 1'
                                                                           ],
                                                                           onChanged: (val) =>
@@ -15871,7 +15884,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               2.0,
                                                                           borderRadius:
                                                                               8.0,
-                                                                          margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                          margin: EdgeInsetsDirectional.fromSTEB(
                                                                               16.0,
                                                                               4.0,
                                                                               16.0,
@@ -15887,7 +15900,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                         ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             16.0,
                                                                             0.0,
@@ -15898,7 +15911,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               MainAxisSize.max,
                                                                           children: [
                                                                             Align(
-                                                                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                              alignment: AlignmentDirectional(-1.0, 0.0),
                                                                               child: Text(
                                                                                 'Nome',
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -15908,7 +15921,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                              padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                               child: FaIcon(
                                                                                 FontAwesomeIcons.asterisk,
                                                                                 color: FlutterFlowTheme.of(context).error,
@@ -15919,7 +15932,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                         ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             6.0,
                                                                             0.0,
@@ -15994,12 +16007,12 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                         ),
                                                                       ),
                                                                       Align(
-                                                                        alignment: const AlignmentDirectional(
+                                                                        alignment: AlignmentDirectional(
                                                                             1.0,
                                                                             0.0),
                                                                         child:
                                                                             Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               20.0,
                                                                               0.0,
@@ -16013,15 +16026,15 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             text:
                                                                                 'Adicionar',
                                                                             icon:
-                                                                                const Icon(
+                                                                                Icon(
                                                                               Icons.add,
                                                                               size: 15.0,
                                                                             ),
                                                                             options:
                                                                                 FFButtonOptions(
                                                                               height: 40.0,
-                                                                              padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                              padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                               color: FlutterFlowTheme.of(context).secondary,
                                                                               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                     fontFamily: 'Manrope',
@@ -16029,7 +16042,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                     letterSpacing: 0.0,
                                                                                   ),
                                                                               elevation: 3.0,
-                                                                              borderSide: const BorderSide(
+                                                                              borderSide: BorderSide(
                                                                                 color: Colors.transparent,
                                                                                 width: 1.0,
                                                                               ),
@@ -16102,7 +16115,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     child:
                                                                         Padding(
                                                                       padding:
-                                                                          const EdgeInsets.all(
+                                                                          EdgeInsets.all(
                                                                               10.0),
                                                                       child:
                                                                           Column(
@@ -16127,7 +16140,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                               ),
-                                                                            ].divide(const SizedBox(width: 6.0)),
+                                                                            ].divide(SizedBox(width: 6.0)),
                                                                           ),
                                                                           Divider(
                                                                             thickness:
@@ -16210,7 +16223,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                     ),
                                                                                   ],
                                                                                   dataRowBuilder: (categoriaListItem, categoriaListIndex, selected, onSelectChanged) => DataRow(
-                                                                                    color: WidgetStateProperty.all(
+                                                                                    color: MaterialStateProperty.all(
                                                                                       categoriaListIndex % 2 == 0 ? FlutterFlowTheme.of(context).secondaryBackground : FlutterFlowTheme.of(context).primaryBackground,
                                                                                     ),
                                                                                     cells: [
@@ -16266,7 +16279,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                               print('IconButton pressed ...');
                                                                                             },
                                                                                           ),
-                                                                                        ].divide(const SizedBox(width: 10.0)),
+                                                                                        ].divide(SizedBox(width: 10.0)),
                                                                                       ),
                                                                                     ].map((c) => DataCell(c)).toList(),
                                                                                   ),
@@ -16305,7 +16318,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                 },
                                                               ),
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 10.0)),
                                                         ),
                                                       ),
@@ -16330,7 +16343,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                   ),
                                                 ),
                                                 child: Padding(
-                                                  padding: const EdgeInsets.all(20.0),
+                                                  padding: EdgeInsets.all(20.0),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -16375,7 +16388,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                         .disabled,
                                                                 child: Padding(
                                                                   padding:
-                                                                      const EdgeInsets
+                                                                      EdgeInsets
                                                                           .all(
                                                                               10.0),
                                                                   child: Column(
@@ -16403,7 +16416,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                   letterSpacing: 0.0,
                                                                                 ),
                                                                           ),
-                                                                        ].divide(const SizedBox(width: 6.0)),
+                                                                        ].divide(SizedBox(width: 6.0)),
                                                                       ),
                                                                       Divider(
                                                                         thickness:
@@ -16412,7 +16425,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             .tertiary,
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             16.0,
                                                                             0.0,
@@ -16423,7 +16436,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               MainAxisSize.max,
                                                                           children: [
                                                                             Align(
-                                                                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                              alignment: AlignmentDirectional(-1.0, 0.0),
                                                                               child: Text(
                                                                                 'Filial',
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -16433,7 +16446,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                              padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                               child: FaIcon(
                                                                                 FontAwesomeIcons.asterisk,
                                                                                 color: FlutterFlowTheme.of(context).error,
@@ -16444,7 +16457,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                         ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             6.0,
                                                                             0.0,
@@ -16453,7 +16466,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             String>(
                                                                           controller: _model.filalVisitasValueController ??=
                                                                               FormFieldController<String>(null),
-                                                                          options: const [
+                                                                          options: [
                                                                             'Option 1'
                                                                           ],
                                                                           onChanged: (val) =>
@@ -16486,7 +16499,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               2.0,
                                                                           borderRadius:
                                                                               8.0,
-                                                                          margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                          margin: EdgeInsetsDirectional.fromSTEB(
                                                                               16.0,
                                                                               4.0,
                                                                               16.0,
@@ -16502,7 +16515,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                         ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             16.0,
                                                                             0.0,
@@ -16513,7 +16526,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               MainAxisSize.max,
                                                                           children: [
                                                                             Align(
-                                                                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                              alignment: AlignmentDirectional(-1.0, 0.0),
                                                                               child: Text(
                                                                                 'Nome',
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -16523,7 +16536,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                              padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                               child: FaIcon(
                                                                                 FontAwesomeIcons.asterisk,
                                                                                 color: FlutterFlowTheme.of(context).error,
@@ -16534,7 +16547,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                         ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             6.0,
                                                                             0.0,
@@ -16609,12 +16622,12 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                         ),
                                                                       ),
                                                                       Align(
-                                                                        alignment: const AlignmentDirectional(
+                                                                        alignment: AlignmentDirectional(
                                                                             1.0,
                                                                             0.0),
                                                                         child:
                                                                             Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               20.0,
                                                                               0.0,
@@ -16628,15 +16641,15 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             text:
                                                                                 'Adicionar',
                                                                             icon:
-                                                                                const Icon(
+                                                                                Icon(
                                                                               Icons.add,
                                                                               size: 15.0,
                                                                             ),
                                                                             options:
                                                                                 FFButtonOptions(
                                                                               height: 40.0,
-                                                                              padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                              padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                               color: FlutterFlowTheme.of(context).secondary,
                                                                               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                     fontFamily: 'Manrope',
@@ -16644,7 +16657,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                     letterSpacing: 0.0,
                                                                                   ),
                                                                               elevation: 3.0,
-                                                                              borderSide: const BorderSide(
+                                                                              borderSide: BorderSide(
                                                                                 color: Colors.transparent,
                                                                                 width: 1.0,
                                                                               ),
@@ -16717,7 +16730,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     child:
                                                                         Padding(
                                                                       padding:
-                                                                          const EdgeInsets.all(
+                                                                          EdgeInsets.all(
                                                                               10.0),
                                                                       child:
                                                                           Column(
@@ -16742,7 +16755,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                               ),
-                                                                            ].divide(const SizedBox(width: 6.0)),
+                                                                            ].divide(SizedBox(width: 6.0)),
                                                                           ),
                                                                           Divider(
                                                                             thickness:
@@ -16825,7 +16838,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                     ),
                                                                                   ],
                                                                                   dataRowBuilder: (categoriaListItem, categoriaListIndex, selected, onSelectChanged) => DataRow(
-                                                                                    color: WidgetStateProperty.all(
+                                                                                    color: MaterialStateProperty.all(
                                                                                       categoriaListIndex % 2 == 0 ? FlutterFlowTheme.of(context).secondaryBackground : FlutterFlowTheme.of(context).primaryBackground,
                                                                                     ),
                                                                                     cells: [
@@ -16881,7 +16894,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                               print('IconButton pressed ...');
                                                                                             },
                                                                                           ),
-                                                                                        ].divide(const SizedBox(width: 10.0)),
+                                                                                        ].divide(SizedBox(width: 10.0)),
                                                                                       ),
                                                                                     ].map((c) => DataCell(c)).toList(),
                                                                                   ),
@@ -16920,7 +16933,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                 },
                                                               ),
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 10.0)),
                                                         ),
                                                       ),
@@ -16945,7 +16958,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                   ),
                                                 ),
                                                 child: Padding(
-                                                  padding: const EdgeInsets.all(20.0),
+                                                  padding: EdgeInsets.all(20.0),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -16990,7 +17003,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                         .disabled,
                                                                 child: Padding(
                                                                   padding:
-                                                                      const EdgeInsets
+                                                                      EdgeInsets
                                                                           .all(
                                                                               10.0),
                                                                   child: Column(
@@ -17018,7 +17031,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                   letterSpacing: 0.0,
                                                                                 ),
                                                                           ),
-                                                                        ].divide(const SizedBox(width: 6.0)),
+                                                                        ].divide(SizedBox(width: 6.0)),
                                                                       ),
                                                                       Divider(
                                                                         thickness:
@@ -17027,7 +17040,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             .tertiary,
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             16.0,
                                                                             0.0,
@@ -17038,7 +17051,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               MainAxisSize.max,
                                                                           children: [
                                                                             Align(
-                                                                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                              alignment: AlignmentDirectional(-1.0, 0.0),
                                                                               child: Text(
                                                                                 'Filial',
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -17048,7 +17061,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                              padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                               child: FaIcon(
                                                                                 FontAwesomeIcons.asterisk,
                                                                                 color: FlutterFlowTheme.of(context).error,
@@ -17059,7 +17072,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                         ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             6.0,
                                                                             0.0,
@@ -17068,7 +17081,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             String>(
                                                                           controller: _model.filalReclamacaoValueController ??=
                                                                               FormFieldController<String>(null),
-                                                                          options: const [
+                                                                          options: [
                                                                             'Option 1'
                                                                           ],
                                                                           onChanged: (val) =>
@@ -17101,7 +17114,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               2.0,
                                                                           borderRadius:
                                                                               8.0,
-                                                                          margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                          margin: EdgeInsetsDirectional.fromSTEB(
                                                                               16.0,
                                                                               4.0,
                                                                               16.0,
@@ -17117,7 +17130,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                         ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             16.0,
                                                                             0.0,
@@ -17128,7 +17141,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               MainAxisSize.max,
                                                                           children: [
                                                                             Align(
-                                                                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                              alignment: AlignmentDirectional(-1.0, 0.0),
                                                                               child: Text(
                                                                                 'Nome',
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -17138,7 +17151,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                               ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                              padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                               child: FaIcon(
                                                                                 FontAwesomeIcons.asterisk,
                                                                                 color: FlutterFlowTheme.of(context).error,
@@ -17149,7 +17162,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                         ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             6.0,
                                                                             0.0,
@@ -17224,12 +17237,12 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                         ),
                                                                       ),
                                                                       Align(
-                                                                        alignment: const AlignmentDirectional(
+                                                                        alignment: AlignmentDirectional(
                                                                             1.0,
                                                                             0.0),
                                                                         child:
                                                                             Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               20.0,
                                                                               0.0,
@@ -17243,15 +17256,15 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                             text:
                                                                                 'Adicionar',
                                                                             icon:
-                                                                                const Icon(
+                                                                                Icon(
                                                                               Icons.add,
                                                                               size: 15.0,
                                                                             ),
                                                                             options:
                                                                                 FFButtonOptions(
                                                                               height: 40.0,
-                                                                              padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                              padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                               color: FlutterFlowTheme.of(context).secondary,
                                                                               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                     fontFamily: 'Manrope',
@@ -17259,7 +17272,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                     letterSpacing: 0.0,
                                                                                   ),
                                                                               elevation: 3.0,
-                                                                              borderSide: const BorderSide(
+                                                                              borderSide: BorderSide(
                                                                                 color: Colors.transparent,
                                                                                 width: 1.0,
                                                                               ),
@@ -17332,7 +17345,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                     child:
                                                                         Padding(
                                                                       padding:
-                                                                          const EdgeInsets.all(
+                                                                          EdgeInsets.all(
                                                                               10.0),
                                                                       child:
                                                                           Column(
@@ -17357,7 +17370,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                               ),
-                                                                            ].divide(const SizedBox(width: 6.0)),
+                                                                            ].divide(SizedBox(width: 6.0)),
                                                                           ),
                                                                           Divider(
                                                                             thickness:
@@ -17440,7 +17453,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                     ),
                                                                                   ],
                                                                                   dataRowBuilder: (categoriaListItem, categoriaListIndex, selected, onSelectChanged) => DataRow(
-                                                                                    color: WidgetStateProperty.all(
+                                                                                    color: MaterialStateProperty.all(
                                                                                       categoriaListIndex % 2 == 0 ? FlutterFlowTheme.of(context).secondaryBackground : FlutterFlowTheme.of(context).primaryBackground,
                                                                                     ),
                                                                                     cells: [
@@ -17496,7 +17509,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                                               print('IconButton pressed ...');
                                                                                             },
                                                                                           ),
-                                                                                        ].divide(const SizedBox(width: 10.0)),
+                                                                                        ].divide(SizedBox(width: 10.0)),
                                                                                       ),
                                                                                     ].map((c) => DataCell(c)).toList(),
                                                                                   ),
@@ -17535,7 +17548,7 @@ class _A05RecepcaoWidgetState extends State<A05RecepcaoWidget>
                                                                 },
                                                               ),
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 10.0)),
                                                         ),
                                                       ),
