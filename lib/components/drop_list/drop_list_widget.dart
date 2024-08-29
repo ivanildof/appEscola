@@ -3,8 +3,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'drop_list_model.dart';
 export 'drop_list_model.dart';
 
@@ -44,7 +42,7 @@ class _DropListWidgetState extends State<DropListWidget> {
     return FlutterFlowDropDown<String>(
       controller: _model.categpriaAcademicoValueController ??=
           FormFieldController<String>(null),
-      options: ['option 1'],
+      options: const ['option 1'],
       onChanged: (val) => setState(() => _model.categpriaAcademicoValue = val),
       width: 337.0,
       height: 45.0,
@@ -63,7 +61,7 @@ class _DropListWidgetState extends State<DropListWidget> {
       borderColor: FlutterFlowTheme.of(context).alternate,
       borderWidth: 2.0,
       borderRadius: 8.0,
-      margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+      margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
       hidesUnderline: true,
       isOverButton: false,
       isSearchable: false,

@@ -14,9 +14,6 @@ import '/flutter_flow/form_field_controller.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
-import 'package:provider/provider.dart';
 import 'package:text_search/text_search.dart';
 import 'a08_cadastro_professores_model.dart';
 export 'a08_cadastro_professores_model.dart';
@@ -25,7 +22,7 @@ class A08CadastroProfessoresWidget extends StatefulWidget {
   const A08CadastroProfessoresWidget({
     super.key,
     String? telas,
-  }) : this.telas = telas ?? 'vazio';
+  }) : telas = telas ?? 'vazio';
 
   final String telas;
 
@@ -212,7 +209,7 @@ class _A08CadastroProfessoresWidgetState
                           wrapWithModel(
                             model: _model.menuSuperiorModel,
                             updateCallback: () => setState(() {}),
-                            child: MenuSuperiorWidget(),
+                            child: const MenuSuperiorWidget(),
                           ),
                         if (responsiveVisibility(
                           context: context,
@@ -222,7 +219,7 @@ class _A08CadastroProfessoresWidgetState
                           wrapWithModel(
                             model: _model.menuSuperiorCelularModel,
                             updateCallback: () => setState(() {}),
-                            child: MenuSuperiorCelularWidget(),
+                            child: const MenuSuperiorCelularWidget(),
                           ),
                       ],
                     ),
@@ -238,9 +235,9 @@ class _A08CadastroProfessoresWidgetState
                             wrapWithModel(
                               model: _model.menuLateralModel,
                               updateCallback: () => setState(() {}),
-                              child: MenuLateralWidget(),
+                              child: const MenuLateralWidget(),
                             ),
-                          if (widget!.telas == 'addfuncionario')
+                          if (widget.telas == 'addfuncionario')
                             Container(
                               width: MediaQuery.sizeOf(context).width * 0.77,
                               height: double.infinity,
@@ -263,7 +260,7 @@ class _A08CadastroProfessoresWidgetState
                                   ),
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsets.all(20.0),
+                                  padding: const EdgeInsets.all(20.0),
                                   child: SingleChildScrollView(
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -287,7 +284,7 @@ class _A08CadastroProfessoresWidgetState
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         10.0, 10.0, 0.0, 0.0),
                                                 child: Row(
@@ -304,11 +301,11 @@ class _A08CadastroProfessoresWidgetState
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -342,7 +339,7 @@ class _A08CadastroProfessoresWidgetState
                                                         .tertiary,
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         10.0, 0.0, 0.0, 0.0),
                                                 child: Row(
@@ -359,11 +356,11 @@ class _A08CadastroProfessoresWidgetState
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -393,7 +390,7 @@ class _A08CadastroProfessoresWidgetState
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -415,7 +412,7 @@ class _A08CadastroProfessoresWidgetState
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 0.0, 10.0),
                                                 child: Column(
@@ -424,7 +421,7 @@ class _A08CadastroProfessoresWidgetState
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   20.0,
                                                                   10.0,
@@ -442,7 +439,7 @@ class _A08CadastroProfessoresWidgetState
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -452,7 +449,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -482,12 +479,12 @@ class _A08CadastroProfessoresWidgetState
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -499,7 +496,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           .filialAdmissaoValueController ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -539,7 +536,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -561,7 +558,7 @@ class _A08CadastroProfessoresWidgetState
                                                           Container(
                                                             width: 250.0,
                                                             decoration:
-                                                                BoxDecoration(),
+                                                                const BoxDecoration(),
                                                             child: Column(
                                                               mainAxisSize:
                                                                   MainAxisSize
@@ -571,7 +568,7 @@ class _A08CadastroProfessoresWidgetState
                                                                       .start,
                                                               children: [
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -600,7 +597,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         size:
                                                                             16.0,
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             6.0)),
                                                                   ),
@@ -612,7 +609,7 @@ class _A08CadastroProfessoresWidgetState
                                                                       FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                  options: [
+                                                                  options: const [
                                                                     'option 1'
                                                                   ],
                                                                   onChanged: (val) =>
@@ -652,7 +649,7 @@ class _A08CadastroProfessoresWidgetState
                                                                       2.0,
                                                                   borderRadius:
                                                                       8.0,
-                                                                  margin: EdgeInsetsDirectional
+                                                                  margin: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           4.0,
@@ -673,7 +670,7 @@ class _A08CadastroProfessoresWidgetState
                                                           Container(
                                                             width: 230.0,
                                                             decoration:
-                                                                BoxDecoration(),
+                                                                const BoxDecoration(),
                                                             child: Column(
                                                               mainAxisSize:
                                                                   MainAxisSize
@@ -683,7 +680,7 @@ class _A08CadastroProfessoresWidgetState
                                                                       .start,
                                                               children: [
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -712,7 +709,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         size:
                                                                             16.0,
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             6.0)),
                                                                   ),
@@ -721,7 +718,7 @@ class _A08CadastroProfessoresWidgetState
                                                                   children: [
                                                                     Align(
                                                                       alignment:
-                                                                          AlignmentDirectional(
+                                                                          const AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                       child:
@@ -816,12 +813,12 @@ class _A08CadastroProfessoresWidgetState
                                                                     ),
                                                                     Align(
                                                                       alignment:
-                                                                          AlignmentDirectional(
+                                                                          const AlignmentDirectional(
                                                                               1.0,
                                                                               0.0),
                                                                       child:
                                                                           Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             8.0,
                                                                             15.0,
@@ -842,13 +839,13 @@ class _A08CadastroProfessoresWidgetState
                                                               ],
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 15.0)),
                                                       ),
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   20.0,
                                                                   10.0,
@@ -866,7 +863,7 @@ class _A08CadastroProfessoresWidgetState
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -876,7 +873,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -906,12 +903,12 @@ class _A08CadastroProfessoresWidgetState
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -923,7 +920,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           .calssAcademicoValueController1 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'option 1'
                                                                       ],
                                                                       onChanged:
@@ -963,7 +960,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -987,7 +984,7 @@ class _A08CadastroProfessoresWidgetState
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -997,7 +994,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -1027,7 +1024,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
@@ -1037,7 +1034,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         .secaoAcademicoValueController2 ??= FormFieldController<
                                                                             String>(
                                                                         null),
-                                                                    options: [
+                                                                    options: const [
                                                                       'option 1'
                                                                     ],
                                                                     onChanged: (val) =>
@@ -1078,7 +1075,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         2.0,
                                                                     borderRadius:
                                                                         8.0,
-                                                                    margin: EdgeInsetsDirectional
+                                                                    margin: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             16.0,
                                                                             4.0,
@@ -1102,7 +1099,7 @@ class _A08CadastroProfessoresWidgetState
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -1112,7 +1109,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -1142,7 +1139,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
@@ -1152,7 +1149,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         .secaoAcademicoValueController3 ??= FormFieldController<
                                                                             String>(
                                                                         null),
-                                                                    options: [
+                                                                    options: const [
                                                                       'SIM',
                                                                       'NÃO'
                                                                     ],
@@ -1194,7 +1191,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         2.0,
                                                                     borderRadius:
                                                                         8.0,
-                                                                    margin: EdgeInsetsDirectional
+                                                                    margin: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             16.0,
                                                                             4.0,
@@ -1213,13 +1210,13 @@ class _A08CadastroProfessoresWidgetState
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 20.0)),
                                                       ),
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   20.0,
                                                                   10.0,
@@ -1237,7 +1234,7 @@ class _A08CadastroProfessoresWidgetState
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -1247,7 +1244,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -1277,12 +1274,12 @@ class _A08CadastroProfessoresWidgetState
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -1294,7 +1291,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           .secaoAcademicoValueController4 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Ensino Supe'
                                                                       ],
                                                                       onChanged:
@@ -1334,7 +1331,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -1358,7 +1355,7 @@ class _A08CadastroProfessoresWidgetState
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -1368,7 +1365,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -1390,12 +1387,12 @@ class _A08CadastroProfessoresWidgetState
                                                                                 letterSpacing: 0.0,
                                                                               ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -1481,7 +1478,7 @@ class _A08CadastroProfessoresWidgetState
                                                                             true,
                                                                         fillColor:
                                                                             FlutterFlowTheme.of(context).primaryBackground,
-                                                                        contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             10.0,
                                                                             16.0,
                                                                             10.0,
@@ -1508,13 +1505,13 @@ class _A08CadastroProfessoresWidgetState
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 20.0)),
                                                       ),
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   20.0,
                                                                   10.0,
@@ -1532,7 +1529,7 @@ class _A08CadastroProfessoresWidgetState
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -1542,7 +1539,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -1572,12 +1569,12 @@ class _A08CadastroProfessoresWidgetState
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -1663,7 +1660,7 @@ class _A08CadastroProfessoresWidgetState
                                                                             true,
                                                                         fillColor:
                                                                             FlutterFlowTheme.of(context).primaryBackground,
-                                                                        contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             10.0,
                                                                             16.0,
                                                                             10.0,
@@ -1692,16 +1689,16 @@ class _A08CadastroProfessoresWidgetState
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 20.0)),
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 6.0)),
+                                                      const SizedBox(height: 6.0)),
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         10.0, 10.0, 0.0, 0.0),
                                                 child: Row(
@@ -1718,11 +1715,11 @@ class _A08CadastroProfessoresWidgetState
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -1752,7 +1749,7 @@ class _A08CadastroProfessoresWidgetState
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -1774,7 +1771,7 @@ class _A08CadastroProfessoresWidgetState
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 0.0, 10.0),
                                                 child: Column(
@@ -1783,7 +1780,7 @@ class _A08CadastroProfessoresWidgetState
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   20.0,
                                                                   10.0,
@@ -1801,7 +1798,7 @@ class _A08CadastroProfessoresWidgetState
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -1811,7 +1808,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -1841,12 +1838,12 @@ class _A08CadastroProfessoresWidgetState
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -1932,7 +1929,7 @@ class _A08CadastroProfessoresWidgetState
                                                                             true,
                                                                         fillColor:
                                                                             FlutterFlowTheme.of(context).primaryBackground,
-                                                                        contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             10.0,
                                                                             16.0,
                                                                             10.0,
@@ -1964,7 +1961,7 @@ class _A08CadastroProfessoresWidgetState
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -1974,7 +1971,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -2004,12 +2001,12 @@ class _A08CadastroProfessoresWidgetState
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -2095,7 +2092,7 @@ class _A08CadastroProfessoresWidgetState
                                                                             true,
                                                                         fillColor:
                                                                             FlutterFlowTheme.of(context).primaryBackground,
-                                                                        contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             10.0,
                                                                             16.0,
                                                                             10.0,
@@ -2127,7 +2124,7 @@ class _A08CadastroProfessoresWidgetState
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -2137,7 +2134,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -2167,7 +2164,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
@@ -2180,7 +2177,7 @@ class _A08CadastroProfessoresWidgetState
                                                                       _model.acadDropDownGeneroValue1 ??=
                                                                           'Masculino',
                                                                     ),
-                                                                    options: [
+                                                                    options: const [
                                                                       'Masculino',
                                                                       'Feminino'
                                                                     ],
@@ -2222,7 +2219,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         2.0,
                                                                     borderRadius:
                                                                         8.0,
-                                                                    margin: EdgeInsetsDirectional
+                                                                    margin: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             16.0,
                                                                             4.0,
@@ -2241,13 +2238,13 @@ class _A08CadastroProfessoresWidgetState
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 20.0)),
                                                       ),
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   20.0,
                                                                   10.0,
@@ -2265,7 +2262,7 @@ class _A08CadastroProfessoresWidgetState
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -2275,7 +2272,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -2297,12 +2294,12 @@ class _A08CadastroProfessoresWidgetState
                                                                                 letterSpacing: 0.0,
                                                                               ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -2314,7 +2311,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           .dropDownGrupSanguineoValueController ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'A+',
                                                                         'A-',
                                                                         'B+',
@@ -2361,7 +2358,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -2385,7 +2382,7 @@ class _A08CadastroProfessoresWidgetState
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -2395,7 +2392,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -2425,14 +2422,14 @@ class _A08CadastroProfessoresWidgetState
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
                                                                   Stack(
                                                                     children: [
                                                                       Align(
-                                                                        alignment: AlignmentDirectional(
+                                                                        alignment: const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                         child:
@@ -2513,12 +2510,12 @@ class _A08CadastroProfessoresWidgetState
                                                                         ),
                                                                       ),
                                                                       Align(
-                                                                        alignment: AlignmentDirectional(
+                                                                        alignment: const AlignmentDirectional(
                                                                             1.0,
                                                                             0.0),
                                                                         child:
                                                                             Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               8.0,
                                                                               15.0,
@@ -2544,7 +2541,7 @@ class _A08CadastroProfessoresWidgetState
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -2554,7 +2551,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -2584,7 +2581,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
@@ -2594,7 +2591,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         .secaoAcademicoValueController5 ??= FormFieldController<
                                                                             String>(
                                                                         null),
-                                                                    options: [
+                                                                    options: const [
                                                                       'PRETA',
                                                                       'PARDA',
                                                                       'AMARELA',
@@ -2639,7 +2636,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         2.0,
                                                                     borderRadius:
                                                                         8.0,
-                                                                    margin: EdgeInsetsDirectional
+                                                                    margin: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             16.0,
                                                                             4.0,
@@ -2658,13 +2655,13 @@ class _A08CadastroProfessoresWidgetState
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 20.0)),
                                                       ),
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   20.0,
                                                                   10.0,
@@ -2682,7 +2679,7 @@ class _A08CadastroProfessoresWidgetState
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -2692,7 +2689,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -2722,12 +2719,12 @@ class _A08CadastroProfessoresWidgetState
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -2813,7 +2810,7 @@ class _A08CadastroProfessoresWidgetState
                                                                             true,
                                                                         fillColor:
                                                                             FlutterFlowTheme.of(context).primaryBackground,
-                                                                        contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             10.0,
                                                                             16.0,
                                                                             10.0,
@@ -2845,7 +2842,7 @@ class _A08CadastroProfessoresWidgetState
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -2855,7 +2852,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -2885,7 +2882,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
@@ -2895,7 +2892,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         .secaoAcademicoValueController6 ??= FormFieldController<
                                                                             String>(
                                                                         null),
-                                                                    options: [
+                                                                    options: const [
                                                                       'SOLTEIRO',
                                                                       'CASADO',
                                                                       'DIVORCIADO',
@@ -2940,7 +2937,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         2.0,
                                                                     borderRadius:
                                                                         8.0,
-                                                                    margin: EdgeInsetsDirectional
+                                                                    margin: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             16.0,
                                                                             4.0,
@@ -2959,13 +2956,13 @@ class _A08CadastroProfessoresWidgetState
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 20.0)),
                                                       ),
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   20.0,
                                                                   10.0,
@@ -2983,7 +2980,7 @@ class _A08CadastroProfessoresWidgetState
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -2993,7 +2990,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -3023,12 +3020,12 @@ class _A08CadastroProfessoresWidgetState
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -3114,7 +3111,7 @@ class _A08CadastroProfessoresWidgetState
                                                                             true,
                                                                         fillColor:
                                                                             FlutterFlowTheme.of(context).primaryBackground,
-                                                                        contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             10.0,
                                                                             16.0,
                                                                             10.0,
@@ -3150,7 +3147,7 @@ class _A08CadastroProfessoresWidgetState
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -3160,7 +3157,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -3190,12 +3187,12 @@ class _A08CadastroProfessoresWidgetState
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -3281,7 +3278,7 @@ class _A08CadastroProfessoresWidgetState
                                                                             true,
                                                                         fillColor:
                                                                             FlutterFlowTheme.of(context).primaryBackground,
-                                                                        contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             10.0,
                                                                             16.0,
                                                                             10.0,
@@ -3308,13 +3305,13 @@ class _A08CadastroProfessoresWidgetState
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 20.0)),
                                                       ),
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   20.0,
                                                                   10.0,
@@ -3332,7 +3329,7 @@ class _A08CadastroProfessoresWidgetState
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -3342,7 +3339,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -3372,12 +3369,12 @@ class _A08CadastroProfessoresWidgetState
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -3463,7 +3460,7 @@ class _A08CadastroProfessoresWidgetState
                                                                             true,
                                                                         fillColor:
                                                                             FlutterFlowTheme.of(context).primaryBackground,
-                                                                        contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             10.0,
                                                                             16.0,
                                                                             10.0,
@@ -3497,7 +3494,7 @@ class _A08CadastroProfessoresWidgetState
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -3507,7 +3504,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -3537,7 +3534,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
@@ -3547,7 +3544,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         .acadDropDownGeneroValueController2 ??= FormFieldController<
                                                                             String>(
                                                                         null),
-                                                                    options: <String>[],
+                                                                    options: const <String>[],
                                                                     onChanged: (val) =>
                                                                         setState(() =>
                                                                             _model.acadDropDownGeneroValue2 =
@@ -3588,7 +3585,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         2.0,
                                                                     borderRadius:
                                                                         8.0,
-                                                                    margin: EdgeInsetsDirectional
+                                                                    margin: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             16.0,
                                                                             4.0,
@@ -3612,7 +3609,7 @@ class _A08CadastroProfessoresWidgetState
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -3622,7 +3619,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -3652,7 +3649,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
@@ -3662,7 +3659,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         .acadDropDownGeneroValueController3 ??= FormFieldController<
                                                                             String>(
                                                                         null),
-                                                                    options: [
+                                                                    options: const [
                                                                       'Masculino',
                                                                       'Feminino'
                                                                     ],
@@ -3706,7 +3703,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         2.0,
                                                                     borderRadius:
                                                                         8.0,
-                                                                    margin: EdgeInsetsDirectional
+                                                                    margin: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             16.0,
                                                                             4.0,
@@ -3725,13 +3722,13 @@ class _A08CadastroProfessoresWidgetState
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 20.0)),
                                                       ),
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   20.0,
                                                                   10.0,
@@ -3749,7 +3746,7 @@ class _A08CadastroProfessoresWidgetState
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -3759,7 +3756,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -3789,12 +3786,12 @@ class _A08CadastroProfessoresWidgetState
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -3880,7 +3877,7 @@ class _A08CadastroProfessoresWidgetState
                                                                             true,
                                                                         fillColor:
                                                                             FlutterFlowTheme.of(context).primaryBackground,
-                                                                        contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             10.0,
                                                                             16.0,
                                                                             10.0,
@@ -3914,7 +3911,7 @@ class _A08CadastroProfessoresWidgetState
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -3924,7 +3921,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -3954,7 +3951,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
@@ -4044,7 +4041,7 @@ class _A08CadastroProfessoresWidgetState
                                                                       fillColor:
                                                                           FlutterFlowTheme.of(context)
                                                                               .primaryBackground,
-                                                                      contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                      contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           16.0,
                                                                           10.0,
@@ -4077,7 +4074,7 @@ class _A08CadastroProfessoresWidgetState
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -4087,7 +4084,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -4117,7 +4114,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
@@ -4207,7 +4204,7 @@ class _A08CadastroProfessoresWidgetState
                                                                       fillColor:
                                                                           FlutterFlowTheme.of(context)
                                                                               .primaryBackground,
-                                                                      contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                      contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           16.0,
                                                                           10.0,
@@ -4235,13 +4232,13 @@ class _A08CadastroProfessoresWidgetState
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 20.0)),
                                                       ),
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   20.0,
                                                                   10.0,
@@ -4259,7 +4256,7 @@ class _A08CadastroProfessoresWidgetState
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -4269,7 +4266,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -4299,12 +4296,12 @@ class _A08CadastroProfessoresWidgetState
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -4390,7 +4387,7 @@ class _A08CadastroProfessoresWidgetState
                                                                             true,
                                                                         fillColor:
                                                                             FlutterFlowTheme.of(context).primaryBackground,
-                                                                        contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             10.0,
                                                                             16.0,
                                                                             10.0,
@@ -4422,7 +4419,7 @@ class _A08CadastroProfessoresWidgetState
                                                           Container(
                                                             width: 358.0,
                                                             decoration:
-                                                                BoxDecoration(),
+                                                                const BoxDecoration(),
                                                             child: Column(
                                                               mainAxisSize:
                                                                   MainAxisSize
@@ -4432,7 +4429,7 @@ class _A08CadastroProfessoresWidgetState
                                                                       .start,
                                                               children: [
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -4461,7 +4458,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         size:
                                                                             16.0,
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             6.0)),
                                                                   ),
@@ -4473,7 +4470,7 @@ class _A08CadastroProfessoresWidgetState
                                                                       FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                  options: [
+                                                                  options: const [
                                                                     'Urbana',
                                                                     'Rural'
                                                                   ],
@@ -4515,7 +4512,7 @@ class _A08CadastroProfessoresWidgetState
                                                                       2.0,
                                                                   borderRadius:
                                                                       8.0,
-                                                                  margin: EdgeInsetsDirectional
+                                                                  margin: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           4.0,
@@ -4533,13 +4530,13 @@ class _A08CadastroProfessoresWidgetState
                                                               ],
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 20.0)),
                                                       ),
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   20.0,
                                                                   10.0,
@@ -4557,7 +4554,7 @@ class _A08CadastroProfessoresWidgetState
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -4567,7 +4564,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -4589,12 +4586,12 @@ class _A08CadastroProfessoresWidgetState
                                                                                 letterSpacing: 0.0,
                                                                               ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -4622,7 +4619,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         children: [
                                                                           Align(
                                                                             alignment:
-                                                                                AlignmentDirectional(0.0, 0.0),
+                                                                                const AlignmentDirectional(0.0, 0.0),
                                                                             child:
                                                                                 FaIcon(
                                                                               FontAwesomeIcons.cloudUploadAlt,
@@ -4645,16 +4642,16 @@ class _A08CadastroProfessoresWidgetState
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 20.0)),
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 6.0)),
+                                                      const SizedBox(height: 6.0)),
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         10.0, 10.0, 0.0, 0.0),
                                                 child: Row(
@@ -4671,11 +4668,11 @@ class _A08CadastroProfessoresWidgetState
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -4705,7 +4702,7 @@ class _A08CadastroProfessoresWidgetState
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -4727,7 +4724,7 @@ class _A08CadastroProfessoresWidgetState
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         20.0, 10.0, 20.0, 0.0),
                                                 child: Row(
@@ -4741,7 +4738,7 @@ class _A08CadastroProfessoresWidgetState
                                                       child: Container(
                                                         width: 550.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Column(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -4751,7 +4748,7 @@ class _A08CadastroProfessoresWidgetState
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -4784,7 +4781,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         .error,
                                                                     size: 16.0,
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         6.0)),
                                                               ),
@@ -4798,7 +4795,7 @@ class _A08CadastroProfessoresWidgetState
                                                                 _model.acadDropDownGeneroValue5 ??=
                                                                     'Identidade',
                                                               ),
-                                                              options: [
+                                                              options: const [
                                                                 'CNH',
                                                                 'Identidade',
                                                                 'Outros'
@@ -4840,7 +4837,7 @@ class _A08CadastroProfessoresWidgetState
                                                               borderWidth: 2.0,
                                                               borderRadius: 8.0,
                                                               margin:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           4.0,
@@ -4855,7 +4852,7 @@ class _A08CadastroProfessoresWidgetState
                                                               isMultiSelect:
                                                                   false,
                                                             ),
-                                                            if (widget!.telas ==
+                                                            if (widget.telas ==
                                                                 '2')
                                                               Column(
                                                                 mainAxisSize:
@@ -4863,7 +4860,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         .max,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             10.0,
@@ -4886,14 +4883,14 @@ class _A08CadastroProfessoresWidgetState
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -4910,11 +4907,11 @@ class _A08CadastroProfessoresWidgetState
                                                                                         color: FlutterFlowTheme.of(context).error,
                                                                                         size: 16.0,
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
                                                                                   child: TextFormField(
                                                                                     controller: _model.acadEndAlunoTextController6,
                                                                                     focusNode: _model.acadEndAlunoFocusNode6,
@@ -4960,7 +4957,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                       ),
                                                                                       filled: true,
                                                                                       fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                      contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                      contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                     ),
                                                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                           fontFamily: 'Manrope',
@@ -4983,14 +4980,14 @@ class _A08CadastroProfessoresWidgetState
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -5007,7 +5004,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                         color: FlutterFlowTheme.of(context).error,
                                                                                         size: 16.0,
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 TextFormField(
@@ -5055,7 +5052,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                     ),
                                                                                     filled: true,
                                                                                     fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                    contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                    contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Manrope',
@@ -5077,14 +5074,14 @@ class _A08CadastroProfessoresWidgetState
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -5101,7 +5098,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                         color: FlutterFlowTheme.of(context).error,
                                                                                         size: 16.0,
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 TextFormField(
@@ -5149,7 +5146,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                     ),
                                                                                     filled: true,
                                                                                     fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                    contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                    contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Manrope',
@@ -5163,12 +5160,12 @@ class _A08CadastroProfessoresWidgetState
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             10.0,
@@ -5191,14 +5188,14 @@ class _A08CadastroProfessoresWidgetState
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -5215,12 +5212,12 @@ class _A08CadastroProfessoresWidgetState
                                                                                         color: FlutterFlowTheme.of(context).error,
                                                                                         size: 16.0,
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 FlutterFlowDropDown<String>(
                                                                                   controller: _model.acadDropDownGeneroValueController6 ??= FormFieldController<String>(null),
-                                                                                  options: <String>[],
+                                                                                  options: const <String>[],
                                                                                   onChanged: (val) => setState(() => _model.acadDropDownGeneroValue6 = val),
                                                                                   height: 45.0,
                                                                                   textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -5238,7 +5235,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                   borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                   borderWidth: 2.0,
                                                                                   borderRadius: 8.0,
-                                                                                  margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                  margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                   hidesUnderline: true,
                                                                                   isOverButton: false,
                                                                                   isSearchable: false,
@@ -5256,14 +5253,14 @@ class _A08CadastroProfessoresWidgetState
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -5280,12 +5277,12 @@ class _A08CadastroProfessoresWidgetState
                                                                                         color: FlutterFlowTheme.of(context).error,
                                                                                         size: 16.0,
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 FlutterFlowDropDown<String>(
                                                                                   controller: _model.acadDropDownGeneroValueController7 ??= FormFieldController<String>(null),
-                                                                                  options: [
+                                                                                  options: const [
                                                                                     'Masculino',
                                                                                     'Feminino'
                                                                                   ],
@@ -5306,7 +5303,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                   borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                   borderWidth: 2.0,
                                                                                   borderRadius: 8.0,
-                                                                                  margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                  margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                   hidesUnderline: true,
                                                                                   isOverButton: false,
                                                                                   isSearchable: false,
@@ -5316,12 +5313,12 @@ class _A08CadastroProfessoresWidgetState
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             10.0,
@@ -5359,15 +5356,15 @@ class _A08CadastroProfessoresWidgetState
                                                                                 print('Button pressed ...');
                                                                               },
                                                                               text: 'Selecionar Documento',
-                                                                              icon: Icon(
+                                                                              icon: const Icon(
                                                                                 Icons.upload_rounded,
                                                                                 size: 25.0,
                                                                               ),
                                                                               options: FFButtonOptions(
                                                                                 width: 250.0,
                                                                                 height: 45.0,
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                 color: FlutterFlowTheme.of(context).primary,
                                                                                 textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                       fontFamily: 'Manrope',
@@ -5377,7 +5374,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                       fontWeight: FontWeight.w600,
                                                                                     ),
                                                                                 elevation: 3.0,
-                                                                                borderSide: BorderSide(
+                                                                                borderSide: const BorderSide(
                                                                                   color: Colors.transparent,
                                                                                   width: 1.0,
                                                                                 ),
@@ -5385,13 +5382,13 @@ class _A08CadastroProfessoresWidgetState
                                                                               ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
                                                                               child: FFButtonWidget(
                                                                                 onPressed: () {
                                                                                   print('Button pressed ...');
                                                                                 },
                                                                                 text: 'Excluir Imagem',
-                                                                                icon: Icon(
+                                                                                icon: const Icon(
                                                                                   Icons.delete_rounded,
                                                                                   color: Color(0xFF9C0404),
                                                                                   size: 25.0,
@@ -5399,18 +5396,18 @@ class _A08CadastroProfessoresWidgetState
                                                                                 options: FFButtonOptions(
                                                                                   width: 250.0,
                                                                                   height: 45.0,
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                  iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                   color: Colors.white,
                                                                                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                         fontFamily: 'Manrope',
-                                                                                        color: Color(0xFFCE0606),
+                                                                                        color: const Color(0xFFCE0606),
                                                                                         fontSize: 18.0,
                                                                                         letterSpacing: 0.0,
                                                                                         fontWeight: FontWeight.w600,
                                                                                       ),
                                                                                   elevation: 3.0,
-                                                                                  borderSide: BorderSide(
+                                                                                  borderSide: const BorderSide(
                                                                                     color: Color(0xFFCE0606),
                                                                                     width: 1.5,
                                                                                   ),
@@ -5420,13 +5417,13 @@ class _A08CadastroProfessoresWidgetState
                                                                             ),
                                                                           ],
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
                                                                   ),
                                                                 ],
                                                               ),
-                                                            if (widget!.telas ==
+                                                            if (widget.telas ==
                                                                 '3')
                                                               Column(
                                                                 mainAxisSize:
@@ -5434,7 +5431,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         .max,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             10.0,
@@ -5457,14 +5454,14 @@ class _A08CadastroProfessoresWidgetState
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -5476,11 +5473,11 @@ class _A08CadastroProfessoresWidgetState
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
                                                                                   child: TextFormField(
                                                                                     controller: _model.acadEndAlunoTextController9,
                                                                                     focusNode: _model.acadEndAlunoFocusNode9,
@@ -5526,7 +5523,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                       ),
                                                                                       filled: true,
                                                                                       fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                      contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                      contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                     ),
                                                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                           fontFamily: 'Manrope',
@@ -5549,14 +5546,14 @@ class _A08CadastroProfessoresWidgetState
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -5568,7 +5565,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 TextFormField(
@@ -5616,7 +5613,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                     ),
                                                                                     filled: true,
                                                                                     fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                    contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                    contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Manrope',
@@ -5638,14 +5635,14 @@ class _A08CadastroProfessoresWidgetState
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -5657,7 +5654,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 TextFormField(
@@ -5705,7 +5702,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                     ),
                                                                                     filled: true,
                                                                                     fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                    contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                    contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Manrope',
@@ -5719,12 +5716,12 @@ class _A08CadastroProfessoresWidgetState
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             10.0,
@@ -5747,14 +5744,14 @@ class _A08CadastroProfessoresWidgetState
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -5766,12 +5763,12 @@ class _A08CadastroProfessoresWidgetState
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 FlutterFlowDropDown<String>(
                                                                                   controller: _model.acadDropDownGeneroValueController8 ??= FormFieldController<String>(null),
-                                                                                  options: <String>[],
+                                                                                  options: const <String>[],
                                                                                   onChanged: (val) => setState(() => _model.acadDropDownGeneroValue8 = val),
                                                                                   height: 45.0,
                                                                                   textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -5789,7 +5786,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                   borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                   borderWidth: 2.0,
                                                                                   borderRadius: 8.0,
-                                                                                  margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                  margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                   hidesUnderline: true,
                                                                                   isOverButton: false,
                                                                                   isSearchable: false,
@@ -5807,14 +5804,14 @@ class _A08CadastroProfessoresWidgetState
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -5826,12 +5823,12 @@ class _A08CadastroProfessoresWidgetState
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 FlutterFlowDropDown<String>(
                                                                                   controller: _model.acadDropDownGeneroValueController9 ??= FormFieldController<String>(null),
-                                                                                  options: [
+                                                                                  options: const [
                                                                                     'Masculino',
                                                                                     'Feminino'
                                                                                   ],
@@ -5852,7 +5849,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                   borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                   borderWidth: 2.0,
                                                                                   borderRadius: 8.0,
-                                                                                  margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                  margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                   hidesUnderline: true,
                                                                                   isOverButton: false,
                                                                                   isSearchable: false,
@@ -5862,12 +5859,12 @@ class _A08CadastroProfessoresWidgetState
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             10.0,
@@ -5905,15 +5902,15 @@ class _A08CadastroProfessoresWidgetState
                                                                                 print('Button pressed ...');
                                                                               },
                                                                               text: 'Selecionar Documento',
-                                                                              icon: Icon(
+                                                                              icon: const Icon(
                                                                                 Icons.upload_rounded,
                                                                                 size: 25.0,
                                                                               ),
                                                                               options: FFButtonOptions(
                                                                                 width: 250.0,
                                                                                 height: 45.0,
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                 color: FlutterFlowTheme.of(context).primary,
                                                                                 textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                       fontFamily: 'Manrope',
@@ -5923,7 +5920,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                       fontWeight: FontWeight.w600,
                                                                                     ),
                                                                                 elevation: 3.0,
-                                                                                borderSide: BorderSide(
+                                                                                borderSide: const BorderSide(
                                                                                   color: Colors.transparent,
                                                                                   width: 1.0,
                                                                                 ),
@@ -5931,13 +5928,13 @@ class _A08CadastroProfessoresWidgetState
                                                                               ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
                                                                               child: FFButtonWidget(
                                                                                 onPressed: () {
                                                                                   print('Button pressed ...');
                                                                                 },
                                                                                 text: 'Excluir Imagem',
-                                                                                icon: Icon(
+                                                                                icon: const Icon(
                                                                                   Icons.delete_rounded,
                                                                                   color: Color(0xFF9C0404),
                                                                                   size: 25.0,
@@ -5945,18 +5942,18 @@ class _A08CadastroProfessoresWidgetState
                                                                                 options: FFButtonOptions(
                                                                                   width: 250.0,
                                                                                   height: 45.0,
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                  iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                   color: Colors.white,
                                                                                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                         fontFamily: 'Manrope',
-                                                                                        color: Color(0xFFCE0606),
+                                                                                        color: const Color(0xFFCE0606),
                                                                                         fontSize: 18.0,
                                                                                         letterSpacing: 0.0,
                                                                                         fontWeight: FontWeight.w600,
                                                                                       ),
                                                                                   elevation: 3.0,
-                                                                                  borderSide: BorderSide(
+                                                                                  borderSide: const BorderSide(
                                                                                     color: Color(0xFFCE0606),
                                                                                     width: 1.5,
                                                                                   ),
@@ -5966,13 +5963,13 @@ class _A08CadastroProfessoresWidgetState
                                                                             ),
                                                                           ],
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
                                                                   ),
                                                                 ],
                                                               ),
-                                                            if (widget!.telas ==
+                                                            if (widget.telas ==
                                                                 '4')
                                                               Column(
                                                                 mainAxisSize:
@@ -5980,7 +5977,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         .max,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             10.0,
@@ -6003,14 +6000,14 @@ class _A08CadastroProfessoresWidgetState
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -6022,11 +6019,11 @@ class _A08CadastroProfessoresWidgetState
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
                                                                                   child: TextFormField(
                                                                                     controller: _model.acadEndAlunoTextController12,
                                                                                     focusNode: _model.acadEndAlunoFocusNode12,
@@ -6072,7 +6069,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                       ),
                                                                                       filled: true,
                                                                                       fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                      contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                      contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                     ),
                                                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                           fontFamily: 'Manrope',
@@ -6095,14 +6092,14 @@ class _A08CadastroProfessoresWidgetState
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -6114,7 +6111,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 TextFormField(
@@ -6162,7 +6159,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                     ),
                                                                                     filled: true,
                                                                                     fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                    contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                    contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Manrope',
@@ -6184,14 +6181,14 @@ class _A08CadastroProfessoresWidgetState
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -6203,7 +6200,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 TextFormField(
@@ -6251,7 +6248,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                     ),
                                                                                     filled: true,
                                                                                     fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                    contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                    contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Manrope',
@@ -6265,12 +6262,12 @@ class _A08CadastroProfessoresWidgetState
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             10.0,
@@ -6308,15 +6305,15 @@ class _A08CadastroProfessoresWidgetState
                                                                                 print('Button pressed ...');
                                                                               },
                                                                               text: 'Selecionar Documento',
-                                                                              icon: Icon(
+                                                                              icon: const Icon(
                                                                                 Icons.upload_rounded,
                                                                                 size: 25.0,
                                                                               ),
                                                                               options: FFButtonOptions(
                                                                                 width: 250.0,
                                                                                 height: 45.0,
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                 color: FlutterFlowTheme.of(context).primary,
                                                                                 textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                       fontFamily: 'Manrope',
@@ -6326,7 +6323,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                       fontWeight: FontWeight.w600,
                                                                                     ),
                                                                                 elevation: 3.0,
-                                                                                borderSide: BorderSide(
+                                                                                borderSide: const BorderSide(
                                                                                   color: Colors.transparent,
                                                                                   width: 1.0,
                                                                                 ),
@@ -6334,13 +6331,13 @@ class _A08CadastroProfessoresWidgetState
                                                                               ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
                                                                               child: FFButtonWidget(
                                                                                 onPressed: () {
                                                                                   print('Button pressed ...');
                                                                                 },
                                                                                 text: 'Excluir Imagem',
-                                                                                icon: Icon(
+                                                                                icon: const Icon(
                                                                                   Icons.delete_rounded,
                                                                                   color: Color(0xFF9C0404),
                                                                                   size: 25.0,
@@ -6348,18 +6345,18 @@ class _A08CadastroProfessoresWidgetState
                                                                                 options: FFButtonOptions(
                                                                                   width: 250.0,
                                                                                   height: 45.0,
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                  iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                   color: Colors.white,
                                                                                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                         fontFamily: 'Manrope',
-                                                                                        color: Color(0xFFCE0606),
+                                                                                        color: const Color(0xFFCE0606),
                                                                                         fontSize: 18.0,
                                                                                         letterSpacing: 0.0,
                                                                                         fontWeight: FontWeight.w600,
                                                                                       ),
                                                                                   elevation: 3.0,
-                                                                                  borderSide: BorderSide(
+                                                                                  borderSide: const BorderSide(
                                                                                     color: Color(0xFFCE0606),
                                                                                     width: 1.5,
                                                                                   ),
@@ -6369,7 +6366,7 @@ class _A08CadastroProfessoresWidgetState
                                                                             ),
                                                                           ],
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
                                                                   ),
@@ -6380,11 +6377,11 @@ class _A08CadastroProfessoresWidgetState
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(width: 20.0)),
+                                                      const SizedBox(width: 20.0)),
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         10.0, 10.0, 0.0, 0.0),
                                                 child: Row(
@@ -6402,11 +6399,11 @@ class _A08CadastroProfessoresWidgetState
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -6436,7 +6433,7 @@ class _A08CadastroProfessoresWidgetState
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -6458,7 +6455,7 @@ class _A08CadastroProfessoresWidgetState
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         20.0, 0.0, 20.0, 0.0),
                                                 child: Row(
@@ -6472,7 +6469,7 @@ class _A08CadastroProfessoresWidgetState
                                                       child: Container(
                                                         width: 550.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Column(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -6482,7 +6479,7 @@ class _A08CadastroProfessoresWidgetState
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -6507,14 +6504,14 @@ class _A08CadastroProfessoresWidgetState
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         6.0)),
                                                               ),
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -6612,7 +6609,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           context)
                                                                       .primaryBackground,
                                                                   contentPadding:
-                                                                      EdgeInsetsDirectional.fromSTEB(
+                                                                      const EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           16.0,
                                                                           10.0,
@@ -6644,7 +6641,7 @@ class _A08CadastroProfessoresWidgetState
                                                       child: Container(
                                                         width: 550.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Column(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -6654,7 +6651,7 @@ class _A08CadastroProfessoresWidgetState
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -6679,14 +6676,14 @@ class _A08CadastroProfessoresWidgetState
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         6.0)),
                                                               ),
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -6784,7 +6781,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           context)
                                                                       .primaryBackground,
                                                                   contentPadding:
-                                                                      EdgeInsetsDirectional.fromSTEB(
+                                                                      const EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           16.0,
                                                                           10.0,
@@ -6816,7 +6813,7 @@ class _A08CadastroProfessoresWidgetState
                                                       child: Container(
                                                         width: 550.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Column(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -6826,7 +6823,7 @@ class _A08CadastroProfessoresWidgetState
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -6851,14 +6848,14 @@ class _A08CadastroProfessoresWidgetState
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         6.0)),
                                                               ),
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -6956,7 +6953,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           context)
                                                                       .primaryBackground,
                                                                   contentPadding:
-                                                                      EdgeInsetsDirectional.fromSTEB(
+                                                                      const EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           16.0,
                                                                           10.0,
@@ -6984,11 +6981,11 @@ class _A08CadastroProfessoresWidgetState
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(width: 20.0)),
+                                                      const SizedBox(width: 20.0)),
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         10.0, 10.0, 0.0, 0.0),
                                                 child: Row(
@@ -7006,11 +7003,11 @@ class _A08CadastroProfessoresWidgetState
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -7040,7 +7037,7 @@ class _A08CadastroProfessoresWidgetState
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -7062,7 +7059,7 @@ class _A08CadastroProfessoresWidgetState
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         20.0, 10.0, 20.0, 0.0),
                                                 child: Row(
@@ -7076,7 +7073,7 @@ class _A08CadastroProfessoresWidgetState
                                                       child: Container(
                                                         width: 550.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Column(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -7086,7 +7083,7 @@ class _A08CadastroProfessoresWidgetState
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -7156,7 +7153,7 @@ class _A08CadastroProfessoresWidgetState
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         6.0)),
                                                               ),
@@ -7166,11 +7163,11 @@ class _A08CadastroProfessoresWidgetState
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(width: 20.0)),
+                                                      const SizedBox(width: 20.0)),
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         20.0, 0.0, 20.0, 0.0),
                                                 child: Row(
@@ -7184,7 +7181,7 @@ class _A08CadastroProfessoresWidgetState
                                                       child: Container(
                                                         width: 550.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Column(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -7194,7 +7191,7 @@ class _A08CadastroProfessoresWidgetState
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -7227,14 +7224,14 @@ class _A08CadastroProfessoresWidgetState
                                                                         .error,
                                                                     size: 16.0,
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         6.0)),
                                                               ),
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -7332,7 +7329,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           context)
                                                                       .primaryBackground,
                                                                   contentPadding:
-                                                                      EdgeInsetsDirectional.fromSTEB(
+                                                                      const EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           16.0,
                                                                           10.0,
@@ -7364,7 +7361,7 @@ class _A08CadastroProfessoresWidgetState
                                                       child: Container(
                                                         width: 550.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Column(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -7374,7 +7371,7 @@ class _A08CadastroProfessoresWidgetState
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -7407,14 +7404,14 @@ class _A08CadastroProfessoresWidgetState
                                                                         .error,
                                                                     size: 16.0,
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         6.0)),
                                                               ),
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -7512,7 +7509,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           context)
                                                                       .primaryBackground,
                                                                   contentPadding:
-                                                                      EdgeInsetsDirectional.fromSTEB(
+                                                                      const EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           16.0,
                                                                           10.0,
@@ -7544,7 +7541,7 @@ class _A08CadastroProfessoresWidgetState
                                                       child: Container(
                                                         width: 550.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Column(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -7554,7 +7551,7 @@ class _A08CadastroProfessoresWidgetState
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -7587,14 +7584,14 @@ class _A08CadastroProfessoresWidgetState
                                                                         .error,
                                                                     size: 16.0,
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         6.0)),
                                                               ),
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -7692,7 +7689,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           context)
                                                                       .primaryBackground,
                                                                   contentPadding:
-                                                                      EdgeInsetsDirectional.fromSTEB(
+                                                                      const EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           16.0,
                                                                           10.0,
@@ -7720,11 +7717,11 @@ class _A08CadastroProfessoresWidgetState
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(width: 20.0)),
+                                                      const SizedBox(width: 20.0)),
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         10.0, 10.0, 0.0, 0.0),
                                                 child: Row(
@@ -7742,11 +7739,11 @@ class _A08CadastroProfessoresWidgetState
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -7776,7 +7773,7 @@ class _A08CadastroProfessoresWidgetState
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -7798,7 +7795,7 @@ class _A08CadastroProfessoresWidgetState
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         20.0, 0.0, 20.0, 0.0),
                                                 child: Row(
@@ -7812,7 +7809,7 @@ class _A08CadastroProfessoresWidgetState
                                                       child: Container(
                                                         width: 550.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Column(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -7822,7 +7819,7 @@ class _A08CadastroProfessoresWidgetState
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -7847,14 +7844,14 @@ class _A08CadastroProfessoresWidgetState
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         6.0)),
                                                               ),
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -7952,7 +7949,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           context)
                                                                       .primaryBackground,
                                                                   contentPadding:
-                                                                      EdgeInsetsDirectional.fromSTEB(
+                                                                      const EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           16.0,
                                                                           10.0,
@@ -7984,7 +7981,7 @@ class _A08CadastroProfessoresWidgetState
                                                       child: Container(
                                                         width: 550.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Column(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -7994,7 +7991,7 @@ class _A08CadastroProfessoresWidgetState
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -8019,14 +8016,14 @@ class _A08CadastroProfessoresWidgetState
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         6.0)),
                                                               ),
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -8124,7 +8121,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           context)
                                                                       .primaryBackground,
                                                                   contentPadding:
-                                                                      EdgeInsetsDirectional.fromSTEB(
+                                                                      const EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           16.0,
                                                                           10.0,
@@ -8156,7 +8153,7 @@ class _A08CadastroProfessoresWidgetState
                                                       child: Container(
                                                         width: 550.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Column(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -8166,7 +8163,7 @@ class _A08CadastroProfessoresWidgetState
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -8191,14 +8188,14 @@ class _A08CadastroProfessoresWidgetState
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         6.0)),
                                                               ),
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -8296,7 +8293,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           context)
                                                                       .primaryBackground,
                                                                   contentPadding:
-                                                                      EdgeInsetsDirectional.fromSTEB(
+                                                                      const EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           16.0,
                                                                           10.0,
@@ -8324,11 +8321,11 @@ class _A08CadastroProfessoresWidgetState
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(width: 20.0)),
+                                                      const SizedBox(width: 20.0)),
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         20.0, 10.0, 20.0, 0.0),
                                                 child: Row(
@@ -8342,7 +8339,7 @@ class _A08CadastroProfessoresWidgetState
                                                       child: Container(
                                                         width: 550.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Column(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -8352,7 +8349,7 @@ class _A08CadastroProfessoresWidgetState
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -8377,14 +8374,14 @@ class _A08CadastroProfessoresWidgetState
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         6.0)),
                                                               ),
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -8482,7 +8479,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           context)
                                                                       .primaryBackground,
                                                                   contentPadding:
-                                                                      EdgeInsetsDirectional.fromSTEB(
+                                                                      const EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           16.0,
                                                                           10.0,
@@ -8514,7 +8511,7 @@ class _A08CadastroProfessoresWidgetState
                                                       child: Container(
                                                         width: 550.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Column(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -8524,7 +8521,7 @@ class _A08CadastroProfessoresWidgetState
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -8549,14 +8546,14 @@ class _A08CadastroProfessoresWidgetState
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         6.0)),
                                                               ),
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -8654,7 +8651,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           context)
                                                                       .primaryBackground,
                                                                   contentPadding:
-                                                                      EdgeInsetsDirectional.fromSTEB(
+                                                                      const EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           16.0,
                                                                           10.0,
@@ -8686,7 +8683,7 @@ class _A08CadastroProfessoresWidgetState
                                                       child: Container(
                                                         width: 550.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Column(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -8696,7 +8693,7 @@ class _A08CadastroProfessoresWidgetState
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -8721,14 +8718,14 @@ class _A08CadastroProfessoresWidgetState
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         6.0)),
                                                               ),
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -8826,7 +8823,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           context)
                                                                       .primaryBackground,
                                                                   contentPadding:
-                                                                      EdgeInsetsDirectional.fromSTEB(
+                                                                      const EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           16.0,
                                                                           10.0,
@@ -8854,7 +8851,7 @@ class _A08CadastroProfessoresWidgetState
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(width: 20.0)),
+                                                      const SizedBox(width: 20.0)),
                                                 ),
                                               ),
                                               Divider(
@@ -8864,10 +8861,10 @@ class _A08CadastroProfessoresWidgetState
                                                         .alternate,
                                               ),
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 0.0, 50.0),
                                                   child: FFButtonWidget(
@@ -8876,7 +8873,7 @@ class _A08CadastroProfessoresWidgetState
                                                           'Button pressed ...');
                                                     },
                                                     text: 'Adicionar',
-                                                    icon: Icon(
+                                                    icon: const Icon(
                                                       Icons.add,
                                                       size: 25.0,
                                                     ),
@@ -8884,14 +8881,14 @@ class _A08CadastroProfessoresWidgetState
                                                       width: 250.0,
                                                       height: 45.0,
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   24.0,
                                                                   0.0,
                                                                   24.0,
                                                                   0.0),
                                                       iconPadding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -8915,7 +8912,7 @@ class _A08CadastroProfessoresWidgetState
                                                                     0.0,
                                                               ),
                                                       elevation: 3.0,
-                                                      borderSide: BorderSide(
+                                                      borderSide: const BorderSide(
                                                         color:
                                                             Colors.transparent,
                                                         width: 1.0,
@@ -8927,21 +8924,21 @@ class _A08CadastroProfessoresWidgetState
                                                   ),
                                                 ),
                                               ),
-                                            ].divide(SizedBox(height: 10.0)),
+                                            ].divide(const SizedBox(height: 10.0)),
                                           ),
                                         ),
                                         wrapWithModel(
                                           model: _model.folderModel1,
                                           updateCallback: () => setState(() {}),
-                                          child: FolderWidget(),
+                                          child: const FolderWidget(),
                                         ),
-                                      ].divide(SizedBox(height: 20.0)),
+                                      ].divide(const SizedBox(height: 20.0)),
                                     ),
                                   ),
                                 ),
                               ),
                             ),
-                          if (widget!.telas == 'listafuncionario')
+                          if (widget.telas == 'listafuncionario')
                             Container(
                               width: MediaQuery.sizeOf(context).width * 0.77,
                               height: double.infinity,
@@ -8953,7 +8950,7 @@ class _A08CadastroProfessoresWidgetState
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     5.0, 20.0, 0.0, 0.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -8962,7 +8959,7 @@ class _A08CadastroProfessoresWidgetState
                                       child: Column(
                                         children: [
                                           Align(
-                                            alignment: Alignment(-1.0, 0),
+                                            alignment: const Alignment(-1.0, 0),
                                             child: TabBar(
                                               isScrollable: true,
                                               labelColor:
@@ -8979,13 +8976,13 @@ class _A08CadastroProfessoresWidgetState
                                                         fontSize: 18.0,
                                                         letterSpacing: 0.0,
                                                       ),
-                                              unselectedLabelStyle: TextStyle(),
+                                              unselectedLabelStyle: const TextStyle(),
                                               indicatorColor:
                                                   FlutterFlowTheme.of(context)
                                                       .tertiary,
                                               indicatorWeight: 1.0,
-                                              padding: EdgeInsets.all(4.0),
-                                              tabs: [
+                                              padding: const EdgeInsets.all(4.0),
+                                              tabs: const [
                                                 Row(
                                                   mainAxisAlignment:
                                                       MainAxisAlignment.center,
@@ -9119,9 +9116,9 @@ class _A08CadastroProfessoresWidgetState
 
                                                     return Container(
                                                       decoration:
-                                                          BoxDecoration(),
+                                                          const BoxDecoration(),
                                                       child: Padding(
-                                                        padding: EdgeInsets.all(
+                                                        padding: const EdgeInsets.all(
                                                             20.0),
                                                         child: Column(
                                                           mainAxisSize:
@@ -9149,7 +9146,7 @@ class _A08CadastroProfessoresWidgetState
                                                                   child:
                                                                       Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             6.0),
                                                                     child: Row(
                                                                       mainAxisSize:
@@ -9267,7 +9264,7 @@ class _A08CadastroProfessoresWidgetState
                                                                             print('IconButton pressed ...');
                                                                           },
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 10.0)),
                                                                     ),
                                                                   ),
@@ -9275,10 +9272,10 @@ class _A08CadastroProfessoresWidgetState
                                                                 Container(
                                                                   width: 300.0,
                                                                   decoration:
-                                                                      BoxDecoration(),
+                                                                      const BoxDecoration(),
                                                                   child:
                                                                       Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -9287,7 +9284,7 @@ class _A08CadastroProfessoresWidgetState
                                                                     child: Autocomplete<
                                                                         String>(
                                                                       initialValue:
-                                                                          TextEditingValue(),
+                                                                          const TextEditingValue(),
                                                                       optionsBuilder:
                                                                           (textEditingValue) {
                                                                         if (textEditingValue.text ==
@@ -9326,7 +9323,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                 letterSpacing: 0.0,
                                                                               ),
                                                                           textHighlightStyle:
-                                                                              TextStyle(),
+                                                                              const TextStyle(),
                                                                           elevation:
                                                                               4.0,
                                                                           optionBackgroundColor:
@@ -9370,29 +9367,28 @@ class _A08CadastroProfessoresWidgetState
                                                                           onChanged: (_) =>
                                                                               EasyDebounce.debounce(
                                                                             '_model.textController36',
-                                                                            Duration(milliseconds: 2000),
+                                                                            const Duration(milliseconds: 2000),
                                                                             () async {
-                                                                              if (_model.textController36.text != null && _model.textController36.text != '') {
+                                                                              if (_model.textController36.text != '') {
                                                                                 safeSetState(() {
                                                                                   _model.simpleSearchResults1 = TextSearch(
                                                                                     containerInventarioProdutosRecordList
                                                                                         .map(
                                                                                           (record) => TextSearchItem.fromTerms(record, [
-                                                                                            record.produtoCategoria!,
-                                                                                            record.nomeProduto!,
-                                                                                            record.produtoCodigo!,
-                                                                                            record.filial!
+                                                                                            record.produtoCategoria,
+                                                                                            record.nomeProduto,
+                                                                                            record.produtoCodigo,
+                                                                                            record.filial
                                                                                           ]),
                                                                                         )
                                                                                         .toList(),
                                                                                   ).search(_model.textController36.text).map((r) => r.object).take(20).toList();
-                                                                                  ;
                                                                                 });
                                                                               } else {
                                                                                 context.goNamed(
                                                                                   'A01escola',
                                                                                   extra: <String, dynamic>{
-                                                                                    kTransitionInfoKey: TransitionInfo(
+                                                                                    kTransitionInfoKey: const TransitionInfo(
                                                                                       hasTransition: true,
                                                                                       transitionType: PageTransitionType.fade,
                                                                                       duration: Duration(milliseconds: 0),
@@ -9474,7 +9470,7 @@ class _A08CadastroProfessoresWidgetState
                                                             Expanded(
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             10.0,
@@ -9547,7 +9543,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                 DefaultTextStyle.merge(
                                                                               softWrap: true,
                                                                               child: Align(
-                                                                                alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                 child: Text(
                                                                                   'Foto',
                                                                                   textAlign: TextAlign.center,
@@ -9641,7 +9637,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                 onSelectChanged) =>
                                                                             DataRow(
                                                                           color:
-                                                                              MaterialStateProperty.all(
+                                                                              WidgetStateProperty.all(
                                                                             produtosListIndex % 2 == 0
                                                                                 ? FlutterFlowTheme.of(context).secondaryBackground
                                                                                 : FlutterFlowTheme.of(context).primaryBackground,
@@ -9659,12 +9655,12 @@ class _A08CadastroProfessoresWidgetState
                                                                                   ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 3.0, 0.0, 3.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 3.0, 0.0, 3.0),
                                                                               child: Container(
                                                                                 width: 60.0,
                                                                                 height: 60.0,
                                                                                 clipBehavior: Clip.antiAlias,
-                                                                                decoration: BoxDecoration(
+                                                                                decoration: const BoxDecoration(
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Image.network(
@@ -9716,7 +9712,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                     shape: BoxShape.circle,
                                                                                   ),
                                                                                   child: Align(
-                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                     child: Icon(
                                                                                       Icons.remove_red_eye,
                                                                                       color: FlutterFlowTheme.of(context).primaryText,
@@ -9727,12 +9723,12 @@ class _A08CadastroProfessoresWidgetState
                                                                                 Container(
                                                                                   width: 35.0,
                                                                                   height: 35.0,
-                                                                                  decoration: BoxDecoration(
+                                                                                  decoration: const BoxDecoration(
                                                                                     color: Color(0xFFE30909),
                                                                                     shape: BoxShape.circle,
                                                                                   ),
                                                                                   child: Align(
-                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                     child: Icon(
                                                                                       Icons.delete_rounded,
                                                                                       color: FlutterFlowTheme.of(context).info,
@@ -9740,7 +9736,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                     ),
                                                                                   ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 10.0)),
+                                                                              ].divide(const SizedBox(width: 10.0)),
                                                                             ),
                                                                           ].map((c) => DataCell(c)).toList(),
                                                                         ),
@@ -9835,9 +9831,9 @@ class _A08CadastroProfessoresWidgetState
 
                                                     return Container(
                                                       decoration:
-                                                          BoxDecoration(),
+                                                          const BoxDecoration(),
                                                       child: Padding(
-                                                        padding: EdgeInsets.all(
+                                                        padding: const EdgeInsets.all(
                                                             20.0),
                                                         child: Column(
                                                           mainAxisSize:
@@ -9865,7 +9861,7 @@ class _A08CadastroProfessoresWidgetState
                                                                   child:
                                                                       Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             6.0),
                                                                     child: Row(
                                                                       mainAxisSize:
@@ -9983,7 +9979,7 @@ class _A08CadastroProfessoresWidgetState
                                                                             print('IconButton pressed ...');
                                                                           },
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 10.0)),
                                                                     ),
                                                                   ),
@@ -9991,10 +9987,10 @@ class _A08CadastroProfessoresWidgetState
                                                                 Container(
                                                                   width: 300.0,
                                                                   decoration:
-                                                                      BoxDecoration(),
+                                                                      const BoxDecoration(),
                                                                   child:
                                                                       Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -10003,7 +9999,7 @@ class _A08CadastroProfessoresWidgetState
                                                                     child: Autocomplete<
                                                                         String>(
                                                                       initialValue:
-                                                                          TextEditingValue(),
+                                                                          const TextEditingValue(),
                                                                       optionsBuilder:
                                                                           (textEditingValue) {
                                                                         if (textEditingValue.text ==
@@ -10042,7 +10038,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                 letterSpacing: 0.0,
                                                                               ),
                                                                           textHighlightStyle:
-                                                                              TextStyle(),
+                                                                              const TextStyle(),
                                                                           elevation:
                                                                               4.0,
                                                                           optionBackgroundColor:
@@ -10086,29 +10082,28 @@ class _A08CadastroProfessoresWidgetState
                                                                           onChanged: (_) =>
                                                                               EasyDebounce.debounce(
                                                                             '_model.textController37',
-                                                                            Duration(milliseconds: 2000),
+                                                                            const Duration(milliseconds: 2000),
                                                                             () async {
-                                                                              if (_model.textController37.text != null && _model.textController37.text != '') {
+                                                                              if (_model.textController37.text != '') {
                                                                                 safeSetState(() {
                                                                                   _model.simpleSearchResults2 = TextSearch(
                                                                                     containerInventarioProdutosRecordList
                                                                                         .map(
                                                                                           (record) => TextSearchItem.fromTerms(record, [
-                                                                                            record.produtoCategoria!,
-                                                                                            record.nomeProduto!,
-                                                                                            record.produtoCodigo!,
-                                                                                            record.filial!
+                                                                                            record.produtoCategoria,
+                                                                                            record.nomeProduto,
+                                                                                            record.produtoCodigo,
+                                                                                            record.filial
                                                                                           ]),
                                                                                         )
                                                                                         .toList(),
                                                                                   ).search(_model.textController37.text).map((r) => r.object).take(20).toList();
-                                                                                  ;
                                                                                 });
                                                                               } else {
                                                                                 context.goNamed(
                                                                                   'A01escola',
                                                                                   extra: <String, dynamic>{
-                                                                                    kTransitionInfoKey: TransitionInfo(
+                                                                                    kTransitionInfoKey: const TransitionInfo(
                                                                                       hasTransition: true,
                                                                                       transitionType: PageTransitionType.fade,
                                                                                       duration: Duration(milliseconds: 0),
@@ -10190,7 +10185,7 @@ class _A08CadastroProfessoresWidgetState
                                                             Expanded(
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             10.0,
@@ -10263,7 +10258,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                 DefaultTextStyle.merge(
                                                                               softWrap: true,
                                                                               child: Align(
-                                                                                alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                 child: Text(
                                                                                   'Foto',
                                                                                   textAlign: TextAlign.center,
@@ -10357,7 +10352,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                 onSelectChanged) =>
                                                                             DataRow(
                                                                           color:
-                                                                              MaterialStateProperty.all(
+                                                                              WidgetStateProperty.all(
                                                                             produtosListIndex % 2 == 0
                                                                                 ? FlutterFlowTheme.of(context).secondaryBackground
                                                                                 : FlutterFlowTheme.of(context).primaryBackground,
@@ -10375,12 +10370,12 @@ class _A08CadastroProfessoresWidgetState
                                                                                   ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 3.0, 0.0, 3.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 3.0, 0.0, 3.0),
                                                                               child: Container(
                                                                                 width: 60.0,
                                                                                 height: 60.0,
                                                                                 clipBehavior: Clip.antiAlias,
-                                                                                decoration: BoxDecoration(
+                                                                                decoration: const BoxDecoration(
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Image.network(
@@ -10432,7 +10427,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                     shape: BoxShape.circle,
                                                                                   ),
                                                                                   child: Align(
-                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                     child: Icon(
                                                                                       Icons.remove_red_eye,
                                                                                       color: FlutterFlowTheme.of(context).primaryText,
@@ -10443,12 +10438,12 @@ class _A08CadastroProfessoresWidgetState
                                                                                 Container(
                                                                                   width: 35.0,
                                                                                   height: 35.0,
-                                                                                  decoration: BoxDecoration(
+                                                                                  decoration: const BoxDecoration(
                                                                                     color: Color(0xFFE30909),
                                                                                     shape: BoxShape.circle,
                                                                                   ),
                                                                                   child: Align(
-                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                     child: Icon(
                                                                                       Icons.delete_rounded,
                                                                                       color: FlutterFlowTheme.of(context).info,
@@ -10456,7 +10451,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                     ),
                                                                                   ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 10.0)),
+                                                                              ].divide(const SizedBox(width: 10.0)),
                                                                             ),
                                                                           ].map((c) => DataCell(c)).toList(),
                                                                         ),
@@ -10551,9 +10546,9 @@ class _A08CadastroProfessoresWidgetState
 
                                                     return Container(
                                                       decoration:
-                                                          BoxDecoration(),
+                                                          const BoxDecoration(),
                                                       child: Padding(
-                                                        padding: EdgeInsets.all(
+                                                        padding: const EdgeInsets.all(
                                                             20.0),
                                                         child: Column(
                                                           mainAxisSize:
@@ -10581,7 +10576,7 @@ class _A08CadastroProfessoresWidgetState
                                                                   child:
                                                                       Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             6.0),
                                                                     child: Row(
                                                                       mainAxisSize:
@@ -10699,7 +10694,7 @@ class _A08CadastroProfessoresWidgetState
                                                                             print('IconButton pressed ...');
                                                                           },
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 10.0)),
                                                                     ),
                                                                   ),
@@ -10707,10 +10702,10 @@ class _A08CadastroProfessoresWidgetState
                                                                 Container(
                                                                   width: 300.0,
                                                                   decoration:
-                                                                      BoxDecoration(),
+                                                                      const BoxDecoration(),
                                                                   child:
                                                                       Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -10719,7 +10714,7 @@ class _A08CadastroProfessoresWidgetState
                                                                     child: Autocomplete<
                                                                         String>(
                                                                       initialValue:
-                                                                          TextEditingValue(),
+                                                                          const TextEditingValue(),
                                                                       optionsBuilder:
                                                                           (textEditingValue) {
                                                                         if (textEditingValue.text ==
@@ -10758,7 +10753,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                 letterSpacing: 0.0,
                                                                               ),
                                                                           textHighlightStyle:
-                                                                              TextStyle(),
+                                                                              const TextStyle(),
                                                                           elevation:
                                                                               4.0,
                                                                           optionBackgroundColor:
@@ -10802,29 +10797,28 @@ class _A08CadastroProfessoresWidgetState
                                                                           onChanged: (_) =>
                                                                               EasyDebounce.debounce(
                                                                             '_model.textController38',
-                                                                            Duration(milliseconds: 2000),
+                                                                            const Duration(milliseconds: 2000),
                                                                             () async {
-                                                                              if (_model.textController38.text != null && _model.textController38.text != '') {
+                                                                              if (_model.textController38.text != '') {
                                                                                 safeSetState(() {
                                                                                   _model.simpleSearchResults3 = TextSearch(
                                                                                     containerInventarioProdutosRecordList
                                                                                         .map(
                                                                                           (record) => TextSearchItem.fromTerms(record, [
-                                                                                            record.produtoCategoria!,
-                                                                                            record.nomeProduto!,
-                                                                                            record.produtoCodigo!,
-                                                                                            record.filial!
+                                                                                            record.produtoCategoria,
+                                                                                            record.nomeProduto,
+                                                                                            record.produtoCodigo,
+                                                                                            record.filial
                                                                                           ]),
                                                                                         )
                                                                                         .toList(),
                                                                                   ).search(_model.textController38.text).map((r) => r.object).take(20).toList();
-                                                                                  ;
                                                                                 });
                                                                               } else {
                                                                                 context.goNamed(
                                                                                   'A01escola',
                                                                                   extra: <String, dynamic>{
-                                                                                    kTransitionInfoKey: TransitionInfo(
+                                                                                    kTransitionInfoKey: const TransitionInfo(
                                                                                       hasTransition: true,
                                                                                       transitionType: PageTransitionType.fade,
                                                                                       duration: Duration(milliseconds: 0),
@@ -10906,7 +10900,7 @@ class _A08CadastroProfessoresWidgetState
                                                             Expanded(
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             10.0,
@@ -10979,7 +10973,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                 DefaultTextStyle.merge(
                                                                               softWrap: true,
                                                                               child: Align(
-                                                                                alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                 child: Text(
                                                                                   'Foto',
                                                                                   textAlign: TextAlign.center,
@@ -11073,7 +11067,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                 onSelectChanged) =>
                                                                             DataRow(
                                                                           color:
-                                                                              MaterialStateProperty.all(
+                                                                              WidgetStateProperty.all(
                                                                             produtosListIndex % 2 == 0
                                                                                 ? FlutterFlowTheme.of(context).secondaryBackground
                                                                                 : FlutterFlowTheme.of(context).primaryBackground,
@@ -11091,12 +11085,12 @@ class _A08CadastroProfessoresWidgetState
                                                                                   ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 3.0, 0.0, 3.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 3.0, 0.0, 3.0),
                                                                               child: Container(
                                                                                 width: 60.0,
                                                                                 height: 60.0,
                                                                                 clipBehavior: Clip.antiAlias,
-                                                                                decoration: BoxDecoration(
+                                                                                decoration: const BoxDecoration(
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Image.network(
@@ -11148,7 +11142,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                     shape: BoxShape.circle,
                                                                                   ),
                                                                                   child: Align(
-                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                     child: Icon(
                                                                                       Icons.remove_red_eye,
                                                                                       color: FlutterFlowTheme.of(context).primaryText,
@@ -11159,12 +11153,12 @@ class _A08CadastroProfessoresWidgetState
                                                                                 Container(
                                                                                   width: 35.0,
                                                                                   height: 35.0,
-                                                                                  decoration: BoxDecoration(
+                                                                                  decoration: const BoxDecoration(
                                                                                     color: Color(0xFFE30909),
                                                                                     shape: BoxShape.circle,
                                                                                   ),
                                                                                   child: Align(
-                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                     child: Icon(
                                                                                       Icons.delete_rounded,
                                                                                       color: FlutterFlowTheme.of(context).info,
@@ -11172,7 +11166,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                     ),
                                                                                   ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 10.0)),
+                                                                              ].divide(const SizedBox(width: 10.0)),
                                                                             ),
                                                                           ].map((c) => DataCell(c)).toList(),
                                                                         ),
@@ -11267,9 +11261,9 @@ class _A08CadastroProfessoresWidgetState
 
                                                     return Container(
                                                       decoration:
-                                                          BoxDecoration(),
+                                                          const BoxDecoration(),
                                                       child: Padding(
-                                                        padding: EdgeInsets.all(
+                                                        padding: const EdgeInsets.all(
                                                             20.0),
                                                         child: Column(
                                                           mainAxisSize:
@@ -11297,7 +11291,7 @@ class _A08CadastroProfessoresWidgetState
                                                                   child:
                                                                       Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             6.0),
                                                                     child: Row(
                                                                       mainAxisSize:
@@ -11415,7 +11409,7 @@ class _A08CadastroProfessoresWidgetState
                                                                             print('IconButton pressed ...');
                                                                           },
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 10.0)),
                                                                     ),
                                                                   ),
@@ -11423,10 +11417,10 @@ class _A08CadastroProfessoresWidgetState
                                                                 Container(
                                                                   width: 300.0,
                                                                   decoration:
-                                                                      BoxDecoration(),
+                                                                      const BoxDecoration(),
                                                                   child:
                                                                       Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -11435,7 +11429,7 @@ class _A08CadastroProfessoresWidgetState
                                                                     child: Autocomplete<
                                                                         String>(
                                                                       initialValue:
-                                                                          TextEditingValue(),
+                                                                          const TextEditingValue(),
                                                                       optionsBuilder:
                                                                           (textEditingValue) {
                                                                         if (textEditingValue.text ==
@@ -11474,7 +11468,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                 letterSpacing: 0.0,
                                                                               ),
                                                                           textHighlightStyle:
-                                                                              TextStyle(),
+                                                                              const TextStyle(),
                                                                           elevation:
                                                                               4.0,
                                                                           optionBackgroundColor:
@@ -11518,29 +11512,28 @@ class _A08CadastroProfessoresWidgetState
                                                                           onChanged: (_) =>
                                                                               EasyDebounce.debounce(
                                                                             '_model.textController39',
-                                                                            Duration(milliseconds: 2000),
+                                                                            const Duration(milliseconds: 2000),
                                                                             () async {
-                                                                              if (_model.textController39.text != null && _model.textController39.text != '') {
+                                                                              if (_model.textController39.text != '') {
                                                                                 safeSetState(() {
                                                                                   _model.simpleSearchResults4 = TextSearch(
                                                                                     containerInventarioProdutosRecordList
                                                                                         .map(
                                                                                           (record) => TextSearchItem.fromTerms(record, [
-                                                                                            record.produtoCategoria!,
-                                                                                            record.nomeProduto!,
-                                                                                            record.produtoCodigo!,
-                                                                                            record.filial!
+                                                                                            record.produtoCategoria,
+                                                                                            record.nomeProduto,
+                                                                                            record.produtoCodigo,
+                                                                                            record.filial
                                                                                           ]),
                                                                                         )
                                                                                         .toList(),
                                                                                   ).search(_model.textController39.text).map((r) => r.object).take(20).toList();
-                                                                                  ;
                                                                                 });
                                                                               } else {
                                                                                 context.goNamed(
                                                                                   'A01escola',
                                                                                   extra: <String, dynamic>{
-                                                                                    kTransitionInfoKey: TransitionInfo(
+                                                                                    kTransitionInfoKey: const TransitionInfo(
                                                                                       hasTransition: true,
                                                                                       transitionType: PageTransitionType.fade,
                                                                                       duration: Duration(milliseconds: 0),
@@ -11622,7 +11615,7 @@ class _A08CadastroProfessoresWidgetState
                                                             Expanded(
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             10.0,
@@ -11695,7 +11688,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                 DefaultTextStyle.merge(
                                                                               softWrap: true,
                                                                               child: Align(
-                                                                                alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                 child: Text(
                                                                                   'Foto',
                                                                                   textAlign: TextAlign.center,
@@ -11789,7 +11782,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                 onSelectChanged) =>
                                                                             DataRow(
                                                                           color:
-                                                                              MaterialStateProperty.all(
+                                                                              WidgetStateProperty.all(
                                                                             produtosListIndex % 2 == 0
                                                                                 ? FlutterFlowTheme.of(context).secondaryBackground
                                                                                 : FlutterFlowTheme.of(context).primaryBackground,
@@ -11807,12 +11800,12 @@ class _A08CadastroProfessoresWidgetState
                                                                                   ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 3.0, 0.0, 3.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 3.0, 0.0, 3.0),
                                                                               child: Container(
                                                                                 width: 60.0,
                                                                                 height: 60.0,
                                                                                 clipBehavior: Clip.antiAlias,
-                                                                                decoration: BoxDecoration(
+                                                                                decoration: const BoxDecoration(
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Image.network(
@@ -11864,7 +11857,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                     shape: BoxShape.circle,
                                                                                   ),
                                                                                   child: Align(
-                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                     child: Icon(
                                                                                       Icons.remove_red_eye,
                                                                                       color: FlutterFlowTheme.of(context).primaryText,
@@ -11875,12 +11868,12 @@ class _A08CadastroProfessoresWidgetState
                                                                                 Container(
                                                                                   width: 35.0,
                                                                                   height: 35.0,
-                                                                                  decoration: BoxDecoration(
+                                                                                  decoration: const BoxDecoration(
                                                                                     color: Color(0xFFE30909),
                                                                                     shape: BoxShape.circle,
                                                                                   ),
                                                                                   child: Align(
-                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                     child: Icon(
                                                                                       Icons.delete_rounded,
                                                                                       color: FlutterFlowTheme.of(context).info,
@@ -11888,7 +11881,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                     ),
                                                                                   ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 10.0)),
+                                                                              ].divide(const SizedBox(width: 10.0)),
                                                                             ),
                                                                           ].map((c) => DataCell(c)).toList(),
                                                                         ),
@@ -11983,9 +11976,9 @@ class _A08CadastroProfessoresWidgetState
 
                                                     return Container(
                                                       decoration:
-                                                          BoxDecoration(),
+                                                          const BoxDecoration(),
                                                       child: Padding(
-                                                        padding: EdgeInsets.all(
+                                                        padding: const EdgeInsets.all(
                                                             20.0),
                                                         child: Column(
                                                           mainAxisSize:
@@ -12013,7 +12006,7 @@ class _A08CadastroProfessoresWidgetState
                                                                   child:
                                                                       Padding(
                                                                     padding:
-                                                                        EdgeInsets.all(
+                                                                        const EdgeInsets.all(
                                                                             6.0),
                                                                     child: Row(
                                                                       mainAxisSize:
@@ -12131,7 +12124,7 @@ class _A08CadastroProfessoresWidgetState
                                                                             print('IconButton pressed ...');
                                                                           },
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 10.0)),
                                                                     ),
                                                                   ),
@@ -12139,10 +12132,10 @@ class _A08CadastroProfessoresWidgetState
                                                                 Container(
                                                                   width: 300.0,
                                                                   decoration:
-                                                                      BoxDecoration(),
+                                                                      const BoxDecoration(),
                                                                   child:
                                                                       Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -12151,7 +12144,7 @@ class _A08CadastroProfessoresWidgetState
                                                                     child: Autocomplete<
                                                                         String>(
                                                                       initialValue:
-                                                                          TextEditingValue(),
+                                                                          const TextEditingValue(),
                                                                       optionsBuilder:
                                                                           (textEditingValue) {
                                                                         if (textEditingValue.text ==
@@ -12190,7 +12183,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                 letterSpacing: 0.0,
                                                                               ),
                                                                           textHighlightStyle:
-                                                                              TextStyle(),
+                                                                              const TextStyle(),
                                                                           elevation:
                                                                               4.0,
                                                                           optionBackgroundColor:
@@ -12234,29 +12227,28 @@ class _A08CadastroProfessoresWidgetState
                                                                           onChanged: (_) =>
                                                                               EasyDebounce.debounce(
                                                                             '_model.textController40',
-                                                                            Duration(milliseconds: 2000),
+                                                                            const Duration(milliseconds: 2000),
                                                                             () async {
-                                                                              if (_model.textController40.text != null && _model.textController40.text != '') {
+                                                                              if (_model.textController40.text != '') {
                                                                                 safeSetState(() {
                                                                                   _model.simpleSearchResults5 = TextSearch(
                                                                                     containerInventarioProdutosRecordList
                                                                                         .map(
                                                                                           (record) => TextSearchItem.fromTerms(record, [
-                                                                                            record.produtoCategoria!,
-                                                                                            record.nomeProduto!,
-                                                                                            record.produtoCodigo!,
-                                                                                            record.filial!
+                                                                                            record.produtoCategoria,
+                                                                                            record.nomeProduto,
+                                                                                            record.produtoCodigo,
+                                                                                            record.filial
                                                                                           ]),
                                                                                         )
                                                                                         .toList(),
                                                                                   ).search(_model.textController40.text).map((r) => r.object).take(20).toList();
-                                                                                  ;
                                                                                 });
                                                                               } else {
                                                                                 context.goNamed(
                                                                                   'A01escola',
                                                                                   extra: <String, dynamic>{
-                                                                                    kTransitionInfoKey: TransitionInfo(
+                                                                                    kTransitionInfoKey: const TransitionInfo(
                                                                                       hasTransition: true,
                                                                                       transitionType: PageTransitionType.fade,
                                                                                       duration: Duration(milliseconds: 0),
@@ -12338,7 +12330,7 @@ class _A08CadastroProfessoresWidgetState
                                                             Expanded(
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             10.0,
@@ -12411,7 +12403,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                 DefaultTextStyle.merge(
                                                                               softWrap: true,
                                                                               child: Align(
-                                                                                alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                 child: Text(
                                                                                   'Foto',
                                                                                   textAlign: TextAlign.center,
@@ -12505,7 +12497,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                 onSelectChanged) =>
                                                                             DataRow(
                                                                           color:
-                                                                              MaterialStateProperty.all(
+                                                                              WidgetStateProperty.all(
                                                                             produtosListIndex % 2 == 0
                                                                                 ? FlutterFlowTheme.of(context).secondaryBackground
                                                                                 : FlutterFlowTheme.of(context).primaryBackground,
@@ -12523,12 +12515,12 @@ class _A08CadastroProfessoresWidgetState
                                                                                   ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 3.0, 0.0, 3.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 3.0, 0.0, 3.0),
                                                                               child: Container(
                                                                                 width: 60.0,
                                                                                 height: 60.0,
                                                                                 clipBehavior: Clip.antiAlias,
-                                                                                decoration: BoxDecoration(
+                                                                                decoration: const BoxDecoration(
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Image.network(
@@ -12580,7 +12572,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                     shape: BoxShape.circle,
                                                                                   ),
                                                                                   child: Align(
-                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                     child: Icon(
                                                                                       Icons.remove_red_eye,
                                                                                       color: FlutterFlowTheme.of(context).primaryText,
@@ -12591,12 +12583,12 @@ class _A08CadastroProfessoresWidgetState
                                                                                 Container(
                                                                                   width: 35.0,
                                                                                   height: 35.0,
-                                                                                  decoration: BoxDecoration(
+                                                                                  decoration: const BoxDecoration(
                                                                                     color: Color(0xFFE30909),
                                                                                     shape: BoxShape.circle,
                                                                                   ),
                                                                                   child: Align(
-                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                     child: Icon(
                                                                                       Icons.delete_rounded,
                                                                                       color: FlutterFlowTheme.of(context).info,
@@ -12604,7 +12596,7 @@ class _A08CadastroProfessoresWidgetState
                                                                                     ),
                                                                                   ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 10.0)),
+                                                                              ].divide(const SizedBox(width: 10.0)),
                                                                             ),
                                                                           ].map((c) => DataCell(c)).toList(),
                                                                         ),
@@ -12675,19 +12667,19 @@ class _A08CadastroProfessoresWidgetState
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           15.0, 0.0, 0.0, 0.0),
                                       child: wrapWithModel(
                                         model: _model.folderModel2,
                                         updateCallback: () => setState(() {}),
-                                        child: FolderWidget(),
+                                        child: const FolderWidget(),
                                       ),
                                     ),
                                   ],
                                 ),
                               ),
                             ),
-                          if (widget!.telas == 'loginfuncionario')
+                          if (widget.telas == 'loginfuncionario')
                             Container(
                               width: MediaQuery.sizeOf(context).width * 0.77,
                               height: double.infinity,
@@ -12710,7 +12702,7 @@ class _A08CadastroProfessoresWidgetState
                                   ),
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsets.all(20.0),
+                                  padding: const EdgeInsets.all(20.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
@@ -12733,10 +12725,10 @@ class _A08CadastroProfessoresWidgetState
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   -1.0, 0.0),
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         10.0, 10.0, 0.0, 0.0),
                                                 child: Text(
@@ -12761,7 +12753,7 @@ class _A08CadastroProfessoresWidgetState
                                                       .tertiary,
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       10.0, 10.0, 15.0, 0.0),
                                               child: Row(
@@ -12774,7 +12766,7 @@ class _A08CadastroProfessoresWidgetState
                                                     child: Container(
                                                       width: 550.0,
                                                       decoration:
-                                                          BoxDecoration(),
+                                                          const BoxDecoration(),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -12784,7 +12776,7 @@ class _A08CadastroProfessoresWidgetState
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -12817,13 +12809,13 @@ class _A08CadastroProfessoresWidgetState
                                                                       .error,
                                                                   size: 16.0,
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 6.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -12837,7 +12829,7 @@ class _A08CadastroProfessoresWidgetState
                                                                   FormFieldController<
                                                                           String>(
                                                                       null),
-                                                              options: [
+                                                              options: const [
                                                                 'option 1'
                                                               ],
                                                               onChanged: (val) =>
@@ -12878,7 +12870,7 @@ class _A08CadastroProfessoresWidgetState
                                                               borderWidth: 2.0,
                                                               borderRadius: 8.0,
                                                               margin:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           4.0,
@@ -12903,7 +12895,7 @@ class _A08CadastroProfessoresWidgetState
                                                     child: Container(
                                                       width: 550.0,
                                                       decoration:
-                                                          BoxDecoration(),
+                                                          const BoxDecoration(),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -12913,7 +12905,7 @@ class _A08CadastroProfessoresWidgetState
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -12946,7 +12938,7 @@ class _A08CadastroProfessoresWidgetState
                                                                       .error,
                                                                   size: 16.0,
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 6.0)),
                                                             ),
                                                           ),
@@ -12957,7 +12949,7 @@ class _A08CadastroProfessoresWidgetState
                                                                 FormFieldController<
                                                                         String>(
                                                                     null),
-                                                            options: [
+                                                            options: const [
                                                               'option 1'
                                                             ],
                                                             onChanged: (val) =>
@@ -12998,7 +12990,7 @@ class _A08CadastroProfessoresWidgetState
                                                             borderWidth: 2.0,
                                                             borderRadius: 8.0,
                                                             margin:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         4.0,
@@ -13015,11 +13007,11 @@ class _A08CadastroProfessoresWidgetState
                                                       ),
                                                     ),
                                                   ),
-                                                ].divide(SizedBox(width: 20.0)),
+                                                ].divide(const SizedBox(width: 20.0)),
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 10.0, 0.0, 0.0),
                                               child: Row(
@@ -13029,7 +13021,7 @@ class _A08CadastroProfessoresWidgetState
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 25.0, 0.0),
                                                     child: FFButtonWidget(
@@ -13038,21 +13030,21 @@ class _A08CadastroProfessoresWidgetState
                                                             'Button pressed ...');
                                                       },
                                                       text: 'Filtro',
-                                                      icon: Icon(
+                                                      icon: const Icon(
                                                         Icons.filter_alt,
                                                         size: 20.0,
                                                       ),
                                                       options: FFButtonOptions(
                                                         height: 45.0,
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     24.0,
                                                                     0.0,
                                                                     24.0,
                                                                     0.0),
                                                         iconPadding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -13075,7 +13067,7 @@ class _A08CadastroProfessoresWidgetState
                                                                       0.0,
                                                                 ),
                                                         elevation: 3.0,
-                                                        borderSide: BorderSide(
+                                                        borderSide: const BorderSide(
                                                           color: Colors
                                                               .transparent,
                                                           width: 1.0,
@@ -13134,7 +13126,7 @@ class _A08CadastroProfessoresWidgetState
                                                 ),
                                               ),
                                               child: Padding(
-                                                padding: EdgeInsets.all(20.0),
+                                                padding: const EdgeInsets.all(20.0),
                                                 child: Column(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -13155,11 +13147,11 @@ class _A08CadastroProfessoresWidgetState
                                                         ),
                                                         Align(
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -13195,7 +13187,7 @@ class _A08CadastroProfessoresWidgetState
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   10.0,
@@ -13222,7 +13214,7 @@ class _A08CadastroProfessoresWidgetState
                                                             ),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsets
+                                                                  const EdgeInsets
                                                                       .all(6.0),
                                                               child: Row(
                                                                 mainAxisSize:
@@ -13357,7 +13349,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           'IconButton pressed ...');
                                                                     },
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         10.0)),
                                                               ),
@@ -13366,10 +13358,10 @@ class _A08CadastroProfessoresWidgetState
                                                           Container(
                                                             width: 250.0,
                                                             decoration:
-                                                                BoxDecoration(),
+                                                                const BoxDecoration(),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -13385,13 +13377,11 @@ class _A08CadastroProfessoresWidgetState
                                                                     EasyDebounce
                                                                         .debounce(
                                                                   '_model.textController41',
-                                                                  Duration(
+                                                                  const Duration(
                                                                       milliseconds:
                                                                           2000),
                                                                   () async {
                                                                     if (_model.textController41.text !=
-                                                                            null &&
-                                                                        _model.textController41.text !=
                                                                             '') {
                                                                       safeSetState(
                                                                           () {
@@ -13400,12 +13390,11 @@ class _A08CadastroProfessoresWidgetState
                                                                           containerInventarioLoja1RecordList
                                                                               .map(
                                                                                 (record) => TextSearchItem.fromTerms(record, [
-                                                                                  record.filial!
+                                                                                  record.filial
                                                                                 ]),
                                                                               )
                                                                               .toList(),
                                                                         ).search(_model.textController41.text).map((r) => r.object).take(20).toList();
-                                                                        ;
                                                                       });
                                                                     } else {
                                                                       context
@@ -13414,7 +13403,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         extra: <String,
                                                                             dynamic>{
                                                                           kTransitionInfoKey:
-                                                                              TransitionInfo(
+                                                                              const TransitionInfo(
                                                                             hasTransition:
                                                                                 true,
                                                                             transitionType:
@@ -13512,7 +13501,7 @@ class _A08CadastroProfessoresWidgetState
                                                                   ),
                                                                   filled: true,
                                                                   prefixIcon:
-                                                                      Icon(
+                                                                      const Icon(
                                                                     Icons
                                                                         .search,
                                                                   ),
@@ -13539,7 +13528,7 @@ class _A08CadastroProfessoresWidgetState
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     10.0,
@@ -13767,7 +13756,7 @@ class _A08CadastroProfessoresWidgetState
                                                                   onSelectChanged:
                                                                       onSelectChanged,
                                                                   color:
-                                                                      MaterialStateProperty
+                                                                      WidgetStateProperty
                                                                           .all(
                                                                     produtosListIndex %
                                                                                 2 ==
@@ -13937,15 +13926,15 @@ class _A08CadastroProfessoresWidgetState
                                                                                   context: context,
                                                                                   builder: (alertDialogContext) {
                                                                                     return AlertDialog(
-                                                                                      title: Text('Deseja deletar essa filial?'),
+                                                                                      title: const Text('Deseja deletar essa filial?'),
                                                                                       actions: [
                                                                                         TextButton(
                                                                                           onPressed: () => Navigator.pop(alertDialogContext, false),
-                                                                                          child: Text('Não, cancelar'),
+                                                                                          child: const Text('Não, cancelar'),
                                                                                         ),
                                                                                         TextButton(
                                                                                           onPressed: () => Navigator.pop(alertDialogContext, true),
-                                                                                          child: Text('Sim, deletar Filial'),
+                                                                                          child: const Text('Sim, deletar Filial'),
                                                                                         ),
                                                                                       ],
                                                                                     );
@@ -13958,7 +13947,7 @@ class _A08CadastroProfessoresWidgetState
                                                                               context.goNamed(
                                                                                 'A01escola',
                                                                                 extra: <String, dynamic>{
-                                                                                  kTransitionInfoKey: TransitionInfo(
+                                                                                  kTransitionInfoKey: const TransitionInfo(
                                                                                     hasTransition: true,
                                                                                     transitionType: PageTransitionType.fade,
                                                                                     duration: Duration(milliseconds: 0),
@@ -13968,7 +13957,7 @@ class _A08CadastroProfessoresWidgetState
                                                                             }
                                                                           },
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 10.0)),
                                                                     ),
                                                                   ]
@@ -14062,16 +14051,16 @@ class _A08CadastroProfessoresWidgetState
                                       wrapWithModel(
                                         model: _model.folderModel3,
                                         updateCallback: () => setState(() {}),
-                                        child: FolderWidget(),
+                                        child: const FolderWidget(),
                                       ),
-                                    ].divide(SizedBox(height: 20.0)),
+                                    ].divide(const SizedBox(height: 20.0)),
                                   ),
                                 ),
                               ),
                             ),
-                          if (widget!.telas == 'adddepartamento')
+                          if (widget.telas == 'adddepartamento')
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Container(
                                 width: MediaQuery.sizeOf(context).width * 0.77,
                                 height: double.infinity,
@@ -14084,7 +14073,7 @@ class _A08CadastroProfessoresWidgetState
                                   ),
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsets.all(20.0),
+                                  padding: const EdgeInsets.all(20.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
@@ -14116,7 +14105,7 @@ class _A08CadastroProfessoresWidgetState
                                               autovalidateMode:
                                                   AutovalidateMode.disabled,
                                               child: Padding(
-                                                padding: EdgeInsets.all(10.0),
+                                                padding: const EdgeInsets.all(10.0),
                                                 child: Column(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -14127,7 +14116,7 @@ class _A08CadastroProfessoresWidgetState
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
@@ -14166,7 +14155,7 @@ class _A08CadastroProfessoresWidgetState
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   16.0,
@@ -14178,7 +14167,7 @@ class _A08CadastroProfessoresWidgetState
                                                         children: [
                                                           Align(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     -1.0, 0.0),
                                                             child: Text(
                                                               'Escola',
@@ -14195,7 +14184,7 @@ class _A08CadastroProfessoresWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         6.0,
                                                                         0.0,
@@ -14215,7 +14204,7 @@ class _A08CadastroProfessoresWidgetState
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   6.0,
@@ -14228,7 +14217,7 @@ class _A08CadastroProfessoresWidgetState
                                                                 .filalCategoriaValueController1 ??=
                                                             FormFieldController<
                                                                 String>(null),
-                                                        options: ['Option 1'],
+                                                        options: const ['Option 1'],
                                                         onChanged: (val) =>
                                                             setState(() => _model
                                                                     .filalCategoriaValue1 =
@@ -14265,7 +14254,7 @@ class _A08CadastroProfessoresWidgetState
                                                         borderWidth: 2.0,
                                                         borderRadius: 8.0,
                                                         margin:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     4.0,
@@ -14279,7 +14268,7 @@ class _A08CadastroProfessoresWidgetState
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   16.0,
@@ -14291,7 +14280,7 @@ class _A08CadastroProfessoresWidgetState
                                                         children: [
                                                           Align(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     -1.0, 0.0),
                                                             child: Text(
                                                               'Nome da Categoria',
@@ -14308,7 +14297,7 @@ class _A08CadastroProfessoresWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         6.0,
                                                                         0.0,
@@ -14328,7 +14317,7 @@ class _A08CadastroProfessoresWidgetState
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   6.0,
@@ -14440,11 +14429,11 @@ class _A08CadastroProfessoresWidgetState
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     20.0,
@@ -14456,7 +14445,7 @@ class _A08CadastroProfessoresWidgetState
                                                                 'Button pressed ...');
                                                           },
                                                           text: 'Adicionar',
-                                                          icon: Icon(
+                                                          icon: const Icon(
                                                             Icons.add,
                                                             size: 15.0,
                                                           ),
@@ -14464,14 +14453,14 @@ class _A08CadastroProfessoresWidgetState
                                                               FFButtonOptions(
                                                             height: 40.0,
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                             iconPadding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
@@ -14494,7 +14483,7 @@ class _A08CadastroProfessoresWidgetState
                                                                     ),
                                                             elevation: 3.0,
                                                             borderSide:
-                                                                BorderSide(
+                                                                const BorderSide(
                                                               color: Colors
                                                                   .transparent,
                                                               width: 1.0,
@@ -14565,7 +14554,7 @@ class _A08CadastroProfessoresWidgetState
                                                   ),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsets.all(10.0),
+                                                        const EdgeInsets.all(10.0),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.min,
@@ -14583,7 +14572,7 @@ class _A08CadastroProfessoresWidgetState
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           6.0,
                                                                           0.0,
@@ -14724,7 +14713,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         onSelectChanged) =>
                                                                     DataRow(
                                                                   color:
-                                                                      MaterialStateProperty
+                                                                      WidgetStateProperty
                                                                           .all(
                                                                     categoriaListIndex %
                                                                                 2 ==
@@ -14799,7 +14788,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           child:
                                                                               Align(
                                                                             alignment:
-                                                                                AlignmentDirectional(0.0, 0.0),
+                                                                                const AlignmentDirectional(0.0, 0.0),
                                                                             child:
                                                                                 Icon(
                                                                               Icons.edit_square,
@@ -14814,7 +14803,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           height:
                                                                               35.0,
                                                                           decoration:
-                                                                              BoxDecoration(
+                                                                              const BoxDecoration(
                                                                             color:
                                                                                 Color(0xFFE30909),
                                                                             shape:
@@ -14823,7 +14812,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           child:
                                                                               Align(
                                                                             alignment:
-                                                                                AlignmentDirectional(0.0, 0.0),
+                                                                                const AlignmentDirectional(0.0, 0.0),
                                                                             child:
                                                                                 Icon(
                                                                               Icons.delete_rounded,
@@ -14832,7 +14821,7 @@ class _A08CadastroProfessoresWidgetState
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 10.0)),
                                                                     ),
                                                                   ]
@@ -14905,21 +14894,21 @@ class _A08CadastroProfessoresWidgetState
                                               },
                                             ),
                                           ),
-                                        ].divide(SizedBox(width: 10.0)),
+                                        ].divide(const SizedBox(width: 10.0)),
                                       ),
                                       wrapWithModel(
                                         model: _model.folderModel4,
                                         updateCallback: () => setState(() {}),
-                                        child: FolderWidget(),
+                                        child: const FolderWidget(),
                                       ),
                                     ],
                                   ),
                                 ),
                               ),
                             ),
-                          if (widget!.telas == 'adddesignacao')
+                          if (widget.telas == 'adddesignacao')
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Container(
                                 width: MediaQuery.sizeOf(context).width * 0.77,
                                 height: double.infinity,
@@ -14932,7 +14921,7 @@ class _A08CadastroProfessoresWidgetState
                                   ),
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsets.all(20.0),
+                                  padding: const EdgeInsets.all(20.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
@@ -14964,7 +14953,7 @@ class _A08CadastroProfessoresWidgetState
                                               autovalidateMode:
                                                   AutovalidateMode.disabled,
                                               child: Padding(
-                                                padding: EdgeInsets.all(10.0),
+                                                padding: const EdgeInsets.all(10.0),
                                                 child: Column(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -14975,7 +14964,7 @@ class _A08CadastroProfessoresWidgetState
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
@@ -15014,7 +15003,7 @@ class _A08CadastroProfessoresWidgetState
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   16.0,
@@ -15026,7 +15015,7 @@ class _A08CadastroProfessoresWidgetState
                                                         children: [
                                                           Align(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     -1.0, 0.0),
                                                             child: Text(
                                                               'Escola',
@@ -15043,7 +15032,7 @@ class _A08CadastroProfessoresWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         6.0,
                                                                         0.0,
@@ -15063,7 +15052,7 @@ class _A08CadastroProfessoresWidgetState
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   6.0,
@@ -15076,7 +15065,7 @@ class _A08CadastroProfessoresWidgetState
                                                                 .filalCategoriaValueController2 ??=
                                                             FormFieldController<
                                                                 String>(null),
-                                                        options: ['Option 1'],
+                                                        options: const ['Option 1'],
                                                         onChanged: (val) =>
                                                             setState(() => _model
                                                                     .filalCategoriaValue2 =
@@ -15113,7 +15102,7 @@ class _A08CadastroProfessoresWidgetState
                                                         borderWidth: 2.0,
                                                         borderRadius: 8.0,
                                                         margin:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     4.0,
@@ -15127,7 +15116,7 @@ class _A08CadastroProfessoresWidgetState
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   16.0,
@@ -15139,7 +15128,7 @@ class _A08CadastroProfessoresWidgetState
                                                         children: [
                                                           Align(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     -1.0, 0.0),
                                                             child: Text(
                                                               'Nome da Categoria',
@@ -15156,7 +15145,7 @@ class _A08CadastroProfessoresWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         6.0,
                                                                         0.0,
@@ -15176,7 +15165,7 @@ class _A08CadastroProfessoresWidgetState
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   6.0,
@@ -15288,11 +15277,11 @@ class _A08CadastroProfessoresWidgetState
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     20.0,
@@ -15304,7 +15293,7 @@ class _A08CadastroProfessoresWidgetState
                                                                 'Button pressed ...');
                                                           },
                                                           text: 'Adicionar',
-                                                          icon: Icon(
+                                                          icon: const Icon(
                                                             Icons.add,
                                                             size: 15.0,
                                                           ),
@@ -15312,14 +15301,14 @@ class _A08CadastroProfessoresWidgetState
                                                               FFButtonOptions(
                                                             height: 40.0,
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                             iconPadding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
@@ -15342,7 +15331,7 @@ class _A08CadastroProfessoresWidgetState
                                                                     ),
                                                             elevation: 3.0,
                                                             borderSide:
-                                                                BorderSide(
+                                                                const BorderSide(
                                                               color: Colors
                                                                   .transparent,
                                                               width: 1.0,
@@ -15413,7 +15402,7 @@ class _A08CadastroProfessoresWidgetState
                                                   ),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsets.all(10.0),
+                                                        const EdgeInsets.all(10.0),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.min,
@@ -15431,7 +15420,7 @@ class _A08CadastroProfessoresWidgetState
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           6.0,
                                                                           0.0,
@@ -15572,7 +15561,7 @@ class _A08CadastroProfessoresWidgetState
                                                                         onSelectChanged) =>
                                                                     DataRow(
                                                                   color:
-                                                                      MaterialStateProperty
+                                                                      WidgetStateProperty
                                                                           .all(
                                                                     categoriaListIndex %
                                                                                 2 ==
@@ -15647,7 +15636,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           child:
                                                                               Align(
                                                                             alignment:
-                                                                                AlignmentDirectional(0.0, 0.0),
+                                                                                const AlignmentDirectional(0.0, 0.0),
                                                                             child:
                                                                                 Icon(
                                                                               Icons.edit_square,
@@ -15662,7 +15651,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           height:
                                                                               35.0,
                                                                           decoration:
-                                                                              BoxDecoration(
+                                                                              const BoxDecoration(
                                                                             color:
                                                                                 Color(0xFFE30909),
                                                                             shape:
@@ -15671,7 +15660,7 @@ class _A08CadastroProfessoresWidgetState
                                                                           child:
                                                                               Align(
                                                                             alignment:
-                                                                                AlignmentDirectional(0.0, 0.0),
+                                                                                const AlignmentDirectional(0.0, 0.0),
                                                                             child:
                                                                                 Icon(
                                                                               Icons.delete_rounded,
@@ -15680,7 +15669,7 @@ class _A08CadastroProfessoresWidgetState
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 10.0)),
                                                                     ),
                                                                   ]
@@ -15753,12 +15742,12 @@ class _A08CadastroProfessoresWidgetState
                                               },
                                             ),
                                           ),
-                                        ].divide(SizedBox(width: 10.0)),
+                                        ].divide(const SizedBox(width: 10.0)),
                                       ),
                                       wrapWithModel(
                                         model: _model.folderModel5,
                                         updateCallback: () => setState(() {}),
-                                        child: FolderWidget(),
+                                        child: const FolderWidget(),
                                       ),
                                     ],
                                   ),

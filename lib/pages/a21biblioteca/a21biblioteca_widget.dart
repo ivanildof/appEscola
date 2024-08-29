@@ -13,7 +13,6 @@ import '/flutter_flow/form_field_controller.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:text_search/text_search.dart';
 import 'a21biblioteca_model.dart';
@@ -23,7 +22,7 @@ class A21bibliotecaWidget extends StatefulWidget {
   const A21bibliotecaWidget({
     super.key,
     String? telas,
-  }) : this.telas = telas ?? 'vazio';
+  }) : telas = telas ?? 'vazio';
 
   final String telas;
 
@@ -141,7 +140,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                         wrapWithModel(
                           model: _model.menuSuperiorModel,
                           updateCallback: () => setState(() {}),
-                          child: MenuSuperiorWidget(),
+                          child: const MenuSuperiorWidget(),
                         ),
                       if (responsiveVisibility(
                         context: context,
@@ -151,7 +150,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                         wrapWithModel(
                           model: _model.menuSuperiorCelularModel,
                           updateCallback: () => setState(() {}),
-                          child: MenuSuperiorCelularWidget(),
+                          child: const MenuSuperiorCelularWidget(),
                         ),
                     ],
                   ),
@@ -162,9 +161,9 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                         wrapWithModel(
                           model: _model.menuLateralModel,
                           updateCallback: () => setState(() {}),
-                          child: MenuLateralWidget(),
+                          child: const MenuLateralWidget(),
                         ),
-                        if (widget!.telas == 'AddLivro')
+                        if (widget.telas == 'AddLivro')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -176,7 +175,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   5.0, 20.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -185,7 +184,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                     child: Column(
                                       children: [
                                         Align(
-                                          alignment: Alignment(-1.0, 0),
+                                          alignment: const Alignment(-1.0, 0),
                                           child: TabBar(
                                             isScrollable: true,
                                             labelColor:
@@ -202,13 +201,13 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                       fontSize: 18.0,
                                                       letterSpacing: 0.0,
                                                     ),
-                                            unselectedLabelStyle: TextStyle(),
+                                            unselectedLabelStyle: const TextStyle(),
                                             indicatorColor:
                                                 FlutterFlowTheme.of(context)
                                                     .tertiary,
                                             indicatorWeight: 1.0,
-                                            padding: EdgeInsets.all(4.0),
-                                            tabs: [
+                                            padding: const EdgeInsets.all(4.0),
+                                            tabs: const [
                                               Row(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
@@ -290,10 +289,10 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                       snapshot.data!;
 
                                                   return Container(
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsets.all(20.0),
+                                                          const EdgeInsets.all(20.0),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -320,7 +319,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                 ),
                                                                 child: Padding(
                                                                   padding:
-                                                                      EdgeInsets
+                                                                      const EdgeInsets
                                                                           .all(
                                                                               6.0),
                                                                   child: Row(
@@ -448,7 +447,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                               'IconButton pressed ...');
                                                                         },
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             10.0)),
                                                                   ),
@@ -457,9 +456,9 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                               Container(
                                                                 width: 300.0,
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -469,7 +468,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                       Autocomplete<
                                                                           String>(
                                                                     initialValue:
-                                                                        TextEditingValue(),
+                                                                        const TextEditingValue(),
                                                                     optionsBuilder:
                                                                         (textEditingValue) {
                                                                       if (textEditingValue
@@ -511,7 +510,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                         textHighlightStyle:
-                                                                            TextStyle(),
+                                                                            const TextStyle(),
                                                                         elevation:
                                                                             4.0,
                                                                         optionBackgroundColor:
@@ -557,31 +556,29 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             (_) =>
                                                                                 EasyDebounce.debounce(
                                                                           '_model.textController1',
-                                                                          Duration(
+                                                                          const Duration(
                                                                               milliseconds: 2000),
                                                                           () async {
-                                                                            if (_model.textController1.text != null &&
-                                                                                _model.textController1.text != '') {
+                                                                            if (_model.textController1.text != '') {
                                                                               safeSetState(() {
                                                                                 _model.simpleSearchResults1 = TextSearch(
                                                                                   containerInventarioProdutosRecordList
                                                                                       .map(
                                                                                         (record) => TextSearchItem.fromTerms(record, [
-                                                                                          record.produtoCategoria!,
-                                                                                          record.nomeProduto!,
-                                                                                          record.produtoCodigo!,
-                                                                                          record.filial!
+                                                                                          record.produtoCategoria,
+                                                                                          record.nomeProduto,
+                                                                                          record.produtoCodigo,
+                                                                                          record.filial
                                                                                         ]),
                                                                                       )
                                                                                       .toList(),
                                                                                 ).search(_model.textController1.text).map((r) => r.object).take(20).toList();
-                                                                                ;
                                                                               });
                                                                             } else {
                                                                               context.goNamed(
                                                                                 'A01escola',
                                                                                 extra: <String, dynamic>{
-                                                                                  kTransitionInfoKey: TransitionInfo(
+                                                                                  kTransitionInfoKey: const TransitionInfo(
                                                                                     hasTransition: true,
                                                                                     transitionType: PageTransitionType.fade,
                                                                                     duration: Duration(milliseconds: 0),
@@ -675,7 +672,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                           Expanded(
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           10.0,
@@ -897,7 +894,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                               selected,
                                                                               onSelectChanged) =>
                                                                           DataRow(
-                                                                        color: MaterialStateProperty
+                                                                        color: WidgetStateProperty
                                                                             .all(
                                                                           produtosListIndex % 2 == 0
                                                                               ? FlutterFlowTheme.of(context).secondaryBackground
@@ -929,7 +926,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                                 ),
                                                                           ),
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 3.0,
                                                                                 0.0,
@@ -994,7 +991,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                   child: Icon(
                                                                                     Icons.edit_square,
                                                                                     color: FlutterFlowTheme.of(context).primaryText,
@@ -1005,12 +1002,12 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                               Container(
                                                                                 width: 35.0,
                                                                                 height: 35.0,
-                                                                                decoration: BoxDecoration(
+                                                                                decoration: const BoxDecoration(
                                                                                   color: Color(0xFFE30909),
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                   child: Icon(
                                                                                     Icons.delete_rounded,
                                                                                     color: FlutterFlowTheme.of(context).info,
@@ -1018,7 +1015,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                                   ),
                                                                                 ),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 10.0)),
+                                                                            ].divide(const SizedBox(width: 10.0)),
                                                                           ),
                                                                         ]
                                                                             .map((c) =>
@@ -1092,10 +1089,10 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                 autovalidateMode:
                                                     AutovalidateMode.disabled,
                                                 child: Container(
-                                                  decoration: BoxDecoration(),
+                                                  decoration: const BoxDecoration(),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 20.0,
                                                                 0.0, 50.0),
                                                     child:
@@ -1109,7 +1106,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -1143,7 +1140,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -1168,14 +1165,14 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .categoriaLivroValueController1 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -1217,7 +1214,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -1233,7 +1230,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -1245,7 +1242,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -1279,7 +1276,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -1304,10 +1301,10 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -1395,7 +1392,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -1407,7 +1404,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -1441,7 +1438,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -1466,10 +1463,10 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -1559,7 +1556,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -1571,7 +1568,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -1595,7 +1592,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             .end,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             16.0,
@@ -1622,10 +1619,10 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -1717,7 +1714,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -1729,7 +1726,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -1763,7 +1760,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -1788,10 +1785,10 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -1881,7 +1878,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -1893,7 +1890,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -1927,7 +1924,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -1952,14 +1949,14 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: Row(
                                                                       mainAxisSize:
                                                                           MainAxisSize
                                                                               .max,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               8.0,
                                                                               0.0,
                                                                               0.0,
@@ -1973,7 +1970,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             decoration:
                                                                                 BoxDecoration(
                                                                               color: FlutterFlowTheme.of(context).primaryBackground,
-                                                                              borderRadius: BorderRadius.only(
+                                                                              borderRadius: const BorderRadius.only(
                                                                                 bottomLeft: Radius.circular(8.0),
                                                                                 bottomRight: Radius.circular(0.0),
                                                                                 topLeft: Radius.circular(8.0),
@@ -1995,7 +1992,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                         Expanded(
                                                                           child:
                                                                               Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 8.0,
@@ -2022,7 +2019,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                                     color: FlutterFlowTheme.of(context).alternate,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -2034,7 +2031,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                                     color: FlutterFlowTheme.of(context).primary,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -2046,7 +2043,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                                     color: FlutterFlowTheme.of(context).error,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -2058,7 +2055,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                                     color: FlutterFlowTheme.of(context).error,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -2080,7 +2077,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -2092,7 +2089,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -2126,7 +2123,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -2148,7 +2145,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                   flex: 3,
                                                                   child:
                                                                       Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -2159,14 +2156,14 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                       width:
                                                                           550.0,
                                                                       decoration:
-                                                                          BoxDecoration(),
+                                                                          const BoxDecoration(),
                                                                       child: FlutterFlowDropDown<
                                                                           String>(
                                                                         controller: _model
                                                                             .filialValueController ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: [
+                                                                        options: const [
                                                                           'Option 1'
                                                                         ],
                                                                         onChanged:
@@ -2203,7 +2200,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             2.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -2220,7 +2217,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -2232,7 +2229,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -2266,7 +2263,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -2291,10 +2288,10 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -2384,7 +2381,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -2396,7 +2393,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -2420,7 +2417,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             .end,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             16.0,
@@ -2447,10 +2444,10 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -2540,7 +2537,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -2552,7 +2549,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -2576,7 +2573,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             .end,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             16.0,
@@ -2603,10 +2600,10 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -2696,13 +2693,13 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -2739,7 +2736,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -2764,7 +2761,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: Row(
                                                                       mainAxisSize:
                                                                           MainAxisSize
@@ -2796,7 +2793,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                           text:
                                                                               'Adicionar Capa',
                                                                           icon:
-                                                                              Icon(
+                                                                              const Icon(
                                                                             Icons.upload_rounded,
                                                                             size:
                                                                                 22.0,
@@ -2807,12 +2804,12 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                                 200.0,
                                                                             height:
                                                                                 45.0,
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 24.0,
                                                                                 0.0,
                                                                                 24.0,
                                                                                 0.0),
-                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
@@ -2828,7 +2825,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             elevation:
                                                                                 3.0,
                                                                             borderSide:
-                                                                                BorderSide(
+                                                                                const BorderSide(
                                                                               color: Colors.transparent,
                                                                               width: 1.0,
                                                                             ),
@@ -2836,12 +2833,12 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                                 BorderRadius.circular(8.0),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -2853,7 +2850,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -2887,7 +2884,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -2912,10 +2909,10 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -3005,13 +3002,13 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
@@ -3029,7 +3026,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                         .visivel ==
                                                                     1)
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             25.0,
@@ -3052,12 +3049,12 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             builder:
                                                                                 (alertDialogContext) {
                                                                               return AlertDialog(
-                                                                                title: Text('Campo Obrigatório'),
-                                                                                content: Text('É necessário adicionar uma filial!'),
+                                                                                title: const Text('Campo Obrigatório'),
+                                                                                content: const Text('É necessário adicionar uma filial!'),
                                                                                 actions: [
                                                                                   TextButton(
                                                                                     onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                    child: Text('Ok'),
+                                                                                    child: const Text('Ok'),
                                                                                   ),
                                                                                 ],
                                                                               );
@@ -3069,7 +3066,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                       text:
                                                                           'Atualizar',
                                                                       icon:
-                                                                          Icon(
+                                                                          const Icon(
                                                                         Icons
                                                                             .add_circle,
                                                                         size:
@@ -3081,12 +3078,12 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             250.0,
                                                                         height:
                                                                             40.0,
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             24.0,
                                                                             0.0,
                                                                             24.0,
                                                                             0.0),
-                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -3105,7 +3102,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                         elevation:
                                                                             3.0,
                                                                         borderSide:
-                                                                            BorderSide(
+                                                                            const BorderSide(
                                                                           color:
                                                                               Colors.transparent,
                                                                           width:
@@ -3117,7 +3114,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     ),
                                                                   ),
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           15.0,
                                                                           25.0,
@@ -3144,12 +3141,12 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                           builder:
                                                                               (alertDialogContext) {
                                                                             return AlertDialog(
-                                                                              title: Text('Campo Obrigatório'),
-                                                                              content: Text('É necessário adicionar uma filial!'),
+                                                                              title: const Text('Campo Obrigatório'),
+                                                                              content: const Text('É necessário adicionar uma filial!'),
                                                                               actions: [
                                                                                 TextButton(
                                                                                   onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                  child: Text('Ok'),
+                                                                                  child: const Text('Ok'),
                                                                                 ),
                                                                               ],
                                                                             );
@@ -3160,7 +3157,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     },
                                                                     text:
                                                                         'Adicionar',
-                                                                    icon: Icon(
+                                                                    icon: const Icon(
                                                                       Icons.add,
                                                                       size:
                                                                           20.0,
@@ -3171,12 +3168,12 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                           250.0,
                                                                       height:
                                                                           40.0,
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           24.0,
                                                                           0.0,
                                                                           24.0,
                                                                           0.0),
-                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
@@ -3202,7 +3199,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                       elevation:
                                                                           3.0,
                                                                       borderSide:
-                                                                          BorderSide(
+                                                                          const BorderSide(
                                                                         color: Colors
                                                                             .transparent,
                                                                         width:
@@ -3217,7 +3214,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                               ],
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 10.0)),
                                                       ),
                                                     ),
@@ -3234,7 +3231,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'AddCategoria')
+                        if (widget.telas == 'AddCategoria')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -3243,7 +3240,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
@@ -3267,7 +3264,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       10.0, 10.0, 0.0, 0.0),
                                               child: FaIcon(
@@ -3279,10 +3276,10 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                               ),
                                             ),
                                             Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   -1.0, 0.0),
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         10.0, 10.0, 0.0, 0.0),
                                                 child: Text(
@@ -3309,7 +3306,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   10.0, 10.0, 10.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -3318,7 +3315,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                             children: [
                                               Container(
                                                 width: 450.0,
-                                                decoration: BoxDecoration(),
+                                                decoration: const BoxDecoration(),
                                                 child: Column(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -3327,7 +3324,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   0.0,
@@ -3359,13 +3356,13 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                 .error,
                                                             size: 16.0,
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 6.0)),
                                                       ),
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   0.0,
@@ -3378,7 +3375,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                 .calssAcademicoValueController ??=
                                                             FormFieldController<
                                                                 String>(null),
-                                                        options: ['option 1'],
+                                                        options: const ['option 1'],
                                                         onChanged: (val) =>
                                                             setState(() => _model
                                                                     .calssAcademicoValue =
@@ -3416,7 +3413,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                         borderWidth: 2.0,
                                                         borderRadius: 8.0,
                                                         margin:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     4.0,
@@ -3433,7 +3430,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                               ),
                                               Container(
                                                 width: 400.0,
-                                                decoration: BoxDecoration(),
+                                                decoration: const BoxDecoration(),
                                                 child: Column(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -3442,7 +3439,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   0.0,
@@ -3474,13 +3471,13 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                 .error,
                                                             size: 16.0,
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 6.0)),
                                                       ),
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   8.0,
                                                                   0.0,
@@ -3593,12 +3590,12 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                   ],
                                                 ),
                                               ),
-                                            ].divide(SizedBox(width: 20.0)),
+                                            ].divide(const SizedBox(width: 20.0)),
                                           ),
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 15.0, 15.0, 10.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -3606,7 +3603,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                 MainAxisAlignment.end,
                                             children: [
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         15.0, 0.0, 0.0, 0.0),
                                                 child: FFButtonWidget(
@@ -3615,7 +3612,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                         'ButtonADD pressed ...');
                                                   },
                                                   text: 'Adicionar',
-                                                  icon: Icon(
+                                                  icon: const Icon(
                                                     Icons.add,
                                                     color: Colors.white,
                                                     size: 20.0,
@@ -3624,11 +3621,11 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                     width: 200.0,
                                                     height: 40.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(24.0, 0.0,
                                                                 24.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -3644,7 +3641,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                           letterSpacing: 0.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -3662,7 +3659,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                   ),
                                   Expanded(
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -3715,7 +3712,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -3732,11 +3729,11 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -3771,7 +3768,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                 Expanded(
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 10.0,
                                                                 0.0, 0.0),
                                                     child: Builder(
@@ -3893,7 +3890,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                       onSelectChanged) =>
                                                                   DataRow(
                                                             color:
-                                                                MaterialStateProperty
+                                                                WidgetStateProperty
                                                                     .all(
                                                               produtosListIndex %
                                                                           2 ==
@@ -3973,7 +3970,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     child:
                                                                         Align(
                                                                       alignment:
-                                                                          AlignmentDirectional(
+                                                                          const AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                       child:
@@ -3992,7 +3989,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     height:
                                                                         35.0,
                                                                     decoration:
-                                                                        BoxDecoration(
+                                                                        const BoxDecoration(
                                                                       color: Color(
                                                                           0xFFE30909),
                                                                       shape: BoxShape
@@ -4001,7 +3998,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     child:
                                                                         Align(
                                                                       alignment:
-                                                                          AlignmentDirectional(
+                                                                          const AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                       child:
@@ -4015,7 +4012,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         10.0)),
                                                               ),
@@ -4085,7 +4082,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'AddPedidoLivro')
+                        if (widget.telas == 'AddPedidoLivro')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -4097,7 +4094,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   5.0, 20.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -4106,7 +4103,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                     child: Column(
                                       children: [
                                         Align(
-                                          alignment: Alignment(-1.0, 0),
+                                          alignment: const Alignment(-1.0, 0),
                                           child: TabBar(
                                             isScrollable: true,
                                             labelColor:
@@ -4123,13 +4120,13 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                       fontSize: 18.0,
                                                       letterSpacing: 0.0,
                                                     ),
-                                            unselectedLabelStyle: TextStyle(),
+                                            unselectedLabelStyle: const TextStyle(),
                                             indicatorColor:
                                                 FlutterFlowTheme.of(context)
                                                     .tertiary,
                                             indicatorWeight: 1.0,
-                                            padding: EdgeInsets.all(4.0),
-                                            tabs: [
+                                            padding: const EdgeInsets.all(4.0),
+                                            tabs: const [
                                               Row(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
@@ -4213,10 +4210,10 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                       snapshot.data!;
 
                                                   return Container(
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsets.all(20.0),
+                                                          const EdgeInsets.all(20.0),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -4243,7 +4240,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                 ),
                                                                 child: Padding(
                                                                   padding:
-                                                                      EdgeInsets
+                                                                      const EdgeInsets
                                                                           .all(
                                                                               6.0),
                                                                   child: Row(
@@ -4371,7 +4368,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                               'IconButton pressed ...');
                                                                         },
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             10.0)),
                                                                   ),
@@ -4380,9 +4377,9 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                               Container(
                                                                 width: 300.0,
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -4392,7 +4389,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                       Autocomplete<
                                                                           String>(
                                                                     initialValue:
-                                                                        TextEditingValue(),
+                                                                        const TextEditingValue(),
                                                                     optionsBuilder:
                                                                         (textEditingValue) {
                                                                       if (textEditingValue
@@ -4434,7 +4431,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                         textHighlightStyle:
-                                                                            TextStyle(),
+                                                                            const TextStyle(),
                                                                         elevation:
                                                                             4.0,
                                                                         optionBackgroundColor:
@@ -4480,31 +4477,29 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             (_) =>
                                                                                 EasyDebounce.debounce(
                                                                           '_model.textController12',
-                                                                          Duration(
+                                                                          const Duration(
                                                                               milliseconds: 2000),
                                                                           () async {
-                                                                            if (_model.textController12.text != null &&
-                                                                                _model.textController12.text != '') {
+                                                                            if (_model.textController12.text != '') {
                                                                               safeSetState(() {
                                                                                 _model.simpleSearchResults2 = TextSearch(
                                                                                   containerInventarioProdutosRecordList
                                                                                       .map(
                                                                                         (record) => TextSearchItem.fromTerms(record, [
-                                                                                          record.produtoCategoria!,
-                                                                                          record.nomeProduto!,
-                                                                                          record.produtoCodigo!,
-                                                                                          record.filial!
+                                                                                          record.produtoCategoria,
+                                                                                          record.nomeProduto,
+                                                                                          record.produtoCodigo,
+                                                                                          record.filial
                                                                                         ]),
                                                                                       )
                                                                                       .toList(),
                                                                                 ).search(_model.textController12.text).map((r) => r.object).take(20).toList();
-                                                                                ;
                                                                               });
                                                                             } else {
                                                                               context.goNamed(
                                                                                 'A01escola',
                                                                                 extra: <String, dynamic>{
-                                                                                  kTransitionInfoKey: TransitionInfo(
+                                                                                  kTransitionInfoKey: const TransitionInfo(
                                                                                     hasTransition: true,
                                                                                     transitionType: PageTransitionType.fade,
                                                                                     duration: Duration(milliseconds: 0),
@@ -4598,7 +4593,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                           Expanded(
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           10.0,
@@ -4838,7 +4833,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                               selected,
                                                                               onSelectChanged) =>
                                                                           DataRow(
-                                                                        color: MaterialStateProperty
+                                                                        color: WidgetStateProperty
                                                                             .all(
                                                                           produtosListIndex % 2 == 0
                                                                               ? FlutterFlowTheme.of(context).secondaryBackground
@@ -4918,21 +4913,21 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                                 30.0,
                                                                             decoration:
                                                                                 BoxDecoration(
-                                                                              color: Color(0xFFCBF2BB),
+                                                                              color: const Color(0xFFCBF2BB),
                                                                               borderRadius: BorderRadius.circular(8.0),
                                                                               border: Border.all(
-                                                                                color: Color(0xFF489E24),
+                                                                                color: const Color(0xFF489E24),
                                                                               ),
                                                                             ),
                                                                             child:
                                                                                 Align(
-                                                                              alignment: AlignmentDirectional(0.0, 0.0),
+                                                                              alignment: const AlignmentDirectional(0.0, 0.0),
                                                                               child: Text(
                                                                                 'Emitido',
                                                                                 textAlign: TextAlign.center,
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                       fontFamily: 'Manrope',
-                                                                                      color: Color(0xFF36A906),
+                                                                                      color: const Color(0xFF36A906),
                                                                                       fontSize: 16.0,
                                                                                       letterSpacing: 0.0,
                                                                                     ),
@@ -4954,7 +4949,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                   child: Icon(
                                                                                     Icons.edit_square,
                                                                                     color: FlutterFlowTheme.of(context).primaryText,
@@ -4965,12 +4960,12 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                               Container(
                                                                                 width: 35.0,
                                                                                 height: 35.0,
-                                                                                decoration: BoxDecoration(
+                                                                                decoration: const BoxDecoration(
                                                                                   color: Color(0xFFE30909),
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                   child: Icon(
                                                                                     Icons.delete_rounded,
                                                                                     color: FlutterFlowTheme.of(context).info,
@@ -4978,7 +4973,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                                   ),
                                                                                 ),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 10.0)),
+                                                                            ].divide(const SizedBox(width: 10.0)),
                                                                           ),
                                                                         ]
                                                                             .map((c) =>
@@ -5052,10 +5047,10 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                 autovalidateMode:
                                                     AutovalidateMode.disabled,
                                                 child: Container(
-                                                  decoration: BoxDecoration(),
+                                                  decoration: const BoxDecoration(),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 20.0,
                                                                 0.0, 50.0),
                                                     child:
@@ -5069,7 +5064,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -5103,7 +5098,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -5128,14 +5123,14 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .categoriaLivroValueController2 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -5177,7 +5172,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -5193,7 +5188,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -5205,7 +5200,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -5239,7 +5234,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -5264,14 +5259,14 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: Row(
                                                                       mainAxisSize:
                                                                           MainAxisSize
                                                                               .max,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               8.0,
                                                                               0.0,
                                                                               0.0,
@@ -5285,7 +5280,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             decoration:
                                                                                 BoxDecoration(
                                                                               color: FlutterFlowTheme.of(context).primaryBackground,
-                                                                              borderRadius: BorderRadius.only(
+                                                                              borderRadius: const BorderRadius.only(
                                                                                 bottomLeft: Radius.circular(8.0),
                                                                                 bottomRight: Radius.circular(0.0),
                                                                                 topLeft: Radius.circular(8.0),
@@ -5307,7 +5302,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                         Expanded(
                                                                           child:
                                                                               Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 8.0,
@@ -5334,7 +5329,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                                     color: FlutterFlowTheme.of(context).alternate,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -5346,7 +5341,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                                     color: FlutterFlowTheme.of(context).primary,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -5358,7 +5353,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                                     color: FlutterFlowTheme.of(context).error,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -5370,7 +5365,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                                     color: FlutterFlowTheme.of(context).error,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -5392,7 +5387,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -5404,7 +5399,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -5438,7 +5433,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -5463,14 +5458,14 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: Row(
                                                                       mainAxisSize:
                                                                           MainAxisSize
                                                                               .max,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               8.0,
                                                                               0.0,
                                                                               0.0,
@@ -5484,7 +5479,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             decoration:
                                                                                 BoxDecoration(
                                                                               color: FlutterFlowTheme.of(context).primaryBackground,
-                                                                              borderRadius: BorderRadius.only(
+                                                                              borderRadius: const BorderRadius.only(
                                                                                 bottomLeft: Radius.circular(8.0),
                                                                                 bottomRight: Radius.circular(0.0),
                                                                                 topLeft: Radius.circular(8.0),
@@ -5506,7 +5501,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                         Expanded(
                                                                           child:
                                                                               Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 8.0,
@@ -5533,7 +5528,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                                     color: FlutterFlowTheme.of(context).alternate,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -5545,7 +5540,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                                     color: FlutterFlowTheme.of(context).primary,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -5557,7 +5552,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                                     color: FlutterFlowTheme.of(context).error,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -5569,7 +5564,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                                     color: FlutterFlowTheme.of(context).error,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -5591,13 +5586,13 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
@@ -5615,7 +5610,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                         .visivel ==
                                                                     1)
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             25.0,
@@ -5638,12 +5633,12 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             builder:
                                                                                 (alertDialogContext) {
                                                                               return AlertDialog(
-                                                                                title: Text('Campo Obrigatório'),
-                                                                                content: Text('É necessário adicionar uma filial!'),
+                                                                                title: const Text('Campo Obrigatório'),
+                                                                                content: const Text('É necessário adicionar uma filial!'),
                                                                                 actions: [
                                                                                   TextButton(
                                                                                     onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                    child: Text('Ok'),
+                                                                                    child: const Text('Ok'),
                                                                                   ),
                                                                                 ],
                                                                               );
@@ -5655,7 +5650,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                       text:
                                                                           'Atualizar',
                                                                       icon:
-                                                                          Icon(
+                                                                          const Icon(
                                                                         Icons
                                                                             .add_circle,
                                                                         size:
@@ -5667,12 +5662,12 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             250.0,
                                                                         height:
                                                                             40.0,
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             24.0,
                                                                             0.0,
                                                                             24.0,
                                                                             0.0),
-                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -5691,7 +5686,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                         elevation:
                                                                             3.0,
                                                                         borderSide:
-                                                                            BorderSide(
+                                                                            const BorderSide(
                                                                           color:
                                                                               Colors.transparent,
                                                                           width:
@@ -5703,7 +5698,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     ),
                                                                   ),
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           15.0,
                                                                           25.0,
@@ -5730,12 +5725,12 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                           builder:
                                                                               (alertDialogContext) {
                                                                             return AlertDialog(
-                                                                              title: Text('Campo Obrigatório'),
-                                                                              content: Text('É necessário adicionar uma filial!'),
+                                                                              title: const Text('Campo Obrigatório'),
+                                                                              content: const Text('É necessário adicionar uma filial!'),
                                                                               actions: [
                                                                                 TextButton(
                                                                                   onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                  child: Text('Ok'),
+                                                                                  child: const Text('Ok'),
                                                                                 ),
                                                                               ],
                                                                             );
@@ -5746,7 +5741,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     },
                                                                     text:
                                                                         'Adicionar',
-                                                                    icon: Icon(
+                                                                    icon: const Icon(
                                                                       Icons.add,
                                                                       size:
                                                                           20.0,
@@ -5757,12 +5752,12 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                           250.0,
                                                                       height:
                                                                           40.0,
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           24.0,
                                                                           0.0,
                                                                           24.0,
                                                                           0.0),
-                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
@@ -5788,7 +5783,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                       elevation:
                                                                           3.0,
                                                                       borderSide:
-                                                                          BorderSide(
+                                                                          const BorderSide(
                                                                         color: Colors
                                                                             .transparent,
                                                                         width:
@@ -5803,7 +5798,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                               ],
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 10.0)),
                                                       ),
                                                     ),
@@ -5820,7 +5815,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'EmissaoDevolu')
+                        if (widget.telas == 'EmissaoDevolu')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -5832,7 +5827,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   5.0, 20.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -5841,7 +5836,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                     child: Column(
                                       children: [
                                         Align(
-                                          alignment: Alignment(-1.0, 0),
+                                          alignment: const Alignment(-1.0, 0),
                                           child: TabBar(
                                             isScrollable: true,
                                             labelColor:
@@ -5858,13 +5853,13 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                       fontSize: 18.0,
                                                       letterSpacing: 0.0,
                                                     ),
-                                            unselectedLabelStyle: TextStyle(),
+                                            unselectedLabelStyle: const TextStyle(),
                                             indicatorColor:
                                                 FlutterFlowTheme.of(context)
                                                     .tertiary,
                                             indicatorWeight: 1.0,
-                                            padding: EdgeInsets.all(4.0),
-                                            tabs: [
+                                            padding: const EdgeInsets.all(4.0),
+                                            tabs: const [
                                               Row(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
@@ -5946,10 +5941,10 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                       snapshot.data!;
 
                                                   return Container(
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsets.all(20.0),
+                                                          const EdgeInsets.all(20.0),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -5976,7 +5971,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                 ),
                                                                 child: Padding(
                                                                   padding:
-                                                                      EdgeInsets
+                                                                      const EdgeInsets
                                                                           .all(
                                                                               6.0),
                                                                   child: Row(
@@ -6104,7 +6099,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                               'IconButton pressed ...');
                                                                         },
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             10.0)),
                                                                   ),
@@ -6113,9 +6108,9 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                               Container(
                                                                 width: 300.0,
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -6125,7 +6120,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                       Autocomplete<
                                                                           String>(
                                                                     initialValue:
-                                                                        TextEditingValue(),
+                                                                        const TextEditingValue(),
                                                                     optionsBuilder:
                                                                         (textEditingValue) {
                                                                       if (textEditingValue
@@ -6167,7 +6162,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                         textHighlightStyle:
-                                                                            TextStyle(),
+                                                                            const TextStyle(),
                                                                         elevation:
                                                                             4.0,
                                                                         optionBackgroundColor:
@@ -6213,31 +6208,29 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             (_) =>
                                                                                 EasyDebounce.debounce(
                                                                           '_model.textController15',
-                                                                          Duration(
+                                                                          const Duration(
                                                                               milliseconds: 2000),
                                                                           () async {
-                                                                            if (_model.textController15.text != null &&
-                                                                                _model.textController15.text != '') {
+                                                                            if (_model.textController15.text != '') {
                                                                               safeSetState(() {
                                                                                 _model.simpleSearchResults3 = TextSearch(
                                                                                   containerInventarioProdutosRecordList
                                                                                       .map(
                                                                                         (record) => TextSearchItem.fromTerms(record, [
-                                                                                          record.produtoCategoria!,
-                                                                                          record.nomeProduto!,
-                                                                                          record.produtoCodigo!,
-                                                                                          record.filial!
+                                                                                          record.produtoCategoria,
+                                                                                          record.nomeProduto,
+                                                                                          record.produtoCodigo,
+                                                                                          record.filial
                                                                                         ]),
                                                                                       )
                                                                                       .toList(),
                                                                                 ).search(_model.textController15.text).map((r) => r.object).take(20).toList();
-                                                                                ;
                                                                               });
                                                                             } else {
                                                                               context.goNamed(
                                                                                 'A01escola',
                                                                                 extra: <String, dynamic>{
-                                                                                  kTransitionInfoKey: TransitionInfo(
+                                                                                  kTransitionInfoKey: const TransitionInfo(
                                                                                     hasTransition: true,
                                                                                     transitionType: PageTransitionType.fade,
                                                                                     duration: Duration(milliseconds: 0),
@@ -6331,7 +6324,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                           Expanded(
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           10.0,
@@ -6571,7 +6564,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                               selected,
                                                                               onSelectChanged) =>
                                                                           DataRow(
-                                                                        color: MaterialStateProperty
+                                                                        color: WidgetStateProperty
                                                                             .all(
                                                                           produtosListIndex % 2 == 0
                                                                               ? FlutterFlowTheme.of(context).secondaryBackground
@@ -6651,21 +6644,21 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                                 30.0,
                                                                             decoration:
                                                                                 BoxDecoration(
-                                                                              color: Color(0xFFCBF2BB),
+                                                                              color: const Color(0xFFCBF2BB),
                                                                               borderRadius: BorderRadius.circular(8.0),
                                                                               border: Border.all(
-                                                                                color: Color(0xFF489E24),
+                                                                                color: const Color(0xFF489E24),
                                                                               ),
                                                                             ),
                                                                             child:
                                                                                 Align(
-                                                                              alignment: AlignmentDirectional(0.0, 0.0),
+                                                                              alignment: const AlignmentDirectional(0.0, 0.0),
                                                                               child: Text(
                                                                                 'Emitido',
                                                                                 textAlign: TextAlign.center,
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                       fontFamily: 'Manrope',
-                                                                                      color: Color(0xFF36A906),
+                                                                                      color: const Color(0xFF36A906),
                                                                                       fontSize: 16.0,
                                                                                       letterSpacing: 0.0,
                                                                                     ),
@@ -6687,7 +6680,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                   child: Icon(
                                                                                     Icons.edit_square,
                                                                                     color: FlutterFlowTheme.of(context).primaryText,
@@ -6698,12 +6691,12 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                               Container(
                                                                                 width: 35.0,
                                                                                 height: 35.0,
-                                                                                decoration: BoxDecoration(
+                                                                                decoration: const BoxDecoration(
                                                                                   color: Color(0xFFE30909),
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                   child: Icon(
                                                                                     Icons.delete_rounded,
                                                                                     color: FlutterFlowTheme.of(context).info,
@@ -6711,7 +6704,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                                   ),
                                                                                 ),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 10.0)),
+                                                                            ].divide(const SizedBox(width: 10.0)),
                                                                           ),
                                                                         ]
                                                                             .map((c) =>
@@ -6785,10 +6778,10 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                 autovalidateMode:
                                                     AutovalidateMode.disabled,
                                                 child: Container(
-                                                  decoration: BoxDecoration(),
+                                                  decoration: const BoxDecoration(),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 20.0,
                                                                 0.0, 50.0),
                                                     child:
@@ -6802,7 +6795,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -6836,7 +6829,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -6861,14 +6854,14 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .categoriaLivroValueController3 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -6910,7 +6903,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -6926,7 +6919,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -6938,7 +6931,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -6972,7 +6965,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -6997,14 +6990,14 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .categoriaLivroValueController4 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -7046,7 +7039,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -7062,7 +7055,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -7074,7 +7067,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -7108,7 +7101,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -7133,14 +7126,14 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .categoriaLivroValueController5 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -7182,7 +7175,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -7198,7 +7191,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -7210,7 +7203,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -7244,7 +7237,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -7269,14 +7262,14 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .categoriaLivroValueController6 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -7318,7 +7311,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -7334,7 +7327,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -7346,7 +7339,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -7380,7 +7373,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -7405,14 +7398,14 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .categoriaLivroValueController7 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -7454,7 +7447,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -7470,7 +7463,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -7482,7 +7475,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -7516,7 +7509,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -7541,14 +7534,14 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .categoriaLivroValueController8 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -7590,7 +7583,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -7606,7 +7599,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -7618,7 +7611,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -7652,7 +7645,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -7677,14 +7670,14 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: Row(
                                                                       mainAxisSize:
                                                                           MainAxisSize
                                                                               .max,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               8.0,
                                                                               0.0,
                                                                               0.0,
@@ -7698,7 +7691,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             decoration:
                                                                                 BoxDecoration(
                                                                               color: FlutterFlowTheme.of(context).primaryBackground,
-                                                                              borderRadius: BorderRadius.only(
+                                                                              borderRadius: const BorderRadius.only(
                                                                                 bottomLeft: Radius.circular(8.0),
                                                                                 bottomRight: Radius.circular(0.0),
                                                                                 topLeft: Radius.circular(8.0),
@@ -7720,7 +7713,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                         Expanded(
                                                                           child:
                                                                               Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 8.0,
@@ -7747,7 +7740,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                                     color: FlutterFlowTheme.of(context).alternate,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -7759,7 +7752,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                                     color: FlutterFlowTheme.of(context).primary,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -7771,7 +7764,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                                     color: FlutterFlowTheme.of(context).error,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -7783,7 +7776,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                                     color: FlutterFlowTheme.of(context).error,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -7805,13 +7798,13 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
@@ -7829,7 +7822,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                         .visivel ==
                                                                     1)
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             25.0,
@@ -7852,12 +7845,12 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             builder:
                                                                                 (alertDialogContext) {
                                                                               return AlertDialog(
-                                                                                title: Text('Campo Obrigatório'),
-                                                                                content: Text('É necessário adicionar uma filial!'),
+                                                                                title: const Text('Campo Obrigatório'),
+                                                                                content: const Text('É necessário adicionar uma filial!'),
                                                                                 actions: [
                                                                                   TextButton(
                                                                                     onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                    child: Text('Ok'),
+                                                                                    child: const Text('Ok'),
                                                                                   ),
                                                                                 ],
                                                                               );
@@ -7869,7 +7862,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                       text:
                                                                           'Atualizar',
                                                                       icon:
-                                                                          Icon(
+                                                                          const Icon(
                                                                         Icons
                                                                             .add_circle,
                                                                         size:
@@ -7881,12 +7874,12 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                             250.0,
                                                                         height:
                                                                             40.0,
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             24.0,
                                                                             0.0,
                                                                             24.0,
                                                                             0.0),
-                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -7905,7 +7898,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                         elevation:
                                                                             3.0,
                                                                         borderSide:
-                                                                            BorderSide(
+                                                                            const BorderSide(
                                                                           color:
                                                                               Colors.transparent,
                                                                           width:
@@ -7917,7 +7910,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     ),
                                                                   ),
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           15.0,
                                                                           25.0,
@@ -7944,12 +7937,12 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                           builder:
                                                                               (alertDialogContext) {
                                                                             return AlertDialog(
-                                                                              title: Text('Campo Obrigatório'),
-                                                                              content: Text('É necessário adicionar uma filial!'),
+                                                                              title: const Text('Campo Obrigatório'),
+                                                                              content: const Text('É necessário adicionar uma filial!'),
                                                                               actions: [
                                                                                 TextButton(
                                                                                   onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                  child: Text('Ok'),
+                                                                                  child: const Text('Ok'),
                                                                                 ),
                                                                               ],
                                                                             );
@@ -7960,7 +7953,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                     },
                                                                     text:
                                                                         'Adicionar',
-                                                                    icon: Icon(
+                                                                    icon: const Icon(
                                                                       Icons.add,
                                                                       size:
                                                                           20.0,
@@ -7971,12 +7964,12 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                           250.0,
                                                                       height:
                                                                           40.0,
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           24.0,
                                                                           0.0,
                                                                           24.0,
                                                                           0.0),
-                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
@@ -8002,7 +7995,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                                       elevation:
                                                                           3.0,
                                                                       borderSide:
-                                                                          BorderSide(
+                                                                          const BorderSide(
                                                                         color: Colors
                                                                             .transparent,
                                                                         width:
@@ -8017,7 +8010,7 @@ class _A21bibliotecaWidgetState extends State<A21bibliotecaWidget>
                                                               ],
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 10.0)),
                                                       ),
                                                     ),

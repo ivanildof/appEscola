@@ -3,8 +3,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'menu_superior_celular_model.dart';
 export 'menu_superior_celular_model.dart';
 
@@ -62,7 +60,7 @@ class _MenuSuperiorCelularWidgetState extends State<MenuSuperiorCelularWidget> {
                 color: FlutterFlowTheme.of(context).secondaryBackground,
               ),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -77,7 +75,7 @@ class _MenuSuperiorCelularWidgetState extends State<MenuSuperiorCelularWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(1.0, 0.0),
+                      alignment: const AlignmentDirectional(1.0, 0.0),
                       child: FlutterFlowIconButton(
                         borderColor: FlutterFlowTheme.of(context).primary,
                         borderRadius: 20.0,
@@ -111,7 +109,7 @@ class _MenuSuperiorCelularWidgetState extends State<MenuSuperiorCelularWidget> {
                 ),
               ),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -128,7 +126,7 @@ class _MenuSuperiorCelularWidgetState extends State<MenuSuperiorCelularWidget> {
                         ),
                       ),
                       child: Padding(
-                        padding: EdgeInsets.all(2.0),
+                        padding: const EdgeInsets.all(2.0),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(100.0),
                           child: Image.network(
@@ -148,7 +146,7 @@ class _MenuSuperiorCelularWidgetState extends State<MenuSuperiorCelularWidget> {
                     Expanded(
                       child: Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.end,
@@ -213,7 +211,7 @@ class _MenuSuperiorCelularWidgetState extends State<MenuSuperiorCelularWidget> {
                                 print('IconButton pressed ...');
                               },
                             ),
-                          ].divide(SizedBox(width: 20.0)),
+                          ].divide(const SizedBox(width: 20.0)),
                         ),
                       ),
                     ),
@@ -227,7 +225,7 @@ class _MenuSuperiorCelularWidgetState extends State<MenuSuperiorCelularWidget> {
                 color: FlutterFlowTheme.of(context).secondaryBackground,
               ),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -256,7 +254,7 @@ class _MenuSuperiorCelularWidgetState extends State<MenuSuperiorCelularWidget> {
                           context.goNamed(
                             'A01painelFiliais',
                             extra: <String, dynamic>{
-                              kTransitionInfoKey: TransitionInfo(
+                              kTransitionInfoKey: const TransitionInfo(
                                 hasTransition: true,
                                 transitionType: PageTransitionType.fade,
                               ),
@@ -275,7 +273,7 @@ class _MenuSuperiorCelularWidgetState extends State<MenuSuperiorCelularWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                       child: Text(
                         'Seção Nome',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(

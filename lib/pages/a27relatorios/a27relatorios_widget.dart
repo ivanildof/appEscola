@@ -12,7 +12,6 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'a27relatorios_model.dart';
 export 'a27relatorios_model.dart';
@@ -21,7 +20,7 @@ class A27relatoriosWidget extends StatefulWidget {
   const A27relatoriosWidget({
     super.key,
     String? telas,
-  }) : this.telas = telas ?? 'vazio';
+  }) : telas = telas ?? 'vazio';
 
   final String telas;
 
@@ -185,7 +184,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                         wrapWithModel(
                           model: _model.menuSuperiorModel,
                           updateCallback: () => setState(() {}),
-                          child: MenuSuperiorWidget(),
+                          child: const MenuSuperiorWidget(),
                         ),
                       if (responsiveVisibility(
                         context: context,
@@ -195,7 +194,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                         wrapWithModel(
                           model: _model.menuSuperiorCelularModel,
                           updateCallback: () => setState(() {}),
-                          child: MenuSuperiorCelularWidget(),
+                          child: const MenuSuperiorCelularWidget(),
                         ),
                     ],
                   ),
@@ -207,9 +206,9 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                           model: _model.menuLateralModel,
                           updateCallback: () => setState(() {}),
                           updateOnChange: true,
-                          child: MenuLateralWidget(),
+                          child: const MenuLateralWidget(),
                         ),
-                        if (widget!.telas == 'EstudanLogin')
+                        if (widget.telas == 'EstudanLogin')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -218,7 +217,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -249,11 +248,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                               children: [
                                                 Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           -1.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(12.0,
                                                                 10.0, 0.0, 0.0),
                                                     child: Text(
@@ -281,7 +280,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       .tertiary,
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       10.0, 10.0, 10.0, 0.0),
                                               child: Row(
@@ -294,7 +293,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     child: Container(
                                                       width: 550.0,
                                                       decoration:
-                                                          BoxDecoration(),
+                                                          const BoxDecoration(),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -304,7 +303,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -337,13 +336,13 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       .error,
                                                                   size: 16.0,
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 6.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -357,7 +356,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   FormFieldController<
                                                                           String>(
                                                                       null),
-                                                              options: [
+                                                              options: const [
                                                                 'option 1'
                                                               ],
                                                               onChanged: (val) =>
@@ -397,7 +396,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                               borderWidth: 2.0,
                                                               borderRadius: 8.0,
                                                               margin:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           4.0,
@@ -422,7 +421,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     child: Container(
                                                       width: 550.0,
                                                       decoration:
-                                                          BoxDecoration(),
+                                                          const BoxDecoration(),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -432,7 +431,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -465,7 +464,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       .error,
                                                                   size: 16.0,
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 6.0)),
                                                             ),
                                                           ),
@@ -476,7 +475,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                 FormFieldController<
                                                                         String>(
                                                                     null),
-                                                            options: [
+                                                            options: const [
                                                               'option 1'
                                                             ],
                                                             onChanged: (val) =>
@@ -516,7 +515,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                             borderWidth: 2.0,
                                                             borderRadius: 8.0,
                                                             margin:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         4.0,
@@ -538,7 +537,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     child: Container(
                                                       width: 550.0,
                                                       decoration:
-                                                          BoxDecoration(),
+                                                          const BoxDecoration(),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -548,7 +547,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -581,7 +580,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       .error,
                                                                   size: 16.0,
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 6.0)),
                                                             ),
                                                           ),
@@ -592,7 +591,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                 FormFieldController<
                                                                         String>(
                                                                     null),
-                                                            options: [
+                                                            options: const [
                                                               'option 1'
                                                             ],
                                                             onChanged: (val) =>
@@ -632,7 +631,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                             borderWidth: 2.0,
                                                             borderRadius: 8.0,
                                                             margin:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         4.0,
@@ -649,11 +648,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       ),
                                                     ),
                                                   ),
-                                                ].divide(SizedBox(width: 20.0)),
+                                                ].divide(const SizedBox(width: 20.0)),
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 15.0, 15.0, 10.0),
                                               child: Row(
@@ -668,7 +667,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                             'ButtonAtualizar pressed ...');
                                                       },
                                                       text: 'Atualizar',
-                                                      icon: Icon(
+                                                      icon: const Icon(
                                                         Icons.add_circle_sharp,
                                                         color: Colors.white,
                                                         size: 20.0,
@@ -677,14 +676,14 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                         width: 200.0,
                                                         height: 40.0,
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     24.0,
                                                                     0.0,
                                                                     24.0,
                                                                     0.0),
                                                         iconPadding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -709,7 +708,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       0.0,
                                                                 ),
                                                         elevation: 3.0,
-                                                        borderSide: BorderSide(
+                                                        borderSide: const BorderSide(
                                                           color: Colors
                                                               .transparent,
                                                           width: 1.0,
@@ -725,7 +724,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           'Button pressed ...');
                                                     },
                                                     text: 'Filtro',
-                                                    icon: Icon(
+                                                    icon: const Icon(
                                                       Icons.filter_alt,
                                                       color: Colors.white,
                                                       size: 15.0,
@@ -734,14 +733,14 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       width: 150.0,
                                                       height: 40.0,
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   24.0,
                                                                   0.0,
                                                                   24.0,
                                                                   0.0),
                                                       iconPadding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -764,7 +763,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     0.0,
                                                               ),
                                                       elevation: 3.0,
-                                                      borderSide: BorderSide(
+                                                      borderSide: const BorderSide(
                                                         color:
                                                             Colors.transparent,
                                                         width: 1.0,
@@ -782,7 +781,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -835,7 +834,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -852,11 +851,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -889,7 +888,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 10.0, 8.0),
                                                   child: Row(
@@ -913,7 +912,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   6.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -1029,7 +1028,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       'IconButton pressed ...');
                                                                 },
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 10.0)),
                                                           ),
                                                         ),
@@ -1037,10 +1036,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       Container(
                                                         width: 300.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -1049,7 +1048,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           child: Autocomplete<
                                                               String>(
                                                             initialValue:
-                                                                TextEditingValue(),
+                                                                const TextEditingValue(),
                                                             optionsBuilder:
                                                                 (textEditingValue) {
                                                               if (textEditingValue
@@ -1098,7 +1097,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                           0.0,
                                                                     ),
                                                                 textHighlightStyle:
-                                                                    TextStyle(),
+                                                                    const TextStyle(),
                                                                 elevation: 4.0,
                                                                 optionBackgroundColor:
                                                                     FlutterFlowTheme.of(
@@ -1458,7 +1457,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     onSelectChanged) =>
                                                                 DataRow(
                                                           color:
-                                                              MaterialStateProperty
+                                                              WidgetStateProperty
                                                                   .all(
                                                             produtosListIndex %
                                                                         2 ==
@@ -1473,7 +1472,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           cells: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           3.0,
@@ -1617,7 +1616,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         3.0)),
                                                               ),
@@ -1685,7 +1684,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'relatoAdmissao')
+                        if (widget.telas == 'relatoAdmissao')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -1694,7 +1693,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -1720,10 +1719,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     -1.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 10.0, 0.0, 0.0),
                                                   child: Text(
@@ -1750,7 +1749,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -1761,7 +1760,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -1771,7 +1770,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -1804,7 +1803,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -1814,7 +1813,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .calssAcademicoValueController2 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.calssAcademicoValue2 =
@@ -1852,7 +1851,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -1871,7 +1870,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -1881,7 +1880,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -1906,7 +1905,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                           0.0,
                                                                     ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -1916,7 +1915,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .secaoAcademicoValueController2 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: [
+                                                          options: const [
                                                             'SMS',
                                                             'EMAIL'
                                                           ],
@@ -1957,7 +1956,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -1976,7 +1975,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -1986,7 +1985,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -2011,7 +2010,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                           0.0,
                                                                     ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -2021,7 +2020,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .categpriaAcademicoValueController2 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.categpriaAcademicoValue2 =
@@ -2059,7 +2058,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -2078,7 +2077,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -2088,7 +2087,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -2121,7 +2120,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -2133,7 +2132,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                               child: Container(
                                                                 width: 340.0,
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Row(
                                                                   mainAxisSize:
                                                                       MainAxisSize
@@ -2149,7 +2148,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                         color: FlutterFlowTheme.of(context)
                                                                             .primaryBackground,
                                                                         borderRadius:
-                                                                            BorderRadius.only(
+                                                                            const BorderRadius.only(
                                                                           bottomLeft:
                                                                               Radius.circular(8.0),
                                                                           bottomRight:
@@ -2214,7 +2213,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -2229,7 +2228,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -2244,7 +2243,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -2259,7 +2258,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -2285,19 +2284,19 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                 ),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 20.0)),
                                                         ),
                                                       ],
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 15.0, 15.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -2309,7 +2308,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     print('Button pressed ...');
                                                   },
                                                   text: 'Filtro',
-                                                  icon: Icon(
+                                                  icon: const Icon(
                                                     Icons.filter_alt,
                                                     color: Colors.white,
                                                     size: 15.0,
@@ -2318,11 +2317,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     width: 150.0,
                                                     height: 40.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(24.0, 0.0,
                                                                 24.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -2337,7 +2336,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           letterSpacing: 0.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -2353,7 +2352,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -2406,7 +2405,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -2423,11 +2422,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -2460,7 +2459,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 10.0, 8.0),
                                                   child: Row(
@@ -2484,7 +2483,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   6.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -2600,7 +2599,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       'IconButton pressed ...');
                                                                 },
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 10.0)),
                                                           ),
                                                         ),
@@ -2608,10 +2607,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       Container(
                                                         width: 300.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -2620,7 +2619,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           child: Autocomplete<
                                                               String>(
                                                             initialValue:
-                                                                TextEditingValue(),
+                                                                const TextEditingValue(),
                                                             optionsBuilder:
                                                                 (textEditingValue) {
                                                               if (textEditingValue
@@ -2669,7 +2668,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                           0.0,
                                                                     ),
                                                                 textHighlightStyle:
-                                                                    TextStyle(),
+                                                                    const TextStyle(),
                                                                 elevation: 4.0,
                                                                 optionBackgroundColor:
                                                                     FlutterFlowTheme.of(
@@ -3029,7 +3028,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     onSelectChanged) =>
                                                                 DataRow(
                                                           color:
-                                                              MaterialStateProperty
+                                                              WidgetStateProperty
                                                                   .all(
                                                             produtosListIndex %
                                                                         2 ==
@@ -3209,7 +3208,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'relatoclasseSecao')
+                        if (widget.telas == 'relatoclasseSecao')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -3218,7 +3217,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -3244,10 +3243,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     -1.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 10.0, 0.0, 0.0),
                                                   child: Text(
@@ -3274,7 +3273,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -3283,7 +3282,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                               children: [
                                                 Container(
                                                   width: 550.0,
-                                                  decoration: BoxDecoration(),
+                                                  decoration: const BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -3293,7 +3292,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -3325,7 +3324,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                       ),
@@ -3335,7 +3334,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                 .calssAcademicoValueController3 ??=
                                                             FormFieldController<
                                                                 String>(null),
-                                                        options: ['option 1'],
+                                                        options: const ['option 1'],
                                                         onChanged: (val) =>
                                                             setState(() => _model
                                                                     .calssAcademicoValue3 =
@@ -3373,7 +3372,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                         borderWidth: 2.0,
                                                         borderRadius: 8.0,
                                                         margin:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     4.0,
@@ -3387,12 +3386,12 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     ],
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 15.0, 15.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -3404,7 +3403,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     print('Button pressed ...');
                                                   },
                                                   text: 'Filtro',
-                                                  icon: Icon(
+                                                  icon: const Icon(
                                                     Icons.filter_alt,
                                                     color: Colors.white,
                                                     size: 15.0,
@@ -3413,11 +3412,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     width: 150.0,
                                                     height: 40.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(24.0, 0.0,
                                                                 24.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -3432,7 +3431,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           letterSpacing: 0.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -3448,7 +3447,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -3501,7 +3500,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -3518,11 +3517,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -3555,7 +3554,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 10.0, 8.0),
                                                   child: Row(
@@ -3579,7 +3578,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   6.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -3695,7 +3694,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       'IconButton pressed ...');
                                                                 },
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 10.0)),
                                                           ),
                                                         ),
@@ -3703,10 +3702,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       Container(
                                                         width: 300.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -3715,7 +3714,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           child: Autocomplete<
                                                               String>(
                                                             initialValue:
-                                                                TextEditingValue(),
+                                                                const TextEditingValue(),
                                                             optionsBuilder:
                                                                 (textEditingValue) {
                                                               if (textEditingValue
@@ -3764,7 +3763,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                           0.0,
                                                                     ),
                                                                 textHighlightStyle:
-                                                                    TextStyle(),
+                                                                    const TextStyle(),
                                                                 elevation: 4.0,
                                                                 optionBackgroundColor:
                                                                     FlutterFlowTheme.of(
@@ -4035,7 +4034,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     onSelectChanged) =>
                                                                 DataRow(
                                                           color:
-                                                              MaterialStateProperty
+                                                              WidgetStateProperty
                                                                   .all(
                                                             produtosListIndex %
                                                                         2 ==
@@ -4163,7 +4162,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'relatoTaxas')
+                        if (widget.telas == 'relatoTaxas')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -4172,7 +4171,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -4198,10 +4197,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     -1.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 10.0, 0.0, 0.0),
                                                   child: Text(
@@ -4228,7 +4227,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -4239,7 +4238,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -4249,7 +4248,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -4282,7 +4281,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -4292,7 +4291,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .calssAcademicoValueController4 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.calssAcademicoValue4 =
@@ -4330,7 +4329,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -4349,7 +4348,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -4359,7 +4358,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -4392,7 +4391,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -4402,7 +4401,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .secaoAcademicoValueController3 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: [
+                                                          options: const [
                                                             'SMS',
                                                             'EMAIL'
                                                           ],
@@ -4443,7 +4442,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -4462,7 +4461,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -4472,7 +4471,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -4505,7 +4504,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -4515,7 +4514,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .categpriaAcademicoValueController3 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.categpriaAcademicoValue3 =
@@ -4553,7 +4552,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -4568,12 +4567,12 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -4584,7 +4583,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -4594,7 +4593,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -4619,7 +4618,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                           0.0,
                                                                     ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -4629,7 +4628,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .calssAcademicoValueController5 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.calssAcademicoValue5 =
@@ -4667,7 +4666,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -4686,7 +4685,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -4696,7 +4695,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -4721,7 +4720,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                           0.0,
                                                                     ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -4731,7 +4730,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .secaoAcademicoValueController4 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: [
+                                                          options: const [
                                                             'SMS',
                                                             'EMAIL'
                                                           ],
@@ -4772,7 +4771,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -4791,7 +4790,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -4801,7 +4800,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -4834,7 +4833,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -4846,7 +4845,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                               child: Container(
                                                                 width: 340.0,
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Row(
                                                                   mainAxisSize:
                                                                       MainAxisSize
@@ -4862,7 +4861,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                         color: FlutterFlowTheme.of(context)
                                                                             .primaryBackground,
                                                                         borderRadius:
-                                                                            BorderRadius.only(
+                                                                            const BorderRadius.only(
                                                                           bottomLeft:
                                                                               Radius.circular(8.0),
                                                                           bottomRight:
@@ -4927,7 +4926,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -4942,7 +4941,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -4957,7 +4956,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -4972,7 +4971,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -4998,19 +4997,19 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                 ),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 20.0)),
                                                         ),
                                                       ],
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 15.0, 15.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -5022,7 +5021,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     print('Button pressed ...');
                                                   },
                                                   text: 'Filtro',
-                                                  icon: Icon(
+                                                  icon: const Icon(
                                                     Icons.filter_alt,
                                                     color: Colors.white,
                                                     size: 15.0,
@@ -5031,11 +5030,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     width: 150.0,
                                                     height: 40.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(24.0, 0.0,
                                                                 24.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -5050,7 +5049,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           letterSpacing: 0.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -5066,7 +5065,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -5119,7 +5118,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -5136,11 +5135,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -5173,7 +5172,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 10.0, 8.0),
                                                   child: Row(
@@ -5197,7 +5196,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   6.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -5313,7 +5312,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       'IconButton pressed ...');
                                                                 },
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 10.0)),
                                                           ),
                                                         ),
@@ -5321,10 +5320,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       Container(
                                                         width: 300.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -5333,7 +5332,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           child: Autocomplete<
                                                               String>(
                                                             initialValue:
-                                                                TextEditingValue(),
+                                                                const TextEditingValue(),
                                                             optionsBuilder:
                                                                 (textEditingValue) {
                                                               if (textEditingValue
@@ -5382,7 +5381,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                           0.0,
                                                                     ),
                                                                 textHighlightStyle:
-                                                                    TextStyle(),
+                                                                    const TextStyle(),
                                                                 elevation: 4.0,
                                                                 optionBackgroundColor:
                                                                     FlutterFlowTheme.of(
@@ -5784,7 +5783,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     onSelectChanged) =>
                                                                 DataRow(
                                                           color:
-                                                              MaterialStateProperty
+                                                              WidgetStateProperty
                                                                   .all(
                                                             produtosListIndex %
                                                                         2 ==
@@ -5990,7 +5989,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'relatoRecebiment')
+                        if (widget.telas == 'relatoRecebiment')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -5999,7 +5998,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -6025,10 +6024,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     -1.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 10.0, 0.0, 0.0),
                                                   child: Text(
@@ -6055,7 +6054,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -6066,7 +6065,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -6076,7 +6075,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -6109,7 +6108,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -6119,7 +6118,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .calssAcademicoValueController6 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.calssAcademicoValue6 =
@@ -6157,7 +6156,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -6176,7 +6175,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -6186,7 +6185,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -6211,7 +6210,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                           0.0,
                                                                     ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -6221,7 +6220,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .secaoAcademicoValueController5 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: [
+                                                          options: const [
                                                             'SMS',
                                                             'EMAIL'
                                                           ],
@@ -6262,7 +6261,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -6281,7 +6280,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -6291,7 +6290,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -6324,7 +6323,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -6334,7 +6333,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .categpriaAcademicoValueController4 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.categpriaAcademicoValue4 =
@@ -6372,7 +6371,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -6391,7 +6390,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -6401,7 +6400,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -6434,7 +6433,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -6446,7 +6445,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                               child: Container(
                                                                 width: 340.0,
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Row(
                                                                   mainAxisSize:
                                                                       MainAxisSize
@@ -6462,7 +6461,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                         color: FlutterFlowTheme.of(context)
                                                                             .primaryBackground,
                                                                         borderRadius:
-                                                                            BorderRadius.only(
+                                                                            const BorderRadius.only(
                                                                           bottomLeft:
                                                                               Radius.circular(8.0),
                                                                           bottomRight:
@@ -6527,7 +6526,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -6542,7 +6541,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -6557,7 +6556,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -6572,7 +6571,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -6598,19 +6597,19 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                 ),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 20.0)),
                                                         ),
                                                       ],
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 15.0, 15.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -6622,7 +6621,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     print('Button pressed ...');
                                                   },
                                                   text: 'Filtro',
-                                                  icon: Icon(
+                                                  icon: const Icon(
                                                     Icons.filter_alt,
                                                     color: Colors.white,
                                                     size: 15.0,
@@ -6631,11 +6630,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     width: 150.0,
                                                     height: 40.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(24.0, 0.0,
                                                                 24.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -6650,7 +6649,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           letterSpacing: 0.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -6666,7 +6665,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -6719,7 +6718,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -6736,11 +6735,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -6773,7 +6772,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 10.0, 8.0),
                                                   child: Row(
@@ -6797,7 +6796,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   6.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -6913,7 +6912,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       'IconButton pressed ...');
                                                                 },
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 10.0)),
                                                           ),
                                                         ),
@@ -6921,10 +6920,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       Container(
                                                         width: 300.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -6933,7 +6932,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           child: Autocomplete<
                                                               String>(
                                                             initialValue:
-                                                                TextEditingValue(),
+                                                                const TextEditingValue(),
                                                             optionsBuilder:
                                                                 (textEditingValue) {
                                                               if (textEditingValue
@@ -6982,7 +6981,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                           0.0,
                                                                     ),
                                                                 textHighlightStyle:
-                                                                    TextStyle(),
+                                                                    const TextStyle(),
                                                                 elevation: 4.0,
                                                                 optionBackgroundColor:
                                                                     FlutterFlowTheme.of(
@@ -7384,7 +7383,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     onSelectChanged) =>
                                                                 DataRow(
                                                           color:
-                                                              MaterialStateProperty
+                                                              WidgetStateProperty
                                                                   .all(
                                                             produtosListIndex %
                                                                         2 ==
@@ -7590,7 +7589,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'relatoTaxasDevidas')
+                        if (widget.telas == 'relatoTaxasDevidas')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -7599,7 +7598,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -7625,10 +7624,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     -1.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 10.0, 0.0, 0.0),
                                                   child: Text(
@@ -7655,7 +7654,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -7666,7 +7665,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -7676,7 +7675,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -7709,7 +7708,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -7719,7 +7718,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .calssAcademicoValueController7 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.calssAcademicoValue7 =
@@ -7757,7 +7756,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -7776,7 +7775,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -7786,7 +7785,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -7819,7 +7818,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -7829,7 +7828,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .secaoAcademicoValueController6 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: [
+                                                          options: const [
                                                             'SMS',
                                                             'EMAIL'
                                                           ],
@@ -7870,7 +7869,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -7889,7 +7888,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -7899,7 +7898,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -7924,7 +7923,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                           0.0,
                                                                     ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -7934,7 +7933,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .categpriaAcademicoValueController5 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.categpriaAcademicoValue5 =
@@ -7972,7 +7971,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -7987,12 +7986,12 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 15.0, 15.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -8004,7 +8003,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     print('Button pressed ...');
                                                   },
                                                   text: 'Filtro',
-                                                  icon: Icon(
+                                                  icon: const Icon(
                                                     Icons.filter_alt,
                                                     color: Colors.white,
                                                     size: 15.0,
@@ -8013,11 +8012,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     width: 150.0,
                                                     height: 40.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(24.0, 0.0,
                                                                 24.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -8032,7 +8031,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           letterSpacing: 0.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -8048,7 +8047,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -8101,7 +8100,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -8118,11 +8117,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -8155,7 +8154,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 10.0, 8.0),
                                                   child: Row(
@@ -8179,7 +8178,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   6.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -8295,7 +8294,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       'IconButton pressed ...');
                                                                 },
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 10.0)),
                                                           ),
                                                         ),
@@ -8303,10 +8302,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       Container(
                                                         width: 300.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -8315,7 +8314,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           child: Autocomplete<
                                                               String>(
                                                             initialValue:
-                                                                TextEditingValue(),
+                                                                const TextEditingValue(),
                                                             optionsBuilder:
                                                                 (textEditingValue) {
                                                               if (textEditingValue
@@ -8364,7 +8363,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                           0.0,
                                                                     ),
                                                                 textHighlightStyle:
-                                                                    TextStyle(),
+                                                                    const TextStyle(),
                                                                 elevation: 4.0,
                                                                 optionBackgroundColor:
                                                                     FlutterFlowTheme.of(
@@ -8744,7 +8743,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     onSelectChanged) =>
                                                                 DataRow(
                                                           color:
-                                                              MaterialStateProperty
+                                                              WidgetStateProperty
                                                                   .all(
                                                             produtosListIndex %
                                                                         2 ==
@@ -8937,7 +8936,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'relatoMultas')
+                        if (widget.telas == 'relatoMultas')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -8946,7 +8945,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -8972,10 +8971,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     -1.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 10.0, 0.0, 0.0),
                                                   child: Text(
@@ -9002,7 +9001,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -9013,7 +9012,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -9023,7 +9022,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -9056,7 +9055,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -9066,7 +9065,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .calssAcademicoValueController8 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.calssAcademicoValue8 =
@@ -9104,7 +9103,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -9123,7 +9122,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -9133,7 +9132,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -9158,7 +9157,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                           0.0,
                                                                     ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -9168,7 +9167,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .secaoAcademicoValueController7 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: [
+                                                          options: const [
                                                             'SMS',
                                                             'EMAIL'
                                                           ],
@@ -9209,7 +9208,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -9228,7 +9227,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -9238,7 +9237,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -9263,7 +9262,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                           0.0,
                                                                     ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -9273,7 +9272,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .categpriaAcademicoValueController6 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.categpriaAcademicoValue6 =
@@ -9311,7 +9310,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -9330,7 +9329,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -9340,7 +9339,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -9373,7 +9372,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -9385,7 +9384,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                               child: Container(
                                                                 width: 340.0,
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Row(
                                                                   mainAxisSize:
                                                                       MainAxisSize
@@ -9401,7 +9400,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                         color: FlutterFlowTheme.of(context)
                                                                             .primaryBackground,
                                                                         borderRadius:
-                                                                            BorderRadius.only(
+                                                                            const BorderRadius.only(
                                                                           bottomLeft:
                                                                               Radius.circular(8.0),
                                                                           bottomRight:
@@ -9466,7 +9465,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -9481,7 +9480,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -9496,7 +9495,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -9511,7 +9510,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -9537,19 +9536,19 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                 ),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 20.0)),
                                                         ),
                                                       ],
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 15.0, 15.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -9561,7 +9560,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     print('Button pressed ...');
                                                   },
                                                   text: 'Filtro',
-                                                  icon: Icon(
+                                                  icon: const Icon(
                                                     Icons.filter_alt,
                                                     color: Colors.white,
                                                     size: 15.0,
@@ -9570,11 +9569,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     width: 150.0,
                                                     height: 40.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(24.0, 0.0,
                                                                 24.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -9589,7 +9588,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           letterSpacing: 0.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -9605,7 +9604,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -9658,7 +9657,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -9675,11 +9674,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -9712,7 +9711,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 10.0, 8.0),
                                                   child: Row(
@@ -9736,7 +9735,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   6.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -9852,7 +9851,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       'IconButton pressed ...');
                                                                 },
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 10.0)),
                                                           ),
                                                         ),
@@ -9860,10 +9859,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       Container(
                                                         width: 300.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -9872,7 +9871,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           child: Autocomplete<
                                                               String>(
                                                             initialValue:
-                                                                TextEditingValue(),
+                                                                const TextEditingValue(),
                                                             optionsBuilder:
                                                                 (textEditingValue) {
                                                               if (textEditingValue
@@ -9921,7 +9920,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                           0.0,
                                                                     ),
                                                                 textHighlightStyle:
-                                                                    TextStyle(),
+                                                                    const TextStyle(),
                                                                 elevation: 4.0,
                                                                 optionBackgroundColor:
                                                                     FlutterFlowTheme.of(
@@ -10279,7 +10278,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     onSelectChanged) =>
                                                                 DataRow(
                                                           color:
-                                                              MaterialStateProperty
+                                                              WidgetStateProperty
                                                                   .all(
                                                             produtosListIndex %
                                                                         2 ==
@@ -10459,7 +10458,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'relatoContaDecla')
+                        if (widget.telas == 'relatoContaDecla')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -10468,7 +10467,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -10494,10 +10493,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     -1.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 10.0, 0.0, 0.0),
                                                   child: Text(
@@ -10524,7 +10523,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -10535,7 +10534,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -10545,7 +10544,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -10578,7 +10577,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -10588,7 +10587,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .calssAcademicoValueController9 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.calssAcademicoValue9 =
@@ -10626,7 +10625,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -10645,7 +10644,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -10655,7 +10654,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -10688,7 +10687,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -10698,7 +10697,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .secaoAcademicoValueController8 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: [
+                                                          options: const [
                                                             'SMS',
                                                             'EMAIL'
                                                           ],
@@ -10739,7 +10738,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -10758,7 +10757,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -10768,7 +10767,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -10801,7 +10800,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -10811,7 +10810,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .categpriaAcademicoValueController7 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.categpriaAcademicoValue7 =
@@ -10849,7 +10848,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -10868,7 +10867,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -10878,7 +10877,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -10911,7 +10910,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -10923,7 +10922,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                               child: Container(
                                                                 width: 340.0,
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Row(
                                                                   mainAxisSize:
                                                                       MainAxisSize
@@ -10939,7 +10938,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                         color: FlutterFlowTheme.of(context)
                                                                             .primaryBackground,
                                                                         borderRadius:
-                                                                            BorderRadius.only(
+                                                                            const BorderRadius.only(
                                                                           bottomLeft:
                                                                               Radius.circular(8.0),
                                                                           bottomRight:
@@ -11004,7 +11003,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -11019,7 +11018,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -11034,7 +11033,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -11049,7 +11048,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -11075,19 +11074,19 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                 ),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 20.0)),
                                                         ),
                                                       ],
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 15.0, 15.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -11099,7 +11098,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     print('Button pressed ...');
                                                   },
                                                   text: 'Filtro',
-                                                  icon: Icon(
+                                                  icon: const Icon(
                                                     Icons.filter_alt,
                                                     color: Colors.white,
                                                     size: 15.0,
@@ -11108,11 +11107,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     width: 150.0,
                                                     height: 40.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(24.0, 0.0,
                                                                 24.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -11127,7 +11126,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           letterSpacing: 0.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -11143,7 +11142,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -11196,7 +11195,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -11213,11 +11212,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -11250,7 +11249,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 10.0, 8.0),
                                                   child: Row(
@@ -11274,7 +11273,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   6.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -11390,7 +11389,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       'IconButton pressed ...');
                                                                 },
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 10.0)),
                                                           ),
                                                         ),
@@ -11398,10 +11397,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       Container(
                                                         width: 300.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -11410,7 +11409,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           child: Autocomplete<
                                                               String>(
                                                             initialValue:
-                                                                TextEditingValue(),
+                                                                const TextEditingValue(),
                                                             optionsBuilder:
                                                                 (textEditingValue) {
                                                               if (textEditingValue
@@ -11459,7 +11458,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                           0.0,
                                                                     ),
                                                                 textHighlightStyle:
-                                                                    TextStyle(),
+                                                                    const TextStyle(),
                                                                 elevation: 4.0,
                                                                 optionBackgroundColor:
                                                                     FlutterFlowTheme.of(
@@ -11796,7 +11795,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     onSelectChanged) =>
                                                                 DataRow(
                                                           color:
-                                                              MaterialStateProperty
+                                                              WidgetStateProperty
                                                                   .all(
                                                             produtosListIndex %
                                                                         2 ==
@@ -11963,7 +11962,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'relatoRenda')
+                        if (widget.telas == 'relatoRenda')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -11972,7 +11971,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -11998,10 +11997,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     -1.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 10.0, 0.0, 0.0),
                                                   child: Text(
@@ -12028,7 +12027,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 13.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -12039,7 +12038,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -12049,7 +12048,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -12082,7 +12081,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -12092,7 +12091,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .calssAcademicoValueController10 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.calssAcademicoValue10 =
@@ -12131,7 +12130,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -12150,7 +12149,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -12160,7 +12159,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -12193,7 +12192,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -12206,7 +12205,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                 width: double
                                                                     .infinity,
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Row(
                                                                   mainAxisSize:
                                                                       MainAxisSize
@@ -12222,7 +12221,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                         color: FlutterFlowTheme.of(context)
                                                                             .primaryBackground,
                                                                         borderRadius:
-                                                                            BorderRadius.only(
+                                                                            const BorderRadius.only(
                                                                           bottomLeft:
                                                                               Radius.circular(8.0),
                                                                           bottomRight:
@@ -12287,7 +12286,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -12302,7 +12301,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -12317,7 +12316,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -12332,7 +12331,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -12358,19 +12357,19 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                 ),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 20.0)),
                                                         ),
                                                       ],
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 15.0, 15.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -12382,7 +12381,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     print('Button pressed ...');
                                                   },
                                                   text: 'Filtro',
-                                                  icon: Icon(
+                                                  icon: const Icon(
                                                     Icons.filter_alt,
                                                     color: Colors.white,
                                                     size: 15.0,
@@ -12391,11 +12390,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     width: 150.0,
                                                     height: 40.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(24.0, 0.0,
                                                                 24.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -12410,7 +12409,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           letterSpacing: 0.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -12426,7 +12425,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -12479,7 +12478,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -12496,11 +12495,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -12533,7 +12532,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 10.0, 8.0),
                                                   child: Row(
@@ -12557,7 +12556,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   6.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -12673,7 +12672,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       'IconButton pressed ...');
                                                                 },
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 10.0)),
                                                           ),
                                                         ),
@@ -12681,10 +12680,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       Container(
                                                         width: 300.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -12693,7 +12692,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           child: Autocomplete<
                                                               String>(
                                                             initialValue:
-                                                                TextEditingValue(),
+                                                                const TextEditingValue(),
                                                             optionsBuilder:
                                                                 (textEditingValue) {
                                                               if (textEditingValue
@@ -12742,7 +12741,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                           0.0,
                                                                     ),
                                                                 textHighlightStyle:
-                                                                    TextStyle(),
+                                                                    const TextStyle(),
                                                                 elevation: 4.0,
                                                                 optionBackgroundColor:
                                                                     FlutterFlowTheme.of(
@@ -13079,7 +13078,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     onSelectChanged) =>
                                                                 DataRow(
                                                           color:
-                                                              MaterialStateProperty
+                                                              WidgetStateProperty
                                                                   .all(
                                                             produtosListIndex %
                                                                         2 ==
@@ -13246,7 +13245,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'relatoDespesa')
+                        if (widget.telas == 'relatoDespesa')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -13255,7 +13254,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -13281,10 +13280,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     -1.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 10.0, 0.0, 0.0),
                                                   child: Text(
@@ -13311,7 +13310,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 13.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -13322,7 +13321,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -13332,7 +13331,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -13365,7 +13364,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -13375,7 +13374,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .calssAcademicoValueController11 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.calssAcademicoValue11 =
@@ -13414,7 +13413,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -13433,7 +13432,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -13443,7 +13442,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -13476,7 +13475,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -13489,7 +13488,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                 width: double
                                                                     .infinity,
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Row(
                                                                   mainAxisSize:
                                                                       MainAxisSize
@@ -13505,7 +13504,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                         color: FlutterFlowTheme.of(context)
                                                                             .primaryBackground,
                                                                         borderRadius:
-                                                                            BorderRadius.only(
+                                                                            const BorderRadius.only(
                                                                           bottomLeft:
                                                                               Radius.circular(8.0),
                                                                           bottomRight:
@@ -13570,7 +13569,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -13585,7 +13584,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -13600,7 +13599,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -13615,7 +13614,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -13641,19 +13640,19 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                 ),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 20.0)),
                                                         ),
                                                       ],
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 15.0, 15.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -13665,7 +13664,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     print('Button pressed ...');
                                                   },
                                                   text: 'Filtro',
-                                                  icon: Icon(
+                                                  icon: const Icon(
                                                     Icons.filter_alt,
                                                     color: Colors.white,
                                                     size: 15.0,
@@ -13674,11 +13673,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     width: 150.0,
                                                     height: 40.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(24.0, 0.0,
                                                                 24.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -13693,7 +13692,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           letterSpacing: 0.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -13709,7 +13708,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -13762,7 +13761,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -13779,11 +13778,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -13816,7 +13815,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 10.0, 8.0),
                                                   child: Row(
@@ -13840,7 +13839,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   6.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -13956,7 +13955,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       'IconButton pressed ...');
                                                                 },
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 10.0)),
                                                           ),
                                                         ),
@@ -13964,10 +13963,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       Container(
                                                         width: 300.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -13976,7 +13975,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           child: Autocomplete<
                                                               String>(
                                                             initialValue:
-                                                                TextEditingValue(),
+                                                                const TextEditingValue(),
                                                             optionsBuilder:
                                                                 (textEditingValue) {
                                                               if (textEditingValue
@@ -14025,7 +14024,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                           0.0,
                                                                     ),
                                                                 textHighlightStyle:
-                                                                    TextStyle(),
+                                                                    const TextStyle(),
                                                                 elevation: 4.0,
                                                                 optionBackgroundColor:
                                                                     FlutterFlowTheme.of(
@@ -14362,7 +14361,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     onSelectChanged) =>
                                                                 DataRow(
                                                           color:
-                                                              MaterialStateProperty
+                                                              WidgetStateProperty
                                                                   .all(
                                                             produtosListIndex %
                                                                         2 ==
@@ -14529,7 +14528,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'relatoTrasacoes')
+                        if (widget.telas == 'relatoTrasacoes')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -14538,7 +14537,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -14564,10 +14563,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     -1.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 10.0, 0.0, 0.0),
                                                   child: Text(
@@ -14594,7 +14593,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 13.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -14605,7 +14604,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -14615,7 +14614,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -14648,7 +14647,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -14658,7 +14657,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .calssAcademicoValueController12 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.calssAcademicoValue12 =
@@ -14697,7 +14696,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -14716,7 +14715,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -14726,7 +14725,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -14759,7 +14758,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -14772,7 +14771,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                 width: double
                                                                     .infinity,
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Row(
                                                                   mainAxisSize:
                                                                       MainAxisSize
@@ -14788,7 +14787,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                         color: FlutterFlowTheme.of(context)
                                                                             .primaryBackground,
                                                                         borderRadius:
-                                                                            BorderRadius.only(
+                                                                            const BorderRadius.only(
                                                                           bottomLeft:
                                                                               Radius.circular(8.0),
                                                                           bottomRight:
@@ -14853,7 +14852,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -14868,7 +14867,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -14883,7 +14882,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -14898,7 +14897,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -14924,19 +14923,19 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                 ),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 20.0)),
                                                         ),
                                                       ],
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 15.0, 15.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -14948,7 +14947,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     print('Button pressed ...');
                                                   },
                                                   text: 'Filtro',
-                                                  icon: Icon(
+                                                  icon: const Icon(
                                                     Icons.filter_alt,
                                                     color: Colors.white,
                                                     size: 15.0,
@@ -14957,11 +14956,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     width: 150.0,
                                                     height: 40.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(24.0, 0.0,
                                                                 24.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -14976,7 +14975,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           letterSpacing: 0.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -14992,7 +14991,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -15045,7 +15044,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -15062,11 +15061,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -15099,7 +15098,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 10.0, 8.0),
                                                   child: Row(
@@ -15123,7 +15122,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   6.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -15239,7 +15238,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       'IconButton pressed ...');
                                                                 },
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 10.0)),
                                                           ),
                                                         ),
@@ -15247,10 +15246,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       Container(
                                                         width: 300.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -15259,7 +15258,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           child: Autocomplete<
                                                               String>(
                                                             initialValue:
-                                                                TextEditingValue(),
+                                                                const TextEditingValue(),
                                                             optionsBuilder:
                                                                 (textEditingValue) {
                                                               if (textEditingValue
@@ -15308,7 +15307,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                           0.0,
                                                                     ),
                                                                 textHighlightStyle:
-                                                                    TextStyle(),
+                                                                    const TextStyle(),
                                                                 elevation: 4.0,
                                                                 optionBackgroundColor:
                                                                     FlutterFlowTheme.of(
@@ -15711,7 +15710,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     onSelectChanged) =>
                                                                 DataRow(
                                                           color:
-                                                              MaterialStateProperty
+                                                              WidgetStateProperty
                                                                   .all(
                                                             produtosListIndex %
                                                                         2 ==
@@ -15914,7 +15913,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'relatoSaldoFolha')
+                        if (widget.telas == 'relatoSaldoFolha')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -15923,7 +15922,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -15949,10 +15948,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     -1.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 10.0, 0.0, 0.0),
                                                   child: Text(
@@ -15979,7 +15978,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -15988,7 +15987,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                               children: [
                                                 Container(
                                                   width: 550.0,
-                                                  decoration: BoxDecoration(),
+                                                  decoration: const BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -15998,7 +15997,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -16030,7 +16029,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                       ),
@@ -16040,7 +16039,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                 .calssAcademicoValueController13 ??=
                                                             FormFieldController<
                                                                 String>(null),
-                                                        options: ['option 1'],
+                                                        options: const ['option 1'],
                                                         onChanged: (val) =>
                                                             setState(() => _model
                                                                     .calssAcademicoValue13 =
@@ -16078,7 +16077,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                         borderWidth: 2.0,
                                                         borderRadius: 8.0,
                                                         margin:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     4.0,
@@ -16092,12 +16091,12 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     ],
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 15.0, 15.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -16109,7 +16108,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     print('Button pressed ...');
                                                   },
                                                   text: 'Filtro',
-                                                  icon: Icon(
+                                                  icon: const Icon(
                                                     Icons.filter_alt,
                                                     color: Colors.white,
                                                     size: 15.0,
@@ -16118,11 +16117,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     width: 150.0,
                                                     height: 40.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(24.0, 0.0,
                                                                 24.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -16137,7 +16136,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           letterSpacing: 0.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -16153,7 +16152,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -16206,7 +16205,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -16223,11 +16222,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -16260,7 +16259,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 10.0, 8.0),
                                                   child: Row(
@@ -16284,7 +16283,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   6.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -16400,7 +16399,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       'IconButton pressed ...');
                                                                 },
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 10.0)),
                                                           ),
                                                         ),
@@ -16408,10 +16407,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       Container(
                                                         width: 300.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -16420,7 +16419,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           child: Autocomplete<
                                                               String>(
                                                             initialValue:
-                                                                TextEditingValue(),
+                                                                const TextEditingValue(),
                                                             optionsBuilder:
                                                                 (textEditingValue) {
                                                               if (textEditingValue
@@ -16469,7 +16468,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                           0.0,
                                                                     ),
                                                                 textHighlightStyle:
-                                                                    TextStyle(),
+                                                                    const TextStyle(),
                                                                 elevation: 4.0,
                                                                 optionBackgroundColor:
                                                                     FlutterFlowTheme.of(
@@ -16762,7 +16761,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     onSelectChanged) =>
                                                                 DataRow(
                                                           color:
-                                                              MaterialStateProperty
+                                                              WidgetStateProperty
                                                                   .all(
                                                             produtosListIndex %
                                                                         2 ==
@@ -16903,7 +16902,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'relatoRendaVsDespe')
+                        if (widget.telas == 'relatoRendaVsDespe')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -16912,7 +16911,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -16938,10 +16937,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     -1.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 10.0, 0.0, 0.0),
                                                   child: Text(
@@ -16968,7 +16967,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 13.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -16977,7 +16976,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                               children: [
                                                 Container(
                                                   width: 550.0,
-                                                  decoration: BoxDecoration(),
+                                                  decoration: const BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -16987,7 +16986,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -17019,13 +17018,13 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     3.0,
                                                                     0.0,
@@ -17038,7 +17037,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .calssAcademicoValueController14 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.calssAcademicoValue14 =
@@ -17077,7 +17076,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -17096,7 +17095,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -17106,7 +17105,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -17139,7 +17138,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -17152,7 +17151,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                 width: double
                                                                     .infinity,
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Row(
                                                                   mainAxisSize:
                                                                       MainAxisSize
@@ -17168,7 +17167,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                         color: FlutterFlowTheme.of(context)
                                                                             .primaryBackground,
                                                                         borderRadius:
-                                                                            BorderRadius.only(
+                                                                            const BorderRadius.only(
                                                                           bottomLeft:
                                                                               Radius.circular(8.0),
                                                                           bottomRight:
@@ -17233,7 +17232,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -17248,7 +17247,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -17263,7 +17262,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -17278,7 +17277,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -17304,19 +17303,19 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                 ),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 20.0)),
                                                         ),
                                                       ],
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 15.0, 15.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -17328,7 +17327,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     print('Button pressed ...');
                                                   },
                                                   text: 'Filtro',
-                                                  icon: Icon(
+                                                  icon: const Icon(
                                                     Icons.filter_alt,
                                                     color: Colors.white,
                                                     size: 15.0,
@@ -17337,11 +17336,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     width: 150.0,
                                                     height: 40.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(24.0, 0.0,
                                                                 24.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -17356,7 +17355,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           letterSpacing: 0.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -17372,7 +17371,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -17425,7 +17424,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -17442,11 +17441,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -17479,7 +17478,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 10.0, 8.0),
                                                   child: Row(
@@ -17503,7 +17502,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   6.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -17619,7 +17618,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       'IconButton pressed ...');
                                                                 },
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 10.0)),
                                                           ),
                                                         ),
@@ -17627,10 +17626,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       Container(
                                                         width: 300.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -17639,7 +17638,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           child: Autocomplete<
                                                               String>(
                                                             initialValue:
-                                                                TextEditingValue(),
+                                                                const TextEditingValue(),
                                                             optionsBuilder:
                                                                 (textEditingValue) {
                                                               if (textEditingValue
@@ -17688,7 +17687,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                           0.0,
                                                                     ),
                                                                 textHighlightStyle:
-                                                                    TextStyle(),
+                                                                    const TextStyle(),
                                                                 elevation: 4.0,
                                                                 optionBackgroundColor:
                                                                     FlutterFlowTheme.of(
@@ -18003,7 +18002,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     onSelectChanged) =>
                                                                 DataRow(
                                                           color:
-                                                              MaterialStateProperty
+                                                              WidgetStateProperty
                                                                   .all(
                                                             produtosListIndex %
                                                                         2 ==
@@ -18156,7 +18155,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'relatoPresenEstuda')
+                        if (widget.telas == 'relatoPresenEstuda')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -18165,7 +18164,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -18191,10 +18190,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     -1.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 10.0, 0.0, 0.0),
                                                   child: Text(
@@ -18221,7 +18220,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -18232,7 +18231,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -18242,7 +18241,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -18275,7 +18274,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -18285,7 +18284,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .calssAcademicoValueController15 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.calssAcademicoValue15 =
@@ -18323,7 +18322,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -18342,7 +18341,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -18352,7 +18351,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -18385,7 +18384,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -18395,7 +18394,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .secaoAcademicoValueController9 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: [
+                                                          options: const [
                                                             'SMS',
                                                             'EMAIL'
                                                           ],
@@ -18436,7 +18435,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -18455,7 +18454,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -18465,7 +18464,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -18498,7 +18497,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -18508,7 +18507,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .categpriaAcademicoValueController8 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.categpriaAcademicoValue8 =
@@ -18546,7 +18545,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -18565,7 +18564,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -18575,7 +18574,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -18608,7 +18607,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -18620,7 +18619,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                               child: Container(
                                                                 width: 340.0,
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Row(
                                                                   mainAxisSize:
                                                                       MainAxisSize
@@ -18636,7 +18635,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                         color: FlutterFlowTheme.of(context)
                                                                             .primaryBackground,
                                                                         borderRadius:
-                                                                            BorderRadius.only(
+                                                                            const BorderRadius.only(
                                                                           bottomLeft:
                                                                               Radius.circular(8.0),
                                                                           bottomRight:
@@ -18701,7 +18700,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -18716,7 +18715,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -18731,7 +18730,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -18746,7 +18745,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -18772,19 +18771,19 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                 ),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 20.0)),
                                                         ),
                                                       ],
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 15.0, 15.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -18796,7 +18795,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     print('Button pressed ...');
                                                   },
                                                   text: 'Filtro',
-                                                  icon: Icon(
+                                                  icon: const Icon(
                                                     Icons.filter_alt,
                                                     color: Colors.white,
                                                     size: 15.0,
@@ -18805,11 +18804,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     width: 150.0,
                                                     height: 40.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(24.0, 0.0,
                                                                 24.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -18824,7 +18823,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           letterSpacing: 0.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -18840,7 +18839,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -18893,7 +18892,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -18910,11 +18909,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -18947,7 +18946,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 3.0, 10.0, 6.0),
                                                   child: Row(
@@ -18994,7 +18993,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       .override(
                                                                         fontFamily:
                                                                             'Manrope',
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0xFF090909),
                                                                         letterSpacing:
                                                                             0.0,
@@ -19033,13 +19032,13 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       .override(
                                                                         fontFamily:
                                                                             'Manrope',
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0xFF090909),
                                                                         letterSpacing:
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                                FaIcon(
+                                                                const FaIcon(
                                                                   FontAwesomeIcons
                                                                       .timesCircle,
                                                                   color: Color(
@@ -19071,13 +19070,13 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       .override(
                                                                         fontFamily:
                                                                             'Manrope',
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0xFF090909),
                                                                         letterSpacing:
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                                Icon(
+                                                                const Icon(
                                                                   Icons
                                                                       .check_box,
                                                                   color: Color(
@@ -19109,7 +19108,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       .override(
                                                                         fontFamily:
                                                                             'Manrope',
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0xFF090909),
                                                                         letterSpacing:
                                                                             0.0,
@@ -19147,13 +19146,13 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       .override(
                                                                         fontFamily:
                                                                             'Manrope',
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0xFF090909),
                                                                         letterSpacing:
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                                FaIcon(
+                                                                const FaIcon(
                                                                   FontAwesomeIcons
                                                                       .solidSun,
                                                                   color: Color(
@@ -19174,7 +19173,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -19194,7 +19193,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                           fontFamily:
                                                                               'Manrope',
                                                                           color:
-                                                                              Color(0xFF090909),
+                                                                              const Color(0xFF090909),
                                                                           letterSpacing:
                                                                               0.0,
                                                                         ),
@@ -19210,7 +19209,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                 ],
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 5.0)),
                                                         ),
                                                       ),
@@ -19218,7 +19217,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 10.0, 8.0),
                                                   child: Row(
@@ -19242,7 +19241,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   6.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -19358,7 +19357,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       'IconButton pressed ...');
                                                                 },
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 10.0)),
                                                           ),
                                                         ),
@@ -19366,10 +19365,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       Container(
                                                         width: 300.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -19378,7 +19377,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           child: Autocomplete<
                                                               String>(
                                                             initialValue:
-                                                                TextEditingValue(),
+                                                                const TextEditingValue(),
                                                             optionsBuilder:
                                                                 (textEditingValue) {
                                                               if (textEditingValue
@@ -19427,7 +19426,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                           0.0,
                                                                     ),
                                                                 textHighlightStyle:
-                                                                    TextStyle(),
+                                                                    const TextStyle(),
                                                                 elevation: 4.0,
                                                                 optionBackgroundColor:
                                                                     FlutterFlowTheme.of(
@@ -20262,7 +20261,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     onSelectChanged) =>
                                                                 DataRow(
                                                           color:
-                                                              MaterialStateProperty
+                                                              WidgetStateProperty
                                                                   .all(
                                                             produtosListIndex %
                                                                         2 ==
@@ -20290,7 +20289,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                             ),
                                                             Align(
                                                               alignment:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       0.0, 0.0),
                                                               child: Icon(
                                                                 Icons
@@ -20525,7 +20524,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'relatoPresenDiaria')
+                        if (widget.telas == 'relatoPresenDiaria')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -20534,7 +20533,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -20560,10 +20559,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     -1.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 10.0, 0.0, 0.0),
                                                   child: Text(
@@ -20590,7 +20589,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 13.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -20599,7 +20598,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                               children: [
                                                 Container(
                                                   width: 550.0,
-                                                  decoration: BoxDecoration(),
+                                                  decoration: const BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -20609,7 +20608,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -20641,13 +20640,13 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     3.0,
                                                                     0.0,
@@ -20660,7 +20659,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .calssAcademicoValueController16 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.calssAcademicoValue16 =
@@ -20699,7 +20698,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -20718,7 +20717,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -20728,7 +20727,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -20761,7 +20760,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -20774,7 +20773,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                 width: double
                                                                     .infinity,
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Row(
                                                                   mainAxisSize:
                                                                       MainAxisSize
@@ -20790,7 +20789,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                         color: FlutterFlowTheme.of(context)
                                                                             .primaryBackground,
                                                                         borderRadius:
-                                                                            BorderRadius.only(
+                                                                            const BorderRadius.only(
                                                                           bottomLeft:
                                                                               Radius.circular(8.0),
                                                                           bottomRight:
@@ -20855,7 +20854,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -20870,7 +20869,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -20885,7 +20884,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -20900,7 +20899,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -20926,19 +20925,19 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                 ),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 20.0)),
                                                         ),
                                                       ],
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 15.0, 15.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -20950,7 +20949,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     print('Button pressed ...');
                                                   },
                                                   text: 'Filtro',
-                                                  icon: Icon(
+                                                  icon: const Icon(
                                                     Icons.filter_alt,
                                                     color: Colors.white,
                                                     size: 15.0,
@@ -20959,11 +20958,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     width: 150.0,
                                                     height: 40.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(24.0, 0.0,
                                                                 24.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -20978,7 +20977,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           letterSpacing: 0.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -20994,7 +20993,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -21047,7 +21046,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -21064,11 +21063,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -21101,7 +21100,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 10.0, 8.0),
                                                   child: Row(
@@ -21125,7 +21124,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   6.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -21241,7 +21240,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       'IconButton pressed ...');
                                                                 },
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 10.0)),
                                                           ),
                                                         ),
@@ -21249,10 +21248,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       Container(
                                                         width: 300.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -21261,7 +21260,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           child: Autocomplete<
                                                               String>(
                                                             initialValue:
-                                                                TextEditingValue(),
+                                                                const TextEditingValue(),
                                                             optionsBuilder:
                                                                 (textEditingValue) {
                                                               if (textEditingValue
@@ -21310,7 +21309,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                           0.0,
                                                                     ),
                                                                 textHighlightStyle:
-                                                                    TextStyle(),
+                                                                    const TextStyle(),
                                                                 elevation: 4.0,
                                                                 optionBackgroundColor:
                                                                     FlutterFlowTheme.of(
@@ -21647,7 +21646,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     onSelectChanged) =>
                                                                 DataRow(
                                                           color:
-                                                              MaterialStateProperty
+                                                              WidgetStateProperty
                                                                   .all(
                                                             produtosListIndex %
                                                                         2 ==
@@ -21724,7 +21723,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                                 0.0,
                                                                           ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       width:
                                                                           8.0)),
                                                                 ),
@@ -21761,7 +21760,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                                 0.0,
                                                                           ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       width:
                                                                           8.0)),
                                                                 ),
@@ -21882,7 +21881,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'relatoFrequenEstud')
+                        if (widget.telas == 'relatoFrequenEstud')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -21891,7 +21890,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -21917,10 +21916,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     -1.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 10.0, 0.0, 0.0),
                                                   child: Text(
@@ -21947,7 +21946,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -21958,7 +21957,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -21968,7 +21967,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -22001,7 +22000,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -22011,7 +22010,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .calssAcademicoValueController17 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.calssAcademicoValue17 =
@@ -22049,7 +22048,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -22068,7 +22067,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -22078,7 +22077,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -22111,7 +22110,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -22121,7 +22120,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .secaoAcademicoValueController10 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: [
+                                                          options: const [
                                                             'SMS',
                                                             'EMAIL'
                                                           ],
@@ -22162,7 +22161,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -22181,7 +22180,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -22191,7 +22190,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -22224,7 +22223,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -22234,7 +22233,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .categpriaAcademicoValueController9 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.categpriaAcademicoValue9 =
@@ -22272,7 +22271,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -22291,7 +22290,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -22301,7 +22300,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -22334,7 +22333,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -22344,7 +22343,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .categpriaAcademicoValueController10 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.categpriaAcademicoValue10 =
@@ -22382,7 +22381,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -22397,12 +22396,12 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -22413,7 +22412,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -22423,7 +22422,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -22456,7 +22455,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -22468,7 +22467,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                               child: Container(
                                                                 width: 340.0,
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Row(
                                                                   mainAxisSize:
                                                                       MainAxisSize
@@ -22484,7 +22483,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                         color: FlutterFlowTheme.of(context)
                                                                             .primaryBackground,
                                                                         borderRadius:
-                                                                            BorderRadius.only(
+                                                                            const BorderRadius.only(
                                                                           bottomLeft:
                                                                               Radius.circular(8.0),
                                                                           bottomRight:
@@ -22549,7 +22548,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -22564,7 +22563,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -22579,7 +22578,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -22594,7 +22593,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -22620,19 +22619,19 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                 ),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 20.0)),
                                                         ),
                                                       ],
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 15.0, 15.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -22644,7 +22643,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     print('Button pressed ...');
                                                   },
                                                   text: 'Filtro',
-                                                  icon: Icon(
+                                                  icon: const Icon(
                                                     Icons.filter_alt,
                                                     color: Colors.white,
                                                     size: 15.0,
@@ -22653,11 +22652,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     width: 150.0,
                                                     height: 40.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(24.0, 0.0,
                                                                 24.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -22672,7 +22671,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           letterSpacing: 0.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -22688,7 +22687,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -22741,7 +22740,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -22758,11 +22757,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -22795,7 +22794,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 10.0, 8.0),
                                                   child: Row(
@@ -22819,7 +22818,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   6.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -22935,7 +22934,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       'IconButton pressed ...');
                                                                 },
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 10.0)),
                                                           ),
                                                         ),
@@ -22943,10 +22942,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       Container(
                                                         width: 300.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -22955,7 +22954,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           child: Autocomplete<
                                                               String>(
                                                             initialValue:
-                                                                TextEditingValue(),
+                                                                const TextEditingValue(),
                                                             optionsBuilder:
                                                                 (textEditingValue) {
                                                               if (textEditingValue
@@ -23004,7 +23003,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                           0.0,
                                                                     ),
                                                                 textHighlightStyle:
-                                                                    TextStyle(),
+                                                                    const TextStyle(),
                                                                 elevation: 4.0,
                                                                 optionBackgroundColor:
                                                                     FlutterFlowTheme.of(
@@ -23340,7 +23339,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     onSelectChanged) =>
                                                                 DataRow(
                                                           color:
-                                                              MaterialStateProperty
+                                                              WidgetStateProperty
                                                                   .all(
                                                             produtosListIndex %
                                                                         2 ==
@@ -23507,7 +23506,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'relatodisciplina')
+                        if (widget.telas == 'relatodisciplina')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -23516,7 +23515,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -23542,10 +23541,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     -1.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 10.0, 0.0, 0.0),
                                                   child: Text(
@@ -23572,7 +23571,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -23583,7 +23582,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -23593,7 +23592,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -23626,7 +23625,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -23636,7 +23635,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .calssAcademicoValueController18 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.calssAcademicoValue18 =
@@ -23674,7 +23673,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -23693,7 +23692,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -23703,7 +23702,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -23736,7 +23735,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -23746,7 +23745,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .secaoAcademicoValueController11 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: [
+                                                          options: const [
                                                             'SMS',
                                                             'EMAIL'
                                                           ],
@@ -23787,7 +23786,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -23806,7 +23805,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -23816,7 +23815,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -23849,7 +23848,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -23859,7 +23858,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .categpriaAcademicoValueController11 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.categpriaAcademicoValue11 =
@@ -23897,7 +23896,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -23916,7 +23915,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -23926,7 +23925,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -23959,7 +23958,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -23969,7 +23968,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .categpriaAcademicoValueController12 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.categpriaAcademicoValue12 =
@@ -24007,7 +24006,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -24022,12 +24021,12 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -24038,7 +24037,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -24048,7 +24047,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -24081,7 +24080,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -24093,7 +24092,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                               child: Container(
                                                                 width: 340.0,
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Row(
                                                                   mainAxisSize:
                                                                       MainAxisSize
@@ -24109,7 +24108,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                         color: FlutterFlowTheme.of(context)
                                                                             .primaryBackground,
                                                                         borderRadius:
-                                                                            BorderRadius.only(
+                                                                            const BorderRadius.only(
                                                                           bottomLeft:
                                                                               Radius.circular(8.0),
                                                                           bottomRight:
@@ -24174,7 +24173,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -24189,7 +24188,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -24204,7 +24203,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -24219,7 +24218,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -24245,19 +24244,19 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                 ),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 20.0)),
                                                         ),
                                                       ],
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 15.0, 15.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -24269,7 +24268,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     print('Button pressed ...');
                                                   },
                                                   text: 'Filtro',
-                                                  icon: Icon(
+                                                  icon: const Icon(
                                                     Icons.filter_alt,
                                                     color: Colors.white,
                                                     size: 15.0,
@@ -24278,11 +24277,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     width: 150.0,
                                                     height: 40.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(24.0, 0.0,
                                                                 24.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -24297,7 +24296,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           letterSpacing: 0.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -24313,7 +24312,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -24366,7 +24365,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -24383,11 +24382,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -24420,7 +24419,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 10.0, 8.0),
                                                   child: Row(
@@ -24444,7 +24443,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   6.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -24560,7 +24559,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       'IconButton pressed ...');
                                                                 },
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 10.0)),
                                                           ),
                                                         ),
@@ -24568,10 +24567,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       Container(
                                                         width: 300.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -24580,7 +24579,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           child: Autocomplete<
                                                               String>(
                                                             initialValue:
-                                                                TextEditingValue(),
+                                                                const TextEditingValue(),
                                                             optionsBuilder:
                                                                 (textEditingValue) {
                                                               if (textEditingValue
@@ -24629,7 +24628,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                           0.0,
                                                                     ),
                                                                 textHighlightStyle:
-                                                                    TextStyle(),
+                                                                    const TextStyle(),
                                                                 elevation: 4.0,
                                                                 optionBackgroundColor:
                                                                     FlutterFlowTheme.of(
@@ -24965,7 +24964,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     onSelectChanged) =>
                                                                 DataRow(
                                                           color:
-                                                              MaterialStateProperty
+                                                              WidgetStateProperty
                                                                   .all(
                                                             produtosListIndex %
                                                                         2 ==
@@ -25132,7 +25131,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'relatoPresenfunciona')
+                        if (widget.telas == 'relatoPresenfunciona')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -25141,7 +25140,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -25167,10 +25166,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     -1.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 10.0, 0.0, 0.0),
                                                   child: Text(
@@ -25197,7 +25196,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -25208,7 +25207,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -25218,7 +25217,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -25251,7 +25250,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -25261,7 +25260,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .calssAcademicoValueController19 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.calssAcademicoValue19 =
@@ -25299,7 +25298,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -25318,7 +25317,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -25328,7 +25327,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -25361,7 +25360,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -25371,7 +25370,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .categpriaAcademicoValueController13 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.categpriaAcademicoValue13 =
@@ -25409,7 +25408,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -25428,7 +25427,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -25438,7 +25437,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -25471,7 +25470,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -25483,7 +25482,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                               child: Container(
                                                                 width: 340.0,
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Row(
                                                                   mainAxisSize:
                                                                       MainAxisSize
@@ -25499,7 +25498,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                         color: FlutterFlowTheme.of(context)
                                                                             .primaryBackground,
                                                                         borderRadius:
-                                                                            BorderRadius.only(
+                                                                            const BorderRadius.only(
                                                                           bottomLeft:
                                                                               Radius.circular(8.0),
                                                                           bottomRight:
@@ -25564,7 +25563,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -25579,7 +25578,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -25594,7 +25593,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -25609,7 +25608,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -25635,19 +25634,19 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                 ),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 20.0)),
                                                         ),
                                                       ],
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 15.0, 15.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -25659,7 +25658,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     print('Button pressed ...');
                                                   },
                                                   text: 'Filtro',
-                                                  icon: Icon(
+                                                  icon: const Icon(
                                                     Icons.filter_alt,
                                                     color: Colors.white,
                                                     size: 15.0,
@@ -25668,11 +25667,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     width: 150.0,
                                                     height: 40.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(24.0, 0.0,
                                                                 24.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -25687,7 +25686,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           letterSpacing: 0.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -25703,7 +25702,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -25756,7 +25755,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -25773,11 +25772,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -25810,7 +25809,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 3.0, 10.0, 6.0),
                                                   child: Row(
@@ -25857,7 +25856,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       .override(
                                                                         fontFamily:
                                                                             'Manrope',
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0xFF090909),
                                                                         letterSpacing:
                                                                             0.0,
@@ -25896,13 +25895,13 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       .override(
                                                                         fontFamily:
                                                                             'Manrope',
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0xFF090909),
                                                                         letterSpacing:
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                                FaIcon(
+                                                                const FaIcon(
                                                                   FontAwesomeIcons
                                                                       .timesCircle,
                                                                   color: Color(
@@ -25934,13 +25933,13 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       .override(
                                                                         fontFamily:
                                                                             'Manrope',
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0xFF090909),
                                                                         letterSpacing:
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                                Icon(
+                                                                const Icon(
                                                                   Icons
                                                                       .check_box,
                                                                   color: Color(
@@ -25972,7 +25971,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       .override(
                                                                         fontFamily:
                                                                             'Manrope',
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0xFF090909),
                                                                         letterSpacing:
                                                                             0.0,
@@ -26010,13 +26009,13 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       .override(
                                                                         fontFamily:
                                                                             'Manrope',
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0xFF090909),
                                                                         letterSpacing:
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                                FaIcon(
+                                                                const FaIcon(
                                                                   FontAwesomeIcons
                                                                       .solidSun,
                                                                   color: Color(
@@ -26037,7 +26036,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -26057,7 +26056,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                           fontFamily:
                                                                               'Manrope',
                                                                           color:
-                                                                              Color(0xFF090909),
+                                                                              const Color(0xFF090909),
                                                                           letterSpacing:
                                                                               0.0,
                                                                         ),
@@ -26073,7 +26072,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                 ],
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 5.0)),
                                                         ),
                                                       ),
@@ -26081,7 +26080,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 10.0, 8.0),
                                                   child: Row(
@@ -26105,7 +26104,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   6.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -26221,7 +26220,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       'IconButton pressed ...');
                                                                 },
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 10.0)),
                                                           ),
                                                         ),
@@ -26229,10 +26228,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       Container(
                                                         width: 300.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -26241,7 +26240,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           child: Autocomplete<
                                                               String>(
                                                             initialValue:
-                                                                TextEditingValue(),
+                                                                const TextEditingValue(),
                                                             optionsBuilder:
                                                                 (textEditingValue) {
                                                               if (textEditingValue
@@ -26290,7 +26289,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                           0.0,
                                                                     ),
                                                                 textHighlightStyle:
-                                                                    TextStyle(),
+                                                                    const TextStyle(),
                                                                 elevation: 4.0,
                                                                 optionBackgroundColor:
                                                                     FlutterFlowTheme.of(
@@ -27125,7 +27124,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     onSelectChanged) =>
                                                                 DataRow(
                                                           color:
-                                                              MaterialStateProperty
+                                                              WidgetStateProperty
                                                                   .all(
                                                             produtosListIndex %
                                                                         2 ==
@@ -27153,7 +27152,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                             ),
                                                             Align(
                                                               alignment:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       0.0, 0.0),
                                                               child: Icon(
                                                                 Icons
@@ -27388,7 +27387,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'relatoExameAluno')
+                        if (widget.telas == 'relatoExameAluno')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -27397,7 +27396,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -27423,10 +27422,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     -1.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 10.0, 0.0, 0.0),
                                                   child: Text(
@@ -27453,7 +27452,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -27464,7 +27463,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -27474,7 +27473,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -27507,7 +27506,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -27517,7 +27516,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .calssAcademicoValueController20 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.calssAcademicoValue20 =
@@ -27555,7 +27554,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -27574,7 +27573,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -27584,7 +27583,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -27617,7 +27616,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -27627,7 +27626,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .secaoAcademicoValueController12 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: [
+                                                          options: const [
                                                             'SMS',
                                                             'EMAIL'
                                                           ],
@@ -27668,7 +27667,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -27687,7 +27686,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -27697,7 +27696,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -27730,7 +27729,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -27740,7 +27739,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .categpriaAcademicoValueController14 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.categpriaAcademicoValue14 =
@@ -27778,7 +27777,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -27797,7 +27796,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -27807,7 +27806,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -27840,7 +27839,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -27850,7 +27849,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .categpriaAcademicoValueController15 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.categpriaAcademicoValue15 =
@@ -27888,7 +27887,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -27903,12 +27902,12 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -27919,7 +27918,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -27929,7 +27928,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -27962,7 +27961,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -27972,7 +27971,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .calssAcademicoValueController21 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.calssAcademicoValue21 =
@@ -28010,7 +28009,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -28025,12 +28024,12 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 15.0, 15.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -28042,7 +28041,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     print('Button pressed ...');
                                                   },
                                                   text: 'Filtro',
-                                                  icon: Icon(
+                                                  icon: const Icon(
                                                     Icons.filter_alt,
                                                     color: Colors.white,
                                                     size: 15.0,
@@ -28051,11 +28050,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     width: 150.0,
                                                     height: 40.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(24.0, 0.0,
                                                                 24.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -28070,7 +28069,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           letterSpacing: 0.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -28086,7 +28085,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -28139,7 +28138,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -28156,11 +28155,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -28193,7 +28192,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 3.0, 10.0, 8.0),
                                                   child: Row(
@@ -28217,7 +28216,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   6.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -28333,7 +28332,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       'IconButton pressed ...');
                                                                 },
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 10.0)),
                                                           ),
                                                         ),
@@ -28341,10 +28340,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       Container(
                                                         width: 300.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -28353,7 +28352,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           child: Autocomplete<
                                                               String>(
                                                             initialValue:
-                                                                TextEditingValue(),
+                                                                const TextEditingValue(),
                                                             optionsBuilder:
                                                                 (textEditingValue) {
                                                               if (textEditingValue
@@ -28402,7 +28401,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                           0.0,
                                                                     ),
                                                                 textHighlightStyle:
-                                                                    TextStyle(),
+                                                                    const TextStyle(),
                                                                 elevation: 4.0,
                                                                 optionBackgroundColor:
                                                                     FlutterFlowTheme.of(
@@ -28717,7 +28716,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     onSelectChanged) =>
                                                                 DataRow(
                                                           color:
-                                                              MaterialStateProperty
+                                                              WidgetStateProperty
                                                                   .all(
                                                             produtosListIndex %
                                                                         2 ==
@@ -28871,7 +28870,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'relatoResuFolhaPaga')
+                        if (widget.telas == 'relatoResuFolhaPaga')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -28880,7 +28879,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -28906,10 +28905,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     -1.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 10.0, 0.0, 0.0),
                                                   child: Text(
@@ -28936,7 +28935,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 13.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -28947,7 +28946,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -28957,7 +28956,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -28990,7 +28989,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -29000,7 +28999,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .calssAcademicoValueController22 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.calssAcademicoValue22 =
@@ -29039,7 +29038,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -29058,7 +29057,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -29068,7 +29067,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -29101,7 +29100,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -29114,7 +29113,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                 width: double
                                                                     .infinity,
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Row(
                                                                   mainAxisSize:
                                                                       MainAxisSize
@@ -29130,7 +29129,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                         color: FlutterFlowTheme.of(context)
                                                                             .primaryBackground,
                                                                         borderRadius:
-                                                                            BorderRadius.only(
+                                                                            const BorderRadius.only(
                                                                           bottomLeft:
                                                                               Radius.circular(8.0),
                                                                           bottomRight:
@@ -29195,7 +29194,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -29210,7 +29209,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -29225,7 +29224,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -29240,7 +29239,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -29266,19 +29265,19 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                 ),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 20.0)),
                                                         ),
                                                       ],
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 15.0, 15.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -29290,7 +29289,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     print('Button pressed ...');
                                                   },
                                                   text: 'Filtro',
-                                                  icon: Icon(
+                                                  icon: const Icon(
                                                     Icons.filter_alt,
                                                     color: Colors.white,
                                                     size: 15.0,
@@ -29299,11 +29298,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     width: 150.0,
                                                     height: 40.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(24.0, 0.0,
                                                                 24.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -29318,7 +29317,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           letterSpacing: 0.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -29334,7 +29333,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -29382,7 +29381,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 15.0, 0.0),
                                                   child: Row(
@@ -29391,7 +29390,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -29407,11 +29406,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       ),
                                                       Align(
                                                         alignment:
-                                                            AlignmentDirectional(
+                                                            const AlignmentDirectional(
                                                                 -1.0, 0.0),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       10.0,
@@ -29439,7 +29438,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       Expanded(
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       10.0,
@@ -29497,7 +29496,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                                 0.0,
                                                                           ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       width:
                                                                           5.0)),
                                                                 ),
@@ -29516,7 +29515,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 10.0, 8.0),
                                                   child: Row(
@@ -29540,7 +29539,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   6.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -29656,7 +29655,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       'IconButton pressed ...');
                                                                 },
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 10.0)),
                                                           ),
                                                         ),
@@ -29664,10 +29663,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       Container(
                                                         width: 300.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -29676,7 +29675,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           child: Autocomplete<
                                                               String>(
                                                             initialValue:
-                                                                TextEditingValue(),
+                                                                const TextEditingValue(),
                                                             optionsBuilder:
                                                                 (textEditingValue) {
                                                               if (textEditingValue
@@ -29725,7 +29724,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                           0.0,
                                                                     ),
                                                                 textHighlightStyle:
-                                                                    TextStyle(),
+                                                                    const TextStyle(),
                                                                 elevation: 4.0,
                                                                 optionBackgroundColor:
                                                                     FlutterFlowTheme.of(
@@ -30042,7 +30041,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           onSelectChanged:
                                                               onSelectChanged,
                                                           color:
-                                                              MaterialStateProperty
+                                                              WidgetStateProperty
                                                                   .all(
                                                             produtosListIndex %
                                                                         2 ==
@@ -30186,11 +30185,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                         checkboxSelectedFillColor:
                                                             Colors.transparent,
                                                         checkboxCheckColor:
-                                                            Color(0x8A000000),
+                                                            const Color(0x8A000000),
                                                         checkboxUnselectedBorderColor:
-                                                            Color(0x8A000000),
+                                                            const Color(0x8A000000),
                                                         checkboxSelectedBorderColor:
-                                                            Color(0x8A000000),
+                                                            const Color(0x8A000000),
                                                       );
                                                     },
                                                   ),
@@ -30206,7 +30205,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'relatoFerias')
+                        if (widget.telas == 'relatoFerias')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -30215,7 +30214,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -30241,10 +30240,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     -1.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 10.0, 0.0, 0.0),
                                                   child: Text(
@@ -30271,7 +30270,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -30282,7 +30281,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -30292,7 +30291,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -30325,7 +30324,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -30335,7 +30334,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .calssAcademicoValueController23 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.calssAcademicoValue23 =
@@ -30373,7 +30372,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -30392,7 +30391,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -30402,7 +30401,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -30435,7 +30434,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -30445,7 +30444,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .secaoAcademicoValueController13 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: [
+                                                          options: const [
                                                             'SMS',
                                                             'EMAIL'
                                                           ],
@@ -30486,7 +30485,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -30505,7 +30504,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -30515,7 +30514,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -30548,7 +30547,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -30560,7 +30559,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                               child: Container(
                                                                 width: 340.0,
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Row(
                                                                   mainAxisSize:
                                                                       MainAxisSize
@@ -30576,7 +30575,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                         color: FlutterFlowTheme.of(context)
                                                                             .primaryBackground,
                                                                         borderRadius:
-                                                                            BorderRadius.only(
+                                                                            const BorderRadius.only(
                                                                           bottomLeft:
                                                                               Radius.circular(8.0),
                                                                           bottomRight:
@@ -30641,7 +30640,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -30656,7 +30655,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -30671,7 +30670,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -30686,7 +30685,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -30712,19 +30711,19 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                 ),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 20.0)),
                                                         ),
                                                       ],
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 15.0, 15.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -30736,7 +30735,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     print('Button pressed ...');
                                                   },
                                                   text: 'Filtro',
-                                                  icon: Icon(
+                                                  icon: const Icon(
                                                     Icons.filter_alt,
                                                     color: Colors.white,
                                                     size: 15.0,
@@ -30745,11 +30744,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     width: 150.0,
                                                     height: 40.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(24.0, 0.0,
                                                                 24.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -30764,7 +30763,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           letterSpacing: 0.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -30780,7 +30779,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -30833,7 +30832,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -30850,11 +30849,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -30887,7 +30886,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 10.0, 8.0),
                                                   child: Row(
@@ -30911,7 +30910,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   6.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -31027,7 +31026,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       'IconButton pressed ...');
                                                                 },
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 10.0)),
                                                           ),
                                                         ),
@@ -31035,10 +31034,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       Container(
                                                         width: 300.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -31047,7 +31046,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           child: Autocomplete<
                                                               String>(
                                                             initialValue:
-                                                                TextEditingValue(),
+                                                                const TextEditingValue(),
                                                             optionsBuilder:
                                                                 (textEditingValue) {
                                                               if (textEditingValue
@@ -31096,7 +31095,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                           0.0,
                                                                     ),
                                                                 textHighlightStyle:
-                                                                    TextStyle(),
+                                                                    const TextStyle(),
                                                                 elevation: 4.0,
                                                                 optionBackgroundColor:
                                                                     FlutterFlowTheme.of(
@@ -31477,7 +31476,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     onSelectChanged) =>
                                                                 DataRow(
                                                           color:
-                                                              MaterialStateProperty
+                                                              WidgetStateProperty
                                                                   .all(
                                                             produtosListIndex %
                                                                         2 ==
@@ -31670,7 +31669,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'relatoEstoque')
+                        if (widget.telas == 'relatoEstoque')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -31679,7 +31678,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -31705,10 +31704,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     -1.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 10.0, 0.0, 0.0),
                                                   child: Text(
@@ -31735,7 +31734,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 13.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -31744,7 +31743,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                               children: [
                                                 Container(
                                                   width: 550.0,
-                                                  decoration: BoxDecoration(),
+                                                  decoration: const BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -31754,7 +31753,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -31786,13 +31785,13 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     3.0,
                                                                     0.0,
@@ -31805,7 +31804,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .calssAcademicoValueController24 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.calssAcademicoValue24 =
@@ -31844,7 +31843,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -31863,7 +31862,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -31873,7 +31872,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -31906,13 +31905,13 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       3.0,
                                                                       0.0,
@@ -31926,7 +31925,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                 FormFieldController<
                                                                         String>(
                                                                     null),
-                                                            options: [
+                                                            options: const [
                                                               'option 1'
                                                             ],
                                                             onChanged: (val) =>
@@ -31967,7 +31966,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                             borderWidth: 2.0,
                                                             borderRadius: 8.0,
                                                             margin:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         4.0,
@@ -31985,12 +31984,12 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 15.0, 15.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -32002,7 +32001,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     print('Button pressed ...');
                                                   },
                                                   text: 'Filtro',
-                                                  icon: Icon(
+                                                  icon: const Icon(
                                                     Icons.filter_alt,
                                                     color: Colors.white,
                                                     size: 15.0,
@@ -32011,11 +32010,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     width: 150.0,
                                                     height: 40.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(24.0, 0.0,
                                                                 24.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -32030,7 +32029,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           letterSpacing: 0.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -32046,7 +32045,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -32099,7 +32098,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -32116,11 +32115,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -32153,7 +32152,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 10.0, 8.0),
                                                   child: Row(
@@ -32177,7 +32176,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   6.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -32293,7 +32292,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       'IconButton pressed ...');
                                                                 },
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 10.0)),
                                                           ),
                                                         ),
@@ -32301,10 +32300,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       Container(
                                                         width: 300.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -32313,7 +32312,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           child: Autocomplete<
                                                               String>(
                                                             initialValue:
-                                                                TextEditingValue(),
+                                                                const TextEditingValue(),
                                                             optionsBuilder:
                                                                 (textEditingValue) {
                                                               if (textEditingValue
@@ -32362,7 +32361,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                           0.0,
                                                                     ),
                                                                 textHighlightStyle:
-                                                                    TextStyle(),
+                                                                    const TextStyle(),
                                                                 elevation: 4.0,
                                                                 optionBackgroundColor:
                                                                     FlutterFlowTheme.of(
@@ -32765,7 +32764,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     onSelectChanged) =>
                                                                 DataRow(
                                                           color:
-                                                              MaterialStateProperty
+                                                              WidgetStateProperty
                                                                   .all(
                                                             produtosListIndex %
                                                                         2 ==
@@ -32971,7 +32970,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'relatoCompraEstoq')
+                        if (widget.telas == 'relatoCompraEstoq')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -32980,7 +32979,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -33006,10 +33005,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     -1.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 10.0, 0.0, 0.0),
                                                   child: Text(
@@ -33036,7 +33035,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -33047,7 +33046,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -33057,7 +33056,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -33090,7 +33089,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -33100,7 +33099,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .calssAcademicoValueController26 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.calssAcademicoValue26 =
@@ -33138,7 +33137,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -33157,7 +33156,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -33167,7 +33166,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       5.0,
                                                                       0.0,
@@ -33200,7 +33199,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -33210,7 +33209,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .secaoAcademicoValueController14 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: [
+                                                          options: const [
                                                             'SMS',
                                                             'EMAIL'
                                                           ],
@@ -33251,7 +33250,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -33270,7 +33269,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -33280,7 +33279,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       5.0,
                                                                       0.0,
@@ -33313,7 +33312,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -33323,7 +33322,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .categpriaAcademicoValueController16 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.categpriaAcademicoValue16 =
@@ -33361,7 +33360,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -33380,7 +33379,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -33390,7 +33389,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       5.0,
                                                                       0.0,
@@ -33423,7 +33422,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -33435,7 +33434,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                               child: Container(
                                                                 width: 340.0,
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Row(
                                                                   mainAxisSize:
                                                                       MainAxisSize
@@ -33451,7 +33450,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                         color: FlutterFlowTheme.of(context)
                                                                             .primaryBackground,
                                                                         borderRadius:
-                                                                            BorderRadius.only(
+                                                                            const BorderRadius.only(
                                                                           bottomLeft:
                                                                               Radius.circular(8.0),
                                                                           bottomRight:
@@ -33516,7 +33515,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -33531,7 +33530,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -33546,7 +33545,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -33561,7 +33560,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -33587,19 +33586,19 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                 ),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 20.0)),
                                                         ),
                                                       ],
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 15.0, 15.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -33611,7 +33610,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     print('Button pressed ...');
                                                   },
                                                   text: 'Filtro',
-                                                  icon: Icon(
+                                                  icon: const Icon(
                                                     Icons.filter_alt,
                                                     color: Colors.white,
                                                     size: 15.0,
@@ -33620,11 +33619,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     width: 150.0,
                                                     height: 40.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(24.0, 0.0,
                                                                 24.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -33639,7 +33638,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           letterSpacing: 0.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -33655,7 +33654,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -33708,7 +33707,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -33725,11 +33724,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -33762,7 +33761,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 10.0, 8.0),
                                                   child: Row(
@@ -33786,7 +33785,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   6.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -33902,7 +33901,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       'IconButton pressed ...');
                                                                 },
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 10.0)),
                                                           ),
                                                         ),
@@ -33910,10 +33909,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       Container(
                                                         width: 300.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -33922,7 +33921,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           child: Autocomplete<
                                                               String>(
                                                             initialValue:
-                                                                TextEditingValue(),
+                                                                const TextEditingValue(),
                                                             optionsBuilder:
                                                                 (textEditingValue) {
                                                               if (textEditingValue
@@ -33971,7 +33970,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                           0.0,
                                                                     ),
                                                                 textHighlightStyle:
-                                                                    TextStyle(),
+                                                                    const TextStyle(),
                                                                 elevation: 4.0,
                                                                 optionBackgroundColor:
                                                                     FlutterFlowTheme.of(
@@ -34375,7 +34374,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     onSelectChanged) =>
                                                                 DataRow(
                                                           color:
-                                                              MaterialStateProperty
+                                                              WidgetStateProperty
                                                                   .all(
                                                             produtosListIndex %
                                                                         2 ==
@@ -34470,7 +34469,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                         30.0,
                                                                     decoration:
                                                                         BoxDecoration(
-                                                                      color: Color(
+                                                                      color: const Color(
                                                                           0xFFA2F2B0),
                                                                       borderRadius:
                                                                           BorderRadius.circular(
@@ -34478,7 +34477,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       border:
                                                                           Border
                                                                               .all(
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0xFF0AAB25),
                                                                         width:
                                                                             1.5,
@@ -34487,7 +34486,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     child:
                                                                         Align(
                                                                       alignment:
-                                                                          AlignmentDirectional(
+                                                                          const AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                       child:
@@ -34497,7 +34496,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                             .labelLarge
                                                                             .override(
                                                                               fontFamily: 'Manrope',
-                                                                              color: Color(0xFF067819),
+                                                                              color: const Color(0xFF067819),
                                                                               fontSize: 18.0,
                                                                               letterSpacing: 0.0,
                                                                             ),
@@ -34513,7 +34512,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                         30.0,
                                                                     decoration:
                                                                         BoxDecoration(
-                                                                      color: Color(
+                                                                      color: const Color(
                                                                           0xFFA2CFF9),
                                                                       borderRadius:
                                                                           BorderRadius.circular(
@@ -34530,7 +34529,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     child:
                                                                         Align(
                                                                       alignment:
-                                                                          AlignmentDirectional(
+                                                                          const AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                       child:
@@ -34664,7 +34663,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'relatoVendaEstoq')
+                        if (widget.telas == 'relatoVendaEstoq')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -34673,7 +34672,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -34699,10 +34698,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     -1.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 10.0, 0.0, 0.0),
                                                   child: Text(
@@ -34729,7 +34728,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -34740,7 +34739,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -34750,7 +34749,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -34783,7 +34782,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -34793,7 +34792,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .calssAcademicoValueController27 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.calssAcademicoValue27 =
@@ -34831,7 +34830,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -34850,7 +34849,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -34860,7 +34859,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       5.0,
                                                                       0.0,
@@ -34893,7 +34892,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -34903,7 +34902,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .categpriaAcademicoValueController17 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.categpriaAcademicoValue17 =
@@ -34941,7 +34940,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -34960,7 +34959,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -34970,7 +34969,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       5.0,
                                                                       0.0,
@@ -35003,7 +35002,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -35015,7 +35014,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                               child: Container(
                                                                 width: 340.0,
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Row(
                                                                   mainAxisSize:
                                                                       MainAxisSize
@@ -35031,7 +35030,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                         color: FlutterFlowTheme.of(context)
                                                                             .primaryBackground,
                                                                         borderRadius:
-                                                                            BorderRadius.only(
+                                                                            const BorderRadius.only(
                                                                           bottomLeft:
                                                                               Radius.circular(8.0),
                                                                           bottomRight:
@@ -35096,7 +35095,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -35111,7 +35110,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -35126,7 +35125,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -35141,7 +35140,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -35167,19 +35166,19 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                 ),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 20.0)),
                                                         ),
                                                       ],
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 15.0, 15.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -35191,7 +35190,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     print('Button pressed ...');
                                                   },
                                                   text: 'Filtro',
-                                                  icon: Icon(
+                                                  icon: const Icon(
                                                     Icons.filter_alt,
                                                     color: Colors.white,
                                                     size: 15.0,
@@ -35200,11 +35199,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     width: 150.0,
                                                     height: 40.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(24.0, 0.0,
                                                                 24.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -35219,7 +35218,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           letterSpacing: 0.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -35235,7 +35234,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -35288,7 +35287,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -35305,11 +35304,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -35342,7 +35341,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 10.0, 8.0),
                                                   child: Row(
@@ -35366,7 +35365,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   6.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -35482,7 +35481,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       'IconButton pressed ...');
                                                                 },
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 10.0)),
                                                           ),
                                                         ),
@@ -35490,10 +35489,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       Container(
                                                         width: 300.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -35502,7 +35501,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           child: Autocomplete<
                                                               String>(
                                                             initialValue:
-                                                                TextEditingValue(),
+                                                                const TextEditingValue(),
                                                             optionsBuilder:
                                                                 (textEditingValue) {
                                                               if (textEditingValue
@@ -35551,7 +35550,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                           0.0,
                                                                     ),
                                                                 textHighlightStyle:
-                                                                    TextStyle(),
+                                                                    const TextStyle(),
                                                                 elevation: 4.0,
                                                                 optionBackgroundColor:
                                                                     FlutterFlowTheme.of(
@@ -35933,7 +35932,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     onSelectChanged) =>
                                                                 DataRow(
                                                           color:
-                                                              MaterialStateProperty
+                                                              WidgetStateProperty
                                                                   .all(
                                                             produtosListIndex %
                                                                         2 ==
@@ -36028,7 +36027,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                         30.0,
                                                                     decoration:
                                                                         BoxDecoration(
-                                                                      color: Color(
+                                                                      color: const Color(
                                                                           0xFFA2F2B0),
                                                                       borderRadius:
                                                                           BorderRadius.circular(
@@ -36036,7 +36035,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       border:
                                                                           Border
                                                                               .all(
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0xFF0AAB25),
                                                                         width:
                                                                             1.5,
@@ -36045,7 +36044,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     child:
                                                                         Align(
                                                                       alignment:
-                                                                          AlignmentDirectional(
+                                                                          const AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                       child:
@@ -36055,7 +36054,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                             .labelLarge
                                                                             .override(
                                                                               fontFamily: 'Manrope',
-                                                                              color: Color(0xFF067819),
+                                                                              color: const Color(0xFF067819),
                                                                               fontSize: 18.0,
                                                                               letterSpacing: 0.0,
                                                                             ),
@@ -36071,7 +36070,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                         30.0,
                                                                     decoration:
                                                                         BoxDecoration(
-                                                                      color: Color(
+                                                                      color: const Color(
                                                                           0xFFA2CFF9),
                                                                       borderRadius:
                                                                           BorderRadius.circular(
@@ -36088,7 +36087,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     child:
                                                                         Align(
                                                                       alignment:
-                                                                          AlignmentDirectional(
+                                                                          const AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                       child:
@@ -36209,7 +36208,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'relatoquestaoEstoq')
+                        if (widget.telas == 'relatoquestaoEstoq')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -36218,7 +36217,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -36244,10 +36243,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     -1.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 10.0, 0.0, 0.0),
                                                   child: Text(
@@ -36274,7 +36273,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 13.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -36285,7 +36284,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -36295,7 +36294,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -36328,7 +36327,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -36338,7 +36337,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                   .calssAcademicoValueController28 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.calssAcademicoValue28 =
@@ -36377,7 +36376,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -36396,7 +36395,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -36406,7 +36405,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -36439,7 +36438,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -36452,7 +36451,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                 width: double
                                                                     .infinity,
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Row(
                                                                   mainAxisSize:
                                                                       MainAxisSize
@@ -36468,7 +36467,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                         color: FlutterFlowTheme.of(context)
                                                                             .primaryBackground,
                                                                         borderRadius:
-                                                                            BorderRadius.only(
+                                                                            const BorderRadius.only(
                                                                           bottomLeft:
                                                                               Radius.circular(8.0),
                                                                           bottomRight:
@@ -36533,7 +36532,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -36548,7 +36547,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -36563,7 +36562,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -36578,7 +36577,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                               width: 2.0,
                                                                             ),
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(8.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -36604,19 +36603,19 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                 ),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 20.0)),
                                                         ),
                                                       ],
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 15.0, 15.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -36628,7 +36627,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     print('Button pressed ...');
                                                   },
                                                   text: 'Filtro',
-                                                  icon: Icon(
+                                                  icon: const Icon(
                                                     Icons.filter_alt,
                                                     color: Colors.white,
                                                     size: 15.0,
@@ -36637,11 +36636,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     width: 150.0,
                                                     height: 40.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(24.0, 0.0,
                                                                 24.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -36656,7 +36655,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           letterSpacing: 0.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -36672,7 +36671,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -36720,7 +36719,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 15.0, 0.0),
                                                   child: Row(
@@ -36729,7 +36728,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -36745,11 +36744,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       ),
                                                       Align(
                                                         alignment:
-                                                            AlignmentDirectional(
+                                                            const AlignmentDirectional(
                                                                 -1.0, 0.0),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       10.0,
@@ -36777,7 +36776,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       Expanded(
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       10.0,
@@ -36835,7 +36834,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                                 0.0,
                                                                           ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       width:
                                                                           5.0)),
                                                                 ),
@@ -36854,7 +36853,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 10.0, 8.0),
                                                   child: Row(
@@ -36878,7 +36877,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   6.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -36994,7 +36993,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                       'IconButton pressed ...');
                                                                 },
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 10.0)),
                                                           ),
                                                         ),
@@ -37002,10 +37001,10 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                       Container(
                                                         width: 300.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -37014,7 +37013,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           child: Autocomplete<
                                                               String>(
                                                             initialValue:
-                                                                TextEditingValue(),
+                                                                const TextEditingValue(),
                                                             optionsBuilder:
                                                                 (textEditingValue) {
                                                               if (textEditingValue
@@ -37063,7 +37062,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                                           0.0,
                                                                     ),
                                                                 textHighlightStyle:
-                                                                    TextStyle(),
+                                                                    const TextStyle(),
                                                                 elevation: 4.0,
                                                                 optionBackgroundColor:
                                                                     FlutterFlowTheme.of(
@@ -37446,7 +37445,7 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                           onSelectChanged:
                                                               onSelectChanged,
                                                           color:
-                                                              MaterialStateProperty
+                                                              WidgetStateProperty
                                                                   .all(
                                                             produtosListIndex %
                                                                         2 ==
@@ -37629,11 +37628,11 @@ class _A27relatoriosWidgetState extends State<A27relatoriosWidget> {
                                                         checkboxSelectedFillColor:
                                                             Colors.transparent,
                                                         checkboxCheckColor:
-                                                            Color(0x8A000000),
+                                                            const Color(0x8A000000),
                                                         checkboxUnselectedBorderColor:
-                                                            Color(0x8A000000),
+                                                            const Color(0x8A000000),
                                                         checkboxSelectedBorderColor:
-                                                            Color(0x8A000000),
+                                                            const Color(0x8A000000),
                                                       );
                                                     },
                                                   ),

@@ -3,10 +3,7 @@ import '/components/menu_superior/menu_superior_widget.dart';
 import '/components/menu_superior_celular/menu_superior_celular_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'a16trabalhode_casa_model.dart';
 export 'a16trabalhode_casa_model.dart';
 
@@ -70,7 +67,7 @@ class _A16trabalhodeCasaWidgetState extends State<A16trabalhodeCasaWidget> {
                         wrapWithModel(
                           model: _model.menuSuperiorModel,
                           updateCallback: () => setState(() {}),
-                          child: MenuSuperiorWidget(),
+                          child: const MenuSuperiorWidget(),
                         ),
                       if (responsiveVisibility(
                         context: context,
@@ -80,7 +77,7 @@ class _A16trabalhodeCasaWidgetState extends State<A16trabalhodeCasaWidget> {
                         wrapWithModel(
                           model: _model.menuSuperiorCelularModel,
                           updateCallback: () => setState(() {}),
-                          child: MenuSuperiorCelularWidget(),
+                          child: const MenuSuperiorCelularWidget(),
                         ),
                     ],
                   ),
@@ -91,7 +88,7 @@ class _A16trabalhodeCasaWidgetState extends State<A16trabalhodeCasaWidget> {
                         wrapWithModel(
                           model: _model.menuLateralModel,
                           updateCallback: () => setState(() {}),
-                          child: MenuLateralWidget(),
+                          child: const MenuLateralWidget(),
                         ),
                         Container(
                           width: MediaQuery.sizeOf(context).width * 0.75,
@@ -104,7 +101,7 @@ class _A16trabalhodeCasaWidgetState extends State<A16trabalhodeCasaWidget> {
                             ),
                           ),
                           child: Padding(
-                            padding: EdgeInsets.all(20.0),
+                            padding: const EdgeInsets.all(20.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               children: [

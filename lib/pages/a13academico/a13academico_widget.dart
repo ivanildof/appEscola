@@ -13,7 +13,6 @@ import '/flutter_flow/form_field_controller.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:text_search/text_search.dart';
 import 'a13academico_model.dart';
@@ -23,7 +22,7 @@ class A13academicoWidget extends StatefulWidget {
   const A13academicoWidget({
     super.key,
     String? tela,
-  }) : this.tela = tela ?? 'vazio';
+  }) : tela = tela ?? 'vazio';
 
   final String tela;
 
@@ -121,7 +120,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                         wrapWithModel(
                           model: _model.menuSuperiorModel,
                           updateCallback: () => setState(() {}),
-                          child: MenuSuperiorWidget(),
+                          child: const MenuSuperiorWidget(),
                         ),
                       if (responsiveVisibility(
                         context: context,
@@ -131,7 +130,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                         wrapWithModel(
                           model: _model.menuSuperiorCelularModel,
                           updateCallback: () => setState(() {}),
-                          child: MenuSuperiorCelularWidget(),
+                          child: const MenuSuperiorCelularWidget(),
                         ),
                     ],
                   ),
@@ -142,9 +141,9 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                         wrapWithModel(
                           model: _model.menuLateralModel,
                           updateCallback: () => setState(() {}),
-                          child: MenuLateralWidget(),
+                          child: const MenuLateralWidget(),
                         ),
-                        if (widget!.tela == 'AddClasseSecao')
+                        if (widget.tela == 'AddClasseSecao')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -156,7 +155,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   5.0, 15.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -165,7 +164,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                     child: Column(
                                       children: [
                                         Align(
-                                          alignment: Alignment(-1.0, 0),
+                                          alignment: const Alignment(-1.0, 0),
                                           child: TabBar(
                                             isScrollable: true,
                                             labelColor:
@@ -182,13 +181,13 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                       fontSize: 18.0,
                                                       letterSpacing: 0.0,
                                                     ),
-                                            unselectedLabelStyle: TextStyle(),
+                                            unselectedLabelStyle: const TextStyle(),
                                             indicatorColor:
                                                 FlutterFlowTheme.of(context)
                                                     .tertiary,
                                             indicatorWeight: 1.0,
-                                            padding: EdgeInsets.all(4.0),
-                                            tabs: [
+                                            padding: const EdgeInsets.all(4.0),
+                                            tabs: const [
                                               Row(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
@@ -270,10 +269,10 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                       snapshot.data!;
 
                                                   return Container(
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsets.all(20.0),
+                                                          const EdgeInsets.all(20.0),
                                                       child:
                                                           SingleChildScrollView(
                                                         child: Column(
@@ -318,7 +317,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                               .max,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               12.0,
                                                                               10.0,
                                                                               0.0,
@@ -333,12 +332,12 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                           ),
                                                                         ),
                                                                         Align(
-                                                                          alignment: AlignmentDirectional(
+                                                                          alignment: const AlignmentDirectional(
                                                                               -1.0,
                                                                               0.0),
                                                                           child:
                                                                               Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 8.0,
                                                                                 10.0,
                                                                                 0.0,
@@ -365,7 +364,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                           .tertiary,
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           10.0,
                                                                           10.0,
@@ -384,13 +383,13 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                             child:
                                                                                 Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Column(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 crossAxisAlignment: CrossAxisAlignment.start,
                                                                                 children: [
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
@@ -407,14 +406,14 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                                           color: FlutterFlowTheme.of(context).error,
                                                                                           size: 16.0,
                                                                                         ),
-                                                                                      ].divide(SizedBox(width: 6.0)),
+                                                                                      ].divide(const SizedBox(width: 6.0)),
                                                                                     ),
                                                                                   ),
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(9.0, 0.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(9.0, 0.0, 0.0, 0.0),
                                                                                     child: FlutterFlowDropDown<String>(
                                                                                       controller: _model.calssAcademicoValueController1 ??= FormFieldController<String>(null),
-                                                                                      options: [
+                                                                                      options: const [
                                                                                         'option 1'
                                                                                       ],
                                                                                       onChanged: (val) => setState(() => _model.calssAcademicoValue1 = val),
@@ -435,7 +434,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                                       borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                       borderWidth: 2.0,
                                                                                       borderRadius: 8.0,
-                                                                                      margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                      margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                       hidesUnderline: true,
                                                                                       isOverButton: false,
                                                                                       isSearchable: false,
@@ -446,11 +445,11 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           10.0,
                                                                           10.0,
@@ -469,13 +468,13 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                             child:
                                                                                 Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Column(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 crossAxisAlignment: CrossAxisAlignment.start,
                                                                                 children: [
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
@@ -492,11 +491,11 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                                           color: FlutterFlowTheme.of(context).error,
                                                                                           size: 16.0,
                                                                                         ),
-                                                                                      ].divide(SizedBox(width: 6.0)),
+                                                                                      ].divide(const SizedBox(width: 6.0)),
                                                                                     ),
                                                                                   ),
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
                                                                                     child: TextFormField(
                                                                                       controller: _model.nomeTextController1,
                                                                                       focusNode: _model.nomeFocusNode1,
@@ -560,13 +559,13 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                             child:
                                                                                 Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Column(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 crossAxisAlignment: CrossAxisAlignment.start,
                                                                                 children: [
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
@@ -578,11 +577,11 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                                                 letterSpacing: 0.0,
                                                                                               ),
                                                                                         ),
-                                                                                      ].divide(SizedBox(width: 6.0)),
+                                                                                      ].divide(const SizedBox(width: 6.0)),
                                                                                     ),
                                                                                   ),
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
                                                                                     child: TextFormField(
                                                                                       controller: _model.nomeTextController2,
                                                                                       focusNode: _model.nomeFocusNode2,
@@ -646,13 +645,13 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                             child:
                                                                                 Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Column(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 crossAxisAlignment: CrossAxisAlignment.start,
                                                                                 children: [
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
@@ -669,14 +668,14 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                                           color: FlutterFlowTheme.of(context).error,
                                                                                           size: 16.0,
                                                                                         ),
-                                                                                      ].divide(SizedBox(width: 6.0)),
+                                                                                      ].divide(const SizedBox(width: 6.0)),
                                                                                     ),
                                                                                   ),
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                                                                                     child: FlutterFlowDropDown<String>(
                                                                                       controller: _model.calssAcademicoValueController2 ??= FormFieldController<String>(null),
-                                                                                      options: [
+                                                                                      options: const [
                                                                                         'option 1'
                                                                                       ],
                                                                                       onChanged: (val) => setState(() => _model.calssAcademicoValue2 = val),
@@ -697,7 +696,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                                       borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                       borderWidth: 2.0,
                                                                                       borderRadius: 8.0,
-                                                                                      margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                      margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                       hidesUnderline: true,
                                                                                       isOverButton: false,
                                                                                       isSearchable: false,
@@ -708,11 +707,11 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           15.0,
                                                                           15.0,
@@ -731,7 +730,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                                 print('ButtonAtualizar pressed ...');
                                                                               },
                                                                               text: 'Atualizar',
-                                                                              icon: Icon(
+                                                                              icon: const Icon(
                                                                                 Icons.add_circle_sharp,
                                                                                 color: Colors.white,
                                                                                 size: 20.0,
@@ -739,8 +738,8 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                               options: FFButtonOptions(
                                                                                 width: 200.0,
                                                                                 height: 40.0,
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                 color: FlutterFlowTheme.of(context).tertiary,
                                                                                 textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                       fontFamily: 'Manrope',
@@ -749,7 +748,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                                 elevation: 3.0,
-                                                                                borderSide: BorderSide(
+                                                                                borderSide: const BorderSide(
                                                                                   color: Colors.transparent,
                                                                                   width: 1.0,
                                                                                 ),
@@ -757,7 +756,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                               ),
                                                                             ),
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 15.0,
                                                                                 0.0,
                                                                                 0.0,
@@ -768,7 +767,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                                 print('ButtonADD pressed ...');
                                                                               },
                                                                               text: 'Adicionar',
-                                                                              icon: Icon(
+                                                                              icon: const Icon(
                                                                                 Icons.add,
                                                                                 color: Colors.white,
                                                                                 size: 20.0,
@@ -776,8 +775,8 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                               options: FFButtonOptions(
                                                                                 width: 200.0,
                                                                                 height: 40.0,
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                 color: FlutterFlowTheme.of(context).primary,
                                                                                 textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                       fontFamily: 'Manrope',
@@ -786,7 +785,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                                       letterSpacing: 0.0,
                                                                                     ),
                                                                                 elevation: 3.0,
-                                                                                borderSide: BorderSide(
+                                                                                borderSide: const BorderSide(
                                                                                   color: Colors.transparent,
                                                                                   width: 1.0,
                                                                                 ),
@@ -829,7 +828,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                             .max,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             12.0,
                                                                             10.0,
                                                                             0.0,
@@ -845,12 +844,12 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                         ),
                                                                       ),
                                                                       Align(
-                                                                        alignment: AlignmentDirectional(
+                                                                        alignment: const AlignmentDirectional(
                                                                             -1.0,
                                                                             0.0),
                                                                         child:
                                                                             Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               8.0,
                                                                               10.0,
                                                                               0.0,
@@ -990,7 +989,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                           dataRowBuilder: (produtosListItem, produtosListIndex, selected, onSelectChanged) =>
                                                                               DataRow(
                                                                             color:
-                                                                                MaterialStateProperty.all(
+                                                                                WidgetStateProperty.all(
                                                                               produtosListIndex % 2 == 0 ? FlutterFlowTheme.of(context).secondaryBackground : FlutterFlowTheme.of(context).primaryBackground,
                                                                             ),
                                                                             cells:
@@ -1045,7 +1044,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                                       shape: BoxShape.circle,
                                                                                     ),
                                                                                     child: Align(
-                                                                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                      alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                       child: Icon(
                                                                                         Icons.edit_square,
                                                                                         color: FlutterFlowTheme.of(context).primaryText,
@@ -1056,12 +1055,12 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                                   Container(
                                                                                     width: 35.0,
                                                                                     height: 35.0,
-                                                                                    decoration: BoxDecoration(
+                                                                                    decoration: const BoxDecoration(
                                                                                       color: Color(0xFFE30909),
                                                                                       shape: BoxShape.circle,
                                                                                     ),
                                                                                     child: Align(
-                                                                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                      alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                       child: Icon(
                                                                                         Icons.delete_rounded,
                                                                                         color: FlutterFlowTheme.of(context).info,
@@ -1069,7 +1068,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 10.0)),
+                                                                                ].divide(const SizedBox(width: 10.0)),
                                                                               ),
                                                                             ].map((c) => DataCell(c)).toList(),
                                                                           ),
@@ -1123,7 +1122,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                 ],
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 15.0)),
                                                         ),
                                                       ),
@@ -1161,10 +1160,10 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                       snapshot.data!;
 
                                                   return Container(
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsets.all(20.0),
+                                                          const EdgeInsets.all(20.0),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -1207,7 +1206,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                             .max,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             12.0,
                                                                             10.0,
                                                                             0.0,
@@ -1223,12 +1222,12 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                         ),
                                                                       ),
                                                                       Align(
-                                                                        alignment: AlignmentDirectional(
+                                                                        alignment: const AlignmentDirectional(
                                                                             -1.0,
                                                                             0.0),
                                                                         child:
                                                                             Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               8.0,
                                                                               10.0,
                                                                               0.0,
@@ -1255,7 +1254,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                         .tertiary,
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             10.0,
@@ -1278,14 +1277,14 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -1302,14 +1301,14 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                                         color: FlutterFlowTheme.of(context).error,
                                                                                         size: 16.0,
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(9.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(9.0, 0.0, 0.0, 0.0),
                                                                                   child: FlutterFlowDropDown<String>(
                                                                                     controller: _model.calssAcademicoValueController3 ??= FormFieldController<String>(null),
-                                                                                    options: [
+                                                                                    options: const [
                                                                                       'option 1'
                                                                                     ],
                                                                                     onChanged: (val) => setState(() => _model.calssAcademicoValue3 = val),
@@ -1330,7 +1329,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                                     borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                     borderWidth: 2.0,
                                                                                     borderRadius: 8.0,
-                                                                                    margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                    margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                     hidesUnderline: true,
                                                                                     isOverButton: false,
                                                                                     isSearchable: false,
@@ -1341,12 +1340,12 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             10.0,
@@ -1369,14 +1368,14 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -1393,11 +1392,11 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                                         color: FlutterFlowTheme.of(context).error,
                                                                                         size: 16.0,
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
                                                                                   child: TextFormField(
                                                                                     controller: _model.nomeTextController3,
                                                                                     focusNode: _model.nomeFocusNode3,
@@ -1463,14 +1462,14 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -1482,11 +1481,11 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
                                                                                   child: TextFormField(
                                                                                     controller: _model.nomeTextController4,
                                                                                     focusNode: _model.nomeFocusNode4,
@@ -1544,12 +1543,12 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             15.0,
@@ -1573,7 +1572,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                             text:
                                                                                 'Atualizar',
                                                                             icon:
-                                                                                Icon(
+                                                                                const Icon(
                                                                               Icons.add_circle_sharp,
                                                                               color: Colors.white,
                                                                               size: 20.0,
@@ -1582,8 +1581,8 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                                 FFButtonOptions(
                                                                               width: 200.0,
                                                                               height: 40.0,
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                               color: FlutterFlowTheme.of(context).tertiary,
                                                                               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                     fontFamily: 'Manrope',
@@ -1592,7 +1591,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                                     letterSpacing: 0.0,
                                                                                   ),
                                                                               elevation: 3.0,
-                                                                              borderSide: BorderSide(
+                                                                              borderSide: const BorderSide(
                                                                                 color: Colors.transparent,
                                                                                 width: 1.0,
                                                                               ),
@@ -1600,7 +1599,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                             ),
                                                                           ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               15.0,
                                                                               0.0,
                                                                               0.0,
@@ -1614,7 +1613,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                             text:
                                                                                 'Adicionar',
                                                                             icon:
-                                                                                Icon(
+                                                                                const Icon(
                                                                               Icons.add,
                                                                               color: Colors.white,
                                                                               size: 20.0,
@@ -1623,8 +1622,8 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                                 FFButtonOptions(
                                                                               width: 200.0,
                                                                               height: 40.0,
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                               color: FlutterFlowTheme.of(context).primary,
                                                                               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                     fontFamily: 'Manrope',
@@ -1633,7 +1632,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                                     letterSpacing: 0.0,
                                                                                   ),
                                                                               elevation: 3.0,
-                                                                              borderSide: BorderSide(
+                                                                              borderSide: const BorderSide(
                                                                                 color: Colors.transparent,
                                                                                 width: 1.0,
                                                                               ),
@@ -1674,7 +1673,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                             .max,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             12.0,
                                                                             10.0,
                                                                             0.0,
@@ -1690,12 +1689,12 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                         ),
                                                                       ),
                                                                       Align(
-                                                                        alignment: AlignmentDirectional(
+                                                                        alignment: const AlignmentDirectional(
                                                                             -1.0,
                                                                             0.0),
                                                                         child:
                                                                             Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               8.0,
                                                                               10.0,
                                                                               0.0,
@@ -1835,7 +1834,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                           dataRowBuilder: (produtosListItem, produtosListIndex, selected, onSelectChanged) =>
                                                                               DataRow(
                                                                             color:
-                                                                                MaterialStateProperty.all(
+                                                                                WidgetStateProperty.all(
                                                                               produtosListIndex % 2 == 0 ? FlutterFlowTheme.of(context).secondaryBackground : FlutterFlowTheme.of(context).primaryBackground,
                                                                             ),
                                                                             cells:
@@ -1910,15 +1909,15 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                                             context: context,
                                                                                             builder: (alertDialogContext) {
                                                                                               return AlertDialog(
-                                                                                                title: Text('Deseja deletar essa filial?'),
+                                                                                                title: const Text('Deseja deletar essa filial?'),
                                                                                                 actions: [
                                                                                                   TextButton(
                                                                                                     onPressed: () => Navigator.pop(alertDialogContext, false),
-                                                                                                    child: Text('Não, cancelar'),
+                                                                                                    child: const Text('Não, cancelar'),
                                                                                                   ),
                                                                                                   TextButton(
                                                                                                     onPressed: () => Navigator.pop(alertDialogContext, true),
-                                                                                                    child: Text('Sim, deletar Filial'),
+                                                                                                    child: const Text('Sim, deletar Filial'),
                                                                                                   ),
                                                                                                 ],
                                                                                               );
@@ -1931,7 +1930,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                                         context.goNamed(
                                                                                           'A01escola',
                                                                                           extra: <String, dynamic>{
-                                                                                            kTransitionInfoKey: TransitionInfo(
+                                                                                            kTransitionInfoKey: const TransitionInfo(
                                                                                               hasTransition: true,
                                                                                               transitionType: PageTransitionType.fade,
                                                                                               duration: Duration(milliseconds: 0),
@@ -1941,7 +1940,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                                       }
                                                                                     },
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 10.0)),
+                                                                                ].divide(const SizedBox(width: 10.0)),
                                                                               ),
                                                                             ].map((c) => DataCell(c)).toList(),
                                                                           ),
@@ -1996,7 +1995,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 15.0)),
                                                       ),
                                                     ),
@@ -2013,7 +2012,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                               ),
                             ),
                           ),
-                        if (widget!.tela == 'corpoProfeClasse')
+                        if (widget.tela == 'corpoProfeClasse')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -2022,7 +2021,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -2052,7 +2051,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 10.0, 0.0, 0.0),
                                                   child: FaIcon(
@@ -2065,11 +2064,11 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                 ),
                                                 Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           -1.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(12.0,
                                                                 10.0, 0.0, 0.0),
                                                     child: Text(
@@ -2097,7 +2096,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                       .tertiary,
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       10.0, 10.0, 10.0, 0.0),
                                               child: Row(
@@ -2110,7 +2109,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                     child: Container(
                                                       width: 550.0,
                                                       decoration:
-                                                          BoxDecoration(),
+                                                          const BoxDecoration(),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -2120,7 +2119,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -2153,13 +2152,13 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                       .error,
                                                                   size: 16.0,
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 6.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -2173,7 +2172,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                   FormFieldController<
                                                                           String>(
                                                                       null),
-                                                              options: [
+                                                              options: const [
                                                                 'option 1'
                                                               ],
                                                               onChanged: (val) =>
@@ -2213,7 +2212,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                               borderWidth: 2.0,
                                                               borderRadius: 8.0,
                                                               margin:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           4.0,
@@ -2238,7 +2237,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                     child: Container(
                                                       width: 550.0,
                                                       decoration:
-                                                          BoxDecoration(),
+                                                          const BoxDecoration(),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -2248,7 +2247,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -2281,7 +2280,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                       .error,
                                                                   size: 16.0,
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 6.0)),
                                                             ),
                                                           ),
@@ -2292,7 +2291,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                 FormFieldController<
                                                                         String>(
                                                                     null),
-                                                            options: [
+                                                            options: const [
                                                               'option 1'
                                                             ],
                                                             onChanged: (val) =>
@@ -2332,7 +2331,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                             borderWidth: 2.0,
                                                             borderRadius: 8.0,
                                                             margin:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         4.0,
@@ -2354,7 +2353,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                     child: Container(
                                                       width: 550.0,
                                                       decoration:
-                                                          BoxDecoration(),
+                                                          const BoxDecoration(),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -2364,7 +2363,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -2397,7 +2396,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                       .error,
                                                                   size: 16.0,
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 6.0)),
                                                             ),
                                                           ),
@@ -2408,7 +2407,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                 FormFieldController<
                                                                         String>(
                                                                     null),
-                                                            options: [
+                                                            options: const [
                                                               'option 1'
                                                             ],
                                                             onChanged: (val) =>
@@ -2448,7 +2447,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                             borderWidth: 2.0,
                                                             borderRadius: 8.0,
                                                             margin:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         4.0,
@@ -2465,11 +2464,11 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                       ),
                                                     ),
                                                   ),
-                                                ].divide(SizedBox(width: 20.0)),
+                                                ].divide(const SizedBox(width: 20.0)),
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       10.0, 10.0, 10.0, 0.0),
                                               child: Row(
@@ -2482,7 +2481,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                     child: Container(
                                                       width: 550.0,
                                                       decoration:
-                                                          BoxDecoration(),
+                                                          const BoxDecoration(),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -2492,7 +2491,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -2525,13 +2524,13 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                       .error,
                                                                   size: 16.0,
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 6.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -2545,7 +2544,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                   FormFieldController<
                                                                           String>(
                                                                       null),
-                                                              options: [
+                                                              options: const [
                                                                 'option 1'
                                                               ],
                                                               onChanged: (val) =>
@@ -2585,7 +2584,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                               borderWidth: 2.0,
                                                               borderRadius: 8.0,
                                                               margin:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           4.0,
@@ -2605,11 +2604,11 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                       ),
                                                     ),
                                                   ),
-                                                ].divide(SizedBox(width: 20.0)),
+                                                ].divide(const SizedBox(width: 20.0)),
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 15.0, 15.0, 10.0),
                                               child: Row(
@@ -2624,7 +2623,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                             'ButtonAtualizar pressed ...');
                                                       },
                                                       text: 'Atualizar',
-                                                      icon: Icon(
+                                                      icon: const Icon(
                                                         Icons.add_circle_sharp,
                                                         color: Colors.white,
                                                         size: 20.0,
@@ -2633,14 +2632,14 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                         width: 200.0,
                                                         height: 40.0,
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     24.0,
                                                                     0.0,
                                                                     24.0,
                                                                     0.0),
                                                         iconPadding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -2665,7 +2664,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                       0.0,
                                                                 ),
                                                         elevation: 3.0,
-                                                        borderSide: BorderSide(
+                                                        borderSide: const BorderSide(
                                                           color: Colors
                                                               .transparent,
                                                           width: 1.0,
@@ -2677,7 +2676,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                     ),
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(15.0, 0.0,
                                                                 0.0, 0.0),
                                                     child: FFButtonWidget(
@@ -2686,7 +2685,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                             'ButtonADD pressed ...');
                                                       },
                                                       text: 'Adicionar',
-                                                      icon: Icon(
+                                                      icon: const Icon(
                                                         Icons.add,
                                                         color: Colors.white,
                                                         size: 20.0,
@@ -2695,14 +2694,14 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                         width: 200.0,
                                                         height: 40.0,
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     24.0,
                                                                     0.0,
                                                                     24.0,
                                                                     0.0),
                                                         iconPadding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -2727,7 +2726,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                       0.0,
                                                                 ),
                                                         elevation: 3.0,
-                                                        borderSide: BorderSide(
+                                                        borderSide: const BorderSide(
                                                           color: Colors
                                                               .transparent,
                                                           width: 1.0,
@@ -2746,7 +2745,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -2799,7 +2798,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -2816,11 +2815,11 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -3020,7 +3019,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                     onSelectChanged) =>
                                                                 DataRow(
                                                           color:
-                                                              MaterialStateProperty
+                                                              WidgetStateProperty
                                                                   .all(
                                                             produtosListIndex %
                                                                         2 ==
@@ -3124,7 +3123,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                   ),
                                                                   child: Align(
                                                                     alignment:
-                                                                        AlignmentDirectional(
+                                                                        const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                     child: Icon(
@@ -3142,7 +3141,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                   width: 35.0,
                                                                   height: 35.0,
                                                                   decoration:
-                                                                      BoxDecoration(
+                                                                      const BoxDecoration(
                                                                     color: Color(
                                                                         0xFFE30909),
                                                                     shape: BoxShape
@@ -3150,7 +3149,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                   ),
                                                                   child: Align(
                                                                     alignment:
-                                                                        AlignmentDirectional(
+                                                                        const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                     child: Icon(
@@ -3164,7 +3163,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 10.0)),
                                                             ),
                                                           ]
@@ -3230,7 +3229,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                               ),
                             ),
                           ),
-                        if (widget!.tela == 'AddMateria')
+                        if (widget.tela == 'AddMateria')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -3242,7 +3241,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   5.0, 20.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -3251,7 +3250,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                     child: Column(
                                       children: [
                                         Align(
-                                          alignment: Alignment(-1.0, 0),
+                                          alignment: const Alignment(-1.0, 0),
                                           child: TabBar(
                                             isScrollable: true,
                                             labelColor:
@@ -3268,13 +3267,13 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                       fontSize: 18.0,
                                                       letterSpacing: 0.0,
                                                     ),
-                                            unselectedLabelStyle: TextStyle(),
+                                            unselectedLabelStyle: const TextStyle(),
                                             indicatorColor:
                                                 FlutterFlowTheme.of(context)
                                                     .tertiary,
                                             indicatorWeight: 1.0,
-                                            padding: EdgeInsets.all(4.0),
-                                            tabs: [
+                                            padding: const EdgeInsets.all(4.0),
+                                            tabs: const [
                                               Row(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
@@ -3356,10 +3355,10 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                       snapshot.data!;
 
                                                   return Container(
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsets.all(20.0),
+                                                          const EdgeInsets.all(20.0),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -3386,7 +3385,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                 ),
                                                                 child: Padding(
                                                                   padding:
-                                                                      EdgeInsets
+                                                                      const EdgeInsets
                                                                           .all(
                                                                               6.0),
                                                                   child: Row(
@@ -3514,7 +3513,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                               'IconButton pressed ...');
                                                                         },
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             10.0)),
                                                                   ),
@@ -3523,9 +3522,9 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                               Container(
                                                                 width: 300.0,
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -3535,7 +3534,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                       Autocomplete<
                                                                           String>(
                                                                     initialValue:
-                                                                        TextEditingValue(),
+                                                                        const TextEditingValue(),
                                                                     optionsBuilder:
                                                                         (textEditingValue) {
                                                                       if (textEditingValue
@@ -3577,7 +3576,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                         textHighlightStyle:
-                                                                            TextStyle(),
+                                                                            const TextStyle(),
                                                                         elevation:
                                                                             4.0,
                                                                         optionBackgroundColor:
@@ -3623,31 +3622,29 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                             (_) =>
                                                                                 EasyDebounce.debounce(
                                                                           '_model.textController5',
-                                                                          Duration(
+                                                                          const Duration(
                                                                               milliseconds: 2000),
                                                                           () async {
-                                                                            if (_model.textController5.text != null &&
-                                                                                _model.textController5.text != '') {
+                                                                            if (_model.textController5.text != '') {
                                                                               safeSetState(() {
                                                                                 _model.simpleSearchResults1 = TextSearch(
                                                                                   containerInventarioProdutosRecordList
                                                                                       .map(
                                                                                         (record) => TextSearchItem.fromTerms(record, [
-                                                                                          record.produtoCategoria!,
-                                                                                          record.nomeProduto!,
-                                                                                          record.produtoCodigo!,
-                                                                                          record.filial!
+                                                                                          record.produtoCategoria,
+                                                                                          record.nomeProduto,
+                                                                                          record.produtoCodigo,
+                                                                                          record.filial
                                                                                         ]),
                                                                                       )
                                                                                       .toList(),
                                                                                 ).search(_model.textController5.text).map((r) => r.object).take(20).toList();
-                                                                                ;
                                                                               });
                                                                             } else {
                                                                               context.goNamed(
                                                                                 'A01escola',
                                                                                 extra: <String, dynamic>{
-                                                                                  kTransitionInfoKey: TransitionInfo(
+                                                                                  kTransitionInfoKey: const TransitionInfo(
                                                                                     hasTransition: true,
                                                                                     transitionType: PageTransitionType.fade,
                                                                                     duration: Duration(milliseconds: 0),
@@ -3741,7 +3738,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                           Expanded(
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           10.0,
@@ -3901,7 +3898,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                               selected,
                                                                               onSelectChanged) =>
                                                                           DataRow(
-                                                                        color: MaterialStateProperty
+                                                                        color: WidgetStateProperty
                                                                             .all(
                                                                           produtosListIndex % 2 == 0
                                                                               ? FlutterFlowTheme.of(context).secondaryBackground
@@ -3961,7 +3958,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                   child: Icon(
                                                                                     Icons.edit_square,
                                                                                     color: FlutterFlowTheme.of(context).primaryText,
@@ -3972,12 +3969,12 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                               Container(
                                                                                 width: 35.0,
                                                                                 height: 35.0,
-                                                                                decoration: BoxDecoration(
+                                                                                decoration: const BoxDecoration(
                                                                                   color: Color(0xFFE30909),
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                   child: Icon(
                                                                                     Icons.delete_rounded,
                                                                                     color: FlutterFlowTheme.of(context).info,
@@ -3985,7 +3982,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                                   ),
                                                                                 ),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 10.0)),
+                                                                            ].divide(const SizedBox(width: 10.0)),
                                                                           ),
                                                                         ]
                                                                             .map((c) =>
@@ -4059,10 +4056,10 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                 autovalidateMode:
                                                     AutovalidateMode.disabled,
                                                 child: Container(
-                                                  decoration: BoxDecoration(),
+                                                  decoration: const BoxDecoration(),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 20.0,
                                                                 0.0, 50.0),
                                                     child:
@@ -4076,7 +4073,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -4110,7 +4107,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -4135,14 +4132,14 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .filialValueController1 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -4184,7 +4181,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -4200,7 +4197,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -4212,7 +4209,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -4246,7 +4243,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -4271,10 +4268,10 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -4362,7 +4359,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -4374,7 +4371,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -4408,7 +4405,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -4433,10 +4430,10 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -4526,7 +4523,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -4538,7 +4535,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -4562,7 +4559,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                             .end,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             16.0,
@@ -4589,10 +4586,10 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
@@ -4684,7 +4681,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -4696,7 +4693,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -4730,7 +4727,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -4755,7 +4752,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
@@ -4765,7 +4762,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                         _model.filialValue2 ??=
                                                                             'Teoria',
                                                                       ),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Teoria',
                                                                         'Prático',
                                                                         'Opcional',
@@ -4810,7 +4807,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -4826,13 +4823,13 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
@@ -4850,7 +4847,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                         .visivel ==
                                                                     1)
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             25.0,
@@ -4873,12 +4870,12 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                             builder:
                                                                                 (alertDialogContext) {
                                                                               return AlertDialog(
-                                                                                title: Text('Campo Obrigatório'),
-                                                                                content: Text('É necessário adicionar uma filial!'),
+                                                                                title: const Text('Campo Obrigatório'),
+                                                                                content: const Text('É necessário adicionar uma filial!'),
                                                                                 actions: [
                                                                                   TextButton(
                                                                                     onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                    child: Text('Ok'),
+                                                                                    child: const Text('Ok'),
                                                                                   ),
                                                                                 ],
                                                                               );
@@ -4890,7 +4887,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                       text:
                                                                           'Atualizar',
                                                                       icon:
-                                                                          Icon(
+                                                                          const Icon(
                                                                         Icons
                                                                             .add_circle,
                                                                         size:
@@ -4902,12 +4899,12 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                             250.0,
                                                                         height:
                                                                             40.0,
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             24.0,
                                                                             0.0,
                                                                             24.0,
                                                                             0.0),
-                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -4926,7 +4923,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                         elevation:
                                                                             3.0,
                                                                         borderSide:
-                                                                            BorderSide(
+                                                                            const BorderSide(
                                                                           color:
                                                                               Colors.transparent,
                                                                           width:
@@ -4938,7 +4935,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                     ),
                                                                   ),
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           15.0,
                                                                           25.0,
@@ -4965,12 +4962,12 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                           builder:
                                                                               (alertDialogContext) {
                                                                             return AlertDialog(
-                                                                              title: Text('Campo Obrigatório'),
-                                                                              content: Text('É necessário adicionar uma filial!'),
+                                                                              title: const Text('Campo Obrigatório'),
+                                                                              content: const Text('É necessário adicionar uma filial!'),
                                                                               actions: [
                                                                                 TextButton(
                                                                                   onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                  child: Text('Ok'),
+                                                                                  child: const Text('Ok'),
                                                                                 ),
                                                                               ],
                                                                             );
@@ -4981,7 +4978,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                     },
                                                                     text:
                                                                         'Adicionar',
-                                                                    icon: Icon(
+                                                                    icon: const Icon(
                                                                       Icons.add,
                                                                       size:
                                                                           20.0,
@@ -4992,12 +4989,12 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                           250.0,
                                                                       height:
                                                                           40.0,
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           24.0,
                                                                           0.0,
                                                                           24.0,
                                                                           0.0),
-                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
@@ -5023,7 +5020,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                       elevation:
                                                                           3.0,
                                                                       borderSide:
-                                                                          BorderSide(
+                                                                          const BorderSide(
                                                                         color: Colors
                                                                             .transparent,
                                                                         width:
@@ -5038,7 +5035,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                               ],
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 10.0)),
                                                       ),
                                                     ),
@@ -5055,7 +5052,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                               ),
                             ),
                           ),
-                        if (widget!.tela == 'AddAtribuicao')
+                        if (widget.tela == 'AddAtribuicao')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -5067,7 +5064,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   5.0, 20.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -5076,7 +5073,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                     child: Column(
                                       children: [
                                         Align(
-                                          alignment: Alignment(-1.0, 0),
+                                          alignment: const Alignment(-1.0, 0),
                                           child: TabBar(
                                             isScrollable: true,
                                             labelColor:
@@ -5093,13 +5090,13 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                       fontSize: 18.0,
                                                       letterSpacing: 0.0,
                                                     ),
-                                            unselectedLabelStyle: TextStyle(),
+                                            unselectedLabelStyle: const TextStyle(),
                                             indicatorColor:
                                                 FlutterFlowTheme.of(context)
                                                     .tertiary,
                                             indicatorWeight: 1.0,
-                                            padding: EdgeInsets.all(4.0),
-                                            tabs: [
+                                            padding: const EdgeInsets.all(4.0),
+                                            tabs: const [
                                               Row(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
@@ -5181,10 +5178,10 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                       snapshot.data!;
 
                                                   return Container(
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsets.all(20.0),
+                                                          const EdgeInsets.all(20.0),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -5211,7 +5208,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                 ),
                                                                 child: Padding(
                                                                   padding:
-                                                                      EdgeInsets
+                                                                      const EdgeInsets
                                                                           .all(
                                                                               6.0),
                                                                   child: Row(
@@ -5339,7 +5336,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                               'IconButton pressed ...');
                                                                         },
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             10.0)),
                                                                   ),
@@ -5348,9 +5345,9 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                               Container(
                                                                 width: 300.0,
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -5360,7 +5357,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                       Autocomplete<
                                                                           String>(
                                                                     initialValue:
-                                                                        TextEditingValue(),
+                                                                        const TextEditingValue(),
                                                                     optionsBuilder:
                                                                         (textEditingValue) {
                                                                       if (textEditingValue
@@ -5402,7 +5399,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                         textHighlightStyle:
-                                                                            TextStyle(),
+                                                                            const TextStyle(),
                                                                         elevation:
                                                                             4.0,
                                                                         optionBackgroundColor:
@@ -5448,31 +5445,29 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                             (_) =>
                                                                                 EasyDebounce.debounce(
                                                                           '_model.textController9',
-                                                                          Duration(
+                                                                          const Duration(
                                                                               milliseconds: 2000),
                                                                           () async {
-                                                                            if (_model.textController9.text != null &&
-                                                                                _model.textController9.text != '') {
+                                                                            if (_model.textController9.text != '') {
                                                                               safeSetState(() {
                                                                                 _model.simpleSearchResults2 = TextSearch(
                                                                                   containerInventarioProdutosRecordList
                                                                                       .map(
                                                                                         (record) => TextSearchItem.fromTerms(record, [
-                                                                                          record.produtoCategoria!,
-                                                                                          record.nomeProduto!,
-                                                                                          record.produtoCodigo!,
-                                                                                          record.filial!
+                                                                                          record.produtoCategoria,
+                                                                                          record.nomeProduto,
+                                                                                          record.produtoCodigo,
+                                                                                          record.filial
                                                                                         ]),
                                                                                       )
                                                                                       .toList(),
                                                                                 ).search(_model.textController9.text).map((r) => r.object).take(20).toList();
-                                                                                ;
                                                                               });
                                                                             } else {
                                                                               context.goNamed(
                                                                                 'A01escola',
                                                                                 extra: <String, dynamic>{
-                                                                                  kTransitionInfoKey: TransitionInfo(
+                                                                                  kTransitionInfoKey: const TransitionInfo(
                                                                                     hasTransition: true,
                                                                                     transitionType: PageTransitionType.fade,
                                                                                     duration: Duration(milliseconds: 0),
@@ -5566,7 +5561,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                           Expanded(
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           10.0,
@@ -5726,7 +5721,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                               selected,
                                                                               onSelectChanged) =>
                                                                           DataRow(
-                                                                        color: MaterialStateProperty
+                                                                        color: WidgetStateProperty
                                                                             .all(
                                                                           produtosListIndex % 2 == 0
                                                                               ? FlutterFlowTheme.of(context).secondaryBackground
@@ -5786,7 +5781,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                   child: Icon(
                                                                                     Icons.edit_square,
                                                                                     color: FlutterFlowTheme.of(context).primaryText,
@@ -5797,12 +5792,12 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                               Container(
                                                                                 width: 35.0,
                                                                                 height: 35.0,
-                                                                                decoration: BoxDecoration(
+                                                                                decoration: const BoxDecoration(
                                                                                   color: Color(0xFFE30909),
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                   child: Icon(
                                                                                     Icons.delete_rounded,
                                                                                     color: FlutterFlowTheme.of(context).info,
@@ -5810,7 +5805,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                                   ),
                                                                                 ),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 10.0)),
+                                                                            ].divide(const SizedBox(width: 10.0)),
                                                                           ),
                                                                         ]
                                                                             .map((c) =>
@@ -5884,10 +5879,10 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                 autovalidateMode:
                                                     AutovalidateMode.disabled,
                                                 child: Container(
-                                                  decoration: BoxDecoration(),
+                                                  decoration: const BoxDecoration(),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 20.0,
                                                                 0.0, 50.0),
                                                     child:
@@ -5901,7 +5896,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -5935,7 +5930,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -5960,14 +5955,14 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .filialValueController3 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -6009,7 +6004,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -6025,7 +6020,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -6037,7 +6032,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -6071,7 +6066,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -6096,14 +6091,14 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .filialValueController4 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -6145,7 +6140,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -6161,7 +6156,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -6173,7 +6168,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -6207,7 +6202,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -6232,14 +6227,14 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .filialValueController5 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -6281,7 +6276,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -6297,7 +6292,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -6309,7 +6304,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -6343,7 +6338,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -6368,14 +6363,14 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .filialValueController6 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -6417,7 +6412,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -6433,13 +6428,13 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
@@ -6457,7 +6452,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                         .visivel ==
                                                                     1)
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             25.0,
@@ -6480,12 +6475,12 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                             builder:
                                                                                 (alertDialogContext) {
                                                                               return AlertDialog(
-                                                                                title: Text('Campo Obrigatório'),
-                                                                                content: Text('É necessário adicionar uma filial!'),
+                                                                                title: const Text('Campo Obrigatório'),
+                                                                                content: const Text('É necessário adicionar uma filial!'),
                                                                                 actions: [
                                                                                   TextButton(
                                                                                     onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                    child: Text('Ok'),
+                                                                                    child: const Text('Ok'),
                                                                                   ),
                                                                                 ],
                                                                               );
@@ -6497,7 +6492,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                       text:
                                                                           'Atualizar',
                                                                       icon:
-                                                                          Icon(
+                                                                          const Icon(
                                                                         Icons
                                                                             .add_circle,
                                                                         size:
@@ -6509,12 +6504,12 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                             250.0,
                                                                         height:
                                                                             40.0,
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             24.0,
                                                                             0.0,
                                                                             24.0,
                                                                             0.0),
-                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -6533,7 +6528,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                         elevation:
                                                                             3.0,
                                                                         borderSide:
-                                                                            BorderSide(
+                                                                            const BorderSide(
                                                                           color:
                                                                               Colors.transparent,
                                                                           width:
@@ -6545,7 +6540,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                     ),
                                                                   ),
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           15.0,
                                                                           25.0,
@@ -6572,12 +6567,12 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                           builder:
                                                                               (alertDialogContext) {
                                                                             return AlertDialog(
-                                                                              title: Text('Campo Obrigatório'),
-                                                                              content: Text('É necessário adicionar uma filial!'),
+                                                                              title: const Text('Campo Obrigatório'),
+                                                                              content: const Text('É necessário adicionar uma filial!'),
                                                                               actions: [
                                                                                 TextButton(
                                                                                   onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                  child: Text('Ok'),
+                                                                                  child: const Text('Ok'),
                                                                                 ),
                                                                               ],
                                                                             );
@@ -6588,7 +6583,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                     },
                                                                     text:
                                                                         'Adicionar',
-                                                                    icon: Icon(
+                                                                    icon: const Icon(
                                                                       Icons.add,
                                                                       size:
                                                                           20.0,
@@ -6599,12 +6594,12 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                           250.0,
                                                                       height:
                                                                           40.0,
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           24.0,
                                                                           0.0,
                                                                           24.0,
                                                                           0.0),
-                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
@@ -6630,7 +6625,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                                       elevation:
                                                                           3.0,
                                                                       borderSide:
-                                                                          BorderSide(
+                                                                          const BorderSide(
                                                                         color: Colors
                                                                             .transparent,
                                                                         width:
@@ -6645,7 +6640,7 @@ class _A13academicoWidgetState extends State<A13academicoWidget>
                                                               ],
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 10.0)),
                                                       ),
                                                     ),

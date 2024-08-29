@@ -10,8 +10,6 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'a28pais_model.dart';
 export 'a28pais_model.dart';
 
@@ -19,7 +17,7 @@ class A28paisWidget extends StatefulWidget {
   const A28paisWidget({
     super.key,
     String? telas,
-  }) : this.telas = telas ?? 'vazio';
+  }) : telas = telas ?? 'vazio';
 
   final String telas;
 
@@ -74,7 +72,7 @@ class _A28paisWidgetState extends State<A28paisWidget> {
                         wrapWithModel(
                           model: _model.menuSuperiorModel,
                           updateCallback: () => setState(() {}),
-                          child: MenuSuperiorWidget(),
+                          child: const MenuSuperiorWidget(),
                         ),
                       if (responsiveVisibility(
                         context: context,
@@ -84,7 +82,7 @@ class _A28paisWidgetState extends State<A28paisWidget> {
                         wrapWithModel(
                           model: _model.menuSuperiorCelularModel,
                           updateCallback: () => setState(() {}),
-                          child: MenuSuperiorCelularWidget(),
+                          child: const MenuSuperiorCelularWidget(),
                         ),
                     ],
                   ),
@@ -95,9 +93,9 @@ class _A28paisWidgetState extends State<A28paisWidget> {
                         wrapWithModel(
                           model: _model.menuLateralModel,
                           updateCallback: () => setState(() {}),
-                          child: MenuLateralWidget(),
+                          child: const MenuLateralWidget(),
                         ),
-                        if (widget!.telas == 'listapais')
+                        if (widget.telas == 'listapais')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -106,7 +104,7 @@ class _A28paisWidgetState extends State<A28paisWidget> {
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
@@ -130,10 +128,10 @@ class _A28paisWidgetState extends State<A28paisWidget> {
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   -1.0, 0.0),
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         12.0, 10.0, 0.0, 0.0),
                                                 child: Text(
@@ -160,7 +158,7 @@ class _A28paisWidgetState extends State<A28paisWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   10.0, 10.0, 10.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -169,7 +167,7 @@ class _A28paisWidgetState extends State<A28paisWidget> {
                                             children: [
                                               Container(
                                                 width: 550.0,
-                                                decoration: BoxDecoration(),
+                                                decoration: const BoxDecoration(),
                                                 child: Column(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -178,7 +176,7 @@ class _A28paisWidgetState extends State<A28paisWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   0.0,
@@ -210,13 +208,13 @@ class _A28paisWidgetState extends State<A28paisWidget> {
                                                                 .error,
                                                             size: 16.0,
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 6.0)),
                                                       ),
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   0.0,
@@ -229,7 +227,7 @@ class _A28paisWidgetState extends State<A28paisWidget> {
                                                                 .calssAcademicoValueController ??=
                                                             FormFieldController<
                                                                 String>(null),
-                                                        options: ['option 1'],
+                                                        options: const ['option 1'],
                                                         onChanged: (val) =>
                                                             setState(() => _model
                                                                     .calssAcademicoValue =
@@ -267,7 +265,7 @@ class _A28paisWidgetState extends State<A28paisWidget> {
                                                         borderWidth: 2.0,
                                                         borderRadius: 8.0,
                                                         margin:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     4.0,
@@ -282,12 +280,12 @@ class _A28paisWidgetState extends State<A28paisWidget> {
                                                   ],
                                                 ),
                                               ),
-                                            ].divide(SizedBox(width: 20.0)),
+                                            ].divide(const SizedBox(width: 20.0)),
                                           ),
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 15.0, 15.0, 10.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -299,7 +297,7 @@ class _A28paisWidgetState extends State<A28paisWidget> {
                                                   print('Button pressed ...');
                                                 },
                                                 text: 'Filtro',
-                                                icon: Icon(
+                                                icon: const Icon(
                                                   Icons.filter_alt,
                                                   color: Colors.white,
                                                   size: 15.0,
@@ -307,11 +305,11 @@ class _A28paisWidgetState extends State<A28paisWidget> {
                                                 options: FFButtonOptions(
                                                   width: 150.0,
                                                   height: 40.0,
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           24.0, 0.0, 24.0, 0.0),
                                                   iconPadding:
-                                                      EdgeInsetsDirectional
+                                                      const EdgeInsetsDirectional
                                                           .fromSTEB(0.0, 0.0,
                                                               0.0, 0.0),
                                                   color: FlutterFlowTheme.of(
@@ -326,7 +324,7 @@ class _A28paisWidgetState extends State<A28paisWidget> {
                                                         letterSpacing: 0.0,
                                                       ),
                                                   elevation: 3.0,
-                                                  borderSide: BorderSide(
+                                                  borderSide: const BorderSide(
                                                     color: Colors.transparent,
                                                     width: 1.0,
                                                   ),
@@ -343,7 +341,7 @@ class _A28paisWidgetState extends State<A28paisWidget> {
                                   ),
                                   Expanded(
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -396,7 +394,7 @@ class _A28paisWidgetState extends State<A28paisWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -413,11 +411,11 @@ class _A28paisWidgetState extends State<A28paisWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -452,7 +450,7 @@ class _A28paisWidgetState extends State<A28paisWidget> {
                                                 Expanded(
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 10.0,
                                                                 0.0, 0.0),
                                                     child: Builder(
@@ -639,7 +637,7 @@ class _A28paisWidgetState extends State<A28paisWidget> {
                                                                       onSelectChanged) =>
                                                                   DataRow(
                                                             color:
-                                                                MaterialStateProperty
+                                                                WidgetStateProperty
                                                                     .all(
                                                               produtosListIndex %
                                                                           2 ==
@@ -758,7 +756,7 @@ class _A28paisWidgetState extends State<A28paisWidget> {
                                                                     child:
                                                                         Align(
                                                                       alignment:
-                                                                          AlignmentDirectional(
+                                                                          const AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                       child:
@@ -777,7 +775,7 @@ class _A28paisWidgetState extends State<A28paisWidget> {
                                                                     height:
                                                                         35.0,
                                                                     decoration:
-                                                                        BoxDecoration(
+                                                                        const BoxDecoration(
                                                                       color: Color(
                                                                           0xFFE30909),
                                                                       shape: BoxShape
@@ -786,7 +784,7 @@ class _A28paisWidgetState extends State<A28paisWidget> {
                                                                     child:
                                                                         Align(
                                                                       alignment:
-                                                                          AlignmentDirectional(
+                                                                          const AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                       child:
@@ -800,7 +798,7 @@ class _A28paisWidgetState extends State<A28paisWidget> {
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         10.0)),
                                                               ),

@@ -14,7 +14,6 @@ import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:text_search/text_search.dart';
 import 'a24contabilidade_estudantil_model.dart';
@@ -24,7 +23,7 @@ class A24contabilidadeEstudantilWidget extends StatefulWidget {
   const A24contabilidadeEstudantilWidget({
     super.key,
     String? telas,
-  }) : this.telas = telas ?? 'vazio';
+  }) : telas = telas ?? 'vazio';
 
   final String telas;
 
@@ -192,7 +191,7 @@ class _A24contabilidadeEstudantilWidgetState
                         wrapWithModel(
                           model: _model.menuSuperiorModel,
                           updateCallback: () => setState(() {}),
-                          child: MenuSuperiorWidget(),
+                          child: const MenuSuperiorWidget(),
                         ),
                       if (responsiveVisibility(
                         context: context,
@@ -202,7 +201,7 @@ class _A24contabilidadeEstudantilWidgetState
                         wrapWithModel(
                           model: _model.menuSuperiorCelularModel,
                           updateCallback: () => setState(() {}),
-                          child: MenuSuperiorCelularWidget(),
+                          child: const MenuSuperiorCelularWidget(),
                         ),
                     ],
                   ),
@@ -213,9 +212,9 @@ class _A24contabilidadeEstudantilWidgetState
                         wrapWithModel(
                           model: _model.menuLateralModel,
                           updateCallback: () => setState(() {}),
-                          child: MenuLateralWidget(),
+                          child: const MenuLateralWidget(),
                         ),
-                        if (widget!.telas == 'PagamentTipo')
+                        if (widget.telas == 'PagamentTipo')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.75,
                             height: double.infinity,
@@ -227,7 +226,7 @@ class _A24contabilidadeEstudantilWidgetState
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 20.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -236,7 +235,7 @@ class _A24contabilidadeEstudantilWidgetState
                                     child: Column(
                                       children: [
                                         Align(
-                                          alignment: Alignment(-1.0, 0),
+                                          alignment: const Alignment(-1.0, 0),
                                           child: TabBar(
                                             isScrollable: true,
                                             labelColor:
@@ -253,13 +252,13 @@ class _A24contabilidadeEstudantilWidgetState
                                                       fontSize: 18.0,
                                                       letterSpacing: 0.0,
                                                     ),
-                                            unselectedLabelStyle: TextStyle(),
+                                            unselectedLabelStyle: const TextStyle(),
                                             indicatorColor:
                                                 FlutterFlowTheme.of(context)
                                                     .tertiary,
                                             indicatorWeight: 1.0,
-                                            padding: EdgeInsets.all(4.0),
-                                            tabs: [
+                                            padding: const EdgeInsets.all(4.0),
+                                            tabs: const [
                                               Row(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
@@ -343,10 +342,10 @@ class _A24contabilidadeEstudantilWidgetState
                                                       snapshot.data!;
 
                                                   return Container(
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsets.all(20.0),
+                                                          const EdgeInsets.all(20.0),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -373,7 +372,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                 ),
                                                                 child: Padding(
                                                                   padding:
-                                                                      EdgeInsets
+                                                                      const EdgeInsets
                                                                           .all(
                                                                               6.0),
                                                                   child: Row(
@@ -501,7 +500,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                               'IconButton pressed ...');
                                                                         },
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             10.0)),
                                                                   ),
@@ -510,9 +509,9 @@ class _A24contabilidadeEstudantilWidgetState
                                                               Container(
                                                                 width: 300.0,
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -522,7 +521,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       Autocomplete<
                                                                           String>(
                                                                     initialValue:
-                                                                        TextEditingValue(),
+                                                                        const TextEditingValue(),
                                                                     optionsBuilder:
                                                                         (textEditingValue) {
                                                                       if (textEditingValue
@@ -564,7 +563,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                         textHighlightStyle:
-                                                                            TextStyle(),
+                                                                            const TextStyle(),
                                                                         elevation:
                                                                             4.0,
                                                                         optionBackgroundColor:
@@ -610,31 +609,29 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             (_) =>
                                                                                 EasyDebounce.debounce(
                                                                           '_model.textController1',
-                                                                          Duration(
+                                                                          const Duration(
                                                                               milliseconds: 2000),
                                                                           () async {
-                                                                            if (_model.textController1.text != null &&
-                                                                                _model.textController1.text != '') {
+                                                                            if (_model.textController1.text != '') {
                                                                               safeSetState(() {
                                                                                 _model.simpleSearchResults1 = TextSearch(
                                                                                   containerInventarioProdutosRecordList
                                                                                       .map(
                                                                                         (record) => TextSearchItem.fromTerms(record, [
-                                                                                          record.produtoCategoria!,
-                                                                                          record.nomeProduto!,
-                                                                                          record.produtoCodigo!,
-                                                                                          record.filial!
+                                                                                          record.produtoCategoria,
+                                                                                          record.nomeProduto,
+                                                                                          record.produtoCodigo,
+                                                                                          record.filial
                                                                                         ]),
                                                                                       )
                                                                                       .toList(),
                                                                                 ).search(_model.textController1.text).map((r) => r.object).take(20).toList();
-                                                                                ;
                                                                               });
                                                                             } else {
                                                                               context.goNamed(
                                                                                 'A01escola',
                                                                                 extra: <String, dynamic>{
-                                                                                  kTransitionInfoKey: TransitionInfo(
+                                                                                  kTransitionInfoKey: const TransitionInfo(
                                                                                     hasTransition: true,
                                                                                     transitionType: PageTransitionType.fade,
                                                                                     duration: Duration(milliseconds: 0),
@@ -728,7 +725,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                           Expanded(
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           10.0,
@@ -869,7 +866,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                               selected,
                                                                               onSelectChanged) =>
                                                                           DataRow(
-                                                                        color: MaterialStateProperty
+                                                                        color: WidgetStateProperty
                                                                             .all(
                                                                           produtosListIndex % 2 == 0
                                                                               ? FlutterFlowTheme.of(context).secondaryBackground
@@ -922,7 +919,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                   child: Icon(
                                                                                     Icons.edit_square,
                                                                                     color: FlutterFlowTheme.of(context).primaryText,
@@ -933,12 +930,12 @@ class _A24contabilidadeEstudantilWidgetState
                                                                               Container(
                                                                                 width: 35.0,
                                                                                 height: 35.0,
-                                                                                decoration: BoxDecoration(
+                                                                                decoration: const BoxDecoration(
                                                                                   color: Color(0xFFE30909),
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                   child: Icon(
                                                                                     Icons.delete_rounded,
                                                                                     color: FlutterFlowTheme.of(context).info,
@@ -946,7 +943,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                   ),
                                                                                 ),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 10.0)),
+                                                                            ].divide(const SizedBox(width: 10.0)),
                                                                           ),
                                                                         ]
                                                                             .map((c) =>
@@ -1020,10 +1017,10 @@ class _A24contabilidadeEstudantilWidgetState
                                                 autovalidateMode:
                                                     AutovalidateMode.disabled,
                                                 child: Container(
-                                                  decoration: BoxDecoration(),
+                                                  decoration: const BoxDecoration(),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 20.0,
                                                                 0.0, 50.0),
                                                     child:
@@ -1037,7 +1034,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -1071,7 +1068,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -1096,14 +1093,14 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .filialValueController1 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -1145,7 +1142,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -1161,7 +1158,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -1173,7 +1170,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -1207,7 +1204,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -1334,7 +1331,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -1350,7 +1347,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                   '')
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           20.0,
                                                                           0.0,
@@ -1384,7 +1381,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                               ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               6.0,
                                                                               0.0,
                                                                               0.0,
@@ -1408,14 +1405,14 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       width:
                                                                           550.0,
                                                                       decoration:
-                                                                          BoxDecoration(),
+                                                                          const BoxDecoration(),
                                                                       child: FlutterFlowDropDown<
                                                                           String>(
                                                                         controller: _model
                                                                             .categoriaValueController1 ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: [
+                                                                        options: const [
                                                                           'Option 1'
                                                                         ],
                                                                         onChanged:
@@ -1452,7 +1449,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             2.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -1468,7 +1465,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         20.0)),
                                                               ),
@@ -1479,11 +1476,11 @@ class _A24contabilidadeEstudantilWidgetState
                                                                   '')
                                                             Container(
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                             ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -1520,7 +1517,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -1545,7 +1542,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         TextFormField(
                                                                       controller:
@@ -1648,7 +1645,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -1664,7 +1661,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       .visivel ==
                                                                   1)
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           25.0,
@@ -1679,7 +1676,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     },
                                                                     text:
                                                                         'Atualizar',
-                                                                    icon: Icon(
+                                                                    icon: const Icon(
                                                                       Icons
                                                                           .add_circle,
                                                                       size:
@@ -1691,12 +1688,12 @@ class _A24contabilidadeEstudantilWidgetState
                                                                           250.0,
                                                                       height:
                                                                           40.0,
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           24.0,
                                                                           0.0,
                                                                           24.0,
                                                                           0.0),
-                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
@@ -1722,7 +1719,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       elevation:
                                                                           3.0,
                                                                       borderSide:
-                                                                          BorderSide(
+                                                                          const BorderSide(
                                                                         color: Colors
                                                                             .transparent,
                                                                         width:
@@ -1735,7 +1732,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                   ),
                                                                 ),
                                                               Padding(
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         50.0,
                                                                         10.0,
@@ -1756,7 +1753,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                   },
                                                                   text:
                                                                       'Adicionar',
-                                                                  icon: Icon(
+                                                                  icon: const Icon(
                                                                     Icons.add,
                                                                     size: 20.0,
                                                                   ),
@@ -1766,14 +1763,14 @@ class _A24contabilidadeEstudantilWidgetState
                                                                         250.0,
                                                                     height:
                                                                         40.0,
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             24.0,
                                                                             0.0,
                                                                             24.0,
                                                                             0.0),
                                                                     iconPadding:
-                                                                        EdgeInsetsDirectional.fromSTEB(
+                                                                        const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -1799,7 +1796,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     elevation:
                                                                         3.0,
                                                                     borderSide:
-                                                                        BorderSide(
+                                                                        const BorderSide(
                                                                       color: Colors
                                                                           .transparent,
                                                                       width:
@@ -1813,7 +1810,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                               ),
                                                             ],
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 5.0)),
                                                       ),
                                                     ),
@@ -1830,7 +1827,7 @@ class _A24contabilidadeEstudantilWidgetState
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'PagamentOffline')
+                        if (widget.telas == 'PagamentOffline')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -1839,7 +1836,7 @@ class _A24contabilidadeEstudantilWidgetState
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
@@ -1863,10 +1860,10 @@ class _A24contabilidadeEstudantilWidgetState
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   -1.0, 0.0),
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         12.0, 10.0, 0.0, 0.0),
                                                 child: Text(
@@ -1893,7 +1890,7 @@ class _A24contabilidadeEstudantilWidgetState
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   10.0, 10.0, 12.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -1904,7 +1901,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                 flex: 3,
                                                 child: Container(
                                                   width: 550.0,
-                                                  decoration: BoxDecoration(),
+                                                  decoration: const BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -1914,7 +1911,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -1946,13 +1943,13 @@ class _A24contabilidadeEstudantilWidgetState
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -1965,7 +1962,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                   .calssAcademicoValueController1 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.calssAcademicoValue1 =
@@ -2004,7 +2001,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -2024,7 +2021,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                 flex: 3,
                                                 child: Container(
                                                   width: 550.0,
-                                                  decoration: BoxDecoration(),
+                                                  decoration: const BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -2034,7 +2031,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -2066,7 +2063,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                       ),
@@ -2076,7 +2073,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                 .secaoAcademicoValueController1 ??=
                                                             FormFieldController<
                                                                 String>(null),
-                                                        options: ['option 1'],
+                                                        options: const ['option 1'],
                                                         onChanged: (val) =>
                                                             setState(() => _model
                                                                     .secaoAcademicoValue1 =
@@ -2114,7 +2111,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                         borderWidth: 2.0,
                                                         borderRadius: 8.0,
                                                         margin:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     4.0,
@@ -2129,12 +2126,12 @@ class _A24contabilidadeEstudantilWidgetState
                                                   ),
                                                 ),
                                               ),
-                                            ].divide(SizedBox(width: 20.0)),
+                                            ].divide(const SizedBox(width: 20.0)),
                                           ),
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 15.0, 15.0, 10.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -2146,7 +2143,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                   print('Button pressed ...');
                                                 },
                                                 text: 'Filtro',
-                                                icon: Icon(
+                                                icon: const Icon(
                                                   Icons.filter_alt,
                                                   color: Colors.white,
                                                   size: 15.0,
@@ -2154,11 +2151,11 @@ class _A24contabilidadeEstudantilWidgetState
                                                 options: FFButtonOptions(
                                                   width: 150.0,
                                                   height: 40.0,
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           24.0, 0.0, 24.0, 0.0),
                                                   iconPadding:
-                                                      EdgeInsetsDirectional
+                                                      const EdgeInsetsDirectional
                                                           .fromSTEB(0.0, 0.0,
                                                               0.0, 0.0),
                                                   color: FlutterFlowTheme.of(
@@ -2173,7 +2170,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                         letterSpacing: 0.0,
                                                       ),
                                                   elevation: 3.0,
-                                                  borderSide: BorderSide(
+                                                  borderSide: const BorderSide(
                                                     color: Colors.transparent,
                                                     width: 1.0,
                                                   ),
@@ -2190,7 +2187,7 @@ class _A24contabilidadeEstudantilWidgetState
                                   ),
                                   Expanded(
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -2243,7 +2240,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -2260,11 +2257,11 @@ class _A24contabilidadeEstudantilWidgetState
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -2298,7 +2295,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         10.0,
@@ -2307,10 +2304,10 @@ class _A24contabilidadeEstudantilWidgetState
                                                             child: Container(
                                                               width: 300.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -2320,7 +2317,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     Autocomplete<
                                                                         String>(
                                                                   initialValue:
-                                                                      TextEditingValue(),
+                                                                      const TextEditingValue(),
                                                                   optionsBuilder:
                                                                       (textEditingValue) {
                                                                     if (textEditingValue
@@ -2369,7 +2366,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                 0.0,
                                                                           ),
                                                                       textHighlightStyle:
-                                                                          TextStyle(),
+                                                                          const TextStyle(),
                                                                       elevation:
                                                                           4.0,
                                                                       optionBackgroundColor:
@@ -2773,7 +2770,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     onSelectChanged) =>
                                                                 DataRow(
                                                           color:
-                                                              MaterialStateProperty
+                                                              WidgetStateProperty
                                                                   .all(
                                                             produtosListIndex %
                                                                         2 ==
@@ -2984,7 +2981,7 @@ class _A24contabilidadeEstudantilWidgetState
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'TiposDeTaxas')
+                        if (widget.telas == 'TiposDeTaxas')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.75,
                             height: double.infinity,
@@ -2996,7 +2993,7 @@ class _A24contabilidadeEstudantilWidgetState
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 20.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -3005,7 +3002,7 @@ class _A24contabilidadeEstudantilWidgetState
                                     child: Column(
                                       children: [
                                         Align(
-                                          alignment: Alignment(-1.0, 0),
+                                          alignment: const Alignment(-1.0, 0),
                                           child: TabBar(
                                             isScrollable: true,
                                             labelColor:
@@ -3022,13 +3019,13 @@ class _A24contabilidadeEstudantilWidgetState
                                                       fontSize: 18.0,
                                                       letterSpacing: 0.0,
                                                     ),
-                                            unselectedLabelStyle: TextStyle(),
+                                            unselectedLabelStyle: const TextStyle(),
                                             indicatorColor:
                                                 FlutterFlowTheme.of(context)
                                                     .tertiary,
                                             indicatorWeight: 1.0,
-                                            padding: EdgeInsets.all(4.0),
-                                            tabs: [
+                                            padding: const EdgeInsets.all(4.0),
+                                            tabs: const [
                                               Row(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
@@ -3111,10 +3108,10 @@ class _A24contabilidadeEstudantilWidgetState
                                                       snapshot.data!;
 
                                                   return Container(
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsets.all(20.0),
+                                                          const EdgeInsets.all(20.0),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -3141,7 +3138,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                 ),
                                                                 child: Padding(
                                                                   padding:
-                                                                      EdgeInsets
+                                                                      const EdgeInsets
                                                                           .all(
                                                                               6.0),
                                                                   child: Row(
@@ -3269,7 +3266,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                               'IconButton pressed ...');
                                                                         },
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             10.0)),
                                                                   ),
@@ -3278,9 +3275,9 @@ class _A24contabilidadeEstudantilWidgetState
                                                               Container(
                                                                 width: 300.0,
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -3290,7 +3287,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       Autocomplete<
                                                                           String>(
                                                                     initialValue:
-                                                                        TextEditingValue(),
+                                                                        const TextEditingValue(),
                                                                     optionsBuilder:
                                                                         (textEditingValue) {
                                                                       if (textEditingValue
@@ -3332,7 +3329,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                         textHighlightStyle:
-                                                                            TextStyle(),
+                                                                            const TextStyle(),
                                                                         elevation:
                                                                             4.0,
                                                                         optionBackgroundColor:
@@ -3378,31 +3375,29 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             (_) =>
                                                                                 EasyDebounce.debounce(
                                                                           '_model.textController5',
-                                                                          Duration(
+                                                                          const Duration(
                                                                               milliseconds: 2000),
                                                                           () async {
-                                                                            if (_model.textController5.text != null &&
-                                                                                _model.textController5.text != '') {
+                                                                            if (_model.textController5.text != '') {
                                                                               safeSetState(() {
                                                                                 _model.simpleSearchResults2 = TextSearch(
                                                                                   containerInventarioProdutosRecordList
                                                                                       .map(
                                                                                         (record) => TextSearchItem.fromTerms(record, [
-                                                                                          record.produtoCategoria!,
-                                                                                          record.nomeProduto!,
-                                                                                          record.produtoCodigo!,
-                                                                                          record.filial!
+                                                                                          record.produtoCategoria,
+                                                                                          record.nomeProduto,
+                                                                                          record.produtoCodigo,
+                                                                                          record.filial
                                                                                         ]),
                                                                                       )
                                                                                       .toList(),
                                                                                 ).search(_model.textController5.text).map((r) => r.object).take(20).toList();
-                                                                                ;
                                                                               });
                                                                             } else {
                                                                               context.goNamed(
                                                                                 'A01escola',
                                                                                 extra: <String, dynamic>{
-                                                                                  kTransitionInfoKey: TransitionInfo(
+                                                                                  kTransitionInfoKey: const TransitionInfo(
                                                                                     hasTransition: true,
                                                                                     transitionType: PageTransitionType.fade,
                                                                                     duration: Duration(milliseconds: 0),
@@ -3496,7 +3491,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                           Expanded(
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           10.0,
@@ -3653,7 +3648,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                               selected,
                                                                               onSelectChanged) =>
                                                                           DataRow(
-                                                                        color: MaterialStateProperty
+                                                                        color: WidgetStateProperty
                                                                             .all(
                                                                           produtosListIndex % 2 == 0
                                                                               ? FlutterFlowTheme.of(context).secondaryBackground
@@ -3713,7 +3708,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                   child: Icon(
                                                                                     Icons.edit_square,
                                                                                     color: FlutterFlowTheme.of(context).primaryText,
@@ -3724,12 +3719,12 @@ class _A24contabilidadeEstudantilWidgetState
                                                                               Container(
                                                                                 width: 35.0,
                                                                                 height: 35.0,
-                                                                                decoration: BoxDecoration(
+                                                                                decoration: const BoxDecoration(
                                                                                   color: Color(0xFFE30909),
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                   child: Icon(
                                                                                     Icons.delete_rounded,
                                                                                     color: FlutterFlowTheme.of(context).info,
@@ -3737,7 +3732,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                   ),
                                                                                 ),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 10.0)),
+                                                                            ].divide(const SizedBox(width: 10.0)),
                                                                           ),
                                                                         ]
                                                                             .map((c) =>
@@ -3811,10 +3806,10 @@ class _A24contabilidadeEstudantilWidgetState
                                                 autovalidateMode:
                                                     AutovalidateMode.disabled,
                                                 child: Container(
-                                                  decoration: BoxDecoration(),
+                                                  decoration: const BoxDecoration(),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 20.0,
                                                                 0.0, 50.0),
                                                     child:
@@ -3828,7 +3823,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -3862,7 +3857,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -3887,14 +3882,14 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .filialValueController2 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -3936,7 +3931,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -3952,7 +3947,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -3964,7 +3959,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -3998,7 +3993,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -4125,7 +4120,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -4141,7 +4136,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                   '')
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           20.0,
                                                                           0.0,
@@ -4175,7 +4170,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                               ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               6.0,
                                                                               0.0,
                                                                               0.0,
@@ -4199,14 +4194,14 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       width:
                                                                           550.0,
                                                                       decoration:
-                                                                          BoxDecoration(),
+                                                                          const BoxDecoration(),
                                                                       child: FlutterFlowDropDown<
                                                                           String>(
                                                                         controller: _model
                                                                             .categoriaValueController2 ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: [
+                                                                        options: const [
                                                                           'Option 1'
                                                                         ],
                                                                         onChanged:
@@ -4243,7 +4238,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             2.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -4259,7 +4254,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         20.0)),
                                                               ),
@@ -4270,11 +4265,11 @@ class _A24contabilidadeEstudantilWidgetState
                                                                   '')
                                                             Container(
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                             ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -4311,7 +4306,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -4336,7 +4331,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         TextFormField(
                                                                       controller:
@@ -4439,7 +4434,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -4455,7 +4450,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       .visivel ==
                                                                   1)
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           25.0,
@@ -4470,7 +4465,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     },
                                                                     text:
                                                                         'Atualizar',
-                                                                    icon: Icon(
+                                                                    icon: const Icon(
                                                                       Icons
                                                                           .add_circle,
                                                                       size:
@@ -4482,12 +4477,12 @@ class _A24contabilidadeEstudantilWidgetState
                                                                           250.0,
                                                                       height:
                                                                           40.0,
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           24.0,
                                                                           0.0,
                                                                           24.0,
                                                                           0.0),
-                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
@@ -4513,7 +4508,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       elevation:
                                                                           3.0,
                                                                       borderSide:
-                                                                          BorderSide(
+                                                                          const BorderSide(
                                                                         color: Colors
                                                                             .transparent,
                                                                         width:
@@ -4526,7 +4521,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                   ),
                                                                 ),
                                                               Padding(
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         50.0,
                                                                         10.0,
@@ -4547,7 +4542,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                   },
                                                                   text:
                                                                       'Adicionar',
-                                                                  icon: Icon(
+                                                                  icon: const Icon(
                                                                     Icons.add,
                                                                     size: 20.0,
                                                                   ),
@@ -4557,14 +4552,14 @@ class _A24contabilidadeEstudantilWidgetState
                                                                         250.0,
                                                                     height:
                                                                         40.0,
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             24.0,
                                                                             0.0,
                                                                             24.0,
                                                                             0.0),
                                                                     iconPadding:
-                                                                        EdgeInsetsDirectional.fromSTEB(
+                                                                        const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -4590,7 +4585,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     elevation:
                                                                         3.0,
                                                                     borderSide:
-                                                                        BorderSide(
+                                                                        const BorderSide(
                                                                       color: Colors
                                                                           .transparent,
                                                                       width:
@@ -4604,7 +4599,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                               ),
                                                             ],
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 5.0)),
                                                       ),
                                                     ),
@@ -4621,7 +4616,7 @@ class _A24contabilidadeEstudantilWidgetState
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'GrupoDeTaxas')
+                        if (widget.telas == 'GrupoDeTaxas')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.75,
                             height: double.infinity,
@@ -4633,7 +4628,7 @@ class _A24contabilidadeEstudantilWidgetState
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 20.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -4642,7 +4637,7 @@ class _A24contabilidadeEstudantilWidgetState
                                     child: Column(
                                       children: [
                                         Align(
-                                          alignment: Alignment(-1.0, 0),
+                                          alignment: const Alignment(-1.0, 0),
                                           child: TabBar(
                                             isScrollable: true,
                                             labelColor:
@@ -4659,13 +4654,13 @@ class _A24contabilidadeEstudantilWidgetState
                                                       fontSize: 18.0,
                                                       letterSpacing: 0.0,
                                                     ),
-                                            unselectedLabelStyle: TextStyle(),
+                                            unselectedLabelStyle: const TextStyle(),
                                             indicatorColor:
                                                 FlutterFlowTheme.of(context)
                                                     .tertiary,
                                             indicatorWeight: 1.0,
-                                            padding: EdgeInsets.all(4.0),
-                                            tabs: [
+                                            padding: const EdgeInsets.all(4.0),
+                                            tabs: const [
                                               Row(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
@@ -4749,10 +4744,10 @@ class _A24contabilidadeEstudantilWidgetState
                                                       snapshot.data!;
 
                                                   return Container(
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsets.all(20.0),
+                                                          const EdgeInsets.all(20.0),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -4779,7 +4774,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                 ),
                                                                 child: Padding(
                                                                   padding:
-                                                                      EdgeInsets
+                                                                      const EdgeInsets
                                                                           .all(
                                                                               6.0),
                                                                   child: Row(
@@ -4907,7 +4902,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                               'IconButton pressed ...');
                                                                         },
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             10.0)),
                                                                   ),
@@ -4916,9 +4911,9 @@ class _A24contabilidadeEstudantilWidgetState
                                                               Container(
                                                                 width: 300.0,
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -4928,7 +4923,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       Autocomplete<
                                                                           String>(
                                                                     initialValue:
-                                                                        TextEditingValue(),
+                                                                        const TextEditingValue(),
                                                                     optionsBuilder:
                                                                         (textEditingValue) {
                                                                       if (textEditingValue
@@ -4970,7 +4965,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                         textHighlightStyle:
-                                                                            TextStyle(),
+                                                                            const TextStyle(),
                                                                         elevation:
                                                                             4.0,
                                                                         optionBackgroundColor:
@@ -5016,31 +5011,29 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             (_) =>
                                                                                 EasyDebounce.debounce(
                                                                           '_model.textController8',
-                                                                          Duration(
+                                                                          const Duration(
                                                                               milliseconds: 2000),
                                                                           () async {
-                                                                            if (_model.textController8.text != null &&
-                                                                                _model.textController8.text != '') {
+                                                                            if (_model.textController8.text != '') {
                                                                               safeSetState(() {
                                                                                 _model.simpleSearchResults3 = TextSearch(
                                                                                   containerInventarioProdutosRecordList
                                                                                       .map(
                                                                                         (record) => TextSearchItem.fromTerms(record, [
-                                                                                          record.produtoCategoria!,
-                                                                                          record.nomeProduto!,
-                                                                                          record.produtoCodigo!,
-                                                                                          record.filial!
+                                                                                          record.produtoCategoria,
+                                                                                          record.nomeProduto,
+                                                                                          record.produtoCodigo,
+                                                                                          record.filial
                                                                                         ]),
                                                                                       )
                                                                                       .toList(),
                                                                                 ).search(_model.textController8.text).map((r) => r.object).take(20).toList();
-                                                                                ;
                                                                               });
                                                                             } else {
                                                                               context.goNamed(
                                                                                 'A01escola',
                                                                                 extra: <String, dynamic>{
-                                                                                  kTransitionInfoKey: TransitionInfo(
+                                                                                  kTransitionInfoKey: const TransitionInfo(
                                                                                     hasTransition: true,
                                                                                     transitionType: PageTransitionType.fade,
                                                                                     duration: Duration(milliseconds: 0),
@@ -5134,7 +5127,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                           Expanded(
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           10.0,
@@ -5291,7 +5284,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                               selected,
                                                                               onSelectChanged) =>
                                                                           DataRow(
-                                                                        color: MaterialStateProperty
+                                                                        color: WidgetStateProperty
                                                                             .all(
                                                                           produtosListIndex % 2 == 0
                                                                               ? FlutterFlowTheme.of(context).secondaryBackground
@@ -5351,7 +5344,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                   child: Icon(
                                                                                     Icons.edit_square,
                                                                                     color: FlutterFlowTheme.of(context).primaryText,
@@ -5362,12 +5355,12 @@ class _A24contabilidadeEstudantilWidgetState
                                                                               Container(
                                                                                 width: 35.0,
                                                                                 height: 35.0,
-                                                                                decoration: BoxDecoration(
+                                                                                decoration: const BoxDecoration(
                                                                                   color: Color(0xFFE30909),
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                   child: Icon(
                                                                                     Icons.delete_rounded,
                                                                                     color: FlutterFlowTheme.of(context).info,
@@ -5375,7 +5368,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                   ),
                                                                                 ),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 10.0)),
+                                                                            ].divide(const SizedBox(width: 10.0)),
                                                                           ),
                                                                         ]
                                                                             .map((c) =>
@@ -5449,10 +5442,10 @@ class _A24contabilidadeEstudantilWidgetState
                                                 autovalidateMode:
                                                     AutovalidateMode.disabled,
                                                 child: Container(
-                                                  decoration: BoxDecoration(),
+                                                  decoration: const BoxDecoration(),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 20.0,
                                                                 0.0, 50.0),
                                                     child:
@@ -5466,7 +5459,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -5500,7 +5493,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -5525,14 +5518,14 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .filialValueController3 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -5574,7 +5567,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -5590,7 +5583,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -5602,7 +5595,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -5636,7 +5629,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -5763,7 +5756,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -5779,7 +5772,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                   '')
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           20.0,
                                                                           0.0,
@@ -5813,7 +5806,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                               ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               6.0,
                                                                               0.0,
                                                                               0.0,
@@ -5837,14 +5830,14 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       width:
                                                                           550.0,
                                                                       decoration:
-                                                                          BoxDecoration(),
+                                                                          const BoxDecoration(),
                                                                       child: FlutterFlowDropDown<
                                                                           String>(
                                                                         controller: _model
                                                                             .categoriaValueController3 ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: [
+                                                                        options: const [
                                                                           'Option 1'
                                                                         ],
                                                                         onChanged:
@@ -5881,7 +5874,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             2.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -5897,7 +5890,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         20.0)),
                                                               ),
@@ -5908,11 +5901,11 @@ class _A24contabilidadeEstudantilWidgetState
                                                                   '')
                                                             Container(
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                             ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -5949,7 +5942,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -5974,7 +5967,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         TextFormField(
                                                                       controller:
@@ -6077,7 +6070,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -6089,7 +6082,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -6123,7 +6116,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -6148,14 +6141,14 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .filialValueController4 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -6197,7 +6190,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -6213,7 +6206,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -6225,7 +6218,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -6259,7 +6252,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -6284,7 +6277,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: Row(
                                                                       mainAxisSize:
                                                                           MainAxisSize
@@ -6300,7 +6293,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             color:
                                                                                 FlutterFlowTheme.of(context).primaryBackground,
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(8.0),
                                                                               bottomRight: Radius.circular(0.0),
                                                                               topLeft: Radius.circular(8.0),
@@ -6324,7 +6317,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                         Expanded(
                                                                           child:
                                                                               Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 8.0,
@@ -6351,7 +6344,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                     color: FlutterFlowTheme.of(context).alternate,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -6363,7 +6356,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                     color: FlutterFlowTheme.of(context).primary,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -6375,7 +6368,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                     color: FlutterFlowTheme.of(context).error,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -6387,7 +6380,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                     color: FlutterFlowTheme.of(context).error,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -6409,7 +6402,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -6421,7 +6414,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -6455,7 +6448,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -6582,7 +6575,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -6595,7 +6588,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     .end,
                                                             children: [
                                                               Padding(
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         50.0,
                                                                         15.0,
@@ -6616,7 +6609,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                   },
                                                                   text:
                                                                       'Adicionar',
-                                                                  icon: Icon(
+                                                                  icon: const Icon(
                                                                     Icons.add,
                                                                     size: 20.0,
                                                                   ),
@@ -6626,14 +6619,14 @@ class _A24contabilidadeEstudantilWidgetState
                                                                         250.0,
                                                                     height:
                                                                         40.0,
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             24.0,
                                                                             0.0,
                                                                             24.0,
                                                                             0.0),
                                                                     iconPadding:
-                                                                        EdgeInsetsDirectional.fromSTEB(
+                                                                        const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -6659,7 +6652,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     elevation:
                                                                         3.0,
                                                                     borderSide:
-                                                                        BorderSide(
+                                                                        const BorderSide(
                                                                       color: Colors
                                                                           .transparent,
                                                                       width:
@@ -6673,7 +6666,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                               ),
                                                             ],
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 5.0)),
                                                       ),
                                                     ),
@@ -6690,7 +6683,7 @@ class _A24contabilidadeEstudantilWidgetState
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'ConfigMulta')
+                        if (widget.telas == 'ConfigMulta')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.75,
                             height: double.infinity,
@@ -6702,7 +6695,7 @@ class _A24contabilidadeEstudantilWidgetState
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 20.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -6711,7 +6704,7 @@ class _A24contabilidadeEstudantilWidgetState
                                     child: Column(
                                       children: [
                                         Align(
-                                          alignment: Alignment(-1.0, 0),
+                                          alignment: const Alignment(-1.0, 0),
                                           child: TabBar(
                                             isScrollable: true,
                                             labelColor:
@@ -6728,13 +6721,13 @@ class _A24contabilidadeEstudantilWidgetState
                                                       fontSize: 18.0,
                                                       letterSpacing: 0.0,
                                                     ),
-                                            unselectedLabelStyle: TextStyle(),
+                                            unselectedLabelStyle: const TextStyle(),
                                             indicatorColor:
                                                 FlutterFlowTheme.of(context)
                                                     .tertiary,
                                             indicatorWeight: 1.0,
-                                            padding: EdgeInsets.all(4.0),
-                                            tabs: [
+                                            padding: const EdgeInsets.all(4.0),
+                                            tabs: const [
                                               Row(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
@@ -6816,10 +6809,10 @@ class _A24contabilidadeEstudantilWidgetState
                                                       snapshot.data!;
 
                                                   return Container(
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsets.all(20.0),
+                                                          const EdgeInsets.all(20.0),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -6846,7 +6839,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                 ),
                                                                 child: Padding(
                                                                   padding:
-                                                                      EdgeInsets
+                                                                      const EdgeInsets
                                                                           .all(
                                                                               6.0),
                                                                   child: Row(
@@ -6974,7 +6967,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                               'IconButton pressed ...');
                                                                         },
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             10.0)),
                                                                   ),
@@ -6983,9 +6976,9 @@ class _A24contabilidadeEstudantilWidgetState
                                                               Container(
                                                                 width: 300.0,
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -6995,7 +6988,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       Autocomplete<
                                                                           String>(
                                                                     initialValue:
-                                                                        TextEditingValue(),
+                                                                        const TextEditingValue(),
                                                                     optionsBuilder:
                                                                         (textEditingValue) {
                                                                       if (textEditingValue
@@ -7037,7 +7030,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                         textHighlightStyle:
-                                                                            TextStyle(),
+                                                                            const TextStyle(),
                                                                         elevation:
                                                                             4.0,
                                                                         optionBackgroundColor:
@@ -7083,31 +7076,29 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             (_) =>
                                                                                 EasyDebounce.debounce(
                                                                           '_model.textController13',
-                                                                          Duration(
+                                                                          const Duration(
                                                                               milliseconds: 2000),
                                                                           () async {
-                                                                            if (_model.textController13.text != null &&
-                                                                                _model.textController13.text != '') {
+                                                                            if (_model.textController13.text != '') {
                                                                               safeSetState(() {
                                                                                 _model.simpleSearchResults4 = TextSearch(
                                                                                   containerInventarioProdutosRecordList
                                                                                       .map(
                                                                                         (record) => TextSearchItem.fromTerms(record, [
-                                                                                          record.produtoCategoria!,
-                                                                                          record.nomeProduto!,
-                                                                                          record.produtoCodigo!,
-                                                                                          record.filial!
+                                                                                          record.produtoCategoria,
+                                                                                          record.nomeProduto,
+                                                                                          record.produtoCodigo,
+                                                                                          record.filial
                                                                                         ]),
                                                                                       )
                                                                                       .toList(),
                                                                                 ).search(_model.textController13.text).map((r) => r.object).take(20).toList();
-                                                                                ;
                                                                               });
                                                                             } else {
                                                                               context.goNamed(
                                                                                 'A01escola',
                                                                                 extra: <String, dynamic>{
-                                                                                  kTransitionInfoKey: TransitionInfo(
+                                                                                  kTransitionInfoKey: const TransitionInfo(
                                                                                     hasTransition: true,
                                                                                     transitionType: PageTransitionType.fade,
                                                                                     duration: Duration(milliseconds: 0),
@@ -7201,7 +7192,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                           Expanded(
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           10.0,
@@ -7374,7 +7365,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                               selected,
                                                                               onSelectChanged) =>
                                                                           DataRow(
-                                                                        color: MaterialStateProperty
+                                                                        color: WidgetStateProperty
                                                                             .all(
                                                                           produtosListIndex % 2 == 0
                                                                               ? FlutterFlowTheme.of(context).secondaryBackground
@@ -7441,7 +7432,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                   child: Icon(
                                                                                     Icons.edit_square,
                                                                                     color: FlutterFlowTheme.of(context).primaryText,
@@ -7452,12 +7443,12 @@ class _A24contabilidadeEstudantilWidgetState
                                                                               Container(
                                                                                 width: 35.0,
                                                                                 height: 35.0,
-                                                                                decoration: BoxDecoration(
+                                                                                decoration: const BoxDecoration(
                                                                                   color: Color(0xFFE30909),
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                   child: Icon(
                                                                                     Icons.delete_rounded,
                                                                                     color: FlutterFlowTheme.of(context).info,
@@ -7465,7 +7456,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                   ),
                                                                                 ),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 10.0)),
+                                                                            ].divide(const SizedBox(width: 10.0)),
                                                                           ),
                                                                         ]
                                                                             .map((c) =>
@@ -7539,10 +7530,10 @@ class _A24contabilidadeEstudantilWidgetState
                                                 autovalidateMode:
                                                     AutovalidateMode.disabled,
                                                 child: Container(
-                                                  decoration: BoxDecoration(),
+                                                  decoration: const BoxDecoration(),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 20.0,
                                                                 0.0, 50.0),
                                                     child:
@@ -7556,7 +7547,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -7590,7 +7581,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -7615,14 +7606,14 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .filialValueController5 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -7664,7 +7655,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -7680,7 +7671,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -7692,7 +7683,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -7709,7 +7700,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                 Flexible(
                                                                   child:
                                                                       Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -7755,7 +7746,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                           .filialValueController6 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -7797,7 +7788,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -7813,7 +7804,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -7829,7 +7820,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                   '')
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           20.0,
                                                                           0.0,
@@ -7863,7 +7854,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                               ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               6.0,
                                                                               0.0,
                                                                               0.0,
@@ -7887,14 +7878,14 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       width:
                                                                           550.0,
                                                                       decoration:
-                                                                          BoxDecoration(),
+                                                                          const BoxDecoration(),
                                                                       child: FlutterFlowDropDown<
                                                                           String>(
                                                                         controller: _model
                                                                             .categoriaValueController4 ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: [
+                                                                        options: const [
                                                                           'Option 1'
                                                                         ],
                                                                         onChanged:
@@ -7931,7 +7922,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             2.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -7947,14 +7938,14 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         20.0)),
                                                               ),
                                                             ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -7971,7 +7962,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                 Flexible(
                                                                   child:
                                                                       Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -8017,7 +8008,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                           .filialValueController7 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -8059,7 +8050,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -8075,7 +8066,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -8085,7 +8076,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                   '')
                                                             Container(
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                             ),
                                                           Divider(
                                                             thickness: 1.0,
@@ -8095,7 +8086,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -8119,7 +8110,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             .end,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             16.0,
@@ -8146,14 +8137,14 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .filialValueController8 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -8195,7 +8186,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -8211,7 +8202,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -8223,7 +8214,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -8257,7 +8248,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -8384,7 +8375,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -8396,7 +8387,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -8413,7 +8404,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                 Flexible(
                                                                   child:
                                                                       Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -8459,7 +8450,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                           .filialValueController9 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Por Mês',
                                                                         'Por Dia',
                                                                         'Por Semana',
@@ -8504,7 +8495,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -8520,7 +8511,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -8539,7 +8530,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     .end,
                                                             children: [
                                                               Padding(
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         50.0,
                                                                         15.0,
@@ -8560,7 +8551,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                   },
                                                                   text:
                                                                       'Adicionar',
-                                                                  icon: Icon(
+                                                                  icon: const Icon(
                                                                     Icons.add,
                                                                     size: 20.0,
                                                                   ),
@@ -8570,14 +8561,14 @@ class _A24contabilidadeEstudantilWidgetState
                                                                         250.0,
                                                                     height:
                                                                         40.0,
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             24.0,
                                                                             0.0,
                                                                             24.0,
                                                                             0.0),
                                                                     iconPadding:
-                                                                        EdgeInsetsDirectional.fromSTEB(
+                                                                        const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -8603,7 +8594,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     elevation:
                                                                         3.0,
                                                                     borderSide:
-                                                                        BorderSide(
+                                                                        const BorderSide(
                                                                       color: Colors
                                                                           .transparent,
                                                                       width:
@@ -8617,7 +8608,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                               ),
                                                             ],
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 5.0)),
                                                       ),
                                                     ),
@@ -8634,7 +8625,7 @@ class _A24contabilidadeEstudantilWidgetState
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'AlocacaoTarifa')
+                        if (widget.telas == 'AlocacaoTarifa')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -8643,7 +8634,7 @@ class _A24contabilidadeEstudantilWidgetState
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -8674,11 +8665,11 @@ class _A24contabilidadeEstudantilWidgetState
                                               children: [
                                                 Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           -1.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(12.0,
                                                                 10.0, 0.0, 0.0),
                                                     child: Text(
@@ -8706,7 +8697,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                       .tertiary,
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       10.0, 10.0, 10.0, 0.0),
                                               child: Row(
@@ -8719,7 +8710,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                     child: Container(
                                                       width: 550.0,
                                                       decoration:
-                                                          BoxDecoration(),
+                                                          const BoxDecoration(),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -8729,7 +8720,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -8762,13 +8753,13 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       .error,
                                                                   size: 16.0,
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 6.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -8782,7 +8773,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                   FormFieldController<
                                                                           String>(
                                                                       null),
-                                                              options: [
+                                                              options: const [
                                                                 'option 1'
                                                               ],
                                                               onChanged: (val) =>
@@ -8822,7 +8813,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                               borderWidth: 2.0,
                                                               borderRadius: 8.0,
                                                               margin:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           4.0,
@@ -8847,7 +8838,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                     child: Container(
                                                       width: 550.0,
                                                       decoration:
-                                                          BoxDecoration(),
+                                                          const BoxDecoration(),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -8857,7 +8848,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -8890,7 +8881,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       .error,
                                                                   size: 16.0,
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 6.0)),
                                                             ),
                                                           ),
@@ -8901,7 +8892,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                 FormFieldController<
                                                                         String>(
                                                                     null),
-                                                            options: [
+                                                            options: const [
                                                               'option 1'
                                                             ],
                                                             onChanged: (val) =>
@@ -8941,7 +8932,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                             borderWidth: 2.0,
                                                             borderRadius: 8.0,
                                                             margin:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         4.0,
@@ -8963,7 +8954,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                     child: Container(
                                                       width: 550.0,
                                                       decoration:
-                                                          BoxDecoration(),
+                                                          const BoxDecoration(),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -8973,7 +8964,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -9006,7 +8997,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       .error,
                                                                   size: 16.0,
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 6.0)),
                                                             ),
                                                           ),
@@ -9017,7 +9008,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                 FormFieldController<
                                                                         String>(
                                                                     null),
-                                                            options: [
+                                                            options: const [
                                                               'option 1'
                                                             ],
                                                             onChanged: (val) =>
@@ -9057,7 +9048,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                             borderWidth: 2.0,
                                                             borderRadius: 8.0,
                                                             margin:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         4.0,
@@ -9079,7 +9070,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                     child: Container(
                                                       width: 550.0,
                                                       decoration:
-                                                          BoxDecoration(),
+                                                          const BoxDecoration(),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -9089,7 +9080,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -9122,7 +9113,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       .error,
                                                                   size: 16.0,
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 6.0)),
                                                             ),
                                                           ),
@@ -9133,7 +9124,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                 FormFieldController<
                                                                         String>(
                                                                     null),
-                                                            options: [
+                                                            options: const [
                                                               'option 1'
                                                             ],
                                                             onChanged: (val) =>
@@ -9173,7 +9164,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                             borderWidth: 2.0,
                                                             borderRadius: 8.0,
                                                             margin:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         4.0,
@@ -9190,11 +9181,11 @@ class _A24contabilidadeEstudantilWidgetState
                                                       ),
                                                     ),
                                                   ),
-                                                ].divide(SizedBox(width: 20.0)),
+                                                ].divide(const SizedBox(width: 20.0)),
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 15.0, 15.0, 10.0),
                                               child: Row(
@@ -9208,7 +9199,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                           'ButtonFiltrar pressed ...');
                                                     },
                                                     text: 'Filtro',
-                                                    icon: Icon(
+                                                    icon: const Icon(
                                                       Icons.filter_alt,
                                                       color: Colors.white,
                                                       size: 15.0,
@@ -9217,14 +9208,14 @@ class _A24contabilidadeEstudantilWidgetState
                                                       width: 150.0,
                                                       height: 40.0,
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   24.0,
                                                                   0.0,
                                                                   24.0,
                                                                   0.0),
                                                       iconPadding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -9247,7 +9238,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     0.0,
                                                               ),
                                                       elevation: 3.0,
-                                                      borderSide: BorderSide(
+                                                      borderSide: const BorderSide(
                                                         color:
                                                             Colors.transparent,
                                                         width: 1.0,
@@ -9265,7 +9256,7 @@ class _A24contabilidadeEstudantilWidgetState
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -9318,7 +9309,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -9335,11 +9326,11 @@ class _A24contabilidadeEstudantilWidgetState
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -9373,7 +9364,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         10.0,
@@ -9382,10 +9373,10 @@ class _A24contabilidadeEstudantilWidgetState
                                                             child: Container(
                                                               width: 300.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -9395,7 +9386,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     Autocomplete<
                                                                         String>(
                                                                   initialValue:
-                                                                      TextEditingValue(),
+                                                                      const TextEditingValue(),
                                                                   optionsBuilder:
                                                                       (textEditingValue) {
                                                                     if (textEditingValue
@@ -9444,7 +9435,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                 0.0,
                                                                           ),
                                                                       textHighlightStyle:
-                                                                          TextStyle(),
+                                                                          const TextStyle(),
                                                                       elevation:
                                                                           4.0,
                                                                       optionBackgroundColor:
@@ -9594,7 +9585,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                 Expanded(
                                                   child: Align(
                                                     alignment:
-                                                        AlignmentDirectional(
+                                                        const AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: Builder(
                                                       builder: (context) {
@@ -9801,7 +9792,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                             onSelectChanged:
                                                                 onSelectChanged,
                                                             color:
-                                                                MaterialStateProperty
+                                                                WidgetStateProperty
                                                                     .all(
                                                               produtosListIndex %
                                                                           2 ==
@@ -9980,11 +9971,11 @@ class _A24contabilidadeEstudantilWidgetState
                                                               Colors
                                                                   .transparent,
                                                           checkboxCheckColor:
-                                                              Color(0x8A000000),
+                                                              const Color(0x8A000000),
                                                           checkboxUnselectedBorderColor:
-                                                              Color(0x8A000000),
+                                                              const Color(0x8A000000),
                                                           checkboxSelectedBorderColor:
-                                                              Color(0x8A000000),
+                                                              const Color(0x8A000000),
                                                         );
                                                       },
                                                     ),
@@ -9997,7 +9988,7 @@ class _A24contabilidadeEstudantilWidgetState
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 15.0, 20.0, 15.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -10006,14 +9997,14 @@ class _A24contabilidadeEstudantilWidgetState
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     15.0, 0.0, 0.0, 0.0),
                                             child: FFButtonWidget(
                                               onPressed: () {
                                                 print('ButtonADD pressed ...');
                                               },
                                               text: 'Salvar',
-                                              icon: Icon(
+                                              icon: const Icon(
                                                 Icons.save_sharp,
                                                 color: Colors.white,
                                                 size: 20.0,
@@ -10021,11 +10012,11 @@ class _A24contabilidadeEstudantilWidgetState
                                               options: FFButtonOptions(
                                                 width: 200.0,
                                                 height: 40.0,
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         24.0, 0.0, 24.0, 0.0),
                                                 iconPadding:
-                                                    EdgeInsetsDirectional
+                                                    const EdgeInsetsDirectional
                                                         .fromSTEB(
                                                             0.0, 0.0, 0.0, 0.0),
                                                 color:
@@ -10041,7 +10032,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                           letterSpacing: 0.0,
                                                         ),
                                                 elevation: 3.0,
-                                                borderSide: BorderSide(
+                                                borderSide: const BorderSide(
                                                   color: Colors.transparent,
                                                   width: 1.0,
                                                 ),
@@ -10058,7 +10049,7 @@ class _A24contabilidadeEstudantilWidgetState
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'TaxasPagamento')
+                        if (widget.telas == 'TaxasPagamento')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -10067,7 +10058,7 @@ class _A24contabilidadeEstudantilWidgetState
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -10098,11 +10089,11 @@ class _A24contabilidadeEstudantilWidgetState
                                               children: [
                                                 Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           -1.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(12.0,
                                                                 10.0, 0.0, 0.0),
                                                     child: Text(
@@ -10130,7 +10121,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                       .tertiary,
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       10.0, 10.0, 10.0, 0.0),
                                               child: Row(
@@ -10143,7 +10134,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                     child: Container(
                                                       width: 550.0,
                                                       decoration:
-                                                          BoxDecoration(),
+                                                          const BoxDecoration(),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -10153,7 +10144,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -10186,13 +10177,13 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       .error,
                                                                   size: 16.0,
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 6.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -10206,7 +10197,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                   FormFieldController<
                                                                           String>(
                                                                       null),
-                                                              options: [
+                                                              options: const [
                                                                 'option 1'
                                                               ],
                                                               onChanged: (val) =>
@@ -10246,7 +10237,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                               borderWidth: 2.0,
                                                               borderRadius: 8.0,
                                                               margin:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           4.0,
@@ -10271,7 +10262,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                     child: Container(
                                                       width: 550.0,
                                                       decoration:
-                                                          BoxDecoration(),
+                                                          const BoxDecoration(),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -10281,7 +10272,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -10314,7 +10305,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       .error,
                                                                   size: 16.0,
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 6.0)),
                                                             ),
                                                           ),
@@ -10325,7 +10316,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                 FormFieldController<
                                                                         String>(
                                                                     null),
-                                                            options: [
+                                                            options: const [
                                                               'option 1'
                                                             ],
                                                             onChanged: (val) =>
@@ -10365,7 +10356,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                             borderWidth: 2.0,
                                                             borderRadius: 8.0,
                                                             margin:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         4.0,
@@ -10387,7 +10378,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                     child: Container(
                                                       width: 550.0,
                                                       decoration:
-                                                          BoxDecoration(),
+                                                          const BoxDecoration(),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -10397,7 +10388,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -10430,7 +10421,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       .error,
                                                                   size: 16.0,
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 6.0)),
                                                             ),
                                                           ),
@@ -10441,7 +10432,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                 FormFieldController<
                                                                         String>(
                                                                     null),
-                                                            options: [
+                                                            options: const [
                                                               'option 1'
                                                             ],
                                                             onChanged: (val) =>
@@ -10481,7 +10472,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                             borderWidth: 2.0,
                                                             borderRadius: 8.0,
                                                             margin:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         4.0,
@@ -10498,11 +10489,11 @@ class _A24contabilidadeEstudantilWidgetState
                                                       ),
                                                     ),
                                                   ),
-                                                ].divide(SizedBox(width: 20.0)),
+                                                ].divide(const SizedBox(width: 20.0)),
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 15.0, 15.0, 10.0),
                                               child: Row(
@@ -10516,7 +10507,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                           'ButtonFiltrar pressed ...');
                                                     },
                                                     text: 'Filtro',
-                                                    icon: Icon(
+                                                    icon: const Icon(
                                                       Icons.filter_alt,
                                                       color: Colors.white,
                                                       size: 15.0,
@@ -10525,14 +10516,14 @@ class _A24contabilidadeEstudantilWidgetState
                                                       width: 150.0,
                                                       height: 40.0,
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   24.0,
                                                                   0.0,
                                                                   24.0,
                                                                   0.0),
                                                       iconPadding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -10555,7 +10546,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     0.0,
                                                               ),
                                                       elevation: 3.0,
-                                                      borderSide: BorderSide(
+                                                      borderSide: const BorderSide(
                                                         color:
                                                             Colors.transparent,
                                                         width: 1.0,
@@ -10573,7 +10564,7 @@ class _A24contabilidadeEstudantilWidgetState
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -10626,7 +10617,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -10643,11 +10634,11 @@ class _A24contabilidadeEstudantilWidgetState
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -10681,7 +10672,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         10.0,
@@ -10690,10 +10681,10 @@ class _A24contabilidadeEstudantilWidgetState
                                                             child: Container(
                                                               width: 300.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -10703,7 +10694,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     Autocomplete<
                                                                         String>(
                                                                   initialValue:
-                                                                      TextEditingValue(),
+                                                                      const TextEditingValue(),
                                                                   optionsBuilder:
                                                                       (textEditingValue) {
                                                                     if (textEditingValue
@@ -10752,7 +10743,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                 0.0,
                                                                           ),
                                                                       textHighlightStyle:
-                                                                          TextStyle(),
+                                                                          const TextStyle(),
                                                                       elevation:
                                                                           4.0,
                                                                       optionBackgroundColor:
@@ -10900,7 +10891,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 0.0, 8.0),
                                                   child: Row(
@@ -10924,7 +10915,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   6.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -11040,7 +11031,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       'IconButton pressed ...');
                                                                 },
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 10.0)),
                                                           ),
                                                         ),
@@ -11051,7 +11042,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                 Expanded(
                                                   child: Align(
                                                     alignment:
-                                                        AlignmentDirectional(
+                                                        const AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: Builder(
                                                       builder: (context) {
@@ -11279,7 +11270,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                             onSelectChanged:
                                                                 onSelectChanged,
                                                             color:
-                                                                MaterialStateProperty
+                                                                WidgetStateProperty
                                                                     .all(
                                                               produtosListIndex %
                                                                           2 ==
@@ -11398,19 +11389,19 @@ class _A24contabilidadeEstudantilWidgetState
                                                                           30.0,
                                                                       decoration:
                                                                           BoxDecoration(
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0xFFF6AAAA),
                                                                         borderRadius:
                                                                             BorderRadius.circular(8.0),
                                                                         border:
                                                                             Border.all(
                                                                           color:
-                                                                              Color(0xFFE30909),
+                                                                              const Color(0xFFE30909),
                                                                         ),
                                                                       ),
                                                                       child:
                                                                           Align(
-                                                                        alignment: AlignmentDirectional(
+                                                                        alignment: const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                         child:
@@ -11420,7 +11411,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                               .bodyMedium
                                                                               .override(
                                                                                 fontFamily: 'Manrope',
-                                                                                color: Color(0xFFE30909),
+                                                                                color: const Color(0xFFE30909),
                                                                                 fontSize: 16.0,
                                                                                 letterSpacing: 0.0,
                                                                               ),
@@ -11437,7 +11428,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                           30.0,
                                                                       decoration:
                                                                           BoxDecoration(
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0xFFA8D1F6),
                                                                         borderRadius:
                                                                             BorderRadius.circular(8.0),
@@ -11449,7 +11440,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       ),
                                                                       child:
                                                                           Align(
-                                                                        alignment: AlignmentDirectional(
+                                                                        alignment: const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                         child:
@@ -11525,7 +11516,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     height:
                                                                         35.0,
                                                                     decoration:
-                                                                        BoxDecoration(
+                                                                        const BoxDecoration(
                                                                       color: Color(
                                                                           0xFFE30909),
                                                                       shape: BoxShape
@@ -11541,7 +11532,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                           25.0,
                                                                     ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         5.0)),
                                                               ),
@@ -11602,11 +11593,11 @@ class _A24contabilidadeEstudantilWidgetState
                                                               Colors
                                                                   .transparent,
                                                           checkboxCheckColor:
-                                                              Color(0x8A000000),
+                                                              const Color(0x8A000000),
                                                           checkboxUnselectedBorderColor:
-                                                              Color(0x8A000000),
+                                                              const Color(0x8A000000),
                                                           checkboxSelectedBorderColor:
-                                                              Color(0x8A000000),
+                                                              const Color(0x8A000000),
                                                         );
                                                       },
                                                     ),
@@ -11623,7 +11614,7 @@ class _A24contabilidadeEstudantilWidgetState
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'HistoriFaturamento')
+                        if (widget.telas == 'HistoriFaturamento')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.75,
                             height: double.infinity,
@@ -11635,7 +11626,7 @@ class _A24contabilidadeEstudantilWidgetState
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 20.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -11644,7 +11635,7 @@ class _A24contabilidadeEstudantilWidgetState
                                     child: Column(
                                       children: [
                                         Align(
-                                          alignment: Alignment(-1.0, 0),
+                                          alignment: const Alignment(-1.0, 0),
                                           child: TabBar(
                                             isScrollable: true,
                                             labelColor:
@@ -11661,13 +11652,13 @@ class _A24contabilidadeEstudantilWidgetState
                                                       fontSize: 18.0,
                                                       letterSpacing: 0.0,
                                                     ),
-                                            unselectedLabelStyle: TextStyle(),
+                                            unselectedLabelStyle: const TextStyle(),
                                             indicatorColor:
                                                 FlutterFlowTheme.of(context)
                                                     .tertiary,
                                             indicatorWeight: 1.0,
-                                            padding: EdgeInsets.all(4.0),
-                                            tabs: [
+                                            padding: const EdgeInsets.all(4.0),
+                                            tabs: const [
                                               Row(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
@@ -11744,7 +11735,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                 _model.tabBarController5,
                                             children: [
                                               Visibility(
-                                                visible: widget!.telas == '5',
+                                                visible: widget.telas == '5',
                                                 child: Container(
                                                   width:
                                                       MediaQuery.sizeOf(context)
@@ -11758,7 +11749,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                   ),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsets.all(20.0),
+                                                        const EdgeInsets.all(20.0),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -11798,7 +11789,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             .max,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             12.0,
                                                                             10.0,
                                                                             0.0,
@@ -11814,12 +11805,12 @@ class _A24contabilidadeEstudantilWidgetState
                                                                         ),
                                                                       ),
                                                                       Align(
-                                                                        alignment: AlignmentDirectional(
+                                                                        alignment: const AlignmentDirectional(
                                                                             -1.0,
                                                                             0.0),
                                                                         child:
                                                                             Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               10.0,
                                                                               10.0,
                                                                               0.0,
@@ -11846,7 +11837,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                         .tertiary,
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             15.0,
                                                                             15.0,
@@ -11874,7 +11865,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       ),
                                                                       child:
                                                                           Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             15.0,
                                                                             15.0,
                                                                             17.0,
@@ -11904,7 +11895,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
                                                                                     Align(
-                                                                                      alignment: AlignmentDirectional(1.0, 0.0),
+                                                                                      alignment: const AlignmentDirectional(1.0, 0.0),
                                                                                       child: Text(
                                                                                         'Fatura: #0001',
                                                                                         style: FlutterFlowTheme.of(context).titleLarge.override(
@@ -11936,7 +11927,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                             letterSpacing: 0.0,
                                                                                           ),
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 10.0)),
+                                                                                  ].divide(const SizedBox(width: 10.0)),
                                                                                 ),
                                                                                 Row(
                                                                                   mainAxisSize: MainAxisSize.max,
@@ -11954,14 +11945,14 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                       'Não remunerado',
                                                                                       style: FlutterFlowTheme.of(context).labelLarge.override(
                                                                                             fontFamily: 'Manrope',
-                                                                                            color: Color(0xFFE30909),
+                                                                                            color: const Color(0xFFE30909),
                                                                                             fontSize: 18.0,
                                                                                             letterSpacing: 0.0,
                                                                                           ),
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 10.0)),
+                                                                                  ].divide(const SizedBox(width: 10.0)),
                                                                                 ),
-                                                                              ].divide(SizedBox(height: 5.0)),
+                                                                              ].divide(const SizedBox(height: 5.0)),
                                                                             ),
                                                                           ],
                                                                         ),
@@ -11976,7 +11967,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                         .alternate,
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             15.0,
                                                                             15.0,
@@ -12025,7 +12016,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                         letterSpacing: 0.0,
                                                                                       ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 20.0)),
+                                                                              ].divide(const SizedBox(width: 20.0)),
                                                                             ),
                                                                             Row(
                                                                               mainAxisSize: MainAxisSize.max,
@@ -12047,7 +12038,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                         letterSpacing: 0.0,
                                                                                       ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 10.0)),
+                                                                              ].divide(const SizedBox(width: 10.0)),
                                                                             ),
                                                                             Row(
                                                                               mainAxisSize: MainAxisSize.max,
@@ -12069,7 +12060,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                         letterSpacing: 0.0,
                                                                                       ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 10.0)),
+                                                                              ].divide(const SizedBox(width: 10.0)),
                                                                             ),
                                                                             Row(
                                                                               mainAxisSize: MainAxisSize.max,
@@ -12091,9 +12082,9 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                         letterSpacing: 0.0,
                                                                                       ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 10.0)),
+                                                                              ].divide(const SizedBox(width: 10.0)),
                                                                             ),
-                                                                          ].divide(SizedBox(height: 2.0)),
+                                                                          ].divide(const SizedBox(height: 2.0)),
                                                                         ),
                                                                         Column(
                                                                           mainAxisSize:
@@ -12127,7 +12118,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                         letterSpacing: 0.0,
                                                                                       ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 20.0)),
+                                                                              ].divide(const SizedBox(width: 20.0)),
                                                                             ),
                                                                             Row(
                                                                               mainAxisSize: MainAxisSize.max,
@@ -12141,7 +12132,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                         letterSpacing: 0.0,
                                                                                       ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 15.0)),
+                                                                              ].divide(const SizedBox(width: 15.0)),
                                                                             ),
                                                                             Row(
                                                                               mainAxisSize: MainAxisSize.max,
@@ -12155,15 +12146,15 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                         letterSpacing: 0.0,
                                                                                       ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 15.0)),
+                                                                              ].divide(const SizedBox(width: 15.0)),
                                                                             ),
-                                                                          ].divide(SizedBox(height: 2.0)),
+                                                                          ].divide(const SizedBox(height: 2.0)),
                                                                         ),
                                                                       ],
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             20.0,
@@ -12193,7 +12184,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             ),
                                                                             child:
                                                                                 Padding(
-                                                                              padding: EdgeInsets.all(10.0),
+                                                                              padding: const EdgeInsets.all(10.0),
                                                                               child: Column(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 children: [
@@ -12201,7 +12192,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
                                                                                       Padding(
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 6.0, 0.0),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 6.0, 0.0),
                                                                                         child: Icon(
                                                                                           Icons.monetization_on_outlined,
                                                                                           color: FlutterFlowTheme.of(context).tertiary,
@@ -12218,27 +12209,27 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                       ),
                                                                                       Flexible(
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 15.0, 0.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 15.0, 0.0),
                                                                                           child: Row(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             mainAxisAlignment: MainAxisAlignment.end,
                                                                                             children: [
                                                                                               Align(
-                                                                                                alignment: AlignmentDirectional(1.0, 0.0),
+                                                                                                alignment: const AlignmentDirectional(1.0, 0.0),
                                                                                                 child: FFButtonWidget(
                                                                                                   onPressed: () {
                                                                                                     print('Button pressed ...');
                                                                                                   },
                                                                                                   text: 'Taxa Selecionada',
-                                                                                                  icon: Icon(
+                                                                                                  icon: const Icon(
                                                                                                     Icons.attach_money_outlined,
                                                                                                     size: 23.0,
                                                                                                   ),
                                                                                                   options: FFButtonOptions(
                                                                                                     width: 200.0,
                                                                                                     height: 40.0,
-                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                                    iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                                     color: FlutterFlowTheme.of(context).primary,
                                                                                                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                                           fontFamily: 'Manrope',
@@ -12247,7 +12238,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                                           letterSpacing: 0.0,
                                                                                                         ),
                                                                                                     elevation: 3.0,
-                                                                                                    borderSide: BorderSide(
+                                                                                                    borderSide: const BorderSide(
                                                                                                       color: Colors.transparent,
                                                                                                       width: 1.0,
                                                                                                     ),
@@ -12267,7 +12258,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                   ),
                                                                                   Expanded(
                                                                                     child: Padding(
-                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
                                                                                       child: Builder(
                                                                                         builder: (context) {
                                                                                           final list = FFAppState().eventos.toList();
@@ -12280,7 +12271,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                                 label: DefaultTextStyle.merge(
                                                                                                   softWrap: true,
                                                                                                   child: Align(
-                                                                                                    alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                                    alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                                     child: Text(
                                                                                                       'N°',
                                                                                                       style: FlutterFlowTheme.of(context).labelLarge.override(
@@ -12297,7 +12288,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                                 label: DefaultTextStyle.merge(
                                                                                                   softWrap: true,
                                                                                                   child: Align(
-                                                                                                    alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                                    alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                                     child: Text(
                                                                                                       'Tipo de Taxa',
                                                                                                       style: FlutterFlowTheme.of(context).labelLarge.override(
@@ -12406,7 +12397,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                             dataRowBuilder: (listItem, listIndex, selected, onSelectChanged) => DataRow(
                                                                                               selected: selected,
                                                                                               onSelectChanged: onSelectChanged,
-                                                                                              color: MaterialStateProperty.all(
+                                                                                              color: WidgetStateProperty.all(
                                                                                                 listIndex % 2 == 0 ? FlutterFlowTheme.of(context).secondaryBackground : FlutterFlowTheme.of(context).primaryBackground,
                                                                                               ),
                                                                                               cells: [
@@ -12436,7 +12427,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                                   textAlign: TextAlign.center,
                                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                         fontFamily: 'Manrope',
-                                                                                                        color: Color(0xFFE30909),
+                                                                                                        color: const Color(0xFFE30909),
                                                                                                         letterSpacing: 0.0,
                                                                                                       ),
                                                                                                 ),
@@ -12494,9 +12485,9 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                             addVerticalDivider: false,
                                                                                             checkboxUnselectedFillColor: Colors.transparent,
                                                                                             checkboxSelectedFillColor: Colors.transparent,
-                                                                                            checkboxCheckColor: Color(0x8A000000),
-                                                                                            checkboxUnselectedBorderColor: Color(0x8A000000),
-                                                                                            checkboxSelectedBorderColor: Color(0x8A000000),
+                                                                                            checkboxCheckColor: const Color(0x8A000000),
+                                                                                            checkboxUnselectedBorderColor: const Color(0x8A000000),
+                                                                                            checkboxSelectedBorderColor: const Color(0x8A000000),
                                                                                           );
                                                                                         },
                                                                                       ),
@@ -12507,7 +12498,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
                                                                   ),
@@ -12544,7 +12535,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                               MainAxisSize.max,
                                                                           children: [
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(12.0, 10.0, 0.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(12.0, 10.0, 0.0, 0.0),
                                                                               child: FaIcon(
                                                                                 FontAwesomeIcons.moneyCheck,
                                                                                 color: FlutterFlowTheme.of(context).tertiary,
@@ -12552,9 +12543,9 @@ class _A24contabilidadeEstudantilWidgetState
                                                                               ),
                                                                             ),
                                                                             Align(
-                                                                              alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                              alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 0.0, 0.0),
                                                                                 child: Text(
                                                                                   'Detalhes da Fatura',
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -12575,7 +12566,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                               FlutterFlowTheme.of(context).tertiary,
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               10.0,
                                                                               10.0,
                                                                               10.0,
@@ -12592,7 +12583,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 children: [
                                                                                   Align(
-                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                     child: Container(
                                                                                       width: 450.0,
                                                                                       height: 40.0,
@@ -12601,7 +12592,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                         borderRadius: BorderRadius.circular(8.0),
                                                                                       ),
                                                                                       child: Padding(
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                                                                                         child: Row(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           mainAxisAlignment: MainAxisAlignment.end,
@@ -12615,7 +12606,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                                   ),
                                                                                             ),
                                                                                             Padding(
-                                                                                              padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                                                                                               child: Text(
                                                                                                 'R\$10,00',
                                                                                                 style: FlutterFlowTheme.of(context).labelLarge.override(
@@ -12631,7 +12622,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                     ),
                                                                                   ),
                                                                                   Align(
-                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                     child: Container(
                                                                                       width: 450.0,
                                                                                       height: 40.0,
@@ -12640,7 +12631,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                         borderRadius: BorderRadius.circular(8.0),
                                                                                       ),
                                                                                       child: Padding(
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                                                                                         child: Row(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           mainAxisAlignment: MainAxisAlignment.end,
@@ -12654,7 +12645,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                                   ),
                                                                                             ),
                                                                                             Padding(
-                                                                                              padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                                                                                               child: Text(
                                                                                                 'R\$10,00',
                                                                                                 style: FlutterFlowTheme.of(context).labelLarge.override(
@@ -12670,7 +12661,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                     ),
                                                                                   ),
                                                                                   Align(
-                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                     child: Container(
                                                                                       width: 450.0,
                                                                                       height: 40.0,
@@ -12679,7 +12670,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                         borderRadius: BorderRadius.circular(8.0),
                                                                                       ),
                                                                                       child: Padding(
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                                                                                         child: Row(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           mainAxisAlignment: MainAxisAlignment.end,
@@ -12693,7 +12684,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                                   ),
                                                                                             ),
                                                                                             Padding(
-                                                                                              padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                                                                                               child: Text(
                                                                                                 'R\$10,00',
                                                                                                 style: FlutterFlowTheme.of(context).labelLarge.override(
@@ -12709,7 +12700,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                     ),
                                                                                   ),
                                                                                   Align(
-                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                     child: Container(
                                                                                       width: 450.0,
                                                                                       height: 40.0,
@@ -12718,7 +12709,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                         borderRadius: BorderRadius.circular(8.0),
                                                                                       ),
                                                                                       child: Padding(
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                                                                                         child: Row(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           mainAxisAlignment: MainAxisAlignment.end,
@@ -12732,7 +12723,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                                   ),
                                                                                             ),
                                                                                             Padding(
-                                                                                              padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                                                                                               child: Text(
                                                                                                 'R\$10,00',
                                                                                                 style: FlutterFlowTheme.of(context).labelLarge.override(
@@ -12748,7 +12739,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                     ),
                                                                                   ),
                                                                                   Align(
-                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                     child: Container(
                                                                                       width: 450.0,
                                                                                       height: 40.0,
@@ -12757,7 +12748,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                         borderRadius: BorderRadius.circular(8.0),
                                                                                       ),
                                                                                       child: Padding(
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                                                                                         child: Row(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           mainAxisAlignment: MainAxisAlignment.end,
@@ -12771,7 +12762,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                                   ),
                                                                                             ),
                                                                                             Padding(
-                                                                                              padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                                                                                               child: Text(
                                                                                                 'R\$10,00',
                                                                                                 style: FlutterFlowTheme.of(context).labelLarge.override(
@@ -12787,7 +12778,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                     ),
                                                                                   ),
                                                                                   Align(
-                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                     child: Container(
                                                                                       width: 450.0,
                                                                                       height: 40.0,
@@ -12796,7 +12787,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                         borderRadius: BorderRadius.circular(8.0),
                                                                                       ),
                                                                                       child: Padding(
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                                                                                         child: Row(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           mainAxisAlignment: MainAxisAlignment.end,
@@ -12811,7 +12802,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                                   ),
                                                                                             ),
                                                                                             Padding(
-                                                                                              padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                                                                                               child: Text(
                                                                                                 'R\$10,00',
                                                                                                 style: FlutterFlowTheme.of(context).labelLarge.override(
@@ -12827,13 +12818,13 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                ].divide(SizedBox(height: 5.0)),
+                                                                                ].divide(const SizedBox(height: 5.0)),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 20.0)),
+                                                                            ].divide(const SizedBox(width: 20.0)),
                                                                           ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               15.0,
                                                                               15.0,
@@ -12850,7 +12841,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                   print('Button pressed ...');
                                                                                 },
                                                                                 text: 'Imprimir',
-                                                                                icon: Icon(
+                                                                                icon: const Icon(
                                                                                   Icons.print_outlined,
                                                                                   color: Colors.white,
                                                                                   size: 25.0,
@@ -12858,8 +12849,8 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                 options: FFButtonOptions(
                                                                                   width: 200.0,
                                                                                   height: 40.0,
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                  iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                   color: FlutterFlowTheme.of(context).primary,
                                                                                   textStyle: FlutterFlowTheme.of(context).titleMedium.override(
                                                                                         fontFamily: 'Manrope',
@@ -12867,7 +12858,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                         letterSpacing: 0.0,
                                                                                       ),
                                                                                   elevation: 3.0,
-                                                                                  borderSide: BorderSide(
+                                                                                  borderSide: const BorderSide(
                                                                                     color: Colors.transparent,
                                                                                     width: 1.0,
                                                                                   ),
@@ -12895,10 +12886,10 @@ class _A24contabilidadeEstudantilWidgetState
                                                 autovalidateMode:
                                                     AutovalidateMode.disabled,
                                                 child: Container(
-                                                  decoration: BoxDecoration(),
+                                                  decoration: const BoxDecoration(),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 20.0,
                                                                 0.0, 50.0),
                                                     child:
@@ -12912,7 +12903,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -12946,7 +12937,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -12971,14 +12962,14 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .filialValueController10 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -13020,7 +13011,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -13036,7 +13027,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -13052,7 +13043,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                   '')
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           20.0,
                                                                           0.0,
@@ -13086,7 +13077,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                               ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               6.0,
                                                                               0.0,
                                                                               0.0,
@@ -13110,14 +13101,14 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       width:
                                                                           550.0,
                                                                       decoration:
-                                                                          BoxDecoration(),
+                                                                          const BoxDecoration(),
                                                                       child: FlutterFlowDropDown<
                                                                           String>(
                                                                         controller: _model
                                                                             .categoriaValueController5 ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: [
+                                                                        options: const [
                                                                           'Option 1'
                                                                         ],
                                                                         onChanged:
@@ -13154,7 +13145,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             2.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -13170,14 +13161,14 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         20.0)),
                                                               ),
                                                             ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -13211,7 +13202,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -13236,7 +13227,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: Row(
                                                                       mainAxisSize:
                                                                           MainAxisSize
@@ -13252,7 +13243,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             color:
                                                                                 FlutterFlowTheme.of(context).primaryBackground,
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(8.0),
                                                                               bottomRight: Radius.circular(0.0),
                                                                               topLeft: Radius.circular(8.0),
@@ -13276,7 +13267,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                         Expanded(
                                                                           child:
                                                                               Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 8.0,
@@ -13303,7 +13294,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                     color: FlutterFlowTheme.of(context).alternate,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -13315,7 +13306,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                     color: FlutterFlowTheme.of(context).primary,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -13327,7 +13318,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                     color: FlutterFlowTheme.of(context).error,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -13339,7 +13330,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                     color: FlutterFlowTheme.of(context).error,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -13361,7 +13352,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -13371,7 +13362,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                   '')
                                                             Container(
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                             ),
                                                           Divider(
                                                             thickness: 1.0,
@@ -13381,7 +13372,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -13415,7 +13406,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -13542,7 +13533,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -13554,7 +13545,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -13578,7 +13569,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             .end,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             16.0,
@@ -13707,7 +13698,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -13719,7 +13710,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -13743,7 +13734,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             .end,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             16.0,
@@ -13872,7 +13863,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -13884,7 +13875,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -13918,7 +13909,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -13943,14 +13934,14 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .filialValueController11 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -13992,7 +13983,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -14008,7 +13999,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -14020,7 +14011,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -14044,7 +14035,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             .end,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             16.0,
@@ -14175,7 +14166,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -14188,7 +14179,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     .end,
                                                             children: [
                                                               Padding(
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         50.0,
                                                                         10.0,
@@ -14209,7 +14200,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                   },
                                                                   text:
                                                                       'Pagar taxa',
-                                                                  icon: Icon(
+                                                                  icon: const Icon(
                                                                     Icons
                                                                         .credit_card_rounded,
                                                                     size: 20.0,
@@ -14220,14 +14211,14 @@ class _A24contabilidadeEstudantilWidgetState
                                                                         250.0,
                                                                     height:
                                                                         40.0,
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             24.0,
                                                                             0.0,
                                                                             24.0,
                                                                             0.0),
                                                                     iconPadding:
-                                                                        EdgeInsetsDirectional.fromSTEB(
+                                                                        const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -14253,7 +14244,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     elevation:
                                                                         3.0,
                                                                     borderSide:
-                                                                        BorderSide(
+                                                                        const BorderSide(
                                                                       color: Colors
                                                                           .transparent,
                                                                       width:
@@ -14267,7 +14258,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                               ),
                                                             ],
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 5.0)),
                                                       ),
                                                     ),
@@ -14279,10 +14270,10 @@ class _A24contabilidadeEstudantilWidgetState
                                                 autovalidateMode:
                                                     AutovalidateMode.disabled,
                                                 child: Container(
-                                                  decoration: BoxDecoration(),
+                                                  decoration: const BoxDecoration(),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 20.0,
                                                                 0.0, 50.0),
                                                     child:
@@ -14299,7 +14290,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                               5)
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           20.0,
                                                                           0.0,
@@ -14333,7 +14324,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                               ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               6.0,
                                                                               0.0,
                                                                               0.0,
@@ -14357,14 +14348,14 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       width:
                                                                           550.0,
                                                                       decoration:
-                                                                          BoxDecoration(),
+                                                                          const BoxDecoration(),
                                                                       child: FlutterFlowDropDown<
                                                                           String>(
                                                                         controller: _model
                                                                             .categoriaValueController6 ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: [
+                                                                        options: const [
                                                                           'Option 1'
                                                                         ],
                                                                         onChanged:
@@ -14401,7 +14392,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             2.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -14417,14 +14408,14 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         20.0)),
                                                               ),
                                                             ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -14458,7 +14449,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -14483,7 +14474,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: Row(
                                                                       mainAxisSize:
                                                                           MainAxisSize
@@ -14499,7 +14490,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             color:
                                                                                 FlutterFlowTheme.of(context).primaryBackground,
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(8.0),
                                                                               bottomRight: Radius.circular(0.0),
                                                                               topLeft: Radius.circular(8.0),
@@ -14523,7 +14514,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                         Expanded(
                                                                           child:
                                                                               Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 8.0,
@@ -14550,7 +14541,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                     color: FlutterFlowTheme.of(context).alternate,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -14562,7 +14553,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                     color: FlutterFlowTheme.of(context).primary,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -14574,7 +14565,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                     color: FlutterFlowTheme.of(context).error,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -14586,7 +14577,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                     color: FlutterFlowTheme.of(context).error,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -14608,7 +14599,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -14617,7 +14608,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                               6)
                                                             Container(
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                             ),
                                                           Divider(
                                                             thickness: 1.0,
@@ -14627,7 +14618,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -14661,7 +14652,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -14790,7 +14781,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -14802,7 +14793,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -14826,7 +14817,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             .end,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             16.0,
@@ -14957,7 +14948,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -14969,7 +14960,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -15003,7 +14994,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -15028,14 +15019,14 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .filialValueController12 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -15077,7 +15068,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -15093,7 +15084,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -15105,7 +15096,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -15129,7 +15120,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             .end,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             16.0,
@@ -15260,7 +15251,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -15273,7 +15264,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     .end,
                                                             children: [
                                                               Padding(
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         50.0,
                                                                         10.0,
@@ -15294,7 +15285,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                   },
                                                                   text:
                                                                       'Pagar taxa',
-                                                                  icon: Icon(
+                                                                  icon: const Icon(
                                                                     Icons
                                                                         .credit_card_rounded,
                                                                     size: 20.0,
@@ -15305,14 +15296,14 @@ class _A24contabilidadeEstudantilWidgetState
                                                                         250.0,
                                                                     height:
                                                                         40.0,
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             24.0,
                                                                             0.0,
                                                                             24.0,
                                                                             0.0),
                                                                     iconPadding:
-                                                                        EdgeInsetsDirectional.fromSTEB(
+                                                                        const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -15338,7 +15329,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     elevation:
                                                                         3.0,
                                                                     borderSide:
-                                                                        BorderSide(
+                                                                        const BorderSide(
                                                                       color: Colors
                                                                           .transparent,
                                                                       width:
@@ -15352,7 +15343,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                               ),
                                                             ],
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 5.0)),
                                                       ),
                                                     ),
@@ -15369,7 +15360,7 @@ class _A24contabilidadeEstudantilWidgetState
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'FaturadeTaxas')
+                        if (widget.telas == 'FaturadeTaxas')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -15378,7 +15369,7 @@ class _A24contabilidadeEstudantilWidgetState
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -15409,11 +15400,11 @@ class _A24contabilidadeEstudantilWidgetState
                                               children: [
                                                 Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           -1.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(12.0,
                                                                 10.0, 0.0, 0.0),
                                                     child: Text(
@@ -15441,7 +15432,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                       .tertiary,
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       10.0, 10.0, 10.0, 0.0),
                                               child: Row(
@@ -15454,7 +15445,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                     child: Container(
                                                       width: 550.0,
                                                       decoration:
-                                                          BoxDecoration(),
+                                                          const BoxDecoration(),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -15464,7 +15455,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -15497,13 +15488,13 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       .error,
                                                                   size: 16.0,
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 6.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -15517,7 +15508,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                   FormFieldController<
                                                                           String>(
                                                                       null),
-                                                              options: [
+                                                              options: const [
                                                                 'option 1'
                                                               ],
                                                               onChanged: (val) =>
@@ -15557,7 +15548,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                               borderWidth: 2.0,
                                                               borderRadius: 8.0,
                                                               margin:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           4.0,
@@ -15582,7 +15573,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                     child: Container(
                                                       width: 550.0,
                                                       decoration:
-                                                          BoxDecoration(),
+                                                          const BoxDecoration(),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -15592,7 +15583,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -15625,7 +15616,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       .error,
                                                                   size: 16.0,
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 6.0)),
                                                             ),
                                                           ),
@@ -15636,7 +15627,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                 FormFieldController<
                                                                         String>(
                                                                     null),
-                                                            options: [
+                                                            options: const [
                                                               'option 1'
                                                             ],
                                                             onChanged: (val) =>
@@ -15676,7 +15667,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                             borderWidth: 2.0,
                                                             borderRadius: 8.0,
                                                             margin:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         4.0,
@@ -15698,7 +15689,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                     child: Container(
                                                       width: 550.0,
                                                       decoration:
-                                                          BoxDecoration(),
+                                                          const BoxDecoration(),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -15708,7 +15699,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -15741,7 +15732,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       .error,
                                                                   size: 16.0,
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 6.0)),
                                                             ),
                                                           ),
@@ -15752,7 +15743,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                 FormFieldController<
                                                                         String>(
                                                                     null),
-                                                            options: [
+                                                            options: const [
                                                               'option 1'
                                                             ],
                                                             onChanged: (val) =>
@@ -15792,7 +15783,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                             borderWidth: 2.0,
                                                             borderRadius: 8.0,
                                                             margin:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         4.0,
@@ -15809,11 +15800,11 @@ class _A24contabilidadeEstudantilWidgetState
                                                       ),
                                                     ),
                                                   ),
-                                                ].divide(SizedBox(width: 20.0)),
+                                                ].divide(const SizedBox(width: 20.0)),
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 15.0, 15.0, 10.0),
                                               child: Row(
@@ -15827,7 +15818,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                           'ButtonFiltrar pressed ...');
                                                     },
                                                     text: 'Filtro',
-                                                    icon: Icon(
+                                                    icon: const Icon(
                                                       Icons.filter_alt,
                                                       color: Colors.white,
                                                       size: 15.0,
@@ -15836,14 +15827,14 @@ class _A24contabilidadeEstudantilWidgetState
                                                       width: 150.0,
                                                       height: 40.0,
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   24.0,
                                                                   0.0,
                                                                   24.0,
                                                                   0.0),
                                                       iconPadding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -15866,7 +15857,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     0.0,
                                                               ),
                                                       elevation: 3.0,
-                                                      borderSide: BorderSide(
+                                                      borderSide: const BorderSide(
                                                         color:
                                                             Colors.transparent,
                                                         width: 1.0,
@@ -15884,7 +15875,7 @@ class _A24contabilidadeEstudantilWidgetState
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -15937,7 +15928,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -15954,11 +15945,11 @@ class _A24contabilidadeEstudantilWidgetState
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -15992,7 +15983,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         10.0,
@@ -16001,10 +15992,10 @@ class _A24contabilidadeEstudantilWidgetState
                                                             child: Container(
                                                               width: 300.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -16014,7 +16005,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     Autocomplete<
                                                                         String>(
                                                                   initialValue:
-                                                                      TextEditingValue(),
+                                                                      const TextEditingValue(),
                                                                   optionsBuilder:
                                                                       (textEditingValue) {
                                                                     if (textEditingValue
@@ -16063,7 +16054,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                 0.0,
                                                                           ),
                                                                       textHighlightStyle:
-                                                                          TextStyle(),
+                                                                          const TextStyle(),
                                                                       elevation:
                                                                           4.0,
                                                                       optionBackgroundColor:
@@ -16211,7 +16202,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 0.0, 8.0),
                                                   child: Row(
@@ -16235,7 +16226,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   6.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -16351,7 +16342,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       'IconButton pressed ...');
                                                                 },
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 10.0)),
                                                           ),
                                                         ),
@@ -16362,7 +16353,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                 Expanded(
                                                   child: Align(
                                                     alignment:
-                                                        AlignmentDirectional(
+                                                        const AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: Builder(
                                                       builder: (context) {
@@ -16631,7 +16622,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                             onSelectChanged:
                                                                 onSelectChanged,
                                                             color:
-                                                                MaterialStateProperty
+                                                                WidgetStateProperty
                                                                     .all(
                                                               produtosListIndex %
                                                                           2 ==
@@ -16809,7 +16800,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     height:
                                                                         35.0,
                                                                     decoration:
-                                                                        BoxDecoration(
+                                                                        const BoxDecoration(
                                                                       color: Color(
                                                                           0xFFE30909),
                                                                       shape: BoxShape
@@ -16825,7 +16816,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                           25.0,
                                                                     ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         8.0)),
                                                               ),
@@ -16886,11 +16877,11 @@ class _A24contabilidadeEstudantilWidgetState
                                                               Colors
                                                                   .transparent,
                                                           checkboxCheckColor:
-                                                              Color(0x8A000000),
+                                                              const Color(0x8A000000),
                                                           checkboxUnselectedBorderColor:
-                                                              Color(0x8A000000),
+                                                              const Color(0x8A000000),
                                                           checkboxSelectedBorderColor:
-                                                              Color(0x8A000000),
+                                                              const Color(0x8A000000),
                                                         );
                                                       },
                                                     ),
@@ -16907,7 +16898,7 @@ class _A24contabilidadeEstudantilWidgetState
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'lembretetaxa')
+                        if (widget.telas == 'lembretetaxa')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.75,
                             height: double.infinity,
@@ -16919,7 +16910,7 @@ class _A24contabilidadeEstudantilWidgetState
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 20.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -16928,7 +16919,7 @@ class _A24contabilidadeEstudantilWidgetState
                                     child: Column(
                                       children: [
                                         Align(
-                                          alignment: Alignment(-1.0, 0),
+                                          alignment: const Alignment(-1.0, 0),
                                           child: TabBar(
                                             isScrollable: true,
                                             labelColor:
@@ -16945,13 +16936,13 @@ class _A24contabilidadeEstudantilWidgetState
                                                       fontSize: 18.0,
                                                       letterSpacing: 0.0,
                                                     ),
-                                            unselectedLabelStyle: TextStyle(),
+                                            unselectedLabelStyle: const TextStyle(),
                                             indicatorColor:
                                                 FlutterFlowTheme.of(context)
                                                     .tertiary,
                                             indicatorWeight: 1.0,
-                                            padding: EdgeInsets.all(4.0),
-                                            tabs: [
+                                            padding: const EdgeInsets.all(4.0),
+                                            tabs: const [
                                               Row(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
@@ -17033,10 +17024,10 @@ class _A24contabilidadeEstudantilWidgetState
                                                       snapshot.data!;
 
                                                   return Container(
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsets.all(20.0),
+                                                          const EdgeInsets.all(20.0),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -17063,7 +17054,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                 ),
                                                                 child: Padding(
                                                                   padding:
-                                                                      EdgeInsets
+                                                                      const EdgeInsets
                                                                           .all(
                                                                               6.0),
                                                                   child: Row(
@@ -17191,7 +17182,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                               'IconButton pressed ...');
                                                                         },
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             10.0)),
                                                                   ),
@@ -17200,9 +17191,9 @@ class _A24contabilidadeEstudantilWidgetState
                                                               Container(
                                                                 width: 300.0,
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -17212,7 +17203,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       Autocomplete<
                                                                           String>(
                                                                     initialValue:
-                                                                        TextEditingValue(),
+                                                                        const TextEditingValue(),
                                                                     optionsBuilder:
                                                                         (textEditingValue) {
                                                                       if (textEditingValue
@@ -17254,7 +17245,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                         textHighlightStyle:
-                                                                            TextStyle(),
+                                                                            const TextStyle(),
                                                                         elevation:
                                                                             4.0,
                                                                         optionBackgroundColor:
@@ -17300,31 +17291,29 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             (_) =>
                                                                                 EasyDebounce.debounce(
                                                                           '_model.textController27',
-                                                                          Duration(
+                                                                          const Duration(
                                                                               milliseconds: 2000),
                                                                           () async {
-                                                                            if (_model.textController27.text != null &&
-                                                                                _model.textController27.text != '') {
+                                                                            if (_model.textController27.text != '') {
                                                                               safeSetState(() {
                                                                                 _model.simpleSearchResults5 = TextSearch(
                                                                                   containerInventarioProdutosRecordList
                                                                                       .map(
                                                                                         (record) => TextSearchItem.fromTerms(record, [
-                                                                                          record.produtoCategoria!,
-                                                                                          record.nomeProduto!,
-                                                                                          record.produtoCodigo!,
-                                                                                          record.filial!
+                                                                                          record.produtoCategoria,
+                                                                                          record.nomeProduto,
+                                                                                          record.produtoCodigo,
+                                                                                          record.filial
                                                                                         ]),
                                                                                       )
                                                                                       .toList(),
                                                                                 ).search(_model.textController27.text).map((r) => r.object).take(20).toList();
-                                                                                ;
                                                                               });
                                                                             } else {
                                                                               context.goNamed(
                                                                                 'A01escola',
                                                                                 extra: <String, dynamic>{
-                                                                                  kTransitionInfoKey: TransitionInfo(
+                                                                                  kTransitionInfoKey: const TransitionInfo(
                                                                                     hasTransition: true,
                                                                                     transitionType: PageTransitionType.fade,
                                                                                     duration: Duration(milliseconds: 0),
@@ -17418,7 +17407,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                           Expanded(
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           10.0,
@@ -17559,7 +17548,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                               selected,
                                                                               onSelectChanged) =>
                                                                           DataRow(
-                                                                        color: MaterialStateProperty
+                                                                        color: WidgetStateProperty
                                                                             .all(
                                                                           produtosListIndex % 2 == 0
                                                                               ? FlutterFlowTheme.of(context).secondaryBackground
@@ -17612,7 +17601,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                   child: Icon(
                                                                                     Icons.edit_square,
                                                                                     color: FlutterFlowTheme.of(context).primaryText,
@@ -17623,12 +17612,12 @@ class _A24contabilidadeEstudantilWidgetState
                                                                               Container(
                                                                                 width: 35.0,
                                                                                 height: 35.0,
-                                                                                decoration: BoxDecoration(
+                                                                                decoration: const BoxDecoration(
                                                                                   color: Color(0xFFE30909),
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                   child: Icon(
                                                                                     Icons.delete_rounded,
                                                                                     color: FlutterFlowTheme.of(context).info,
@@ -17636,7 +17625,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                   ),
                                                                                 ),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 10.0)),
+                                                                            ].divide(const SizedBox(width: 10.0)),
                                                                           ),
                                                                         ]
                                                                             .map((c) =>
@@ -17710,10 +17699,10 @@ class _A24contabilidadeEstudantilWidgetState
                                                 autovalidateMode:
                                                     AutovalidateMode.disabled,
                                                 child: Container(
-                                                  decoration: BoxDecoration(),
+                                                  decoration: const BoxDecoration(),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 20.0,
                                                                 0.0, 50.0),
                                                     child:
@@ -17727,7 +17716,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -17761,7 +17750,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -17786,14 +17775,14 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .filialValueController13 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -17835,7 +17824,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -17851,7 +17840,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -17863,7 +17852,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -17897,7 +17886,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -17933,7 +17922,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                           .filialValueController14 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -17975,7 +17964,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -17991,7 +17980,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -18007,7 +17996,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                   '')
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           20.0,
                                                                           0.0,
@@ -18041,7 +18030,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                               ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               6.0,
                                                                               0.0,
                                                                               0.0,
@@ -18065,14 +18054,14 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       width:
                                                                           550.0,
                                                                       decoration:
-                                                                          BoxDecoration(),
+                                                                          const BoxDecoration(),
                                                                       child: FlutterFlowDropDown<
                                                                           String>(
                                                                         controller: _model
                                                                             .categoriaValueController7 ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: [
+                                                                        options: const [
                                                                           'Option 1'
                                                                         ],
                                                                         onChanged:
@@ -18109,7 +18098,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             2.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -18125,14 +18114,14 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         20.0)),
                                                               ),
                                                             ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -18166,7 +18155,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -18293,7 +18282,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -18309,11 +18298,11 @@ class _A24contabilidadeEstudantilWidgetState
                                                                   '')
                                                             Container(
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                             ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -18350,7 +18339,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -18375,7 +18364,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         TextFormField(
                                                                       controller:
@@ -18483,13 +18472,13 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -18516,7 +18505,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                             .end,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             16.0,
@@ -18591,7 +18580,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                     letterSpacing: 0.0,
                                                                                   ),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 3.0)),
+                                                                          ].divide(const SizedBox(width: 3.0)),
                                                                         ),
                                                                         Row(
                                                                           mainAxisSize:
@@ -18630,13 +18619,13 @@ class _A24contabilidadeEstudantilWidgetState
                                                                                     letterSpacing: 0.0,
                                                                                   ),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 3.0)),
+                                                                          ].divide(const SizedBox(width: 3.0)),
                                                                         ),
                                                                       ],
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -18652,7 +18641,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       .visivel ==
                                                                   1)
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           25.0,
@@ -18667,7 +18656,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     },
                                                                     text:
                                                                         'Atualizar',
-                                                                    icon: Icon(
+                                                                    icon: const Icon(
                                                                       Icons
                                                                           .add_circle,
                                                                       size:
@@ -18679,12 +18668,12 @@ class _A24contabilidadeEstudantilWidgetState
                                                                           250.0,
                                                                       height:
                                                                           40.0,
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           24.0,
                                                                           0.0,
                                                                           24.0,
                                                                           0.0),
-                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
@@ -18710,7 +18699,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                       elevation:
                                                                           3.0,
                                                                       borderSide:
-                                                                          BorderSide(
+                                                                          const BorderSide(
                                                                         color: Colors
                                                                             .transparent,
                                                                         width:
@@ -18723,7 +18712,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                   ),
                                                                 ),
                                                               Padding(
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         50.0,
                                                                         10.0,
@@ -18744,7 +18733,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                   },
                                                                   text:
                                                                       'Adicionar',
-                                                                  icon: Icon(
+                                                                  icon: const Icon(
                                                                     Icons.add,
                                                                     size: 20.0,
                                                                   ),
@@ -18754,14 +18743,14 @@ class _A24contabilidadeEstudantilWidgetState
                                                                         250.0,
                                                                     height:
                                                                         40.0,
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             24.0,
                                                                             0.0,
                                                                             24.0,
                                                                             0.0),
                                                                     iconPadding:
-                                                                        EdgeInsetsDirectional.fromSTEB(
+                                                                        const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -18787,7 +18776,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                                     elevation:
                                                                         3.0,
                                                                     borderSide:
-                                                                        BorderSide(
+                                                                        const BorderSide(
                                                                       color: Colors
                                                                           .transparent,
                                                                       width:
@@ -18801,7 +18790,7 @@ class _A24contabilidadeEstudantilWidgetState
                                                               ),
                                                             ],
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 5.0)),
                                                       ),
                                                     ),

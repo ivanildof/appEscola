@@ -1,6 +1,4 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
-import '/backend/schema/structs/index.dart';
 import '/components/folder_widget.dart';
 import '/components/menu_lateral/menu_lateral_widget.dart';
 import '/components/menu_superior/menu_superior_widget.dart';
@@ -15,14 +13,10 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/instant_timer.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:collection/collection.dart';
 import 'package:easy_debounce/easy_debounce.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:text_search/text_search.dart';
 import 'a02inventario_model.dart';
@@ -32,7 +26,7 @@ class A02inventarioWidget extends StatefulWidget {
   const A02inventarioWidget({
     super.key,
     String? telas,
-  }) : this.telas = telas ?? 'vazio';
+  }) : telas = telas ?? 'vazio';
 
   final String telas;
 
@@ -228,7 +222,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                         wrapWithModel(
                           model: _model.menuSuperiorModel,
                           updateCallback: () => setState(() {}),
-                          child: MenuSuperiorWidget(),
+                          child: const MenuSuperiorWidget(),
                         ),
                       if (responsiveVisibility(
                         context: context,
@@ -238,7 +232,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                         wrapWithModel(
                           model: _model.menuSuperiorCelularModel,
                           updateCallback: () => setState(() {}),
-                          child: MenuSuperiorCelularWidget(),
+                          child: const MenuSuperiorCelularWidget(),
                         ),
                     ],
                   ),
@@ -254,7 +248,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                           wrapWithModel(
                             model: _model.menuLateralModel,
                             updateCallback: () => setState(() {}),
-                            child: MenuLateralWidget(),
+                            child: const MenuLateralWidget(),
                           ),
                         StreamBuilder<List<FilialRecord>>(
                           stream: queryFilialRecord(),
@@ -277,10 +271,10 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                 snapshot.data!;
 
                             return Container(
-                              decoration: BoxDecoration(),
+                              decoration: const BoxDecoration(),
                               child: Stack(
                                 children: [
-                                  if (widget!.telas == 'produtos')
+                                  if (widget.telas == 'produtos')
                                     Container(
                                       width: MediaQuery.sizeOf(context).width *
                                           0.75,
@@ -294,7 +288,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                         ),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 20.0, 0.0, 0.0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
@@ -304,7 +298,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        Alignment(-1.0, 0),
+                                                        const Alignment(-1.0, 0),
                                                     child: TabBar(
                                                       isScrollable: true,
                                                       labelColor:
@@ -327,15 +321,15 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                     0.0,
                                                               ),
                                                       unselectedLabelStyle:
-                                                          TextStyle(),
+                                                          const TextStyle(),
                                                       indicatorColor:
                                                           FlutterFlowTheme.of(
                                                                   context)
                                                               .tertiary,
                                                       indicatorWeight: 1.0,
                                                       padding:
-                                                          EdgeInsets.all(4.0),
-                                                      tabs: [
+                                                          const EdgeInsets.all(4.0),
+                                                      tabs: const [
                                                         Row(
                                                           mainAxisAlignment:
                                                               MainAxisAlignment
@@ -434,10 +428,10 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
 
                                                             return Container(
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsets
+                                                                    const EdgeInsets
                                                                         .all(
                                                                             20.0),
                                                                 child: Column(
@@ -466,7 +460,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           child:
                                                                               Padding(
                                                                             padding:
-                                                                                EdgeInsets.all(6.0),
+                                                                                const EdgeInsets.all(6.0),
                                                                             child:
                                                                                 Row(
                                                                               mainAxisSize: MainAxisSize.max,
@@ -541,7 +535,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                     print('IconButton pressed ...');
                                                                                   },
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 10.0)),
+                                                                              ].divide(const SizedBox(width: 10.0)),
                                                                             ),
                                                                           ),
                                                                         ),
@@ -549,17 +543,17 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           width:
                                                                               250.0,
                                                                           decoration:
-                                                                              BoxDecoration(),
+                                                                              const BoxDecoration(),
                                                                           child:
                                                                               Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 8.0,
                                                                                 0.0,
                                                                                 8.0,
                                                                                 0.0),
                                                                             child:
                                                                                 Autocomplete<String>(
-                                                                              initialValue: TextEditingValue(),
+                                                                              initialValue: const TextEditingValue(),
                                                                               optionsBuilder: (textEditingValue) {
                                                                                 if (textEditingValue.text == '') {
                                                                                   return const Iterable<String>.empty();
@@ -579,7 +573,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                         fontFamily: 'Manrope',
                                                                                         letterSpacing: 0.0,
                                                                                       ),
-                                                                                  textHighlightStyle: TextStyle(),
+                                                                                  textHighlightStyle: const TextStyle(),
                                                                                   elevation: 4.0,
                                                                                   optionBackgroundColor: FlutterFlowTheme.of(context).primaryBackground,
                                                                                   optionHighlightColor: FlutterFlowTheme.of(context).secondaryBackground,
@@ -606,29 +600,28 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                   onEditingComplete: onEditingComplete,
                                                                                   onChanged: (_) => EasyDebounce.debounce(
                                                                                     '_model.textController1',
-                                                                                    Duration(milliseconds: 2000),
+                                                                                    const Duration(milliseconds: 2000),
                                                                                     () async {
-                                                                                      if (_model.textController1.text != null && _model.textController1.text != '') {
+                                                                                      if (_model.textController1.text != '') {
                                                                                         safeSetState(() {
                                                                                           _model.simpleSearchResults1 = TextSearch(
                                                                                             containerInventarioProdutosRecordList
                                                                                                 .map(
                                                                                                   (record) => TextSearchItem.fromTerms(record, [
-                                                                                                    record.produtoCategoria!,
-                                                                                                    record.nomeProduto!,
-                                                                                                    record.produtoCodigo!,
-                                                                                                    record.filial!
+                                                                                                    record.produtoCategoria,
+                                                                                                    record.nomeProduto,
+                                                                                                    record.produtoCodigo,
+                                                                                                    record.filial
                                                                                                   ]),
                                                                                                 )
                                                                                                 .toList(),
                                                                                           ).search(_model.textController1.text).map((r) => r.object).take(20).toList();
-                                                                                          ;
                                                                                         });
                                                                                       } else {
                                                                                         context.goNamed(
                                                                                           'A01escola',
                                                                                           extra: <String, dynamic>{
-                                                                                            kTransitionInfoKey: TransitionInfo(
+                                                                                            kTransitionInfoKey: const TransitionInfo(
                                                                                               hasTransition: true,
                                                                                               transitionType: PageTransitionType.fade,
                                                                                               duration: Duration(milliseconds: 0),
@@ -696,7 +689,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                     Expanded(
                                                                       child:
                                                                           Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             10.0,
                                                                             0.0,
@@ -857,7 +850,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                   ),
                                                                                 ],
                                                                                 dataRowBuilder: (produtosListItem, produtosListIndex, selected, onSelectChanged) => DataRow(
-                                                                                  color: MaterialStateProperty.all(
+                                                                                  color: WidgetStateProperty.all(
                                                                                     produtosListIndex % 2 == 0 ? FlutterFlowTheme.of(context).secondaryBackground : FlutterFlowTheme.of(context).primaryBackground,
                                                                                   ),
                                                                                   cells: [
@@ -932,7 +925,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                             shape: BoxShape.circle,
                                                                                           ),
                                                                                           child: Align(
-                                                                                            alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                            alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                             child: Icon(
                                                                                               Icons.edit_square,
                                                                                               color: FlutterFlowTheme.of(context).primaryText,
@@ -943,12 +936,12 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                         Container(
                                                                                           width: 35.0,
                                                                                           height: 35.0,
-                                                                                          decoration: BoxDecoration(
+                                                                                          decoration: const BoxDecoration(
                                                                                             color: Color(0xFFE30909),
                                                                                             shape: BoxShape.circle,
                                                                                           ),
                                                                                           child: Align(
-                                                                                            alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                            alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                             child: Icon(
                                                                                               Icons.delete_rounded,
                                                                                               color: FlutterFlowTheme.of(context).info,
@@ -956,7 +949,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                             ),
                                                                                           ),
                                                                                         ),
-                                                                                      ].divide(SizedBox(width: 10.0)),
+                                                                                      ].divide(const SizedBox(width: 10.0)),
                                                                                     ),
                                                                                   ].map((c) => DataCell(c)).toList(),
                                                                                 ),
@@ -1003,10 +996,10 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                   .disabled,
                                                           child: Container(
                                                             decoration:
-                                                                BoxDecoration(),
+                                                                const BoxDecoration(),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           20.0,
@@ -1023,7 +1016,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           .center,
                                                                   children: [
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -1051,7 +1044,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                       ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                   child: FaIcon(
                                                                                     FontAwesomeIcons.asterisk,
                                                                                     color: FlutterFlowTheme.of(context).error,
@@ -1067,7 +1060,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             child:
                                                                                 Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: FlutterFlowDropDown<String>(
                                                                                 controller: _model.filialValueController ??= FormFieldController<String>(null),
                                                                                 options: containerFilialRecordList.map((e) => e.nomeFilial).toList(),
@@ -1089,7 +1082,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                 borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                 borderWidth: 2.0,
                                                                                 borderRadius: 8.0,
-                                                                                margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                 hidesUnderline: true,
                                                                                 isOverButton: false,
                                                                                 isSearchable: false,
@@ -1097,7 +1090,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                     Divider(
@@ -1108,7 +1101,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           .alternate,
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -1136,7 +1129,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                       ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                   child: FaIcon(
                                                                                     FontAwesomeIcons.asterisk,
                                                                                     color: FlutterFlowTheme.of(context).error,
@@ -1152,9 +1145,9 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             child:
                                                                                 Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                 child: TextFormField(
                                                                                   controller: _model.nomeProdutoTextController,
                                                                                   focusNode: _model.nomeProdutoFocusNode,
@@ -1210,7 +1203,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                     Divider(
@@ -1221,7 +1214,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           .alternate,
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -1249,7 +1242,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                       ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                   child: FaIcon(
                                                                                     FontAwesomeIcons.asterisk,
                                                                                     color: FlutterFlowTheme.of(context).error,
@@ -1265,10 +1258,10 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             child:
                                                                                 Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: FlutterFlowDropDown<String>(
                                                                                 controller: _model.produtoscategoriValueController ??= FormFieldController<String>(null),
-                                                                                options: [
+                                                                                options: const [
                                                                                   'Option 1'
                                                                                 ],
                                                                                 onChanged: (val) => setState(() => _model.produtoscategoriValue = val),
@@ -1289,7 +1282,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                 borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                 borderWidth: 2.0,
                                                                                 borderRadius: 8.0,
-                                                                                margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                 hidesUnderline: true,
                                                                                 isOverButton: false,
                                                                                 isSearchable: false,
@@ -1297,7 +1290,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                     Divider(
@@ -1308,7 +1301,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           .alternate,
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -1336,7 +1329,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                       ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                   child: FaIcon(
                                                                                     FontAwesomeIcons.asterisk,
                                                                                     color: FlutterFlowTheme.of(context).error,
@@ -1352,9 +1345,9 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             child:
                                                                                 Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                 child: TextFormField(
                                                                                   controller: _model.codigoProdutoTextController,
                                                                                   focusNode: _model.codigoProdutoFocusNode,
@@ -1411,7 +1404,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                     Divider(
@@ -1426,7 +1419,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                         _model.filialValue !=
                                                                             '')
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             20.0,
                                                                             0.0,
                                                                             20.0,
@@ -1453,7 +1446,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                         ),
                                                                                   ),
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                     child: FaIcon(
                                                                                       FontAwesomeIcons.asterisk,
                                                                                       color: FlutterFlowTheme.of(context).error,
@@ -1467,7 +1460,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               flex: 3,
                                                                               child: Container(
                                                                                 width: 550.0,
-                                                                                decoration: BoxDecoration(),
+                                                                                decoration: const BoxDecoration(),
                                                                                 child: StreamBuilder<List<InventarioCategoriaRecord>>(
                                                                                   stream: queryInventarioCategoriaRecord(
                                                                                     parent: containerFilialRecordList.where((e) => e.nomeFilial == _model.filialValue).toList().first.reference,
@@ -1510,7 +1503,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                       borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                       borderWidth: 2.0,
                                                                                       borderRadius: 8.0,
-                                                                                      margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                      margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                       hidesUnderline: true,
                                                                                       isOverButton: false,
                                                                                       isSearchable: false,
@@ -1520,7 +1513,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                 ),
                                                                               ),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 20.0)),
+                                                                          ].divide(const SizedBox(width: 20.0)),
                                                                         ),
                                                                       ),
                                                                     if (_model.filialValue !=
@@ -1562,13 +1555,13 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
 
                                                                           return Container(
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     mainAxisAlignment: MainAxisAlignment.start,
@@ -1587,7 +1580,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                   ),
                                                                                             ),
                                                                                             Padding(
-                                                                                              padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                               child: FaIcon(
                                                                                                 FontAwesomeIcons.asterisk,
                                                                                                 color: FlutterFlowTheme.of(context).error,
@@ -1601,7 +1594,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                         flex: 3,
                                                                                         child: Container(
                                                                                           width: 550.0,
-                                                                                          decoration: BoxDecoration(),
+                                                                                          decoration: const BoxDecoration(),
                                                                                           child: FlutterFlowDropDown<String>(
                                                                                             controller: _model.unidadeCompraValueController ??= FormFieldController<String>(null),
                                                                                             options: containerInventarioUnidadesRecordList.map((e) => e.nomeUnidade).toList(),
@@ -1623,7 +1616,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                             borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                             borderWidth: 2.0,
                                                                                             borderRadius: 8.0,
-                                                                                            margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                            margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                             hidesUnderline: true,
                                                                                             isOverButton: false,
                                                                                             isSearchable: false,
@@ -1631,7 +1624,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                           ),
                                                                                         ),
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 20.0)),
+                                                                                    ].divide(const SizedBox(width: 20.0)),
                                                                                   ),
                                                                                 ),
                                                                                 if (_model.filialValue != null && _model.filialValue != '')
@@ -1640,7 +1633,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                     color: FlutterFlowTheme.of(context).alternate,
                                                                                   ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     mainAxisAlignment: MainAxisAlignment.start,
@@ -1659,7 +1652,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                   ),
                                                                                             ),
                                                                                             Padding(
-                                                                                              padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                               child: FaIcon(
                                                                                                 FontAwesomeIcons.asterisk,
                                                                                                 color: FlutterFlowTheme.of(context).error,
@@ -1673,7 +1666,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                         flex: 3,
                                                                                         child: Container(
                                                                                           width: 550.0,
-                                                                                          decoration: BoxDecoration(),
+                                                                                          decoration: const BoxDecoration(),
                                                                                           child: FlutterFlowDropDown<String>(
                                                                                             controller: _model.unidadeVendaValueController ??= FormFieldController<String>(null),
                                                                                             options: containerInventarioUnidadesRecordList.map((e) => e.nomeUnidade).toList(),
@@ -1695,7 +1688,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                             borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                             borderWidth: 2.0,
                                                                                             borderRadius: 8.0,
-                                                                                            margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                            margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                             hidesUnderline: true,
                                                                                             isOverButton: false,
                                                                                             isSearchable: false,
@@ -1703,10 +1696,10 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                           ),
                                                                                         ),
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 20.0)),
+                                                                                    ].divide(const SizedBox(width: 20.0)),
                                                                                   ),
                                                                                 ),
-                                                                              ].divide(SizedBox(height: 10.0)),
+                                                                              ].divide(const SizedBox(height: 10.0)),
                                                                             ),
                                                                           );
                                                                         },
@@ -1722,7 +1715,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             .alternate,
                                                                       ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -1750,7 +1743,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                       ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                   child: FaIcon(
                                                                                     FontAwesomeIcons.asterisk,
                                                                                     color: FlutterFlowTheme.of(context).error,
@@ -1766,9 +1759,9 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             child:
                                                                                 Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                 child: TextFormField(
                                                                                   controller: _model.razaoUnitariaTextController,
                                                                                   focusNode: _model.razaoUnitariaFocusNode,
@@ -1825,7 +1818,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                     Divider(
@@ -1836,7 +1829,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           .alternate,
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -1864,7 +1857,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                       ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                   child: FaIcon(
                                                                                     FontAwesomeIcons.asterisk,
                                                                                     color: FlutterFlowTheme.of(context).error,
@@ -1880,9 +1873,9 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             child:
                                                                                 Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                 child: TextFormField(
                                                                                   controller: _model.precoCompraTextController,
                                                                                   focusNode: _model.precoCompraFocusNode,
@@ -1939,7 +1932,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                     Divider(
@@ -1950,7 +1943,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           .alternate,
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -1978,7 +1971,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                       ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                   child: FaIcon(
                                                                                     FontAwesomeIcons.asterisk,
                                                                                     color: FlutterFlowTheme.of(context).error,
@@ -1994,9 +1987,9 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             child:
                                                                                 Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                 child: TextFormField(
                                                                                   controller: _model.precoVendaTextController,
                                                                                   focusNode: _model.precoVendaFocusNode,
@@ -2053,7 +2046,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                     Divider(
@@ -2064,7 +2057,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           .alternate,
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -2100,9 +2093,9 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             child:
                                                                                 Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                 child: TextFormField(
                                                                                   controller: _model.observacaoTextController,
                                                                                   focusNode: _model.observacaoFocusNode,
@@ -2160,11 +2153,11 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           50.0,
                                                                           10.0,
                                                                           50.0,
@@ -2183,12 +2176,12 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               context: context,
                                                                               builder: (alertDialogContext) {
                                                                                 return AlertDialog(
-                                                                                  title: Text('Campo Obrigatório'),
-                                                                                  content: Text('É necessário adicionar uma filial!'),
+                                                                                  title: const Text('Campo Obrigatório'),
+                                                                                  content: const Text('É necessário adicionar uma filial!'),
                                                                                   actions: [
                                                                                     TextButton(
                                                                                       onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                      child: Text('Ok'),
+                                                                                      child: const Text('Ok'),
                                                                                     ),
                                                                                   ],
                                                                                 );
@@ -2202,11 +2195,11 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               context: context,
                                                                               builder: (alertDialogContext) {
                                                                                 return AlertDialog(
-                                                                                  title: Text('Campo Obrigatório'),
+                                                                                  title: const Text('Campo Obrigatório'),
                                                                                   actions: [
                                                                                     TextButton(
                                                                                       onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                      child: Text('Ok'),
+                                                                                      child: const Text('Ok'),
                                                                                     ),
                                                                                   ],
                                                                                 );
@@ -2220,11 +2213,11 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               context: context,
                                                                               builder: (alertDialogContext) {
                                                                                 return AlertDialog(
-                                                                                  title: Text('Campo Obrigatório'),
+                                                                                  title: const Text('Campo Obrigatório'),
                                                                                   actions: [
                                                                                     TextButton(
                                                                                       onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                      child: Text('Ok'),
+                                                                                      child: const Text('Ok'),
                                                                                     ),
                                                                                   ],
                                                                                 );
@@ -2238,11 +2231,11 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               context: context,
                                                                               builder: (alertDialogContext) {
                                                                                 return AlertDialog(
-                                                                                  title: Text('Campo Obrigatório'),
+                                                                                  title: const Text('Campo Obrigatório'),
                                                                                   actions: [
                                                                                     TextButton(
                                                                                       onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                      child: Text('Ok'),
+                                                                                      child: const Text('Ok'),
                                                                                     ),
                                                                                   ],
                                                                                 );
@@ -2285,7 +2278,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                   color: FlutterFlowTheme.of(context).primaryText,
                                                                                 ),
                                                                               ),
-                                                                              duration: Duration(milliseconds: 4000),
+                                                                              duration: const Duration(milliseconds: 4000),
                                                                               backgroundColor: FlutterFlowTheme.of(context).secondary,
                                                                             ),
                                                                           );
@@ -2293,7 +2286,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                         text:
                                                                             'Adicionar Produto',
                                                                         icon:
-                                                                            Icon(
+                                                                            const Icon(
                                                                           Icons
                                                                               .add,
                                                                           size:
@@ -2305,12 +2298,12 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               250.0,
                                                                           height:
                                                                               50.0,
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               24.0,
                                                                               0.0,
                                                                               24.0,
                                                                               0.0),
-                                                                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               0.0,
                                                                               0.0,
@@ -2329,7 +2322,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           elevation:
                                                                               3.0,
                                                                           borderSide:
-                                                                              BorderSide(
+                                                                              const BorderSide(
                                                                             color:
                                                                                 Colors.transparent,
                                                                             width:
@@ -2340,7 +2333,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                         ),
                                                                       ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           10.0)),
                                                                 ),
@@ -2355,23 +2348,23 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       20.0, 0.0, 0.0, 0.0),
                                               child: wrapWithModel(
                                                 model: _model.folderModel1,
                                                 updateCallback: () =>
                                                     setState(() {}),
-                                                child: FolderWidget(),
+                                                child: const FolderWidget(),
                                               ),
                                             ),
                                           ],
                                         ),
                                       ),
                                     ),
-                                  if (widget!.telas == 'categoria')
+                                  if (widget.telas == 'categoria')
                                     Align(
-                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                      alignment: const AlignmentDirectional(0.0, 0.0),
                                       child: Container(
                                         width:
                                             MediaQuery.sizeOf(context).width *
@@ -2386,7 +2379,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                           ),
                                         ),
                                         child: Padding(
-                                          padding: EdgeInsets.all(20.0),
+                                          padding: const EdgeInsets.all(20.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
@@ -2422,7 +2415,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                           AutovalidateMode
                                                               .disabled,
                                                       child: Padding(
-                                                        padding: EdgeInsets.all(
+                                                        padding: const EdgeInsets.all(
                                                             10.0),
                                                         child: Column(
                                                           mainAxisSize:
@@ -2434,7 +2427,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                       .max,
                                                               children: [
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -2473,7 +2466,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           16.0,
@@ -2486,7 +2479,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                 children: [
                                                                   Align(
                                                                     alignment:
-                                                                        AlignmentDirectional(
+                                                                        const AlignmentDirectional(
                                                                             -1.0,
                                                                             0.0),
                                                                     child: Text(
@@ -2503,7 +2496,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             6.0,
                                                                             0.0,
@@ -2525,7 +2518,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           6.0,
@@ -2579,7 +2572,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                     2.0,
                                                                 borderRadius:
                                                                     8.0,
-                                                                margin: EdgeInsetsDirectional
+                                                                margin: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         4.0,
@@ -2597,7 +2590,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           16.0,
@@ -2610,7 +2603,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                 children: [
                                                                   Align(
                                                                     alignment:
-                                                                        AlignmentDirectional(
+                                                                        const AlignmentDirectional(
                                                                             -1.0,
                                                                             0.0),
                                                                     child: Text(
@@ -2627,7 +2620,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             6.0,
                                                                             0.0,
@@ -2649,7 +2642,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           6.0,
@@ -2763,11 +2756,11 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                             ),
                                                             Align(
                                                               alignment:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       1.0, 0.0),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             20.0,
@@ -2795,11 +2788,11 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             (alertDialogContext) {
                                                                           return AlertDialog(
                                                                             title:
-                                                                                Text('Campo obrigatório'),
+                                                                                const Text('Campo obrigatório'),
                                                                             actions: [
                                                                               TextButton(
                                                                                 onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                child: Text('Ok'),
+                                                                                child: const Text('Ok'),
                                                                               ),
                                                                             ],
                                                                           );
@@ -2851,7 +2844,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           ),
                                                                         ),
                                                                         duration:
-                                                                            Duration(milliseconds: 4000),
+                                                                            const Duration(milliseconds: 4000),
                                                                         backgroundColor:
                                                                             FlutterFlowTheme.of(context).secondary,
                                                                       ),
@@ -2859,7 +2852,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                   },
                                                                   text:
                                                                       'Adicionar',
-                                                                  icon: Icon(
+                                                                  icon: const Icon(
                                                                     Icons.add,
                                                                     size: 15.0,
                                                                   ),
@@ -2867,14 +2860,14 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                       FFButtonOptions(
                                                                     height:
                                                                         40.0,
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             24.0,
                                                                             0.0,
                                                                             24.0,
                                                                             0.0),
                                                                     iconPadding:
-                                                                        EdgeInsetsDirectional.fromSTEB(
+                                                                        const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -2896,7 +2889,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                     elevation:
                                                                         3.0,
                                                                     borderSide:
-                                                                        BorderSide(
+                                                                        const BorderSide(
                                                                       color: Colors
                                                                           .transparent,
                                                                       width:
@@ -2970,7 +2963,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                           ),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsets.all(
+                                                                const EdgeInsets.all(
                                                                     10.0),
                                                             child: Column(
                                                               mainAxisSize:
@@ -2992,7 +2985,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           20.0,
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           6.0,
                                                                           0.0,
                                                                           0.0,
@@ -3116,7 +3109,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                 onSelectChanged) =>
                                                                             DataRow(
                                                                           color:
-                                                                              MaterialStateProperty.all(
+                                                                              WidgetStateProperty.all(
                                                                             categoriaListIndex % 2 == 0
                                                                                 ? FlutterFlowTheme.of(context).secondaryBackground
                                                                                 : FlutterFlowTheme.of(context).primaryBackground,
@@ -3156,7 +3149,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                     shape: BoxShape.circle,
                                                                                   ),
                                                                                   child: Align(
-                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                     child: Icon(
                                                                                       Icons.edit_square,
                                                                                       color: FlutterFlowTheme.of(context).primaryText,
@@ -3167,12 +3160,12 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                 Container(
                                                                                   width: 35.0,
                                                                                   height: 35.0,
-                                                                                  decoration: BoxDecoration(
+                                                                                  decoration: const BoxDecoration(
                                                                                     color: Color(0xFFE30909),
                                                                                     shape: BoxShape.circle,
                                                                                   ),
                                                                                   child: Align(
-                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                     child: Icon(
                                                                                       Icons.delete_rounded,
                                                                                       color: FlutterFlowTheme.of(context).info,
@@ -3180,7 +3173,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                     ),
                                                                                   ),
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 10.0)),
+                                                                              ].divide(const SizedBox(width: 10.0)),
                                                                             ),
                                                                           ].map((c) => DataCell(c)).toList(),
                                                                         ),
@@ -3241,20 +3234,20 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                       },
                                                     ),
                                                   ),
-                                                ].divide(SizedBox(width: 10.0)),
+                                                ].divide(const SizedBox(width: 10.0)),
                                               ),
                                               wrapWithModel(
                                                 model: _model.folderModel2,
                                                 updateCallback: () =>
                                                     setState(() {}),
-                                                child: FolderWidget(),
+                                                child: const FolderWidget(),
                                               ),
                                             ],
                                           ),
                                         ),
                                       ),
                                     ),
-                                  if (widget!.telas == 'loja')
+                                  if (widget.telas == 'loja')
                                     Container(
                                       width: MediaQuery.sizeOf(context).width *
                                           0.75,
@@ -3268,7 +3261,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                         ),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 20.0, 0.0, 0.0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
@@ -3278,7 +3271,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        Alignment(-1.0, 0),
+                                                        const Alignment(-1.0, 0),
                                                     child: TabBar(
                                                       isScrollable: true,
                                                       labelColor:
@@ -3301,15 +3294,15 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                     0.0,
                                                               ),
                                                       unselectedLabelStyle:
-                                                          TextStyle(),
+                                                          const TextStyle(),
                                                       indicatorColor:
                                                           FlutterFlowTheme.of(
                                                                   context)
                                                               .tertiary,
                                                       indicatorWeight: 1.0,
                                                       padding:
-                                                          EdgeInsets.all(4.0),
-                                                      tabs: [
+                                                          const EdgeInsets.all(4.0),
+                                                      tabs: const [
                                                         Row(
                                                           mainAxisAlignment:
                                                               MainAxisAlignment
@@ -3408,10 +3401,10 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
 
                                                             return Container(
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsets
+                                                                    const EdgeInsets
                                                                         .all(
                                                                             20.0),
                                                                 child: Column(
@@ -3440,7 +3433,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           child:
                                                                               Padding(
                                                                             padding:
-                                                                                EdgeInsets.all(6.0),
+                                                                                const EdgeInsets.all(6.0),
                                                                             child:
                                                                                 Row(
                                                                               mainAxisSize: MainAxisSize.max,
@@ -3515,7 +3508,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                     print('IconButton pressed ...');
                                                                                   },
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 10.0)),
+                                                                              ].divide(const SizedBox(width: 10.0)),
                                                                             ),
                                                                           ),
                                                                         ),
@@ -3523,10 +3516,10 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           width:
                                                                               250.0,
                                                                           decoration:
-                                                                              BoxDecoration(),
+                                                                              const BoxDecoration(),
                                                                           child:
                                                                               Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 8.0,
                                                                                 0.0,
                                                                                 8.0,
@@ -3537,24 +3530,23 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               focusNode: _model.textFieldFocusNode2,
                                                                               onChanged: (_) => EasyDebounce.debounce(
                                                                                 '_model.textController9',
-                                                                                Duration(milliseconds: 2000),
+                                                                                const Duration(milliseconds: 2000),
                                                                                 () async {
-                                                                                  if (_model.textController9.text != null && _model.textController9.text != '') {
+                                                                                  if (_model.textController9.text != '') {
                                                                                     safeSetState(() {
                                                                                       _model.simpleSearchResults2 = TextSearch(
                                                                                         containerInventarioLoja1RecordList
                                                                                             .map(
-                                                                                              (record) => TextSearchItem.fromTerms(record, [record.filial!]),
+                                                                                              (record) => TextSearchItem.fromTerms(record, [record.filial]),
                                                                                             )
                                                                                             .toList(),
                                                                                       ).search(_model.textController9.text).map((r) => r.object).take(20).toList();
-                                                                                      ;
                                                                                     });
                                                                                   } else {
                                                                                     context.goNamed(
                                                                                       'A01escola',
                                                                                       extra: <String, dynamic>{
-                                                                                        kTransitionInfoKey: TransitionInfo(
+                                                                                        kTransitionInfoKey: const TransitionInfo(
                                                                                           hasTransition: true,
                                                                                           transitionType: PageTransitionType.fade,
                                                                                           duration: Duration(milliseconds: 0),
@@ -3620,7 +3612,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                     Expanded(
                                                                       child:
                                                                           Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             10.0,
                                                                             0.0,
@@ -3764,7 +3756,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                   ),
                                                                                 ],
                                                                                 dataRowBuilder: (produtosListItem, produtosListIndex, selected, onSelectChanged) => DataRow(
-                                                                                  color: MaterialStateProperty.all(
+                                                                                  color: WidgetStateProperty.all(
                                                                                     produtosListIndex % 2 == 0 ? FlutterFlowTheme.of(context).secondaryBackground : FlutterFlowTheme.of(context).primaryBackground,
                                                                                   ),
                                                                                   cells: [
@@ -3832,7 +3824,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                             shape: BoxShape.circle,
                                                                                           ),
                                                                                           child: Align(
-                                                                                            alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                            alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                             child: Icon(
                                                                                               Icons.edit_square,
                                                                                               color: FlutterFlowTheme.of(context).primaryText,
@@ -3843,12 +3835,12 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                         Container(
                                                                                           width: 35.0,
                                                                                           height: 35.0,
-                                                                                          decoration: BoxDecoration(
+                                                                                          decoration: const BoxDecoration(
                                                                                             color: Color(0xFFE30909),
                                                                                             shape: BoxShape.circle,
                                                                                           ),
                                                                                           child: Align(
-                                                                                            alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                            alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                             child: Icon(
                                                                                               Icons.delete_rounded,
                                                                                               color: FlutterFlowTheme.of(context).info,
@@ -3856,7 +3848,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                             ),
                                                                                           ),
                                                                                         ),
-                                                                                      ].divide(SizedBox(width: 10.0)),
+                                                                                      ].divide(const SizedBox(width: 10.0)),
                                                                                     ),
                                                                                   ].map((c) => DataCell(c)).toList(),
                                                                                 ),
@@ -3903,10 +3895,10 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                   .disabled,
                                                           child: Container(
                                                             decoration:
-                                                                BoxDecoration(),
+                                                                const BoxDecoration(),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           20.0,
@@ -3923,7 +3915,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           .center,
                                                                   children: [
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -3951,7 +3943,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                       ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                   child: FaIcon(
                                                                                     FontAwesomeIcons.asterisk,
                                                                                     color: FlutterFlowTheme.of(context).error,
@@ -3967,7 +3959,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             child:
                                                                                 Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: FlutterFlowDropDown<String>(
                                                                                 controller: _model.filialLojaValueController ??= FormFieldController<String>(null),
                                                                                 options: containerFilialRecordList.map((e) => e.nomeFilial).toList(),
@@ -3989,7 +3981,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                 borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                 borderWidth: 2.0,
                                                                                 borderRadius: 8.0,
-                                                                                margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                 hidesUnderline: true,
                                                                                 isOverButton: false,
                                                                                 isSearchable: false,
@@ -3997,7 +3989,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                     Divider(
@@ -4008,7 +4000,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           .alternate,
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -4036,7 +4028,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                       ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                   child: FaIcon(
                                                                                     FontAwesomeIcons.asterisk,
                                                                                     color: FlutterFlowTheme.of(context).error,
@@ -4052,9 +4044,9 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             child:
                                                                                 Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                 child: TextFormField(
                                                                                   controller: _model.nomeLojaTextController,
                                                                                   focusNode: _model.nomeLojaFocusNode,
@@ -4110,7 +4102,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                     Divider(
@@ -4121,7 +4113,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           .alternate,
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -4149,7 +4141,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                       ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                   child: FaIcon(
                                                                                     FontAwesomeIcons.asterisk,
                                                                                     color: FlutterFlowTheme.of(context).error,
@@ -4165,9 +4157,9 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             child:
                                                                                 Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                 child: TextFormField(
                                                                                   controller: _model.codigoLojaTextController,
                                                                                   focusNode: _model.codigoLojaFocusNode,
@@ -4224,7 +4216,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                     Divider(
@@ -4235,7 +4227,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           .alternate,
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -4263,7 +4255,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                       ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                   child: FaIcon(
                                                                                     FontAwesomeIcons.asterisk,
                                                                                     color: FlutterFlowTheme.of(context).error,
@@ -4279,9 +4271,9 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             child:
                                                                                 Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                 child: TextFormField(
                                                                                   controller: _model.telefoneLojaTextController,
                                                                                   focusNode: _model.telefoneLojaFocusNode,
@@ -4338,7 +4330,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                     Divider(
@@ -4349,7 +4341,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           .alternate,
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -4377,7 +4369,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                       ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                   child: FaIcon(
                                                                                     FontAwesomeIcons.asterisk,
                                                                                     color: FlutterFlowTheme.of(context).error,
@@ -4393,9 +4385,9 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             child:
                                                                                 Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                 child: TextFormField(
                                                                                   controller: _model.enderecoLojaTextController,
                                                                                   focusNode: _model.enderecoLojaFocusNode,
@@ -4451,7 +4443,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                     Divider(
@@ -4462,7 +4454,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           .alternate,
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -4498,9 +4490,9 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             child:
                                                                                 Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                 child: TextFormField(
                                                                                   controller: _model.descricaoLojaTextController,
                                                                                   focusNode: _model.descricaoLojaFocusNode,
@@ -4558,11 +4550,11 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           50.0,
                                                                           10.0,
                                                                           50.0,
@@ -4581,11 +4573,11 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               context: context,
                                                                               builder: (alertDialogContext) {
                                                                                 return AlertDialog(
-                                                                                  title: Text('Campo Obrigatório'),
+                                                                                  title: const Text('Campo Obrigatório'),
                                                                                   actions: [
                                                                                     TextButton(
                                                                                       onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                      child: Text('Ok'),
+                                                                                      child: const Text('Ok'),
                                                                                     ),
                                                                                   ],
                                                                                 );
@@ -4630,7 +4622,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                   color: FlutterFlowTheme.of(context).primaryText,
                                                                                 ),
                                                                               ),
-                                                                              duration: Duration(milliseconds: 4000),
+                                                                              duration: const Duration(milliseconds: 4000),
                                                                               backgroundColor: FlutterFlowTheme.of(context).secondary,
                                                                             ),
                                                                           );
@@ -4638,7 +4630,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                         text:
                                                                             'Adicionar Loja',
                                                                         icon:
-                                                                            Icon(
+                                                                            const Icon(
                                                                           Icons
                                                                               .add,
                                                                           size:
@@ -4650,12 +4642,12 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               250.0,
                                                                           height:
                                                                               45.0,
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               24.0,
                                                                               0.0,
                                                                               24.0,
                                                                               0.0),
-                                                                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               0.0,
                                                                               0.0,
@@ -4674,7 +4666,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           elevation:
                                                                               3.0,
                                                                           borderSide:
-                                                                              BorderSide(
+                                                                              const BorderSide(
                                                                             color:
                                                                                 Colors.transparent,
                                                                             width:
@@ -4685,7 +4677,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                         ),
                                                                       ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           10.0)),
                                                                 ),
@@ -4700,21 +4692,21 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       20.0, 0.0, 0.0, 0.0),
                                               child: wrapWithModel(
                                                 model: _model.folderModel3,
                                                 updateCallback: () =>
                                                     setState(() {}),
-                                                child: FolderWidget(),
+                                                child: const FolderWidget(),
                                               ),
                                             ),
                                           ],
                                         ),
                                       ),
                                     ),
-                                  if (widget!.telas == 'fornecedor')
+                                  if (widget.telas == 'fornecedor')
                                     Container(
                                       width: MediaQuery.sizeOf(context).width *
                                           0.75,
@@ -4728,7 +4720,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                         ),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 20.0, 0.0, 0.0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
@@ -4738,7 +4730,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        Alignment(-1.0, 0),
+                                                        const Alignment(-1.0, 0),
                                                     child: TabBar(
                                                       isScrollable: true,
                                                       labelColor:
@@ -4761,15 +4753,15 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                     0.0,
                                                               ),
                                                       unselectedLabelStyle:
-                                                          TextStyle(),
+                                                          const TextStyle(),
                                                       indicatorColor:
                                                           FlutterFlowTheme.of(
                                                                   context)
                                                               .tertiary,
                                                       indicatorWeight: 1.0,
                                                       padding:
-                                                          EdgeInsets.all(4.0),
-                                                      tabs: [
+                                                          const EdgeInsets.all(4.0),
+                                                      tabs: const [
                                                         Row(
                                                           mainAxisAlignment:
                                                               MainAxisAlignment
@@ -4868,10 +4860,10 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
 
                                                             return Container(
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsets
+                                                                    const EdgeInsets
                                                                         .all(
                                                                             20.0),
                                                                 child: Column(
@@ -4900,7 +4892,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           child:
                                                                               Padding(
                                                                             padding:
-                                                                                EdgeInsets.all(6.0),
+                                                                                const EdgeInsets.all(6.0),
                                                                             child:
                                                                                 Row(
                                                                               mainAxisSize: MainAxisSize.max,
@@ -4975,7 +4967,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                     print('IconButton pressed ...');
                                                                                   },
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 10.0)),
+                                                                              ].divide(const SizedBox(width: 10.0)),
                                                                             ),
                                                                           ),
                                                                         ),
@@ -4983,10 +4975,10 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           width:
                                                                               250.0,
                                                                           decoration:
-                                                                              BoxDecoration(),
+                                                                              const BoxDecoration(),
                                                                           child:
                                                                               Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 8.0,
                                                                                 0.0,
                                                                                 8.0,
@@ -4997,24 +4989,23 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               focusNode: _model.textFieldFocusNode3,
                                                                               onChanged: (_) => EasyDebounce.debounce(
                                                                                 '_model.textController15',
-                                                                                Duration(milliseconds: 2000),
+                                                                                const Duration(milliseconds: 2000),
                                                                                 () async {
-                                                                                  if (_model.textController15.text != null && _model.textController15.text != '') {
+                                                                                  if (_model.textController15.text != '') {
                                                                                     safeSetState(() {
                                                                                       _model.simpleSearchResults3 = TextSearch(
                                                                                         containerInventarioFornecedoresRecordList
                                                                                             .map(
-                                                                                              (record) => TextSearchItem.fromTerms(record, [record.filial!]),
+                                                                                              (record) => TextSearchItem.fromTerms(record, [record.filial]),
                                                                                             )
                                                                                             .toList(),
                                                                                       ).search(_model.textController15.text).map((r) => r.object).take(20).toList();
-                                                                                      ;
                                                                                     });
                                                                                   } else {
                                                                                     context.goNamed(
                                                                                       'A01escola',
                                                                                       extra: <String, dynamic>{
-                                                                                        kTransitionInfoKey: TransitionInfo(
+                                                                                        kTransitionInfoKey: const TransitionInfo(
                                                                                           hasTransition: true,
                                                                                           transitionType: PageTransitionType.fade,
                                                                                           duration: Duration(milliseconds: 0),
@@ -5080,7 +5071,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                     Expanded(
                                                                       child:
                                                                           Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             10.0,
                                                                             0.0,
@@ -5237,7 +5228,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                   ),
                                                                                 ],
                                                                                 dataRowBuilder: (produtosListItem, produtosListIndex, selected, onSelectChanged) => DataRow(
-                                                                                  color: MaterialStateProperty.all(
+                                                                                  color: WidgetStateProperty.all(
                                                                                     produtosListIndex % 2 == 0 ? FlutterFlowTheme.of(context).secondaryBackground : FlutterFlowTheme.of(context).primaryBackground,
                                                                                   ),
                                                                                   cells: [
@@ -5312,7 +5303,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                             shape: BoxShape.circle,
                                                                                           ),
                                                                                           child: Align(
-                                                                                            alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                            alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                             child: Icon(
                                                                                               Icons.edit_square,
                                                                                               color: FlutterFlowTheme.of(context).primaryText,
@@ -5323,12 +5314,12 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                         Container(
                                                                                           width: 35.0,
                                                                                           height: 35.0,
-                                                                                          decoration: BoxDecoration(
+                                                                                          decoration: const BoxDecoration(
                                                                                             color: Color(0xFFE30909),
                                                                                             shape: BoxShape.circle,
                                                                                           ),
                                                                                           child: Align(
-                                                                                            alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                            alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                             child: Icon(
                                                                                               Icons.delete_rounded,
                                                                                               color: FlutterFlowTheme.of(context).info,
@@ -5336,7 +5327,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                             ),
                                                                                           ),
                                                                                         ),
-                                                                                      ].divide(SizedBox(width: 10.0)),
+                                                                                      ].divide(const SizedBox(width: 10.0)),
                                                                                     ),
                                                                                   ].map((c) => DataCell(c)).toList(),
                                                                                 ),
@@ -5383,10 +5374,10 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                   .disabled,
                                                           child: Container(
                                                             decoration:
-                                                                BoxDecoration(),
+                                                                const BoxDecoration(),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           20.0,
@@ -5403,7 +5394,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           .center,
                                                                   children: [
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -5431,7 +5422,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                       ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                   child: FaIcon(
                                                                                     FontAwesomeIcons.asterisk,
                                                                                     color: FlutterFlowTheme.of(context).error,
@@ -5447,7 +5438,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             child:
                                                                                 Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: FlutterFlowDropDown<String>(
                                                                                 controller: _model.filialFornecedorValueController ??= FormFieldController<String>(null),
                                                                                 options: containerFilialRecordList.map((e) => e.nomeFilial).toList(),
@@ -5469,7 +5460,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                 borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                 borderWidth: 2.0,
                                                                                 borderRadius: 8.0,
-                                                                                margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                 hidesUnderline: true,
                                                                                 isOverButton: false,
                                                                                 isSearchable: false,
@@ -5477,7 +5468,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                     Divider(
@@ -5488,7 +5479,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           .alternate,
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -5516,7 +5507,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                       ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                   child: FaIcon(
                                                                                     FontAwesomeIcons.asterisk,
                                                                                     color: FlutterFlowTheme.of(context).error,
@@ -5532,9 +5523,9 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             child:
                                                                                 Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                 child: TextFormField(
                                                                                   controller: _model.nomeFornecedorTextController,
                                                                                   focusNode: _model.nomeFornecedorFocusNode,
@@ -5590,7 +5581,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                     Divider(
@@ -5601,7 +5592,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           .alternate,
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -5629,7 +5620,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                       ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                   child: FaIcon(
                                                                                     FontAwesomeIcons.asterisk,
                                                                                     color: FlutterFlowTheme.of(context).error,
@@ -5645,9 +5636,9 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             child:
                                                                                 Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                 child: TextFormField(
                                                                                   controller: _model.emailFornecedorTextController,
                                                                                   focusNode: _model.emailFornecedorFocusNode,
@@ -5704,7 +5695,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                     Divider(
@@ -5715,7 +5706,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           .alternate,
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -5743,7 +5734,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                       ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                   child: FaIcon(
                                                                                     FontAwesomeIcons.asterisk,
                                                                                     color: FlutterFlowTheme.of(context).error,
@@ -5759,9 +5750,9 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             child:
                                                                                 Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                 child: TextFormField(
                                                                                   controller: _model.telefoneFornecedorTextController,
                                                                                   focusNode: _model.telefoneFornecedorFocusNode,
@@ -5818,7 +5809,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                     Divider(
@@ -5829,7 +5820,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           .alternate,
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -5857,7 +5848,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                       ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                   child: FaIcon(
                                                                                     FontAwesomeIcons.asterisk,
                                                                                     color: FlutterFlowTheme.of(context).error,
@@ -5873,9 +5864,9 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             child:
                                                                                 Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                 child: TextFormField(
                                                                                   controller: _model.empresaFornecedorTextController,
                                                                                   focusNode: _model.empresaFornecedorFocusNode,
@@ -5931,7 +5922,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                     Divider(
@@ -5942,7 +5933,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           .alternate,
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -5970,7 +5961,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                       ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                   child: FaIcon(
                                                                                     FontAwesomeIcons.asterisk,
                                                                                     color: FlutterFlowTheme.of(context).error,
@@ -5986,9 +5977,9 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             child:
                                                                                 Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                 child: TextFormField(
                                                                                   controller: _model.produtosFornecedorTextController,
                                                                                   focusNode: _model.produtosFornecedorFocusNode,
@@ -6044,7 +6035,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                     Divider(
@@ -6055,7 +6046,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           .alternate,
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -6091,9 +6082,9 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             child:
                                                                                 Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                 child: TextFormField(
                                                                                   controller: _model.enderecoFornecedorTextController,
                                                                                   focusNode: _model.enderecoFornecedorFocusNode,
@@ -6151,11 +6142,11 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           50.0,
                                                                           10.0,
                                                                           50.0,
@@ -6174,11 +6165,11 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               context: context,
                                                                               builder: (alertDialogContext) {
                                                                                 return AlertDialog(
-                                                                                  title: Text('Campo Obrigatório'),
+                                                                                  title: const Text('Campo Obrigatório'),
                                                                                   actions: [
                                                                                     TextButton(
                                                                                       onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                      child: Text('Ok'),
+                                                                                      child: const Text('Ok'),
                                                                                     ),
                                                                                   ],
                                                                                 );
@@ -6224,7 +6215,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                   color: FlutterFlowTheme.of(context).primaryText,
                                                                                 ),
                                                                               ),
-                                                                              duration: Duration(milliseconds: 4000),
+                                                                              duration: const Duration(milliseconds: 4000),
                                                                               backgroundColor: FlutterFlowTheme.of(context).secondary,
                                                                             ),
                                                                           );
@@ -6232,7 +6223,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                         text:
                                                                             'Adicionar Fornecedor',
                                                                         icon:
-                                                                            Icon(
+                                                                            const Icon(
                                                                           Icons
                                                                               .add,
                                                                           size:
@@ -6244,12 +6235,12 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               250.0,
                                                                           height:
                                                                               50.0,
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               24.0,
                                                                               0.0,
                                                                               24.0,
                                                                               0.0),
-                                                                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               0.0,
                                                                               0.0,
@@ -6268,7 +6259,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           elevation:
                                                                               3.0,
                                                                           borderSide:
-                                                                              BorderSide(
+                                                                              const BorderSide(
                                                                             color:
                                                                                 Colors.transparent,
                                                                             width:
@@ -6279,7 +6270,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                         ),
                                                                       ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           10.0)),
                                                                 ),
@@ -6294,21 +6285,21 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                               ),
                                             ),
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       20.0, 0.0, 0.0, 0.0),
                                               child: wrapWithModel(
                                                 model: _model.folderModel4,
                                                 updateCallback: () =>
                                                     setState(() {}),
-                                                child: FolderWidget(),
+                                                child: const FolderWidget(),
                                               ),
                                             ),
                                           ],
                                         ),
                                       ),
                                     ),
-                                  if (widget!.telas == 'unidade')
+                                  if (widget.telas == 'unidade')
                                     Container(
                                       width: MediaQuery.sizeOf(context).width *
                                           0.75,
@@ -6322,7 +6313,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                         ),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsets.all(20.0),
+                                        padding: const EdgeInsets.all(20.0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
@@ -6359,7 +6350,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                             .disabled,
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsets.all(10.0),
+                                                          const EdgeInsets.all(10.0),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -6371,7 +6362,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                             children: [
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -6410,7 +6401,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         16.0,
@@ -6423,7 +6414,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                               children: [
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           -1.0,
                                                                           0.0),
                                                                   child: Text(
@@ -6440,7 +6431,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                   ),
                                                                 ),
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           6.0,
                                                                           0.0,
@@ -6460,7 +6451,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         6.0,
@@ -6514,7 +6505,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                               borderWidth: 2.0,
                                                               borderRadius: 8.0,
                                                               margin:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           4.0,
@@ -6532,7 +6523,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         16.0,
@@ -6545,7 +6536,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                               children: [
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           -1.0,
                                                                           0.0),
                                                                   child: Text(
@@ -6562,7 +6553,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                   ),
                                                                 ),
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           6.0,
                                                                           0.0,
@@ -6582,7 +6573,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         6.0,
@@ -6695,11 +6686,11 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                           ),
                                                           Align(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     1.0, 0.0),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           20.0,
@@ -6728,13 +6719,13 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           (alertDialogContext) {
                                                                         return AlertDialog(
                                                                           title:
-                                                                              Text('Campo obrigatório'),
+                                                                              const Text('Campo obrigatório'),
                                                                           content:
-                                                                              Text('A filial é obrigatório.'),
+                                                                              const Text('A filial é obrigatório.'),
                                                                           actions: [
                                                                             TextButton(
                                                                               onPressed: () => Navigator.pop(alertDialogContext),
-                                                                              child: Text('Ok'),
+                                                                              child: const Text('Ok'),
                                                                             ),
                                                                           ],
                                                                         );
@@ -6785,7 +6776,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               FlutterFlowTheme.of(context).primaryText,
                                                                         ),
                                                                       ),
-                                                                      duration: Duration(
+                                                                      duration: const Duration(
                                                                           milliseconds:
                                                                               4000),
                                                                       backgroundColor:
@@ -6796,20 +6787,20 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                 },
                                                                 text:
                                                                     'Adicionar',
-                                                                icon: Icon(
+                                                                icon: const Icon(
                                                                   Icons.add,
                                                                   size: 15.0,
                                                                 ),
                                                                 options:
                                                                     FFButtonOptions(
                                                                   height: 40.0,
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           24.0,
                                                                           0.0,
                                                                           24.0,
                                                                           0.0),
-                                                                  iconPadding: EdgeInsetsDirectional
+                                                                  iconPadding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -6832,7 +6823,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                   elevation:
                                                                       3.0,
                                                                   borderSide:
-                                                                      BorderSide(
+                                                                      const BorderSide(
                                                                     color: Colors
                                                                         .transparent,
                                                                     width: 1.0,
@@ -6906,7 +6897,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   10.0),
                                                           child: Column(
                                                             mainAxisSize:
@@ -6919,7 +6910,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                         .max,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -7062,7 +7053,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               selected,
                                                                               onSelectChanged) =>
                                                                           DataRow(
-                                                                        color: MaterialStateProperty
+                                                                        color: WidgetStateProperty
                                                                             .all(
                                                                           categoriaListIndex % 2 == 0
                                                                               ? FlutterFlowTheme.of(context).secondaryBackground
@@ -7105,7 +7096,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                   child: Icon(
                                                                                     Icons.edit_square,
                                                                                     color: FlutterFlowTheme.of(context).primaryText,
@@ -7116,12 +7107,12 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               Container(
                                                                                 width: 35.0,
                                                                                 height: 35.0,
-                                                                                decoration: BoxDecoration(
+                                                                                decoration: const BoxDecoration(
                                                                                   color: Color(0xFFE30909),
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                   child: Icon(
                                                                                     Icons.delete_rounded,
                                                                                     color: FlutterFlowTheme.of(context).info,
@@ -7129,7 +7120,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                   ),
                                                                                 ),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 10.0)),
+                                                                            ].divide(const SizedBox(width: 10.0)),
                                                                           ),
                                                                         ]
                                                                             .map((c) =>
@@ -7197,13 +7188,13 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                     },
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 10.0)),
+                                              ].divide(const SizedBox(width: 10.0)),
                                             ),
                                           ],
                                         ),
                                       ),
                                     ),
-                                  if (widget!.telas == 'compras')
+                                  if (widget.telas == 'compras')
                                     Container(
                                       width: MediaQuery.sizeOf(context).width *
                                           0.75,
@@ -7217,7 +7208,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                         ),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 20.0, 0.0, 0.0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
@@ -7227,7 +7218,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        Alignment(-1.0, 0),
+                                                        const Alignment(-1.0, 0),
                                                     child: TabBar(
                                                       isScrollable: true,
                                                       labelColor:
@@ -7250,15 +7241,15 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                     0.0,
                                                               ),
                                                       unselectedLabelStyle:
-                                                          TextStyle(),
+                                                          const TextStyle(),
                                                       indicatorColor:
                                                           FlutterFlowTheme.of(
                                                                   context)
                                                               .tertiary,
                                                       indicatorWeight: 1.0,
                                                       padding:
-                                                          EdgeInsets.all(4.0),
-                                                      tabs: [
+                                                          const EdgeInsets.all(4.0),
+                                                      tabs: const [
                                                         Row(
                                                           mainAxisAlignment:
                                                               MainAxisAlignment
@@ -7357,10 +7348,10 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
 
                                                             return Container(
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsets
+                                                                    const EdgeInsets
                                                                         .all(
                                                                             20.0),
                                                                 child: Column(
@@ -7389,7 +7380,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           child:
                                                                               Padding(
                                                                             padding:
-                                                                                EdgeInsets.all(6.0),
+                                                                                const EdgeInsets.all(6.0),
                                                                             child:
                                                                                 Row(
                                                                               mainAxisSize: MainAxisSize.max,
@@ -7464,7 +7455,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                     print('IconButton pressed ...');
                                                                                   },
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 10.0)),
+                                                                              ].divide(const SizedBox(width: 10.0)),
                                                                             ),
                                                                           ),
                                                                         ),
@@ -7472,10 +7463,10 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           width:
                                                                               250.0,
                                                                           decoration:
-                                                                              BoxDecoration(),
+                                                                              const BoxDecoration(),
                                                                           child:
                                                                               Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 8.0,
                                                                                 0.0,
                                                                                 8.0,
@@ -7486,24 +7477,23 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               focusNode: _model.textFieldFocusNode4,
                                                                               onChanged: (_) => EasyDebounce.debounce(
                                                                                 '_model.textController23',
-                                                                                Duration(milliseconds: 2000),
+                                                                                const Duration(milliseconds: 2000),
                                                                                 () async {
-                                                                                  if (_model.textController23.text != null && _model.textController23.text != '') {
+                                                                                  if (_model.textController23.text != '') {
                                                                                     safeSetState(() {
                                                                                       _model.simpleSearchResults4 = TextSearch(
                                                                                         containerInventarioComprasRecordList
                                                                                             .map(
-                                                                                              (record) => TextSearchItem.fromTerms(record, [record.filial!]),
+                                                                                              (record) => TextSearchItem.fromTerms(record, [record.filial]),
                                                                                             )
                                                                                             .toList(),
                                                                                       ).search(_model.textController23.text).map((r) => r.object).take(20).toList();
-                                                                                      ;
                                                                                     });
                                                                                   } else {
                                                                                     context.goNamed(
                                                                                       'A01escola',
                                                                                       extra: <String, dynamic>{
-                                                                                        kTransitionInfoKey: TransitionInfo(
+                                                                                        kTransitionInfoKey: const TransitionInfo(
                                                                                           hasTransition: true,
                                                                                           transitionType: PageTransitionType.fade,
                                                                                           duration: Duration(milliseconds: 0),
@@ -7569,7 +7559,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                     Expanded(
                                                                       child:
                                                                           Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             10.0,
                                                                             0.0,
@@ -7753,7 +7743,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                   ),
                                                                                 ],
                                                                                 dataRowBuilder: (produtosListItem, produtosListIndex, selected, onSelectChanged) => DataRow(
-                                                                                  color: MaterialStateProperty.all(
+                                                                                  color: WidgetStateProperty.all(
                                                                                     produtosListIndex % 2 == 0 ? FlutterFlowTheme.of(context).secondaryBackground : FlutterFlowTheme.of(context).primaryBackground,
                                                                                   ),
                                                                                   cells: [
@@ -7899,16 +7889,16 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                       context: context,
                                                                                                       builder: (alertDialogContext) {
                                                                                                         return AlertDialog(
-                                                                                                          title: Text('Você tem certeza?'),
-                                                                                                          content: Text('Adicionar produtos a lista de estoque.'),
+                                                                                                          title: const Text('Você tem certeza?'),
+                                                                                                          content: const Text('Adicionar produtos a lista de estoque.'),
                                                                                                           actions: [
                                                                                                             TextButton(
                                                                                                               onPressed: () => Navigator.pop(alertDialogContext, false),
-                                                                                                              child: Text('Não'),
+                                                                                                              child: const Text('Não'),
                                                                                                             ),
                                                                                                             TextButton(
                                                                                                               onPressed: () => Navigator.pop(alertDialogContext, true),
-                                                                                                              child: Text('Sim, continue'),
+                                                                                                              child: const Text('Sim, continue'),
                                                                                                             ),
                                                                                                           ],
                                                                                                         );
@@ -7951,15 +7941,15 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                     context: context,
                                                                                                     builder: (alertDialogContext) {
                                                                                                       return AlertDialog(
-                                                                                                        title: Text('Deseja deletar essa compra?'),
+                                                                                                        title: const Text('Deseja deletar essa compra?'),
                                                                                                         actions: [
                                                                                                           TextButton(
                                                                                                             onPressed: () => Navigator.pop(alertDialogContext, false),
-                                                                                                            child: Text('Não, cancelar'),
+                                                                                                            child: const Text('Não, cancelar'),
                                                                                                           ),
                                                                                                           TextButton(
                                                                                                             onPressed: () => Navigator.pop(alertDialogContext, true),
-                                                                                                            child: Text('Sim, deletar Compra!'),
+                                                                                                            child: const Text('Sim, deletar Compra!'),
                                                                                                           ),
                                                                                                         ],
                                                                                                       );
@@ -7971,7 +7961,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                               }
                                                                                             },
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 10.0)),
+                                                                                        ].divide(const SizedBox(width: 10.0)),
                                                                                       ),
                                                                                     ),
                                                                                   ].map((c) => DataCell(c)).toList(),
@@ -8019,10 +8009,10 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                   .disabled,
                                                           child: Container(
                                                             decoration:
-                                                                BoxDecoration(),
+                                                                const BoxDecoration(),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           20.0,
@@ -8039,7 +8029,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           .center,
                                                                   children: [
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -8067,7 +8057,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                       ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                   child: FaIcon(
                                                                                     FontAwesomeIcons.asterisk,
                                                                                     color: FlutterFlowTheme.of(context).error,
@@ -8083,7 +8073,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             child:
                                                                                 Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: FlutterFlowDropDown<String>(
                                                                                 controller: _model.filialCompraValueController1 ??= FormFieldController<String>(null),
                                                                                 options: containerFilialRecordList.map((e) => e.nomeFilial).toList(),
@@ -8105,7 +8095,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                 borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                 borderWidth: 2.0,
                                                                                 borderRadius: 8.0,
-                                                                                margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                 hidesUnderline: true,
                                                                                 isOverButton: false,
                                                                                 isSearchable: false,
@@ -8113,7 +8103,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                     if (_model.filialCompraValue1 !=
@@ -8165,10 +8155,10 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
 
                                                                           return Container(
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                                                                               child: Row(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 mainAxisAlignment: MainAxisAlignment.start,
@@ -8187,7 +8177,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                               ),
                                                                                         ),
                                                                                         Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                           child: FaIcon(
                                                                                             FontAwesomeIcons.asterisk,
                                                                                             color: FlutterFlowTheme.of(context).error,
@@ -8201,7 +8191,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                     flex: 3,
                                                                                     child: Container(
                                                                                       width: 550.0,
-                                                                                      decoration: BoxDecoration(),
+                                                                                      decoration: const BoxDecoration(),
                                                                                       child: FlutterFlowDropDown<String>(
                                                                                         controller: _model.fornecedorCompraValueController ??= FormFieldController<String>(null),
                                                                                         options: containerInventarioFornecedoresRecordList.map((e) => e.nomeFornecedor).toList(),
@@ -8223,7 +8213,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                         borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                         borderWidth: 2.0,
                                                                                         borderRadius: 8.0,
-                                                                                        margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                        margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                         hidesUnderline: true,
                                                                                         isOverButton: false,
                                                                                         isSearchable: false,
@@ -8231,7 +8221,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 20.0)),
+                                                                                ].divide(const SizedBox(width: 20.0)),
                                                                               ),
                                                                             ),
                                                                           );
@@ -8286,10 +8276,10 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
 
                                                                           return Container(
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                                                                               child: Row(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 mainAxisAlignment: MainAxisAlignment.start,
@@ -8308,7 +8298,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                               ),
                                                                                         ),
                                                                                         Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                           child: FaIcon(
                                                                                             FontAwesomeIcons.asterisk,
                                                                                             color: FlutterFlowTheme.of(context).error,
@@ -8322,7 +8312,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                     flex: 3,
                                                                                     child: Container(
                                                                                       width: 550.0,
-                                                                                      decoration: BoxDecoration(),
+                                                                                      decoration: const BoxDecoration(),
                                                                                       child: FlutterFlowDropDown<String>(
                                                                                         controller: _model.lojaCompraValueController1 ??= FormFieldController<String>(null),
                                                                                         options: containerInventarioLoja1RecordList.map((e) => e.nomeLoja).toList(),
@@ -8344,7 +8334,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                         borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                         borderWidth: 2.0,
                                                                                         borderRadius: 8.0,
-                                                                                        margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                        margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                         hidesUnderline: true,
                                                                                         isOverButton: false,
                                                                                         isSearchable: false,
@@ -8352,7 +8342,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 20.0)),
+                                                                                ].divide(const SizedBox(width: 20.0)),
                                                                               ),
                                                                             ),
                                                                           );
@@ -8366,7 +8356,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           .alternate,
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -8394,7 +8384,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                       ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                   child: FaIcon(
                                                                                     FontAwesomeIcons.asterisk,
                                                                                     color: FlutterFlowTheme.of(context).error,
@@ -8410,9 +8400,9 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             child:
                                                                                 Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                 child: TextFormField(
                                                                                   controller: _model.faturaCompraTextController1,
                                                                                   focusNode: _model.faturaCompraFocusNode1,
@@ -8468,7 +8458,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                     Divider(
@@ -8479,7 +8469,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           .alternate,
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -8507,7 +8497,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                       ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                   child: FaIcon(
                                                                                     FontAwesomeIcons.asterisk,
                                                                                     color: FlutterFlowTheme.of(context).error,
@@ -8523,10 +8513,10 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             child:
                                                                                 Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: FlutterFlowDropDown<String>(
                                                                                 controller: _model.estadoCompraValueController ??= FormFieldController<String>(null),
-                                                                                options: [
+                                                                                options: const [
                                                                                   'Encomendado',
                                                                                   'Recebido',
                                                                                   'Pendente'
@@ -8549,7 +8539,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                 borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                 borderWidth: 2.0,
                                                                                 borderRadius: 8.0,
-                                                                                margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                 hidesUnderline: true,
                                                                                 isOverButton: false,
                                                                                 isSearchable: false,
@@ -8557,7 +8547,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                     Divider(
@@ -8568,7 +8558,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           .alternate,
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -8596,7 +8586,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                       ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                   child: FaIcon(
                                                                                     FontAwesomeIcons.asterisk,
                                                                                     color: FlutterFlowTheme.of(context).error,
@@ -8617,7 +8607,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               highlightColor: Colors.transparent,
                                                                               onTap: () async {
                                                                                 // compra
-                                                                                final _datePicked1Date = await showDatePicker(
+                                                                                final datePicked1Date = await showDatePicker(
                                                                                   context: context,
                                                                                   initialDate: getCurrentTimestamp,
                                                                                   firstDate: DateTime(1900),
@@ -8644,12 +8634,12 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                   },
                                                                                 );
 
-                                                                                if (_datePicked1Date != null) {
+                                                                                if (datePicked1Date != null) {
                                                                                   safeSetState(() {
                                                                                     _model.datePicked1 = DateTime(
-                                                                                      _datePicked1Date.year,
-                                                                                      _datePicked1Date.month,
-                                                                                      _datePicked1Date.day,
+                                                                                      datePicked1Date.year,
+                                                                                      datePicked1Date.month,
+                                                                                      datePicked1Date.day,
                                                                                     );
                                                                                   });
                                                                                 }
@@ -8662,9 +8652,9 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                   borderRadius: BorderRadius.circular(10.0),
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                   child: Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                                                                                     child: Text(
                                                                                       _model.datePicked1 == null
                                                                                           ? dateTimeFormat(
@@ -8689,7 +8679,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                     Divider(
@@ -8700,7 +8690,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           .alternate,
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -8736,9 +8726,9 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             child:
                                                                                 Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                 child: TextFormField(
                                                                                   controller: _model.observacaoCompraTextController,
                                                                                   focusNode: _model.observacaoCompraFocusNode,
@@ -8795,7 +8785,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                     if (_model.filialCompraValue1 !=
@@ -8804,7 +8794,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             '')
                                                                       Padding(
                                                                         padding:
-                                                                            EdgeInsets.all(20.0),
+                                                                            const EdgeInsets.all(20.0),
                                                                         child:
                                                                             Container(
                                                                           width:
@@ -8814,7 +8804,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             color:
                                                                                 FlutterFlowTheme.of(context).secondaryBackground,
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(0.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -8835,7 +8825,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                   color: FlutterFlowTheme.of(context).primaryBackground,
                                                                                 ),
                                                                                 child: Padding(
-                                                                                  padding: EdgeInsets.all(10.0),
+                                                                                  padding: const EdgeInsets.all(10.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -8855,7 +8845,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                   ),
                                                                                             ),
                                                                                             Padding(
-                                                                                              padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                               child: FaIcon(
                                                                                                 FontAwesomeIcons.asterisk,
                                                                                                 color: FlutterFlowTheme.of(context).error,
@@ -8906,7 +8896,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                   ),
                                                                                             ),
                                                                                             Padding(
-                                                                                              padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                               child: FaIcon(
                                                                                                 FontAwesomeIcons.asterisk,
                                                                                                 color: FlutterFlowTheme.of(context).error,
@@ -8967,7 +8957,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                     children: List.generate(listaProdutosAdd.length, (listaProdutosAddIndex) {
                                                                                       final listaProdutosAddItem = listaProdutosAdd[listaProdutosAddIndex];
                                                                                       return Padding(
-                                                                                        padding: EdgeInsets.all(10.0),
+                                                                                        padding: const EdgeInsets.all(10.0),
                                                                                         child: Row(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -9096,12 +9086,12 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                   Container(
                                                                                                     width: 32.0,
                                                                                                     height: 32.0,
-                                                                                                    decoration: BoxDecoration(
+                                                                                                    decoration: const BoxDecoration(
                                                                                                       color: Color(0xFFE30909),
                                                                                                       shape: BoxShape.circle,
                                                                                                     ),
                                                                                                     child: Align(
-                                                                                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                                      alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                                       child: Icon(
                                                                                                         Icons.delete_rounded,
                                                                                                         color: FlutterFlowTheme.of(context).info,
@@ -9148,9 +9138,9 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
                                                                                         Container(
-                                                                                          decoration: BoxDecoration(),
+                                                                                          decoration: const BoxDecoration(),
                                                                                           child: Padding(
-                                                                                            padding: EdgeInsets.all(10.0),
+                                                                                            padding: const EdgeInsets.all(10.0),
                                                                                             child: Row(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -9179,7 +9169,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                     borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                                     borderWidth: 2.0,
                                                                                                     borderRadius: 8.0,
-                                                                                                    margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                                    margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                                     hidesUnderline: true,
                                                                                                     isOverButton: false,
                                                                                                     isSearchable: false,
@@ -9201,7 +9191,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                       borderRadius: BorderRadius.circular(4.0),
                                                                                                     ),
                                                                                                     child: Padding(
-                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                                       child: SelectionArea(
                                                                                                           child: Text(
                                                                                                         valueOrDefault<String>(
@@ -9237,13 +9227,13 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                 ),
                                                                                                 Expanded(
                                                                                                   child: Padding(
-                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                                     child: TextFormField(
                                                                                                       controller: _model.quantidadeTextController1,
                                                                                                       focusNode: _model.quantidadeFocusNode1,
                                                                                                       onChanged: (_) => EasyDebounce.debounce(
                                                                                                         '_model.quantidadeTextController1',
-                                                                                                        Duration(milliseconds: 1000),
+                                                                                                        const Duration(milliseconds: 1000),
                                                                                                         () => setState(() {}),
                                                                                                       ),
                                                                                                       autofocus: false,
@@ -9312,7 +9302,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                 ),
                                                                                                 Expanded(
                                                                                                   child: Padding(
-                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                                     child: TextFormField(
                                                                                                       controller: _model.descontoTextController1,
                                                                                                       focusNode: _model.descontoFocusNode1,
@@ -9388,7 +9378,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                       borderRadius: BorderRadius.circular(4.0),
                                                                                                     ),
                                                                                                     child: Padding(
-                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                                       child: SelectionArea(
                                                                                                           child: Text(
                                                                                                         valueOrDefault<String>(
@@ -9432,9 +9422,9 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                         ),
                                                                                         if (_model.filialCompraValue1 != null && _model.filialCompraValue1 != '')
                                                                                           Align(
-                                                                                            alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                            alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                             child: Padding(
-                                                                                              padding: EdgeInsetsDirectional.fromSTEB(20.0, 10.0, 0.0, 10.0),
+                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 10.0, 0.0, 10.0),
                                                                                               child: FFButtonWidget(
                                                                                                 onPressed: () async {
                                                                                                   if (_model.produtoValue1 != null && _model.produtoValue1 != '') {
@@ -9473,11 +9463,11 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                       context: context,
                                                                                                       builder: (alertDialogContext) {
                                                                                                         return AlertDialog(
-                                                                                                          title: Text('Para adicionar mais linhas, feche essa primeiro!'),
+                                                                                                          title: const Text('Para adicionar mais linhas, feche essa primeiro!'),
                                                                                                           actions: [
                                                                                                             TextButton(
                                                                                                               onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                                              child: Text('Ok'),
+                                                                                                              child: const Text('Ok'),
                                                                                                             ),
                                                                                                           ],
                                                                                                         );
@@ -9488,8 +9478,8 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                 text: 'Adicionar Compra',
                                                                                                 options: FFButtonOptions(
                                                                                                   height: 40.0,
-                                                                                                  padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                                  iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                                   color: FlutterFlowTheme.of(context).primary,
                                                                                                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                                         fontFamily: 'Manrope',
@@ -9497,7 +9487,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                         letterSpacing: 0.0,
                                                                                                       ),
                                                                                                   elevation: 3.0,
-                                                                                                  borderSide: BorderSide(
+                                                                                                  borderSide: const BorderSide(
                                                                                                     color: Colors.transparent,
                                                                                                     width: 1.0,
                                                                                                   ),
@@ -9516,7 +9506,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                         ),
                                                                       ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           50.0,
                                                                           10.0,
                                                                           50.0,
@@ -9535,12 +9525,12 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               context: context,
                                                                               builder: (alertDialogContext) {
                                                                                 return AlertDialog(
-                                                                                  title: Text('Campo Obrigatório'),
-                                                                                  content: Text('Todos os campos com Estrela é obrigatório!'),
+                                                                                  title: const Text('Campo Obrigatório'),
+                                                                                  content: const Text('Todos os campos com Estrela é obrigatório!'),
                                                                                   actions: [
                                                                                     TextButton(
                                                                                       onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                      child: Text('Ok'),
+                                                                                      child: const Text('Ok'),
                                                                                     ),
                                                                                   ],
                                                                                 );
@@ -9554,11 +9544,11 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               context: context,
                                                                               builder: (alertDialogContext) {
                                                                                 return AlertDialog(
-                                                                                  title: Text('Todos os campos com Estrela é obrigatório!'),
+                                                                                  title: const Text('Todos os campos com Estrela é obrigatório!'),
                                                                                   actions: [
                                                                                     TextButton(
                                                                                       onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                      child: Text('Ok'),
+                                                                                      child: const Text('Ok'),
                                                                                     ),
                                                                                   ],
                                                                                 );
@@ -9572,11 +9562,11 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               context: context,
                                                                               builder: (alertDialogContext) {
                                                                                 return AlertDialog(
-                                                                                  title: Text('Todos os campos com Estrela é obrigatório!'),
+                                                                                  title: const Text('Todos os campos com Estrela é obrigatório!'),
                                                                                   actions: [
                                                                                     TextButton(
                                                                                       onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                      child: Text('Ok'),
+                                                                                      child: const Text('Ok'),
                                                                                     ),
                                                                                   ],
                                                                                 );
@@ -9590,11 +9580,11 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               context: context,
                                                                               builder: (alertDialogContext) {
                                                                                 return AlertDialog(
-                                                                                  title: Text('Todos os campos com Estrela é obrigatório!'),
+                                                                                  title: const Text('Todos os campos com Estrela é obrigatório!'),
                                                                                   actions: [
                                                                                     TextButton(
                                                                                       onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                      child: Text('Ok'),
+                                                                                      child: const Text('Ok'),
                                                                                     ),
                                                                                   ],
                                                                                 );
@@ -9608,11 +9598,11 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               context: context,
                                                                               builder: (alertDialogContext) {
                                                                                 return AlertDialog(
-                                                                                  title: Text('Todos os campos com Estrela é obrigatório!'),
+                                                                                  title: const Text('Todos os campos com Estrela é obrigatório!'),
                                                                                   actions: [
                                                                                     TextButton(
                                                                                       onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                      child: Text('Ok'),
+                                                                                      child: const Text('Ok'),
                                                                                     ),
                                                                                   ],
                                                                                 );
@@ -9636,9 +9626,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                 _model.lojaCompraValue1,
                                                                             fatura:
                                                                                 _model.faturaCompraTextController1.text,
-                                                                            dataCompra: _model.datePicked1 != null
-                                                                                ? _model.datePicked1
-                                                                                : getCurrentTimestamp,
+                                                                            dataCompra: _model.datePicked1 ?? getCurrentTimestamp,
                                                                             observacao:
                                                                                 _model.observacaoCompraTextController.text,
                                                                             filialRef:
@@ -9660,7 +9648,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                 fornecedor: _model.fornecedorCompraValue,
                                                                                 loja: _model.lojaCompraValue1,
                                                                                 fatura: _model.faturaCompraTextController1.text,
-                                                                                dataCompra: _model.datePicked1 != null ? _model.datePicked1 : getCurrentTimestamp,
+                                                                                dataCompra: _model.datePicked1 ?? getCurrentTimestamp,
                                                                                 observacao: _model.observacaoCompraTextController.text,
                                                                                 filialRef: containerFilialRecordList.where((e) => e.nomeFilial == _model.filialCompraValue1).toList().first.reference,
                                                                                 statusPagamento: 'Não Pago',
@@ -9677,7 +9665,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           _model.instantTimer =
                                                                               InstantTimer.periodic(
                                                                             duration:
-                                                                                Duration(milliseconds: 1000),
+                                                                                const Duration(milliseconds: 1000),
                                                                             callback:
                                                                                 (timer) async {
                                                                               while (FFAppState().contador <= FFAppState().listaCompras.length) {
@@ -9722,7 +9710,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                       color: FlutterFlowTheme.of(context).primaryText,
                                                                                     ),
                                                                                   ),
-                                                                                  duration: Duration(milliseconds: 4000),
+                                                                                  duration: const Duration(milliseconds: 4000),
                                                                                   backgroundColor: FlutterFlowTheme.of(context).secondary,
                                                                                 ),
                                                                               );
@@ -9737,7 +9725,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                         text:
                                                                             'Adicionar Compra',
                                                                         icon:
-                                                                            Icon(
+                                                                            const Icon(
                                                                           Icons
                                                                               .add,
                                                                           size:
@@ -9749,12 +9737,12 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               250.0,
                                                                           height:
                                                                               50.0,
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               24.0,
                                                                               0.0,
                                                                               24.0,
                                                                               0.0),
-                                                                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               0.0,
                                                                               0.0,
@@ -9773,7 +9761,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           elevation:
                                                                               3.0,
                                                                           borderSide:
-                                                                              BorderSide(
+                                                                              const BorderSide(
                                                                             color:
                                                                                 Colors.transparent,
                                                                             width:
@@ -9784,7 +9772,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                         ),
                                                                       ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           10.0)),
                                                                 ),
@@ -9802,7 +9790,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                         ),
                                       ),
                                     ),
-                                  if (widget!.telas == 'vendas')
+                                  if (widget.telas == 'vendas')
                                     Container(
                                       width: MediaQuery.sizeOf(context).width *
                                           0.75,
@@ -9816,7 +9804,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                         ),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 20.0, 0.0, 0.0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
@@ -9826,7 +9814,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        Alignment(-1.0, 0),
+                                                        const Alignment(-1.0, 0),
                                                     child: TabBar(
                                                       isScrollable: true,
                                                       labelColor:
@@ -9849,15 +9837,15 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                     0.0,
                                                               ),
                                                       unselectedLabelStyle:
-                                                          TextStyle(),
+                                                          const TextStyle(),
                                                       indicatorColor:
                                                           FlutterFlowTheme.of(
                                                                   context)
                                                               .tertiary,
                                                       indicatorWeight: 1.0,
                                                       padding:
-                                                          EdgeInsets.all(4.0),
-                                                      tabs: [
+                                                          const EdgeInsets.all(4.0),
+                                                      tabs: const [
                                                         Row(
                                                           mainAxisAlignment:
                                                               MainAxisAlignment
@@ -9956,10 +9944,10 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
 
                                                             return Container(
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsets
+                                                                    const EdgeInsets
                                                                         .all(
                                                                             20.0),
                                                                 child: Column(
@@ -9988,7 +9976,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           child:
                                                                               Padding(
                                                                             padding:
-                                                                                EdgeInsets.all(6.0),
+                                                                                const EdgeInsets.all(6.0),
                                                                             child:
                                                                                 Row(
                                                                               mainAxisSize: MainAxisSize.max,
@@ -10063,7 +10051,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                     print('IconButton pressed ...');
                                                                                   },
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 10.0)),
+                                                                              ].divide(const SizedBox(width: 10.0)),
                                                                             ),
                                                                           ),
                                                                         ),
@@ -10071,10 +10059,10 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           width:
                                                                               250.0,
                                                                           decoration:
-                                                                              BoxDecoration(),
+                                                                              const BoxDecoration(),
                                                                           child:
                                                                               Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 8.0,
                                                                                 0.0,
                                                                                 8.0,
@@ -10085,24 +10073,23 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               focusNode: _model.textFieldFocusNode5,
                                                                               onChanged: (_) => EasyDebounce.debounce(
                                                                                 '_model.textController28',
-                                                                                Duration(milliseconds: 2000),
+                                                                                const Duration(milliseconds: 2000),
                                                                                 () async {
-                                                                                  if (_model.textController28.text != null && _model.textController28.text != '') {
+                                                                                  if (_model.textController28.text != '') {
                                                                                     safeSetState(() {
                                                                                       _model.simpleSearchResults5 = TextSearch(
                                                                                         containerInventarioVendasRecordList
                                                                                             .map(
-                                                                                              (record) => TextSearchItem.fromTerms(record, [record.filial!]),
+                                                                                              (record) => TextSearchItem.fromTerms(record, [record.filial]),
                                                                                             )
                                                                                             .toList(),
                                                                                       ).search(_model.textController28.text).map((r) => r.object).take(20).toList();
-                                                                                      ;
                                                                                     });
                                                                                   } else {
                                                                                     context.goNamed(
                                                                                       'A01escola',
                                                                                       extra: <String, dynamic>{
-                                                                                        kTransitionInfoKey: TransitionInfo(
+                                                                                        kTransitionInfoKey: const TransitionInfo(
                                                                                           hasTransition: true,
                                                                                           transitionType: PageTransitionType.fade,
                                                                                           duration: Duration(milliseconds: 0),
@@ -10168,7 +10155,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                     Expanded(
                                                                       child:
                                                                           Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             10.0,
                                                                             0.0,
@@ -10352,7 +10339,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                   ),
                                                                                 ],
                                                                                 dataRowBuilder: (produtosListItem, produtosListIndex, selected, onSelectChanged) => DataRow(
-                                                                                  color: MaterialStateProperty.all(
+                                                                                  color: WidgetStateProperty.all(
                                                                                     produtosListIndex % 2 == 0 ? FlutterFlowTheme.of(context).secondaryBackground : FlutterFlowTheme.of(context).primaryBackground,
                                                                                   ),
                                                                                   cells: [
@@ -10511,15 +10498,15 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                     context: context,
                                                                                                     builder: (alertDialogContext) {
                                                                                                       return AlertDialog(
-                                                                                                        title: Text('Deseja deletar essa compra?'),
+                                                                                                        title: const Text('Deseja deletar essa compra?'),
                                                                                                         actions: [
                                                                                                           TextButton(
                                                                                                             onPressed: () => Navigator.pop(alertDialogContext, false),
-                                                                                                            child: Text('Não, cancelar'),
+                                                                                                            child: const Text('Não, cancelar'),
                                                                                                           ),
                                                                                                           TextButton(
                                                                                                             onPressed: () => Navigator.pop(alertDialogContext, true),
-                                                                                                            child: Text('Sim, deletar Compra!'),
+                                                                                                            child: const Text('Sim, deletar Compra!'),
                                                                                                           ),
                                                                                                         ],
                                                                                                       );
@@ -10531,7 +10518,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                               }
                                                                                             },
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 10.0)),
+                                                                                        ].divide(const SizedBox(width: 10.0)),
                                                                                       ),
                                                                                     ),
                                                                                   ].map((c) => DataCell(c)).toList(),
@@ -10579,10 +10566,10 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                   .disabled,
                                                           child: Container(
                                                             decoration:
-                                                                BoxDecoration(),
+                                                                const BoxDecoration(),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           20.0,
@@ -10599,7 +10586,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           .center,
                                                                   children: [
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -10627,7 +10614,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                       ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                   child: FaIcon(
                                                                                     FontAwesomeIcons.asterisk,
                                                                                     color: FlutterFlowTheme.of(context).error,
@@ -10643,7 +10630,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             child:
                                                                                 Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: FlutterFlowDropDown<String>(
                                                                                 controller: _model.filialCompraValueController2 ??= FormFieldController<String>(null),
                                                                                 options: containerFilialRecordList.map((e) => e.nomeFilial).toList(),
@@ -10665,7 +10652,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                 borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                 borderWidth: 2.0,
                                                                                 borderRadius: 8.0,
-                                                                                margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                 hidesUnderline: true,
                                                                                 isOverButton: false,
                                                                                 isSearchable: false,
@@ -10673,7 +10660,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                     Divider(
@@ -10685,10 +10672,10 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                     ),
                                                                     Container(
                                                                       decoration:
-                                                                          BoxDecoration(),
+                                                                          const BoxDecoration(),
                                                                       child:
                                                                           Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             20.0,
                                                                             0.0,
                                                                             20.0,
@@ -10715,7 +10702,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                         ),
                                                                                   ),
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                     child: FaIcon(
                                                                                       FontAwesomeIcons.asterisk,
                                                                                       color: FlutterFlowTheme.of(context).error,
@@ -10729,10 +10716,10 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               flex: 3,
                                                                               child: Container(
                                                                                 width: 550.0,
-                                                                                decoration: BoxDecoration(),
+                                                                                decoration: const BoxDecoration(),
                                                                                 child: FlutterFlowDropDown<String>(
                                                                                   controller: _model.funcaoVendaValueController1 ??= FormFieldController<String>(null),
-                                                                                  options: [
+                                                                                  options: const [
                                                                                     'Admin',
                                                                                     'Professor',
                                                                                     'Contador',
@@ -10759,7 +10746,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                   borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                   borderWidth: 2.0,
                                                                                   borderRadius: 8.0,
-                                                                                  margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                  margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                   hidesUnderline: true,
                                                                                   isOverButton: false,
                                                                                   isSearchable: false,
@@ -10767,7 +10754,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                 ),
                                                                               ),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 20.0)),
+                                                                          ].divide(const SizedBox(width: 20.0)),
                                                                         ),
                                                                       ),
                                                                     ),
@@ -10780,10 +10767,10 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                     ),
                                                                     Container(
                                                                       decoration:
-                                                                          BoxDecoration(),
+                                                                          const BoxDecoration(),
                                                                       child:
                                                                           Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             20.0,
                                                                             0.0,
                                                                             20.0,
@@ -10810,7 +10797,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                         ),
                                                                                   ),
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                     child: FaIcon(
                                                                                       FontAwesomeIcons.asterisk,
                                                                                       color: FlutterFlowTheme.of(context).error,
@@ -10824,10 +10811,10 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               flex: 3,
                                                                               child: Container(
                                                                                 width: 550.0,
-                                                                                decoration: BoxDecoration(),
+                                                                                decoration: const BoxDecoration(),
                                                                                 child: FlutterFlowDropDown<String>(
                                                                                   controller: _model.lojaCompraValueController2 ??= FormFieldController<String>(null),
-                                                                                  options: [
+                                                                                  options: const [
                                                                                     'Nomes'
                                                                                   ],
                                                                                   onChanged: (val) => setState(() => _model.lojaCompraValue2 = val),
@@ -10848,7 +10835,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                   borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                   borderWidth: 2.0,
                                                                                   borderRadius: 8.0,
-                                                                                  margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                  margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                   hidesUnderline: true,
                                                                                   isOverButton: false,
                                                                                   isSearchable: false,
@@ -10856,7 +10843,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                 ),
                                                                               ),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 20.0)),
+                                                                          ].divide(const SizedBox(width: 20.0)),
                                                                         ),
                                                                       ),
                                                                     ),
@@ -10868,7 +10855,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           .alternate,
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -10896,7 +10883,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                       ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                   child: FaIcon(
                                                                                     FontAwesomeIcons.asterisk,
                                                                                     color: FlutterFlowTheme.of(context).error,
@@ -10912,9 +10899,9 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             child:
                                                                                 Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                 child: TextFormField(
                                                                                   controller: _model.faturaCompraTextController2,
                                                                                   focusNode: _model.faturaCompraFocusNode2,
@@ -10970,7 +10957,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                     Divider(
@@ -10981,7 +10968,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           .alternate,
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -11009,7 +10996,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                       ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                   child: FaIcon(
                                                                                     FontAwesomeIcons.asterisk,
                                                                                     color: FlutterFlowTheme.of(context).error,
@@ -11030,7 +11017,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               highlightColor: Colors.transparent,
                                                                               onTap: () async {
                                                                                 // compra
-                                                                                final _datePicked2Date = await showDatePicker(
+                                                                                final datePicked2Date = await showDatePicker(
                                                                                   context: context,
                                                                                   initialDate: getCurrentTimestamp,
                                                                                   firstDate: DateTime(1900),
@@ -11057,12 +11044,12 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                   },
                                                                                 );
 
-                                                                                if (_datePicked2Date != null) {
+                                                                                if (datePicked2Date != null) {
                                                                                   safeSetState(() {
                                                                                     _model.datePicked2 = DateTime(
-                                                                                      _datePicked2Date.year,
-                                                                                      _datePicked2Date.month,
-                                                                                      _datePicked2Date.day,
+                                                                                      datePicked2Date.year,
+                                                                                      datePicked2Date.month,
+                                                                                      datePicked2Date.day,
                                                                                     );
                                                                                   });
                                                                                 }
@@ -11075,9 +11062,9 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                   borderRadius: BorderRadius.circular(10.0),
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                   child: Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                                                                                     child: Text(
                                                                                       _model.datePicked2 == null
                                                                                           ? dateTimeFormat(
@@ -11102,7 +11089,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                     Divider(
@@ -11118,7 +11105,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             '')
                                                                       Padding(
                                                                         padding:
-                                                                            EdgeInsets.all(20.0),
+                                                                            const EdgeInsets.all(20.0),
                                                                         child:
                                                                             Container(
                                                                           width:
@@ -11128,7 +11115,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             color:
                                                                                 FlutterFlowTheme.of(context).secondaryBackground,
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(0.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -11149,7 +11136,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                   color: FlutterFlowTheme.of(context).primaryBackground,
                                                                                 ),
                                                                                 child: Padding(
-                                                                                  padding: EdgeInsets.all(10.0),
+                                                                                  padding: const EdgeInsets.all(10.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -11169,7 +11156,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                   ),
                                                                                             ),
                                                                                             Padding(
-                                                                                              padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                               child: FaIcon(
                                                                                                 FontAwesomeIcons.asterisk,
                                                                                                 color: FlutterFlowTheme.of(context).error,
@@ -11220,7 +11207,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                   ),
                                                                                             ),
                                                                                             Padding(
-                                                                                              padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                               child: FaIcon(
                                                                                                 FontAwesomeIcons.asterisk,
                                                                                                 color: FlutterFlowTheme.of(context).error,
@@ -11281,7 +11268,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                     children: List.generate(listaProdutosAdd.length, (listaProdutosAddIndex) {
                                                                                       final listaProdutosAddItem = listaProdutosAdd[listaProdutosAddIndex];
                                                                                       return Padding(
-                                                                                        padding: EdgeInsets.all(10.0),
+                                                                                        padding: const EdgeInsets.all(10.0),
                                                                                         child: Row(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -11410,12 +11397,12 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                   Container(
                                                                                                     width: 32.0,
                                                                                                     height: 32.0,
-                                                                                                    decoration: BoxDecoration(
+                                                                                                    decoration: const BoxDecoration(
                                                                                                       color: Color(0xFFE30909),
                                                                                                       shape: BoxShape.circle,
                                                                                                     ),
                                                                                                     child: Align(
-                                                                                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                                      alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                                       child: Icon(
                                                                                                         Icons.delete_rounded,
                                                                                                         color: FlutterFlowTheme.of(context).info,
@@ -11462,9 +11449,9 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
                                                                                         Container(
-                                                                                          decoration: BoxDecoration(),
+                                                                                          decoration: const BoxDecoration(),
                                                                                           child: Padding(
-                                                                                            padding: EdgeInsets.all(10.0),
+                                                                                            padding: const EdgeInsets.all(10.0),
                                                                                             child: Row(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -11493,7 +11480,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                     borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                                     borderWidth: 2.0,
                                                                                                     borderRadius: 8.0,
-                                                                                                    margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                                    margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                                     hidesUnderline: true,
                                                                                                     isOverButton: false,
                                                                                                     isSearchable: false,
@@ -11515,7 +11502,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                       borderRadius: BorderRadius.circular(4.0),
                                                                                                     ),
                                                                                                     child: Padding(
-                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                                       child: SelectionArea(
                                                                                                           child: Text(
                                                                                                         valueOrDefault<String>(
@@ -11551,13 +11538,13 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                 ),
                                                                                                 Expanded(
                                                                                                   child: Padding(
-                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                                     child: TextFormField(
                                                                                                       controller: _model.quantidadeTextController2,
                                                                                                       focusNode: _model.quantidadeFocusNode2,
                                                                                                       onChanged: (_) => EasyDebounce.debounce(
                                                                                                         '_model.quantidadeTextController2',
-                                                                                                        Duration(milliseconds: 1000),
+                                                                                                        const Duration(milliseconds: 1000),
                                                                                                         () => setState(() {}),
                                                                                                       ),
                                                                                                       autofocus: false,
@@ -11626,7 +11613,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                 ),
                                                                                                 Expanded(
                                                                                                   child: Padding(
-                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                                     child: TextFormField(
                                                                                                       controller: _model.descontoTextController2,
                                                                                                       focusNode: _model.descontoFocusNode2,
@@ -11702,7 +11689,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                       borderRadius: BorderRadius.circular(4.0),
                                                                                                     ),
                                                                                                     child: Padding(
-                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                                       child: SelectionArea(
                                                                                                           child: Text(
                                                                                                         valueOrDefault<String>(
@@ -11746,9 +11733,9 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                         ),
                                                                                         if (_model.filialCompraValue2 != null && _model.filialCompraValue2 != '')
                                                                                           Align(
-                                                                                            alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                            alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                             child: Padding(
-                                                                                              padding: EdgeInsetsDirectional.fromSTEB(20.0, 10.0, 0.0, 10.0),
+                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 10.0, 0.0, 10.0),
                                                                                               child: FFButtonWidget(
                                                                                                 onPressed: () async {
                                                                                                   if (_model.produtoValue2 != null && _model.produtoValue2 != '') {
@@ -11787,11 +11774,11 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                       context: context,
                                                                                                       builder: (alertDialogContext) {
                                                                                                         return AlertDialog(
-                                                                                                          title: Text('Para adicionar mais linhas, feche essa primeiro!'),
+                                                                                                          title: const Text('Para adicionar mais linhas, feche essa primeiro!'),
                                                                                                           actions: [
                                                                                                             TextButton(
                                                                                                               onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                                              child: Text('Ok'),
+                                                                                                              child: const Text('Ok'),
                                                                                                             ),
                                                                                                           ],
                                                                                                         );
@@ -11802,8 +11789,8 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                 text: 'Adicionar Compra',
                                                                                                 options: FFButtonOptions(
                                                                                                   height: 40.0,
-                                                                                                  padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                                  iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                                   color: FlutterFlowTheme.of(context).primary,
                                                                                                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                                         fontFamily: 'Manrope',
@@ -11811,7 +11798,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                         letterSpacing: 0.0,
                                                                                                       ),
                                                                                                   elevation: 3.0,
-                                                                                                  borderSide: BorderSide(
+                                                                                                  borderSide: const BorderSide(
                                                                                                     color: Colors.transparent,
                                                                                                     width: 1.0,
                                                                                                   ),
@@ -11830,7 +11817,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                         ),
                                                                       ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           50.0,
                                                                           10.0,
                                                                           50.0,
@@ -11845,11 +11832,11 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             builder:
                                                                                 (alertDialogContext) {
                                                                               return AlertDialog(
-                                                                                title: Text('Para essa função funcionar, preciso concluir a parte de adcionar funcionarios!'),
+                                                                                title: const Text('Para essa função funcionar, preciso concluir a parte de adcionar funcionarios!'),
                                                                                 actions: [
                                                                                   TextButton(
                                                                                     onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                    child: Text('Ok'),
+                                                                                    child: const Text('Ok'),
                                                                                   ),
                                                                                 ],
                                                                               );
@@ -11859,7 +11846,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                         text:
                                                                             'Adicionar Compra',
                                                                         icon:
-                                                                            Icon(
+                                                                            const Icon(
                                                                           Icons
                                                                               .add,
                                                                           size:
@@ -11871,12 +11858,12 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               250.0,
                                                                           height:
                                                                               45.0,
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               24.0,
                                                                               0.0,
                                                                               24.0,
                                                                               0.0),
-                                                                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               0.0,
                                                                               0.0,
@@ -11895,7 +11882,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           elevation:
                                                                               3.0,
                                                                           borderSide:
-                                                                              BorderSide(
+                                                                              const BorderSide(
                                                                             color:
                                                                                 Colors.transparent,
                                                                             width:
@@ -11906,7 +11893,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                         ),
                                                                       ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           10.0)),
                                                                 ),
@@ -11924,7 +11911,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                         ),
                                       ),
                                     ),
-                                  if (widget!.telas == 'emitir')
+                                  if (widget.telas == 'emitir')
                                     Container(
                                       width: MediaQuery.sizeOf(context).width *
                                           0.75,
@@ -11938,7 +11925,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                         ),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 20.0, 0.0, 0.0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
@@ -11948,7 +11935,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        Alignment(-1.0, 0),
+                                                        const Alignment(-1.0, 0),
                                                     child: TabBar(
                                                       isScrollable: true,
                                                       labelColor:
@@ -11971,15 +11958,15 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                     0.0,
                                                               ),
                                                       unselectedLabelStyle:
-                                                          TextStyle(),
+                                                          const TextStyle(),
                                                       indicatorColor:
                                                           FlutterFlowTheme.of(
                                                                   context)
                                                               .tertiary,
                                                       indicatorWeight: 1.0,
                                                       padding:
-                                                          EdgeInsets.all(4.0),
-                                                      tabs: [
+                                                          const EdgeInsets.all(4.0),
+                                                      tabs: const [
                                                         Row(
                                                           mainAxisAlignment:
                                                               MainAxisAlignment
@@ -12078,10 +12065,10 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
 
                                                             return Container(
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsets
+                                                                    const EdgeInsets
                                                                         .all(
                                                                             20.0),
                                                                 child: Column(
@@ -12110,7 +12097,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           child:
                                                                               Padding(
                                                                             padding:
-                                                                                EdgeInsets.all(6.0),
+                                                                                const EdgeInsets.all(6.0),
                                                                             child:
                                                                                 Row(
                                                                               mainAxisSize: MainAxisSize.max,
@@ -12185,7 +12172,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                     print('IconButton pressed ...');
                                                                                   },
                                                                                 ),
-                                                                              ].divide(SizedBox(width: 10.0)),
+                                                                              ].divide(const SizedBox(width: 10.0)),
                                                                             ),
                                                                           ),
                                                                         ),
@@ -12193,10 +12180,10 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           width:
                                                                               250.0,
                                                                           decoration:
-                                                                              BoxDecoration(),
+                                                                              const BoxDecoration(),
                                                                           child:
                                                                               Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 8.0,
                                                                                 0.0,
                                                                                 8.0,
@@ -12207,24 +12194,23 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               focusNode: _model.textFieldFocusNode6,
                                                                               onChanged: (_) => EasyDebounce.debounce(
                                                                                 '_model.textController32',
-                                                                                Duration(milliseconds: 2000),
+                                                                                const Duration(milliseconds: 2000),
                                                                                 () async {
-                                                                                  if (_model.textController32.text != null && _model.textController32.text != '') {
+                                                                                  if (_model.textController32.text != '') {
                                                                                     safeSetState(() {
                                                                                       _model.simpleSearchResults6 = TextSearch(
                                                                                         containerInventarioEmitirRecordList
                                                                                             .map(
-                                                                                              (record) => TextSearchItem.fromTerms(record, [record.filial!]),
+                                                                                              (record) => TextSearchItem.fromTerms(record, [record.filial]),
                                                                                             )
                                                                                             .toList(),
                                                                                       ).search(_model.textController32.text).map((r) => r.object).take(20).toList();
-                                                                                      ;
                                                                                     });
                                                                                   } else {
                                                                                     context.goNamed(
                                                                                       'A01escola',
                                                                                       extra: <String, dynamic>{
-                                                                                        kTransitionInfoKey: TransitionInfo(
+                                                                                        kTransitionInfoKey: const TransitionInfo(
                                                                                           hasTransition: true,
                                                                                           transitionType: PageTransitionType.fade,
                                                                                           duration: Duration(milliseconds: 0),
@@ -12290,7 +12276,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                     Expanded(
                                                                       child:
                                                                           Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             10.0,
                                                                             0.0,
@@ -12461,7 +12447,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                   ),
                                                                                 ],
                                                                                 dataRowBuilder: (produtosListItem, produtosListIndex, selected, onSelectChanged) => DataRow(
-                                                                                  color: MaterialStateProperty.all(
+                                                                                  color: WidgetStateProperty.all(
                                                                                     produtosListIndex % 2 == 0 ? FlutterFlowTheme.of(context).secondaryBackground : FlutterFlowTheme.of(context).primaryBackground,
                                                                                   ),
                                                                                   cells: [
@@ -12597,15 +12583,15 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                     context: context,
                                                                                                     builder: (alertDialogContext) {
                                                                                                       return AlertDialog(
-                                                                                                        title: Text('Deseja deletar essa compra?'),
+                                                                                                        title: const Text('Deseja deletar essa compra?'),
                                                                                                         actions: [
                                                                                                           TextButton(
                                                                                                             onPressed: () => Navigator.pop(alertDialogContext, false),
-                                                                                                            child: Text('Não, cancelar'),
+                                                                                                            child: const Text('Não, cancelar'),
                                                                                                           ),
                                                                                                           TextButton(
                                                                                                             onPressed: () => Navigator.pop(alertDialogContext, true),
-                                                                                                            child: Text('Sim, deletar Compra!'),
+                                                                                                            child: const Text('Sim, deletar Compra!'),
                                                                                                           ),
                                                                                                         ],
                                                                                                       );
@@ -12617,7 +12603,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                               }
                                                                                             },
                                                                                           ),
-                                                                                        ].divide(SizedBox(width: 10.0)),
+                                                                                        ].divide(const SizedBox(width: 10.0)),
                                                                                       ),
                                                                                     ),
                                                                                   ].map((c) => DataCell(c)).toList(),
@@ -12665,10 +12651,10 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                   .disabled,
                                                           child: Container(
                                                             decoration:
-                                                                BoxDecoration(),
+                                                                const BoxDecoration(),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           20.0,
@@ -12685,7 +12671,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           .center,
                                                                   children: [
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -12713,7 +12699,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                       ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                   child: FaIcon(
                                                                                     FontAwesomeIcons.asterisk,
                                                                                     color: FlutterFlowTheme.of(context).error,
@@ -12729,7 +12715,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             child:
                                                                                 Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: FlutterFlowDropDown<String>(
                                                                                 controller: _model.filialCompraValueController3 ??= FormFieldController<String>(null),
                                                                                 options: containerFilialRecordList.map((e) => e.nomeFilial).toList(),
@@ -12751,7 +12737,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                 borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                 borderWidth: 2.0,
                                                                                 borderRadius: 8.0,
-                                                                                margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                 hidesUnderline: true,
                                                                                 isOverButton: false,
                                                                                 isSearchable: false,
@@ -12759,7 +12745,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                     Divider(
@@ -12771,10 +12757,10 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                     ),
                                                                     Container(
                                                                       decoration:
-                                                                          BoxDecoration(),
+                                                                          const BoxDecoration(),
                                                                       child:
                                                                           Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             20.0,
                                                                             0.0,
                                                                             20.0,
@@ -12801,7 +12787,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                         ),
                                                                                   ),
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                     child: FaIcon(
                                                                                       FontAwesomeIcons.asterisk,
                                                                                       color: FlutterFlowTheme.of(context).error,
@@ -12815,10 +12801,10 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               flex: 3,
                                                                               child: Container(
                                                                                 width: 550.0,
-                                                                                decoration: BoxDecoration(),
+                                                                                decoration: const BoxDecoration(),
                                                                                 child: FlutterFlowDropDown<String>(
                                                                                   controller: _model.funcaoVendaValueController2 ??= FormFieldController<String>(null),
-                                                                                  options: [
+                                                                                  options: const [
                                                                                     'Admin',
                                                                                     'Professor',
                                                                                     'Contador',
@@ -12845,7 +12831,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                   borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                   borderWidth: 2.0,
                                                                                   borderRadius: 8.0,
-                                                                                  margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                  margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                   hidesUnderline: true,
                                                                                   isOverButton: false,
                                                                                   isSearchable: false,
@@ -12853,7 +12839,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                 ),
                                                                               ),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 20.0)),
+                                                                          ].divide(const SizedBox(width: 20.0)),
                                                                         ),
                                                                       ),
                                                                     ),
@@ -12866,10 +12852,10 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                     ),
                                                                     Container(
                                                                       decoration:
-                                                                          BoxDecoration(),
+                                                                          const BoxDecoration(),
                                                                       child:
                                                                           Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             20.0,
                                                                             0.0,
                                                                             20.0,
@@ -12896,7 +12882,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                         ),
                                                                                   ),
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                     child: FaIcon(
                                                                                       FontAwesomeIcons.asterisk,
                                                                                       color: FlutterFlowTheme.of(context).error,
@@ -12910,10 +12896,10 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               flex: 3,
                                                                               child: Container(
                                                                                 width: 550.0,
-                                                                                decoration: BoxDecoration(),
+                                                                                decoration: const BoxDecoration(),
                                                                                 child: FlutterFlowDropDown<String>(
                                                                                   controller: _model.lojaCompraValueController3 ??= FormFieldController<String>(null),
-                                                                                  options: [
+                                                                                  options: const [
                                                                                     'Nomes'
                                                                                   ],
                                                                                   onChanged: (val) => setState(() => _model.lojaCompraValue3 = val),
@@ -12934,7 +12920,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                   borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                   borderWidth: 2.0,
                                                                                   borderRadius: 8.0,
-                                                                                  margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                  margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                   hidesUnderline: true,
                                                                                   isOverButton: false,
                                                                                   isSearchable: false,
@@ -12942,7 +12928,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                 ),
                                                                               ),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 20.0)),
+                                                                          ].divide(const SizedBox(width: 20.0)),
                                                                         ),
                                                                       ),
                                                                     ),
@@ -12954,7 +12940,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           .alternate,
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -12982,7 +12968,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                       ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                   child: FaIcon(
                                                                                     FontAwesomeIcons.asterisk,
                                                                                     color: FlutterFlowTheme.of(context).error,
@@ -13003,7 +12989,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               highlightColor: Colors.transparent,
                                                                               onTap: () async {
                                                                                 // compra
-                                                                                final _datePicked3Date = await showDatePicker(
+                                                                                final datePicked3Date = await showDatePicker(
                                                                                   context: context,
                                                                                   initialDate: getCurrentTimestamp,
                                                                                   firstDate: DateTime(1900),
@@ -13030,12 +13016,12 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                   },
                                                                                 );
 
-                                                                                if (_datePicked3Date != null) {
+                                                                                if (datePicked3Date != null) {
                                                                                   safeSetState(() {
                                                                                     _model.datePicked3 = DateTime(
-                                                                                      _datePicked3Date.year,
-                                                                                      _datePicked3Date.month,
-                                                                                      _datePicked3Date.day,
+                                                                                      datePicked3Date.year,
+                                                                                      datePicked3Date.month,
+                                                                                      datePicked3Date.day,
                                                                                     );
                                                                                   });
                                                                                 }
@@ -13048,9 +13034,9 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                   borderRadius: BorderRadius.circular(10.0),
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                   child: Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                                                                                     child: Text(
                                                                                       _model.datePicked3 == null
                                                                                           ? dateTimeFormat(
@@ -13075,7 +13061,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                     Divider(
@@ -13086,7 +13072,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           .alternate,
                                                                     ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           20.0,
                                                                           0.0,
                                                                           20.0,
@@ -13114,7 +13100,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                       ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                   child: FaIcon(
                                                                                     FontAwesomeIcons.asterisk,
                                                                                     color: FlutterFlowTheme.of(context).error,
@@ -13135,7 +13121,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               highlightColor: Colors.transparent,
                                                                               onTap: () async {
                                                                                 // compra
-                                                                                final _datePicked4Date = await showDatePicker(
+                                                                                final datePicked4Date = await showDatePicker(
                                                                                   context: context,
                                                                                   initialDate: getCurrentTimestamp,
                                                                                   firstDate: DateTime(1900),
@@ -13162,12 +13148,12 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                   },
                                                                                 );
 
-                                                                                if (_datePicked4Date != null) {
+                                                                                if (datePicked4Date != null) {
                                                                                   safeSetState(() {
                                                                                     _model.datePicked4 = DateTime(
-                                                                                      _datePicked4Date.year,
-                                                                                      _datePicked4Date.month,
-                                                                                      _datePicked4Date.day,
+                                                                                      datePicked4Date.year,
+                                                                                      datePicked4Date.month,
+                                                                                      datePicked4Date.day,
                                                                                     );
                                                                                   });
                                                                                 }
@@ -13180,9 +13166,9 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                   borderRadius: BorderRadius.circular(10.0),
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                   child: Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                                                                                     child: Text(
                                                                                       _model.datePicked4 == null
                                                                                           ? dateTimeFormat(
@@ -13207,7 +13193,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                     Divider(
@@ -13223,7 +13209,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             '')
                                                                       Padding(
                                                                         padding:
-                                                                            EdgeInsets.all(20.0),
+                                                                            const EdgeInsets.all(20.0),
                                                                         child:
                                                                             Container(
                                                                           width:
@@ -13233,7 +13219,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             color:
                                                                                 FlutterFlowTheme.of(context).secondaryBackground,
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(0.0),
                                                                               bottomRight: Radius.circular(0.0),
                                                                               topLeft: Radius.circular(0.0),
@@ -13254,7 +13240,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                   color: FlutterFlowTheme.of(context).primaryBackground,
                                                                                 ),
                                                                                 child: Padding(
-                                                                                  padding: EdgeInsets.all(10.0),
+                                                                                  padding: const EdgeInsets.all(10.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -13274,7 +13260,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                   ),
                                                                                             ),
                                                                                             Padding(
-                                                                                              padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                               child: FaIcon(
                                                                                                 FontAwesomeIcons.asterisk,
                                                                                                 color: FlutterFlowTheme.of(context).error,
@@ -13325,7 +13311,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                   ),
                                                                                             ),
                                                                                             Padding(
-                                                                                              padding: EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
+                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(6.0, 0.0, 0.0, 0.0),
                                                                                               child: FaIcon(
                                                                                                 FontAwesomeIcons.asterisk,
                                                                                                 color: FlutterFlowTheme.of(context).error,
@@ -13386,7 +13372,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                     children: List.generate(listaProdutosAdd.length, (listaProdutosAddIndex) {
                                                                                       final listaProdutosAddItem = listaProdutosAdd[listaProdutosAddIndex];
                                                                                       return Padding(
-                                                                                        padding: EdgeInsets.all(10.0),
+                                                                                        padding: const EdgeInsets.all(10.0),
                                                                                         child: Row(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -13515,12 +13501,12 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                   Container(
                                                                                                     width: 32.0,
                                                                                                     height: 32.0,
-                                                                                                    decoration: BoxDecoration(
+                                                                                                    decoration: const BoxDecoration(
                                                                                                       color: Color(0xFFE30909),
                                                                                                       shape: BoxShape.circle,
                                                                                                     ),
                                                                                                     child: Align(
-                                                                                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                                      alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                                       child: Icon(
                                                                                                         Icons.delete_rounded,
                                                                                                         color: FlutterFlowTheme.of(context).info,
@@ -13567,9 +13553,9 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
                                                                                         Container(
-                                                                                          decoration: BoxDecoration(),
+                                                                                          decoration: const BoxDecoration(),
                                                                                           child: Padding(
-                                                                                            padding: EdgeInsets.all(10.0),
+                                                                                            padding: const EdgeInsets.all(10.0),
                                                                                             child: Row(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -13598,7 +13584,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                     borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                                     borderWidth: 2.0,
                                                                                                     borderRadius: 8.0,
-                                                                                                    margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                                    margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                                     hidesUnderline: true,
                                                                                                     isOverButton: false,
                                                                                                     isSearchable: false,
@@ -13620,7 +13606,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                       borderRadius: BorderRadius.circular(4.0),
                                                                                                     ),
                                                                                                     child: Padding(
-                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                                       child: SelectionArea(
                                                                                                           child: Text(
                                                                                                         valueOrDefault<String>(
@@ -13656,13 +13642,13 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                 ),
                                                                                                 Expanded(
                                                                                                   child: Padding(
-                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                                     child: TextFormField(
                                                                                                       controller: _model.quantidadeTextController3,
                                                                                                       focusNode: _model.quantidadeFocusNode3,
                                                                                                       onChanged: (_) => EasyDebounce.debounce(
                                                                                                         '_model.quantidadeTextController3',
-                                                                                                        Duration(milliseconds: 1000),
+                                                                                                        const Duration(milliseconds: 1000),
                                                                                                         () => setState(() {}),
                                                                                                       ),
                                                                                                       autofocus: false,
@@ -13731,7 +13717,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                 ),
                                                                                                 Expanded(
                                                                                                   child: Padding(
-                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                                     child: TextFormField(
                                                                                                       controller: _model.descontoTextController3,
                                                                                                       focusNode: _model.descontoFocusNode3,
@@ -13807,7 +13793,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                       borderRadius: BorderRadius.circular(4.0),
                                                                                                     ),
                                                                                                     child: Padding(
-                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                                       child: SelectionArea(
                                                                                                           child: Text(
                                                                                                         valueOrDefault<String>(
@@ -13851,9 +13837,9 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                         ),
                                                                                         if (_model.filialCompraValue3 != null && _model.filialCompraValue3 != '')
                                                                                           Align(
-                                                                                            alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                            alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                             child: Padding(
-                                                                                              padding: EdgeInsetsDirectional.fromSTEB(20.0, 10.0, 0.0, 10.0),
+                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 10.0, 0.0, 10.0),
                                                                                               child: FFButtonWidget(
                                                                                                 onPressed: () async {
                                                                                                   if (_model.produtoValue3 != null && _model.produtoValue3 != '') {
@@ -13892,11 +13878,11 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                       context: context,
                                                                                                       builder: (alertDialogContext) {
                                                                                                         return AlertDialog(
-                                                                                                          title: Text('Para adicionar mais linhas, feche essa primeiro!'),
+                                                                                                          title: const Text('Para adicionar mais linhas, feche essa primeiro!'),
                                                                                                           actions: [
                                                                                                             TextButton(
                                                                                                               onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                                              child: Text('Ok'),
+                                                                                                              child: const Text('Ok'),
                                                                                                             ),
                                                                                                           ],
                                                                                                         );
@@ -13907,8 +13893,8 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                 text: 'Adicionar Compra',
                                                                                                 options: FFButtonOptions(
                                                                                                   height: 40.0,
-                                                                                                  padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                                  iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                                   color: FlutterFlowTheme.of(context).primary,
                                                                                                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                                         fontFamily: 'Manrope',
@@ -13916,7 +13902,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                                                         letterSpacing: 0.0,
                                                                                                       ),
                                                                                                   elevation: 3.0,
-                                                                                                  borderSide: BorderSide(
+                                                                                                  borderSide: const BorderSide(
                                                                                                     color: Colors.transparent,
                                                                                                     width: 1.0,
                                                                                                   ),
@@ -13935,7 +13921,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                         ),
                                                                       ),
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           50.0,
                                                                           10.0,
                                                                           50.0,
@@ -13950,11 +13936,11 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                             builder:
                                                                                 (alertDialogContext) {
                                                                               return AlertDialog(
-                                                                                title: Text('Para essa função funcionar, preciso concluir a parte de adcionar funcionarios!'),
+                                                                                title: const Text('Para essa função funcionar, preciso concluir a parte de adcionar funcionarios!'),
                                                                                 actions: [
                                                                                   TextButton(
                                                                                     onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                    child: Text('Ok'),
+                                                                                    child: const Text('Ok'),
                                                                                   ),
                                                                                 ],
                                                                               );
@@ -13964,7 +13950,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                         text:
                                                                             'Adicionar Compra',
                                                                         icon:
-                                                                            Icon(
+                                                                            const Icon(
                                                                           Icons
                                                                               .add,
                                                                           size:
@@ -13976,12 +13962,12 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                               250.0,
                                                                           height:
                                                                               45.0,
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               24.0,
                                                                               0.0,
                                                                               24.0,
                                                                               0.0),
-                                                                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               0.0,
                                                                               0.0,
@@ -14000,7 +13986,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                           elevation:
                                                                               3.0,
                                                                           borderSide:
-                                                                              BorderSide(
+                                                                              const BorderSide(
                                                                             color:
                                                                                 Colors.transparent,
                                                                             width:
@@ -14011,7 +13997,7 @@ class _A02inventarioWidgetState extends State<A02inventarioWidget>
                                                                         ),
                                                                       ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           10.0)),
                                                                 ),

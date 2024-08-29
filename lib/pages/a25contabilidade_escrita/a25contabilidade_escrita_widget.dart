@@ -13,7 +13,6 @@ import '/flutter_flow/form_field_controller.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:text_search/text_search.dart';
 import 'a25contabilidade_escrita_model.dart';
@@ -23,7 +22,7 @@ class A25contabilidadeEscritaWidget extends StatefulWidget {
   const A25contabilidadeEscritaWidget({
     super.key,
     String? telas,
-  }) : this.telas = telas ?? 'vazio';
+  }) : telas = telas ?? 'vazio';
 
   final String telas;
 
@@ -144,7 +143,7 @@ class _A25contabilidadeEscritaWidgetState
                         wrapWithModel(
                           model: _model.menuSuperiorModel,
                           updateCallback: () => setState(() {}),
-                          child: MenuSuperiorWidget(),
+                          child: const MenuSuperiorWidget(),
                         ),
                       if (responsiveVisibility(
                         context: context,
@@ -154,7 +153,7 @@ class _A25contabilidadeEscritaWidgetState
                         wrapWithModel(
                           model: _model.menuSuperiorCelularModel,
                           updateCallback: () => setState(() {}),
-                          child: MenuSuperiorCelularWidget(),
+                          child: const MenuSuperiorCelularWidget(),
                         ),
                     ],
                   ),
@@ -166,9 +165,9 @@ class _A25contabilidadeEscritaWidgetState
                           model: _model.menuLateralModel,
                           updateCallback: () => setState(() {}),
                           updateOnChange: true,
-                          child: MenuLateralWidget(),
+                          child: const MenuLateralWidget(),
                         ),
-                        if (widget!.telas == 'Conta')
+                        if (widget.telas == 'Conta')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -180,7 +179,7 @@ class _A25contabilidadeEscritaWidgetState
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 20.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -189,7 +188,7 @@ class _A25contabilidadeEscritaWidgetState
                                     child: Column(
                                       children: [
                                         Align(
-                                          alignment: Alignment(-1.0, 0),
+                                          alignment: const Alignment(-1.0, 0),
                                           child: TabBar(
                                             isScrollable: true,
                                             labelColor:
@@ -206,13 +205,13 @@ class _A25contabilidadeEscritaWidgetState
                                                       fontSize: 18.0,
                                                       letterSpacing: 0.0,
                                                     ),
-                                            unselectedLabelStyle: TextStyle(),
+                                            unselectedLabelStyle: const TextStyle(),
                                             indicatorColor:
                                                 FlutterFlowTheme.of(context)
                                                     .tertiary,
                                             indicatorWeight: 1.0,
-                                            padding: EdgeInsets.all(4.0),
-                                            tabs: [
+                                            padding: const EdgeInsets.all(4.0),
+                                            tabs: const [
                                               Row(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
@@ -294,10 +293,10 @@ class _A25contabilidadeEscritaWidgetState
                                                       snapshot.data!;
 
                                                   return Container(
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsets.all(20.0),
+                                                          const EdgeInsets.all(20.0),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -324,7 +323,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                 ),
                                                                 child: Padding(
                                                                   padding:
-                                                                      EdgeInsets
+                                                                      const EdgeInsets
                                                                           .all(
                                                                               6.0),
                                                                   child: Row(
@@ -452,7 +451,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                               'IconButton pressed ...');
                                                                         },
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             10.0)),
                                                                   ),
@@ -461,9 +460,9 @@ class _A25contabilidadeEscritaWidgetState
                                                               Container(
                                                                 width: 300.0,
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -473,7 +472,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                       Autocomplete<
                                                                           String>(
                                                                     initialValue:
-                                                                        TextEditingValue(),
+                                                                        const TextEditingValue(),
                                                                     optionsBuilder:
                                                                         (textEditingValue) {
                                                                       if (textEditingValue
@@ -515,7 +514,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                         textHighlightStyle:
-                                                                            TextStyle(),
+                                                                            const TextStyle(),
                                                                         elevation:
                                                                             4.0,
                                                                         optionBackgroundColor:
@@ -561,31 +560,29 @@ class _A25contabilidadeEscritaWidgetState
                                                                             (_) =>
                                                                                 EasyDebounce.debounce(
                                                                           '_model.textController1',
-                                                                          Duration(
+                                                                          const Duration(
                                                                               milliseconds: 2000),
                                                                           () async {
-                                                                            if (_model.textController1.text != null &&
-                                                                                _model.textController1.text != '') {
+                                                                            if (_model.textController1.text != '') {
                                                                               safeSetState(() {
                                                                                 _model.simpleSearchResults1 = TextSearch(
                                                                                   containerInventarioProdutosRecordList
                                                                                       .map(
                                                                                         (record) => TextSearchItem.fromTerms(record, [
-                                                                                          record.produtoCategoria!,
-                                                                                          record.nomeProduto!,
-                                                                                          record.produtoCodigo!,
-                                                                                          record.filial!
+                                                                                          record.produtoCategoria,
+                                                                                          record.nomeProduto,
+                                                                                          record.produtoCodigo,
+                                                                                          record.filial
                                                                                         ]),
                                                                                       )
                                                                                       .toList(),
                                                                                 ).search(_model.textController1.text).map((r) => r.object).take(20).toList();
-                                                                                ;
                                                                               });
                                                                             } else {
                                                                               context.goNamed(
                                                                                 'A01escola',
                                                                                 extra: <String, dynamic>{
-                                                                                  kTransitionInfoKey: TransitionInfo(
+                                                                                  kTransitionInfoKey: const TransitionInfo(
                                                                                     hasTransition: true,
                                                                                     transitionType: PageTransitionType.fade,
                                                                                     duration: Duration(milliseconds: 0),
@@ -679,7 +676,7 @@ class _A25contabilidadeEscritaWidgetState
                                                           Expanded(
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           10.0,
@@ -836,7 +833,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                               selected,
                                                                               onSelectChanged) =>
                                                                           DataRow(
-                                                                        color: MaterialStateProperty
+                                                                        color: WidgetStateProperty
                                                                             .all(
                                                                           produtosListIndex % 2 == 0
                                                                               ? FlutterFlowTheme.of(context).secondaryBackground
@@ -896,7 +893,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                   child: Icon(
                                                                                     Icons.edit_square,
                                                                                     color: FlutterFlowTheme.of(context).primaryText,
@@ -907,12 +904,12 @@ class _A25contabilidadeEscritaWidgetState
                                                                               Container(
                                                                                 width: 35.0,
                                                                                 height: 35.0,
-                                                                                decoration: BoxDecoration(
+                                                                                decoration: const BoxDecoration(
                                                                                   color: Color(0xFFE30909),
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                   child: Icon(
                                                                                     Icons.delete_rounded,
                                                                                     color: FlutterFlowTheme.of(context).info,
@@ -920,7 +917,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                                   ),
                                                                                 ),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 10.0)),
+                                                                            ].divide(const SizedBox(width: 10.0)),
                                                                           ),
                                                                         ]
                                                                             .map((c) =>
@@ -994,10 +991,10 @@ class _A25contabilidadeEscritaWidgetState
                                                 autovalidateMode:
                                                     AutovalidateMode.disabled,
                                                 child: Container(
-                                                  decoration: BoxDecoration(),
+                                                  decoration: const BoxDecoration(),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 20.0,
                                                                 0.0, 50.0),
                                                     child:
@@ -1011,7 +1008,7 @@ class _A25contabilidadeEscritaWidgetState
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -1045,7 +1042,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -1070,14 +1067,14 @@ class _A25contabilidadeEscritaWidgetState
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .filialValueController1 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -1119,7 +1116,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -1135,7 +1132,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -1147,7 +1144,7 @@ class _A25contabilidadeEscritaWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -1181,7 +1178,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -1308,7 +1305,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -1324,7 +1321,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                   '')
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           20.0,
                                                                           0.0,
@@ -1358,7 +1355,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                               ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               6.0,
                                                                               0.0,
                                                                               0.0,
@@ -1382,14 +1379,14 @@ class _A25contabilidadeEscritaWidgetState
                                                                       width:
                                                                           550.0,
                                                                       decoration:
-                                                                          BoxDecoration(),
+                                                                          const BoxDecoration(),
                                                                       child: FlutterFlowDropDown<
                                                                           String>(
                                                                         controller: _model
                                                                             .categoriaValueController1 ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: [
+                                                                        options: const [
                                                                           'Option 1'
                                                                         ],
                                                                         onChanged:
@@ -1426,7 +1423,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                             2.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -1442,14 +1439,14 @@ class _A25contabilidadeEscritaWidgetState
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         20.0)),
                                                               ),
                                                             ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -1473,7 +1470,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                             .end,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             16.0,
@@ -1602,7 +1599,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -1618,11 +1615,11 @@ class _A25contabilidadeEscritaWidgetState
                                                                   '')
                                                             Container(
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                             ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -1649,7 +1646,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                             .end,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             16.0,
@@ -1676,7 +1673,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         TextFormField(
                                                                       controller:
@@ -1779,7 +1776,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -1791,7 +1788,7 @@ class _A25contabilidadeEscritaWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -1815,7 +1812,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                             .end,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             16.0,
@@ -1946,13 +1943,13 @@ class _A25contabilidadeEscritaWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
@@ -1970,7 +1967,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                         .visivel ==
                                                                     1)
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             25.0,
@@ -1986,7 +1983,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                       text:
                                                                           'Atualizar',
                                                                       icon:
-                                                                          Icon(
+                                                                          const Icon(
                                                                         Icons
                                                                             .add_circle,
                                                                         size:
@@ -1998,12 +1995,12 @@ class _A25contabilidadeEscritaWidgetState
                                                                             250.0,
                                                                         height:
                                                                             40.0,
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             24.0,
                                                                             0.0,
                                                                             24.0,
                                                                             0.0),
-                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -2022,7 +2019,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                         elevation:
                                                                             3.0,
                                                                         borderSide:
-                                                                            BorderSide(
+                                                                            const BorderSide(
                                                                           color:
                                                                               Colors.transparent,
                                                                           width:
@@ -2034,7 +2031,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     ),
                                                                   ),
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           15.0,
@@ -2055,7 +2052,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     },
                                                                     text:
                                                                         'Adicionar',
-                                                                    icon: Icon(
+                                                                    icon: const Icon(
                                                                       Icons.add,
                                                                       size:
                                                                           20.0,
@@ -2066,12 +2063,12 @@ class _A25contabilidadeEscritaWidgetState
                                                                           250.0,
                                                                       height:
                                                                           40.0,
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           24.0,
                                                                           0.0,
                                                                           24.0,
                                                                           0.0),
-                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
@@ -2097,7 +2094,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                       elevation:
                                                                           3.0,
                                                                       borderSide:
-                                                                          BorderSide(
+                                                                          const BorderSide(
                                                                         color: Colors
                                                                             .transparent,
                                                                         width:
@@ -2112,7 +2109,7 @@ class _A25contabilidadeEscritaWidgetState
                                                               ],
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 5.0)),
                                                       ),
                                                     ),
@@ -2129,7 +2126,7 @@ class _A25contabilidadeEscritaWidgetState
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'NovoDeposito')
+                        if (widget.telas == 'NovoDeposito')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.75,
                             height: double.infinity,
@@ -2141,7 +2138,7 @@ class _A25contabilidadeEscritaWidgetState
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 20.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -2150,7 +2147,7 @@ class _A25contabilidadeEscritaWidgetState
                                     child: Column(
                                       children: [
                                         Align(
-                                          alignment: Alignment(-1.0, 0),
+                                          alignment: const Alignment(-1.0, 0),
                                           child: TabBar(
                                             isScrollable: true,
                                             labelColor:
@@ -2167,13 +2164,13 @@ class _A25contabilidadeEscritaWidgetState
                                                       fontSize: 18.0,
                                                       letterSpacing: 0.0,
                                                     ),
-                                            unselectedLabelStyle: TextStyle(),
+                                            unselectedLabelStyle: const TextStyle(),
                                             indicatorColor:
                                                 FlutterFlowTheme.of(context)
                                                     .tertiary,
                                             indicatorWeight: 1.0,
-                                            padding: EdgeInsets.all(4.0),
-                                            tabs: [
+                                            padding: const EdgeInsets.all(4.0),
+                                            tabs: const [
                                               Row(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
@@ -2255,10 +2252,10 @@ class _A25contabilidadeEscritaWidgetState
                                                       snapshot.data!;
 
                                                   return Container(
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsets.all(20.0),
+                                                          const EdgeInsets.all(20.0),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -2285,7 +2282,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                 ),
                                                                 child: Padding(
                                                                   padding:
-                                                                      EdgeInsets
+                                                                      const EdgeInsets
                                                                           .all(
                                                                               6.0),
                                                                   child: Row(
@@ -2413,7 +2410,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                               'IconButton pressed ...');
                                                                         },
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             10.0)),
                                                                   ),
@@ -2422,9 +2419,9 @@ class _A25contabilidadeEscritaWidgetState
                                                               Container(
                                                                 width: 300.0,
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -2434,7 +2431,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                       Autocomplete<
                                                                           String>(
                                                                     initialValue:
-                                                                        TextEditingValue(),
+                                                                        const TextEditingValue(),
                                                                     optionsBuilder:
                                                                         (textEditingValue) {
                                                                       if (textEditingValue
@@ -2476,7 +2473,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                         textHighlightStyle:
-                                                                            TextStyle(),
+                                                                            const TextStyle(),
                                                                         elevation:
                                                                             4.0,
                                                                         optionBackgroundColor:
@@ -2522,31 +2519,29 @@ class _A25contabilidadeEscritaWidgetState
                                                                             (_) =>
                                                                                 EasyDebounce.debounce(
                                                                           '_model.textController6',
-                                                                          Duration(
+                                                                          const Duration(
                                                                               milliseconds: 2000),
                                                                           () async {
-                                                                            if (_model.textController6.text != null &&
-                                                                                _model.textController6.text != '') {
+                                                                            if (_model.textController6.text != '') {
                                                                               safeSetState(() {
                                                                                 _model.simpleSearchResults2 = TextSearch(
                                                                                   containerInventarioProdutosRecordList
                                                                                       .map(
                                                                                         (record) => TextSearchItem.fromTerms(record, [
-                                                                                          record.produtoCategoria!,
-                                                                                          record.nomeProduto!,
-                                                                                          record.produtoCodigo!,
-                                                                                          record.filial!
+                                                                                          record.produtoCategoria,
+                                                                                          record.nomeProduto,
+                                                                                          record.produtoCodigo,
+                                                                                          record.filial
                                                                                         ]),
                                                                                       )
                                                                                       .toList(),
                                                                                 ).search(_model.textController6.text).map((r) => r.object).take(20).toList();
-                                                                                ;
                                                                               });
                                                                             } else {
                                                                               context.goNamed(
                                                                                 'A01escola',
                                                                                 extra: <String, dynamic>{
-                                                                                  kTransitionInfoKey: TransitionInfo(
+                                                                                  kTransitionInfoKey: const TransitionInfo(
                                                                                     hasTransition: true,
                                                                                     transitionType: PageTransitionType.fade,
                                                                                     duration: Duration(milliseconds: 0),
@@ -2640,7 +2635,7 @@ class _A25contabilidadeEscritaWidgetState
                                                           Expanded(
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           10.0,
@@ -2845,7 +2840,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                               selected,
                                                                               onSelectChanged) =>
                                                                           DataRow(
-                                                                        color: MaterialStateProperty
+                                                                        color: WidgetStateProperty
                                                                             .all(
                                                                           produtosListIndex % 2 == 0
                                                                               ? FlutterFlowTheme.of(context).secondaryBackground
@@ -2926,7 +2921,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                   child: Icon(
                                                                                     Icons.edit_square,
                                                                                     color: FlutterFlowTheme.of(context).primaryText,
@@ -2937,12 +2932,12 @@ class _A25contabilidadeEscritaWidgetState
                                                                               Container(
                                                                                 width: 35.0,
                                                                                 height: 35.0,
-                                                                                decoration: BoxDecoration(
+                                                                                decoration: const BoxDecoration(
                                                                                   color: Color(0xFFE30909),
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                   child: Icon(
                                                                                     Icons.delete_rounded,
                                                                                     color: FlutterFlowTheme.of(context).info,
@@ -2950,7 +2945,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                                   ),
                                                                                 ),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 10.0)),
+                                                                            ].divide(const SizedBox(width: 10.0)),
                                                                           ),
                                                                         ]
                                                                             .map((c) =>
@@ -3024,10 +3019,10 @@ class _A25contabilidadeEscritaWidgetState
                                                 autovalidateMode:
                                                     AutovalidateMode.disabled,
                                                 child: Container(
-                                                  decoration: BoxDecoration(),
+                                                  decoration: const BoxDecoration(),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 20.0,
                                                                 0.0, 50.0),
                                                     child:
@@ -3041,7 +3036,7 @@ class _A25contabilidadeEscritaWidgetState
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -3075,7 +3070,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -3100,14 +3095,14 @@ class _A25contabilidadeEscritaWidgetState
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .filialValueController2 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -3149,7 +3144,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -3165,7 +3160,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -3177,7 +3172,7 @@ class _A25contabilidadeEscritaWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -3211,7 +3206,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -3247,7 +3242,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                           .filialValueController3 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -3289,7 +3284,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -3305,7 +3300,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -3321,7 +3316,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                   '')
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           20.0,
                                                                           0.0,
@@ -3355,7 +3350,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                               ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               6.0,
                                                                               0.0,
                                                                               0.0,
@@ -3379,14 +3374,14 @@ class _A25contabilidadeEscritaWidgetState
                                                                       width:
                                                                           550.0,
                                                                       decoration:
-                                                                          BoxDecoration(),
+                                                                          const BoxDecoration(),
                                                                       child: FlutterFlowDropDown<
                                                                           String>(
                                                                         controller: _model
                                                                             .categoriaValueController2 ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: [
+                                                                        options: const [
                                                                           'Option 1'
                                                                         ],
                                                                         onChanged:
@@ -3423,7 +3418,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                             2.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -3439,14 +3434,14 @@ class _A25contabilidadeEscritaWidgetState
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         20.0)),
                                                               ),
                                                             ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -3480,7 +3475,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -3516,7 +3511,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                           .filialValueController4 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -3558,7 +3553,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -3574,7 +3569,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -3590,11 +3585,11 @@ class _A25contabilidadeEscritaWidgetState
                                                                   '')
                                                             Container(
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                             ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -3621,7 +3616,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                             .end,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             16.0,
@@ -3648,7 +3643,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         TextFormField(
                                                                       controller:
@@ -3749,7 +3744,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -3761,7 +3756,7 @@ class _A25contabilidadeEscritaWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -3795,7 +3790,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -3927,7 +3922,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -3939,7 +3934,7 @@ class _A25contabilidadeEscritaWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -3973,7 +3968,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -3998,7 +3993,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: Row(
                                                                       mainAxisSize:
                                                                           MainAxisSize
@@ -4014,7 +4009,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                             color:
                                                                                 FlutterFlowTheme.of(context).primaryBackground,
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(8.0),
                                                                               bottomRight: Radius.circular(0.0),
                                                                               topLeft: Radius.circular(8.0),
@@ -4038,7 +4033,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                         Expanded(
                                                                           child:
                                                                               Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 8.0,
@@ -4065,7 +4060,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                                     color: FlutterFlowTheme.of(context).alternate,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -4077,7 +4072,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                                     color: FlutterFlowTheme.of(context).primary,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -4089,7 +4084,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                                     color: FlutterFlowTheme.of(context).error,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -4101,7 +4096,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                                     color: FlutterFlowTheme.of(context).error,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -4123,7 +4118,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -4135,7 +4130,7 @@ class _A25contabilidadeEscritaWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -4169,7 +4164,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -4205,7 +4200,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                           .filialValueController5 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -4247,7 +4242,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -4263,7 +4258,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -4275,7 +4270,7 @@ class _A25contabilidadeEscritaWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -4302,7 +4297,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                             .end,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             16.0,
@@ -4433,13 +4428,13 @@ class _A25contabilidadeEscritaWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -4466,7 +4461,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                             .end,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             16.0,
@@ -4493,7 +4488,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: Row(
                                                                       mainAxisSize:
                                                                           MainAxisSize
@@ -4525,7 +4520,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                           text:
                                                                               'Anexar Comprov..',
                                                                           icon:
-                                                                              Icon(
+                                                                              const Icon(
                                                                             Icons.upload_rounded,
                                                                             size:
                                                                                 22.0,
@@ -4536,12 +4531,12 @@ class _A25contabilidadeEscritaWidgetState
                                                                                 200.0,
                                                                             height:
                                                                                 45.0,
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 24.0,
                                                                                 0.0,
                                                                                 24.0,
                                                                                 0.0),
-                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
@@ -4557,7 +4552,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                             elevation:
                                                                                 3.0,
                                                                             borderSide:
-                                                                                BorderSide(
+                                                                                const BorderSide(
                                                                               color: Colors.transparent,
                                                                               width: 1.0,
                                                                             ),
@@ -4565,12 +4560,12 @@ class _A25contabilidadeEscritaWidgetState
                                                                                 BorderRadius.circular(8.0),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -4586,7 +4581,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                       .visivel ==
                                                                   1)
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           25.0,
@@ -4601,7 +4596,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     },
                                                                     text:
                                                                         'Atualizar',
-                                                                    icon: Icon(
+                                                                    icon: const Icon(
                                                                       Icons
                                                                           .add_circle,
                                                                       size:
@@ -4613,12 +4608,12 @@ class _A25contabilidadeEscritaWidgetState
                                                                           250.0,
                                                                       height:
                                                                           40.0,
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           24.0,
                                                                           0.0,
                                                                           24.0,
                                                                           0.0),
-                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
@@ -4644,7 +4639,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                       elevation:
                                                                           3.0,
                                                                       borderSide:
-                                                                          BorderSide(
+                                                                          const BorderSide(
                                                                         color: Colors
                                                                             .transparent,
                                                                         width:
@@ -4657,7 +4652,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                   ),
                                                                 ),
                                                               Padding(
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         50.0,
                                                                         10.0,
@@ -4678,7 +4673,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                   },
                                                                   text:
                                                                       'Adicionar',
-                                                                  icon: Icon(
+                                                                  icon: const Icon(
                                                                     Icons.add,
                                                                     size: 20.0,
                                                                   ),
@@ -4688,14 +4683,14 @@ class _A25contabilidadeEscritaWidgetState
                                                                         250.0,
                                                                     height:
                                                                         40.0,
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             24.0,
                                                                             0.0,
                                                                             24.0,
                                                                             0.0),
                                                                     iconPadding:
-                                                                        EdgeInsetsDirectional.fromSTEB(
+                                                                        const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -4721,7 +4716,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     elevation:
                                                                         3.0,
                                                                     borderSide:
-                                                                        BorderSide(
+                                                                        const BorderSide(
                                                                       color: Colors
                                                                           .transparent,
                                                                       width:
@@ -4741,7 +4736,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     .of(context)
                                                                 .alternate,
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 5.0)),
                                                       ),
                                                     ),
@@ -4758,7 +4753,7 @@ class _A25contabilidadeEscritaWidgetState
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'NovaDespesa')
+                        if (widget.telas == 'NovaDespesa')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.75,
                             height: double.infinity,
@@ -4770,7 +4765,7 @@ class _A25contabilidadeEscritaWidgetState
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 20.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -4779,7 +4774,7 @@ class _A25contabilidadeEscritaWidgetState
                                     child: Column(
                                       children: [
                                         Align(
-                                          alignment: Alignment(-1.0, 0),
+                                          alignment: const Alignment(-1.0, 0),
                                           child: TabBar(
                                             isScrollable: true,
                                             labelColor:
@@ -4796,13 +4791,13 @@ class _A25contabilidadeEscritaWidgetState
                                                       fontSize: 18.0,
                                                       letterSpacing: 0.0,
                                                     ),
-                                            unselectedLabelStyle: TextStyle(),
+                                            unselectedLabelStyle: const TextStyle(),
                                             indicatorColor:
                                                 FlutterFlowTheme.of(context)
                                                     .tertiary,
                                             indicatorWeight: 1.0,
-                                            padding: EdgeInsets.all(4.0),
-                                            tabs: [
+                                            padding: const EdgeInsets.all(4.0),
+                                            tabs: const [
                                               Row(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
@@ -4884,10 +4879,10 @@ class _A25contabilidadeEscritaWidgetState
                                                       snapshot.data!;
 
                                                   return Container(
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsets.all(20.0),
+                                                          const EdgeInsets.all(20.0),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -4914,7 +4909,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                 ),
                                                                 child: Padding(
                                                                   padding:
-                                                                      EdgeInsets
+                                                                      const EdgeInsets
                                                                           .all(
                                                                               6.0),
                                                                   child: Row(
@@ -5042,7 +5037,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                               'IconButton pressed ...');
                                                                         },
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             10.0)),
                                                                   ),
@@ -5051,9 +5046,9 @@ class _A25contabilidadeEscritaWidgetState
                                                               Container(
                                                                 width: 300.0,
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -5063,7 +5058,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                       Autocomplete<
                                                                           String>(
                                                                     initialValue:
-                                                                        TextEditingValue(),
+                                                                        const TextEditingValue(),
                                                                     optionsBuilder:
                                                                         (textEditingValue) {
                                                                       if (textEditingValue
@@ -5105,7 +5100,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                         textHighlightStyle:
-                                                                            TextStyle(),
+                                                                            const TextStyle(),
                                                                         elevation:
                                                                             4.0,
                                                                         optionBackgroundColor:
@@ -5151,31 +5146,29 @@ class _A25contabilidadeEscritaWidgetState
                                                                             (_) =>
                                                                                 EasyDebounce.debounce(
                                                                           '_model.textController11',
-                                                                          Duration(
+                                                                          const Duration(
                                                                               milliseconds: 2000),
                                                                           () async {
-                                                                            if (_model.textController11.text != null &&
-                                                                                _model.textController11.text != '') {
+                                                                            if (_model.textController11.text != '') {
                                                                               safeSetState(() {
                                                                                 _model.simpleSearchResults3 = TextSearch(
                                                                                   containerInventarioProdutosRecordList
                                                                                       .map(
                                                                                         (record) => TextSearchItem.fromTerms(record, [
-                                                                                          record.produtoCategoria!,
-                                                                                          record.nomeProduto!,
-                                                                                          record.produtoCodigo!,
-                                                                                          record.filial!
+                                                                                          record.produtoCategoria,
+                                                                                          record.nomeProduto,
+                                                                                          record.produtoCodigo,
+                                                                                          record.filial
                                                                                         ]),
                                                                                       )
                                                                                       .toList(),
                                                                                 ).search(_model.textController11.text).map((r) => r.object).take(20).toList();
-                                                                                ;
                                                                               });
                                                                             } else {
                                                                               context.goNamed(
                                                                                 'A01escola',
                                                                                 extra: <String, dynamic>{
-                                                                                  kTransitionInfoKey: TransitionInfo(
+                                                                                  kTransitionInfoKey: const TransitionInfo(
                                                                                     hasTransition: true,
                                                                                     transitionType: PageTransitionType.fade,
                                                                                     duration: Duration(milliseconds: 0),
@@ -5269,7 +5262,7 @@ class _A25contabilidadeEscritaWidgetState
                                                           Expanded(
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           10.0,
@@ -5474,7 +5467,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                               selected,
                                                                               onSelectChanged) =>
                                                                           DataRow(
-                                                                        color: MaterialStateProperty
+                                                                        color: WidgetStateProperty
                                                                             .all(
                                                                           produtosListIndex % 2 == 0
                                                                               ? FlutterFlowTheme.of(context).secondaryBackground
@@ -5555,7 +5548,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                   child: Icon(
                                                                                     Icons.edit_square,
                                                                                     color: FlutterFlowTheme.of(context).primaryText,
@@ -5566,12 +5559,12 @@ class _A25contabilidadeEscritaWidgetState
                                                                               Container(
                                                                                 width: 35.0,
                                                                                 height: 35.0,
-                                                                                decoration: BoxDecoration(
+                                                                                decoration: const BoxDecoration(
                                                                                   color: Color(0xFFE30909),
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                   child: Icon(
                                                                                     Icons.delete_rounded,
                                                                                     color: FlutterFlowTheme.of(context).info,
@@ -5579,7 +5572,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                                   ),
                                                                                 ),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 10.0)),
+                                                                            ].divide(const SizedBox(width: 10.0)),
                                                                           ),
                                                                         ]
                                                                             .map((c) =>
@@ -5653,10 +5646,10 @@ class _A25contabilidadeEscritaWidgetState
                                                 autovalidateMode:
                                                     AutovalidateMode.disabled,
                                                 child: Container(
-                                                  decoration: BoxDecoration(),
+                                                  decoration: const BoxDecoration(),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 20.0,
                                                                 0.0, 50.0),
                                                     child:
@@ -5670,7 +5663,7 @@ class _A25contabilidadeEscritaWidgetState
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -5704,7 +5697,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -5729,14 +5722,14 @@ class _A25contabilidadeEscritaWidgetState
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .filialValueController6 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -5778,7 +5771,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -5794,7 +5787,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -5806,7 +5799,7 @@ class _A25contabilidadeEscritaWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -5840,7 +5833,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -5876,7 +5869,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                           .filialValueController7 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -5918,7 +5911,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -5934,7 +5927,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -5950,7 +5943,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                   '')
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           20.0,
                                                                           0.0,
@@ -5984,7 +5977,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                               ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               6.0,
                                                                               0.0,
                                                                               0.0,
@@ -6008,14 +6001,14 @@ class _A25contabilidadeEscritaWidgetState
                                                                       width:
                                                                           550.0,
                                                                       decoration:
-                                                                          BoxDecoration(),
+                                                                          const BoxDecoration(),
                                                                       child: FlutterFlowDropDown<
                                                                           String>(
                                                                         controller: _model
                                                                             .categoriaValueController3 ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: [
+                                                                        options: const [
                                                                           'Option 1'
                                                                         ],
                                                                         onChanged:
@@ -6052,7 +6045,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                             2.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -6068,14 +6061,14 @@ class _A25contabilidadeEscritaWidgetState
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         20.0)),
                                                               ),
                                                             ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -6109,7 +6102,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -6145,7 +6138,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                           .filialValueController8 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -6187,7 +6180,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -6203,7 +6196,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -6219,11 +6212,11 @@ class _A25contabilidadeEscritaWidgetState
                                                                   '')
                                                             Container(
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                             ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -6250,7 +6243,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                             .end,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             16.0,
@@ -6277,7 +6270,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         TextFormField(
                                                                       controller:
@@ -6378,7 +6371,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -6390,7 +6383,7 @@ class _A25contabilidadeEscritaWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -6424,7 +6417,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -6556,7 +6549,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -6568,7 +6561,7 @@ class _A25contabilidadeEscritaWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -6602,7 +6595,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -6627,7 +6620,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: Row(
                                                                       mainAxisSize:
                                                                           MainAxisSize
@@ -6643,7 +6636,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                             color:
                                                                                 FlutterFlowTheme.of(context).primaryBackground,
                                                                             borderRadius:
-                                                                                BorderRadius.only(
+                                                                                const BorderRadius.only(
                                                                               bottomLeft: Radius.circular(8.0),
                                                                               bottomRight: Radius.circular(0.0),
                                                                               topLeft: Radius.circular(8.0),
@@ -6667,7 +6660,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                         Expanded(
                                                                           child:
                                                                               Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 8.0,
@@ -6694,7 +6687,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                                     color: FlutterFlowTheme.of(context).alternate,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -6706,7 +6699,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                                     color: FlutterFlowTheme.of(context).primary,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -6718,7 +6711,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                                     color: FlutterFlowTheme.of(context).error,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -6730,7 +6723,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                                     color: FlutterFlowTheme.of(context).error,
                                                                                     width: 2.0,
                                                                                   ),
-                                                                                  borderRadius: BorderRadius.only(
+                                                                                  borderRadius: const BorderRadius.only(
                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                     bottomRight: Radius.circular(8.0),
                                                                                     topLeft: Radius.circular(0.0),
@@ -6752,7 +6745,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -6764,7 +6757,7 @@ class _A25contabilidadeEscritaWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -6798,7 +6791,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -6834,7 +6827,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                           .filialValueController9 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -6876,7 +6869,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -6892,7 +6885,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -6904,7 +6897,7 @@ class _A25contabilidadeEscritaWidgetState
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -6931,7 +6924,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                             .end,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             16.0,
@@ -7062,13 +7055,13 @@ class _A25contabilidadeEscritaWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -7095,7 +7088,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                             .end,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             16.0,
@@ -7122,7 +7115,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: Row(
                                                                       mainAxisSize:
                                                                           MainAxisSize
@@ -7154,7 +7147,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                           text:
                                                                               'Anexar Comprov..',
                                                                           icon:
-                                                                              Icon(
+                                                                              const Icon(
                                                                             Icons.upload_rounded,
                                                                             size:
                                                                                 22.0,
@@ -7165,12 +7158,12 @@ class _A25contabilidadeEscritaWidgetState
                                                                                 200.0,
                                                                             height:
                                                                                 45.0,
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 24.0,
                                                                                 0.0,
                                                                                 24.0,
                                                                                 0.0),
-                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
@@ -7186,7 +7179,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                             elevation:
                                                                                 3.0,
                                                                             borderSide:
-                                                                                BorderSide(
+                                                                                const BorderSide(
                                                                               color: Colors.transparent,
                                                                               width: 1.0,
                                                                             ),
@@ -7194,12 +7187,12 @@ class _A25contabilidadeEscritaWidgetState
                                                                                 BorderRadius.circular(8.0),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -7215,7 +7208,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                       .visivel ==
                                                                   1)
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           25.0,
@@ -7230,7 +7223,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     },
                                                                     text:
                                                                         'Atualizar',
-                                                                    icon: Icon(
+                                                                    icon: const Icon(
                                                                       Icons
                                                                           .add_circle,
                                                                       size:
@@ -7242,12 +7235,12 @@ class _A25contabilidadeEscritaWidgetState
                                                                           250.0,
                                                                       height:
                                                                           40.0,
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           24.0,
                                                                           0.0,
                                                                           24.0,
                                                                           0.0),
-                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
@@ -7273,7 +7266,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                       elevation:
                                                                           3.0,
                                                                       borderSide:
-                                                                          BorderSide(
+                                                                          const BorderSide(
                                                                         color: Colors
                                                                             .transparent,
                                                                         width:
@@ -7286,7 +7279,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                   ),
                                                                 ),
                                                               Padding(
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         50.0,
                                                                         10.0,
@@ -7307,7 +7300,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                   },
                                                                   text:
                                                                       'Adicionar',
-                                                                  icon: Icon(
+                                                                  icon: const Icon(
                                                                     Icons.add,
                                                                     size: 20.0,
                                                                   ),
@@ -7317,14 +7310,14 @@ class _A25contabilidadeEscritaWidgetState
                                                                         250.0,
                                                                     height:
                                                                         40.0,
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             24.0,
                                                                             0.0,
                                                                             24.0,
                                                                             0.0),
                                                                     iconPadding:
-                                                                        EdgeInsetsDirectional.fromSTEB(
+                                                                        const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -7350,7 +7343,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     elevation:
                                                                         3.0,
                                                                     borderSide:
-                                                                        BorderSide(
+                                                                        const BorderSide(
                                                                       color: Colors
                                                                           .transparent,
                                                                       width:
@@ -7370,7 +7363,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     .of(context)
                                                                 .alternate,
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 5.0)),
                                                       ),
                                                     ),
@@ -7387,7 +7380,7 @@ class _A25contabilidadeEscritaWidgetState
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'Transacoes')
+                        if (widget.telas == 'Transacoes')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.75,
                             height: double.infinity,
@@ -7396,13 +7389,13 @@ class _A25contabilidadeEscritaWidgetState
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -7455,7 +7448,7 @@ class _A25contabilidadeEscritaWidgetState
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -7472,11 +7465,11 @@ class _A25contabilidadeEscritaWidgetState
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -7509,7 +7502,7 @@ class _A25contabilidadeEscritaWidgetState
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 0.0, 8.0),
                                                   child: Row(
@@ -7533,7 +7526,7 @@ class _A25contabilidadeEscritaWidgetState
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   6.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -7649,7 +7642,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                       'IconButton pressed ...');
                                                                 },
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 10.0)),
                                                           ),
                                                         ),
@@ -7657,10 +7650,10 @@ class _A25contabilidadeEscritaWidgetState
                                                       Container(
                                                         width: 300.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -7669,7 +7662,7 @@ class _A25contabilidadeEscritaWidgetState
                                                           child: Autocomplete<
                                                               String>(
                                                             initialValue:
-                                                                TextEditingValue(),
+                                                                const TextEditingValue(),
                                                             optionsBuilder:
                                                                 (textEditingValue) {
                                                               if (textEditingValue
@@ -7718,7 +7711,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                           0.0,
                                                                     ),
                                                                 textHighlightStyle:
-                                                                    TextStyle(),
+                                                                    const TextStyle(),
                                                                 elevation: 4.0,
                                                                 optionBackgroundColor:
                                                                     FlutterFlowTheme.of(
@@ -8150,7 +8143,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                       onSelectChanged) =>
                                                                   DataRow(
                                                             color:
-                                                                MaterialStateProperty
+                                                                WidgetStateProperty
                                                                     .all(
                                                               produtosListIndex %
                                                                           2 ==
@@ -8377,7 +8370,7 @@ class _A25contabilidadeEscritaWidgetState
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'AddComprovante')
+                        if (widget.telas == 'AddComprovante')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -8386,7 +8379,7 @@ class _A25contabilidadeEscritaWidgetState
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
@@ -8410,7 +8403,7 @@ class _A25contabilidadeEscritaWidgetState
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       10.0, 10.0, 0.0, 0.0),
                                               child: FaIcon(
@@ -8422,10 +8415,10 @@ class _A25contabilidadeEscritaWidgetState
                                               ),
                                             ),
                                             Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   -1.0, 0.0),
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         10.0, 10.0, 0.0, 0.0),
                                                 child: Text(
@@ -8452,7 +8445,7 @@ class _A25contabilidadeEscritaWidgetState
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   10.0, 10.0, 12.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -8462,7 +8455,7 @@ class _A25contabilidadeEscritaWidgetState
                                               Expanded(
                                                 child: Container(
                                                   width: 450.0,
-                                                  decoration: BoxDecoration(),
+                                                  decoration: const BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -8472,7 +8465,7 @@ class _A25contabilidadeEscritaWidgetState
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -8504,13 +8497,13 @@ class _A25contabilidadeEscritaWidgetState
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -8523,7 +8516,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                   .calssAcademicoValueController1 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.calssAcademicoValue1 =
@@ -8561,7 +8554,7 @@ class _A25contabilidadeEscritaWidgetState
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -8580,7 +8573,7 @@ class _A25contabilidadeEscritaWidgetState
                                               Expanded(
                                                 child: Container(
                                                   width: 400.0,
-                                                  decoration: BoxDecoration(),
+                                                  decoration: const BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -8590,7 +8583,7 @@ class _A25contabilidadeEscritaWidgetState
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -8622,13 +8615,13 @@ class _A25contabilidadeEscritaWidgetState
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     8.0,
                                                                     0.0,
@@ -8745,7 +8738,7 @@ class _A25contabilidadeEscritaWidgetState
                                               Expanded(
                                                 child: Container(
                                                   width: 450.0,
-                                                  decoration: BoxDecoration(),
+                                                  decoration: const BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -8755,7 +8748,7 @@ class _A25contabilidadeEscritaWidgetState
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -8787,13 +8780,13 @@ class _A25contabilidadeEscritaWidgetState
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -8806,7 +8799,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                   .calssAcademicoValueController2 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: [
+                                                          options: const [
                                                             'Despesa',
                                                             'Rendimento'
                                                           ],
@@ -8847,7 +8840,7 @@ class _A25contabilidadeEscritaWidgetState
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -8863,12 +8856,12 @@ class _A25contabilidadeEscritaWidgetState
                                                   ),
                                                 ),
                                               ),
-                                            ].divide(SizedBox(width: 20.0)),
+                                            ].divide(const SizedBox(width: 20.0)),
                                           ),
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 15.0, 15.0, 10.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -8876,7 +8869,7 @@ class _A25contabilidadeEscritaWidgetState
                                                 MainAxisAlignment.end,
                                             children: [
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         15.0, 0.0, 0.0, 0.0),
                                                 child: FFButtonWidget(
@@ -8885,7 +8878,7 @@ class _A25contabilidadeEscritaWidgetState
                                                         'ButtonADD pressed ...');
                                                   },
                                                   text: 'Adicionar',
-                                                  icon: Icon(
+                                                  icon: const Icon(
                                                     Icons.add,
                                                     color: Colors.white,
                                                     size: 20.0,
@@ -8894,11 +8887,11 @@ class _A25contabilidadeEscritaWidgetState
                                                     width: 200.0,
                                                     height: 40.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(24.0, 0.0,
                                                                 24.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -8914,7 +8907,7 @@ class _A25contabilidadeEscritaWidgetState
                                                           letterSpacing: 0.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -8932,7 +8925,7 @@ class _A25contabilidadeEscritaWidgetState
                                   ),
                                   Expanded(
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -8985,7 +8978,7 @@ class _A25contabilidadeEscritaWidgetState
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -9002,11 +8995,11 @@ class _A25contabilidadeEscritaWidgetState
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -9041,7 +9034,7 @@ class _A25contabilidadeEscritaWidgetState
                                                 Expanded(
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 10.0,
                                                                 0.0, 0.0),
                                                     child: Builder(
@@ -9183,7 +9176,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                       onSelectChanged) =>
                                                                   DataRow(
                                                             color:
-                                                                MaterialStateProperty
+                                                                WidgetStateProperty
                                                                     .all(
                                                               produtosListIndex %
                                                                           2 ==
@@ -9276,7 +9269,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     child:
                                                                         Align(
                                                                       alignment:
-                                                                          AlignmentDirectional(
+                                                                          const AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                       child:
@@ -9295,7 +9288,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     height:
                                                                         35.0,
                                                                     decoration:
-                                                                        BoxDecoration(
+                                                                        const BoxDecoration(
                                                                       color: Color(
                                                                           0xFFE30909),
                                                                       shape: BoxShape
@@ -9304,7 +9297,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                     child:
                                                                         Align(
                                                                       alignment:
-                                                                          AlignmentDirectional(
+                                                                          const AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                       child:
@@ -9318,7 +9311,7 @@ class _A25contabilidadeEscritaWidgetState
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         10.0)),
                                                               ),

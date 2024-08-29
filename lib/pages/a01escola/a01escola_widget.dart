@@ -15,8 +15,6 @@ import '/flutter_flow/random_data_util.dart' as random_data;
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'package:text_search/text_search.dart';
 import 'a01escola_model.dart';
 export 'a01escola_model.dart';
@@ -25,7 +23,7 @@ class A01escolaWidget extends StatefulWidget {
   const A01escolaWidget({
     super.key,
     String? telas,
-  }) : this.telas = telas ?? 'vazio';
+  }) : telas = telas ?? 'vazio';
 
   final String telas;
 
@@ -131,7 +129,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                         wrapWithModel(
                           model: _model.menuSuperiorModel,
                           updateCallback: () => setState(() {}),
-                          child: MenuSuperiorWidget(),
+                          child: const MenuSuperiorWidget(),
                         ),
                       if (responsiveVisibility(
                         context: context,
@@ -141,7 +139,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                         wrapWithModel(
                           model: _model.menuSuperiorCelularModel,
                           updateCallback: () => setState(() {}),
-                          child: MenuSuperiorCelularWidget(),
+                          child: const MenuSuperiorCelularWidget(),
                         ),
                     ],
                   ),
@@ -157,7 +155,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                           wrapWithModel(
                             model: _model.menuLateralModel,
                             updateCallback: () => setState(() {}),
-                            child: MenuLateralWidget(),
+                            child: const MenuLateralWidget(),
                           ),
                         Container(
                           width: MediaQuery.sizeOf(context).width * 0.76,
@@ -170,7 +168,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                             ),
                           ),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 20.0, 0.0, 0.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -179,7 +177,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                   child: Column(
                                     children: [
                                       Align(
-                                        alignment: Alignment(-1.0, 0),
+                                        alignment: const Alignment(-1.0, 0),
                                         child: TabBar(
                                           isScrollable: true,
                                           labelColor:
@@ -196,13 +194,13 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                     fontSize: 18.0,
                                                     letterSpacing: 0.0,
                                                   ),
-                                          unselectedLabelStyle: TextStyle(),
+                                          unselectedLabelStyle: const TextStyle(),
                                           indicatorColor:
                                               FlutterFlowTheme.of(context)
                                                   .tertiary,
                                           indicatorWeight: 1.0,
-                                          padding: EdgeInsets.all(4.0),
-                                          tabs: [
+                                          padding: const EdgeInsets.all(4.0),
+                                          tabs: const [
                                             Row(
                                               mainAxisAlignment:
                                                   MainAxisAlignment.center,
@@ -282,10 +280,10 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                     snapshot.data!;
 
                                                 return Container(
-                                                  decoration: BoxDecoration(),
+                                                  decoration: const BoxDecoration(),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsets.all(20.0),
+                                                        const EdgeInsets.all(20.0),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -311,7 +309,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                               ),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsets
+                                                                    const EdgeInsets
                                                                         .all(
                                                                             6.0),
                                                                 child: Row(
@@ -441,7 +439,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                             'IconButton pressed ...');
                                                                       },
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       width:
                                                                           10.0)),
                                                                 ),
@@ -450,10 +448,10 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                             Container(
                                                               width: 278.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -463,7 +461,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                     Autocomplete<
                                                                         String>(
                                                                   initialValue:
-                                                                      TextEditingValue(),
+                                                                      const TextEditingValue(),
                                                                   optionsBuilder:
                                                                       (textEditingValue) {
                                                                     if (textEditingValue
@@ -512,7 +510,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                                 0.0,
                                                                           ),
                                                                       textHighlightStyle:
-                                                                          TextStyle(),
+                                                                          const TextStyle(),
                                                                       elevation:
                                                                           4.0,
                                                                       optionBackgroundColor:
@@ -560,31 +558,29 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                           (_) =>
                                                                               EasyDebounce.debounce(
                                                                         '_model.textController1',
-                                                                        Duration(
+                                                                        const Duration(
                                                                             milliseconds:
                                                                                 2000),
                                                                         () async {
-                                                                          if (_model.textController1.text != null &&
-                                                                              _model.textController1.text != '') {
+                                                                          if (_model.textController1.text != '') {
                                                                             safeSetState(() {
                                                                               _model.simpleSearchResults = TextSearch(
                                                                                 containerFilialRecordList
                                                                                     .map(
                                                                                       (record) => TextSearchItem.fromTerms(record, [
-                                                                                        record.nomeFilial!,
-                                                                                        record.nomeEscola!,
-                                                                                        record.oEmail!
+                                                                                        record.nomeFilial,
+                                                                                        record.nomeEscola,
+                                                                                        record.oEmail
                                                                                       ]),
                                                                                     )
                                                                                     .toList(),
                                                                               ).search(_model.textController1.text).map((r) => r.object).take(20).toList();
-                                                                              ;
                                                                             });
                                                                           } else {
                                                                             context.goNamed(
                                                                               'A01escola',
                                                                               extra: <String, dynamic>{
-                                                                                kTransitionInfoKey: TransitionInfo(
+                                                                                kTransitionInfoKey: const TransitionInfo(
                                                                                   hasTransition: true,
                                                                                   transitionType: PageTransitionType.fade,
                                                                                   duration: Duration(milliseconds: 0),
@@ -688,7 +684,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                         Expanded(
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         10.0,
@@ -899,7 +895,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                             selected,
                                                                             onSelectChanged) =>
                                                                         DataRow(
-                                                                      color: MaterialStateProperty
+                                                                      color: WidgetStateProperty
                                                                           .all(
                                                                         filiaisListIndex % 2 ==
                                                                                 0
@@ -1004,7 +1000,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                                 shape: BoxShape.circle,
                                                                               ),
                                                                               child: Align(
-                                                                                alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                 child: Icon(
                                                                                   Icons.edit_square,
                                                                                   color: FlutterFlowTheme.of(context).primaryText,
@@ -1015,12 +1011,12 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                             Container(
                                                                               width: 35.0,
                                                                               height: 35.0,
-                                                                              decoration: BoxDecoration(
+                                                                              decoration: const BoxDecoration(
                                                                                 color: Color(0xFFE30909),
                                                                                 shape: BoxShape.circle,
                                                                               ),
                                                                               child: Align(
-                                                                                alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                 child: Icon(
                                                                                   Icons.delete_rounded,
                                                                                   color: FlutterFlowTheme.of(context).info,
@@ -1028,7 +1024,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                                 ),
                                                                               ),
                                                                             ),
-                                                                          ].divide(SizedBox(width: 10.0)),
+                                                                          ].divide(const SizedBox(width: 10.0)),
                                                                         ),
                                                                       ]
                                                                           .map((c) =>
@@ -1100,7 +1096,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -1119,11 +1115,11 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                           ),
                                                           Align(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     -1.0, 0.0),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -1160,7 +1156,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   0.0,
@@ -1179,11 +1175,11 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                           ),
                                                           Align(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     -1.0, 0.0),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -1214,7 +1210,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                           Expanded(
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -1237,7 +1233,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -1249,7 +1245,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         10.0,
@@ -1270,7 +1266,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -1281,7 +1277,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               .start,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               10.0,
                                                                               0.0,
                                                                               0.0,
@@ -1305,7 +1301,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                                 color: FlutterFlowTheme.of(context).error,
                                                                                 size: 16.0,
                                                                               ),
-                                                                            ].divide(SizedBox(width: 6.0)),
+                                                                            ].divide(const SizedBox(width: 6.0)),
                                                                           ),
                                                                         ),
                                                                         FlutterFlowDropDown<
@@ -1315,7 +1311,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                             _model.dropfilialValue ??=
                                                                                 'Unidade escolar',
                                                                           ),
-                                                                          options: [
+                                                                          options: const [
                                                                             'Unidade escolar'
                                                                           ],
                                                                           onChanged: (val) =>
@@ -1348,7 +1344,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               2.0,
                                                                           borderRadius:
                                                                               8.0,
-                                                                          margin: EdgeInsetsDirectional.fromSTEB(
+                                                                          margin: const EdgeInsetsDirectional.fromSTEB(
                                                                               16.0,
                                                                               4.0,
                                                                               16.0,
@@ -1366,13 +1362,13 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         10.0,
@@ -1392,7 +1388,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                     width:
                                                                         251.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -1403,7 +1399,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               .start,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               10.0,
                                                                               0.0,
                                                                               0.0,
@@ -1427,17 +1423,17 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                                 color: FlutterFlowTheme.of(context).error,
                                                                                 size: 16.0,
                                                                               ),
-                                                                            ].divide(SizedBox(width: 6.0)),
+                                                                            ].divide(const SizedBox(width: 6.0)),
                                                                           ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               8.0,
                                                                               0.0,
                                                                               8.0,
                                                                               0.0),
                                                                           child:
-                                                                              Container(
+                                                                              SizedBox(
                                                                             width:
                                                                                 250.0,
                                                                             child:
@@ -1487,7 +1483,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                                 ),
                                                                                 filled: true,
                                                                                 fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                               ),
                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                     fontFamily: 'Manrope',
@@ -1508,7 +1504,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                     width:
                                                                         251.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -1519,7 +1515,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               .start,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               10.0,
                                                                               0.0,
                                                                               0.0,
@@ -1543,11 +1539,11 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                                 color: FlutterFlowTheme.of(context).error,
                                                                                 size: 16.0,
                                                                               ),
-                                                                            ].divide(SizedBox(width: 6.0)),
+                                                                            ].divide(const SizedBox(width: 6.0)),
                                                                           ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               8.0,
                                                                               0.0,
                                                                               8.0,
@@ -1603,7 +1599,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               ),
                                                                               filled: true,
                                                                               fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                              contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                              contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                             ),
                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                   fontFamily: 'Manrope',
@@ -1624,7 +1620,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                     width:
                                                                         300.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -1635,7 +1631,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               .start,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               5.0,
                                                                               0.0,
                                                                               0.0,
@@ -1659,7 +1655,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                                 color: FlutterFlowTheme.of(context).error,
                                                                                 size: 16.0,
                                                                               ),
-                                                                            ].divide(SizedBox(width: 6.0)),
+                                                                            ].divide(const SizedBox(width: 6.0)),
                                                                           ),
                                                                         ),
                                                                         FlutterFlowDropDown<
@@ -1669,7 +1665,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                             _model.dropfuncionamentoValue ??=
                                                                                 'ATIVO',
                                                                           ),
-                                                                          options: [
+                                                                          options: const [
                                                                             'ATIVO',
                                                                             'DESATIVADO'
                                                                           ],
@@ -1701,7 +1697,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               2.0,
                                                                           borderRadius:
                                                                               8.0,
-                                                                          margin: EdgeInsetsDirectional.fromSTEB(
+                                                                          margin: const EdgeInsetsDirectional.fromSTEB(
                                                                               16.0,
                                                                               4.0,
                                                                               16.0,
@@ -1719,13 +1715,13 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         10.0,
@@ -1746,7 +1742,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -1757,7 +1753,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               .start,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               10.0,
                                                                               0.0,
                                                                               0.0,
@@ -1781,11 +1777,11 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                                 color: FlutterFlowTheme.of(context).error,
                                                                                 size: 16.0,
                                                                               ),
-                                                                            ].divide(SizedBox(width: 6.0)),
+                                                                            ].divide(const SizedBox(width: 6.0)),
                                                                           ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               8.0,
                                                                               0.0,
                                                                               8.0,
@@ -1843,7 +1839,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               ),
                                                                               filled: true,
                                                                               fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                              contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                              contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                             ),
                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                   fontFamily: 'Manrope',
@@ -1864,7 +1860,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                     width:
                                                                         251.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -1875,7 +1871,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               .start,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               5.0,
                                                                               0.0,
                                                                               0.0,
@@ -1887,7 +1883,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                             children:
                                                                                 [
                                                                               Align(
-                                                                                alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                 child: Text(
                                                                                   'Código INEP',
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -1902,10 +1898,10 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                                 color: FlutterFlowTheme.of(context).error,
                                                                                 size: 16.0,
                                                                               ),
-                                                                            ].divide(SizedBox(width: 6.0)),
+                                                                            ].divide(const SizedBox(width: 6.0)),
                                                                           ),
                                                                         ),
-                                                                        Container(
+                                                                        SizedBox(
                                                                           width:
                                                                               250.0,
                                                                           child:
@@ -1959,7 +1955,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               ),
                                                                               filled: true,
                                                                               fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                              contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                              contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                             ),
                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                   fontFamily: 'Manrope',
@@ -1974,13 +1970,13 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         10.0,
@@ -2001,7 +1997,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2012,7 +2008,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               .start,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               10.0,
                                                                               0.0,
                                                                               0.0,
@@ -2036,11 +2032,11 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                                 color: FlutterFlowTheme.of(context).error,
                                                                                 size: 16.0,
                                                                               ),
-                                                                            ].divide(SizedBox(width: 6.0)),
+                                                                            ].divide(const SizedBox(width: 6.0)),
                                                                           ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               8.0,
                                                                               0.0,
                                                                               8.0,
@@ -2096,7 +2092,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               ),
                                                                               filled: true,
                                                                               fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                              contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                              contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                             ),
                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                   fontFamily: 'Manrope',
@@ -2118,7 +2114,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2129,7 +2125,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               .start,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               10.0,
                                                                               0.0,
                                                                               0.0,
@@ -2153,11 +2149,11 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                                 color: FlutterFlowTheme.of(context).error,
                                                                                 size: 16.0,
                                                                               ),
-                                                                            ].divide(SizedBox(width: 6.0)),
+                                                                            ].divide(const SizedBox(width: 6.0)),
                                                                           ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               8.0,
                                                                               0.0,
                                                                               8.0,
@@ -2213,7 +2209,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               ),
                                                                               filled: true,
                                                                               fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                              contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                              contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                             ),
                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                   fontFamily: 'Manrope',
@@ -2235,7 +2231,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2246,7 +2242,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               .start,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               10.0,
                                                                               0.0,
                                                                               0.0,
@@ -2270,14 +2266,14 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                                 color: FlutterFlowTheme.of(context).error,
                                                                                 size: 16.0,
                                                                               ),
-                                                                            ].divide(SizedBox(width: 6.0)),
+                                                                            ].divide(const SizedBox(width: 6.0)),
                                                                           ),
                                                                         ),
                                                                         FlutterFlowDropDown<
                                                                             String>(
                                                                           controller: _model.dropDownItinerariosValueController ??=
                                                                               FormFieldController<String>(null),
-                                                                          options: [
+                                                                          options: const [
                                                                             'CREDENCIADA'
                                                                           ],
                                                                           onChanged: (val) =>
@@ -2310,7 +2306,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               2.0,
                                                                           borderRadius:
                                                                               8.0,
-                                                                          margin: EdgeInsetsDirectional.fromSTEB(
+                                                                          margin: const EdgeInsetsDirectional.fromSTEB(
                                                                               16.0,
                                                                               4.0,
                                                                               16.0,
@@ -2328,13 +2324,13 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         10.0,
@@ -2355,7 +2351,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2366,7 +2362,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               .start,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               10.0,
                                                                               0.0,
                                                                               0.0,
@@ -2390,11 +2386,11 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                                 color: FlutterFlowTheme.of(context).error,
                                                                                 size: 16.0,
                                                                               ),
-                                                                            ].divide(SizedBox(width: 6.0)),
+                                                                            ].divide(const SizedBox(width: 6.0)),
                                                                           ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               8.0,
                                                                               0.0,
                                                                               8.0,
@@ -2450,7 +2446,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               ),
                                                                               filled: true,
                                                                               fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                              contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                              contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                             ),
                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                   fontFamily: 'Manrope',
@@ -2475,7 +2471,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2486,7 +2482,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               .start,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               10.0,
                                                                               0.0,
                                                                               0.0,
@@ -2510,11 +2506,11 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                                 color: FlutterFlowTheme.of(context).error,
                                                                                 size: 16.0,
                                                                               ),
-                                                                            ].divide(SizedBox(width: 6.0)),
+                                                                            ].divide(const SizedBox(width: 6.0)),
                                                                           ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               8.0,
                                                                               0.0,
                                                                               8.0,
@@ -2570,7 +2566,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               ),
                                                                               filled: true,
                                                                               fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                              contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                              contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                             ),
                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                   fontFamily: 'Manrope',
@@ -2594,7 +2590,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2605,7 +2601,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               .start,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               5.0,
                                                                               0.0,
                                                                               0.0,
@@ -2629,7 +2625,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                                 color: FlutterFlowTheme.of(context).error,
                                                                                 size: 16.0,
                                                                               ),
-                                                                            ].divide(SizedBox(width: 6.0)),
+                                                                            ].divide(const SizedBox(width: 6.0)),
                                                                           ),
                                                                         ),
                                                                         TextFormField(
@@ -2689,7 +2685,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                                 true,
                                                                             fillColor:
                                                                                 FlutterFlowTheme.of(context).primaryBackground,
-                                                                            contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 10.0,
                                                                                 16.0,
                                                                                 10.0,
@@ -2712,13 +2708,13 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         10.0,
@@ -2739,7 +2735,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2750,7 +2746,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               .start,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               10.0,
                                                                               0.0,
                                                                               0.0,
@@ -2774,11 +2770,11 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                                 color: FlutterFlowTheme.of(context).error,
                                                                                 size: 16.0,
                                                                               ),
-                                                                            ].divide(SizedBox(width: 6.0)),
+                                                                            ].divide(const SizedBox(width: 6.0)),
                                                                           ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               8.0,
                                                                               0.0,
                                                                               8.0,
@@ -2834,7 +2830,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               ),
                                                                               filled: true,
                                                                               fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                              contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                              contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                             ),
                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                   fontFamily: 'Manrope',
@@ -2859,7 +2855,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2870,7 +2866,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               .start,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               10.0,
                                                                               0.0,
                                                                               0.0,
@@ -2894,11 +2890,11 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                                 color: FlutterFlowTheme.of(context).error,
                                                                                 size: 16.0,
                                                                               ),
-                                                                            ].divide(SizedBox(width: 6.0)),
+                                                                            ].divide(const SizedBox(width: 6.0)),
                                                                           ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               8.0,
                                                                               0.0,
                                                                               8.0,
@@ -2954,7 +2950,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               ),
                                                                               filled: true,
                                                                               fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                              contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                              contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                             ),
                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                   fontFamily: 'Manrope',
@@ -2978,7 +2974,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2989,7 +2985,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               .start,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               5.0,
                                                                               0.0,
                                                                               0.0,
@@ -3013,7 +3009,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                                 color: FlutterFlowTheme.of(context).error,
                                                                                 size: 16.0,
                                                                               ),
-                                                                            ].divide(SizedBox(width: 6.0)),
+                                                                            ].divide(const SizedBox(width: 6.0)),
                                                                           ),
                                                                         ),
                                                                         TextFormField(
@@ -3073,7 +3069,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                                 true,
                                                                             fillColor:
                                                                                 FlutterFlowTheme.of(context).primaryBackground,
-                                                                            contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 10.0,
                                                                                 16.0,
                                                                                 10.0,
@@ -3096,13 +3092,13 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         10.0,
@@ -3123,7 +3119,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3134,7 +3130,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               .start,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               10.0,
                                                                               0.0,
                                                                               0.0,
@@ -3158,17 +3154,17 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                                 color: FlutterFlowTheme.of(context).error,
                                                                                 size: 16.0,
                                                                               ),
-                                                                            ].divide(SizedBox(width: 6.0)),
+                                                                            ].divide(const SizedBox(width: 6.0)),
                                                                           ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               8.0,
                                                                               7.0,
                                                                               8.0,
                                                                               0.0),
                                                                           child:
-                                                                              Container(
+                                                                              SizedBox(
                                                                             width:
                                                                                 500.0,
                                                                             child:
@@ -3217,7 +3213,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                                 ),
                                                                                 filled: true,
                                                                                 fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                               ),
                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                     fontFamily: 'Manrope',
@@ -3234,13 +3230,13 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         10.0,
@@ -3261,7 +3257,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3272,7 +3268,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               .start,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               10.0,
                                                                               0.0,
                                                                               0.0,
@@ -3296,11 +3292,11 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                                 color: FlutterFlowTheme.of(context).error,
                                                                                 size: 16.0,
                                                                               ),
-                                                                            ].divide(SizedBox(width: 6.0)),
+                                                                            ].divide(const SizedBox(width: 6.0)),
                                                                           ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               8.0,
                                                                               0.0,
                                                                               0.0,
@@ -3352,13 +3348,13 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         10.0,
@@ -3379,7 +3375,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3390,7 +3386,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               .start,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               10.0,
                                                                               0.0,
                                                                               0.0,
@@ -3414,17 +3410,17 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                                 color: FlutterFlowTheme.of(context).error,
                                                                                 size: 16.0,
                                                                               ),
-                                                                            ].divide(SizedBox(width: 6.0)),
+                                                                            ].divide(const SizedBox(width: 6.0)),
                                                                           ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               8.0,
                                                                               0.0,
                                                                               8.0,
                                                                               0.0),
                                                                           child:
-                                                                              Container(
+                                                                              SizedBox(
                                                                             width:
                                                                                 300.0,
                                                                             child:
@@ -3473,7 +3469,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                                 ),
                                                                                 filled: true,
                                                                                 fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                               ),
                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                     fontFamily: 'Manrope',
@@ -3490,13 +3486,13 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         10.0,
@@ -3517,7 +3513,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3528,7 +3524,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               .start,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               10.0,
                                                                               0.0,
                                                                               0.0,
@@ -3552,7 +3548,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                                 color: FlutterFlowTheme.of(context).error,
                                                                                 size: 16.0,
                                                                               ),
-                                                                            ].divide(SizedBox(width: 6.0)),
+                                                                            ].divide(const SizedBox(width: 6.0)),
                                                                           ),
                                                                         ),
                                                                         Row(
@@ -3584,12 +3580,12 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 15.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 15.0, 0.0),
                                                                               child: Text(
                                                                                 'Domingo',
                                                                                 style: FlutterFlowTheme.of(context).labelLarge.override(
                                                                                       fontFamily: 'Manrope',
-                                                                                      color: Color(0xFF141415),
+                                                                                      color: const Color(0xFF141415),
                                                                                       fontSize: 17.0,
                                                                                       letterSpacing: 0.0,
                                                                                     ),
@@ -3620,12 +3616,12 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 15.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 15.0, 0.0),
                                                                               child: Text(
                                                                                 'Segunda Feira',
                                                                                 style: FlutterFlowTheme.of(context).labelLarge.override(
                                                                                       fontFamily: 'Manrope',
-                                                                                      color: Color(0xFF141415),
+                                                                                      color: const Color(0xFF141415),
                                                                                       fontSize: 17.0,
                                                                                       letterSpacing: 0.0,
                                                                                     ),
@@ -3656,12 +3652,12 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 15.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 15.0, 0.0),
                                                                               child: Text(
                                                                                 'Terça Feira',
                                                                                 style: FlutterFlowTheme.of(context).labelLarge.override(
                                                                                       fontFamily: 'Manrope',
-                                                                                      color: Color(0xFF141415),
+                                                                                      color: const Color(0xFF141415),
                                                                                       fontSize: 17.0,
                                                                                       letterSpacing: 0.0,
                                                                                     ),
@@ -3692,12 +3688,12 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 15.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 15.0, 0.0),
                                                                               child: Text(
                                                                                 'Quarta Feira',
                                                                                 style: FlutterFlowTheme.of(context).labelLarge.override(
                                                                                       fontFamily: 'Manrope',
-                                                                                      color: Color(0xFF141415),
+                                                                                      color: const Color(0xFF141415),
                                                                                       fontSize: 17.0,
                                                                                       letterSpacing: 0.0,
                                                                                     ),
@@ -3728,12 +3724,12 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 15.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 15.0, 0.0),
                                                                               child: Text(
                                                                                 'Quinta Feira',
                                                                                 style: FlutterFlowTheme.of(context).labelLarge.override(
                                                                                       fontFamily: 'Manrope',
-                                                                                      color: Color(0xFF141415),
+                                                                                      color: const Color(0xFF141415),
                                                                                       fontSize: 17.0,
                                                                                       letterSpacing: 0.0,
                                                                                     ),
@@ -3764,12 +3760,12 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 15.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 15.0, 0.0),
                                                                               child: Text(
                                                                                 'Sexta Feira',
                                                                                 style: FlutterFlowTheme.of(context).labelLarge.override(
                                                                                       fontFamily: 'Manrope',
-                                                                                      color: Color(0xFF141415),
+                                                                                      color: const Color(0xFF141415),
                                                                                       fontSize: 17.0,
                                                                                       letterSpacing: 0.0,
                                                                                     ),
@@ -3800,12 +3796,12 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 15.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 15.0, 0.0),
                                                                               child: Text(
                                                                                 'Sábado',
                                                                                 style: FlutterFlowTheme.of(context).labelLarge.override(
                                                                                       fontFamily: 'Manrope',
-                                                                                      color: Color(0xFF141415),
+                                                                                      color: const Color(0xFF141415),
                                                                                       fontSize: 17.0,
                                                                                       letterSpacing: 0.0,
                                                                                     ),
@@ -3817,13 +3813,13 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         10.0,
@@ -3844,7 +3840,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                             .max,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             10.0,
                                                                             0.0,
                                                                             0.0,
@@ -3868,7 +3864,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                               color: FlutterFlowTheme.of(context).error,
                                                                               size: 16.0,
                                                                             ),
-                                                                          ].divide(SizedBox(width: 6.0)),
+                                                                          ].divide(const SizedBox(width: 6.0)),
                                                                         ),
                                                                       ),
                                                                       Row(
@@ -3897,7 +3893,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                             text:
                                                                                 'Adicionar Foto',
                                                                             icon:
-                                                                                Icon(
+                                                                                const Icon(
                                                                               Icons.upload_rounded,
                                                                               size: 22.0,
                                                                             ),
@@ -3905,8 +3901,8 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                                 FFButtonOptions(
                                                                               width: 200.0,
                                                                               height: 45.0,
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                               color: FlutterFlowTheme.of(context).primary,
                                                                               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                     fontFamily: 'Manrope',
@@ -3915,33 +3911,33 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                                     letterSpacing: 0.0,
                                                                                   ),
                                                                               elevation: 3.0,
-                                                                              borderSide: BorderSide(
+                                                                              borderSide: const BorderSide(
                                                                                 color: Colors.transparent,
                                                                                 width: 1.0,
                                                                               ),
                                                                               borderRadius: BorderRadius.circular(8.0),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ],
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 6.0)),
                                                       ),
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               0.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     15.0,
@@ -3953,7 +3949,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                 'Button pressed ...');
                                                           },
                                                           text: 'Adicionar',
-                                                          icon: Icon(
+                                                          icon: const Icon(
                                                             Icons.add,
                                                             size: 25.0,
                                                           ),
@@ -3962,14 +3958,14 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                             width: 300.0,
                                                             height: 50.0,
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                             iconPadding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
@@ -3994,7 +3990,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                                     ),
                                                             elevation: 3.0,
                                                             borderSide:
-                                                                BorderSide(
+                                                                const BorderSide(
                                                               color: Colors
                                                                   .transparent,
                                                               width: 1.0,
@@ -4008,7 +4004,7 @@ class _A01escolaWidgetState extends State<A01escolaWidget>
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 10.0)),
+                                                      const SizedBox(height: 10.0)),
                                                 ),
                                               ),
                                             ),

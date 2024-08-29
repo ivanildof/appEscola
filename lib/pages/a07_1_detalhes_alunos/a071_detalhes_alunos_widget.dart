@@ -12,13 +12,10 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import '/custom_code/actions/index.dart' as actions;
 import '/flutter_flow/random_data_util.dart' as random_data;
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:provider/provider.dart';
 import 'package:text_search/text_search.dart';
 import 'a071_detalhes_alunos_model.dart';
@@ -28,7 +25,7 @@ class A071DetalhesAlunosWidget extends StatefulWidget {
   const A071DetalhesAlunosWidget({
     super.key,
     String? telas,
-  }) : this.telas = telas ?? 'vazio';
+  }) : telas = telas ?? 'vazio';
 
   final String telas;
 
@@ -249,7 +246,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                         wrapWithModel(
                           model: _model.menuSuperiorModel,
                           updateCallback: () => setState(() {}),
-                          child: MenuSuperiorWidget(),
+                          child: const MenuSuperiorWidget(),
                         ),
                       if (responsiveVisibility(
                         context: context,
@@ -259,7 +256,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                         wrapWithModel(
                           model: _model.menuSuperiorCelularModel,
                           updateCallback: () => setState(() {}),
-                          child: MenuSuperiorCelularWidget(),
+                          child: const MenuSuperiorCelularWidget(),
                         ),
                     ],
                   ),
@@ -270,9 +267,9 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                         wrapWithModel(
                           model: _model.menuLateralModel,
                           updateCallback: () => setState(() {}),
-                          child: MenuLateralWidget(),
+                          child: const MenuLateralWidget(),
                         ),
-                        if (widget!.telas == 'listaAlunos')
+                        if (widget.telas == 'listaAlunos')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.75,
                             height: double.infinity,
@@ -294,7 +291,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsets.all(20.0),
+                                padding: const EdgeInsets.all(20.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
@@ -317,9 +314,9 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                         children: [
                                           Align(
                                             alignment:
-                                                AlignmentDirectional(-1.0, 0.0),
+                                                const AlignmentDirectional(-1.0, 0.0),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       10.0, 10.0, 0.0, 0.0),
                                               child: Text(
@@ -344,7 +341,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                           ),
                                           Expanded(
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       20.0, 0.0, 20.0, 0.0),
                                               child: Row(
@@ -366,7 +363,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           4.0,
                                                                           0.0,
@@ -393,7 +390,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                         StreamBuilder<
@@ -473,7 +470,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                               borderWidth: 2.0,
                                                               borderRadius: 8.0,
                                                               margin:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           4.0,
@@ -490,7 +487,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                             );
                                                           },
                                                         ),
-                                                      ].divide(SizedBox(
+                                                      ].divide(const SizedBox(
                                                           height: 6.0)),
                                                     ),
                                                   ),
@@ -508,7 +505,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           4.0,
                                                                           0.0,
@@ -527,7 +524,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                     ),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                         StreamBuilder<
@@ -617,7 +614,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                               borderWidth: 2.0,
                                                               borderRadius: 8.0,
                                                               margin:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           4.0,
@@ -634,7 +631,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                             );
                                                           },
                                                         ),
-                                                      ].divide(SizedBox(
+                                                      ].divide(const SizedBox(
                                                           height: 6.0)),
                                                     ),
                                                   ),
@@ -652,7 +649,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           4.0,
                                                                           0.0,
@@ -671,7 +668,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                     ),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                         FlutterFlowDropDown<
@@ -680,7 +677,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                   .secaoEstudanteValueController ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['Option 1'],
+                                                          options: const ['Option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.secaoEstudanteValue =
@@ -717,7 +714,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -728,13 +725,13 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           isSearchable: false,
                                                           isMultiSelect: false,
                                                         ),
-                                                      ].divide(SizedBox(
+                                                      ].divide(const SizedBox(
                                                           height: 6.0)),
                                                     ),
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 25.0, 0.0),
                                                     child: FFButtonWidget(
@@ -743,21 +740,21 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                             'Button pressed ...');
                                                       },
                                                       text: 'Filtro',
-                                                      icon: Icon(
+                                                      icon: const Icon(
                                                         Icons.filter_alt,
                                                         size: 20.0,
                                                       ),
                                                       options: FFButtonOptions(
                                                         height: 49.0,
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     24.0,
                                                                     0.0,
                                                                     24.0,
                                                                     0.0),
                                                         iconPadding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -780,7 +777,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                       0.0,
                                                                 ),
                                                         elevation: 3.0,
-                                                        borderSide: BorderSide(
+                                                        borderSide: const BorderSide(
                                                           color: Colors
                                                               .transparent,
                                                           width: 1.0,
@@ -791,11 +788,11 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                       ),
                                                     ),
                                                   ),
-                                                ].divide(SizedBox(width: 20.0)),
+                                                ].divide(const SizedBox(width: 20.0)),
                                               ),
                                             ),
                                           ),
-                                        ].divide(SizedBox(height: 6.0)),
+                                        ].divide(const SizedBox(height: 6.0)),
                                       ),
                                     ),
                                     Expanded(
@@ -838,7 +835,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                               ),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsets.all(20.0),
+                                              padding: const EdgeInsets.all(20.0),
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
@@ -865,11 +862,11 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           ),
                                                           Align(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     -1.0, 0.0),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -911,7 +908,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                               },
                                                               text:
                                                                   'Apagar em massa',
-                                                              icon: Icon(
+                                                              icon: const Icon(
                                                                 Icons
                                                                     .delete_forever,
                                                                 size: 18.0,
@@ -919,14 +916,14 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                               options:
                                                                   FFButtonOptions(
                                                                 height: 35.0,
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                                 iconPadding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -951,7 +948,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                     ),
                                                                 elevation: 3.0,
                                                                 borderSide:
-                                                                    BorderSide(
+                                                                    const BorderSide(
                                                                   color: Colors
                                                                       .transparent,
                                                                   width: 1.0,
@@ -962,7 +959,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             8.0),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 20.0)),
                                                         ),
                                                       ),
@@ -976,7 +973,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 10.0,
                                                                 0.0, 0.0),
                                                     child: Row(
@@ -999,7 +996,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           ),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsets.all(
+                                                                const EdgeInsets.all(
                                                                     6.0),
                                                             child: Row(
                                                               mainAxisSize:
@@ -1125,7 +1122,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         'IconButton pressed ...');
                                                                   },
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 10.0)),
                                                             ),
                                                           ),
@@ -1133,10 +1130,10 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                         Container(
                                                           width: 350.0,
                                                           decoration:
-                                                              BoxDecoration(),
+                                                              const BoxDecoration(),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         8.0,
                                                                         0.0,
@@ -1232,7 +1229,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                 ),
                                                                 filled: true,
                                                                 prefixIcon:
-                                                                    Icon(
+                                                                    const Icon(
                                                                   Icons.search,
                                                                 ),
                                                               ),
@@ -1258,7 +1255,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                   Expanded(
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   10.0,
@@ -1477,7 +1474,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                           onSelectChanged) =>
                                                                       DataRow(
                                                                 color:
-                                                                    MaterialStateProperty
+                                                                    WidgetStateProperty
                                                                         .all(
                                                                   listalunosIndex %
                                                                               2 ==
@@ -1509,7 +1506,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             5.0,
@@ -1607,7 +1604,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         ),
                                                                         child:
                                                                             Align(
-                                                                          alignment: AlignmentDirectional(
+                                                                          alignment: const AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                           child:
@@ -1626,7 +1623,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         height:
                                                                             35.0,
                                                                         decoration:
-                                                                            BoxDecoration(
+                                                                            const BoxDecoration(
                                                                           color:
                                                                               Color(0xFFE30909),
                                                                           shape:
@@ -1634,7 +1631,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         ),
                                                                         child:
                                                                             Align(
-                                                                          alignment: AlignmentDirectional(
+                                                                          alignment: const AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                           child:
@@ -1647,7 +1644,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                           ),
                                                                         ),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             10.0)),
                                                                   ),
@@ -1719,12 +1716,12 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                         },
                                       ),
                                     ),
-                                  ].divide(SizedBox(height: 20.0)),
+                                  ].divide(const SizedBox(height: 20.0)),
                                 ),
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'addAlunos')
+                        if (widget.telas == 'addAlunos')
                           Container(
                             height: double.infinity,
                             decoration: BoxDecoration(
@@ -1748,7 +1745,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                 key: _model.formKey,
                                 autovalidateMode: AutovalidateMode.disabled,
                                 child: Padding(
-                                  padding: EdgeInsets.all(20.0),
+                                  padding: const EdgeInsets.all(20.0),
                                   child: SingleChildScrollView(
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -1772,7 +1769,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         10.0, 10.0, 0.0, 0.0),
                                                 child: Row(
@@ -1789,11 +1786,11 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -1827,7 +1824,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                         .tertiary,
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         10.0, 0.0, 0.0, 0.0),
                                                 child: Row(
@@ -1844,11 +1841,11 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -1878,7 +1875,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -1900,7 +1897,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         20.0, 10.0, 20.0, 0.0),
                                                 child: Row(
@@ -1914,7 +1911,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                       child: Container(
                                                         width: 550.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Column(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -1924,7 +1921,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -1957,20 +1954,20 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .error,
                                                                     size: 16.0,
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         6.0)),
                                                               ),
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
                                                                           0.0),
-                                                              child: Container(
+                                                              child: SizedBox(
                                                                 width: 250.0,
                                                                 child:
                                                                     TextFormField(
@@ -2066,7 +2063,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             context)
                                                                         .primaryBackground,
                                                                     contentPadding:
-                                                                        EdgeInsetsDirectional.fromSTEB(
+                                                                        const EdgeInsetsDirectional.fromSTEB(
                                                                             10.0,
                                                                             16.0,
                                                                             10.0,
@@ -2099,7 +2096,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                       child: Container(
                                                         width: 550.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Column(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -2109,7 +2106,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -2134,20 +2131,20 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         6.0)),
                                                               ),
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
                                                                           8.0,
                                                                           0.0),
-                                                              child: Container(
+                                                              child: SizedBox(
                                                                 width: 250.0,
                                                                 child:
                                                                     TextFormField(
@@ -2239,7 +2236,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             context)
                                                                         .primaryBackground,
                                                                     contentPadding:
-                                                                        EdgeInsetsDirectional.fromSTEB(
+                                                                        const EdgeInsetsDirectional.fromSTEB(
                                                                             10.0,
                                                                             16.0,
                                                                             10.0,
@@ -2275,7 +2272,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                       child: Container(
                                                         width: 550.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Column(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -2285,7 +2282,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -2310,14 +2307,14 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         6.0)),
                                                               ),
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -2415,7 +2412,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                           context)
                                                                       .primaryBackground,
                                                                   contentPadding:
-                                                                      EdgeInsetsDirectional.fromSTEB(
+                                                                      const EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           16.0,
                                                                           10.0,
@@ -2446,11 +2443,11 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(width: 20.0)),
+                                                      const SizedBox(width: 20.0)),
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 0.0, 10.0),
                                                 child: Column(
@@ -2459,7 +2456,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   20.0,
                                                                   10.0,
@@ -2477,7 +2474,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -2487,7 +2484,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -2517,12 +2514,12 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -2611,7 +2608,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             true,
                                                                         fillColor:
                                                                             FlutterFlowTheme.of(context).primaryBackground,
-                                                                        contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             10.0,
                                                                             16.0,
                                                                             10.0,
@@ -2643,7 +2640,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -2653,7 +2650,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -2683,7 +2680,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
@@ -2693,7 +2690,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .dropGeneroValueController ??= FormFieldController<
                                                                             String>(
                                                                         null),
-                                                                    options: [
+                                                                    options: const [
                                                                       'Masculino',
                                                                       'Feminino'
                                                                     ],
@@ -2737,7 +2734,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         2.0,
                                                                     borderRadius:
                                                                         8.0,
-                                                                    margin: EdgeInsetsDirectional
+                                                                    margin: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             16.0,
                                                                             4.0,
@@ -2761,7 +2758,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -2771,7 +2768,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -2793,7 +2790,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                 letterSpacing: 0.0,
                                                                               ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
@@ -2803,7 +2800,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .dropsangueValueController ??= FormFieldController<
                                                                             String>(
                                                                         null),
-                                                                    options: [
+                                                                    options: const [
                                                                       'A+',
                                                                       'A-',
                                                                       'B+',
@@ -2852,7 +2849,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         2.0,
                                                                     borderRadius:
                                                                         8.0,
-                                                                    margin: EdgeInsetsDirectional
+                                                                    margin: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             16.0,
                                                                             4.0,
@@ -2871,13 +2868,13 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 20.0)),
                                                       ),
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   20.0,
                                                                   10.0,
@@ -2893,7 +2890,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           Container(
                                                             width: 300.0,
                                                             decoration:
-                                                                BoxDecoration(),
+                                                                const BoxDecoration(),
                                                             child: Column(
                                                               mainAxisSize:
                                                                   MainAxisSize
@@ -2903,7 +2900,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                       .start,
                                                               children: [
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -2924,7 +2921,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             6.0)),
                                                                   ),
@@ -2933,12 +2930,12 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                   children: [
                                                                     Align(
                                                                       alignment:
-                                                                          AlignmentDirectional(
+                                                                          const AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                       child:
                                                                           Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             8.0,
                                                                             0.0,
                                                                             0.0,
@@ -3021,12 +3018,12 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                     ),
                                                                     Align(
                                                                       alignment:
-                                                                          AlignmentDirectional(
+                                                                          const AlignmentDirectional(
                                                                               1.0,
                                                                               0.0),
                                                                       child:
                                                                           Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             8.0,
                                                                             15.0,
@@ -3050,7 +3047,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           Container(
                                                             width: 150.0,
                                                             decoration:
-                                                                BoxDecoration(),
+                                                                const BoxDecoration(),
                                                             child: Column(
                                                               mainAxisSize:
                                                                   MainAxisSize
@@ -3060,7 +3057,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                       .start,
                                                               children: [
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -3089,13 +3086,13 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         size:
                                                                             16.0,
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             6.0)),
                                                                   ),
                                                                 ),
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -3188,7 +3185,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                       fillColor:
                                                                           FlutterFlowTheme.of(context)
                                                                               .primaryBackground,
-                                                                      contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                      contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           16.0,
                                                                           10.0,
@@ -3224,7 +3221,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           Container(
                                                             width: 150.0,
                                                             decoration:
-                                                                BoxDecoration(),
+                                                                const BoxDecoration(),
                                                             child: Column(
                                                               mainAxisSize:
                                                                   MainAxisSize
@@ -3234,7 +3231,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                       .start,
                                                               children: [
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -3255,7 +3252,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             6.0)),
                                                                   ),
@@ -3269,7 +3266,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                     _model.dropbolsafamiliaValue ??=
                                                                         'NÃO',
                                                                   ),
-                                                                  options: [
+                                                                  options: const [
                                                                     'NÃO',
                                                                     'SIM'
                                                                   ],
@@ -3309,7 +3306,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                       2.0,
                                                                   borderRadius:
                                                                       8.0,
-                                                                  margin: EdgeInsetsDirectional
+                                                                  margin: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           4.0,
@@ -3327,13 +3324,13 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                               ],
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 20.0)),
                                                       ),
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   0.0,
@@ -3353,11 +3350,11 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           ),
                                                           Align(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     -1.0, 0.0),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -3388,7 +3385,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           Expanded(
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -3411,7 +3408,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   20.0,
                                                                   10.0,
@@ -3429,7 +3426,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -3439,7 +3436,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -3469,12 +3466,12 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -3560,7 +3557,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             true,
                                                                         fillColor:
                                                                             FlutterFlowTheme.of(context).primaryBackground,
-                                                                        contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             10.0,
                                                                             16.0,
                                                                             10.0,
@@ -3599,7 +3596,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -3609,7 +3606,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -3639,12 +3636,12 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -3730,7 +3727,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             true,
                                                                         fillColor:
                                                                             FlutterFlowTheme.of(context).primaryBackground,
-                                                                        contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             10.0,
                                                                             16.0,
                                                                             10.0,
@@ -3757,13 +3754,13 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 20.0)),
                                                       ),
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   20.0,
                                                                   10.0,
@@ -3781,7 +3778,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -3791,7 +3788,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -3821,12 +3818,12 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -3912,7 +3909,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             true,
                                                                         fillColor:
                                                                             FlutterFlowTheme.of(context).primaryBackground,
-                                                                        contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             10.0,
                                                                             16.0,
                                                                             10.0,
@@ -3953,7 +3950,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -3963,7 +3960,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -3993,12 +3990,12 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -4084,7 +4081,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             true,
                                                                         fillColor:
                                                                             FlutterFlowTheme.of(context).primaryBackground,
-                                                                        contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             10.0,
                                                                             16.0,
                                                                             10.0,
@@ -4122,7 +4119,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -4132,7 +4129,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -4162,12 +4159,12 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -4256,7 +4253,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             true,
                                                                         fillColor:
                                                                             FlutterFlowTheme.of(context).primaryBackground,
-                                                                        contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             10.0,
                                                                             16.0,
                                                                             10.0,
@@ -4285,13 +4282,13 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 20.0)),
                                                       ),
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   20.0,
                                                                   10.0,
@@ -4309,7 +4306,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -4319,7 +4316,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -4349,12 +4346,12 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -4443,7 +4440,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             true,
                                                                         fillColor:
                                                                             FlutterFlowTheme.of(context).primaryBackground,
-                                                                        contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             10.0,
                                                                             16.0,
                                                                             10.0,
@@ -4477,7 +4474,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -4487,7 +4484,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -4517,7 +4514,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
@@ -4607,7 +4604,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                       fillColor:
                                                                           FlutterFlowTheme.of(context)
                                                                               .primaryBackground,
-                                                                      contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                      contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           16.0,
                                                                           10.0,
@@ -4643,7 +4640,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -4653,7 +4650,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -4683,7 +4680,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
@@ -4776,7 +4773,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                       fillColor:
                                                                           FlutterFlowTheme.of(context)
                                                                               .primaryBackground,
-                                                                      contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                      contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           16.0,
                                                                           10.0,
@@ -4804,13 +4801,13 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 20.0)),
                                                       ),
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   20.0,
                                                                   10.0,
@@ -4828,7 +4825,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -4838,7 +4835,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -4868,12 +4865,12 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -4962,7 +4959,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             true,
                                                                         fillColor:
                                                                             FlutterFlowTheme.of(context).primaryBackground,
-                                                                        contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             10.0,
                                                                             16.0,
                                                                             10.0,
@@ -4994,7 +4991,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           Container(
                                                             width: 358.0,
                                                             decoration:
-                                                                BoxDecoration(),
+                                                                const BoxDecoration(),
                                                             child: Column(
                                                               mainAxisSize:
                                                                   MainAxisSize
@@ -5004,7 +5001,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                       .start,
                                                               children: [
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -5033,7 +5030,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         size:
                                                                             16.0,
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             6.0)),
                                                                   ),
@@ -5045,7 +5042,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                       FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                  options: [
+                                                                  options: const [
                                                                     'Rural',
                                                                     'Urbana'
                                                                   ],
@@ -5087,7 +5084,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                       2.0,
                                                                   borderRadius:
                                                                       8.0,
-                                                                  margin: EdgeInsetsDirectional
+                                                                  margin: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           4.0,
@@ -5105,13 +5102,13 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                               ],
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 20.0)),
                                                       ),
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   20.0,
                                                                   10.0,
@@ -5129,7 +5126,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -5139,7 +5136,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -5161,12 +5158,12 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                 letterSpacing: 0.0,
                                                                               ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -5220,7 +5217,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             if (_model.perfiluser == null ||
                                                                                 _model.perfiluser == '')
                                                                               Align(
-                                                                                alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                 child: FaIcon(
                                                                                   FontAwesomeIcons.cloudUploadAlt,
                                                                                   color: FlutterFlowTheme.of(context).secondaryText,
@@ -5239,12 +5236,12 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             if (_model.perfiluser != null &&
                                                                                 _model.perfiluser != '')
                                                                               Align(
-                                                                                alignment: AlignmentDirectional(0.0, 0.0),
-                                                                                child: Container(
+                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                child: SizedBox(
                                                                                   width: 150.0,
                                                                                   height: 100.0,
                                                                                   child: Stack(
-                                                                                    alignment: AlignmentDirectional(0.0, -1.0),
+                                                                                    alignment: const AlignmentDirectional(0.0, -1.0),
                                                                                     children: [
                                                                                       ClipRRect(
                                                                                         borderRadius: BorderRadius.circular(8.0),
@@ -5256,9 +5253,9 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                         ),
                                                                                       ),
                                                                                       Align(
-                                                                                        alignment: AlignmentDirectional(1.0, -1.0),
+                                                                                        alignment: const AlignmentDirectional(1.0, -1.0),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 5.0, 0.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 5.0, 0.0),
                                                                                           child: InkWell(
                                                                                             splashColor: Colors.transparent,
                                                                                             focusColor: Colors.transparent,
@@ -5269,7 +5266,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                               setState(() {});
                                                                                               await FirebaseStorage.instance.refFromURL(_model.fotoperfilaluno!).delete();
                                                                                             },
-                                                                                            child: Icon(
+                                                                                            child: const Icon(
                                                                                               Icons.delete,
                                                                                               color: Color(0xFFCB0A0A),
                                                                                               size: 25.0,
@@ -5290,16 +5287,16 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 20.0)),
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 6.0)),
+                                                      const SizedBox(height: 6.0)),
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         10.0, 10.0, 0.0, 0.0),
                                                 child: Row(
@@ -5317,11 +5314,11 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -5351,7 +5348,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -5373,7 +5370,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         20.0, 10.0, 20.0, 0.0),
                                                 child: Row(
@@ -5387,7 +5384,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                       child: Container(
                                                         width: 550.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Column(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -5397,7 +5394,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -5430,14 +5427,14 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .error,
                                                                     size: 16.0,
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         6.0)),
                                                               ),
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -5535,7 +5532,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                           context)
                                                                       .primaryBackground,
                                                                   contentPadding:
-                                                                      EdgeInsetsDirectional.fromSTEB(
+                                                                      const EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           16.0,
                                                                           10.0,
@@ -5567,7 +5564,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                       child: Container(
                                                         width: 550.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Column(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -5577,7 +5574,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -5610,14 +5607,14 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .error,
                                                                     size: 16.0,
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         6.0)),
                                                               ),
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -5715,7 +5712,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                           context)
                                                                       .primaryBackground,
                                                                   contentPadding:
-                                                                      EdgeInsetsDirectional.fromSTEB(
+                                                                      const EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           16.0,
                                                                           10.0,
@@ -5738,7 +5735,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                               .visibility_outlined
                                                                           : Icons
                                                                               .visibility_off_outlined,
-                                                                      color: Color(
+                                                                      color: const Color(
                                                                           0xFF8B919A),
                                                                       size:
                                                                           23.0,
@@ -5771,7 +5768,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                       child: Container(
                                                         width: 550.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Column(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -5781,7 +5778,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -5814,14 +5811,14 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .error,
                                                                     size: 16.0,
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         6.0)),
                                                               ),
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -5919,7 +5916,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                           context)
                                                                       .primaryBackground,
                                                                   contentPadding:
-                                                                      EdgeInsetsDirectional.fromSTEB(
+                                                                      const EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           16.0,
                                                                           10.0,
@@ -5942,7 +5939,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                               .visibility_outlined
                                                                           : Icons
                                                                               .visibility_off_outlined,
-                                                                      color: Color(
+                                                                      color: const Color(
                                                                           0xFF8B919A),
                                                                       size:
                                                                           23.0,
@@ -5971,11 +5968,11 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(width: 20.0)),
+                                                      const SizedBox(width: 20.0)),
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         10.0, 10.0, 0.0, 0.0),
                                                 child: Row(
@@ -5992,11 +5989,11 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -6026,7 +6023,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -6055,7 +6052,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   20.0,
                                                                   0.0,
@@ -6073,7 +6070,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -6083,7 +6080,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -6106,7 +6103,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                               ),
                                                                         ),
                                                                         Align(
-                                                                          alignment: AlignmentDirectional(
+                                                                          alignment: const AlignmentDirectional(
                                                                               1.0,
                                                                               0.0),
                                                                           child:
@@ -6118,12 +6115,12 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                 16.0,
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -6212,7 +6209,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             true,
                                                                         fillColor:
                                                                             FlutterFlowTheme.of(context).primaryBackground,
-                                                                        contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             10.0,
                                                                             16.0,
                                                                             10.0,
@@ -6244,7 +6241,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -6254,7 +6251,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -6284,7 +6281,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
@@ -6294,7 +6291,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .droprelacaoValueController ??= FormFieldController<
                                                                             String>(
                                                                         null),
-                                                                    options: [
+                                                                    options: const [
                                                                       'Mãe',
                                                                       'Pai',
                                                                       'Tia(o)',
@@ -6340,7 +6337,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         2.0,
                                                                     borderRadius:
                                                                         8.0,
-                                                                    margin: EdgeInsetsDirectional
+                                                                    margin: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             16.0,
                                                                             4.0,
@@ -6364,7 +6361,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -6374,7 +6371,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -6404,12 +6401,12 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -6495,7 +6492,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             true,
                                                                         fillColor:
                                                                             FlutterFlowTheme.of(context).primaryBackground,
-                                                                        contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             10.0,
                                                                             16.0,
                                                                             10.0,
@@ -6522,13 +6519,13 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 20.0)),
                                                       ),
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   20.0,
                                                                   10.0,
@@ -6546,7 +6543,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -6556,7 +6553,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -6586,12 +6583,12 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -6680,7 +6677,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             true,
                                                                         fillColor:
                                                                             FlutterFlowTheme.of(context).primaryBackground,
-                                                                        contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             10.0,
                                                                             16.0,
                                                                             10.0,
@@ -6712,7 +6709,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -6722,7 +6719,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -6752,12 +6749,12 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -6843,7 +6840,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             true,
                                                                         fillColor:
                                                                             FlutterFlowTheme.of(context).primaryBackground,
-                                                                        contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             10.0,
                                                                             16.0,
                                                                             10.0,
@@ -6878,7 +6875,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -6888,7 +6885,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -6918,12 +6915,12 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -7009,7 +7006,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             true,
                                                                         fillColor:
                                                                             FlutterFlowTheme.of(context).primaryBackground,
-                                                                        contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             10.0,
                                                                             16.0,
                                                                             10.0,
@@ -7043,13 +7040,13 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 20.0)),
                                                       ),
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   20.0,
                                                                   10.0,
@@ -7067,7 +7064,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -7077,7 +7074,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -7100,7 +7097,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                               ),
                                                                         ),
                                                                         Align(
-                                                                          alignment: AlignmentDirectional(
+                                                                          alignment: const AlignmentDirectional(
                                                                               1.0,
                                                                               0.0),
                                                                           child:
@@ -7112,12 +7109,12 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                 16.0,
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -7203,7 +7200,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             true,
                                                                         fillColor:
                                                                             FlutterFlowTheme.of(context).primaryBackground,
-                                                                        contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             10.0,
                                                                             16.0,
                                                                             10.0,
@@ -7242,7 +7239,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -7252,7 +7249,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -7282,7 +7279,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
@@ -7292,7 +7289,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .dropeducacaoValueController ??= FormFieldController<
                                                                             String>(
                                                                         null),
-                                                                    options: [
+                                                                    options: const [
                                                                       'Ensino médio completo',
                                                                       'Ensino médio incompleto',
                                                                       'Ensino superior completo',
@@ -7338,7 +7335,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         2.0,
                                                                     borderRadius:
                                                                         8.0,
-                                                                    margin: EdgeInsetsDirectional
+                                                                    margin: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             16.0,
                                                                             4.0,
@@ -7357,13 +7354,13 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 20.0)),
                                                       ),
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   20.0,
                                                                   10.0,
@@ -7380,7 +7377,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -7390,7 +7387,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -7420,12 +7417,12 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -7514,7 +7511,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             true,
                                                                         fillColor:
                                                                             FlutterFlowTheme.of(context).primaryBackground,
-                                                                        contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             10.0,
                                                                             16.0,
                                                                             10.0,
@@ -7544,7 +7541,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           Container(
                                                             width: 330.0,
                                                             decoration:
-                                                                BoxDecoration(),
+                                                                const BoxDecoration(),
                                                             child: Column(
                                                               mainAxisSize:
                                                                   MainAxisSize
@@ -7554,7 +7551,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                       .start,
                                                               children: [
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -7583,13 +7580,13 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         size:
                                                                             16.0,
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             6.0)),
                                                                   ),
                                                                 ),
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -7682,7 +7679,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                       fillColor:
                                                                           FlutterFlowTheme.of(context)
                                                                               .primaryBackground,
-                                                                      contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                      contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           16.0,
                                                                           10.0,
@@ -7715,13 +7712,13 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                               ],
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 20.0)),
                                                       ),
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   20.0,
                                                                   10.0,
@@ -7738,7 +7735,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                             child: Container(
                                                               width: 550.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -7748,7 +7745,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .start,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -7778,12 +7775,12 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                           size:
                                                                               16.0,
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 6.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             8.0,
                                                                             0.0,
@@ -7872,7 +7869,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             true,
                                                                         fillColor:
                                                                             FlutterFlowTheme.of(context).primaryBackground,
-                                                                        contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             10.0,
                                                                             16.0,
                                                                             10.0,
@@ -7902,7 +7899,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           Container(
                                                             width: 330.0,
                                                             decoration:
-                                                                BoxDecoration(),
+                                                                const BoxDecoration(),
                                                             child: Column(
                                                               mainAxisSize:
                                                                   MainAxisSize
@@ -7912,7 +7909,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                       .start,
                                                               children: [
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -7941,13 +7938,13 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         size:
                                                                             16.0,
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             6.0)),
                                                                   ),
                                                                 ),
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -8040,7 +8037,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                       fillColor:
                                                                           FlutterFlowTheme.of(context)
                                                                               .primaryBackground,
-                                                                      contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                      contentPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           16.0,
                                                                           10.0,
@@ -8073,13 +8070,13 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                               ],
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 20.0)),
                                                       ),
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -8094,7 +8091,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         12.0,
                                                                         0.0,
@@ -8119,13 +8116,13 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 6.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -8185,7 +8182,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         _model.responsavelimg ==
                                                                             '')
                                                                       Align(
-                                                                        alignment: AlignmentDirectional(
+                                                                        alignment: const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                         child:
@@ -8216,11 +8213,11 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         _model.responsavelimg !=
                                                                             '')
                                                                       Align(
-                                                                        alignment: AlignmentDirectional(
+                                                                        alignment: const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                         child:
-                                                                            Container(
+                                                                            SizedBox(
                                                                           width:
                                                                               150.0,
                                                                           height:
@@ -8228,7 +8225,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                           child:
                                                                               Stack(
                                                                             alignment:
-                                                                                AlignmentDirectional(0.0, -1.0),
+                                                                                const AlignmentDirectional(0.0, -1.0),
                                                                             children: [
                                                                               ClipRRect(
                                                                                 borderRadius: BorderRadius.circular(8.0),
@@ -8240,9 +8237,9 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                 ),
                                                                               ),
                                                                               Align(
-                                                                                alignment: AlignmentDirectional(1.0, -1.0),
+                                                                                alignment: const AlignmentDirectional(1.0, -1.0),
                                                                                 child: Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 5.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 5.0, 0.0),
                                                                                   child: InkWell(
                                                                                     splashColor: Colors.transparent,
                                                                                     focusColor: Colors.transparent,
@@ -8253,7 +8250,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                       setState(() {});
                                                                                       await FirebaseStorage.instance.refFromURL(_model.perfilresponsavel!).delete();
                                                                                     },
-                                                                                    child: Icon(
+                                                                                    child: const Icon(
                                                                                       Icons.delete,
                                                                                       color: Color(0xFFCB0A0A),
                                                                                       size: 25.0,
@@ -8276,7 +8273,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                   ],
                                                 ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         10.0, 10.0, 0.0, 0.0),
                                                 child: Row(
@@ -8293,11 +8290,11 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -8327,7 +8324,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -8349,7 +8346,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         20.0, 10.0, 20.0, 0.0),
                                                 child: Row(
@@ -8363,7 +8360,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                       child: Container(
                                                         width: 550.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Column(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -8373,7 +8370,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -8406,7 +8403,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .error,
                                                                     size: 16.0,
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         6.0)),
                                                               ),
@@ -8420,7 +8417,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                 _model.dropDocumentosValue ??=
                                                                     'Certidão Nascimento',
                                                               ),
-                                                              options: [
+                                                              options: const [
                                                                 'Certidão Nascimento',
                                                                 'CNH',
                                                                 'Identidade',
@@ -8463,7 +8460,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                               borderWidth: 2.0,
                                                               borderRadius: 8.0,
                                                               margin:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           4.0,
@@ -8487,7 +8484,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .max,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             10.0,
@@ -8510,14 +8507,14 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -8534,11 +8531,11 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                         color: FlutterFlowTheme.of(context).error,
                                                                                         size: 16.0,
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
                                                                                   child: TextFormField(
                                                                                     controller: _model.tmatriculaDocNascimenTextController,
                                                                                     focusNode: _model.tmatriculaDocNascimenFocusNode,
@@ -8584,7 +8581,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                       ),
                                                                                       filled: true,
                                                                                       fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                      contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                      contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                     ),
                                                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                           fontFamily: 'Manrope',
@@ -8603,12 +8600,12 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             10.0,
@@ -8631,14 +8628,14 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -8655,11 +8652,11 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                         color: FlutterFlowTheme.of(context).error,
                                                                                         size: 16.0,
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
                                                                                   child: TextFormField(
                                                                                     controller: _model.tTermoNASCIMETextController,
                                                                                     focusNode: _model.tTermoNASCIMEFocusNode,
@@ -8705,7 +8702,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                       ),
                                                                                       filled: true,
                                                                                       fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                      contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                      contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                     ),
                                                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                           fontFamily: 'Manrope',
@@ -8729,14 +8726,14 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -8753,7 +8750,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                         color: FlutterFlowTheme.of(context).error,
                                                                                         size: 16.0,
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 TextFormField(
@@ -8801,7 +8798,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                     ),
                                                                                     filled: true,
                                                                                     fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                    contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                    contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Manrope',
@@ -8824,14 +8821,14 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -8848,7 +8845,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                         color: FlutterFlowTheme.of(context).error,
                                                                                         size: 16.0,
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 TextFormField(
@@ -8896,7 +8893,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                     ),
                                                                                     filled: true,
                                                                                     fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                    contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                    contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Manrope',
@@ -8919,14 +8916,14 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -8943,7 +8940,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                         color: FlutterFlowTheme.of(context).error,
                                                                                         size: 16.0,
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 TextFormField(
@@ -8991,7 +8988,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                     ),
                                                                                     filled: true,
                                                                                     fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                    contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                    contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Manrope',
@@ -9006,12 +9003,12 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             10.0,
@@ -9034,14 +9031,14 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -9058,7 +9055,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                         color: FlutterFlowTheme.of(context).error,
                                                                                         size: 16.0,
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 TextFormField(
@@ -9106,7 +9103,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                     ),
                                                                                     filled: true,
                                                                                     fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                    contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                    contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Manrope',
@@ -9131,14 +9128,14 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -9155,7 +9152,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                         color: FlutterFlowTheme.of(context).error,
                                                                                         size: 16.0,
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 TextFormField(
@@ -9204,7 +9201,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                     ),
                                                                                     filled: true,
                                                                                     fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                    contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                    contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Manrope',
@@ -9218,12 +9215,12 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             10.0,
@@ -9244,14 +9241,14 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -9268,11 +9265,11 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                         color: FlutterFlowTheme.of(context).error,
                                                                                         size: 16.0,
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
                                                                                   child: TextFormField(
                                                                                     controller: _model.tcartorioNascimentTextController,
                                                                                     focusNode: _model.tcartorioNascimentFocusNode,
@@ -9319,7 +9316,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                       ),
                                                                                       filled: true,
                                                                                       fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                      contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                      contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                     ),
                                                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                           fontFamily: 'Manrope',
@@ -9333,12 +9330,12 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             10.0,
@@ -9371,9 +9368,9 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                       children: List.generate(document.length, (documentIndex) {
                                                                                         final documentItem = document[documentIndex];
                                                                                         return Align(
-                                                                                          alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                          alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                           child: Stack(
-                                                                                            alignment: AlignmentDirectional(1.0, -1.0),
+                                                                                            alignment: const AlignmentDirectional(1.0, -1.0),
                                                                                             children: [
                                                                                               ClipRRect(
                                                                                                 borderRadius: BorderRadius.circular(8.0),
@@ -9385,9 +9382,9 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                                 ),
                                                                                               ),
                                                                                               Align(
-                                                                                                alignment: AlignmentDirectional(1.0, -1.02),
+                                                                                                alignment: const AlignmentDirectional(1.0, -1.02),
                                                                                                 child: Padding(
-                                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 7.0, 7.0, 0.0),
+                                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 7.0, 7.0, 0.0),
                                                                                                   child: InkWell(
                                                                                                     splashColor: Colors.transparent,
                                                                                                     focusColor: Colors.transparent,
@@ -9398,7 +9395,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                                       _model.removeAtIndexFromImgdocumentvari(documentIndex);
                                                                                                       setState(() {});
                                                                                                     },
-                                                                                                    child: Icon(
+                                                                                                    child: const Icon(
                                                                                                       Icons.delete,
                                                                                                       color: Color(0xFFCB0A0A),
                                                                                                       size: 29.0,
@@ -9409,12 +9406,12 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                             ],
                                                                                           ),
                                                                                         );
-                                                                                      }).divide(SizedBox(width: 10.0)),
+                                                                                      }).divide(const SizedBox(width: 10.0)),
                                                                                     );
                                                                                   },
                                                                                 ),
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                                                                 child: FFButtonWidget(
                                                                                   onPressed: () async {
                                                                                     _model.imgdocuments = await actions.uploadMultipleImages(
@@ -9428,15 +9425,15 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                     setState(() {});
                                                                                   },
                                                                                   text: 'Selecionar Documento',
-                                                                                  icon: Icon(
+                                                                                  icon: const Icon(
                                                                                     Icons.upload_rounded,
                                                                                     size: 25.0,
                                                                                   ),
                                                                                   options: FFButtonOptions(
                                                                                     width: 250.0,
                                                                                     height: 45.0,
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                    iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                     color: FlutterFlowTheme.of(context).primary,
                                                                                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                           fontFamily: 'Manrope',
@@ -9446,7 +9443,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                           fontWeight: FontWeight.w600,
                                                                                         ),
                                                                                     elevation: 3.0,
-                                                                                    borderSide: BorderSide(
+                                                                                    borderSide: const BorderSide(
                                                                                       color: Colors.transparent,
                                                                                       width: 1.0,
                                                                                     ),
@@ -9457,7 +9454,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             ],
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
                                                                   ),
@@ -9472,7 +9469,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .max,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             10.0,
@@ -9495,14 +9492,14 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -9514,11 +9511,11 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
                                                                                   child: TextFormField(
                                                                                     controller: _model.tnumeroIdentidaTextController,
                                                                                     focusNode: _model.tnumeroIdentidaFocusNode,
@@ -9564,7 +9561,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                       ),
                                                                                       filled: true,
                                                                                       fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                      contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                      contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                     ),
                                                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                           fontFamily: 'Manrope',
@@ -9587,14 +9584,14 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -9611,7 +9608,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                         color: FlutterFlowTheme.of(context).error,
                                                                                         size: 16.0,
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 TextFormField(
@@ -9659,7 +9656,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                     ),
                                                                                     filled: true,
                                                                                     fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                    contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                    contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Manrope',
@@ -9681,14 +9678,14 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -9705,7 +9702,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                         color: FlutterFlowTheme.of(context).error,
                                                                                         size: 16.0,
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 TextFormField(
@@ -9753,7 +9750,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                     ),
                                                                                     filled: true,
                                                                                     fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                    contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                    contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Manrope',
@@ -9767,12 +9764,12 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             10.0,
@@ -9795,14 +9792,14 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -9819,7 +9816,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                         color: FlutterFlowTheme.of(context).error,
                                                                                         size: 16.0,
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 TextFormField(
@@ -9867,7 +9864,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                     ),
                                                                                     filled: true,
                                                                                     fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                    contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                    contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Manrope',
@@ -9889,14 +9886,14 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -9913,7 +9910,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                         color: FlutterFlowTheme.of(context).error,
                                                                                         size: 16.0,
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 TextFormField(
@@ -9961,7 +9958,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                     ),
                                                                                     filled: true,
                                                                                     fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                    contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                    contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Manrope',
@@ -9975,12 +9972,12 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             10.0,
@@ -10013,9 +10010,9 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                       children: List.generate(document.length, (documentIndex) {
                                                                                         final documentItem = document[documentIndex];
                                                                                         return Align(
-                                                                                          alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                          alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                           child: Stack(
-                                                                                            alignment: AlignmentDirectional(1.0, -1.0),
+                                                                                            alignment: const AlignmentDirectional(1.0, -1.0),
                                                                                             children: [
                                                                                               ClipRRect(
                                                                                                 borderRadius: BorderRadius.circular(8.0),
@@ -10027,9 +10024,9 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                                 ),
                                                                                               ),
                                                                                               Align(
-                                                                                                alignment: AlignmentDirectional(1.0, -1.02),
+                                                                                                alignment: const AlignmentDirectional(1.0, -1.02),
                                                                                                 child: Padding(
-                                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 7.0, 7.0, 0.0),
+                                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 7.0, 7.0, 0.0),
                                                                                                   child: InkWell(
                                                                                                     splashColor: Colors.transparent,
                                                                                                     focusColor: Colors.transparent,
@@ -10040,7 +10037,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                                       _model.removeAtIndexFromImgdocumentvari(documentIndex);
                                                                                                       setState(() {});
                                                                                                     },
-                                                                                                    child: Icon(
+                                                                                                    child: const Icon(
                                                                                                       Icons.delete,
                                                                                                       color: Color(0xFFCB0A0A),
                                                                                                       size: 29.0,
@@ -10051,12 +10048,12 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                             ],
                                                                                           ),
                                                                                         );
-                                                                                      }).divide(SizedBox(width: 10.0)),
+                                                                                      }).divide(const SizedBox(width: 10.0)),
                                                                                     );
                                                                                   },
                                                                                 ),
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                                                                 child: FFButtonWidget(
                                                                                   onPressed: () async {
                                                                                     _model.imgidentidade = await actions.uploadMultipleImages(
@@ -10070,15 +10067,15 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                     setState(() {});
                                                                                   },
                                                                                   text: 'Selecionar Documento',
-                                                                                  icon: Icon(
+                                                                                  icon: const Icon(
                                                                                     Icons.upload_rounded,
                                                                                     size: 25.0,
                                                                                   ),
                                                                                   options: FFButtonOptions(
                                                                                     width: 250.0,
                                                                                     height: 45.0,
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                    iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                     color: FlutterFlowTheme.of(context).primary,
                                                                                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                           fontFamily: 'Manrope',
@@ -10088,7 +10085,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                           fontWeight: FontWeight.w600,
                                                                                         ),
                                                                                     elevation: 3.0,
-                                                                                    borderSide: BorderSide(
+                                                                                    borderSide: const BorderSide(
                                                                                       color: Colors.transparent,
                                                                                       width: 1.0,
                                                                                     ),
@@ -10099,7 +10096,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             ],
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
                                                                   ),
@@ -10114,7 +10111,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .max,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             10.0,
@@ -10137,14 +10134,14 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -10161,11 +10158,11 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                         color: FlutterFlowTheme.of(context).error,
                                                                                         size: 16.0,
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
                                                                                   child: TextFormField(
                                                                                     controller: _model.tnumerocnhTextController,
                                                                                     focusNode: _model.tnumerocnhFocusNode,
@@ -10211,7 +10208,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                       ),
                                                                                       filled: true,
                                                                                       fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                      contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                      contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                     ),
                                                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                           fontFamily: 'Manrope',
@@ -10234,14 +10231,14 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -10258,7 +10255,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                         color: FlutterFlowTheme.of(context).error,
                                                                                         size: 16.0,
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 TextFormField(
@@ -10306,7 +10303,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                     ),
                                                                                     filled: true,
                                                                                     fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                    contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                    contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Manrope',
@@ -10328,14 +10325,14 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -10352,7 +10349,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                         color: FlutterFlowTheme.of(context).error,
                                                                                         size: 16.0,
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 TextFormField(
@@ -10400,7 +10397,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                     ),
                                                                                     filled: true,
                                                                                     fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                    contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                    contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Manrope',
@@ -10414,12 +10411,12 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             10.0,
@@ -10442,14 +10439,14 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -10466,7 +10463,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                         color: FlutterFlowTheme.of(context).error,
                                                                                         size: 16.0,
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 TextFormField(
@@ -10514,7 +10511,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                     ),
                                                                                     filled: true,
                                                                                     fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                    contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                    contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Manrope',
@@ -10536,14 +10533,14 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -10560,7 +10557,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                         color: FlutterFlowTheme.of(context).error,
                                                                                         size: 16.0,
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 TextFormField(
@@ -10608,7 +10605,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                     ),
                                                                                     filled: true,
                                                                                     fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                    contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                    contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Manrope',
@@ -10622,12 +10619,12 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             10.0,
@@ -10660,9 +10657,9 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                       children: List.generate(document.length, (documentIndex) {
                                                                                         final documentItem = document[documentIndex];
                                                                                         return Align(
-                                                                                          alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                          alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                           child: Stack(
-                                                                                            alignment: AlignmentDirectional(1.0, -1.0),
+                                                                                            alignment: const AlignmentDirectional(1.0, -1.0),
                                                                                             children: [
                                                                                               ClipRRect(
                                                                                                 borderRadius: BorderRadius.circular(8.0),
@@ -10674,9 +10671,9 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                                 ),
                                                                                               ),
                                                                                               Align(
-                                                                                                alignment: AlignmentDirectional(1.0, -1.02),
+                                                                                                alignment: const AlignmentDirectional(1.0, -1.02),
                                                                                                 child: Padding(
-                                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 7.0, 7.0, 0.0),
+                                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 7.0, 7.0, 0.0),
                                                                                                   child: InkWell(
                                                                                                     splashColor: Colors.transparent,
                                                                                                     focusColor: Colors.transparent,
@@ -10687,7 +10684,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                                       _model.removeAtIndexFromImgdocumentvari(documentIndex);
                                                                                                       setState(() {});
                                                                                                     },
-                                                                                                    child: Icon(
+                                                                                                    child: const Icon(
                                                                                                       Icons.delete,
                                                                                                       color: Color(0xFFCB0A0A),
                                                                                                       size: 29.0,
@@ -10698,12 +10695,12 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                             ],
                                                                                           ),
                                                                                         );
-                                                                                      }).divide(SizedBox(width: 10.0)),
+                                                                                      }).divide(const SizedBox(width: 10.0)),
                                                                                     );
                                                                                   },
                                                                                 ),
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                                                                 child: FFButtonWidget(
                                                                                   onPressed: () async {
                                                                                     _model.imgcnh = await actions.uploadMultipleImages(
@@ -10717,15 +10714,15 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                     setState(() {});
                                                                                   },
                                                                                   text: 'Selecionar Documento',
-                                                                                  icon: Icon(
+                                                                                  icon: const Icon(
                                                                                     Icons.upload_rounded,
                                                                                     size: 25.0,
                                                                                   ),
                                                                                   options: FFButtonOptions(
                                                                                     width: 250.0,
                                                                                     height: 45.0,
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                    iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                     color: FlutterFlowTheme.of(context).primary,
                                                                                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                           fontFamily: 'Manrope',
@@ -10735,7 +10732,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                           fontWeight: FontWeight.w600,
                                                                                         ),
                                                                                     elevation: 3.0,
-                                                                                    borderSide: BorderSide(
+                                                                                    borderSide: const BorderSide(
                                                                                       color: Colors.transparent,
                                                                                       width: 1.0,
                                                                                     ),
@@ -10746,7 +10743,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             ],
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
                                                                   ),
@@ -10761,7 +10758,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         .max,
                                                                 children: [
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             10.0,
@@ -10784,14 +10781,14 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -10803,11 +10800,11 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
                                                                                   child: TextFormField(
                                                                                     controller: _model.tcpfoutrosTextController,
                                                                                     focusNode: _model.tcpfoutrosFocusNode,
@@ -10853,7 +10850,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                       ),
                                                                                       filled: true,
                                                                                       fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                      contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                      contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                     ),
                                                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                           fontFamily: 'Manrope',
@@ -10880,14 +10877,14 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -10899,7 +10896,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 TextFormField(
@@ -10947,7 +10944,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                     ),
                                                                                     filled: true,
                                                                                     fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                    contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                    contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Manrope',
@@ -10970,14 +10967,14 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -10989,7 +10986,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 TextFormField(
@@ -11037,7 +11034,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                     ),
                                                                                     filled: true,
                                                                                     fillColor: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                    contentPadding: EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
+                                                                                    contentPadding: const EdgeInsetsDirectional.fromSTEB(10.0, 16.0, 10.0, 16.0),
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Manrope',
@@ -11052,12 +11049,12 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             10.0,
@@ -11090,9 +11087,9 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                       children: List.generate(document.length, (documentIndex) {
                                                                                         final documentItem = document[documentIndex];
                                                                                         return Align(
-                                                                                          alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                          alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                           child: Stack(
-                                                                                            alignment: AlignmentDirectional(1.0, -1.0),
+                                                                                            alignment: const AlignmentDirectional(1.0, -1.0),
                                                                                             children: [
                                                                                               ClipRRect(
                                                                                                 borderRadius: BorderRadius.circular(8.0),
@@ -11104,9 +11101,9 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                                 ),
                                                                                               ),
                                                                                               Align(
-                                                                                                alignment: AlignmentDirectional(1.0, -1.02),
+                                                                                                alignment: const AlignmentDirectional(1.0, -1.02),
                                                                                                 child: Padding(
-                                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 7.0, 7.0, 0.0),
+                                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 7.0, 7.0, 0.0),
                                                                                                   child: InkWell(
                                                                                                     splashColor: Colors.transparent,
                                                                                                     focusColor: Colors.transparent,
@@ -11117,7 +11114,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                                       setState(() {});
                                                                                                       await FirebaseStorage.instance.refFromURL(documentItem).delete();
                                                                                                     },
-                                                                                                    child: Icon(
+                                                                                                    child: const Icon(
                                                                                                       Icons.delete,
                                                                                                       color: Color(0xFFCB0A0A),
                                                                                                       size: 29.0,
@@ -11128,12 +11125,12 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                             ],
                                                                                           ),
                                                                                         );
-                                                                                      }).divide(SizedBox(width: 10.0)),
+                                                                                      }).divide(const SizedBox(width: 10.0)),
                                                                                     );
                                                                                   },
                                                                                 ),
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                                                                 child: FFButtonWidget(
                                                                                   onPressed: () async {
                                                                                     _model.imgoutrosdocument = await actions.uploadMultipleImages(
@@ -11147,15 +11144,15 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                     setState(() {});
                                                                                   },
                                                                                   text: 'Selecionar Documento',
-                                                                                  icon: Icon(
+                                                                                  icon: const Icon(
                                                                                     Icons.upload_rounded,
                                                                                     size: 25.0,
                                                                                   ),
                                                                                   options: FFButtonOptions(
                                                                                     width: 250.0,
                                                                                     height: 45.0,
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                    iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                     color: FlutterFlowTheme.of(context).primary,
                                                                                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                           fontFamily: 'Manrope',
@@ -11165,7 +11162,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                                           fontWeight: FontWeight.w600,
                                                                                         ),
                                                                                     elevation: 3.0,
-                                                                                    borderSide: BorderSide(
+                                                                                    borderSide: const BorderSide(
                                                                                       color: Colors.transparent,
                                                                                       width: 1.0,
                                                                                     ),
@@ -11176,7 +11173,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             ],
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
                                                                   ),
@@ -11187,11 +11184,11 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(width: 20.0)),
+                                                      const SizedBox(width: 20.0)),
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         10.0, 10.0, 0.0, 0.0),
                                                 child: Row(
@@ -11208,11 +11205,11 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -11242,7 +11239,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -11264,7 +11261,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         20.0, 0.0, 20.0, 0.0),
                                                 child: Row(
@@ -11278,7 +11275,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                       child: Container(
                                                         width: 550.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Column(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -11288,7 +11285,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -11313,7 +11310,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         6.0)),
                                                               ),
@@ -11325,7 +11322,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                   FormFieldController<
                                                                           String>(
                                                                       null),
-                                                              options: <String>[],
+                                                              options: const <String>[],
                                                               onChanged: (val) =>
                                                                   setState(() =>
                                                                       _model.acadDropDownGeneroValue1 =
@@ -11362,7 +11359,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                               borderWidth: 2.0,
                                                               borderRadius: 8.0,
                                                               margin:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           4.0,
@@ -11386,7 +11383,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                       child: Container(
                                                         width: 550.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Column(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -11396,7 +11393,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -11421,7 +11418,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         6.0)),
                                                               ),
@@ -11433,7 +11430,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                   FormFieldController<
                                                                           String>(
                                                                       null),
-                                                              options: <String>[],
+                                                              options: const <String>[],
                                                               onChanged: (val) =>
                                                                   setState(() =>
                                                                       _model.acadDropDownGeneroValue2 =
@@ -11470,7 +11467,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                               borderWidth: 2.0,
                                                               borderRadius: 8.0,
                                                               margin:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           4.0,
@@ -11490,11 +11487,11 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(width: 20.0)),
+                                                      const SizedBox(width: 20.0)),
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         20.0, 10.0, 20.0, 0.0),
                                                 child: Row(
@@ -11508,7 +11505,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                       child: Container(
                                                         width: 550.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Column(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -11518,7 +11515,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -11543,7 +11540,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         6.0)),
                                                               ),
@@ -11555,7 +11552,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                   FormFieldController<
                                                                           String>(
                                                                       null),
-                                                              options: <String>[],
+                                                              options: const <String>[],
                                                               onChanged: (val) =>
                                                                   setState(() =>
                                                                       _model.acadDropDownGeneroValue3 =
@@ -11592,7 +11589,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                               borderWidth: 2.0,
                                                               borderRadius: 8.0,
                                                               margin:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           4.0,
@@ -11616,7 +11613,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                       child: Container(
                                                         width: 550.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Column(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -11626,7 +11623,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -11651,7 +11648,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         6.0)),
                                                               ),
@@ -11663,7 +11660,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                   FormFieldController<
                                                                           String>(
                                                                       null),
-                                                              options: <String>[],
+                                                              options: const <String>[],
                                                               onChanged: (val) =>
                                                                   setState(() =>
                                                                       _model.acadDropDownGeneroValue4 =
@@ -11700,7 +11697,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                               borderWidth: 2.0,
                                                               borderRadius: 8.0,
                                                               margin:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           4.0,
@@ -11724,7 +11721,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                       child: Container(
                                                         width: 550.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Column(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -11734,7 +11731,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -11759,7 +11756,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         6.0)),
                                                               ),
@@ -11771,7 +11768,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                   FormFieldController<
                                                                           String>(
                                                                       null),
-                                                              options: <String>[],
+                                                              options: const <String>[],
                                                               onChanged: (val) =>
                                                                   setState(() =>
                                                                       _model.acadDropDownGeneroValue5 =
@@ -11808,7 +11805,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                               borderWidth: 2.0,
                                                               borderRadius: 8.0,
                                                               margin:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           4.0,
@@ -11828,11 +11825,11 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(width: 20.0)),
+                                                      const SizedBox(width: 20.0)),
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         20.0, 10.0, 20.0, 0.0),
                                                 child: Row(
@@ -11846,7 +11843,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                       child: Container(
                                                         width: 550.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Column(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -11856,7 +11853,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -11881,7 +11878,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         6.0)),
                                                               ),
@@ -11895,7 +11892,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                 _model.acadDropDownGeneroValue6 ??=
                                                                     'Matriculado',
                                                               ),
-                                                              options: [
+                                                              options: const [
                                                                 'Matriculado'
                                                               ],
                                                               onChanged: (val) =>
@@ -11934,7 +11931,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                               borderWidth: 2.0,
                                                               borderRadius: 8.0,
                                                               margin:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           4.0,
@@ -11958,7 +11955,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                       child: Container(
                                                         width: 550.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Column(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -11968,7 +11965,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -11993,7 +11990,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         6.0)),
                                                               ),
@@ -12005,7 +12002,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                   FormFieldController<
                                                                           String>(
                                                                       null),
-                                                              options: <String>[],
+                                                              options: const <String>[],
                                                               onChanged: (val) =>
                                                                   setState(() =>
                                                                       _model.acadDropDownGeneroValue7 =
@@ -12042,7 +12039,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                               borderWidth: 2.0,
                                                               borderRadius: 8.0,
                                                               margin:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           4.0,
@@ -12062,11 +12059,11 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(width: 20.0)),
+                                                      const SizedBox(width: 20.0)),
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         10.0, 10.0, 0.0, 0.0),
                                                 child: Row(
@@ -12083,11 +12080,11 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -12117,7 +12114,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -12139,7 +12136,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         20.0, 10.0, 20.0, 0.0),
                                                 child: Row(
@@ -12152,7 +12149,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                       child: Container(
                                                         width: 550.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Column(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -12162,7 +12159,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -12187,14 +12184,14 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         6.0)),
                                                               ),
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -12295,7 +12292,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                           context)
                                                                       .primaryBackground,
                                                                   contentPadding:
-                                                                      EdgeInsetsDirectional.fromSTEB(
+                                                                      const EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           16.0,
                                                                           10.0,
@@ -12325,7 +12322,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                     Container(
                                                       width: 330.0,
                                                       decoration:
-                                                          BoxDecoration(),
+                                                          const BoxDecoration(),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -12335,7 +12332,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -12360,13 +12357,13 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 6.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         8.0,
                                                                         0.0,
@@ -12466,7 +12463,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         context)
                                                                     .primaryBackground,
                                                                 contentPadding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             16.0,
@@ -12494,11 +12491,11 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(width: 20.0)),
+                                                      const SizedBox(width: 20.0)),
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         20.0, 10.0, 20.0, 0.0),
                                                 child: Row(
@@ -12511,7 +12508,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                       child: Container(
                                                         width: 550.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Column(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -12521,7 +12518,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -12546,14 +12543,14 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         6.0)),
                                                               ),
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -12654,7 +12651,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                           context)
                                                                       .primaryBackground,
                                                                   contentPadding:
-                                                                      EdgeInsetsDirectional.fromSTEB(
+                                                                      const EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           16.0,
                                                                           10.0,
@@ -12684,7 +12681,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                     Container(
                                                       width: 200.0,
                                                       decoration:
-                                                          BoxDecoration(),
+                                                          const BoxDecoration(),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -12694,7 +12691,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -12719,7 +12716,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 6.0)),
                                                             ),
                                                           ),
@@ -12732,7 +12729,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                               _model.dropcadeiranteValue ??=
                                                                   'NÃO',
                                                             ),
-                                                            options: [
+                                                            options: const [
                                                               'NÃO',
                                                               'SIM'
                                                             ],
@@ -12772,7 +12769,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                             borderWidth: 2.0,
                                                             borderRadius: 8.0,
                                                             margin:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         4.0,
@@ -12791,7 +12788,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                     Container(
                                                       width: 200.0,
                                                       decoration:
-                                                          BoxDecoration(),
+                                                          const BoxDecoration(),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -12801,7 +12798,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -12826,7 +12823,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 6.0)),
                                                             ),
                                                           ),
@@ -12839,7 +12836,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                               _model.dropbpcValue ??=
                                                                   'NÃO',
                                                             ),
-                                                            options: [
+                                                            options: const [
                                                               'NÃO',
                                                               'SIM'
                                                             ],
@@ -12879,7 +12876,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                             borderWidth: 2.0,
                                                             borderRadius: 8.0,
                                                             margin:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         4.0,
@@ -12896,11 +12893,11 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(width: 20.0)),
+                                                      const SizedBox(width: 20.0)),
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         20.0, 10.0, 20.0, 0.0),
                                                 child: Row(
@@ -12913,7 +12910,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                       child: Container(
                                                         width: 550.0,
                                                         decoration:
-                                                            BoxDecoration(),
+                                                            const BoxDecoration(),
                                                         child: Column(
                                                           mainAxisSize:
                                                               MainAxisSize.max,
@@ -12923,7 +12920,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -12950,7 +12947,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                               FontWeight.w600,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         6.0)),
                                                               ),
@@ -12962,7 +12959,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                   FormFieldController<
                                                                           String>(
                                                                       null),
-                                                              options: [
+                                                              options: const [
                                                                 'Atendimento Educacional Especializado',
                                                                 'Atendimento Educacional Especializado Bilingue',
                                                                 'Estagiário',
@@ -13006,7 +13003,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                               borderWidth: 2.0,
                                                               borderRadius: 8.0,
                                                               margin:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           4.0,
@@ -13026,14 +13023,14 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(width: 20.0)),
+                                                      const SizedBox(width: 20.0)),
                                                 ),
                                               ),
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 0.0, 50.0),
                                                   child: FFButtonWidget(
@@ -13057,7 +13054,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                         ScaffoldMessenger.of(
                                                                 context)
                                                             .showSnackBar(
-                                                          SnackBar(
+                                                          const SnackBar(
                                                             content: Text(
                                                               'Passwords don\'t match!',
                                                             ),
@@ -13479,7 +13476,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                         builder:
                                                             (alertDialogContext) {
                                                           return AlertDialog(
-                                                            title: Text(
+                                                            title: const Text(
                                                                 'Aluno cadastrado com sucesso'),
                                                             actions: [
                                                               TextButton(
@@ -13487,7 +13484,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                     Navigator.pop(
                                                                         alertDialogContext),
                                                                 child:
-                                                                    Text('Ok'),
+                                                                    const Text('Ok'),
                                                               ),
                                                             ],
                                                           );
@@ -13497,7 +13494,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                       setState(() {});
                                                     },
                                                     text: 'Cadastrar',
-                                                    icon: Icon(
+                                                    icon: const Icon(
                                                       Icons.add,
                                                       size: 23.0,
                                                     ),
@@ -13505,14 +13502,14 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                       width: 250.0,
                                                       height: 47.0,
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   24.0,
                                                                   0.0,
                                                                   24.0,
                                                                   0.0),
                                                       iconPadding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -13536,7 +13533,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                     0.0,
                                                               ),
                                                       elevation: 3.0,
-                                                      borderSide: BorderSide(
+                                                      borderSide: const BorderSide(
                                                         color:
                                                             Colors.transparent,
                                                         width: 1.0,
@@ -13548,17 +13545,17 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                   ),
                                                 ),
                                               ),
-                                            ].divide(SizedBox(height: 10.0)),
+                                            ].divide(const SizedBox(height: 10.0)),
                                           ),
                                         ),
-                                      ].divide(SizedBox(height: 20.0)),
+                                      ].divide(const SizedBox(height: 20.0)),
                                     ),
                                   ),
                                 ),
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'multiClasse')
+                        if (widget.telas == 'multiClasse')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.75,
                             height: double.infinity,
@@ -13580,7 +13577,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsets.all(20.0),
+                                padding: const EdgeInsets.all(20.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
@@ -13603,9 +13600,9 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                         children: [
                                           Align(
                                             alignment:
-                                                AlignmentDirectional(-1.0, 0.0),
+                                                const AlignmentDirectional(-1.0, 0.0),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       10.0, 10.0, 0.0, 0.0),
                                               child: Text(
@@ -13630,7 +13627,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                           ),
                                           Expanded(
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       20.0, 0.0, 20.0, 0.0),
                                               child: Row(
@@ -13652,7 +13649,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           4.0,
                                                                           0.0,
@@ -13679,7 +13676,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                         FlutterFlowDropDown<
@@ -13688,7 +13685,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                   .filialMulticlasseValueController ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['Option 1'],
+                                                          options: const ['Option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.filialMulticlasseValue =
@@ -13725,7 +13722,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -13736,7 +13733,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           isSearchable: false,
                                                           isMultiSelect: false,
                                                         ),
-                                                      ].divide(SizedBox(
+                                                      ].divide(const SizedBox(
                                                           height: 6.0)),
                                                     ),
                                                   ),
@@ -13754,7 +13751,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           4.0,
                                                                           0.0,
@@ -13781,7 +13778,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                         FlutterFlowDropDown<
@@ -13790,7 +13787,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                   .classeMulticlasseValueController ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['Option 1'],
+                                                          options: const ['Option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.classeMulticlasseValue =
@@ -13827,7 +13824,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -13838,7 +13835,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           isSearchable: false,
                                                           isMultiSelect: false,
                                                         ),
-                                                      ].divide(SizedBox(
+                                                      ].divide(const SizedBox(
                                                           height: 6.0)),
                                                     ),
                                                   ),
@@ -13856,7 +13853,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           4.0,
                                                                           0.0,
@@ -13883,7 +13880,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                         FlutterFlowDropDown<
@@ -13892,7 +13889,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                   .secaoMulticlasseValueController ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['Option 1'],
+                                                          options: const ['Option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.secaoMulticlasseValue =
@@ -13929,7 +13926,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -13940,13 +13937,13 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           isSearchable: false,
                                                           isMultiSelect: false,
                                                         ),
-                                                      ].divide(SizedBox(
+                                                      ].divide(const SizedBox(
                                                           height: 6.0)),
                                                     ),
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 25.0, 0.0),
                                                     child: FFButtonWidget(
@@ -13955,21 +13952,21 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                             'Button pressed ...');
                                                       },
                                                       text: 'Filtro',
-                                                      icon: Icon(
+                                                      icon: const Icon(
                                                         Icons.filter_alt,
                                                         size: 20.0,
                                                       ),
                                                       options: FFButtonOptions(
                                                         height: 49.0,
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     24.0,
                                                                     0.0,
                                                                     24.0,
                                                                     0.0),
                                                         iconPadding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -13992,7 +13989,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                       0.0,
                                                                 ),
                                                         elevation: 3.0,
-                                                        borderSide: BorderSide(
+                                                        borderSide: const BorderSide(
                                                           color: Colors
                                                               .transparent,
                                                           width: 1.0,
@@ -14003,11 +14000,11 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                       ),
                                                     ),
                                                   ),
-                                                ].divide(SizedBox(width: 20.0)),
+                                                ].divide(const SizedBox(width: 20.0)),
                                               ),
                                             ),
                                           ),
-                                        ].divide(SizedBox(height: 6.0)),
+                                        ].divide(const SizedBox(height: 6.0)),
                                       ),
                                     ),
                                     Expanded(
@@ -14051,7 +14048,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                               ),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsets.all(15.0),
+                                              padding: const EdgeInsets.all(15.0),
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
@@ -14071,11 +14068,11 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                       ),
                                                       Align(
                                                         alignment:
-                                                            AlignmentDirectional(
+                                                            const AlignmentDirectional(
                                                                 -1.0, 0.0),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -14110,7 +14107,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 10.0,
                                                                 0.0, 0.0),
                                                     child: Row(
@@ -14134,7 +14131,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                           ),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsets.all(
+                                                                const EdgeInsets.all(
                                                                     6.0),
                                                             child: Row(
                                                               mainAxisSize:
@@ -14260,7 +14257,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         'IconButton pressed ...');
                                                                   },
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 10.0)),
                                                             ),
                                                           ),
@@ -14268,10 +14265,10 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                         Container(
                                                           width: 250.0,
                                                           decoration:
-                                                              BoxDecoration(),
+                                                              const BoxDecoration(),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         8.0,
                                                                         0.0,
@@ -14287,14 +14284,11 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                   EasyDebounce
                                                                       .debounce(
                                                                 '_model.textController52',
-                                                                Duration(
+                                                                const Duration(
                                                                     milliseconds:
                                                                         2000),
                                                                 () async {
                                                                   if (_model.textController52
-                                                                              .text !=
-                                                                          null &&
-                                                                      _model.textController52
                                                                               .text !=
                                                                           '') {
                                                                     safeSetState(
@@ -14304,12 +14298,11 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         containerInventarioLoja1RecordList
                                                                             .map(
                                                                               (record) => TextSearchItem.fromTerms(record, [
-                                                                                record.filial!
+                                                                                record.filial
                                                                               ]),
                                                                             )
                                                                             .toList(),
                                                                       ).search(_model.textController52.text).map((r) => r.object).take(20).toList();
-                                                                      ;
                                                                     });
                                                                   } else {
                                                                     context
@@ -14318,7 +14311,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                       extra: <String,
                                                                           dynamic>{
                                                                         kTransitionInfoKey:
-                                                                            TransitionInfo(
+                                                                            const TransitionInfo(
                                                                           hasTransition:
                                                                               true,
                                                                           transitionType:
@@ -14415,7 +14408,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                 ),
                                                                 filled: true,
                                                                 prefixIcon:
-                                                                    Icon(
+                                                                    const Icon(
                                                                   Icons
                                                                       .search_sharp,
                                                                 ),
@@ -14442,7 +14435,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                   Expanded(
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   10.0,
@@ -14676,7 +14669,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                           onSelectChanged) =>
                                                                       DataRow(
                                                                 color:
-                                                                    MaterialStateProperty
+                                                                    WidgetStateProperty
                                                                         .all(
                                                                   produtosListIndex %
                                                                               2 ==
@@ -14807,7 +14800,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                         ),
                                                                         child:
                                                                             Align(
-                                                                          alignment: AlignmentDirectional(
+                                                                          alignment: const AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                           child:
@@ -14820,7 +14813,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                                                           ),
                                                                         ),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             10.0)),
                                                                   ),
@@ -14892,7 +14885,7 @@ class _A071DetalhesAlunosWidgetState extends State<A071DetalhesAlunosWidget> {
                                         },
                                       ),
                                     ),
-                                  ].divide(SizedBox(height: 20.0)),
+                                  ].divide(const SizedBox(height: 20.0)),
                                 ),
                               ),
                             ),

@@ -12,8 +12,6 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'a19comparecimento_model.dart';
 export 'a19comparecimento_model.dart';
 
@@ -21,7 +19,7 @@ class A19comparecimentoWidget extends StatefulWidget {
   const A19comparecimentoWidget({
     super.key,
     String? telas,
-  }) : this.telas = telas ?? 'vazio';
+  }) : telas = telas ?? 'vazio';
 
   final String telas;
 
@@ -86,7 +84,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                         wrapWithModel(
                           model: _model.menuSuperiorModel,
                           updateCallback: () => setState(() {}),
-                          child: MenuSuperiorWidget(),
+                          child: const MenuSuperiorWidget(),
                         ),
                       if (responsiveVisibility(
                         context: context,
@@ -96,7 +94,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                         wrapWithModel(
                           model: _model.menuSuperiorCelularModel,
                           updateCallback: () => setState(() {}),
-                          child: MenuSuperiorCelularWidget(),
+                          child: const MenuSuperiorCelularWidget(),
                         ),
                     ],
                   ),
@@ -107,9 +105,9 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                         wrapWithModel(
                           model: _model.menuLateralModel,
                           updateCallback: () => setState(() {}),
-                          child: MenuLateralWidget(),
+                          child: const MenuLateralWidget(),
                         ),
-                        if (widget!.telas == 'PresencaEstudante')
+                        if (widget.telas == 'PresencaEstudante')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.75,
                             height: double.infinity,
@@ -118,7 +116,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -144,10 +142,10 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     -1.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 10.0, 0.0, 0.0),
                                                   child: Text(
@@ -174,7 +172,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -185,7 +183,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -195,7 +193,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -228,13 +226,13 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -248,7 +246,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                 FormFieldController<
                                                                         String>(
                                                                     null),
-                                                            options: [
+                                                            options: const [
                                                               'option 1'
                                                             ],
                                                             onChanged: (val) =>
@@ -288,7 +286,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                             borderWidth: 2.0,
                                                             borderRadius: 8.0,
                                                             margin:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         4.0,
@@ -310,7 +308,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -320,7 +318,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -353,7 +351,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -363,7 +361,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                   .secaoAcademicoValueController1 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.secaoAcademicoValue1 =
@@ -401,7 +399,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -420,7 +418,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -430,7 +428,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -463,7 +461,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -473,7 +471,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                   .categpriaAcademicoValueController1 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.categpriaAcademicoValue1 =
@@ -511,7 +509,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -530,7 +528,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -540,7 +538,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -573,7 +571,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -671,7 +669,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                         context)
                                                                     .primaryBackground,
                                                                 contentPadding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             16.0,
@@ -696,11 +694,11 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                             ),
                                                             Align(
                                                               alignment:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       1.0, 0.0),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             6.0,
@@ -722,12 +720,12 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 15.0, 15.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -739,7 +737,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                     print('Button pressed ...');
                                                   },
                                                   text: 'Filtro',
-                                                  icon: Icon(
+                                                  icon: const Icon(
                                                     Icons.filter_alt,
                                                     color: Colors.white,
                                                     size: 15.0,
@@ -748,11 +746,11 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                     width: 150.0,
                                                     height: 40.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(24.0, 0.0,
                                                                 24.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -767,7 +765,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                           letterSpacing: 0.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -783,7 +781,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -836,7 +834,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -853,11 +851,11 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -890,7 +888,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 10.0, 10.0),
                                                   child: Row(
@@ -913,11 +911,11 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                             children: [
                                                               Align(
                                                                 alignment:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                         -1.0,
                                                                         0.0),
                                                                 child: Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           10.0,
@@ -943,7 +941,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             5.0,
                                                                             10.0,
@@ -962,7 +960,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         5.0,
@@ -989,7 +987,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                     FormFieldController<
                                                                             String>(
                                                                         null),
-                                                                options: [
+                                                                options: const [
                                                                   'Presente',
                                                                   'Ausente',
                                                                   'Atrasado'
@@ -1031,7 +1029,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                     2.0,
                                                                 borderRadius:
                                                                     8.0,
-                                                                margin: EdgeInsetsDirectional
+                                                                margin: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         4.0,
@@ -1051,7 +1049,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                         ],
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Expanded(
@@ -1228,7 +1226,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                     onSelectChanged) =>
                                                                 DataRow(
                                                           color:
-                                                              MaterialStateProperty
+                                                              WidgetStateProperty
                                                                   .all(
                                                             produtosListIndex %
                                                                         2 ==
@@ -1360,11 +1358,11 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                 ),
                                                 Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           1.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 8.0,
                                                                 15.0, 0.0),
                                                     child: FFButtonWidget(
@@ -1377,14 +1375,14 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                         width: 150.0,
                                                         height: 40.0,
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     24.0,
                                                                     0.0,
                                                                     24.0,
                                                                     0.0),
                                                         iconPadding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -1407,7 +1405,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                       0.0,
                                                                 ),
                                                         elevation: 3.0,
-                                                        borderSide: BorderSide(
+                                                        borderSide: const BorderSide(
                                                           color: Colors
                                                               .transparent,
                                                           width: 1.0,
@@ -1430,7 +1428,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'PresencaFunciona')
+                        if (widget.telas == 'PresencaFunciona')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.75,
                             height: double.infinity,
@@ -1439,7 +1437,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -1465,10 +1463,10 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     -1.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 10.0, 0.0, 0.0),
                                                   child: Text(
@@ -1495,7 +1493,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -1506,7 +1504,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -1516,7 +1514,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -1549,13 +1547,13 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -1569,7 +1567,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                 FormFieldController<
                                                                         String>(
                                                                     null),
-                                                            options: [
+                                                            options: const [
                                                               'option 1'
                                                             ],
                                                             onChanged: (val) =>
@@ -1609,7 +1607,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                             borderWidth: 2.0,
                                                             borderRadius: 8.0,
                                                             margin:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         4.0,
@@ -1631,7 +1629,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -1641,7 +1639,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -1674,7 +1672,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -1684,7 +1682,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                   .secaoAcademicoValueController2 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.secaoAcademicoValue2 =
@@ -1722,7 +1720,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -1741,7 +1739,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -1751,7 +1749,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -1784,7 +1782,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -1882,7 +1880,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                         context)
                                                                     .primaryBackground,
                                                                 contentPadding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             16.0,
@@ -1907,11 +1905,11 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                             ),
                                                             Align(
                                                               alignment:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       1.0, 0.0),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             6.0,
@@ -1933,12 +1931,12 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 15.0, 15.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -1950,7 +1948,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                     print('Button pressed ...');
                                                   },
                                                   text: 'Filtro',
-                                                  icon: Icon(
+                                                  icon: const Icon(
                                                     Icons.filter_alt,
                                                     color: Colors.white,
                                                     size: 15.0,
@@ -1959,11 +1957,11 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                     width: 150.0,
                                                     height: 40.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(24.0, 0.0,
                                                                 24.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -1978,7 +1976,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                           letterSpacing: 0.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -1994,7 +1992,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -2047,7 +2045,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -2064,11 +2062,11 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -2101,7 +2099,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 10.0, 10.0),
                                                   child: Row(
@@ -2124,11 +2122,11 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                             children: [
                                                               Align(
                                                                 alignment:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                         -1.0,
                                                                         0.0),
                                                                 child: Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           10.0,
@@ -2154,7 +2152,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             5.0,
                                                                             10.0,
@@ -2173,7 +2171,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         5.0,
@@ -2200,7 +2198,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                     FormFieldController<
                                                                             String>(
                                                                         null),
-                                                                options: [
+                                                                options: const [
                                                                   'Presente',
                                                                   'Ausente',
                                                                   'Atrasado'
@@ -2242,7 +2240,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                     2.0,
                                                                 borderRadius:
                                                                     8.0,
-                                                                margin: EdgeInsetsDirectional
+                                                                margin: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         4.0,
@@ -2262,7 +2260,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                         ],
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Expanded(
@@ -2439,7 +2437,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                     onSelectChanged) =>
                                                                 DataRow(
                                                           color:
-                                                              MaterialStateProperty
+                                                              WidgetStateProperty
                                                                   .all(
                                                             produtosListIndex %
                                                                         2 ==
@@ -2571,11 +2569,11 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                 ),
                                                 Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           1.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 8.0,
                                                                 15.0, 0.0),
                                                     child: FFButtonWidget(
@@ -2588,14 +2586,14 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                         width: 150.0,
                                                         height: 40.0,
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     24.0,
                                                                     0.0,
                                                                     24.0,
                                                                     0.0),
                                                         iconPadding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -2618,7 +2616,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                       0.0,
                                                                 ),
                                                         elevation: 3.0,
-                                                        borderSide: BorderSide(
+                                                        borderSide: const BorderSide(
                                                           color: Colors
                                                               .transparent,
                                                           width: 1.0,
@@ -2641,7 +2639,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'PresencaExames')
+                        if (widget.telas == 'PresencaExames')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.75,
                             height: double.infinity,
@@ -2650,7 +2648,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -2676,10 +2674,10 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     -1.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 10.0, 0.0, 0.0),
                                                   child: Text(
@@ -2706,7 +2704,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -2717,7 +2715,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -2727,7 +2725,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -2760,13 +2758,13 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -2780,7 +2778,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                 FormFieldController<
                                                                         String>(
                                                                     null),
-                                                            options: [
+                                                            options: const [
                                                               'option 1'
                                                             ],
                                                             onChanged: (val) =>
@@ -2820,7 +2818,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                             borderWidth: 2.0,
                                                             borderRadius: 8.0,
                                                             margin:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         4.0,
@@ -2842,7 +2840,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -2852,7 +2850,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -2885,7 +2883,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -2895,7 +2893,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                   .secaoAcademicoValueController3 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.secaoAcademicoValue3 =
@@ -2933,7 +2931,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -2952,7 +2950,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -2962,7 +2960,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -2995,7 +2993,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -3005,7 +3003,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                   .categpriaAcademicoValueController2 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.categpriaAcademicoValue2 =
@@ -3043,7 +3041,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -3062,7 +3060,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -3072,7 +3070,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -3105,7 +3103,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -3115,7 +3113,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                   .categpriaAcademicoValueController3 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.categpriaAcademicoValue3 =
@@ -3153,7 +3151,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -3168,12 +3166,12 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -3184,7 +3182,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -3194,7 +3192,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -3227,13 +3225,13 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -3247,7 +3245,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                 FormFieldController<
                                                                         String>(
                                                                     null),
-                                                            options: [
+                                                            options: const [
                                                               'option 1'
                                                             ],
                                                             onChanged: (val) =>
@@ -3287,7 +3285,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                             borderWidth: 2.0,
                                                             borderRadius: 8.0,
                                                             margin:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         4.0,
@@ -3305,12 +3303,12 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 15.0, 15.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -3322,7 +3320,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                     print('Button pressed ...');
                                                   },
                                                   text: 'Filtro',
-                                                  icon: Icon(
+                                                  icon: const Icon(
                                                     Icons.filter_alt,
                                                     color: Colors.white,
                                                     size: 15.0,
@@ -3331,11 +3329,11 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                     width: 150.0,
                                                     height: 40.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(24.0, 0.0,
                                                                 24.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -3350,7 +3348,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                           letterSpacing: 0.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -3366,7 +3364,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -3419,7 +3417,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -3436,11 +3434,11 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -3473,7 +3471,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 10.0, 10.0),
                                                   child: Row(
@@ -3496,11 +3494,11 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                             children: [
                                                               Align(
                                                                 alignment:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                         -1.0,
                                                                         0.0),
                                                                 child: Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           10.0,
@@ -3526,7 +3524,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             5.0,
                                                                             10.0,
@@ -3545,7 +3543,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         5.0,
@@ -3572,7 +3570,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                     FormFieldController<
                                                                             String>(
                                                                         null),
-                                                                options: [
+                                                                options: const [
                                                                   'Presente',
                                                                   'Ausente',
                                                                   'Atrasado'
@@ -3614,7 +3612,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                     2.0,
                                                                 borderRadius:
                                                                     8.0,
-                                                                margin: EdgeInsetsDirectional
+                                                                margin: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         4.0,
@@ -3634,7 +3632,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                         ],
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Expanded(
@@ -3811,7 +3809,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                     onSelectChanged) =>
                                                                 DataRow(
                                                           color:
-                                                              MaterialStateProperty
+                                                              WidgetStateProperty
                                                                   .all(
                                                             produtosListIndex %
                                                                         2 ==
@@ -3943,11 +3941,11 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                 ),
                                                 Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           1.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 8.0,
                                                                 15.0, 0.0),
                                                     child: FFButtonWidget(
@@ -3960,14 +3958,14 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                         width: 150.0,
                                                         height: 40.0,
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     24.0,
                                                                     0.0,
                                                                     24.0,
                                                                     0.0),
                                                         iconPadding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -3990,7 +3988,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                       0.0,
                                                                 ),
                                                         elevation: 3.0,
-                                                        borderSide: BorderSide(
+                                                        borderSide: const BorderSide(
                                                           color: Colors
                                                               .transparent,
                                                           width: 1.0,
@@ -4013,7 +4011,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'PresencaAula')
+                        if (widget.telas == 'PresencaAula')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.75,
                             height: double.infinity,
@@ -4022,7 +4020,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -4048,10 +4046,10 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     -1.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           12.0, 10.0, 0.0, 0.0),
                                                   child: Text(
@@ -4078,7 +4076,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -4089,7 +4087,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -4099,7 +4097,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -4132,13 +4130,13 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -4152,7 +4150,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                 FormFieldController<
                                                                         String>(
                                                                     null),
-                                                            options: [
+                                                            options: const [
                                                               'option 1'
                                                             ],
                                                             onChanged: (val) =>
@@ -4192,7 +4190,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                             borderWidth: 2.0,
                                                             borderRadius: 8.0,
                                                             margin:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         4.0,
@@ -4214,7 +4212,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -4224,7 +4222,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -4257,7 +4255,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -4267,7 +4265,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                   .secaoAcademicoValueController4 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.secaoAcademicoValue4 =
@@ -4305,7 +4303,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -4324,7 +4322,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -4334,7 +4332,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -4367,7 +4365,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -4377,7 +4375,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                   .categpriaAcademicoValueController4 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.categpriaAcademicoValue4 =
@@ -4415,7 +4413,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -4434,7 +4432,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -4444,7 +4442,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -4477,7 +4475,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
@@ -4575,7 +4573,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                         context)
                                                                     .primaryBackground,
                                                                 contentPadding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             16.0,
@@ -4600,11 +4598,11 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                             ),
                                                             Align(
                                                               alignment:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       1.0, 0.0),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             6.0,
@@ -4626,12 +4624,12 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -4642,7 +4640,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                   flex: 3,
                                                   child: Container(
                                                     width: 550.0,
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -4652,7 +4650,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       0.0,
@@ -4685,13 +4683,13 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                     .error,
                                                                 size: 16.0,
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 6.0)),
                                                           ),
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -4705,7 +4703,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                 FormFieldController<
                                                                         String>(
                                                                     null),
-                                                            options: [
+                                                            options: const [
                                                               'option 1'
                                                             ],
                                                             onChanged: (val) =>
@@ -4745,7 +4743,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                             borderWidth: 2.0,
                                                             borderRadius: 8.0,
                                                             margin:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         4.0,
@@ -4763,12 +4761,12 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 20.0)),
+                                              ].divide(const SizedBox(width: 20.0)),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 15.0, 15.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -4780,7 +4778,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                     print('Button pressed ...');
                                                   },
                                                   text: 'Filtro',
-                                                  icon: Icon(
+                                                  icon: const Icon(
                                                     Icons.filter_alt,
                                                     color: Colors.white,
                                                     size: 15.0,
@@ -4789,11 +4787,11 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                     width: 150.0,
                                                     height: 40.0,
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(24.0, 0.0,
                                                                 24.0, 0.0),
                                                     iconPadding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -4808,7 +4806,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                           letterSpacing: 0.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: BorderSide(
+                                                    borderSide: const BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -4824,7 +4822,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -4877,7 +4875,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -4894,11 +4892,11 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -4931,7 +4929,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                       .tertiary,
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 10.0, 10.0),
                                                   child: Row(
@@ -4954,11 +4952,11 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                             children: [
                                                               Align(
                                                                 alignment:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                         -1.0,
                                                                         0.0),
                                                                 child: Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           10.0,
@@ -4984,7 +4982,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             5.0,
                                                                             10.0,
@@ -5003,7 +5001,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         5.0,
@@ -5030,7 +5028,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                     FormFieldController<
                                                                             String>(
                                                                         null),
-                                                                options: [
+                                                                options: const [
                                                                   'Presente',
                                                                   'Ausente',
                                                                   'Atrasado'
@@ -5072,7 +5070,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                     2.0,
                                                                 borderRadius:
                                                                     8.0,
-                                                                margin: EdgeInsetsDirectional
+                                                                margin: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         4.0,
@@ -5092,7 +5090,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                         ],
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Expanded(
@@ -5269,7 +5267,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                     onSelectChanged) =>
                                                                 DataRow(
                                                           color:
-                                                              MaterialStateProperty
+                                                              WidgetStateProperty
                                                                   .all(
                                                             produtosListIndex %
                                                                         2 ==
@@ -5401,11 +5399,11 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                 ),
                                                 Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           1.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 8.0,
                                                                 15.0, 0.0),
                                                     child: FFButtonWidget(
@@ -5418,14 +5416,14 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                         width: 150.0,
                                                         height: 40.0,
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     24.0,
                                                                     0.0,
                                                                     24.0,
                                                                     0.0),
                                                         iconPadding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -5448,7 +5446,7 @@ class _A19comparecimentoWidgetState extends State<A19comparecimentoWidget> {
                                                                       0.0,
                                                                 ),
                                                         elevation: 3.0,
-                                                        borderSide: BorderSide(
+                                                        borderSide: const BorderSide(
                                                           color: Colors
                                                               .transparent,
                                                           width: 1.0,

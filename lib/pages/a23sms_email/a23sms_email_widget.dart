@@ -14,7 +14,6 @@ import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:text_search/text_search.dart';
 import 'a23sms_email_model.dart';
@@ -24,7 +23,7 @@ class A23smsEmailWidget extends StatefulWidget {
   const A23smsEmailWidget({
     super.key,
     String? telas,
-  }) : this.telas = telas ?? 'vazio';
+  }) : telas = telas ?? 'vazio';
 
   final String telas;
 
@@ -140,7 +139,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                         wrapWithModel(
                           model: _model.menuSuperiorModel,
                           updateCallback: () => setState(() {}),
-                          child: MenuSuperiorWidget(),
+                          child: const MenuSuperiorWidget(),
                         ),
                       if (responsiveVisibility(
                         context: context,
@@ -150,7 +149,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                         wrapWithModel(
                           model: _model.menuSuperiorCelularModel,
                           updateCallback: () => setState(() {}),
-                          child: MenuSuperiorCelularWidget(),
+                          child: const MenuSuperiorCelularWidget(),
                         ),
                     ],
                   ),
@@ -161,9 +160,9 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                         wrapWithModel(
                           model: _model.menuLateralModel,
                           updateCallback: () => setState(() {}),
-                          child: MenuLateralWidget(),
+                          child: const MenuLateralWidget(),
                         ),
-                        if (widget!.telas == 'AddEmailSMS')
+                        if (widget.telas == 'AddEmailSMS')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -175,7 +174,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   5.0, 15.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -184,7 +183,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                     child: Column(
                                       children: [
                                         Align(
-                                          alignment: Alignment(-1.0, 0),
+                                          alignment: const Alignment(-1.0, 0),
                                           child: TabBar(
                                             isScrollable: true,
                                             labelColor:
@@ -201,13 +200,13 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                       fontSize: 18.0,
                                                       letterSpacing: 0.0,
                                                     ),
-                                            unselectedLabelStyle: TextStyle(),
+                                            unselectedLabelStyle: const TextStyle(),
                                             indicatorColor:
                                                 FlutterFlowTheme.of(context)
                                                     .tertiary,
                                             indicatorWeight: 1.0,
-                                            padding: EdgeInsets.all(4.0),
-                                            tabs: [
+                                            padding: const EdgeInsets.all(4.0),
+                                            tabs: const [
                                               Row(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
@@ -260,9 +259,9 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                 _model.tabBarController1,
                                             children: [
                                               Container(
-                                                decoration: BoxDecoration(),
+                                                decoration: const BoxDecoration(),
                                                 child: Padding(
-                                                  padding: EdgeInsets.all(20.0),
+                                                  padding: const EdgeInsets.all(20.0),
                                                   child: SingleChildScrollView(
                                                     primary: false,
                                                     child: Column(
@@ -306,7 +305,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                           .max,
                                                                   children: [
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           12.0,
                                                                           10.0,
                                                                           0.0,
@@ -323,12 +322,12 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                     ),
                                                                     Align(
                                                                       alignment:
-                                                                          AlignmentDirectional(
+                                                                          const AlignmentDirectional(
                                                                               -1.0,
                                                                               0.0),
                                                                       child:
                                                                           Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             8.0,
                                                                             10.0,
                                                                             0.0,
@@ -357,7 +356,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                       .tertiary,
                                                                 ),
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           10.0,
@@ -378,7 +377,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                           width:
                                                                               550.0,
                                                                           decoration:
-                                                                              BoxDecoration(),
+                                                                              const BoxDecoration(),
                                                                           child:
                                                                               Column(
                                                                             mainAxisSize:
@@ -387,7 +386,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                 CrossAxisAlignment.start,
                                                                             children: [
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -404,14 +403,14 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                       color: FlutterFlowTheme.of(context).error,
                                                                                       size: 16.0,
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 6.0)),
+                                                                                  ].divide(const SizedBox(width: 6.0)),
                                                                                 ),
                                                                               ),
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
                                                                                 child: FlutterFlowDropDown<String>(
                                                                                   controller: _model.calssAcademicoValueController1 ??= FormFieldController<String>(null),
-                                                                                  options: [
+                                                                                  options: const [
                                                                                     'option 1'
                                                                                   ],
                                                                                   onChanged: (val) => setState(() => _model.calssAcademicoValue1 = val),
@@ -432,7 +431,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                   borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                   borderWidth: 2.0,
                                                                                   borderRadius: 8.0,
-                                                                                  margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                  margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                   hidesUnderline: true,
                                                                                   isOverButton: false,
                                                                                   isSearchable: false,
@@ -450,7 +449,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                           width:
                                                                               550.0,
                                                                           decoration:
-                                                                              BoxDecoration(),
+                                                                              const BoxDecoration(),
                                                                           child:
                                                                               Column(
                                                                             mainAxisSize:
@@ -459,7 +458,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                 CrossAxisAlignment.start,
                                                                             children: [
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -476,11 +475,11 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                       color: FlutterFlowTheme.of(context).error,
                                                                                       size: 16.0,
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 6.0)),
+                                                                                  ].divide(const SizedBox(width: 6.0)),
                                                                                 ),
                                                                               ),
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
                                                                                 child: TextFormField(
                                                                                   controller: _model.nomeTextController1,
                                                                                   focusNode: _model.nomeFocusNode1,
@@ -545,7 +544,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                           width:
                                                                               550.0,
                                                                           decoration:
-                                                                              BoxDecoration(),
+                                                                              const BoxDecoration(),
                                                                           child:
                                                                               Column(
                                                                             mainAxisSize:
@@ -554,7 +553,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                 CrossAxisAlignment.start,
                                                                             children: [
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -566,14 +565,14 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                             letterSpacing: 0.0,
                                                                                           ),
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 6.0)),
+                                                                                  ].divide(const SizedBox(width: 6.0)),
                                                                                 ),
                                                                               ),
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                                                                                 child: FlutterFlowDropDown<String>(
                                                                                   controller: _model.calssAcademicoValueController2 ??= FormFieldController<String>(null),
-                                                                                  options: [
+                                                                                  options: const [
                                                                                     'option 1'
                                                                                   ],
                                                                                   onChanged: (val) => setState(() => _model.calssAcademicoValue2 = val),
@@ -594,7 +593,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                   borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                   borderWidth: 2.0,
                                                                                   borderRadius: 8.0,
-                                                                                  margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                  margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                   hidesUnderline: true,
                                                                                   isOverButton: false,
                                                                                   isSearchable: false,
@@ -605,13 +604,13 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                           ),
                                                                         ),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             20.0)),
                                                                   ),
                                                                 ),
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           10.0,
@@ -632,7 +631,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                           width:
                                                                               550.0,
                                                                           decoration:
-                                                                              BoxDecoration(),
+                                                                              const BoxDecoration(),
                                                                           child:
                                                                               Column(
                                                                             mainAxisSize:
@@ -641,7 +640,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                 CrossAxisAlignment.start,
                                                                             children: [
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -658,11 +657,11 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                       color: FlutterFlowTheme.of(context).error,
                                                                                       size: 16.0,
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 6.0)),
+                                                                                  ].divide(const SizedBox(width: 6.0)),
                                                                                 ),
                                                                               ),
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
                                                                                 child: TextFormField(
                                                                                   controller: _model.nomeTextController2,
                                                                                   focusNode: _model.nomeFocusNode2,
@@ -723,13 +722,13 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                           ),
                                                                         ),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             20.0)),
                                                                   ),
                                                                 ),
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           10.0,
@@ -750,7 +749,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                           width:
                                                                               550.0,
                                                                           decoration:
-                                                                              BoxDecoration(),
+                                                                              const BoxDecoration(),
                                                                           child:
                                                                               Column(
                                                                             mainAxisSize:
@@ -759,7 +758,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                 CrossAxisAlignment.start,
                                                                             children: [
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -776,14 +775,14 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                       color: FlutterFlowTheme.of(context).error,
                                                                                       size: 16.0,
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 6.0)),
+                                                                                  ].divide(const SizedBox(width: 6.0)),
                                                                                 ),
                                                                               ),
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
                                                                                 child: FlutterFlowDropDown<String>(
                                                                                   controller: _model.calssAcademicoValueController3 ??= FormFieldController<String>(null),
-                                                                                  options: [
+                                                                                  options: const [
                                                                                     'option 1'
                                                                                   ],
                                                                                   onChanged: (val) => setState(() => _model.calssAcademicoValue3 = val),
@@ -804,7 +803,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                   borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                   borderWidth: 2.0,
                                                                                   borderRadius: 8.0,
-                                                                                  margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                  margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                   hidesUnderline: true,
                                                                                   isOverButton: false,
                                                                                   isSearchable: false,
@@ -822,7 +821,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                           width:
                                                                               550.0,
                                                                           decoration:
-                                                                              BoxDecoration(),
+                                                                              const BoxDecoration(),
                                                                           child:
                                                                               Column(
                                                                             mainAxisSize:
@@ -831,7 +830,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                 CrossAxisAlignment.start,
                                                                             children: [
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -843,11 +842,11 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                             letterSpacing: 0.0,
                                                                                           ),
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 6.0)),
+                                                                                  ].divide(const SizedBox(width: 6.0)),
                                                                                 ),
                                                                               ),
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
                                                                                 child: TextFormField(
                                                                                   controller: _model.nomeTextController3,
                                                                                   focusNode: _model.nomeFocusNode3,
@@ -912,7 +911,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                           width:
                                                                               550.0,
                                                                           decoration:
-                                                                              BoxDecoration(),
+                                                                              const BoxDecoration(),
                                                                           child:
                                                                               Column(
                                                                             mainAxisSize:
@@ -921,7 +920,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                 CrossAxisAlignment.start,
                                                                             children: [
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -938,14 +937,14 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                       color: FlutterFlowTheme.of(context).error,
                                                                                       size: 16.0,
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 6.0)),
+                                                                                  ].divide(const SizedBox(width: 6.0)),
                                                                                 ),
                                                                               ),
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                                                                                 child: FlutterFlowDropDown<String>(
                                                                                   controller: _model.calssAcademicoValueController4 ??= FormFieldController<String>(null),
-                                                                                  options: [
+                                                                                  options: const [
                                                                                     'option 1'
                                                                                   ],
                                                                                   onChanged: (val) => setState(() => _model.calssAcademicoValue4 = val),
@@ -966,7 +965,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                   borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                   borderWidth: 2.0,
                                                                                   borderRadius: 8.0,
-                                                                                  margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                  margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                   hidesUnderline: true,
                                                                                   isOverButton: false,
                                                                                   isSearchable: false,
@@ -977,13 +976,13 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                           ),
                                                                         ),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             20.0)),
                                                                   ),
                                                                 ),
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           10.0,
@@ -1001,7 +1000,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                         width:
                                                                             500.0,
                                                                         decoration:
-                                                                            BoxDecoration(),
+                                                                            const BoxDecoration(),
                                                                         child:
                                                                             Column(
                                                                           mainAxisSize:
@@ -1010,7 +1009,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                               CrossAxisAlignment.start,
                                                                           children: [
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                               child: Row(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 children: [
@@ -1022,23 +1021,23 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                           letterSpacing: 0.0,
                                                                                         ),
                                                                                   ),
-                                                                                ].divide(SizedBox(width: 6.0)),
+                                                                                ].divide(const SizedBox(width: 6.0)),
                                                                               ),
                                                                             ),
                                                                             Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Row(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 children: [
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
                                                                                     child: Container(
                                                                                       width: 40.0,
                                                                                       height: 43.0,
                                                                                       decoration: BoxDecoration(
                                                                                         color: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                        borderRadius: BorderRadius.only(
+                                                                                        borderRadius: const BorderRadius.only(
                                                                                           bottomLeft: Radius.circular(8.0),
                                                                                           bottomRight: Radius.circular(0.0),
                                                                                           topLeft: Radius.circular(8.0),
@@ -1058,7 +1057,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                   ),
                                                                                   Expanded(
                                                                                     child: Padding(
-                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
                                                                                       child: TextFormField(
                                                                                         controller: _model.nomeProdutoTextController1,
                                                                                         focusNode: _model.nomeProdutoFocusNode1,
@@ -1080,7 +1079,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                               color: FlutterFlowTheme.of(context).alternate,
                                                                                               width: 2.0,
                                                                                             ),
-                                                                                            borderRadius: BorderRadius.only(
+                                                                                            borderRadius: const BorderRadius.only(
                                                                                               bottomLeft: Radius.circular(0.0),
                                                                                               bottomRight: Radius.circular(8.0),
                                                                                               topLeft: Radius.circular(0.0),
@@ -1092,7 +1091,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                               color: FlutterFlowTheme.of(context).primary,
                                                                                               width: 2.0,
                                                                                             ),
-                                                                                            borderRadius: BorderRadius.only(
+                                                                                            borderRadius: const BorderRadius.only(
                                                                                               bottomLeft: Radius.circular(0.0),
                                                                                               bottomRight: Radius.circular(8.0),
                                                                                               topLeft: Radius.circular(0.0),
@@ -1104,7 +1103,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                               color: FlutterFlowTheme.of(context).error,
                                                                                               width: 2.0,
                                                                                             ),
-                                                                                            borderRadius: BorderRadius.only(
+                                                                                            borderRadius: const BorderRadius.only(
                                                                                               bottomLeft: Radius.circular(0.0),
                                                                                               bottomRight: Radius.circular(8.0),
                                                                                               topLeft: Radius.circular(0.0),
@@ -1116,7 +1115,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                               color: FlutterFlowTheme.of(context).error,
                                                                                               width: 2.0,
                                                                                             ),
-                                                                                            borderRadius: BorderRadius.only(
+                                                                                            borderRadius: const BorderRadius.only(
                                                                                               bottomLeft: Radius.circular(0.0),
                                                                                               bottomRight: Radius.circular(8.0),
                                                                                               topLeft: Radius.circular(0.0),
@@ -1140,13 +1139,13 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                           ],
                                                                         ),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             20.0)),
                                                                   ),
                                                                 ),
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           15.0,
@@ -1161,7 +1160,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                             .end,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             15.0,
                                                                             0.0,
                                                                             0.0,
@@ -1175,7 +1174,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                           text:
                                                                               'Enviar',
                                                                           icon:
-                                                                              FaIcon(
+                                                                              const FaIcon(
                                                                             FontAwesomeIcons.comment,
                                                                             color:
                                                                                 Colors.white,
@@ -1188,12 +1187,12 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                 200.0,
                                                                             height:
                                                                                 40.0,
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 24.0,
                                                                                 0.0,
                                                                                 24.0,
                                                                                 0.0),
-                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 0.0,
@@ -1209,7 +1208,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                             elevation:
                                                                                 3.0,
                                                                             borderSide:
-                                                                                BorderSide(
+                                                                                const BorderSide(
                                                                               color: Colors.transparent,
                                                                               width: 1.0,
                                                                             ),
@@ -1225,16 +1224,16 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                             ),
                                                           ),
                                                         ),
-                                                      ].divide(SizedBox(
+                                                      ].divide(const SizedBox(
                                                           height: 15.0)),
                                                     ),
                                                   ),
                                                 ),
                                               ),
                                               Container(
-                                                decoration: BoxDecoration(),
+                                                decoration: const BoxDecoration(),
                                                 child: Padding(
-                                                  padding: EdgeInsets.all(20.0),
+                                                  padding: const EdgeInsets.all(20.0),
                                                   child: SingleChildScrollView(
                                                     child: Column(
                                                       mainAxisSize:
@@ -1280,7 +1279,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                             .max,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             12.0,
                                                                             10.0,
                                                                             0.0,
@@ -1296,12 +1295,12 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                         ),
                                                                       ),
                                                                       Align(
-                                                                        alignment: AlignmentDirectional(
+                                                                        alignment: const AlignmentDirectional(
                                                                             -1.0,
                                                                             0.0),
                                                                         child:
                                                                             Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               8.0,
                                                                               10.0,
                                                                               0.0,
@@ -1328,7 +1327,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                         .tertiary,
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             10.0,
@@ -1351,14 +1350,14 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -1375,14 +1374,14 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                         color: FlutterFlowTheme.of(context).error,
                                                                                         size: 16.0,
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
                                                                                   child: FlutterFlowDropDown<String>(
                                                                                     controller: _model.calssAcademicoValueController5 ??= FormFieldController<String>(null),
-                                                                                    options: [
+                                                                                    options: const [
                                                                                       'option 1'
                                                                                     ],
                                                                                     onChanged: (val) => setState(() => _model.calssAcademicoValue5 = val),
@@ -1403,7 +1402,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                     borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                     borderWidth: 2.0,
                                                                                     borderRadius: 8.0,
-                                                                                    margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                    margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                     hidesUnderline: true,
                                                                                     isOverButton: false,
                                                                                     isSearchable: false,
@@ -1422,14 +1421,14 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -1446,11 +1445,11 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                         color: FlutterFlowTheme.of(context).error,
                                                                                         size: 16.0,
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
                                                                                   child: TextFormField(
                                                                                     controller: _model.nomeTextController4,
                                                                                     focusNode: _model.nomeFocusNode4,
@@ -1516,14 +1515,14 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -1535,14 +1534,14 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                                                                                   child: FlutterFlowDropDown<String>(
                                                                                     controller: _model.calssAcademicoValueController6 ??= FormFieldController<String>(null),
-                                                                                    options: [
+                                                                                    options: const [
                                                                                       'option 1'
                                                                                     ],
                                                                                     onChanged: (val) => setState(() => _model.calssAcademicoValue6 = val),
@@ -1563,7 +1562,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                     borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                     borderWidth: 2.0,
                                                                                     borderRadius: 8.0,
-                                                                                    margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                    margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                     hidesUnderline: true,
                                                                                     isOverButton: false,
                                                                                     isSearchable: false,
@@ -1574,12 +1573,12 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             10.0,
@@ -1602,14 +1601,14 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -1626,11 +1625,11 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                         color: FlutterFlowTheme.of(context).error,
                                                                                         size: 16.0,
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
                                                                                   child: TextFormField(
                                                                                     controller: _model.nomeTextController5,
                                                                                     focusNode: _model.nomeFocusNode5,
@@ -1691,12 +1690,12 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             10.0,
@@ -1719,14 +1718,14 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -1743,11 +1742,11 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                         color: FlutterFlowTheme.of(context).error,
                                                                                         size: 16.0,
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
                                                                                   child: TextFormField(
                                                                                     controller: _model.nomeTextController6,
                                                                                     focusNode: _model.nomeFocusNode6,
@@ -1813,14 +1812,14 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                             width:
                                                                                 550.0,
                                                                             decoration:
-                                                                                BoxDecoration(),
+                                                                                const BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                   child: Row(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     children: [
@@ -1837,16 +1836,16 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                         color: FlutterFlowTheme.of(context).error,
                                                                                         size: 16.0,
                                                                                       ),
-                                                                                    ].divide(SizedBox(width: 6.0)),
+                                                                                    ].divide(const SizedBox(width: 6.0)),
                                                                                   ),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                                                                                   child: FlutterFlowDropDown<String>(
                                                                                     controller: _model.tipoValueController ??= FormFieldController<String>(
                                                                                       _model.tipoValue ??= 'Grupo',
                                                                                     ),
-                                                                                    options: [
+                                                                                    options: const [
                                                                                       'Grupo',
                                                                                       'Individual',
                                                                                       'Classe'
@@ -1869,7 +1868,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                     borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                     borderWidth: 2.0,
                                                                                     borderRadius: 8.0,
-                                                                                    margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                    margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                     hidesUnderline: true,
                                                                                     isOverButton: false,
                                                                                     isSearchable: false,
@@ -1880,7 +1879,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
                                                                   ),
@@ -1888,7 +1887,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                           .tipoValue ==
                                                                       'Grupo')
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           10.0,
                                                                           10.0,
@@ -1907,13 +1906,13 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                             child:
                                                                                 Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Column(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 crossAxisAlignment: CrossAxisAlignment.start,
                                                                                 children: [
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
@@ -1930,14 +1929,14 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                           color: FlutterFlowTheme.of(context).error,
                                                                                           size: 16.0,
                                                                                         ),
-                                                                                      ].divide(SizedBox(width: 6.0)),
+                                                                                      ].divide(const SizedBox(width: 6.0)),
                                                                                     ),
                                                                                   ),
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                                                                                     child: FlutterFlowDropDown<String>(
                                                                                       controller: _model.calssAcademicoValueController7 ??= FormFieldController<String>(null),
-                                                                                      options: [
+                                                                                      options: const [
                                                                                         'Professor',
                                                                                         'Estudante',
                                                                                         'Pais'
@@ -1960,7 +1959,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                       borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                       borderWidth: 2.0,
                                                                                       borderRadius: 8.0,
-                                                                                      margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                      margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                       hidesUnderline: true,
                                                                                       isOverButton: false,
                                                                                       isSearchable: false,
@@ -1971,14 +1970,14 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                   if (_model
                                                                           .tipoValue ==
                                                                       'Individual')
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           10.0,
                                                                           10.0,
@@ -1997,13 +1996,13 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                             child:
                                                                                 Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Column(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 crossAxisAlignment: CrossAxisAlignment.start,
                                                                                 children: [
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
@@ -2020,14 +2019,14 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                           color: FlutterFlowTheme.of(context).error,
                                                                                           size: 16.0,
                                                                                         ),
-                                                                                      ].divide(SizedBox(width: 6.0)),
+                                                                                      ].divide(const SizedBox(width: 6.0)),
                                                                                     ),
                                                                                   ),
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                                                                                     child: FlutterFlowDropDown<String>(
                                                                                       controller: _model.calssAcademicoValueController8 ??= FormFieldController<String>(null),
-                                                                                      options: [
+                                                                                      options: const [
                                                                                         'Professor',
                                                                                         'Estudante',
                                                                                         'Pais'
@@ -2050,7 +2049,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                       borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                       borderWidth: 2.0,
                                                                                       borderRadius: 8.0,
-                                                                                      margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                      margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                       hidesUnderline: true,
                                                                                       isOverButton: false,
                                                                                       isSearchable: false,
@@ -2058,7 +2057,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                     ),
                                                                                   ),
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 0.0, 6.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 0.0, 6.0),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
@@ -2075,14 +2074,14 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                           color: FlutterFlowTheme.of(context).error,
                                                                                           size: 16.0,
                                                                                         ),
-                                                                                      ].divide(SizedBox(width: 6.0)),
+                                                                                      ].divide(const SizedBox(width: 6.0)),
                                                                                     ),
                                                                                   ),
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                                                                                     child: FlutterFlowDropDown<String>(
                                                                                       controller: _model.calssAcademicoValueController9 ??= FormFieldController<String>(null),
-                                                                                      options: [
+                                                                                      options: const [
                                                                                         'Professor',
                                                                                         'Estudante',
                                                                                         'Pais'
@@ -2105,7 +2104,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                       borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                       borderWidth: 2.0,
                                                                                       borderRadius: 8.0,
-                                                                                      margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                      margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                       hidesUnderline: true,
                                                                                       isOverButton: false,
                                                                                       isSearchable: false,
@@ -2116,14 +2115,14 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                   if (_model
                                                                           .tipoValue ==
                                                                       'Classe')
                                                                     Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           10.0,
                                                                           10.0,
                                                                           10.0,
@@ -2142,13 +2141,13 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                             child:
                                                                                 Container(
                                                                               width: 550.0,
-                                                                              decoration: BoxDecoration(),
+                                                                              decoration: const BoxDecoration(),
                                                                               child: Column(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 crossAxisAlignment: CrossAxisAlignment.start,
                                                                                 children: [
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
@@ -2165,14 +2164,14 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                           color: FlutterFlowTheme.of(context).error,
                                                                                           size: 16.0,
                                                                                         ),
-                                                                                      ].divide(SizedBox(width: 6.0)),
+                                                                                      ].divide(const SizedBox(width: 6.0)),
                                                                                     ),
                                                                                   ),
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                                                                                     child: FlutterFlowDropDown<String>(
                                                                                       controller: _model.calssAcademicoValueController10 ??= FormFieldController<String>(null),
-                                                                                      options: [
+                                                                                      options: const [
                                                                                         'Professor',
                                                                                         'Estudante',
                                                                                         'Pais'
@@ -2195,7 +2194,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                       borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                       borderWidth: 2.0,
                                                                                       borderRadius: 8.0,
-                                                                                      margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                      margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                       hidesUnderline: true,
                                                                                       isOverButton: false,
                                                                                       isSearchable: false,
@@ -2203,7 +2202,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                     ),
                                                                                   ),
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 0.0, 6.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 0.0, 6.0),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
@@ -2220,14 +2219,14 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                           color: FlutterFlowTheme.of(context).error,
                                                                                           size: 16.0,
                                                                                         ),
-                                                                                      ].divide(SizedBox(width: 6.0)),
+                                                                                      ].divide(const SizedBox(width: 6.0)),
                                                                                     ),
                                                                                   ),
                                                                                   Padding(
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                                                                                     child: FlutterFlowDropDown<String>(
                                                                                       controller: _model.calssAcademicoValueController11 ??= FormFieldController<String>(null),
-                                                                                      options: [
+                                                                                      options: const [
                                                                                         'Professor',
                                                                                         'Estudante',
                                                                                         'Pais'
@@ -2250,7 +2249,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                       borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                       borderWidth: 2.0,
                                                                                       borderRadius: 8.0,
-                                                                                      margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                      margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                       hidesUnderline: true,
                                                                                       isOverButton: false,
                                                                                       isSearchable: false,
@@ -2261,11 +2260,11 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                               ),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 20.0)),
+                                                                        ].divide(const SizedBox(width: 20.0)),
                                                                       ),
                                                                     ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             10.0,
@@ -2284,7 +2283,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                           width:
                                                                               500.0,
                                                                           decoration:
-                                                                              BoxDecoration(),
+                                                                              const BoxDecoration(),
                                                                           child:
                                                                               Column(
                                                                             mainAxisSize:
@@ -2293,7 +2292,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                 CrossAxisAlignment.start,
                                                                             children: [
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 6.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -2305,23 +2304,23 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                             letterSpacing: 0.0,
                                                                                           ),
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 6.0)),
+                                                                                  ].divide(const SizedBox(width: 6.0)),
                                                                                 ),
                                                                               ),
                                                                               Container(
                                                                                 width: 550.0,
-                                                                                decoration: BoxDecoration(),
+                                                                                decoration: const BoxDecoration(),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
                                                                                     Padding(
-                                                                                      padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
                                                                                       child: Container(
                                                                                         width: 40.0,
                                                                                         height: 43.0,
                                                                                         decoration: BoxDecoration(
                                                                                           color: FlutterFlowTheme.of(context).primaryBackground,
-                                                                                          borderRadius: BorderRadius.only(
+                                                                                          borderRadius: const BorderRadius.only(
                                                                                             bottomLeft: Radius.circular(8.0),
                                                                                             bottomRight: Radius.circular(0.0),
                                                                                             topLeft: Radius.circular(8.0),
@@ -2341,7 +2340,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                     ),
                                                                                     Expanded(
                                                                                       child: Padding(
-                                                                                        padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
                                                                                         child: TextFormField(
                                                                                           controller: _model.nomeProdutoTextController2,
                                                                                           focusNode: _model.nomeProdutoFocusNode2,
@@ -2363,7 +2362,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                                 color: FlutterFlowTheme.of(context).alternate,
                                                                                                 width: 2.0,
                                                                                               ),
-                                                                                              borderRadius: BorderRadius.only(
+                                                                                              borderRadius: const BorderRadius.only(
                                                                                                 bottomLeft: Radius.circular(0.0),
                                                                                                 bottomRight: Radius.circular(8.0),
                                                                                                 topLeft: Radius.circular(0.0),
@@ -2375,7 +2374,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                                 color: FlutterFlowTheme.of(context).primary,
                                                                                                 width: 2.0,
                                                                                               ),
-                                                                                              borderRadius: BorderRadius.only(
+                                                                                              borderRadius: const BorderRadius.only(
                                                                                                 bottomLeft: Radius.circular(0.0),
                                                                                                 bottomRight: Radius.circular(8.0),
                                                                                                 topLeft: Radius.circular(0.0),
@@ -2387,7 +2386,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                                 color: FlutterFlowTheme.of(context).error,
                                                                                                 width: 2.0,
                                                                                               ),
-                                                                                              borderRadius: BorderRadius.only(
+                                                                                              borderRadius: const BorderRadius.only(
                                                                                                 bottomLeft: Radius.circular(0.0),
                                                                                                 bottomRight: Radius.circular(8.0),
                                                                                                 topLeft: Radius.circular(0.0),
@@ -2399,7 +2398,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                                 color: FlutterFlowTheme.of(context).error,
                                                                                                 width: 2.0,
                                                                                               ),
-                                                                                              borderRadius: BorderRadius.only(
+                                                                                              borderRadius: const BorderRadius.only(
                                                                                                 bottomLeft: Radius.circular(0.0),
                                                                                                 bottomRight: Radius.circular(8.0),
                                                                                                 topLeft: Radius.circular(0.0),
@@ -2423,12 +2422,12 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                             ],
                                                                           ),
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               width: 20.0)),
                                                                     ),
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             15.0,
@@ -2443,7 +2442,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                               .end,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               15.0,
                                                                               0.0,
                                                                               0.0,
@@ -2457,7 +2456,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                             text:
                                                                                 'Enviar',
                                                                             icon:
-                                                                                Icon(
+                                                                                const Icon(
                                                                               Icons.email_rounded,
                                                                               color: Colors.white,
                                                                               size: 20.0,
@@ -2466,8 +2465,8 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                 FFButtonOptions(
                                                                               width: 200.0,
                                                                               height: 40.0,
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                               color: FlutterFlowTheme.of(context).primary,
                                                                               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                     fontFamily: 'Manrope',
@@ -2476,7 +2475,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                     letterSpacing: 0.0,
                                                                                   ),
                                                                               elevation: 3.0,
-                                                                              borderSide: BorderSide(
+                                                                              borderSide: const BorderSide(
                                                                                 color: Colors.transparent,
                                                                                 width: 1.0,
                                                                               ),
@@ -2492,7 +2491,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                             ),
                                                           ),
                                                         ),
-                                                      ].divide(SizedBox(
+                                                      ].divide(const SizedBox(
                                                           height: 15.0)),
                                                     ),
                                                   ),
@@ -2508,7 +2507,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'smsEmailRelatorio')
+                        if (widget.telas == 'smsEmailRelatorio')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.77,
                             height: double.infinity,
@@ -2517,7 +2516,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                   .secondaryBackground,
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(20.0),
+                              padding: const EdgeInsets.all(20.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
@@ -2541,10 +2540,10 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   -1.0, 0.0),
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         12.0, 10.0, 0.0, 0.0),
                                                 child: Text(
@@ -2571,7 +2570,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   10.0, 10.0, 10.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -2582,7 +2581,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                 flex: 3,
                                                 child: Container(
                                                   width: 550.0,
-                                                  decoration: BoxDecoration(),
+                                                  decoration: const BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -2592,7 +2591,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -2624,13 +2623,13 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -2643,7 +2642,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                   .calssAcademicoValueController12 ??=
                                                               FormFieldController<
                                                                   String>(null),
-                                                          options: ['option 1'],
+                                                          options: const ['option 1'],
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.calssAcademicoValue12 =
@@ -2681,7 +2680,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -2701,7 +2700,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                 flex: 3,
                                                 child: Container(
                                                   width: 550.0,
-                                                  decoration: BoxDecoration(),
+                                                  decoration: const BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -2711,7 +2710,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -2743,7 +2742,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                       ),
@@ -2753,7 +2752,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                 .secaoAcademicoValueController ??=
                                                             FormFieldController<
                                                                 String>(null),
-                                                        options: [
+                                                        options: const [
                                                           'SMS',
                                                           'EMAIL'
                                                         ],
@@ -2794,7 +2793,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                         borderWidth: 2.0,
                                                         borderRadius: 8.0,
                                                         margin:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     4.0,
@@ -2813,7 +2812,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                 flex: 3,
                                                 child: Container(
                                                   width: 550.0,
-                                                  decoration: BoxDecoration(),
+                                                  decoration: const BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -2823,7 +2822,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -2855,7 +2854,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                       ),
@@ -2865,7 +2864,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                 .categpriaAcademicoValueController ??=
                                                             FormFieldController<
                                                                 String>(null),
-                                                        options: ['option 1'],
+                                                        options: const ['option 1'],
                                                         onChanged: (val) =>
                                                             setState(() => _model
                                                                     .categpriaAcademicoValue =
@@ -2903,7 +2902,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                         borderWidth: 2.0,
                                                         borderRadius: 8.0,
                                                         margin:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     4.0,
@@ -2922,7 +2921,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                 flex: 3,
                                                 child: Container(
                                                   width: 550.0,
-                                                  decoration: BoxDecoration(),
+                                                  decoration: const BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -2932,7 +2931,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -2964,7 +2963,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                   .error,
                                                               size: 16.0,
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 6.0)),
                                                         ),
                                                       ),
@@ -2976,7 +2975,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                             child: Container(
                                                               width: 340.0,
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                               child: Row(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -2992,7 +2991,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                               context)
                                                                           .primaryBackground,
                                                                       borderRadius:
-                                                                          BorderRadius
+                                                                          const BorderRadius
                                                                               .only(
                                                                         bottomLeft:
                                                                             Radius.circular(8.0),
@@ -3063,7 +3062,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                 2.0,
                                                                           ),
                                                                           borderRadius:
-                                                                              BorderRadius.only(
+                                                                              const BorderRadius.only(
                                                                             bottomLeft:
                                                                                 Radius.circular(0.0),
                                                                             bottomRight:
@@ -3084,7 +3083,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                 2.0,
                                                                           ),
                                                                           borderRadius:
-                                                                              BorderRadius.only(
+                                                                              const BorderRadius.only(
                                                                             bottomLeft:
                                                                                 Radius.circular(0.0),
                                                                             bottomRight:
@@ -3105,7 +3104,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                 2.0,
                                                                           ),
                                                                           borderRadius:
-                                                                              BorderRadius.only(
+                                                                              const BorderRadius.only(
                                                                             bottomLeft:
                                                                                 Radius.circular(0.0),
                                                                             bottomRight:
@@ -3126,7 +3125,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                 2.0,
                                                                           ),
                                                                           borderRadius:
-                                                                              BorderRadius.only(
+                                                                              const BorderRadius.only(
                                                                             bottomLeft:
                                                                                 Radius.circular(0.0),
                                                                             bottomRight:
@@ -3161,19 +3160,19 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 20.0)),
                                                       ),
                                                     ],
                                                   ),
                                                 ),
                                               ),
-                                            ].divide(SizedBox(width: 20.0)),
+                                            ].divide(const SizedBox(width: 20.0)),
                                           ),
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 15.0, 15.0, 10.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -3185,7 +3184,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                   print('Button pressed ...');
                                                 },
                                                 text: 'Filtro',
-                                                icon: Icon(
+                                                icon: const Icon(
                                                   Icons.filter_alt,
                                                   color: Colors.white,
                                                   size: 15.0,
@@ -3193,11 +3192,11 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                 options: FFButtonOptions(
                                                   width: 150.0,
                                                   height: 40.0,
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           24.0, 0.0, 24.0, 0.0),
                                                   iconPadding:
-                                                      EdgeInsetsDirectional
+                                                      const EdgeInsetsDirectional
                                                           .fromSTEB(0.0, 0.0,
                                                               0.0, 0.0),
                                                   color: FlutterFlowTheme.of(
@@ -3212,7 +3211,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                         letterSpacing: 0.0,
                                                       ),
                                                   elevation: 3.0,
-                                                  borderSide: BorderSide(
+                                                  borderSide: const BorderSide(
                                                     color: Colors.transparent,
                                                     width: 1.0,
                                                   ),
@@ -3229,7 +3228,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                   ),
                                   Expanded(
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 20.0, 0.0, 0.0),
                                       child: StreamBuilder<
                                           List<InventarioProdutosRecord>>(
@@ -3282,7 +3281,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   10.0,
@@ -3299,11 +3298,11 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -3338,7 +3337,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                 Expanded(
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 10.0,
                                                                 0.0, 0.0),
                                                     child: Builder(
@@ -3525,7 +3524,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                       onSelectChanged) =>
                                                                   DataRow(
                                                             color:
-                                                                MaterialStateProperty
+                                                                WidgetStateProperty
                                                                     .all(
                                                               produtosListIndex %
                                                                           2 ==
@@ -3613,19 +3612,19 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                           30.0,
                                                                       decoration:
                                                                           BoxDecoration(
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0xFFAAEE9D),
                                                                         borderRadius:
                                                                             BorderRadius.circular(10.0),
                                                                         border:
                                                                             Border.all(
                                                                           color:
-                                                                              Color(0xFF198105),
+                                                                              const Color(0xFF198105),
                                                                         ),
                                                                       ),
                                                                       child:
                                                                           Align(
-                                                                        alignment: AlignmentDirectional(
+                                                                        alignment: const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                         child:
@@ -3635,7 +3634,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                               .bodyMedium
                                                                               .override(
                                                                                 fontFamily: 'Manrope',
-                                                                                color: Color(0xFF198105),
+                                                                                color: const Color(0xFF198105),
                                                                                 fontSize: 16.0,
                                                                                 letterSpacing: 0.0,
                                                                               ),
@@ -3647,7 +3646,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                       1)
                                                                     Align(
                                                                       alignment:
-                                                                          AlignmentDirectional(
+                                                                          const AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                       child:
@@ -3659,7 +3658,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                         decoration:
                                                                             BoxDecoration(
                                                                           color:
-                                                                              Color(0xFFA4CDF2),
+                                                                              const Color(0xFFA4CDF2),
                                                                           borderRadius:
                                                                               BorderRadius.circular(10.0),
                                                                           border:
@@ -3674,7 +3673,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                               MainAxisSize.max,
                                                                           children: [
                                                                             Align(
-                                                                              alignment: AlignmentDirectional(0.0, 0.0),
+                                                                              alignment: const AlignmentDirectional(0.0, 0.0),
                                                                               child: Text(
                                                                                 'Agendado para',
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -3686,7 +3685,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                               ),
                                                                             ),
                                                                             Align(
-                                                                              alignment: AlignmentDirectional(0.0, 0.0),
+                                                                              alignment: const AlignmentDirectional(0.0, 0.0),
                                                                               child: Text(
                                                                                 '30/07/2024',
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -3739,7 +3738,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                     child:
                                                                         Align(
                                                                       alignment:
-                                                                          AlignmentDirectional(
+                                                                          const AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                       child:
@@ -3758,7 +3757,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                     height:
                                                                         35.0,
                                                                     decoration:
-                                                                        BoxDecoration(
+                                                                        const BoxDecoration(
                                                                       color: Color(
                                                                           0xFFE30909),
                                                                       shape: BoxShape
@@ -3767,7 +3766,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                     child:
                                                                         Align(
                                                                       alignment:
-                                                                          AlignmentDirectional(
+                                                                          const AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                       child:
@@ -3781,7 +3780,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         10.0)),
                                                               ),
@@ -3851,7 +3850,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'SMSmodelo')
+                        if (widget.telas == 'SMSmodelo')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.75,
                             height: double.infinity,
@@ -3863,7 +3862,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 20.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -3872,7 +3871,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                     child: Column(
                                       children: [
                                         Align(
-                                          alignment: Alignment(-1.0, 0),
+                                          alignment: const Alignment(-1.0, 0),
                                           child: TabBar(
                                             isScrollable: true,
                                             labelColor:
@@ -3889,13 +3888,13 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                       fontSize: 18.0,
                                                       letterSpacing: 0.0,
                                                     ),
-                                            unselectedLabelStyle: TextStyle(),
+                                            unselectedLabelStyle: const TextStyle(),
                                             indicatorColor:
                                                 FlutterFlowTheme.of(context)
                                                     .tertiary,
                                             indicatorWeight: 1.0,
-                                            padding: EdgeInsets.all(4.0),
-                                            tabs: [
+                                            padding: const EdgeInsets.all(4.0),
+                                            tabs: const [
                                               Row(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
@@ -3977,10 +3976,10 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                       snapshot.data!;
 
                                                   return Container(
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsets.all(20.0),
+                                                          const EdgeInsets.all(20.0),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -4007,7 +4006,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                 ),
                                                                 child: Padding(
                                                                   padding:
-                                                                      EdgeInsets
+                                                                      const EdgeInsets
                                                                           .all(
                                                                               6.0),
                                                                   child: Row(
@@ -4135,7 +4134,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                               'IconButton pressed ...');
                                                                         },
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             10.0)),
                                                                   ),
@@ -4144,9 +4143,9 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                               Container(
                                                                 width: 300.0,
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -4156,7 +4155,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                       Autocomplete<
                                                                           String>(
                                                                     initialValue:
-                                                                        TextEditingValue(),
+                                                                        const TextEditingValue(),
                                                                     optionsBuilder:
                                                                         (textEditingValue) {
                                                                       if (textEditingValue
@@ -4198,7 +4197,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                         textHighlightStyle:
-                                                                            TextStyle(),
+                                                                            const TextStyle(),
                                                                         elevation:
                                                                             4.0,
                                                                         optionBackgroundColor:
@@ -4244,31 +4243,29 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                             (_) =>
                                                                                 EasyDebounce.debounce(
                                                                           '_model.textController10',
-                                                                          Duration(
+                                                                          const Duration(
                                                                               milliseconds: 2000),
                                                                           () async {
-                                                                            if (_model.textController10.text != null &&
-                                                                                _model.textController10.text != '') {
+                                                                            if (_model.textController10.text != '') {
                                                                               safeSetState(() {
                                                                                 _model.simpleSearchResults1 = TextSearch(
                                                                                   containerInventarioProdutosRecordList
                                                                                       .map(
                                                                                         (record) => TextSearchItem.fromTerms(record, [
-                                                                                          record.produtoCategoria!,
-                                                                                          record.nomeProduto!,
-                                                                                          record.produtoCodigo!,
-                                                                                          record.filial!
+                                                                                          record.produtoCategoria,
+                                                                                          record.nomeProduto,
+                                                                                          record.produtoCodigo,
+                                                                                          record.filial
                                                                                         ]),
                                                                                       )
                                                                                       .toList(),
                                                                                 ).search(_model.textController10.text).map((r) => r.object).take(20).toList();
-                                                                                ;
                                                                               });
                                                                             } else {
                                                                               context.goNamed(
                                                                                 'A01escola',
                                                                                 extra: <String, dynamic>{
-                                                                                  kTransitionInfoKey: TransitionInfo(
+                                                                                  kTransitionInfoKey: const TransitionInfo(
                                                                                     hasTransition: true,
                                                                                     transitionType: PageTransitionType.fade,
                                                                                     duration: Duration(milliseconds: 0),
@@ -4362,7 +4359,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                           Expanded(
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           10.0,
@@ -4503,7 +4500,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                               selected,
                                                                               onSelectChanged) =>
                                                                           DataRow(
-                                                                        color: MaterialStateProperty
+                                                                        color: WidgetStateProperty
                                                                             .all(
                                                                           produtosListIndex % 2 == 0
                                                                               ? FlutterFlowTheme.of(context).secondaryBackground
@@ -4556,7 +4553,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                   child: Icon(
                                                                                     Icons.edit_square,
                                                                                     color: FlutterFlowTheme.of(context).primaryText,
@@ -4567,12 +4564,12 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                               Container(
                                                                                 width: 35.0,
                                                                                 height: 35.0,
-                                                                                decoration: BoxDecoration(
+                                                                                decoration: const BoxDecoration(
                                                                                   color: Color(0xFFE30909),
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                   child: Icon(
                                                                                     Icons.delete_rounded,
                                                                                     color: FlutterFlowTheme.of(context).info,
@@ -4580,7 +4577,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                   ),
                                                                                 ),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 10.0)),
+                                                                            ].divide(const SizedBox(width: 10.0)),
                                                                           ),
                                                                         ]
                                                                             .map((c) =>
@@ -4654,10 +4651,10 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                 autovalidateMode:
                                                     AutovalidateMode.disabled,
                                                 child: Container(
-                                                  decoration: BoxDecoration(),
+                                                  decoration: const BoxDecoration(),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 20.0,
                                                                 0.0, 50.0),
                                                     child:
@@ -4671,7 +4668,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -4705,7 +4702,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -4730,14 +4727,14 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .filialValueController1 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -4779,7 +4776,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -4795,7 +4792,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -4807,7 +4804,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -4841,7 +4838,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -4968,7 +4965,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -4984,7 +4981,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                   '')
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           20.0,
                                                                           0.0,
@@ -5018,7 +5015,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                               ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               6.0,
                                                                               0.0,
                                                                               0.0,
@@ -5042,14 +5039,14 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                       width:
                                                                           550.0,
                                                                       decoration:
-                                                                          BoxDecoration(),
+                                                                          const BoxDecoration(),
                                                                       child: FlutterFlowDropDown<
                                                                           String>(
                                                                         controller: _model
                                                                             .categoriaValueController1 ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: [
+                                                                        options: const [
                                                                           'Option 1'
                                                                         ],
                                                                         onChanged:
@@ -5086,7 +5083,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                             2.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -5102,7 +5099,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         20.0)),
                                                               ),
@@ -5113,11 +5110,11 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                   '')
                                                             Container(
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                             ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -5154,7 +5151,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -5179,7 +5176,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         TextFormField(
                                                                       controller:
@@ -5282,7 +5279,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -5298,7 +5295,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                       .visivel ==
                                                                   1)
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           25.0,
@@ -5313,7 +5310,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                     },
                                                                     text:
                                                                         'Atualizar',
-                                                                    icon: Icon(
+                                                                    icon: const Icon(
                                                                       Icons
                                                                           .add_circle,
                                                                       size:
@@ -5325,12 +5322,12 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                           250.0,
                                                                       height:
                                                                           40.0,
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           24.0,
                                                                           0.0,
                                                                           24.0,
                                                                           0.0),
-                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
@@ -5356,7 +5353,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                       elevation:
                                                                           3.0,
                                                                       borderSide:
-                                                                          BorderSide(
+                                                                          const BorderSide(
                                                                         color: Colors
                                                                             .transparent,
                                                                         width:
@@ -5369,7 +5366,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                   ),
                                                                 ),
                                                               Padding(
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         50.0,
                                                                         10.0,
@@ -5390,7 +5387,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                   },
                                                                   text:
                                                                       'Adicionar',
-                                                                  icon: Icon(
+                                                                  icon: const Icon(
                                                                     Icons.add,
                                                                     size: 20.0,
                                                                   ),
@@ -5400,14 +5397,14 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                         250.0,
                                                                     height:
                                                                         40.0,
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             24.0,
                                                                             0.0,
                                                                             24.0,
                                                                             0.0),
                                                                     iconPadding:
-                                                                        EdgeInsetsDirectional.fromSTEB(
+                                                                        const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -5433,7 +5430,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                     elevation:
                                                                         3.0,
                                                                     borderSide:
-                                                                        BorderSide(
+                                                                        const BorderSide(
                                                                       color: Colors
                                                                           .transparent,
                                                                       width:
@@ -5447,7 +5444,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                               ),
                                                             ],
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 5.0)),
                                                       ),
                                                     ),
@@ -5464,7 +5461,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                               ),
                             ),
                           ),
-                        if (widget!.telas == 'EMAILmodelo')
+                        if (widget.telas == 'EMAILmodelo')
                           Container(
                             width: MediaQuery.sizeOf(context).width * 0.75,
                             height: double.infinity,
@@ -5476,7 +5473,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 20.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -5485,7 +5482,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                     child: Column(
                                       children: [
                                         Align(
-                                          alignment: Alignment(-1.0, 0),
+                                          alignment: const Alignment(-1.0, 0),
                                           child: TabBar(
                                             isScrollable: true,
                                             labelColor:
@@ -5502,13 +5499,13 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                       fontSize: 18.0,
                                                       letterSpacing: 0.0,
                                                     ),
-                                            unselectedLabelStyle: TextStyle(),
+                                            unselectedLabelStyle: const TextStyle(),
                                             indicatorColor:
                                                 FlutterFlowTheme.of(context)
                                                     .tertiary,
                                             indicatorWeight: 1.0,
-                                            padding: EdgeInsets.all(4.0),
-                                            tabs: [
+                                            padding: const EdgeInsets.all(4.0),
+                                            tabs: const [
                                               Row(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment.center,
@@ -5590,10 +5587,10 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                       snapshot.data!;
 
                                                   return Container(
-                                                    decoration: BoxDecoration(),
+                                                    decoration: const BoxDecoration(),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsets.all(20.0),
+                                                          const EdgeInsets.all(20.0),
                                                       child: Column(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -5620,7 +5617,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                 ),
                                                                 child: Padding(
                                                                   padding:
-                                                                      EdgeInsets
+                                                                      const EdgeInsets
                                                                           .all(
                                                                               6.0),
                                                                   child: Row(
@@ -5748,7 +5745,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                               'IconButton pressed ...');
                                                                         },
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             10.0)),
                                                                   ),
@@ -5757,9 +5754,9 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                               Container(
                                                                 width: 300.0,
                                                                 decoration:
-                                                                    BoxDecoration(),
+                                                                    const BoxDecoration(),
                                                                 child: Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -5769,7 +5766,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                       Autocomplete<
                                                                           String>(
                                                                     initialValue:
-                                                                        TextEditingValue(),
+                                                                        const TextEditingValue(),
                                                                     optionsBuilder:
                                                                         (textEditingValue) {
                                                                       if (textEditingValue
@@ -5811,7 +5808,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                               letterSpacing: 0.0,
                                                                             ),
                                                                         textHighlightStyle:
-                                                                            TextStyle(),
+                                                                            const TextStyle(),
                                                                         elevation:
                                                                             4.0,
                                                                         optionBackgroundColor:
@@ -5857,31 +5854,29 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                             (_) =>
                                                                                 EasyDebounce.debounce(
                                                                           '_model.textController13',
-                                                                          Duration(
+                                                                          const Duration(
                                                                               milliseconds: 2000),
                                                                           () async {
-                                                                            if (_model.textController13.text != null &&
-                                                                                _model.textController13.text != '') {
+                                                                            if (_model.textController13.text != '') {
                                                                               safeSetState(() {
                                                                                 _model.simpleSearchResults2 = TextSearch(
                                                                                   containerInventarioProdutosRecordList
                                                                                       .map(
                                                                                         (record) => TextSearchItem.fromTerms(record, [
-                                                                                          record.produtoCategoria!,
-                                                                                          record.nomeProduto!,
-                                                                                          record.produtoCodigo!,
-                                                                                          record.filial!
+                                                                                          record.produtoCategoria,
+                                                                                          record.nomeProduto,
+                                                                                          record.produtoCodigo,
+                                                                                          record.filial
                                                                                         ]),
                                                                                       )
                                                                                       .toList(),
                                                                                 ).search(_model.textController13.text).map((r) => r.object).take(20).toList();
-                                                                                ;
                                                                               });
                                                                             } else {
                                                                               context.goNamed(
                                                                                 'A01escola',
                                                                                 extra: <String, dynamic>{
-                                                                                  kTransitionInfoKey: TransitionInfo(
+                                                                                  kTransitionInfoKey: const TransitionInfo(
                                                                                     hasTransition: true,
                                                                                     transitionType: PageTransitionType.fade,
                                                                                     duration: Duration(milliseconds: 0),
@@ -5975,7 +5970,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                           Expanded(
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           10.0,
@@ -6116,7 +6111,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                               selected,
                                                                               onSelectChanged) =>
                                                                           DataRow(
-                                                                        color: MaterialStateProperty
+                                                                        color: WidgetStateProperty
                                                                             .all(
                                                                           produtosListIndex % 2 == 0
                                                                               ? FlutterFlowTheme.of(context).secondaryBackground
@@ -6169,7 +6164,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                   child: Icon(
                                                                                     Icons.edit_square,
                                                                                     color: FlutterFlowTheme.of(context).primaryText,
@@ -6180,12 +6175,12 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                               Container(
                                                                                 width: 35.0,
                                                                                 height: 35.0,
-                                                                                decoration: BoxDecoration(
+                                                                                decoration: const BoxDecoration(
                                                                                   color: Color(0xFFE30909),
                                                                                   shape: BoxShape.circle,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                   child: Icon(
                                                                                     Icons.delete_rounded,
                                                                                     color: FlutterFlowTheme.of(context).info,
@@ -6193,7 +6188,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                                   ),
                                                                                 ),
                                                                               ),
-                                                                            ].divide(SizedBox(width: 10.0)),
+                                                                            ].divide(const SizedBox(width: 10.0)),
                                                                           ),
                                                                         ]
                                                                             .map((c) =>
@@ -6267,10 +6262,10 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                 autovalidateMode:
                                                     AutovalidateMode.disabled,
                                                 child: Container(
-                                                  decoration: BoxDecoration(),
+                                                  decoration: const BoxDecoration(),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 20.0,
                                                                 0.0, 50.0),
                                                     child:
@@ -6284,7 +6279,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -6318,7 +6313,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -6343,14 +6338,14 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child: FlutterFlowDropDown<
                                                                         String>(
                                                                       controller: _model
                                                                           .filialValueController2 ??= FormFieldController<
                                                                               String>(
                                                                           null),
-                                                                      options: [
+                                                                      options: const [
                                                                         'Option 1'
                                                                       ],
                                                                       onChanged:
@@ -6392,7 +6387,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                           2.0,
                                                                       borderRadius:
                                                                           8.0,
-                                                                      margin: EdgeInsetsDirectional.fromSTEB(
+                                                                      margin: const EdgeInsetsDirectional.fromSTEB(
                                                                           16.0,
                                                                           4.0,
                                                                           16.0,
@@ -6408,7 +6403,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -6420,7 +6415,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -6454,7 +6449,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -6581,7 +6576,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -6597,7 +6592,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                   '')
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           20.0,
                                                                           0.0,
@@ -6631,7 +6626,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                               ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               6.0,
                                                                               0.0,
                                                                               0.0,
@@ -6655,14 +6650,14 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                       width:
                                                                           550.0,
                                                                       decoration:
-                                                                          BoxDecoration(),
+                                                                          const BoxDecoration(),
                                                                       child: FlutterFlowDropDown<
                                                                           String>(
                                                                         controller: _model
                                                                             .categoriaValueController2 ??= FormFieldController<
                                                                                 String>(
                                                                             null),
-                                                                        options: [
+                                                                        options: const [
                                                                           'Option 1'
                                                                         ],
                                                                         onChanged:
@@ -6699,7 +6694,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                             2.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -6715,7 +6710,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         20.0)),
                                                               ),
@@ -6726,11 +6721,11 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                   '')
                                                             Container(
                                                               decoration:
-                                                                  BoxDecoration(),
+                                                                  const BoxDecoration(),
                                                             ),
                                                           Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -6767,7 +6762,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                             ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             6.0,
                                                                             0.0,
                                                                             0.0,
@@ -6792,7 +6787,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                     width:
                                                                         550.0,
                                                                     decoration:
-                                                                        BoxDecoration(),
+                                                                        const BoxDecoration(),
                                                                     child:
                                                                         TextFormField(
                                                                       controller:
@@ -6895,7 +6890,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                           ),
@@ -6911,7 +6906,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                       .visivel ==
                                                                   1)
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           25.0,
@@ -6926,7 +6921,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                     },
                                                                     text:
                                                                         'Atualizar',
-                                                                    icon: Icon(
+                                                                    icon: const Icon(
                                                                       Icons
                                                                           .add_circle,
                                                                       size:
@@ -6938,12 +6933,12 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                           250.0,
                                                                       height:
                                                                           40.0,
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           24.0,
                                                                           0.0,
                                                                           24.0,
                                                                           0.0),
-                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
@@ -6969,7 +6964,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                       elevation:
                                                                           3.0,
                                                                       borderSide:
-                                                                          BorderSide(
+                                                                          const BorderSide(
                                                                         color: Colors
                                                                             .transparent,
                                                                         width:
@@ -6982,7 +6977,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                   ),
                                                                 ),
                                                               Padding(
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         50.0,
                                                                         10.0,
@@ -7003,7 +6998,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                   },
                                                                   text:
                                                                       'Adicionar',
-                                                                  icon: Icon(
+                                                                  icon: const Icon(
                                                                     Icons.add,
                                                                     size: 20.0,
                                                                   ),
@@ -7013,14 +7008,14 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                         250.0,
                                                                     height:
                                                                         40.0,
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             24.0,
                                                                             0.0,
                                                                             24.0,
                                                                             0.0),
                                                                     iconPadding:
-                                                                        EdgeInsetsDirectional.fromSTEB(
+                                                                        const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -7046,7 +7041,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                                     elevation:
                                                                         3.0,
                                                                     borderSide:
-                                                                        BorderSide(
+                                                                        const BorderSide(
                                                                       color: Colors
                                                                           .transparent,
                                                                       width:
@@ -7060,7 +7055,7 @@ class _A23smsEmailWidgetState extends State<A23smsEmailWidget>
                                                               ),
                                                             ],
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 5.0)),
                                                       ),
                                                     ),
