@@ -1,0 +1,282 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{document} {
+      allow create: if request.auth != null;
+      allow read: if request.auth != null;
+      allow write: if request.auth != null;
+      allow delete: if request.auth != null;
+    }
+
+    match /filial/{document} {
+      allow create: if request.auth != null;
+      allow read: if true;
+      allow write: if request.auth != null;
+      allow delete: if request.auth != null;
+    }
+
+    match /filial/{parent}/inventarioProdutos/{document} {
+      allow create: if request.auth != null;
+      allow read: if true;
+      allow write: if request.auth != null;
+      allow delete: if request.auth != null;
+    }
+
+    match /{path=**}/inventarioProdutos/{document} {
+      allow read: if true;
+    }
+
+
+    match /filial/{parent}/inventarioCategoria/{document} {
+      allow create: if request.auth != null;
+      allow read: if true;
+      allow write: if request.auth != null;
+      allow delete: if request.auth != null;
+    }
+
+    match /{path=**}/inventarioCategoria/{document} {
+      allow read: if true;
+    }
+
+
+    match /filial/{parent}/inventarioLoja1/{document} {
+      allow create: if request.auth != null;
+      allow read: if true;
+      allow write: if request.auth != null;
+      allow delete: if request.auth != null;
+    }
+
+    match /{path=**}/inventarioLoja1/{document} {
+      allow read: if true;
+    }
+
+
+    match /filial/{parent}/inventarioFornecedores/{document} {
+      allow create: if request.auth != null;
+      allow read: if true;
+      allow write: if request.auth != null;
+      allow delete: if request.auth != null;
+    }
+
+    match /{path=**}/inventarioFornecedores/{document} {
+      allow read: if true;
+    }
+
+
+    match /filial/{parent}/inventarioUnidades/{document} {
+      allow create: if request.auth != null;
+      allow read: if true;
+      allow write: if request.auth != null;
+      allow delete: if request.auth != null;
+    }
+
+    match /{path=**}/inventarioUnidades/{document} {
+      allow read: if true;
+    }
+
+
+    match /filial/{parent}/inventarioVendas/{document} {
+      allow create: if request.auth != null;
+      allow read: if true;
+      allow write: if request.auth != null;
+      allow delete: if request.auth != null;
+    }
+
+    match /{path=**}/inventarioVendas/{document} {
+      allow read: if true;
+    }
+
+
+    match /filial/{parent}/inventarioEmitir/{document} {
+      allow create: if request.auth != null;
+      allow read: if true;
+      allow write: if request.auth != null;
+      allow delete: if request.auth != null;
+    }
+
+    match /{path=**}/inventarioEmitir/{document} {
+      allow read: if true;
+    }
+
+
+    match /filial/{parent}/inventarioCompras/{document} {
+      allow create: if request.auth != null;
+      allow read: if true;
+      allow write: if request.auth != null;
+      allow delete: if request.auth != null;
+    }
+
+    match /{path=**}/inventarioCompras/{document} {
+      allow read: if true;
+    }
+
+
+    match /filial/{parent}/fatura/{document} {
+      allow create: if request.auth != null;
+      allow read: if true;
+      allow write: if request.auth != null;
+      allow delete: if request.auth != null;
+    }
+
+    match /{path=**}/fatura/{document} {
+      allow read: if true;
+    }
+
+
+    match /users/{parent}/documents/{document} {
+      allow create: if request.auth != null;
+      allow read: if request.auth != null;
+      allow write: if request.auth != null;
+      allow delete: if request.auth != null;
+    }
+
+    match /{path=**}/documents/{document} {
+      allow read: if request.auth != null;
+    }
+
+
+    match /filial/{parent}/classe/{document} {
+      allow create: if request.auth != null;
+      allow read: if true;
+      allow write: if request.auth != null;
+      allow delete: if request.auth != null;
+    }
+
+    match /{path=**}/classe/{document} {
+      allow read: if true;
+    }
+
+
+    match /filial/{parent}/recepadmissao/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/recepadmissao/{document} {
+      allow read: if true;
+    }
+
+
+    match /filial/{parent}/recepregistropostal/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/recepregistropostal/{document} {
+      allow read: if true;
+    }
+
+
+    match /filial/{parent}/registrochamadas/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/registrochamadas/{document} {
+      allow read: if true;
+    }
+
+
+    match /filial/{parent}/recepvistias/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/recepvistias/{document} {
+      allow read: if true;
+    }
+
+
+    match /filial/{parent}/recepreclamacao/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/recepreclamacao/{document} {
+      allow read: if true;
+    }
+
+
+    match /filial/{parent}/receprespostas/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/receprespostas/{document} {
+      allow read: if true;
+    }
+
+
+    match /filial/{parent}/recepconfig_chamada/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/recepconfig_chamada/{document} {
+      allow read: if true;
+    }
+
+
+    match /filial/{parent}/recepconfig_visita/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/recepconfig_visita/{document} {
+      allow read: if true;
+    }
+
+
+    match /filial/{parent}/recepconfig_reclama/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/recepconfig_reclama/{document} {
+      allow read: if true;
+    }
+
+
+    match /filial/{parent}/geren_cartao_add/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/geren_cartao_add/{document} {
+      allow read: if true;
+    }
+
+
+    match /filial/{parent}/geren_cartao_admiss/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /{path=**}/geren_cartao_admiss/{document} {
+      allow read: if true;
+    }
+
+  }
+}
